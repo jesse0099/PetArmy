@@ -19,6 +19,7 @@ namespace PetArmy
 
         protected override void OnStart()
         {
+            //_ = Shell.Current.GoToAsync("//LoginPage");
         }
 
         protected override void OnSleep()
