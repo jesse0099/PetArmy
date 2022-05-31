@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yx6oUMkge2lCQRzBTyznQzaTG/um05iwEDfoHhZMcBhX2/QzwQjinoxUk1OqtjkCiS7b7clN+pMt2FI1xGtflg==",
+  "dgSpecHash": "lqageMM/yRIJ+1y6yI9oEOeKZW/5+uCFP9vvM+vyodvQ4J/ain4VDvFvtCOMQnP6TRB2ImsUd30I2mgLr81Pdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy\\PetArmy.csproj",
+  "projectFilePath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy\\PetArmy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nvidi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Nvidi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

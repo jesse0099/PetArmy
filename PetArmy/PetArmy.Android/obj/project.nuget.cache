@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XYAYWMPg2GZky5zully80Rkd9yqsT7BunkQOvvHNnP2une/YI+LP34wKPm9oC+a0KdPuDA/z1eahQBsWJ/5QHA==",
+  "dgSpecHash": "zqSTlpgNwRT/cA2QQ4g7mDljpRSwyu27EFMRRFS5NbyJzngMZX6/o9yTsrsASOCwpY3NpNxezBiwJo/9gY/OXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy.Android\\PetArmy.Android.csproj",
+  "projectFilePath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy.Android\\PetArmy.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nvidi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Nvidi\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",

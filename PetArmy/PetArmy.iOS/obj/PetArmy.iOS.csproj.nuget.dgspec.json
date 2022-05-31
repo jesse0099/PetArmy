@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj": {}
+    "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj": {
+    "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj",
         "projectName": "PetArmy.iOS",
-        "projectPath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj",
+        "projectPath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj",
         "packagesPath": "C:\\Users\\Nvidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy\\PetArmy.csproj": {
-                "projectPath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy\\PetArmy.csproj"
+              "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy\\PetArmy.csproj": {
+                "projectPath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy\\PetArmy.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy\\PetArmy.csproj": {
+    "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy\\PetArmy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy\\PetArmy.csproj",
+        "projectUniqueName": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy\\PetArmy.csproj",
         "projectName": "PetArmy",
-        "projectPath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy\\PetArmy.csproj",
+        "projectPath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy\\PetArmy.csproj",
         "packagesPath": "C:\\Users\\Nvidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy\\obj\\",
+        "outputPath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

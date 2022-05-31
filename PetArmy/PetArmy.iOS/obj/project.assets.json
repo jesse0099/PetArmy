@@ -987,11 +987,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj",
       "projectName": "PetArmy.iOS",
-      "projectPath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj",
+      "projectPath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy.iOS\\PetArmy.iOS.csproj",
       "packagesPath": "C:\\Users\\Nvidi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1010,8 +1010,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy\\PetArmy.csproj": {
-              "projectPath": "C:\\Users\\Nvidi\\source\\repos\\Proyecto3\\PetArmy\\PetArmy\\PetArmy.csproj"
+            "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy\\PetArmy.csproj": {
+              "projectPath": "C:\\Users\\Nvidi\\source\\repos\\jesse0099\\PetArmy\\PetArmy\\PetArmy\\PetArmy.csproj"
             }
           }
         }
