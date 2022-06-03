@@ -4,6 +4,8 @@
     <SelectedDevice>Samsung SM-A805F</SelectedDevice>
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <ActiveDebugProfile>Samsung SM-A805F</ActiveDebugProfile>
-    <DefaultDevice>Android_Accelerated_x86_Oreo</DefaultDevice>
+    <DefaultDevice>Pixel_2_XL_API_27</DefaultDevice>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

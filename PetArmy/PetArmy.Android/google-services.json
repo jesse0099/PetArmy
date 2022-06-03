@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "538291567160",
+    "firebase_url": "https://platzigramgc.firebaseio.com",
+    "project_id": "platzigramgc",
+    "storage_bucket": "platzigramgc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538291567160:android:127db69ef3ff1c1049c4cd",
+        "android_client_info": {
+          "package_name": "com.petsdevs.petarmy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538291567160-era9d1f0o9qutsssrf6fcqmi45n9abfe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.petsdevs.petarmy",
+            "certificate_hash": "2af7da8df0fe91a54966e934720d33ee533c5866"
+          }
+        },
+        {
+          "client_id": "538291567160-fedlsu153imrurdjnouvghejatjkrjd2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCadRs45FU-Yt60hGVHjP7UptbL4sl7GUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538291567160-fedlsu153imrurdjnouvghejatjkrjd2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

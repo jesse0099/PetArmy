@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="facebook_app_id">170282917597074</string>
+  <string name="fb_login_protocol_scheme">fb170282917597074</string>
+  <string name="facebook_client_token">b1e48c4ef427f5f72daf9927dae8f92a</string>
+  <string name="app_name">PetArmy</string>
+</resources>

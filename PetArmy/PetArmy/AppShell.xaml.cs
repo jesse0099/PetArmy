@@ -1,13 +1,12 @@
-﻿using PetArmy.ViewModels;
-using PetArmy.Views;
+﻿using PetArmy.Views;
 using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace PetArmy
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {
+
         public AppShell()
         {
             InitializeComponent();
