@@ -61,7 +61,7 @@ namespace PetArmy.Droid
             if (result.IsSuccess)
             {
                 GoogleSignInAccount accountt = result.SignInAccount;
-                
+
                 _onLoginComplete?.Invoke(new UserProfile()
                 {
                     Name = accountt.DisplayName,

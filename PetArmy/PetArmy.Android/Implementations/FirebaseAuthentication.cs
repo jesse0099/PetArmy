@@ -1,14 +1,14 @@
-﻿using Android.Gms.Auth.Api.SignIn;
-using Android.Gms.Common.Apis;
+﻿using Android.Gms.Tasks;
 using Firebase.Auth;
 using PetArmy.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 [assembly: Xamarin.Forms.Dependency(typeof(PetArmy.Droid.Implementations.FirebaseAuthentication))]
 namespace PetArmy.Droid.Implementations
 {
-    public class FirebaseAuthentication : IFirebaseAut
+    public class FirebaseAuthentication : Java.Lang.Object, IFirebaseAuth, FirebaseAuth.IAuthStateListener, IOnSuccessListener
     {
 
         public bool IsSignIn()
@@ -37,6 +37,23 @@ namespace PetArmy.Droid.Implementations
                 e.PrintStackTrace();
                 return string.Empty;
             }
+        }
+
+        public void OnAuthStateChanged(FirebaseAuth auth)
+        {
+            if(auth.CurrentUser != null)
+            {
+                var token = auth.CurrentUser.GetIdToken(true).AddOnSuccessListener(this);
+                
+            }
+        }
+
+        public void OnSuccess(Java.Lang.Object result)
+        {
+            Java.Lang.Object hasura_claims;
+            var claims = ((GetTokenResult)result).Claims;
+
+            claims.TryGetValue("https://hasura.io/jwt/claims", out hasura_claims);
         }
 
         public bool SignOut()

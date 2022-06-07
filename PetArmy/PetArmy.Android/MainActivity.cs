@@ -5,6 +5,7 @@ using Android.Gms.Auth.Api.SignIn;
 using Android.OS;
 using Android.Runtime;
 using Firebase.Auth;
+using PetArmy.Droid.Implementations;
 using Xamarin.Essentials;
 using Xamarin.Facebook;
 
@@ -16,17 +17,17 @@ namespace PetArmy.Droid
         //rivate Auth0Client _auth0Client;
         public const int REQC_GOOGLE_SIGN_IN = 1;
         public const int REQC_FACEBOOK_SIGN_IN = 2;
-        public ICallbackManager CallbackManager { get; private set; } 
+        private FirebaseAuthentication fire_impl = new FirebaseAuthentication(); 
+        public ICallbackManager CallbackManager { get; private set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
             CallbackManager = CallbackManagerFactory.Create();
+            FirebaseAuth.Instance.AddAuthStateListener(fire_impl);
             base.OnCreate(savedInstanceState);
             Platform.Init(this, savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
-
         }
-
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -57,8 +58,7 @@ namespace PetArmy.Droid
         private void FirebaseAuthWithGoogle(GoogleSignInAccount acct)
         {
             AuthCredential credential = GoogleAuthProvider.GetCredential(acct.IdToken, null);
-            FirebaseAuth.Instance.SignInWithCredential(credential);
-            
+            var result = FirebaseAuth.Instance.SignInWithCredential(credential);
         }
     }
 }

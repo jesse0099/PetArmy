@@ -2,7 +2,7 @@
 
 namespace PetArmy.Interfaces
 {
-    public interface IFirebaseAut
+    public interface IFirebaseAuth
     {
         Task<string> LoginWithEmailAndPassword(string email, string password);
         bool SignOut();

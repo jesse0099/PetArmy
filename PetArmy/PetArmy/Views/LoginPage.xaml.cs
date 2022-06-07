@@ -10,13 +10,13 @@ namespace PetArmy.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-        IFirebaseAut _i_auth;
+        IFirebaseAuth _i_auth;
         IGoogleAuth _g_auth;
         IFacebookAuth _f_auth;
         public LoginPage()
         {
             InitializeComponent();
-            _i_auth = DependencyService.Get<IFirebaseAut>();
+            _i_auth = DependencyService.Get<IFirebaseAuth>();
             _g_auth = DependencyService.Get<IGoogleAuth>();
             _f_auth = DependencyService.Get<IFacebookAuth>();
         }
