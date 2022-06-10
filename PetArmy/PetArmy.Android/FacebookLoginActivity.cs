@@ -1,7 +1,5 @@
 ﻿using Android.App;
-using Android.Content;
 using Android.Gms.Tasks;
-using Firebase.Auth;
 using PetArmy.Interfaces;
 using PetArmy.Models;
 using System;
@@ -34,15 +32,16 @@ namespace PetArmy.Droid
         }
 
         #region Eventos disparados por la GMS Tasks
+        //IOnFailureListener
         public void OnFailure(Java.Lang.Exception e)
         {
             _onLoginComplete.Invoke(null, e.Message);
         }
 
+        //IFacebookCallback
         public void OnSuccess(Java.Lang.Object result)
         {
-            AuthCredential credential = FacebookAuthProvider.GetCredential(AccessToken.CurrentAccessToken.Token);
-            FirebaseAuth.Instance.SignInWithCredential(credential);
+            MainActivity.fire_impl.FirebaseAuthRegister(null, MainActivity.REQC_FACEBOOK_SIGN_IN);
             _onLoginComplete.Invoke(new UserProfile
             {
                 Name="",
@@ -53,11 +52,13 @@ namespace PetArmy.Droid
         #endregion
 
         #region Eventos disparados por la SDK de facebook
+        //IFacebookCallback
         public void OnCancel()
         {
             _onLoginComplete.Invoke(null, "Canceled");
         }
 
+        //IFacebookCallback
         public void OnError(FacebookException error)
         {
             _onLoginComplete.Invoke(null, error.Message);

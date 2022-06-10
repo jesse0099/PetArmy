@@ -17,7 +17,7 @@ namespace PetArmy.Droid
         //rivate Auth0Client _auth0Client;
         public const int REQC_GOOGLE_SIGN_IN = 1;
         public const int REQC_FACEBOOK_SIGN_IN = 2;
-        private FirebaseAuthentication fire_impl = new FirebaseAuthentication(); 
+        public static FirebaseAuthentication fire_impl = new FirebaseAuthentication(); 
         public ICallbackManager CallbackManager { get; private set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -47,18 +47,10 @@ namespace PetArmy.Droid
             if (requestCode == REQC_GOOGLE_SIGN_IN)
             {
                 GoogleSignInResult result = Auth.GoogleSignInApi.GetSignInResultFromIntent(data);
-                FirebaseAuthWithGoogle(result.SignInAccount);
+                fire_impl.FirebaseAuthRegister(result.SignInAccount);
                 GoogleLoginActivity.Instance.OnAuthCompleted(result);
             }
         }
-        /// <summary>
-        ///     Registro de cuenta logueada en Firebase
-        /// </summary>
-        /// <param name="acct">Cuenta logueada</param>
-        private void FirebaseAuthWithGoogle(GoogleSignInAccount acct)
-        {
-            AuthCredential credential = GoogleAuthProvider.GetCredential(acct.IdToken, null);
-            var result = FirebaseAuth.Instance.SignInWithCredential(credential);
-        }
+
     }
 }

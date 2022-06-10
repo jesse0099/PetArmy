@@ -51,10 +51,9 @@ namespace PetArmy.Views
                 await DisplayAlert("Message", message, "Ok");
             }
         }
-       
-        async private void OnFacebookLoginComplete(UserProfile googleUser, string message)
+        async private void OnFacebookLoginComplete(UserProfile facebookUser, string message)
         {
-            if (googleUser != null)
+            if (facebookUser != null)
             {
                 //Logueado con google
                 await Shell.Current.GoToAsync("//AboutPage");
