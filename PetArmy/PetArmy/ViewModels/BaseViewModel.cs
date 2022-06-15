@@ -13,38 +13,24 @@ namespace PetArmy.ViewModels
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
         bool _openPopUp = false;
-
         public bool OpenPopUp
         {
             get { return _openPopUp; }
-            set
-            {
-                _openPopUp = value;
-                OnPropertyChanged();
-            }
+            set { SetProperty(ref _openPopUp, value); }
         }
 
         string  _errorTitle = string.Empty;
-
         public string  ErrorTitle
         {
             get { return _errorTitle; }
-            set {
-                _errorTitle = value;
-                OnPropertyChanged();
-            }
+            set { SetProperty(ref _errorTitle, value); }
         }
 
         string _errorMessage = string.Empty;
-
         public string ErrorMessage
         {
-            get { return _errorTitle; }
-            set
-            {
-                _errorTitle = value;
-                OnPropertyChanged();
-            }
+            get { return _errorMessage; }
+            set { SetProperty(ref _errorMessage, value); }
         }
 
 

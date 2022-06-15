@@ -4,13 +4,13 @@
                        xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
                        x:Class="PetArmy.Views.PopUps.ErrorPopUp"
                        x:Name="popup"
-                       IsOpen="{Binding OpenPopUp, Mode=TwoWay}">
+                       IsOpen="{Binding OpenPopUp}">
     <sfPopup:SfPopupLayout.PopupView>
         <sfPopup:PopupView>
             <sfPopup:PopupView.HeaderTemplate>
                 <DataTemplate x:Name="Error">
                     <StackLayout>
-                        <Label Text="{Binding  ErrorTitle, Mode=OneWay}"
+                        <Label Text="{Binding  ErrorTitle}"
                                HorizontalTextAlignment="Center"
                                TextColor="Black"/>
                     </StackLayout>
@@ -19,7 +19,7 @@
             <sfPopup:PopupView.ContentTemplate>
                 <DataTemplate x:Name="content">
                     <StackLayout>
-                        <Label Text="{Binding ErrorMessage, Mode=OneWay}"
+                        <Label Text="{Binding ErrorMessage}"
                                VerticalOptions="Center"
                                TextColor="Black"/>
                     </StackLayout>

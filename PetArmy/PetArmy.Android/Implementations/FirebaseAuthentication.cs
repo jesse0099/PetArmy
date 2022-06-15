@@ -2,6 +2,7 @@
 using Android.Gms.Tasks;
 using Firebase.Auth;
 using PetArmy.Interfaces;
+using PetArmy.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace PetArmy.Droid.Implementations
 {
     public class FirebaseAuthentication : Java.Lang.Object, IFirebaseAuth, FirebaseAuth.IAuthStateListener, IOnSuccessListener
     {
+        public Action<UserProfile, string> _onRegisterComplete;
         public FirebaseAuthentication()
         {
             _instance = this;
@@ -34,8 +36,6 @@ namespace PetArmy.Droid.Implementations
             }
             catch (FirebaseAuthInvalidUserException e)
             {
-                /*if (e.ErrorCode.Equals("ERROR_USER_NOT_FOUND"))
-                    FirebaseAuthRegister(null, MainActivity.REQC_EMAILANDPASS_SIGN_IN, email, password);*/
                 e.PrintStackTrace();
                 return string.Empty;
             }
@@ -80,7 +80,6 @@ namespace PetArmy.Droid.Implementations
                 case MainActivity.REQC_EMAILANDPASS_SIGN_IN:
                     {
                         return FirebaseAuth.Instance.CreateUserWithEmailAndPassword(email, password);
-
                     }
                 default:
                     return null;
@@ -133,5 +132,19 @@ namespace PetArmy.Droid.Implementations
 
         }
 
+        public void RegisterWithEmailAndPassword(string email, string password, Action<UserProfile, string> onRegisterComplete)
+        {
+            _onRegisterComplete = onRegisterComplete;
+
+           
+            var result = FirebaseAuthRegister(null, MainActivity.REQC_EMAILANDPASS_SIGN_IN, email, password);
+            //TasksClass.Await(result);
+            //Problemas en el registro
+            if (result.Exception != null)
+                _onRegisterComplete?.Invoke(null, result.Exception.Message);
+            else
+                _onRegisterComplete?.Invoke(new UserProfile() { }, string.Empty);
+
+        }
     }
 }

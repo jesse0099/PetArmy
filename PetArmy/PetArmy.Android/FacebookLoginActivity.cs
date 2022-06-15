@@ -15,7 +15,7 @@ using static Xamarin.Facebook.GraphRequest;
 namespace PetArmy.Droid
 {
     [Activity(Label = "FacebookLoginActivity")]
-    public class FacebookLoginActivity : Java.Lang.Object, IFacebookAuth, IFacebookCallback, IOnFailureListener, IGraphJSONObjectCallback
+    public class FacebookLoginActivity : Java.Lang.Object, IFacebookAuth, IFacebookCallback, IOnFailureListener, IGraphJSONObjectCallback, IOnCompleteListener
     {
         public string _registered_email = "No Email";
         public Action<UserProfile, string> _onLoginComplete;
@@ -40,35 +40,20 @@ namespace PetArmy.Droid
         //IOnFailureListener
         public void OnFailure(Java.Lang.Exception e)
         {
-            _onLoginComplete.Invoke(null, e.Message);
+            _onLoginComplete?.Invoke(null, e.Message);
         }
-        #endregion
-
-        #region Eventos disparados por la SDK de facebook
-        //IFacebookCallback
-        public void OnCancel()
+        
+        /// <summary>
+        /// GMS Task Completion Listener
+        /// </summary>
+        /// <param name="task"></param>
+        /// <exception cref="NotImplementedException"></exception>
+        public void OnComplete(Task task)
         {
-            _onLoginComplete.Invoke(null, "Canceled");
-        }
-
-        //IFacebookCallback
-        public void OnError(FacebookException error)
-        {
-            _onLoginComplete.Invoke(null, error.Message);
-        }
-
-        //IFacebookCallback
-        public void OnSuccess(Java.Lang.Object result)
-        {
-            string _error_messsage = string.Empty;
-            //Successful Sign In
-            //Attempting to register Google Account
-            var creation_result = FirebaseAuthentication.GetInstance().FirebaseAuthRegister(null, MainActivity.REQC_FACEBOOK_SIGN_IN);
-
             //Failed Sign Up
-            if (creation_result.Exception != null)
+            if (task.Exception != null)
             {
-                _onLoginComplete.Invoke(null, creation_result.Exception.Message);
+                _onLoginComplete?.Invoke(null, task.Exception.Message);
             }
             else
             {
@@ -78,15 +63,29 @@ namespace PetArmy.Droid
                 parameters.PutString("fields", "id,name,link,email");
                 request.Parameters = parameters;
                 request.ExecuteAsync();
-
-                //Successful Sign Up
-                _onLoginComplete.Invoke(new UserProfile
-                {
-                    Name = Profile.CurrentProfile.Name,
-                    Email = _registered_email,
-                    ProfilePictureUrl = Profile.CurrentProfile.PictureUri.ToString()
-                }, string.Empty);
             }
+        }
+        #endregion
+
+        #region Eventos disparados por la SDK de facebook
+        //IFacebookCallback
+        public void OnCancel()
+        {
+            _onLoginComplete?.Invoke(null, "Canceled");
+        }
+
+        //IFacebookCallback
+        public void OnError(FacebookException error)
+        {
+            _onLoginComplete?.Invoke(null, error.Message);
+        }
+
+        //IFacebookCallback
+        public void OnSuccess(Java.Lang.Object result)
+        {
+            //Successful Sign In
+            //Attempting to register Facebook Account
+            FirebaseAuthentication.GetInstance().FirebaseAuthRegister(null, MainActivity.REQC_FACEBOOK_SIGN_IN).AddOnCompleteListener(this);
         }
 
         //IGraphJSONObjectCallback
@@ -99,6 +98,16 @@ namespace PetArmy.Droid
             catch (Exception e)
             {
                 _registered_email = e.Message;
+            }
+            finally
+            {
+                //Successful Sign Up
+                _onLoginComplete?.Invoke(new UserProfile
+                {
+                    Name = Profile.CurrentProfile.Name,
+                    Email = _registered_email,
+                    ProfilePictureUrl = string.Empty
+                }, string.Empty);
             }
         }
         #endregion
@@ -113,6 +122,6 @@ namespace PetArmy.Droid
                 return _instance;
 
         }
-        #endregion 
+        #endregion
     }
 }

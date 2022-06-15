@@ -52,23 +52,15 @@ namespace PetArmy.Droid
         /// <param name="data"></param>
         protected override void OnActivityResult(int requestCode, Result resultCode, Android.Content.Intent data)
         {
-            base.OnActivityResult(requestCode, resultCode, data);
-            //Perdon :,(
-            try
-            {
-                CallbackManager.OnActivityResult(requestCode, ((int)resultCode), data);
-            }
-            catch (System.Exception ee)
-            {
 
-                var bug = ee;
-            }
+            CallbackManager.OnActivityResult(requestCode, ((int)resultCode), data);
+            base.OnActivityResult(requestCode, resultCode, data);
 
             if (requestCode == REQC_GOOGLE_SIGN_IN)
             {
                 GoogleSignInResult result = Auth.GoogleSignInApi.GetSignInResultFromIntent(data);
                 #pragma warning disable CS0612 // Type or member is obsolete
-                GoogleLoginActivity.GetInstance().OnAuthCompleted(result);
+                GoogleLoginActivity.GetInstance().OnSignInCompleted(result);
                 #pragma warning restore CS0612 // Type or member is obsolete
             }
         }

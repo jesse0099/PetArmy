@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             x:Class="PetArmy.Views.RegisterPage"
+             BindingContext="{Binding Main, Source={StaticResource Key=Locator}}">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding Register}">
+            <PopUps:ErrorPopUp />
+            <Entry x:Name="email"
+                   TextColor="Black"
+                   PlaceholderColor="Gray"
+                   Placeholder="Email"
+                   Text="{Binding Email, Mode = TwoWay}" />
+            <Entry IsPassword="True"
+                   TextColor="Black"
+                   PlaceholderColor="Gray"
+                   Placeholder="Password"
+                   x:Name="password"
+                   Text="{Binding Password, Mode = TwoWay}" />
+            <Button VerticalOptions="Center"
+                    Text="Login"
+                    Command="{Binding RegisterCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

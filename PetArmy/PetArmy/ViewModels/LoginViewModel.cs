@@ -1,7 +1,7 @@
 ﻿using PetArmy.Interfaces;
 using PetArmy.Models;
+using PetArmy.Views;
 using Xamarin.Forms;
-using System;
 
 namespace PetArmy.ViewModels
 {
@@ -20,6 +20,7 @@ namespace PetArmy.ViewModels
         public Command LoginEPassCommand { get; }
         public Command LoginGoogleCommand { get; }
         public Command LoginFacebookCommand { get; }
+        public Command RegisterCommand { get; }
 
         public LoginViewModel()
         {
@@ -32,6 +33,7 @@ namespace PetArmy.ViewModels
             LoginEPassCommand = new Command(OnLoginEPassExecute);
             LoginGoogleCommand = new Command(OnLoginGoogleExecute);
             LoginFacebookCommand = new Command(OnLoginFacebookExecute);
+            RegisterCommand = new Command(OnRegisterExecute);
         }
 
         async private void OnLoginEPassExecute()
@@ -61,6 +63,11 @@ namespace PetArmy.ViewModels
                 ProviderLoginChecker(profile, message);
             });
         }
+
+        async private void OnRegisterExecute()
+        {
+            await App.Current.MainPage.Navigation.PushModalAsync(new RegisterPage());
+        } 
 
         async private void ProviderLoginChecker(UserProfile profile, string message)
         {
