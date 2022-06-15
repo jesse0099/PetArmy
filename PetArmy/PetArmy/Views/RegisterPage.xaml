@@ -19,7 +19,7 @@
                    x:Name="password"
                    Text="{Binding Password, Mode = TwoWay}" />
             <Button VerticalOptions="Center"
-                    Text="Login"
+                    Text="Sign Up"
                     Command="{Binding RegisterCommand}" />
         </StackLayout>
     </ContentPage.Content>

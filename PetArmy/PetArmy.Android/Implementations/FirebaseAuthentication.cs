@@ -5,14 +5,14 @@ using PetArmy.Interfaces;
 using PetArmy.Models;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Xamarin.Facebook;
 
 [assembly: Xamarin.Forms.Dependency(typeof(PetArmy.Droid.Implementations.FirebaseAuthentication))]
 namespace PetArmy.Droid.Implementations
 {
-    public class FirebaseAuthentication : Java.Lang.Object, IFirebaseAuth, FirebaseAuth.IAuthStateListener, IOnSuccessListener
+    public class FirebaseAuthentication : Java.Lang.Object, IFirebaseAuth, FirebaseAuth.IAuthStateListener, IOnSuccessListener, IOnCompleteListener
     {
+        string _registered_email = string.Empty;
         public Action<UserProfile, string> _onRegisterComplete;
         public Action<UserProfile, string> _onLoginComplete;
         public FirebaseAuthentication()
@@ -51,7 +51,14 @@ namespace PetArmy.Droid.Implementations
                 _onLoginComplete?.Invoke(null, e.Message);
             }
         }
-       
+
+        public void RegisterWithEmailAndPassword(string email, string password, Action<UserProfile, string> onRegisterComplete)
+        {
+            _onRegisterComplete = onRegisterComplete;
+            _registered_email = email;
+            FirebaseAuthRegister(null, MainActivity.REQC_EMAILANDPASS_SIGN_IN, email, password).AddOnCompleteListener(this);
+        }
+
         public bool SignOut()
         {
             try
@@ -126,8 +133,27 @@ namespace PetArmy.Droid.Implementations
                 Console.WriteLine(e.Message);
             }
         }
+
+        /// <summary>
+        /// Listener de terminacion para el metodo RegisterWithEmailAndPassword
+        /// </summary>
+        /// <param name="task"></param>
+        public void OnComplete(Android.Gms.Tasks.Task task)
+        {
+            //Failed Sign Up
+            if (task.Exception != null)
+                _onRegisterComplete?.Invoke(null, task.Exception.Message);
+            else
+                _onRegisterComplete?.Invoke(new UserProfile()
+                {
+                    Name = _registered_email,
+                    Email = _registered_email,
+                    ProfilePictureUrl = string.Empty,
+                }, string.Empty);
+        }
         #endregion
 
+        #region Singleton
         private static FirebaseAuthentication _instance;
         public static FirebaseAuthentication GetInstance()
         {
@@ -137,20 +163,6 @@ namespace PetArmy.Droid.Implementations
                 return _instance;
 
         }
-
-        public void RegisterWithEmailAndPassword(string email, string password, Action<UserProfile, string> onRegisterComplete)
-        {
-            _onRegisterComplete = onRegisterComplete;
-
-           
-            var result = FirebaseAuthRegister(null, MainActivity.REQC_EMAILANDPASS_SIGN_IN, email, password);
-            //TasksClass.Await(result);
-            //Problemas en el registro
-            if (result.Exception != null)
-                _onRegisterComplete?.Invoke(null, result.Exception.Message);
-            else
-                _onRegisterComplete?.Invoke(new UserProfile() { }, string.Empty);
-
-        }
+        #endregion
     }
 }

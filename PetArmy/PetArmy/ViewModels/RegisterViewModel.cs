@@ -23,13 +23,27 @@ namespace PetArmy.ViewModels
 
         private void OnRegisterExecute()
         {
-            _i_auth.RegisterWithEmailAndPassword(Email, Password, OnRegisterComplete);
+            if (Email.Equals(string.Empty) || Password.Equals(string.Empty))
+            {
+                RegisterChecker(null, "All Fields Are Required");
+                return;
+            }
+
+            _i_auth.RegisterWithEmailAndPassword(Email, Password, (UserProfile profile, string message) =>
+            {
+                RegisterChecker(profile, message);
+            });
         }
 
-        async private void OnRegisterComplete(UserProfile profile, string message)
+        async private void RegisterChecker(UserProfile profile, string message)
         {
             if (profile != null)
-                await Shell.Current.GoToAsync("//AboutPage");
+            {
+                //Success PopUp ()
+                LoginViewModel.GetInstance().Email = profile.Email;
+                LoginViewModel.GetInstance().Password = string.Empty;
+                await Shell.Current.GoToAsync("//LoginPage");
+            }
             else
             {
                 ErrorTitle = "Something Went Wrong!!!";
