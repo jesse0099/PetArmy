@@ -1,25 +1,30 @@
 ﻿using Android.App;
 using Android.Gms.Tasks;
+using Android.OS;
+using Org.Json;
+using PetArmy.Droid.Implementations;
 using PetArmy.Interfaces;
 using PetArmy.Models;
 using System;
 using System.Collections.Generic;
 using Xamarin.Facebook;
 using Xamarin.Forms;
+using static Xamarin.Facebook.GraphRequest;
 
 [assembly: Xamarin.Forms.Dependency(typeof(PetArmy.Droid.FacebookLoginActivity))]
 namespace PetArmy.Droid
 {
     [Activity(Label = "FacebookLoginActivity")]
-    public class FacebookLoginActivity : Activity, IFacebookAuth, IFacebookCallback, IOnSuccessListener, IOnFailureListener
+    public class FacebookLoginActivity : Java.Lang.Object, IFacebookAuth, IFacebookCallback, IOnFailureListener, IGraphJSONObjectCallback
     {
+        public string _registered_email = "No Email";
         public Action<UserProfile, string> _onLoginComplete;
-        public static FacebookLoginActivity Instance { get; set; }
         public FacebookLoginActivity()
         {
-            Instance = this;
+            _instance = this;
         }
 
+        [Obsolete]
         public void Login(Action<UserProfile, string> onLoginComplete)
         {
             var activity = Forms.Context as MainActivity;
@@ -37,18 +42,6 @@ namespace PetArmy.Droid
         {
             _onLoginComplete.Invoke(null, e.Message);
         }
-
-        //IFacebookCallback
-        public void OnSuccess(Java.Lang.Object result)
-        {
-            MainActivity.fire_impl.FirebaseAuthRegister(null, MainActivity.REQC_FACEBOOK_SIGN_IN);
-            _onLoginComplete.Invoke(new UserProfile
-            {
-                Name="",
-                Email="",
-                ProfilePictureUrl = ""
-            }, string.Empty);
-        }
         #endregion
 
         #region Eventos disparados por la SDK de facebook
@@ -63,7 +56,63 @@ namespace PetArmy.Droid
         {
             _onLoginComplete.Invoke(null, error.Message);
         }
+
+        //IFacebookCallback
+        public void OnSuccess(Java.Lang.Object result)
+        {
+            string _error_messsage = string.Empty;
+            //Successful Sign In
+            //Attempting to register Google Account
+            var creation_result = FirebaseAuthentication.GetInstance().FirebaseAuthRegister(null, MainActivity.REQC_FACEBOOK_SIGN_IN);
+
+            //Failed Sign Up
+            if (creation_result.Exception != null)
+            {
+                _onLoginComplete.Invoke(null, creation_result.Exception.Message);
+            }
+            else
+            {
+                //Getting user email
+                GraphRequest request = GraphRequest.NewMeRequest(AccessToken.CurrentAccessToken, this);
+                Bundle parameters = new Bundle();
+                parameters.PutString("fields", "id,name,link,email");
+                request.Parameters = parameters;
+                request.ExecuteAsync();
+
+                //Successful Sign Up
+                _onLoginComplete.Invoke(new UserProfile
+                {
+                    Name = Profile.CurrentProfile.Name,
+                    Email = _registered_email,
+                    ProfilePictureUrl = Profile.CurrentProfile.PictureUri.ToString()
+                }, string.Empty);
+            }
+        }
+
+        //IGraphJSONObjectCallback
+        public void OnCompleted(JSONObject @object, GraphResponse response)
+        {
+            try
+            {
+                _registered_email = response.JSONObject.Get("email").ToString();
+            }
+            catch (Exception e)
+            {
+                _registered_email = e.Message;
+            }
+        }
         #endregion
 
+        #region Singleton
+        private static FacebookLoginActivity _instance;
+        public static FacebookLoginActivity GetInstance()
+        {
+            if (_instance == null)
+                return new FacebookLoginActivity();
+            else
+                return _instance;
+
+        }
+        #endregion 
     }
 }

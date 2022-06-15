@@ -5,25 +5,34 @@ using Android.Gms.Auth.Api.SignIn;
 using Android.Gms.Common;
 using Android.Gms.Common.Apis;
 using Android.OS;
+using PetArmy.Droid.Implementations;
 using PetArmy.Interfaces;
 using PetArmy.Models;
 using System;
 using Xamarin.Forms;
 
-[assembly: Xamarin.Forms.Dependency(typeof(PetArmy.Droid.GoogleLoginActivity))]
+#pragma warning disable CS0612 // Type or member is obsolete
+[assembly: Dependency(typeof(PetArmy.Droid.GoogleLoginActivity))]
+#pragma warning restore CS0612 // Type or member is obsolete
 namespace PetArmy.Droid
 {
-    public class GoogleLoginActivity : Activity, IGoogleAuth, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
+    [Activity(Label = "GoogleLoginActivity")]
+    [Obsolete]
+    public class GoogleLoginActivity : Java.Lang.Object, IGoogleAuth, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
         Context _context;
         public Action<UserProfile, string> _onLoginComplete;
+
+        [Obsolete]
         public static GoogleApiClient _googleApiClient { get; set; }
-        public static GoogleLoginActivity Instance { get; private set; }
+        public static GoogleSignInClient _googleSigInClient { get; set; }
         public GoogleLoginActivity() 
         {
+            _instance = this;
             _context = Android.App.Application.Context;
-            Instance = this;
         }
+        
+        #region Eventos disparados por la SDK de Google
         public void OnConnected(Bundle p0)
         {
         }
@@ -35,6 +44,9 @@ namespace PetArmy.Droid
         {
             _onLoginComplete?.Invoke(null, "Cancelado!!");
         }
+        #endregion  
+        
+        [Obsolete]
         public void Login(Action<UserProfile, string> onLoginComplete)
         {
             GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
@@ -51,28 +63,55 @@ namespace PetArmy.Droid
             _googleApiClient.Connect();
 
             _onLoginComplete = onLoginComplete;
-            
+
             Intent signInIntent = Auth.GoogleSignInApi.GetSignInIntent(_googleApiClient);
 
             ((MainActivity)Forms.Context).StartActivityForResult(signInIntent, MainActivity.REQC_GOOGLE_SIGN_IN);
         }
         public void OnAuthCompleted(GoogleSignInResult result)
         {
-            if (result.IsSuccess)
+            //Failed Sign In
+            if (!result.IsSuccess)
             {
-                GoogleSignInAccount accountt = result.SignInAccount;
-
-                _onLoginComplete?.Invoke(new UserProfile()
-                {
-                    Name = accountt.DisplayName,
-                    Email = accountt.Email,
-                    ProfilePictureUrl = accountt.PhotoUrl.ToString()
-                }, string.Empty);
+                _onLoginComplete?.Invoke(null, result.Status.StatusMessage);
             }
             else
             {
-                _onLoginComplete?.Invoke(null, "An error occured!");
+                //Successful Sign In
+                GoogleSignInAccount accountt = result.SignInAccount;
+
+                //Attempting to register Google Account
+                var creation_result = FirebaseAuthentication.GetInstance()
+                    .FirebaseAuthRegister(accountt, MainActivity.REQC_GOOGLE_SIGN_IN);
+
+                //Failed Sign Up
+                if (creation_result.Exception != null)
+                {
+                    _onLoginComplete?.Invoke(null, creation_result.Exception.Message);
+                }
+                else
+                {
+                    //Successful Sign Up
+                    _onLoginComplete?.Invoke(new UserProfile()
+                    {
+                        Name = accountt.DisplayName,
+                        Email = accountt.Email,
+                        ProfilePictureUrl = accountt.PhotoUrl.ToString()
+                    }, string.Empty);
+                }
             }
         }
+
+        #region Singleton
+        private static GoogleLoginActivity _instance;
+        public static GoogleLoginActivity GetInstance()
+        {
+            if (_instance == null)
+                return new GoogleLoginActivity();
+            else
+                return _instance;
+
+        }
+        #endregion
     }
 }

@@ -17,15 +17,24 @@ namespace PetArmy.Droid
         //rivate Auth0Client _auth0Client;
         public const int REQC_GOOGLE_SIGN_IN = 1;
         public const int REQC_FACEBOOK_SIGN_IN = 2;
-        public static FirebaseAuthentication fire_impl = new FirebaseAuthentication(); 
-        public ICallbackManager CallbackManager { get; private set; }
+        public const int REQC_EMAILANDPASS_SIGN_IN = 3;
+        public ICallbackManager CallbackManager { get; set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
             CallbackManager = CallbackManagerFactory.Create();
-            FirebaseAuth.Instance.AddAuthStateListener(fire_impl);
+            FirebaseAuth.Instance.AddAuthStateListener(FirebaseAuthentication.GetInstance());
+
+            //Register Syncfusion license  (Recordar implementar para iOS)
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDQ1OTEyQDMxMzkyZTMxMmUzMGFYUVRyaFV6U1kwWFc4QUhIbWNCOEsxRkpOSjhVSHhsa3dtWDhodDhpY3c9");
+            
             base.OnCreate(savedInstanceState);
+            
             Platform.Init(this, savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            //Local renderer for PopUps (Recordar implementar para iOS)
+            Syncfusion.XForms.Android.PopupLayout.SfPopupLayoutRenderer.Init();
+
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -34,6 +43,7 @@ namespace PetArmy.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
         /// <summary>
         /// Listener de operaciones (Intent)
         /// </summary>
@@ -43,12 +53,23 @@ namespace PetArmy.Droid
         protected override void OnActivityResult(int requestCode, Result resultCode, Android.Content.Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            CallbackManager.OnActivityResult(requestCode, ((int)resultCode), data);
+            //Perdon :,(
+            try
+            {
+                CallbackManager.OnActivityResult(requestCode, ((int)resultCode), data);
+            }
+            catch (System.Exception ee)
+            {
+
+                var bug = ee;
+            }
+
             if (requestCode == REQC_GOOGLE_SIGN_IN)
             {
                 GoogleSignInResult result = Auth.GoogleSignInApi.GetSignInResultFromIntent(data);
-                fire_impl.FirebaseAuthRegister(result.SignInAccount);
-                GoogleLoginActivity.Instance.OnAuthCompleted(result);
+                #pragma warning disable CS0612 // Type or member is obsolete
+                GoogleLoginActivity.GetInstance().OnAuthCompleted(result);
+                #pragma warning restore CS0612 // Type or member is obsolete
             }
         }
 

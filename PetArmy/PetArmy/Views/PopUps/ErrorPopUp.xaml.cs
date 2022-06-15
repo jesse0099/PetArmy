@@ -1,12 +1,12 @@
-﻿using Xamarin.Forms;
+﻿using Syncfusion.XForms.PopupLayout;
 using Xamarin.Forms.Xaml;
 
-namespace PetArmy.Views
+namespace PetArmy.Views.PopUps
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class ErrorPopUp : SfPopupLayout
     {
-        public LoginPage()
+        public ErrorPopUp()
         {
             InitializeComponent();
         }

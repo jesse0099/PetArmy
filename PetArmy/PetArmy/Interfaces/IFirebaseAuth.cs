@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using PetArmy.Models;
+using System;
+using System.Threading.Tasks;
 
 namespace PetArmy.Interfaces
 {

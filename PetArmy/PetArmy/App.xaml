@@ -1,13 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infraestructure="clr-namespace:PetArmy.Infraestructure"
              x:Class="PetArmy.App">
     <!--
         Define global resources and styles here, that apply to all pages in your app.
     -->
     <Application.Resources>
         <ResourceDictionary>
+            
+            <!--Localizador de instancias-->
+            <infraestructure:InstanceLocator x:Key="Locator" />
+
+            <!--Auto Generado por el template-->
             <Color x:Key="Primary">#2196F3</Color>
+            
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">

@@ -12,6 +12,42 @@ namespace PetArmy.ViewModels
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
+        bool _openPopUp = false;
+
+        public bool OpenPopUp
+        {
+            get { return _openPopUp; }
+            set
+            {
+                _openPopUp = value;
+                OnPropertyChanged();
+            }
+        }
+
+        string  _errorTitle = string.Empty;
+
+        public string  ErrorTitle
+        {
+            get { return _errorTitle; }
+            set {
+                _errorTitle = value;
+                OnPropertyChanged();
+            }
+        }
+
+        string _errorMessage = string.Empty;
+
+        public string ErrorMessage
+        {
+            get { return _errorTitle; }
+            set
+            {
+                _errorTitle = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         bool isBusy = false;
         public bool IsBusy
         {

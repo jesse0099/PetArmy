@@ -3,28 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
              mc:Ignorable="d"
              x:Class="PetArmy.Views.LoginPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center"
+                     BindingContext="{Binding Login}">
+            <PopUps:ErrorPopUp/>
             <Entry x:Name="email"
                    TextColor="Black"
                    PlaceholderColor="Gray"
-                   Placeholder="Email"></Entry>
+                   Placeholder="Email"
+                   Text="{Binding Email, Mode = TwoWay}"/>
             <Entry IsPassword="True"
                    TextColor="Black"
                    PlaceholderColor="Gray"
-                   Placeholder="Password" x:Name="password"></Entry>
+                   Placeholder="Password"
+                   x:Name="password" 
+                   Text="{Binding Password, Mode = TwoWay}"/>
             <Button VerticalOptions="Center"
                     Text="Login"
-                    Clicked="OnLoginClicked"/>
+                    Command="{Binding LoginEPassCommand}"/>
             <Button VerticalOptions="Center"
                     Text="Login Google"
-                    Clicked="OnGoogleLoginClicked"/>
-            <Button VerticalOptions="Center"
-                    Clicked="OnFacebookLoginClicked" 
-                    Text="Facebook Login"/>
+                    Command="{Binding LoginGoogleCommand}"/>
+            <Button VerticalOptions="Center" 
+                    Text="Facebook Login"
+                    Command="{Binding LoginFacebookCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

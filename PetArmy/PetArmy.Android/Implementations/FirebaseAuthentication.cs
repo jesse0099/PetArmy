@@ -10,9 +10,12 @@ using Xamarin.Facebook;
 [assembly: Xamarin.Forms.Dependency(typeof(PetArmy.Droid.Implementations.FirebaseAuthentication))]
 namespace PetArmy.Droid.Implementations
 {
-    public class FirebaseAuthentication : Java.Lang.Object, IFirebaseAuth, FirebaseAuth.IAuthStateListener, IOnSuccessListener, IOnCompleteListener
+    public class FirebaseAuthentication : Java.Lang.Object, IFirebaseAuth, FirebaseAuth.IAuthStateListener, IOnSuccessListener
     {
-
+        public FirebaseAuthentication()
+        {
+            _instance = this;
+        }
         public bool IsSignIn()
         {
             var user = Firebase.Auth.FirebaseAuth.Instance.CurrentUser;
@@ -25,11 +28,14 @@ namespace PetArmy.Droid.Implementations
             {
                 var user = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
                 var token = user.User.GetIdToken(false);
+
                 //return user.User.GetIdToken(false).Result.ToString();
                 return user.User.Uid;
             }
             catch (FirebaseAuthInvalidUserException e)
             {
+                /*if (e.ErrorCode.Equals("ERROR_USER_NOT_FOUND"))
+                    FirebaseAuthRegister(null, MainActivity.REQC_EMAILANDPASS_SIGN_IN, email, password);*/
                 e.PrintStackTrace();
                 return string.Empty;
             }
@@ -57,17 +63,27 @@ namespace PetArmy.Droid.Implementations
         ///     Registro de cuenta Google en Firebase Auth
         /// </summary>
         /// <param name="acct">Cuenta logueada</param>
-        public void FirebaseAuthRegister(GoogleSignInAccount acct = null, int provider = MainActivity.REQC_GOOGLE_SIGN_IN)
+        public Android.Gms.Tasks.Task FirebaseAuthRegister(GoogleSignInAccount acct = null, int provider = 0, string email = "", string password = "")
         {
-            if (provider == MainActivity.REQC_GOOGLE_SIGN_IN)
+            switch (provider)
             {
-                AuthCredential credential = GoogleAuthProvider.GetCredential(acct.IdToken, null);
-                FirebaseAuth.Instance.SignInWithCredential(credential).AddOnCompleteListener(this);
-            }
-            else
-            {
-                AuthCredential credential = FacebookAuthProvider.GetCredential(AccessToken.CurrentAccessToken.Token);
-                FirebaseAuth.Instance.SignInWithCredential(credential).AddOnCompleteListener(this);
+                case MainActivity.REQC_GOOGLE_SIGN_IN:
+                    {
+                        AuthCredential credential = GoogleAuthProvider.GetCredential(acct.IdToken, null);
+                        return FirebaseAuth.Instance.SignInWithCredential(credential);
+                    }                                                                                                                                                                                                                             
+                case MainActivity.REQC_FACEBOOK_SIGN_IN:
+                    {
+                        AuthCredential credential = FacebookAuthProvider.GetCredential(AccessToken.CurrentAccessToken.Token);
+                        return FirebaseAuth.Instance.SignInWithCredential(credential);
+                    }
+                case MainActivity.REQC_EMAILANDPASS_SIGN_IN:
+                    {
+                        return FirebaseAuth.Instance.CreateUserWithEmailAndPassword(email, password);
+
+                    }
+                default:
+                    return null;
             }
         }
 
@@ -83,17 +99,6 @@ namespace PetArmy.Droid.Implementations
             {
                 auth.CurrentUser.GetIdToken(true).AddOnSuccessListener(this);
             }
-        }
-
-        /// <summary>
-        ///  Listener de terminacion para el metodo SignInWithCredential
-        /// </summary>
-        /// <param name="task"></param>
-        /// <exception cref="NotImplementedException"></exception>
-        public void OnComplete(Android.Gms.Tasks.Task task)
-        {
-            if (!task.IsSuccessful)
-                Console.WriteLine(task.Result.ToString());
         }
 
         /// <summary>
@@ -117,6 +122,16 @@ namespace PetArmy.Droid.Implementations
             }
         }
         #endregion
+
+        private static FirebaseAuthentication _instance;
+        public static FirebaseAuthentication GetInstance()
+        {
+            if (_instance == null)
+                return new FirebaseAuthentication();
+            else
+                return _instance;
+
+        }
 
     }
 }

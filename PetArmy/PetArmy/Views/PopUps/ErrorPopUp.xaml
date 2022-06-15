@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sfPopup:SfPopupLayout xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+                       x:Class="PetArmy.Views.PopUps.ErrorPopUp"
+                       x:Name="popup"
+                       IsOpen="{Binding OpenPopUp, Mode=TwoWay}">
+    <sfPopup:SfPopupLayout.PopupView>
+        <sfPopup:PopupView>
+            <sfPopup:PopupView.HeaderTemplate>
+                <DataTemplate x:Name="Error">
+                    <StackLayout>
+                        <Label Text="{Binding  ErrorTitle, Mode=OneWay}"
+                               HorizontalTextAlignment="Center"
+                               TextColor="Black"/>
+                    </StackLayout>
+                </DataTemplate>
+            </sfPopup:PopupView.HeaderTemplate>
+            <sfPopup:PopupView.ContentTemplate>
+                <DataTemplate x:Name="content">
+                    <StackLayout>
+                        <Label Text="{Binding ErrorMessage, Mode=OneWay}"
+                               VerticalOptions="Center"
+                               TextColor="Black"/>
+                    </StackLayout>
+                </DataTemplate>
+            </sfPopup:PopupView.ContentTemplate>
+        </sfPopup:PopupView>
+    </sfPopup:SfPopupLayout.PopupView>
+</sfPopup:SfPopupLayout>
