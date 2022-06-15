@@ -6,22 +6,31 @@
                        x:Name="popup"
                        IsOpen="{Binding OpenPopUp}">
     <sfPopup:SfPopupLayout.PopupView>
-        <sfPopup:PopupView>
+        <sfPopup:PopupView HeightRequest="250">
             <sfPopup:PopupView.HeaderTemplate>
                 <DataTemplate x:Name="Error">
-                    <StackLayout>
+                    <StackLayout  Padding="10,10,10,10"
+                                  VerticalOptions="Start"
+                                  HorizontalOptions="FillAndExpand"
+                                  BackgroundColor="{StaticResource LuckyPoint}"
+                                  Margin="0">
                         <Label Text="{Binding  ErrorTitle}"
-                               HorizontalTextAlignment="Center"
-                               TextColor="Black"/>
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Center"
+                               TextColor="{StaticResource FluoRed}"
+                               FontAttributes="Bold"
+                               Padding="8,0,0,0"/>
                     </StackLayout>
                 </DataTemplate>
             </sfPopup:PopupView.HeaderTemplate>
             <sfPopup:PopupView.ContentTemplate>
                 <DataTemplate x:Name="content">
-                    <StackLayout>
+                    <StackLayout Padding="10,10,10,10">
                         <Label Text="{Binding ErrorMessage}"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Center"
                                VerticalOptions="Center"
-                               TextColor="Black"/>
+                               TextColor="{StaticResource JacksonPurple}"/>
                     </StackLayout>
                 </DataTemplate>
             </sfPopup:PopupView.ContentTemplate>

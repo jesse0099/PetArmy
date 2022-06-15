@@ -4,57 +4,105 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
              x:Class="PetArmy.Views.LoginPage"
              Shell.NavBarIsVisible="False"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center"
-                     BindingContext="{Binding Login}">
-            <PopUps:ErrorPopUp/>
-            <Entry x:Name="email"
-                   TextColor="Black"
-                   PlaceholderColor="Gray"
-                   Placeholder="Email"
-                   Text="{Binding Email, Mode = TwoWay}"/>
-            <Entry IsPassword="True"
-                   TextColor="Black"
-                   PlaceholderColor="Gray"
-                   Placeholder="Password"
-                   x:Name="password" 
-                   Text="{Binding Password, Mode = TwoWay}"/>
-            <Button VerticalOptions="Center"
-                    Text="Login"
-                    Command="{Binding LoginEPassCommand}"/>
-            <Button VerticalOptions="Center"
-                    Text="Login Google"
-                    Command="{Binding LoginGoogleCommand}"/>
-            <Button VerticalOptions="Center"
-                    Text="Facebook Login"
-                    Command="{Binding LoginFacebookCommand}" />
-            <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="FillAndExpand">
-                <BoxView BackgroundColor="#555"
-                         HorizontalOptions="FillAndExpand"
-                         VerticalOptions="Center"
-                         HeightRequest="1" />
-                <Label Text="Or"
-                       TextColor="#555"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       FontSize="Medium" />
-                <BoxView BackgroundColor="#555"
-                         HorizontalOptions="FillAndExpand"
-                         VerticalOptions="Center"
-                         HeightRequest="1" />
-            </StackLayout>
-
-            <Label Text="Registrarme" HorizontalOptions="Center">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding RegisterCommand}"/>
-                </Label.GestureRecognizers>
-            </Label>
-            
-        </StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Always">
+            <Grid  VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+                <StackLayout Padding="10,0,10,0"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             BindingContext="{Binding Login}"
+                             Grid.Row="1">
+                    <PopUps:ErrorPopUp />
+                    <Frame HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           HasShadow="True"
+                           WidthRequest="300"
+                           CornerRadius="10">
+                        <StackLayout>
+                            <!--Usuario-->
+                            <inputLayout:SfTextInputLayout  Hint="E-mail"
+                                                            InputViewPadding="5"
+                                                            HelperText="Usuario Registrado"
+                                                            ContainerType="Outlined"
+                                                            Style="{StaticResource SyncfusionEntries}">
+                                <Entry x:Name="email"
+                                       TextColor="Black"
+                                       Keyboard="Email"
+                                       Text="{Binding Email, Mode = TwoWay}" />
+                            </inputLayout:SfTextInputLayout>
+                            <!--Contrasenia-->
+                            <inputLayout:SfTextInputLayout  Hint="Password"
+                                                            EnablePasswordVisibilityToggle="True"
+                                                            ContainerType="Outlined"
+                                                            Style="{StaticResource SyncfusionEntries}">
+                                <Entry IsPassword="True"
+                                       TextColor="Black"
+                                       x:Name="password"
+                                       Text="{Binding Password, Mode = TwoWay}" />
+                            </inputLayout:SfTextInputLayout>
+                            <!--Login Con email y contra-->
+                            <buttons:SfButton  Command="{Binding LoginEPassCommand}"
+                                               Text="Log In"
+                                               HorizontalOptions="FillAndExpand"
+                                               ShowIcon="True"
+                                               Style="{StaticResource SyncfusionButtons}">
+                                <!--<buttons:SfButton.Image>
+                                    <Image Source="iconsdoor.png"
+                                           HeightRequest="16"
+                                           WidthRequest="16" />
+                                </buttons:SfButton.Image>-->
+                            </buttons:SfButton>
+                        </StackLayout>
+                    </Frame>
+                    <!--Separator-->
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand">
+                        <BoxView BackgroundColor="#555"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="Center"
+                                 HeightRequest="1" />
+                        <Label Text="Or"
+                               TextColor="#555"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               FontSize="Medium" />
+                        <BoxView BackgroundColor="#555"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="Center"
+                                 HeightRequest="1" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Padding="10,0,10,0"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             BindingContext="{Binding Login}"
+                             Grid.Row="2">
+                    <Label Text="Sign Me Up"
+                           HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding RegisterCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Button VerticalOptions="Center"
+                            Text="Login Google"
+                            Command="{Binding LoginGoogleCommand}" />
+                    <Button VerticalOptions="Center"
+                            Text="Facebook Login"
+                            Command="{Binding LoginFacebookCommand}" />
+                </StackLayout>
+            </Grid>    
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

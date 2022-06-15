@@ -2,6 +2,8 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:infraestructure="clr-namespace:PetArmy.Infraestructure"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="PetArmy.App">
     <!--
         Define global resources and styles here, that apply to all pages in your app.
@@ -14,7 +16,35 @@
 
             <!--Auto Generado por el template-->
             <Color x:Key="Primary">#2196F3</Color>
-            
+            <!--Colores Propios-->
+            <Color x:Key="LuckyPoint">#2c2c54</Color>
+            <Color x:Key="Liberty">#474787</Color>
+            <Color x:Key="JacksonPurple">#40407a</Color>
+            <Color x:Key="SynthPumpkin">#ff793f</Color>
+            <Color x:Key="FluoRed">#ff5252</Color>
+            <!--Entries con Syncfusion-->
+            <Style x:Key="SyncfusionEntries"
+                   TargetType="inputLayout:SfTextInputLayout">
+                <Setter Property="InputViewPadding"
+                        Value="5" />
+                <Setter Property="UnfocusedColor"
+                        Value="{StaticResource LuckyPoint}" />
+                <Setter Property="FocusedColor"
+                        Value="{StaticResource Liberty}" />
+                <Setter Property="OutlineCornerRadius"
+                        Value="8" />
+            </Style>
+            <!--Buttons con syncfusion-->
+            <Style x:Key="SyncfusionButtons"
+                   TargetType="buttons:SfButton">
+                <Setter Property="CornerRadius"
+                        Value="3" />
+                <Setter Property="TextColor"
+                        Value="WhiteSmoke" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource JacksonPurple}" />
+            </Style>
+            <!--Auto Generado por el template-->
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
