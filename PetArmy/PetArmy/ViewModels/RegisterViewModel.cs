@@ -19,6 +19,9 @@ namespace PetArmy.ViewModels
             _i_auth = DependencyService.Get<IFirebaseAuth>();
 
             RegisterCommand = new Command(OnRegisterExecute);
+
+            Email = string.Empty;
+            Password = string.Empty;
         }
 
         private void OnRegisterExecute()
