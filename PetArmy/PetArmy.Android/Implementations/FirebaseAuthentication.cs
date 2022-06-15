@@ -14,6 +14,7 @@ namespace PetArmy.Droid.Implementations
     public class FirebaseAuthentication : Java.Lang.Object, IFirebaseAuth, FirebaseAuth.IAuthStateListener, IOnSuccessListener
     {
         public Action<UserProfile, string> _onRegisterComplete;
+        public Action<UserProfile, string> _onLoginComplete;
         public FirebaseAuthentication()
         {
             _instance = this;
@@ -24,25 +25,30 @@ namespace PetArmy.Droid.Implementations
             return user != null;
         }
 
-        public async Task<string> LoginWithEmailAndPassword(string email, string password)
+        public async void LoginWithEmailAndPassword(string email, string password, Action<UserProfile, string> onLoginComplete)
         {
             try
             {
-                var user = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
-                var token = user.User.GetIdToken(false);
+                _onLoginComplete = onLoginComplete;
 
-                //return user.User.GetIdToken(false).Result.ToString();
-                return user.User.Uid;
+                //Attempting to Sign In
+                //return System.Threading.Tasks.Task (Dios, sos vos?)
+                var sign_in_result = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
+
+                //Sucess Log In
+                _onLoginComplete?.Invoke(new UserProfile() { 
+                    Name = sign_in_result.User.DisplayName,
+                    Email = sign_in_result.User.Email,
+                    ProfilePictureUrl = string.Empty
+                }, string.Empty);
             }
             catch (FirebaseAuthInvalidUserException e)
             {
-                e.PrintStackTrace();
-                return string.Empty;
+                _onLoginComplete?.Invoke(null, e.Message);
             }
             catch (FirebaseAuthInvalidCredentialsException e)
             {
-                e.PrintStackTrace();
-                return string.Empty;
+                _onLoginComplete?.Invoke(null, e.Message);
             }
         }
        
@@ -60,7 +66,7 @@ namespace PetArmy.Droid.Implementations
         }
 
         /// <summary>
-        ///     Registro de cuenta Google en Firebase Auth
+        ///     Registro de cuenta de usuario en Firebase Auth
         /// </summary>
         /// <param name="acct">Cuenta logueada</param>
         public Android.Gms.Tasks.Task FirebaseAuthRegister(GoogleSignInAccount acct = null, int provider = 0, string email = "", string password = "")

@@ -34,19 +34,23 @@ namespace PetArmy.ViewModels
             LoginGoogleCommand = new Command(OnLoginGoogleExecute);
             LoginFacebookCommand = new Command(OnLoginFacebookExecute);
             RegisterCommand = new Command(OnRegisterExecute);
+
+            Email = string.Empty;
+            Password = string.Empty;
         }
 
-        async private void OnLoginEPassExecute()
+        private void OnLoginEPassExecute()
         {
-            string Token = await _i_auth.LoginWithEmailAndPassword(Email, Password);
-            if (Token != "")
-                await Shell.Current.GoToAsync("//AboutPage");
-            else
+            if (Email.Equals(string.Empty) || Password.Equals(string.Empty))
             {
-                ErrorTitle = "Something Went Wrong!!!";
-                ErrorMessage = "Unos pedillos";
-                OpenPopUp = true;
+                ProviderLoginChecker(null, "All Fields Are Required");
+                return;
             }
+
+            _i_auth.LoginWithEmailAndPassword(Email, Password, (UserProfile profile, string message) =>
+            {
+                ProviderLoginChecker(profile, message);
+            });
         }
 
         private void OnLoginGoogleExecute()
