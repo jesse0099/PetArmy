@@ -16,6 +16,7 @@
         <ScrollView>
 
             <StackLayout BindingContext="{Binding Login}">
+                <PopUps:ErrorPopUp />
                 <Image Source="PetsArmy" HeightRequest="250" HorizontalOptions="Center"/>
                 <StackLayout Padding="40" Spacing="20">
 

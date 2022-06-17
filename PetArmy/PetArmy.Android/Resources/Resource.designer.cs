@@ -17383,7 +17383,10 @@ namespace PetArmy.Droid
 			public const int tooltip_frame_light = 2131165419;
 			
 			// aapt resource value: 0x7F0700EC
-			public const int xamarin_logo = 2131165420;
+			public const int UserPlus = 2131165420;
+			
+			// aapt resource value: 0x7F0700ED
+			public const int xamarin_logo = 2131165421;
 			
 			static Drawable()
 			{
