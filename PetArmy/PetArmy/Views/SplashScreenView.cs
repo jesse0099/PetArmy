@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace PetArmy.Views
@@ -30,11 +31,12 @@ namespace PetArmy.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
+            
             await splashImage.ScaleTo(1, 2000);
             await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
             await splashImage.ScaleTo(1, 2000);
             await splashImage.FadeTo(0, 1000);
+
             Application.Current.MainPage = new AppShell();
         }
 
