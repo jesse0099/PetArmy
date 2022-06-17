@@ -8,64 +8,45 @@
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
              x:Class="PetArmy.Views.LoginPage"
+             xmlns:local="clr-namespace:PetArmy"
              Shell.NavBarIsVisible="False"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
-    <ContentPage.Content>
-        <ScrollView VerticalScrollBarVisibility="Always">
-            <Grid  VerticalOptions="FillAndExpand"
-                   HorizontalOptions="FillAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="2*" />
-                    <RowDefinition Height="3*" />
-                </Grid.RowDefinitions>
-                <StackLayout Padding="10,0,10,0"
-                             VerticalOptions="FillAndExpand"
-                             HorizontalOptions="FillAndExpand"
-                             BindingContext="{Binding Login}"
-                             Grid.Row="1">
-                    <PopUps:ErrorPopUp />
-                    <Frame HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           HasShadow="True"
-                           WidthRequest="300"
-                           CornerRadius="10">
-                        <StackLayout>
-                            <!--Usuario-->
-                            <inputLayout:SfTextInputLayout  Hint="E-mail"
+    <StackLayout VerticalOptions="Center">
+
+        <ScrollView>
+
+            <StackLayout BindingContext="{Binding Login}">
+                <Image Source="PetsArmy" HeightRequest="250" HorizontalOptions="Center"/>
+                <StackLayout Padding="40" Spacing="20">
+
+                    <inputLayout:SfTextInputLayout  Hint="E-mail"
                                                             InputViewPadding="5"
                                                             HelperText="Usuario Registrado"
                                                             ContainerType="Outlined"
                                                             Style="{StaticResource SyncfusionEntries}">
-                                <Entry x:Name="email"
+                        <Entry x:Name="email"
                                        TextColor="Black"
                                        Keyboard="Email"
                                        Text="{Binding Email, Mode = TwoWay}" />
-                            </inputLayout:SfTextInputLayout>
-                            <!--Contrasenia-->
-                            <inputLayout:SfTextInputLayout  Hint="Password"
+                    </inputLayout:SfTextInputLayout>
+                    <!--Contrasenia-->
+                    <inputLayout:SfTextInputLayout  Hint="Password"
                                                             EnablePasswordVisibilityToggle="True"
                                                             ContainerType="Outlined"
                                                             Style="{StaticResource SyncfusionEntries}">
-                                <Entry IsPassword="True"
+                        <Entry IsPassword="True"
                                        TextColor="Black"
                                        x:Name="password"
                                        Text="{Binding Password, Mode = TwoWay}" />
-                            </inputLayout:SfTextInputLayout>
-                            <!--Login Con email y contra-->
-                            <buttons:SfButton  Command="{Binding LoginEPassCommand}"
+                    </inputLayout:SfTextInputLayout>
+                    <!--Login Con email y contra-->
+                    <buttons:SfButton  Command="{Binding LoginEPassCommand}"
                                                Text="Log In"
                                                HorizontalOptions="FillAndExpand"
                                                ShowIcon="True"
                                                Style="{StaticResource SyncfusionButtons}">
-                                <!--<buttons:SfButton.Image>
-                                    <Image Source="iconsdoor.png"
-                                           HeightRequest="16"
-                                           WidthRequest="16" />
-                                </buttons:SfButton.Image>-->
-                            </buttons:SfButton>
-                        </StackLayout>
-                    </Frame>
+                    </buttons:SfButton>
+
                     <!--Separator-->
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="FillAndExpand">
@@ -73,7 +54,7 @@
                                  HorizontalOptions="FillAndExpand"
                                  VerticalOptions="Center"
                                  HeightRequest="1" />
-                        <Label Text="Or"
+                        <Label Text=" ó "
                                TextColor="#555"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
@@ -83,26 +64,48 @@
                                  VerticalOptions="Center"
                                  HeightRequest="1" />
                     </StackLayout>
-                </StackLayout>
-                <StackLayout Padding="10,0,10,0"
-                             VerticalOptions="FillAndExpand"
-                             HorizontalOptions="FillAndExpand"
-                             BindingContext="{Binding Login}"
-                             Grid.Row="2">
-                    <Label Text="Sign Me Up"
+
+                    <Label Text="Registrarme con Email"
                            HorizontalOptions="Center">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding RegisterCommand}" />
                         </Label.GestureRecognizers>
                     </Label>
                     <Button VerticalOptions="Center"
-                            Text="Login Google"
-                            Command="{Binding LoginGoogleCommand}" />
-                    <Button VerticalOptions="Center"
-                            Text="Facebook Login"
-                            Command="{Binding LoginFacebookCommand}" />
+                            Text="Google"
+                            ContentLayout="Left,5"
+                            BackgroundColor="#ec0101" 
+                            TextColor="White"   
+                            HeightRequest="50"  
+                            CornerRadius="5"  
+                            WidthRequest="320"  
+                            HorizontalOptions="CenterAndExpand"
+                            Padding="5,2"
+                            Command="{Binding LoginGoogleCommand}">
+                        <Button.ImageSource>
+                            <FontImageSource  FontFamily="{StaticResource BrandFontFamily}" Glyph="{x:Static local:IconClass.Google}" />
+                        </Button.ImageSource>
+                    </Button>
+                    <Button Text="Facebook" 
+                            ContentLayout="Left,5"  
+                            BackgroundColor="#3b5998" 
+                            TextColor="White"  
+                            HeightRequest="50" 
+                            CornerRadius="5"  
+                            WidthRequest="320"  
+                            HorizontalOptions="Center" 
+                            Padding="5,2"
+                            Command="{Binding LoginFacebookCommand}">
+                        <Button.ImageSource >
+                        <FontImageSource FontFamily="{StaticResource BrandFontFamily}" Glyph="{x:Static local:IconClass.Facebook}" />
+                        </Button.ImageSource>
+                    </Button>
+
                 </StackLayout>
-            </Grid>    
+            </StackLayout>
+            
         </ScrollView>
-    </ContentPage.Content>
+      
+    </StackLayout>
+      
 </ContentPage>
