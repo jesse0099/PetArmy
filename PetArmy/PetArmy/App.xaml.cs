@@ -1,4 +1,5 @@
 ﻿using PetArmy.Services;
+using PetArmy.Views;
 using Xamarin.Forms;
 
 namespace PetArmy
@@ -10,11 +11,9 @@ namespace PetArmy
         {
             //Register Syncfusion license (Recordar implementar para iOS)
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDQ1OTEyQDMxMzkyZTMxMmUzMGFYUVRyaFV6U1kwWFc4QUhIbWNCOEsxRkpOSjhVSHhsa3dtWDhodDhpY3c9");
-
             InitializeComponent();
-
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new SplashScreenView();
         }
 
         protected override void OnStart()
