@@ -36,7 +36,40 @@ namespace PetArmy.Droid
             Syncfusion.XForms.Android.PopupLayout.SfPopupLayoutRenderer.Init();
 
             LoadApplication(new App());
+
+            _instance = this;
+
+            //Set status bar color | Theme bounded
+            OnAppThemeChange(null,new Xamarin.Forms.AppThemeChangedEventArgs(Xamarin.Forms.Application.Current.RequestedTheme));
+     
+            Xamarin.Forms.Application.Current.RequestedThemeChanged += OnAppThemeChange;
         }
+
+        void OnAppThemeChange(object s, Xamarin.Forms.AppThemeChangedEventArgs a)
+        {
+            object output;
+            switch (a.RequestedTheme)
+            {
+                case Xamarin.Forms.OSAppTheme.Dark:
+                    {
+                        Xamarin.Forms.Application.Current.Resources.TryGetValue("JacksonPurple", out output);
+                        Window.SetStatusBarColor(Android.Graphics.Color.ParseColor(((Xamarin.Forms.Color)output).ToHex()));
+                        break;
+                    }
+                case Xamarin.Forms.OSAppTheme.Light:
+                    {
+                        Xamarin.Forms.Application.Current.Resources.TryGetValue("JacksonPurple", out output);
+                        Window.SetStatusBarColor(Android.Graphics.Color.ParseColor(((Xamarin.Forms.Color)output).ToHex()));
+                        break;
+                    }
+
+                default:
+                    {
+                        break;
+                    }
+            }
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -63,6 +96,16 @@ namespace PetArmy.Droid
                 GoogleLoginActivity.GetInstance().OnSignInCompleted(result);
                 #pragma warning restore CS0612 // Type or member is obsolete
             }
+        }
+
+        private static MainActivity _instance;
+        public static MainActivity GetInstance()
+        {
+            if (_instance == null)
+                return new MainActivity();
+            else
+                return _instance;
+
         }
 
     }

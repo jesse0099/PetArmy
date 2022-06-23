@@ -4,6 +4,7 @@
              xmlns:infraestructure="clr-namespace:PetArmy.Infraestructure"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
              x:Class="PetArmy.App">
     <!--
         Define global resources and styles here, that apply to all pages in your app.
@@ -15,49 +16,68 @@
             <infraestructure:InstanceLocator x:Key="Locator" />
 
             <!--Auto Generado por el template-->
-            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Primary">Black</Color>
             <!--Colores Propios-->
             <Color x:Key="LuckyPoint">#2c2c54</Color>
             <Color x:Key="Liberty">#474787</Color>
             <Color x:Key="JacksonPurple">#40407a</Color>
             <Color x:Key="SynthPumpkin">#ff793f</Color>
             <Color x:Key="FluoRed">#ff5252</Color>
+            <Color x:Key="PurplePlum">#a657ae</Color>
+            <Color x:Key="Flirt">#8c1a6a</Color>
+            <Color x:Key="MiddlePurple">#9d75cb</Color>
+            <x:String x:Key="SfTextInputLayoutTheme">CustomTheme</x:String>
+            <Color x:Key="SfTextInputLayoutHelperTextColor">#a657ae</Color>
+
+
+
             <!--Entries con Syncfusion-->
             <Style x:Key="SyncfusionEntries"
                    TargetType="inputLayout:SfTextInputLayout">
                 <Setter Property="InputViewPadding"
                         Value="5" />
                 <Setter Property="UnfocusedColor"
-                        Value="{StaticResource LuckyPoint}" />
+                        Value="{AppThemeBinding  Light={StaticResource LuckyPoint}, Dark={StaticResource MiddlePurple}}" />
                 <Setter Property="FocusedColor"
-                        Value="{StaticResource Liberty}" />
+                        Value="{AppThemeBinding Light={StaticResource Liberty}, Dark={StaticResource PurplePlum}}" />
                 <Setter Property="OutlineCornerRadius"
                         Value="8" />
             </Style>
+            
+
+            
             <!--Buttons con syncfusion-->
             <Style x:Key="SyncfusionButtons"
                    TargetType="buttons:SfButton">
                 <Setter Property="CornerRadius"
                         Value="3" />
+                <Setter Property="HeightRequest"
+                        Value="44" />
                 <Setter Property="TextColor"
                         Value="WhiteSmoke" />
+                <Setter Property="FontSize" 
+                        Value="14"/>
                 <Setter Property="BackgroundColor"
-                        Value="{StaticResource JacksonPurple}" />
+                        Value="{StaticResource Liberty}" />
             </Style>
+
             <!--Auto Generado por el template-->
             <Style TargetType="Button">
-                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="TextColor"
+                        Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor"
+                                            Value="{StaticResource Primary}" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Disabled">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                    <Setter Property="BackgroundColor"
+                                            Value="#332196F3" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -71,10 +91,12 @@
             <On Platform="Android" Value="fa-solid-900.ttf#Font Awesome 5 Free" />
         </OnPlatform>
 
-        <OnPlatform x:Key="BrandFontFamily" x:TypeArguments="x:String">
-            <On Platform="iOS" Value="Font Awesome 5 Free" />
-            <On Platform="Android" Value="fa-brands-400.ttf#Font Awesome 5 Free" />
+        <OnPlatform x:Key="BrandFontFamily"
+                    x:TypeArguments="x:String">
+            <On Platform="iOS"
+                Value="Font Awesome 5 Free" />
+            <On Platform="Android"
+                Value="fa-brands-400.ttf#Font Awesome 5 Free" />
         </OnPlatform>
-
     </Application.Resources>
 </Application>

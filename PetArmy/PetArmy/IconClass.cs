@@ -920,6 +920,7 @@ namespace PetArmy
 		public const string BabyCarriage = "\uf77d";
 		public const string Biohazard = "\uf780";
 		public const string Blog = "\uf781";
+		public const string EnterArrow = "\uf090";
 		public const string CalendarDay = "\uf783";
 		public const string CalendarWeek = "\uf784";
 		public const string CandyCane = "\uf786";

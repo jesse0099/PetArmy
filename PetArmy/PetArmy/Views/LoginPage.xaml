@@ -6,11 +6,14 @@
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
              mc:Ignorable="d"
              x:Class="PetArmy.Views.LoginPage"
              xmlns:local="clr-namespace:PetArmy"
              Shell.NavBarIsVisible="False"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}">
     <StackLayout VerticalOptions="Center">
 
         <ScrollView>
@@ -19,88 +22,95 @@
                 <PopUps:ErrorPopUp />
                 <Image Source="PetsArmy" HeightRequest="250" HorizontalOptions="Center"/>
                 <StackLayout Padding="40" Spacing="20">
-
+                    <!--Email-->
                     <inputLayout:SfTextInputLayout  Hint="E-mail"
-                                                            InputViewPadding="5"
-                                                            HelperText="Usuario Registrado"
-                                                            ContainerType="Outlined"
-                                                            Style="{StaticResource SyncfusionEntries}">
+                                                    x:Name="EmailContainer"
+                                                    InputViewPadding="5"
+                                                    HelperText="Email Registrado: user@gmail.com"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="email"
-                                       TextColor="Black"
-                                       Keyboard="Email"
-                                       Text="{Binding Email, Mode = TwoWay}" />
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                               Keyboard="Email"
+                               Text="{Binding Email, Mode = TwoWay}" />
                     </inputLayout:SfTextInputLayout>
                     <!--Contrasenia-->
                     <inputLayout:SfTextInputLayout  Hint="Password"
-                                                            EnablePasswordVisibilityToggle="True"
-                                                            ContainerType="Outlined"
-                                                            Style="{StaticResource SyncfusionEntries}">
+                                                    HelperText="Clave Registrada: *****"
+                                                    EnablePasswordVisibilityToggle="True"
+                                                    ContainerType="Outlined"
+                                                    EnableHintAnimation="True"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
                         <Entry IsPassword="True"
-                                       TextColor="Black"
-                                       x:Name="password"
-                                       Text="{Binding Password, Mode = TwoWay}" />
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                               x:Name="password"
+                               Text="{Binding Password, Mode = TwoWay}" />
                     </inputLayout:SfTextInputLayout>
                     <!--Login Con email y contra-->
                     <buttons:SfButton  Command="{Binding LoginEPassCommand}"
-                                               Text="Log In"
-                                               HorizontalOptions="FillAndExpand"
-                                               ShowIcon="True"
-                                               Style="{StaticResource SyncfusionButtons}">
+                                       Text="Log In"
+                                       HorizontalOptions="FillAndExpand"
+                                       ShowIcon="True"
+                                       TextColor="{AppThemeBinding Light=White, Dark=LightGray}"
+                                       Style="{StaticResource SyncfusionButtons}">
                     </buttons:SfButton>
 
                     <!--Separator-->
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="FillAndExpand">
-                        <BoxView BackgroundColor="#555"
+                        <BoxView BackgroundColor="{AppThemeBinding Light=#555, Dark={StaticResource MiddlePurple}}"
                                  HorizontalOptions="FillAndExpand"
                                  VerticalOptions="Center"
                                  HeightRequest="1" />
                         <Label Text=" ó "
-                               TextColor="#555"
+                               TextColor="{AppThemeBinding Light=#555, Dark={StaticResource MiddlePurple}}"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
                                FontSize="Medium" />
-                        <BoxView BackgroundColor="#555"
+                        <BoxView BackgroundColor="{AppThemeBinding Light=#555, Dark={StaticResource MiddlePurple}}"
                                  HorizontalOptions="FillAndExpand"
                                  VerticalOptions="Center"
                                  HeightRequest="1" />
                     </StackLayout>
 
                     <Label Text="Registrarme con Email"
-                           HorizontalOptions="Center">
+                           HorizontalOptions="Center"
+                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding RegisterCommand}" />
                         </Label.GestureRecognizers>
                     </Label>
-                    <Button VerticalOptions="Center"
-                            Text="Google"
-                            ContentLayout="Left,5"
-                            BackgroundColor="#ec0101" 
-                            TextColor="White"   
-                            HeightRequest="50"  
-                            CornerRadius="5"  
-                            WidthRequest="320"  
-                            HorizontalOptions="CenterAndExpand"
-                            Padding="5,2"
-                            Command="{Binding LoginGoogleCommand}">
-                        <Button.ImageSource>
-                            <FontImageSource  FontFamily="{StaticResource BrandFontFamily}" Glyph="{x:Static local:IconClass.Google}" />
-                        </Button.ImageSource>
-                    </Button>
-                    <Button Text="Facebook" 
-                            ContentLayout="Left,5"  
-                            BackgroundColor="#3b5998" 
-                            TextColor="White"  
-                            HeightRequest="50" 
-                            CornerRadius="5"  
-                            WidthRequest="320"  
-                            HorizontalOptions="Center" 
-                            Padding="5,2"
-                            Command="{Binding LoginFacebookCommand}">
-                        <Button.ImageSource >
-                        <FontImageSource FontFamily="{StaticResource BrandFontFamily}" Glyph="{x:Static local:IconClass.Facebook}" />
-                        </Button.ImageSource>
-                    </Button>
+                    <!--Google LogIn-->
+                    <buttons:SfButton  Command="{Binding LoginGoogleCommand}"
+                                       Text="GOOGLE"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="FillAndExpand"
+                                       ShowIcon="True"
+                                       BackgroundColor="#DB4437"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource BrandFontFamily}" 
+                                             Glyph="{x:Static local:IconClass.Google}"/>
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
+
+                    <!--Facebook Login-->
+                    <buttons:SfButton  Command="{Binding LoginFacebookCommand}"
+                                       Text="FACEBOOK"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="FillAndExpand"
+                                       ShowIcon="True"
+                                       BackgroundColor="#3b5998"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource BrandFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Facebook}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
 
                 </StackLayout>
             </StackLayout>
