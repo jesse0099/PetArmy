@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.CommunityToolkit.ObjectModel;
 
 namespace PetArmy.ViewModels
 {
@@ -10,7 +11,7 @@ namespace PetArmy.ViewModels
         public UserViewModel User { get; set; }
         public RegisterViewModel Register { get; set; }
 
-        public MainViewModel()
+        public MainViewModel(): base()
         {
             this.Login = LoginViewModel.GetInstance();
             this.Register = RegisterViewModel.GetInstance();

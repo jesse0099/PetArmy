@@ -24,8 +24,33 @@ namespace PetArmy.Views
             AbsoluteLayout.SetLayoutFlags(this.splashImage, AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(this.splashImage, new Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
             sub.Children.Add(this.splashImage);
-            this.BackgroundColor = Color.FromHex("#ffffff");
+            OnAppThemeChange(null, new AppThemeChangedEventArgs(Application.Current.RequestedTheme));
+            Application.Current.RequestedThemeChanged += OnAppThemeChange;
             this.Content = sub;
+        }
+
+        void OnAppThemeChange(object s, Xamarin.Forms.AppThemeChangedEventArgs a)
+        {
+            object output;
+            switch (a.RequestedTheme)
+            {
+                case Xamarin.Forms.OSAppTheme.Dark:
+                    {
+                        Application.Current.Resources.TryGetValue("LuckyPoint", out output);
+                        BackgroundColor = ((Color)output);
+                        break;
+                    }
+                case Xamarin.Forms.OSAppTheme.Light:
+                    {
+                        BackgroundColor = Color.White;
+                        break;
+                    }
+
+                default:
+                    {
+                        break;
+                    }
+            }
         }
 
         protected override async void OnAppearing()

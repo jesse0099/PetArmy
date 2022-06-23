@@ -21,15 +21,20 @@
             <Color x:Key="LuckyPoint">#2c2c54</Color>
             <Color x:Key="Liberty">#474787</Color>
             <Color x:Key="JacksonPurple">#40407a</Color>
+            <Color x:Key="Ametheist">#8b5cc1</Color>
             <Color x:Key="SynthPumpkin">#ff793f</Color>
             <Color x:Key="FluoRed">#ff5252</Color>
             <Color x:Key="PurplePlum">#a657ae</Color>
             <Color x:Key="Flirt">#8c1a6a</Color>
             <Color x:Key="MiddlePurple">#9d75cb</Color>
             <x:String x:Key="SfTextInputLayoutTheme">CustomTheme</x:String>
-            <Color x:Key="SfTextInputLayoutHelperTextColor">#a657ae</Color>
+            <Color x:Key="SfTextInputLayoutHelperTextColor">#bcbcbc</Color>
 
-
+            <Style x:Key="SyncfusionHelperLabel"
+                   TargetType="inputLayout:TextInputHelperLabel">
+                <Setter Property="TextColor"
+                        Value="#000" />
+            </Style>
 
             <!--Entries con Syncfusion-->
             <Style x:Key="SyncfusionEntries"
@@ -42,8 +47,11 @@
                         Value="{AppThemeBinding Light={StaticResource Liberty}, Dark={StaticResource PurplePlum}}" />
                 <Setter Property="OutlineCornerRadius"
                         Value="8" />
+                <Setter Property="HelperLabelStyle"
+                        Value="SyncfusionHelperLabel"/>
             </Style>
-            
+
+
 
             
             <!--Buttons con syncfusion-->

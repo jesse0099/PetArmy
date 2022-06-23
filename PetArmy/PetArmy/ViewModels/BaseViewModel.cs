@@ -1,15 +1,22 @@
 ﻿using PetArmy.Models;
 using PetArmy.Services;
+using Resx;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using Xamarin.CommunityToolkit.Helpers;
+using Xamarin.CommunityToolkit.ObjectModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetArmy.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        #region PropertyChanged Fields
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
         bool _openPopUp = false;
@@ -60,7 +67,8 @@ namespace PetArmy.ViewModels
             OnPropertyChanged(propertyName);
             return true;
         }
-
+        #endregion
+      
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
@@ -72,5 +80,31 @@ namespace PetArmy.ViewModels
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+        public LocalizedString Version { get; } = new(() => string.Format(AppResources.Version, AppInfo.VersionString));
+        public LocalizedString CurrentLanguage { get; set; }
+
+        public BaseViewModel()
+        {
+            CurrentLanguage = new(GetCurrentLanguageName);
+            ChangeLanguage();
+        }
+        List<(Func<string> name, string value)> languageMapping { get; } = new()
+        {
+            (() => AppResources.System, null),
+            (() => AppResources.English, "en"),
+            (() => AppResources.Spanish, "es"),
+        };
+
+        private string GetCurrentLanguageName()
+        {
+            var (knownName, _) = languageMapping.SingleOrDefault(m => m.value == LocalizationResourceManager.Current.CurrentCulture.TwoLetterISOLanguageName);
+            return knownName != null ? knownName() : LocalizationResourceManager.Current.CurrentCulture.DisplayName;
+        }
+
+        void ChangeLanguage()
+        {
+            string selectedValue = languageMapping.Single(m => m.name() == CurrentLanguage.Localized).value;
+            LocalizationResourceManager.Current.CurrentCulture = selectedValue == null ? CultureInfo.CurrentCulture : new CultureInfo(selectedValue);
+        }
     }
 }

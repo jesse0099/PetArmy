@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetArmy.Android", "PetArmy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetArmy.iOS", "PetArmy.iOS\PetArmy.iOS.csproj", "{3FA6726F-EE88-434E-A193-A75EDC349706}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetArmy", "PetArmy\PetArmy.csproj", "{836FBFF2-41E3-4D7A-AF64-88E99D03D083}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetArmy", "PetArmy\PetArmy.csproj", "{836FBFF2-41E3-4D7A-AF64-88E99D03D083}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +78,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_ConfirmAddLanguageFile = True
+		RESX_AutoCreateNewLanguageFiles = True
 		SolutionGuid = {C586CC7D-6CF8-44F8-BAC7-292106FDC51F}
 	EndGlobalSection
 EndGlobal

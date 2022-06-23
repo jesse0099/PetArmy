@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:PetArmy"
+             xmlns:vms="clr-namespace:PetArmy.ViewModels"
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
-             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              mc:Ignorable="d"
              x:Class="PetArmy.Views.LoginPage"
-             xmlns:local="clr-namespace:PetArmy"
              Shell.NavBarIsVisible="False"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              BackgroundColor="{AppThemeBinding Light=White, 
                                                Dark={StaticResource LuckyPoint}}">
+
     <StackLayout VerticalOptions="Center">
 
         <ScrollView>
@@ -50,11 +52,15 @@
                     </inputLayout:SfTextInputLayout>
                     <!--Login Con email y contra-->
                     <buttons:SfButton  Command="{Binding LoginEPassCommand}"
-                                       Text="Log In"
+                                       Text="{xct:Translate LogIn}"
                                        HorizontalOptions="FillAndExpand"
                                        ShowIcon="True"
                                        TextColor="{AppThemeBinding Light=White, Dark=LightGray}"
                                        Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.DoorOpen}" />
+                        </buttons:SfButton.ImageSource>
                     </buttons:SfButton>
 
                     <!--Separator-->

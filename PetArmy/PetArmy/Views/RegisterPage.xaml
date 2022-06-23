@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="PetArmy.Views.RegisterPage"
              xmlns:local="clr-namespace:PetArmy"
              BindingContext="{Binding Main, Source={StaticResource Key=Locator}}">
@@ -38,8 +39,21 @@
                                 x:Name="password"
                                 Text="{Binding Password, Mode = TwoWay}" />
                     </inputLayout:SfTextInputLayout>
-
-                    <Button Text="Crear cuenta" 
+                    <!--Registrarme-->
+                    <buttons:SfButton  Command="{Binding RegisterCommand}"
+                                       Text="Crear Cuenta"
+                                       FontAttributes="Bold"
+                                       ShowIcon="True"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="FillAndExpand"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Plus}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
+                    
+                    <!--<Button Text="Crear cuenta" 
                             ContentLayout="Left,5"  
                             BackgroundColor="Lime" 
                             TextColor="White"  
@@ -53,7 +67,7 @@
                         <Button.ImageSource >
                             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}" Glyph="{x:Static local:IconClass.Plus}" />
                         </Button.ImageSource>
-                    </Button>
+                    </Button>-->
 
                 </StackLayout>
             </StackLayout>
