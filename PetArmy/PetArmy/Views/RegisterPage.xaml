@@ -5,6 +5,7 @@
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="PetArmy.Views.RegisterPage"
              xmlns:local="clr-namespace:PetArmy"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              BindingContext="{Binding Main, Source={StaticResource Key=Locator}}">
     <StackLayout VerticalOptions="Center">
         <ScrollView>
@@ -14,7 +15,7 @@
                 <Label Text=" Crea tu nueva cuenta! " HorizontalOptions="Center" FontSize="Medium"/>
                 <StackLayout Padding="40" Spacing="20">
                     <!--Correo-->
-                    <inputLayout:SfTextInputLayout  Hint="E-mail"
+                    <inputLayout:SfTextInputLayout          Hint="{xct:Translate EmailKey}"
                                                             InputViewPadding="5"
                                                             HelperText=" Correo Personal"
                                                             ContainerType="Outlined"
@@ -27,7 +28,7 @@
 
                     </inputLayout:SfTextInputLayout>
 
-                    <inputLayout:SfTextInputLayout          Hint="Contraseña"
+                    <inputLayout:SfTextInputLayout          Hint="{xct:Translate PasswordKey}"
                                                             HelperText="Debe de ser al menos 7 caracteres"
                                                             EnablePasswordVisibilityToggle="True"
                                                             ContainerType="Outlined"
@@ -41,7 +42,7 @@
                     </inputLayout:SfTextInputLayout>
                     <!--Registrarme-->
                     <buttons:SfButton  Command="{Binding RegisterCommand}"
-                                       Text="Crear Cuenta"
+                                       Text="{xct:Translate CreateAccountKey}"
                                        FontAttributes="Bold"
                                        ShowIcon="True"
                                        HorizontalTextAlignment="Center"

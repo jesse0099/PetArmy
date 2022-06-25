@@ -112,4 +112,25 @@
   <data name="System" xml:space="preserve">
     <value>System</value>
   </data>
+  <data name="OrKey" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="SignUpKey" xml:space="preserve">
+    <value>Sign up with mail</value>
+  </data>
+  <data name="PasswordKey" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordHelperKey" xml:space="preserve">
+    <value>Your password: *****</value>
+  </data>
+  <data name="EmailKey" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="EmailHintKey" xml:space="preserve">
+    <value>Registered email: user@email.com</value>
+  </data>
+  <data name="CreateAccountKey" xml:space="preserve">
+    <value>Create account</value>
+  </data>
 </root>
