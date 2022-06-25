@@ -153,4 +153,10 @@
   <data name="CreateAccountKey" xml:space="preserve">
     <value>Crear cuenta</value>
   </data>
+  <data name="RegisterPassHelperKey" xml:space="preserve">
+    <value>Debe de ser al menos 7 caracteres</value>
+  </data>
+  <data name="RegisterEmailHelperKey" xml:space="preserve">
+    <value>Email Personal</value>
+  </data>
 </root>

@@ -133,6 +133,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Personal Email.
+        /// </summary>
+        public static string RegisterEmailHelperKey {
+            get {
+                return ResourceManager.GetString("RegisterEmailHelperKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Must be at least 7 characters.
+        /// </summary>
+        public static string RegisterPassHelperKey {
+            get {
+                return ResourceManager.GetString("RegisterPassHelperKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sign up with mail.
         /// </summary>
         public static string SignUpKey {

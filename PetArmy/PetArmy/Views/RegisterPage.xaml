@@ -17,7 +17,7 @@
                     <!--Correo-->
                     <inputLayout:SfTextInputLayout          Hint="{xct:Translate EmailKey}"
                                                             InputViewPadding="5"
-                                                            HelperText=" Correo Personal"
+                                                            HelperText="{xct:Translate RegisterEmailHelperKey}"
                                                             ContainerType="Outlined"
                                                             Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="email"
@@ -29,7 +29,7 @@
                     </inputLayout:SfTextInputLayout>
 
                     <inputLayout:SfTextInputLayout          Hint="{xct:Translate PasswordKey}"
-                                                            HelperText="Debe de ser al menos 7 caracteres"
+                                                            HelperText="{xct:Translate RegisterPassHelperKey}"
                                                             EnablePasswordVisibilityToggle="True"
                                                             ContainerType="Outlined"
                                                             Style="{StaticResource SyncfusionEntries}">
