@@ -23,7 +23,7 @@ namespace PetArmy.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             CallbackManager = CallbackManagerFactory.Create(); 
-            FirebaseFunctions functions = FirebaseFunctions.Instance;
+            //FirebaseFunctions functions = FirebaseFunctions.Instance;
             //functions.UseFunctionsEmulator("http://10.0.2.2:5001");    //Implementar para IOS
             //functions.UseFunctionsEmulator("http://192.168.100.207:5001");    //Implementar para IOS
             //FirebaseAuth.Instance.UseEmulator("10.0.2.2",5001);

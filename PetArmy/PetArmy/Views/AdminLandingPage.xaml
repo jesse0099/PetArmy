@@ -1,16 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:local="clr-namespace:PetArmy"
              x:Class="PetArmy.Views.AdminLandingPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
         <StackLayout>
+            <PopUps:ErrorPopUp />
             <Label Text="Welcome to Xamarin.Forms SA O A!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Label Text="{Binding Login.LoggedMail}"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand"/>
+            <buttons:SfButton  Command="{Binding Admin.CreateAdminCommand}"
+                               Text="Agregar Administrador"
+                               HorizontalOptions="FillAndExpand"
+                               ShowIcon="True"
+                               TextColor="{AppThemeBinding Light=White, Dark=LightGray}"
+                               Style="{StaticResource SyncfusionButtons}">
+                <buttons:SfButton.ImageSource>
+                    <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                     Glyph="{x:Static local:IconClass.UserAstronaut}" />
+                </buttons:SfButton.ImageSource>
+            </buttons:SfButton>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
