@@ -17,6 +17,5 @@ namespace PetArmy.ViewModels
             this.Register = RegisterViewModel.GetInstance();
             this.User = new UserViewModel();
         }
-
     }
 }

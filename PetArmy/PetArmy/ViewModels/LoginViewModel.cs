@@ -10,6 +10,12 @@ namespace PetArmy.ViewModels
         //Bound properties
         public string Email { get; set; }
         public string Password { get; set; }
+        public string Role { get; set; }    
+        const string empty = "";
+        private string _loggedMail;
+        public string LoggedMail { get { return _loggedMail; }
+                                   set { _loggedMail = value; OnPropertyChanged();} 
+        }
 
         //Interfaces para login con proveedores externos
         IFirebaseAuth _i_auth;
@@ -73,10 +79,39 @@ namespace PetArmy.ViewModels
             await App.Current.MainPage.Navigation.PushModalAsync(new RegisterPage());
         } 
 
-        async private void ProviderLoginChecker(UserProfile profile, string message)
+        async public void ProviderLoginChecker(UserProfile profile, string message, string role = empty)
         {
             if (profile != null)
-                await Shell.Current.GoToAsync("//AboutPage");
+            {
+                var registered_user = _i_auth.GetSignedUserProfile();
+                LoggedMail = registered_user.Email;
+                switch (role) {
+                    case "admin":
+                        {
+                            if (Shell.Current == null)
+                                Application.Current.MainPage = new AppShell();
+                            
+                            await Shell.Current.GoToAsync("//AdminLandingPage");
+                            break;
+                        }
+                    case "sa":
+                        {
+                            if (Shell.Current == null)
+                                Application.Current.MainPage = new AppShell();
+
+                            await Shell.Current.GoToAsync("//AdminLandingPage");
+                            break;
+                        }
+                    default:
+                        {
+                            if (Shell.Current == null)
+                                Application.Current.MainPage = new AppShell();
+
+                            await Shell.Current.GoToAsync("//AboutPage");
+                            break;
+                        }
+                }
+            }
             else
             {
                 ErrorTitle = "Something Went Wrong!!!";

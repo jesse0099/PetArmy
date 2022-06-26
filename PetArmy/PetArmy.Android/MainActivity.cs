@@ -5,6 +5,7 @@ using Android.Gms.Auth.Api.SignIn;
 using Android.OS;
 using Android.Runtime;
 using Firebase.Auth;
+using Firebase.Functions;
 using PetArmy.Droid.Implementations;
 using Xamarin.Essentials;
 using Xamarin.Facebook;
@@ -21,8 +22,11 @@ namespace PetArmy.Droid
         public ICallbackManager CallbackManager { get; set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            CallbackManager = CallbackManagerFactory.Create();
-            FirebaseAuth.Instance.AddAuthStateListener(FirebaseAuthentication.GetInstance());
+            CallbackManager = CallbackManagerFactory.Create(); 
+            FirebaseFunctions functions = FirebaseFunctions.Instance;
+            //functions.UseFunctionsEmulator("http://10.0.2.2:5001");    //Implementar para IOS
+            //functions.UseFunctionsEmulator("http://192.168.100.207:5001");    //Implementar para IOS
+            //FirebaseAuth.Instance.UseEmulator("10.0.2.2",5001);
 
             //Register Syncfusion license  (Recordar implementar para iOS)
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDQ1OTEyQDMxMzkyZTMxMmUzMGFYUVRyaFV6U1kwWFc4QUhIbWNCOEsxRkpOSjhVSHhsa3dtWDhodDhpY3c9");
@@ -36,6 +40,8 @@ namespace PetArmy.Droid
             Syncfusion.XForms.Android.PopupLayout.SfPopupLayoutRenderer.Init();
 
             LoadApplication(new App());
+
+            FirebaseAuth.Instance.AddAuthStateListener(FirebaseAuthentication.GetInstance());
 
             _instance = this;
 

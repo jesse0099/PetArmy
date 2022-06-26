@@ -7,6 +7,7 @@ namespace PetArmy.Interfaces
     {
         void RegisterWithEmailAndPassword(string email, string password, Action<UserProfile,string> onRegisterComplete);
         void LoginWithEmailAndPassword(string email, string password, Action<UserProfile, string> onLoginComplete);
+        UserProfile GetSignedUserProfile();
         bool SignOut();
         bool IsSignIn();
     }

@@ -1,5 +1,6 @@
 ﻿using Android.Gms.Auth.Api.SignIn;
 using Android.Gms.Tasks;
+using AndroidX.Collection;
 using Firebase.Auth;
 using PetArmy.Interfaces;
 using PetArmy.Models;
@@ -32,15 +33,7 @@ namespace PetArmy.Droid.Implementations
                 _onLoginComplete = onLoginComplete;
 
                 //Attempting to Sign In
-                //return System.Threading.Tasks.Task (Dios, sos vos?)
-                var sign_in_result = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
-
-                //Sucess Log In
-                _onLoginComplete?.Invoke(new UserProfile() { 
-                    Name = sign_in_result.User.DisplayName,
-                    Email = sign_in_result.User.Email,
-                    ProfilePictureUrl = string.Empty
-                }, string.Empty);
+                await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
             }
             catch (FirebaseAuthInvalidUserException e)
             {
@@ -119,14 +112,36 @@ namespace PetArmy.Droid.Implementations
         /// <param name="result"></param>
         public void OnSuccess(Java.Lang.Object result)
         {
-            Java.Lang.Object hasura_claims;
+            //Resultados de log in exitoso
+            GetTokenResult token_result = ((GetTokenResult)result);
+            //Claims - Firebase
             IDictionary<string, Java.Lang.Object> claims;
+            //Claims - Hasura
+            Java.Lang.Object hasura_claims;
+            //Rol a evaluar
+            string role = string.Empty;
             try
             {
-
-                claims = ((GetTokenResult)result).Claims;
+                claims = token_result.Claims;
                 claims.TryGetValue("https://hasura.io/jwt/claims", out hasura_claims);
-                //Logica de guardado local de tokens
+                
+                //Extraccion de rol para super admin (Deberia guardarse en el AppSettings junto al jwt)
+                var is_super_admin = ((SimpleArrayMap)hasura_claims).Get("x-hasura-super_admin");
+                var hasura_default_role = ((SimpleArrayMap)hasura_claims).Get("x-hasura-default-role");
+
+                if (is_super_admin != null)
+                    role = "sa";
+                else
+                    role = ((string)hasura_default_role);
+
+                //Sucess Log In and Sign Up
+                ViewModels.LoginViewModel.GetInstance().ProviderLoginChecker(new UserProfile()
+                {
+                    Name = FirebaseAuth.Instance.CurrentUser.DisplayName,
+                    Email = FirebaseAuth.Instance.CurrentUser.Email,
+                    ProfilePictureUrl = FirebaseAuth.Instance.CurrentUser.PhotoUrl != null ?
+                                        FirebaseAuth.Instance.CurrentUser.PhotoUrl.ToString() : string.Empty,
+                }, string.Empty, role);
             }
             catch (Exception e)
             {
@@ -162,6 +177,20 @@ namespace PetArmy.Droid.Implementations
             else
                 return _instance;
 
+        }
+
+        public UserProfile GetSignedUserProfile()
+        {
+            if (FirebaseAuth.Instance.CurrentUser == null)
+                return null;
+            else
+                return new UserProfile()
+                {
+                    Name = FirebaseAuth.Instance.CurrentUser.DisplayName,
+                    Email = FirebaseAuth.Instance.CurrentUser.Email,
+                    ProfilePictureUrl = FirebaseAuth.Instance.CurrentUser.PhotoUrl != null ?
+                                        FirebaseAuth.Instance.CurrentUser.PhotoUrl.ToString() : string.Empty,
+                };
         }
         #endregion
     }

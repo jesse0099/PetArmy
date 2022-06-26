@@ -94,6 +94,9 @@
     <PackageReference Include="Xamarin.Firebase.Core">
       <Version>119.0.1.5</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Functions">
+      <Version>119.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.GooglePlayServices.Auth">
