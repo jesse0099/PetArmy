@@ -27,6 +27,7 @@ namespace PetArmy.Views
             OnAppThemeChange(null, new AppThemeChangedEventArgs(Application.Current.RequestedTheme));
             Application.Current.RequestedThemeChanged += OnAppThemeChange;
             this.Content = sub;
+            /*Espacio*/
         }
 
         void OnAppThemeChange(object s, Xamarin.Forms.AppThemeChangedEventArgs a)
