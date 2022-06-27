@@ -43,10 +43,12 @@ namespace PetArmy.ViewModels
 
             Email = string.Empty;
             Password = string.Empty;
+            IsBusy = false;
         }
 
         private void OnLoginEPassExecute()
         {
+            IsBusy = true;
             if (Email.Equals(string.Empty) || Password.Equals(string.Empty))
             {
                 ProviderLoginChecker(null, "All Fields Are Required");
@@ -60,7 +62,7 @@ namespace PetArmy.ViewModels
         }
 
         private void OnLoginGoogleExecute()
-        {
+        {   //IsBusy = true;
             _g_auth.Login((UserProfile profile, string message) => {
                 ProviderLoginChecker(profile, message);
             });
@@ -68,6 +70,7 @@ namespace PetArmy.ViewModels
 
         private void OnLoginFacebookExecute()
         {
+            IsBusy = true;
             _f_auth.Login((UserProfile profile, string message) =>
             {
                 ProviderLoginChecker(profile, message);
@@ -90,7 +93,7 @@ namespace PetArmy.ViewModels
                         {
                             if (Shell.Current == null)
                                 Application.Current.MainPage = new AppShell();
-                            
+                            IsBusy = false;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -98,7 +101,7 @@ namespace PetArmy.ViewModels
                         {
                             if (Shell.Current == null)
                                 Application.Current.MainPage = new AppShell();
-
+                            IsBusy = false;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -106,7 +109,7 @@ namespace PetArmy.ViewModels
                         {
                             if (Shell.Current == null)
                                 Application.Current.MainPage = new AppShell();
-
+                            IsBusy = false;
                             await Shell.Current.GoToAsync("//AboutPage");
                             break;
                         }
@@ -114,6 +117,7 @@ namespace PetArmy.ViewModels
             }
             else
             {
+                IsBusy = false;
                 ErrorTitle = "Something Went Wrong!!!";
                 ErrorMessage = message;
                 OpenPopUp = true;

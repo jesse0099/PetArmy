@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using Xamarin.Forms;
 using System.Collections.Generic;
+using PetArmy.Models;
 
 namespace PetArmy.ViewModels
 {
@@ -28,18 +29,34 @@ namespace PetArmy.ViewModels
         }
 
         void CreateAdminExecute() {
-            var _data = new Dictionary<string,object>();
-            _data.Add("email","eva01@gmail.com");
-            _data.Add("password","123456");
-            _data.Add("role","admin");
-            _data.Add("firstName","eva01");
-            _data.Add("lastName","01");
+            var _data = new CreateAdminUserRequest()
+            {
+                email="radagast_r@gmail.com",
+                firstName= "radagastr",
+                lastName="01r",
+                password="123456",
+                role="admin"
+            };
+
             _i_function.CallFunction("createUser", _data, (object response, string message) =>
             {
-                
+                FunctionCallChecker(response, message);
             });
         }
 
+        public void FunctionCallChecker(object response, string message)
+        {
+            if (response != null)
+            {
+
+            }
+            else
+            {
+                ErrorTitle = "Something Went Wrong!!!";
+                ErrorMessage = message;
+                OpenPopUp = true;
+            }
+        }
 
 
         private static AdminViewModel _instance;

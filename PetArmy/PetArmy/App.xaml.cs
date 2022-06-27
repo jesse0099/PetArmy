@@ -10,8 +10,6 @@ namespace PetArmy
 {
     public partial class App : Application
     {
-        IFirebaseAuth _i_auth;
-
         public App()
         {
             //Register Syncfusion license (Recordar implementar para iOS)
