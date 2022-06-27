@@ -61,6 +61,33 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create account.
+        /// </summary>
+        public static string CreateAccountKey {
+            get {
+                return ResourceManager.GetString("CreateAccountKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registered email: user@email.com.
+        /// </summary>
+        public static string EmailHintKey {
+            get {
+                return ResourceManager.GetString("EmailHintKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-Mail.
+        /// </summary>
+        public static string EmailKey {
+            get {
+                return ResourceManager.GetString("EmailKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to English.
         /// </summary>
         public static string English {
@@ -75,6 +102,60 @@ namespace Resx {
         public static string LogIn {
             get {
                 return ResourceManager.GetString("LogIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Or.
+        /// </summary>
+        public static string OrKey {
+            get {
+                return ResourceManager.GetString("OrKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your password: *****.
+        /// </summary>
+        public static string PasswordHelperKey {
+            get {
+                return ResourceManager.GetString("PasswordHelperKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string PasswordKey {
+            get {
+                return ResourceManager.GetString("PasswordKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personal Email.
+        /// </summary>
+        public static string RegisterEmailHelperKey {
+            get {
+                return ResourceManager.GetString("RegisterEmailHelperKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Must be at least 7 characters.
+        /// </summary>
+        public static string RegisterPassHelperKey {
+            get {
+                return ResourceManager.GetString("RegisterPassHelperKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sign up with mail.
+        /// </summary>
+        public static string SignUpKey {
+            get {
+                return ResourceManager.GetString("SignUpKey", resourceCulture);
             }
         }
         

@@ -32,10 +32,10 @@
                 <Image Source="PetsArmy" HeightRequest="250" HorizontalOptions="Center"/>
                 <StackLayout Padding="40" Spacing="20">
                     <!--Email-->
-                    <inputLayout:SfTextInputLayout  Hint="E-mail"
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate EmailKey}"
                                                     x:Name="EmailContainer"
                                                     InputViewPadding="5"
-                                                    HelperText="Email Registrado: user@gmail.com"
+                                                    HelperText="{xct:Translate EmailHintKey}"
                                                     ContainerType="Outlined"
                                                     IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
@@ -45,8 +45,8 @@
                                Text="{Binding Email, Mode = TwoWay}" />
                     </inputLayout:SfTextInputLayout>
                     <!--Contrasenia-->
-                    <inputLayout:SfTextInputLayout  Hint="Password"
-                                                    HelperText="Clave Registrada: *****"
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate PasswordKey}"
+                                                    HelperText="{xct:Translate PasswordHelperKey}"
                                                     EnablePasswordVisibilityToggle="True"
                                                     ContainerType="Outlined"
                                                     EnableHintAnimation="True"
@@ -78,7 +78,7 @@
                                  HorizontalOptions="FillAndExpand"
                                  VerticalOptions="Center"
                                  HeightRequest="1" />
-                        <Label Text=" ó "
+                        <Label Text="{xct:Translate OrKey}"
                                TextColor="{AppThemeBinding Light=#555, Dark={StaticResource MiddlePurple}}"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
@@ -89,7 +89,7 @@
                                  HeightRequest="1" />
                     </StackLayout>
 
-                    <Label Text="Registrarme con Email"
+                    <Label Text="{xct:Translate SignUpKey}"
                            HorizontalOptions="Center"
                            TextColor="{AppThemeBinding Light=#555, Dark=LightGray}">
                         <Label.GestureRecognizers>
