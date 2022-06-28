@@ -40,5 +40,13 @@ namespace PetArmy.Droid.Implementations
                 _onCallComplete?.Invoke(result, string.Empty);
             }
         }
+
+        public void RequestAdminAccount(string function, CreateAdminUserRequest data, Action<object, string> _onCallComplete)
+        {
+            var json_data = JsonConvert.SerializeObject(data);
+            this._onCallComplete = _onCallComplete;
+            var lc_fn = FirebaseFunctions.Instance.GetHttpsCallable(function).Call(json_data);
+            lc_fn.AddOnCompleteListener(this);
+        }
     }
 }
