@@ -19,7 +19,6 @@ namespace PetArmy
             LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
             DependencyService.Register<MockDataStore>();
             MainPage = new SplashScreenView();
-            
         }
 
         protected override void OnStart()
