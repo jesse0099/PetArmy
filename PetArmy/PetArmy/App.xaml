@@ -12,6 +12,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <Helpers:InverseBoolConverter x:Key="InverseBool" />
+            <Helpers:CreateAccountButtonTextConverter x:Key="BoolToStringCreateAccount" />
             <!--Localizador de instancias-->
             <infraestructure:InstanceLocator x:Key="Locator" />
 
@@ -49,11 +50,13 @@
                         Value="8" />
                 <Setter Property="HelperLabelStyle"
                         Value="SyncfusionHelperLabel"/>
+                <Setter Property="ErrorColor"
+                        Value="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}"/>
             </Style>
 
 
 
-            
+
             <!--Buttons con syncfusion-->
             <Style x:Key="SyncfusionButtons"
                    TargetType="buttons:SfButton">
@@ -69,6 +72,13 @@
                         Value="{StaticResource Liberty}" />
             </Style>
 
+            <!--Labels-->
+            <Style x:Key="normal_labels"
+                   TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+            </Style>
+            
             <!--Auto Generado por el template-->
             <Style TargetType="Button">
                 <Setter Property="TextColor"

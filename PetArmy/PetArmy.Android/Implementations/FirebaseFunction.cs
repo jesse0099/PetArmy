@@ -16,7 +16,7 @@ namespace PetArmy.Droid.Implementations
 
         Action<Object, string> _onCallComplete;     
 
-        public void CallFunction(string function, CreateAdminUserRequest data,Action<Object, string> _onCallComplete)
+        public void ApproveAdminAccount(string function, CreateAdminUserRequest data,Action<Object, string> _onCallComplete)
         {
             var json_data = JsonConvert.SerializeObject(data);
             this._onCallComplete = _onCallComplete;

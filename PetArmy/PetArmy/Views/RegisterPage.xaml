@@ -3,73 +3,197 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="PetArmy.Views.RegisterPage"
              xmlns:local="clr-namespace:PetArmy"
+             BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}"
              BindingContext="{Binding Main, Source={StaticResource Key=Locator}}">
     <StackLayout VerticalOptions="Center">
         <ScrollView>
-            <StackLayout BindingContext="{Binding Register}">
-              <PopUps:ErrorPopUp />
+            <StackLayout BindingContext="{Binding Register}"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand"
+                         Spacing="20"
+                         Padding="40">
+                <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
+                                               AnimationType="SingleCircle"
+                                               FontAttributes="Bold"
+                                               Title="{xct:Translate Loading}"
+                                               TextColor="{AppThemeBinding Light={StaticResource MiddlePurple}, Dark={StaticResource PurplePlum}}"
+                                               IsVisible="{Binding IsBusy}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center" />
+                <PopUps:ErrorPopUp />
                 <Image Source="UserPlus" HeightRequest="150" Margin="0,0,30,0" VerticalOptions="Center" HorizontalOptions="Center" />
-                <Label Text=" Crea tu nueva cuenta! " HorizontalOptions="Center" FontSize="Medium"/>
-                <StackLayout Padding="40" Spacing="20">
-                    <!--Correo-->
-                    <inputLayout:SfTextInputLayout  Hint="E-mail"
-                                                            InputViewPadding="5"
-                                                            HelperText=" Correo Personal"
-                                                            ContainerType="Outlined"
-                                                            Style="{StaticResource SyncfusionEntries}">
-                        <Entry x:Name="email"
-                                TextColor="Black"
-                                PlaceholderColor="Gray"
-                                Placeholder="Email"
-                                Text="{Binding Email, Mode = TwoWay}" />
+                <Label Text=" Crea tu nueva cuenta! "
+                       HorizontalOptions="Center"
+                       FontSize="Medium"
+                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                        <!--Correo-->
+                <inputLayout:SfTextInputLayout  Hint="E-mail"
+                                                HasError="{Binding EmailError}"
+                                                ErrorText="{Binding EmailErrorLabel}"
+                                                InputViewPadding="5"
+                                                HelperText=" Correo Personal"
+                                                ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                                Style="{StaticResource SyncfusionEntries}">
+                    <Entry x:Name="email"
+                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                   PlaceholderColor="Gray"
+                                   Placeholder="Email"
+                                   Text="{Binding Email, Mode = TwoWay}" />
+                        </inputLayout:SfTextInputLayout>
+                        <!--Contraseña-->
+                <inputLayout:SfTextInputLayout          Hint="Contraseña"
+                                                        HasError="{Binding PasswordError}"
+                                                        ErrorText="{Binding PasswordErrorLabel}"
+                                                        HelperText="Debe de ser al menos 7 caracteres"
+                                                        EnablePasswordVisibilityToggle="True"
+                                                        ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                                        Style="{StaticResource SyncfusionEntries}">
+                    <Entry IsPassword="True"
+                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                   PlaceholderColor="Gray"
+                                   Placeholder="Password"
+                                   x:Name="password"
+                                   Text="{Binding Password, Mode = TwoWay}" />
+                </inputLayout:SfTextInputLayout>
+                        <!--Repetir Contraseña-->
+                <inputLayout:SfTextInputLayout Hint="Repetir Contraseña"
+                                               HasError="{Binding RepeatPasswordError}"
+                                               ErrorText="{Binding RepeatPasswordErrorLabel}"
+                                               HelperText="Debe de ser al menos 7 caracteres"
+                                               EnablePasswordVisibilityToggle="True"
+                                               ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                               Style="{StaticResource SyncfusionEntries}">
+                    <Entry x:Name="repeat_password"
+                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                           PlaceholderColor="Gray"
+                           Placeholder="Email"
+                           IsPassword="True"
+                           Text="{Binding RepeatPassword, Mode = TwoWay}" />
+                </inputLayout:SfTextInputLayout>
+                        <!--Administrador?-->
+                <StackLayout Orientation="Horizontal"
+                                     Margin="0,20,0,5">
+                            <Label HorizontalOptions="StartAndExpand"
+                                   Style="{StaticResource normal_labels}"
+                                   Text="{xct:Translate RequestAdmin}" />
+                            <buttons:SfSwitch  VisualType="Fluent"
+                                               HorizontalOptions="End"
+                                               IsOn="{Binding IsAdminRequest, Mode=TwoWay}">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup  x:Name="CommonStates">
 
-                    </inputLayout:SfTextInputLayout>
+                                        <VisualState x:Name="On">
+                                            <VisualState.Setters>
+                                                <Setter Property="SwitchSettings">
+                                                    <Setter.Value>
+                                                        <buttons:DefaultSwitchSettings x:TypeArguments="buttons:OnState"
+                                                                                       ThumbBorderColor="{AppThemeBinding Light={StaticResource Liberty}, Dark={StaticResource PurplePlum}}"
+                                                                                       ThumbColor="{StaticResource Liberty}"
+                                                                                       TrackBorderColor="{AppThemeBinding Light={StaticResource Liberty}, Dark={StaticResource PurplePlum}}"
+                                                                                       TrackColor="{AppThemeBinding Light={StaticResource PurplePlum}, Dark={StaticResource MiddlePurple}}"
+                                                                                       BusyIndicatorColor="{AppThemeBinding Light={StaticResource Liberty}, Dark={StaticResource PurplePlum}}" />
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </VisualState.Setters>
+                                        </VisualState>
 
-                    <inputLayout:SfTextInputLayout          Hint="Contraseña"
-                                                            HelperText="Debe de ser al menos 7 caracteres"
-                                                            EnablePasswordVisibilityToggle="True"
-                                                            ContainerType="Outlined"
-                                                            Style="{StaticResource SyncfusionEntries}">
-                        <Entry IsPassword="True"
-                                TextColor="Black"
-                                PlaceholderColor="Gray"
-                                Placeholder="Password"
-                                x:Name="password"
-                                Text="{Binding Password, Mode = TwoWay}" />
-                    </inputLayout:SfTextInputLayout>
-                    <!--Registrarme-->
-                    <buttons:SfButton  Command="{Binding RegisterCommand}"
-                                       Text="Crear Cuenta"
-                                       FontAttributes="Bold"
-                                       ShowIcon="True"
-                                       HorizontalTextAlignment="Center"
-                                       HorizontalOptions="FillAndExpand"
-                                       Style="{StaticResource SyncfusionButtons}">
-                        <buttons:SfButton.ImageSource>
-                            <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
-                                             Glyph="{x:Static local:IconClass.Plus}" />
-                        </buttons:SfButton.ImageSource>
-                    </buttons:SfButton>
-                    
-                    <!--<Button Text="Crear cuenta" 
-                            ContentLayout="Left,5"  
-                            BackgroundColor="Lime" 
-                            TextColor="White"  
-                            HeightRequest="50" 
-                            CornerRadius="5"  
-                            WidthRequest="650"  
-                            HorizontalOptions="Center" 
-                            Padding="5,2"
-                            Margin="30"
-                            Command="{Binding RegisterCommand}">
-                        <Button.ImageSource >
-                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}" Glyph="{x:Static local:IconClass.Plus}" />
-                        </Button.ImageSource>
-                    </Button>-->
+                                        <VisualState x:Name="Off">
+                                            <VisualState.Setters>
+                                                <Setter Property="SwitchSettings">
+                                                    <Setter.Value>
+                                                        <buttons:DefaultSwitchSettings x:TypeArguments="buttons:OffState"
+                                                                                       ThumbBorderColor="{AppThemeBinding  Light={StaticResource LuckyPoint}, Dark={StaticResource MiddlePurple}}"
+                                                                                       ThumbColor="{StaticResource Liberty}"
+                                                                                       TrackBorderColor="{AppThemeBinding  Light={StaticResource LuckyPoint}, Dark={StaticResource MiddlePurple}}"
+                                                                                       TrackColor="DarkGray" />
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </VisualState.Setters>
+                                        </VisualState>
 
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </buttons:SfSwitch>
                 </StackLayout>
+                        <!--Nombres-->
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand"
+                             IsVisible="{Binding IsAdminRequest}">
+                    <!--Primer Nombre-->
+                    <inputLayout:SfTextInputLayout  Hint="Joseph"
+                                                    HorizontalOptions="FillAndExpand"
+                                                    InputViewPadding="5"
+                                                    HelperText="{xct:Translate FirstName}"
+                                                    ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <inputLayout:SfTextInputLayout.Triggers>
+                            <DataTrigger TargetType="inputLayout:SfTextInputLayout"
+                                         Binding="{Binding Source={x:Reference first_name},Path=Text.Length}"
+                                         Value="0">
+                                <Setter Property="HasError"
+                                        Value="True" />
+                                <Setter Property="ErrorText"
+                                        Value="{xct:Translate FirstNameIsEmpty}" />
+                            </DataTrigger>
+                        </inputLayout:SfTextInputLayout.Triggers>
+                        <Entry x:Name="first_name"
+                               Text="{Binding FirstName}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                               PlaceholderColor="Gray" />
+                    </inputLayout:SfTextInputLayout>
+                    <!--Apellido-->
+                    <inputLayout:SfTextInputLayout  Hint="Joestar"
+                                                    HorizontalOptions="FillAndExpand"
+                                                    InputViewPadding="5"
+                                                    HasError="False"
+                                                    HelperText="{xct:Translate LastName}"
+                                                    ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <inputLayout:SfTextInputLayout.Triggers>
+                            <DataTrigger TargetType="inputLayout:SfTextInputLayout"
+                                         Binding="{Binding Source={x:Reference last_name},Path=Text.Length}"
+                                         Value="0">
+                                <Setter Property="HasError"
+                                        Value="True" />
+                                <Setter Property="ErrorText"
+                                        Value="{xct:Translate LastNameIsEmpty}" />
+                            </DataTrigger>
+                        </inputLayout:SfTextInputLayout.Triggers>
+                        <Entry x:Name="last_name"
+                               Text="{Binding LastName}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                               PlaceholderColor="Gray" />
+                    </inputLayout:SfTextInputLayout>
+                </StackLayout>
+                <!--Telefono-->
+                <maskededit:SfMaskedEdit  x:Name="maskedEdit"
+                                          IsVisible="{Binding IsAdminRequest}"
+                                          MaskType="RegEx"
+                                          ValidationMode="KeyPress"
+                                          Value="{Binding PhoneNumber}"
+                                          ErrorBorderColor="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}"
+                                          HorizontalTextAlignment="Center"
+                                          BorderColor="{AppThemeBinding Light={StaticResource Liberty}, Dark={StaticResource PurplePlum}}"
+                                          Mask="+\d{3} \d{4} \d{4}"/>
+                <!--Registrarme-->
+                <buttons:SfButton  Command="{Binding RegisterCommand}"
+                                   Text="{Binding IsAdminRequest ,Converter={StaticResource BoolToStringCreateAccount}}"
+                                   FontAttributes="Bold"
+                                   ShowIcon="True"
+                                   HorizontalTextAlignment="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   Style="{StaticResource SyncfusionButtons}">
+                    <buttons:SfButton.ImageSource>
+                        <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                         Glyph="{x:Static local:IconClass.Plus}" />
+                    </buttons:SfButton.ImageSource>
+                </buttons:SfButton>
             </StackLayout>
         </ScrollView>
     </StackLayout>

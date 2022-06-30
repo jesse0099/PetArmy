@@ -112,4 +112,52 @@
   <data name="System" xml:space="preserve">
     <value>System</value>
   </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="RequestAdmin" xml:space="preserve">
+    <value>Request Administrator Account</value>
+  </data>
+  <data name="CreateAccountKey" xml:space="preserve">
+    <value>Create account</value>
+  </data>
+  <data name="RequestAccount" xml:space="preserve">
+    <value>Request Account</value>
+  </data>
+  <data name="AllFieldsRequired" xml:space="preserve">
+    <value>All Fields Are Required!</value>
+  </data>
+  <data name="SomethingWrong" xml:space="preserve">
+    <value>Something Went Wrong!!!</value>
+  </data>
+  <data name="PasswordIsEmpty" xml:space="preserve">
+    <value>Password Is Empty</value>
+  </data>
+  <data name="EmailIsEmpty" xml:space="preserve">
+    <value>Email Is Empty</value>
+  </data>
+  <data name="FirstNameIsEmpty" xml:space="preserve">
+    <value>First Name Is Empty</value>
+  </data>
+  <data name="LastNameIsEmpty" xml:space="preserve">
+    <value>Last Name Is Empty</value>
+  </data>
+  <data name="BadFormattedEmail" xml:space="preserve">
+    <value>Bad Formatted Email. Ej: mymail@mail.com</value>
+  </data>
+  <data name="PasswordNonMinimumSize" xml:space="preserve">
+    <value>The Password Must Be At Least 6 Characters</value>
+  </data>
+  <data name="PasswordNoMatch" xml:space="preserve">
+    <value>The passwords do not match</value>
+  </data>
+  <data name="NonValidPhoneNumber" xml:space="preserve">
+    <value>Non Valid Phone Number</value>
+  </data>
 </root>

@@ -1,8 +1,9 @@
-﻿using PetArmy.Interfaces;
+﻿using PetArmy.Helpers;
+using PetArmy.Interfaces;
+using PetArmy.Models;
+using Resx;
 using System.Windows.Input;
 using Xamarin.Forms;
-using System.Collections.Generic;
-using PetArmy.Models;
 
 namespace PetArmy.ViewModels
 {
@@ -31,14 +32,14 @@ namespace PetArmy.ViewModels
         void CreateAdminExecute() {
             var _data = new CreateAdminUserRequest()
             {
-                email="radagast_r@gmail.com",
-                firstName= "radagastr",
-                lastName="01r",
+                email="eva02@gmail.com",
+                firstName= "eva",
+                lastName="02",
                 password="123456",
                 role="admin"
             };
 
-            _i_function.CallFunction("createUser", _data, (object response, string message) =>
+            _i_function.ApproveAdminAccount(Commons.AdminCreationApprovalFunction, _data, (object response, string message) =>
             {
                 FunctionCallChecker(response, message);
             });
@@ -52,7 +53,7 @@ namespace PetArmy.ViewModels
             }
             else
             {
-                ErrorTitle = "Something Went Wrong!!!";
+                ErrorTitle = AppResources.SomethingWrong;
                 ErrorMessage = message;
                 OpenPopUp = true;
             }

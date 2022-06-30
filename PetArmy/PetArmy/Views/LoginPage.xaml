@@ -9,6 +9,7 @@
              xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:helpers="clr-namespace:PetArmy.Helpers"
              mc:Ignorable="d"
              x:Class="PetArmy.Views.LoginPage"
              Shell.NavBarIsVisible="False"
@@ -23,8 +24,8 @@
                 <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
                                                AnimationType="SingleCircle"
                                                FontAttributes="Bold"
-                                               Title="Loading..."
-                                               TextColor="{StaticResource LuckyPoint}"
+                                               Title="{xct:Translate Loading}"
+                                               TextColor="{AppThemeBinding Light={StaticResource MiddlePurple}, Dark={StaticResource PurplePlum}}"
                                                IsVisible="{Binding IsBusy}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center" />
@@ -35,27 +36,31 @@
                     <inputLayout:SfTextInputLayout  Hint="E-mail"
                                                     x:Name="EmailContainer"
                                                     InputViewPadding="5"
+                                                    HasError="{Binding EmailError}"
+                                                    ErrorText="{Binding EmailErrorLabel}"
                                                     HelperText="Email Registrado: user@gmail.com"
-                                                    ContainerType="Outlined"
-                                                    IsHintAlwaysFloated="true"
+                                                    ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="email"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
                                Keyboard="Email"
-                               Text="{Binding Email, Mode = TwoWay}" />
+                               Text="{Binding Email, Mode = TwoWay}">
+                        </Entry>
                     </inputLayout:SfTextInputLayout>
                     <!--Contrasenia-->
                     <inputLayout:SfTextInputLayout  Hint="Password"
+                                                    x:Name="PasswordContainer"
+                                                    HasError="{Binding PasswordError}"
+                                                    ErrorText="{Binding PasswordErrorLabel}"
                                                     HelperText="Clave Registrada: *****"
                                                     EnablePasswordVisibilityToggle="True"
-                                                    ContainerType="Outlined"
+                                                    ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
                                                     EnableHintAnimation="True"
-                                                    IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry IsPassword="True"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
                                x:Name="password"
-                               Text="{Binding Password, Mode = TwoWay}" />
+                               Text="{Binding Password, Mode = TwoWay}"/>
                     </inputLayout:SfTextInputLayout>
                     <!--Login Con email y contra-->
                     <buttons:SfButton  Command="{Binding LoginEPassCommand}"
@@ -91,7 +96,7 @@
 
                     <Label Text="Registrarme con Email"
                            HorizontalOptions="Center"
-                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}">
+                           Style="{StaticResource normal_labels}">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding RegisterCommand}" />
                         </Label.GestureRecognizers>

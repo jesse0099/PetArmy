@@ -7,7 +7,7 @@ namespace PetArmy.Interfaces
 {
     public interface IFireFunction
     {
-        void CallFunction(string function, CreateAdminUserRequest data, Action<Object, string> _onCallComplete);
+        void ApproveAdminAccount(string function, CreateAdminUserRequest data, Action<Object, string> _onCallComplete);
         void RequestAdminAccount(string function, CreateAdminUserRequest data, Action<Object, string> _onCallComplete);
     }
 }
