@@ -139,4 +139,16 @@
   <data name="RegisterEmailHelperKey" xml:space="preserve">
     <value>Personal Email</value>
   </data>
+  <data name="MyServicesKey" xml:space="preserve">
+    <value>My Services</value>
+  </data>
+  <data name="ServicesH1Key" xml:space="preserve">
+    <value>My Services</value>
+  </data>
+  <data name="AddShelterKey" xml:space="preserve">
+    <value>Add animal shelter service </value>
+  </data>
+  <data name="AddHomeKey" xml:space="preserve">
+    <value>Add foundling home service</value>
+  </data>
 </root>

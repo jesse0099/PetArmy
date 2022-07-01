@@ -2,6 +2,8 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:PetArmy.Views"
+       xmlns:fa="clr-namespace:PetArmy"
+       xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
        Title="PetArmy"
        x:Class="PetArmy.AppShell">
 
@@ -34,6 +36,7 @@
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="White"></Setter>
             </Style>
+     
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
@@ -93,14 +96,29 @@
     <FlyoutItem Title="About" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="About SAA"
-                Icon="icon_about.png">
+
+    <FlyoutItem Title="{xct:Translate MyServicesKey}">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                             Glyph="{x:Static fa:IconClass.Plane}" />
+        </FlyoutItem.Icon>
+        <ShellContent Route="MyServicesView"
+                      ContentTemplate="{DataTemplate local:MyServicesView}"/>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="About SAA">
+        <FlyoutItem.Icon>
+        <FontImageSource FontFamily="{StaticResource BrandFontFamily}"
+                          Glyph="{x:Static fa:IconClass.Facebook}" />
+        </FlyoutItem.Icon>
         <ShellContent Route="AdminLandingPage"
                       ContentTemplate="{DataTemplate local:AdminLandingPage}" />
     </FlyoutItem>
+    
     <FlyoutItem Title="Browse" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
+    
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>

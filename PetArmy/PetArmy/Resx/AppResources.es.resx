@@ -159,4 +159,16 @@
   <data name="RegisterEmailHelperKey" xml:space="preserve">
     <value>Email Personal</value>
   </data>
+  <data name="MyServicesKey" xml:space="preserve">
+    <value>Mis Servicios</value>
+  </data>
+  <data name="ServicesH1Key" xml:space="preserve">
+    <value>Mis Servicios</value>
+  </data>
+  <data name="AddShelterKey" xml:space="preserve">
+    <value>Agregar servicio de refugio </value>
+  </data>
+  <data name="AddHomeKey" xml:space="preserve">
+    <value>Agregar servicio de casa cuna</value>
+  </data>
 </root>

@@ -61,6 +61,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add foundling home service.
+        /// </summary>
+        public static string AddHomeKey {
+            get {
+                return ResourceManager.GetString("AddHomeKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add animal shelter service .
+        /// </summary>
+        public static string AddShelterKey {
+            get {
+                return ResourceManager.GetString("AddShelterKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create account.
         /// </summary>
         public static string CreateAccountKey {
@@ -106,6 +124,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My Services.
+        /// </summary>
+        public static string MyServicesKey {
+            get {
+                return ResourceManager.GetString("MyServicesKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Or.
         /// </summary>
         public static string OrKey {
@@ -147,6 +174,15 @@ namespace Resx {
         public static string RegisterPassHelperKey {
             get {
                 return ResourceManager.GetString("RegisterPassHelperKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Services.
+        /// </summary>
+        public static string ServicesH1Key {
+            get {
+                return ResourceManager.GetString("ServicesH1Key", resourceCulture);
             }
         }
         
