@@ -20,6 +20,8 @@
             <Color x:Key="Primary">Black</Color>
             <!--Colores Propios-->
             <Color x:Key="LuckyPoint">#2c2c54</Color>
+            <Color x:Key="EireBlack">#141414</Color>
+            <Color x:Key="SpaceCadet">#2c2c54</Color>
             <Color x:Key="Liberty">#474787</Color>
             <Color x:Key="JacksonPurple">#40407a</Color>
             <Color x:Key="Ametheist">#8b5cc1</Color>

@@ -1,57 +1,91 @@
 ﻿using PetArmy.Helpers;
 using PetArmy.Interfaces;
 using PetArmy.Models;
+using PetArmy.Models.CloudFuntionsCalls;
 using Resx;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace PetArmy.ViewModels
 {
-    public class AdminViewModel: BaseViewModel
+    public class AdminViewModel : BaseViewModel
     {
+        private ObservableCollection<AdminAccountRequest> _adminAccountRequests;
+        public ObservableCollection<AdminAccountRequest> AdminAccountRequests
+        {
+            get{ return _adminAccountRequests; }
+            set{ _adminAccountRequests = value; 
+                OnPropertyChanged();
+            }
+        }
+
         IFireFunction _i_function;
 
-        private ICommand _iCreateAdminCommand;
+        private ICommand _iApproveAdminRequestCommand;
 
-        public ICommand CreateAdminCommand
+        public ICommand ApproveAdminRequestCommand
         {
-            get { return _iCreateAdminCommand; }
-            set { _iCreateAdminCommand = value; 
+            get { return new Command((e) => {
+                ApproveAdminRequestExecute(e as AdminAccountRequest);
+            }); }
+            set { _iApproveAdminRequestCommand = value;
                 OnPropertyChanged();
             }
         }
 
 
         public AdminViewModel()
-        {   
+        {
             _instance = this;
             _i_function = DependencyService.Get<IFireFunction>();
-            _iCreateAdminCommand = new Command(CreateAdminExecute);
+            _iApproveAdminRequestCommand = new Command<AdminAccountRequest>(ApproveAdminRequestExecute);
         }
-
-        void CreateAdminExecute() {
-            var _data = new CreateAdminUserRequest()
-            {
-                email="eva02@gmail.com",
-                firstName= "eva",
-                lastName="02",
-                password="123456",
-                role="admin"
-            };
-
+        /// <summary>
+        /// Llamado a la funcion ApproveAdminAccount
+        /// </summary>
+        void ApproveAdminRequestExecute(AdminAccountRequest _data) {
             _i_function.ApproveAdminAccount(Commons.AdminCreationApprovalFunction, _data, (object response, string message) =>
             {
-                FunctionCallChecker(response, message);
+                ApproveFunctionCallChecker(response, message);
             });
         }
-
-        public void FunctionCallChecker(object response, string message)
+        /// <summary>
+        /// Llamado a la funcion GetAdminAccountRequests
+        /// </summary>
+        public void GetAdminAccountRequests()
         {
-            if (response != null)
+            _i_function.GetAdminAccountRequests(Commons.AdminCreationRequestsFunction, (object response, string message) => {
+                RequestsFunctionCallChecker(response, message);
+            });
+        }
+        /// <summary>
+        ///  Revision de respuesta al llamado de la funcion GetAdminRequests
+        /// </summary>
+        /// <param name="response"></param>
+        /// <param name="message"></param>
+        public void RequestsFunctionCallChecker(object response, string message)
+        {
+            if (response != null){
+                AdminAccountRequests = new ObservableCollection<AdminAccountRequest>(((List<AdminAccountRequest>)response));
+            }else
             {
-
+                ErrorTitle = AppResources.SomethingWrong;
+                ErrorMessage = message;
+                OpenPopUp = true;
             }
-            else
+        }
+        /// <summary>
+        /// Revision de respuesta al llamado de la funcion ApproveAdminRequest
+        /// </summary>
+        /// <param name="response"></param>
+        /// <param name="message"></param>
+        public void ApproveFunctionCallChecker(object response, string message)
+        {
+            if (response != null){
+                return;
+            }else
             {
                 ErrorTitle = AppResources.SomethingWrong;
                 ErrorMessage = message;
@@ -59,15 +93,10 @@ namespace PetArmy.ViewModels
             }
         }
 
-
         private static AdminViewModel _instance;
         public static AdminViewModel GetInstance()
         {
-            if (_instance == null)
-                return new AdminViewModel();
-            else
-                return _instance;
-
+            return _instance ??= _instance = new AdminViewModel();
         }
     }
 }

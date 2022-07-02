@@ -1,6 +1,7 @@
 ﻿using PetArmy.Helpers;
 using PetArmy.Interfaces;
 using PetArmy.Models;
+using PetArmy.Models.CloudFuntionsCalls;
 using Resx;
 using System.Collections.Generic;
 using Xamarin.Forms;
@@ -86,7 +87,6 @@ namespace PetArmy.ViewModels
         }
 
         private string _phone_number;
-
         public string PhoneNumber
         {
             get { return _phone_number; }
@@ -115,7 +115,7 @@ namespace PetArmy.ViewModels
 
             RegisterCommand = new Command(OnRegisterExecute);
 
-            PhoneNumber = "+506 0000 0000";
+            PhoneNumber = Commons.DefaultPhoneNumber;
             IsBusy = false;
             IsAdminRequest = false;
         }
@@ -148,7 +148,7 @@ namespace PetArmy.ViewModels
             if (!isValid)
                 return;
             //Final de las validaciones
-            var _data = new CreateAdminUserRequest()
+            var _data = new CreateAdminUserFunctionRequest()
             {
                 email = Email,
                 firstName = FirstName,
@@ -158,7 +158,7 @@ namespace PetArmy.ViewModels
                 role = "admin"
             };
 
-            _i_function.ApproveAdminAccount(Commons.AdminCreationRequestFunction, _data, (object response, string message) =>
+            _i_function.RequestAdminAccount(Commons.AdminCreationRequestFunction, _data, (object response, string message) =>
             {
                 FunctionCallChecker(response, message);
             });
@@ -205,7 +205,7 @@ namespace PetArmy.ViewModels
                     PasswordErrorLabel = AppResources.PasswordNonMinimumSize;
                     return;
                 }
-
+                
                 PasswordError = false;
                 PasswordErrorLabel = string.Empty;
 
@@ -215,6 +215,12 @@ namespace PetArmy.ViewModels
                     RepeatPasswordErrorLabel = AppResources.PasswordNoMatch;
                     return;
                 }
+                else
+                {
+                    RepeatPasswordError = false;
+                    RepeatPasswordErrorLabel = string.Empty;
+                }
+
             }
             else{
                 PasswordError = false;
@@ -229,8 +235,9 @@ namespace PetArmy.ViewModels
                     RepeatPasswordErrorLabel = AppResources.PasswordIsEmpty;
                     return;
                 }
-                
-                if (!Password.Equals(RepeatPassword)){
+
+                if (!RepeatPassword.Equals(Password))
+                {
                     RepeatPasswordError = true;
                     RepeatPasswordErrorLabel = AppResources.PasswordNoMatch;
                     return;

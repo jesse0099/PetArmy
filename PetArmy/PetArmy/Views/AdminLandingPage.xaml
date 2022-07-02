@@ -4,8 +4,13 @@
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:local="clr-namespace:PetArmy"
+             xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
              x:Class="PetArmy.Views.AdminLandingPage"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}">
     <ContentPage.Content>
         <StackLayout>
             <PopUps:ErrorPopUp />
@@ -14,11 +19,117 @@
                 HorizontalOptions="CenterAndExpand" />
             <Label Text="{Binding Login.LoggedMail}"
                    VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand"/>
+                   HorizontalOptions="CenterAndExpand" />
+            <sflistview:SfListView BindingContext="{Binding Admin}"
+                                   ItemsSource="{Binding AdminAccountRequests}"
+                                   x:Name="lst_requests"
+                                   AutoFitMode="DynamicHeight"
+                                   ItemSize="400"
+                                   SelectionMode="None"
+                                   RowSpacing="15">
+                <sflistview:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HorizontalOptions="Center"
+                                   BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}"
+                                   VerticalOptions="Center"
+                                   HasShadow="True"
+                                   Margin="10,10,10,10"
+                                   WidthRequest="400"
+                                   CornerRadius="10">
+                                <StackLayout x:Name="Item">
+                                    <!--Nombres-->
+                                    <StackLayout Orientation="Horizontal"
+                                                 HorizontalOptions="FillAndExpand">
+                                        <!--Primer Nombre-->
+                                        <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                       ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                                                       IsHintAlwaysFloated="True"
+                                                                       Hint="Primer Nombre"
+                                                                       HorizontalOptions="FillAndExpand">
+                                            <Entry Text="{Binding _adminAccountDetail.FirstName}"
+                                                   IsReadOnly="True" />
+                                        </inputLayout:SfTextInputLayout>
+                                        <!--Apellido-->
+                                        <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                       ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                                                       Hint="Apellido"
+                                                                       IsHintAlwaysFloated="True"
+                                                                       HorizontalOptions="FillAndExpand">
+                                            <Entry Text="{Binding _adminAccountDetail.LastName}"
+                                                   IsReadOnly="True" />
+                                        </inputLayout:SfTextInputLayout>
+                                    </StackLayout>
+                                    <!--Email-->
+                                    <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                   ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                                                   Hint="Email"
+                                                                   IsHintAlwaysFloated="True"
+                                                                   HorizontalOptions="FillAndExpand">
+                                        <Entry Text="{Binding _adminAccountDetail.Email}"
+                                               IsReadOnly="True" />
+                                    </inputLayout:SfTextInputLayout>
+                                    <!--Telefono-->
+                                    <inputLayout:SfTextInputLayout Hint="Numero Telefonico"
+                                                                   ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                                                   Style="{StaticResource SyncfusionEntries}"
+                                                                   IsHintAlwaysFloated="True">
+                                        <maskededit:SfMaskedEdit  x:Name="maskedEdit"
+                                                                  MaskType="RegEx"
+                                                                  IsReadOnly="True"
+                                                                  Value="{Binding _adminAccountDetail.PhoneNumber}"
+                                                                  HorizontalTextAlignment="Start"
+                                                                  BorderColor="{AppThemeBinding Light={StaticResource Liberty}, Dark={StaticResource PurplePlum}}"
+                                                                  Mask="+\d{3} \d{4} \d{4}" />
+                                    </inputLayout:SfTextInputLayout>
+                                    <!--Botones-->
+                                    <StackLayout Orientation="Horizontal"
+                                                 HorizontalOptions="FillAndExpand">
+                                        <!--Rechazar-->
+                                        <buttons:SfButton Style="{StaticResource SyncfusionButtons}"
+                                                          Text="Rechazar"
+                                                          ShowIcon="True"
+                                                          HorizontalOptions="FillAndExpand"
+                                                          BorderWidth="{AppThemeBinding Light=0, Dark=1}"
+                                                          BorderColor="{StaticResource SynthPumpkin}">
+                                            <buttons:SfButton.ImageSource>
+                                                <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                                 Glyph="{x:Static local:IconClass.SkullCrossbones}" 
+                                                                 Color="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}"/>
+                                            </buttons:SfButton.ImageSource>
+                                        </buttons:SfButton>
+                                        <!--Aceptar-->
+                                        <buttons:SfButton Style="{StaticResource SyncfusionButtons}"
+                                                          BindingContext="{Binding Source={x:Reference lst_requests}, Path=BindingContext}"
+                                                          Command="{Binding ApproveAdminRequestCommand}"
+                                                          CommandParameter="{Binding Source={x:Reference Item},Path=BindingContext}"
+                                                          Text="Aceptar"
+                                                          ShowIcon="True"
+                                                          HorizontalOptions="FillAndExpand"
+                                                          BorderWidth="{AppThemeBinding Light=0, Dark=1}"
+                                                          BorderColor="YellowGreen">
+                                            <buttons:SfButton.ImageSource>
+                                                <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                                 Glyph="{x:Static local:IconClass.Check}" 
+                                                                 Color="{AppThemeBinding  Light=LightGreen, Dark=YellowGreen}"/>
+                                            </buttons:SfButton.ImageSource>
+                                        </buttons:SfButton>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </sflistview:SfListView.ItemTemplate>
+                <sflistview:SfListView.LayoutManager>
+                    <sflistview:GridLayout x:Name="gridLayout"/>
+                </sflistview:SfListView.LayoutManager>
+            </sflistview:SfListView>
             <buttons:SfButton  Command="{Binding Admin.CreateAdminCommand}"
                                Text="Agregar Administrador"
                                HorizontalOptions="FillAndExpand"
                                ShowIcon="True"
+                               IsVisible="False"
+                               IsEnabled="False"
                                TextColor="{AppThemeBinding Light=White, Dark=LightGray}"
                                Style="{StaticResource SyncfusionButtons}">
                 <buttons:SfButton.ImageSource>

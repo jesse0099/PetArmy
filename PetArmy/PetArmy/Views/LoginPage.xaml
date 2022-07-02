@@ -9,7 +9,6 @@
              xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-             xmlns:helpers="clr-namespace:PetArmy.Helpers"
              mc:Ignorable="d"
              x:Class="PetArmy.Views.LoginPage"
              Shell.NavBarIsVisible="False"

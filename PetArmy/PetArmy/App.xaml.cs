@@ -1,6 +1,4 @@
-﻿using PetArmy.Interfaces;
-using PetArmy.Services;
-using PetArmy.ViewModels;
+﻿using PetArmy.Services;
 using PetArmy.Views;
 using Resx;
 using Xamarin.CommunityToolkit.Helpers;
@@ -19,7 +17,6 @@ namespace PetArmy
             LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
             DependencyService.Register<MockDataStore>();
             MainPage = new SplashScreenView();
-            
         }
 
         protected override void OnStart()

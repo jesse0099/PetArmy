@@ -1,13 +1,13 @@
-﻿using PetArmy.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using PetArmy.Models;
+using PetArmy.Models.CloudFuntionsCalls;
 
 namespace PetArmy.Interfaces
 {
     public interface IFireFunction
     {
-        void ApproveAdminAccount(string function, CreateAdminUserRequest data, Action<Object, string> _onCallComplete);
-        void RequestAdminAccount(string function, CreateAdminUserRequest data, Action<Object, string> _onCallComplete);
+        void ApproveAdminAccount(string function, AdminAccountRequest data, Action<Object, string> _onCallComplete);
+        void RequestAdminAccount(string function, CreateAdminUserFunctionRequest data, Action<Object, string> _onCallComplete);
+        void GetAdminAccountRequests(string function, Action<Object, string> _onCallComplete);
     }
 }
