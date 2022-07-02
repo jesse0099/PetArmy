@@ -77,7 +77,9 @@ namespace PetArmy.ViewModels
         {
             try
             {
-                MockString mockString = await GraphQLService.GetMockString().ConfigureAwait(false); ;
+                var mockString = await GraphQLService.GetMockString().ConfigureAwait(false);
+
+                string stg = mockString.ToString();
                 
             }
             catch (System.Exception e)
