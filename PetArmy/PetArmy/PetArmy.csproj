@@ -13,6 +13,8 @@
     <PackageReference Include="GraphQL-Parser" Version="8.0.0" />
     <PackageReference Include="GraphQL.Client" Version="4.0.2" />
     <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="4.0.2" />
+    <PackageReference Include="GraphQL.DataLoader" Version="5.3.1" />
+    <PackageReference Include="GraphQL.MemoryCache" Version="5.3.1" />
     <PackageReference Include="GraphQL.NewtonsoftJson" Version="5.3.1" />
     <PackageReference Include="modernhttpclient-updated" Version="3.4.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />

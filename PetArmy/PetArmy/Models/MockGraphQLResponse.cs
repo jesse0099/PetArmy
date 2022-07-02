@@ -9,9 +9,9 @@ namespace PetArmy.Models
     public class MockGraphQLResponse
     {
 
-        public IEnumerable<MockString> Data { get; }
+        public MockString Data { get; }
 
-        public MockGraphQLResponse(IEnumerable<MockString> data) =>  Data = data;
+        public MockGraphQLResponse(MockString data) =>  Data = data;
 
     }
 }

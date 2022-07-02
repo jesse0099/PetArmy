@@ -11,29 +11,30 @@ using PetArmy.Models;
 using System.Collections;
 using System.Collections.Generic;
 using ModernHttpClient;
+using System.Net.Http;
+
 
 namespace PetArmy.Services
 {
     public static class GraphQLService
     {
 
-        #region Client Config 
-        static readonly Lazy<GraphQLHttpClient> _client = new(CreateGitHubGraphQLClient);
+        #region ClientConfig
+
+        static readonly Lazy<GraphQLHttpClient> _client = new(CreateClient);
         static GraphQLHttpClient Client => _client.Value;
 
-        static GraphQLHttpClient CreateGitHubGraphQLClient()
+
+        static GraphQLHttpClient CreateClient()
         {
             var graphQLOptions = new GraphQLHttpClientOptions
             {
-                EndPoint = new Uri("https://pet-army-101.hasura.app/v1/graphql"),
-                HttpMessageHandler = new NativeMessageHandler()
+                EndPoint = new Uri(Settings.GQL_URL),
+                HttpMessageHandler = new NativeMessageHandler(),
             };
 
             var client = new GraphQLHttpClient(graphQLOptions, new NewtonsoftJsonSerializer());
-
-            client.HttpClient.DefaultRequestHeaders.Add("x-hasura-admin-secret", Settings.GQL_Secret);
-
-
+            
             return client;
         }
 
@@ -52,33 +53,30 @@ namespace PetArmy.Services
         }
         #endregion
 
-        #region Queries 
 
-        public static async Task<IEnumerable<MockString>> GetMockData()
+        public static async Task<MockString> GetMockString()
         {
-            IEnumerable<MockString> mStrings = null;
+            string login = "s1";
 
             try
             {
                 var graphQLRequest = new GraphQLRequest
                 {
-                    Query = " query { mockTable { mockString } } "
+                    Query = "query { mockTable_by_pk(mockString: \"" + login + "\"){ mockString }}}"
                 };
 
-                var response = await Client.SendQueryAsync<MockGraphQLResponse>(graphQLRequest);
-      
+                var gitHubUserResponse = await AttemptAndRetry(() => Client.SendQueryAsync<MockGraphQLResponse>(graphQLRequest)).ConfigureAwait(false);
+
+                return gitHubUserResponse.Data;
             }
             catch (Exception e)
             {
 
-                Console.WriteLine("Error: " + e);
+                Console.WriteLine("Error login: " + e);
+
+                throw;
             }
-
-            return mStrings ;
         }
-
-
-        #endregion
 
     }
 }
