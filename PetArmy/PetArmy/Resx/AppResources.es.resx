@@ -171,4 +171,25 @@
   <data name="AddHomeKey" xml:space="preserve">
     <value>Agregar servicio de casa cuna</value>
   </data>
+  <data name="CreateNewShelterH1Key" xml:space="preserve">
+    <value>Crea tu refugio</value>
+  </data>
+  <data name="ShelterNameInputKey" xml:space="preserve">
+    <value>Nombre del refugio</value>
+  </data>
+  <data name="ShelterEmailKey" xml:space="preserve">
+    <value>Correo del refugio</value>
+  </data>
+  <data name="ShelterNumberKey" xml:space="preserve">
+    <value>Numero de teléfono </value>
+  </data>
+  <data name="ShelterNumberHintKey" xml:space="preserve">
+    <value>Incluir el código regional</value>
+  </data>
+  <data name="CapKey" xml:space="preserve">
+    <value>Capacidad</value>
+  </data>
+  <data name="ShelterDirInputKey" xml:space="preserve">
+    <value>Dirección Física</value>
+  </data>
 </root>

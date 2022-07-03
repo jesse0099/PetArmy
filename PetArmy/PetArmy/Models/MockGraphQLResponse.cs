@@ -9,9 +9,22 @@ namespace PetArmy.Models
     public class MockGraphQLResponse
     {
 
-        public MockString Data { get; }
+        public List<MockTable> mockTable { get; set; }
+        public MockTable mockTable_by_pk { get; set; }
+        public MockTable insert_mockTable { get; set; }
 
-        public MockGraphQLResponse(MockString data) =>  Data = data;
+        public MockGraphQLResponse() { }
+
+        public MockGraphQLResponse(List<MockTable> mockTable)
+        {
+            this.mockTable = mockTable;
+        }
+
+        public MockGraphQLResponse(MockTable mockTable)
+        {
+            this.mockTable_by_pk = mockTable;
+            this.insert_mockTable = mockTable;
+        }
 
     }
 }

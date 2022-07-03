@@ -79,11 +79,29 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Capacity.
+        /// </summary>
+        public static string CapKey {
+            get {
+                return ResourceManager.GetString("CapKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create account.
         /// </summary>
         public static string CreateAccountKey {
             get {
                 return ResourceManager.GetString("CreateAccountKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create your shelter.
+        /// </summary>
+        public static string CreateNewShelterH1Key {
+            get {
+                return ResourceManager.GetString("CreateNewShelterH1Key", resourceCulture);
             }
         }
         
@@ -183,6 +201,51 @@ namespace Resx {
         public static string ServicesH1Key {
             get {
                 return ResourceManager.GetString("ServicesH1Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shelter&apos;s adress.
+        /// </summary>
+        public static string ShelterDirInputKey {
+            get {
+                return ResourceManager.GetString("ShelterDirInputKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shelter&apos;s email.
+        /// </summary>
+        public static string ShelterEmailKey {
+            get {
+                return ResourceManager.GetString("ShelterEmailKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shelter&apos;s name.
+        /// </summary>
+        public static string ShelterNameInputKey {
+            get {
+                return ResourceManager.GetString("ShelterNameInputKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Include regional code.
+        /// </summary>
+        public static string ShelterNumberHintKey {
+            get {
+                return ResourceManager.GetString("ShelterNumberHintKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact phone number .
+        /// </summary>
+        public static string ShelterNumberKey {
+            get {
+                return ResourceManager.GetString("ShelterNumberKey", resourceCulture);
             }
         }
         

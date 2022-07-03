@@ -2,6 +2,7 @@
 using PetArmy.Models;
 using PetArmy.Views;
 using Xamarin.Forms;
+using PetArmy.Helpers;
 
 namespace PetArmy.ViewModels
 {
@@ -88,6 +89,9 @@ namespace PetArmy.ViewModels
             {
                 var registered_user = _i_auth.GetSignedUserProfile();
                 LoggedMail = registered_user.Email;
+                Settings.Email = registered_user.Email;
+                Settings.UID = registered_user.Uid;
+
                 switch (role) {
                     case "admin":
                         {

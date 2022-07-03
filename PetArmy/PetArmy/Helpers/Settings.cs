@@ -31,9 +31,9 @@ namespace PetArmy.Helpers
         #endregion
 
 
-        public static string GQL_URL { get { return AppSettings.GetValueOrDefault(GraphQLUrl, URLDefault); }}
+        public static string GQL_URL { get { return AppSettings.GetValueOrDefault(GraphQLUrl, URLDefault); } }
 
-        public static string GQL_Secret { get { return AppSettings.GetValueOrDefault(GraphQLSecret,SecretDefault); } }
+        public static string GQL_Secret { get { return AppSettings.GetValueOrDefault(GraphQLSecret, SecretDefault); } }
 
 
         public static string GeneralSettings
@@ -48,5 +48,42 @@ namespace PetArmy.Helpers
             }
         }
 
+
+        public static string UID
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("UID", "");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("UID", value);
+            }
+        }
+
+        public static string Username
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("Username", "");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("Username", value);
+            }
+        }
+
+        public static string Email
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("Email", "");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("Email", value);
+            }
+
+        }
     }
 }
