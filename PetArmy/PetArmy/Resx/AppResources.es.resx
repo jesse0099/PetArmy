@@ -192,4 +192,7 @@
   <data name="ShelterDirInputKey" xml:space="preserve">
     <value>Dirección Física</value>
   </data>
+  <data name="CreateShelterBtnKey" xml:space="preserve">
+    <value>Crear refugio</value>
+  </data>
 </root>

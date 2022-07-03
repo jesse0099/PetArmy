@@ -15,7 +15,7 @@
                     <Label Text="{Binding MyService.Test}"></Label>
                 </StackLayout>
 
-                <buttons:SfButton      Command="{Binding MyService.NewMock}"
+                <buttons:SfButton     
                                        Text="{xct:Translate AddHomeKey}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
@@ -30,7 +30,8 @@
                 </buttons:SfButton>
 
 
-                <buttons:SfButton      Text="{xct:Translate AddShelterKey}"
+                <buttons:SfButton      Command="{Binding MyService.NewShelter}"
+                                       Text="{xct:Translate AddShelterKey}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
                                        HorizontalOptions="FillAndExpand"

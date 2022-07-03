@@ -91,6 +91,7 @@ namespace PetArmy.ViewModels
                 LoggedMail = registered_user.Email;
                 Settings.Email = registered_user.Email;
                 Settings.UID = registered_user.Uid;
+                Settings.Role = role;
 
                 switch (role) {
                     case "admin":

@@ -87,6 +87,7 @@
         <ShellContent Route="LoginPage"
                       ContentTemplate="{DataTemplate local:LoginPage}" />
     </TabBar>
+
     
     <!-- 
         When the Flyout is visible this defines the content to display in the flyout.

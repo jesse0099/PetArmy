@@ -12,7 +12,7 @@ namespace PetArmy.ViewModels
         public RegisterViewModel Register { get; set; }
         public AdminViewModel Admin { get; set; }
         public MyServiceViewModel MyService { get; set; }
-
+        public NewShelterViewModel NewShelter { get; set; }
 
         public MainViewModel(): base()
         {
@@ -20,7 +20,9 @@ namespace PetArmy.ViewModels
             this.Admin = AdminViewModel.GetInstance();
             this.Register = RegisterViewModel.GetInstance();
             this.MyService = MyServiceViewModel.GetInstance();
+            this.NewShelter = NewShelterViewModel.GetInstance();
             this.User = new UserViewModel();
+
         }
     }
 }

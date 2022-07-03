@@ -172,4 +172,7 @@
   <data name="ShelterDirInputKey" xml:space="preserve">
     <value>Shelter's adress</value>
   </data>
+  <data name="CreateShelterBtnKey" xml:space="preserve">
+    <value>Create shelter</value>
+  </data>
 </root>

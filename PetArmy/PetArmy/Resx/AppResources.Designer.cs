@@ -106,6 +106,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create shelter.
+        /// </summary>
+        public static string CreateShelterBtnKey {
+            get {
+                return ResourceManager.GetString("CreateShelterBtnKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registered email: user@email.com.
         /// </summary>
         public static string EmailHintKey {

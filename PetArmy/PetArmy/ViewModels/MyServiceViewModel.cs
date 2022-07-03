@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using System.Collections;
 using System.Collections.Generic;
 using PetArmy.Models;
+using PetArmy.Views;
 
 namespace PetArmy.ViewModels
 {
@@ -46,7 +47,7 @@ namespace PetArmy.ViewModels
 
         public void initCommands()
         {
-            NewMock = new Command(newMock);
+            NewShelter = new Command(newShelter);
         }
 
         #endregion
@@ -70,16 +71,19 @@ namespace PetArmy.ViewModels
 
         #region Commands and Funtions
 
-        public ICommand NewMock { get; set; }
+        public ICommand NewShelter { get; set; }
 
 
-        public async void newMock()
+        public async void newShelter()
         {
             try
             {
                 /*await GraphQLService.GetMockString().ConfigureAwait(false);
                 /* await GraphQLService.Insert_MockString("insertados").ConfigureAwait(false);*/
-                await GraphQLService.Get_MockString_ById("s1").ConfigureAwait(false);
+                /* await GraphQLService.Get_MockString_ById("s1").ConfigureAwait(false);*/
+
+                await Application.Current.MainPage.Navigation.PushAsync(new NewShelterView());
+
             }
             catch (System.Exception e)
             {

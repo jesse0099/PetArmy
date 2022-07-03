@@ -85,5 +85,19 @@ namespace PetArmy.Helpers
             }
 
         }
+
+
+        public static string Role
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("Role", "");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("Role", value);
+            }
+
+        }
     }
 }
