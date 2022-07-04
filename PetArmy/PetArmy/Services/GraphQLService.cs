@@ -90,7 +90,6 @@ namespace PetArmy.Services
 
         #endregion
 
-
         #region User Operations
 
 
@@ -141,6 +140,50 @@ namespace PetArmy.Services
 
         #region Shelter Operations
 
+
+        public static async Task<List<Refugio>> getAllShelters()
+        {
+            List<Refugio> shelters = null;
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"query MyQuery { refugio { id_refugio telefono nombre direccion correo capacidad administrador activo info_legal }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+                shelters = response.Data.refugio;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return shelters;
+        }
+
+
+        public static async Task<int> countAllShelters()
+        {
+            int num = 0;
+            try
+            {
+                List<Refugio> shelters = await getAllShelters();
+                num = shelters.Count;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+            return num;
+        }
+
         public static async Task<bool> createShelter(Refugio newShelter, Usuario user)
         {
             bool completed = false;
@@ -175,6 +218,31 @@ namespace PetArmy.Services
             return completed;
         }
 
+
+        public static async Task<List<Refugio>> shelters_ByUser(string uid)
+        {
+            List<Refugio> shelters = new List<Refugio>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery { refugio(where: {administrador: {_eq: \""+uid+ "\"}}) { id_refugio telefono nombre direccion correo capacidad administrador activo info_legal }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+                shelters = response.Data.refugio;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return shelters;
+        }
 
         #endregion
 
