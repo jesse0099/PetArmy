@@ -12,16 +12,19 @@ namespace PetArmy.Models
         public string PreviewPath { get; set; }
         public ImageSource Path { get; set; }
         public MetafileType Type { get; set; }
+        public byte[] imgByte { get; set; }
+
 
         public MediaFileModel()
         {
         }
 
-        public MediaFileModel(string previewPath, string path, MetafileType type)
+        public MediaFileModel(string previewPath, ImageSource path, MetafileType type, byte[] imgByte)
         {
             PreviewPath = previewPath;
             Path = path;
             Type = type;
+            this.imgByte = imgByte;
         }
     }
 }

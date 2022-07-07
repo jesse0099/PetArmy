@@ -119,7 +119,7 @@ namespace PetArmy.ViewModels
                 {
                     Refugio newShelter = new Refugio();
                     newShelter.administrador = registered_user.Uid;
-                    newShelter.id_refugio = 1;
+                    newShelter.id_refugio = await GraphQLService.countAllShelters() +1 ;
                     newShelter.nombre = shelterName;
                     newShelter.correo = shelterEmail;
                     newShelter.telefono = shelterNumber;

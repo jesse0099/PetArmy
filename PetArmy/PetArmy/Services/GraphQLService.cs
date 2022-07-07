@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 using PetArmy.Helpers;
 using GraphQL.Client.Serializer.Newtonsoft;
 using PetArmy.Models;
+using Xamarin.Forms;
+using GraphQL.Query.Builder;
 
 namespace PetArmy.Services
 {
-
 
     public class GraphQLHttpRequestWithHeaders : GraphQLHttpRequest
     {
@@ -180,7 +181,7 @@ namespace PetArmy.Services
 
                 throw;
             }
-           
+
             return num;
         }
 
@@ -195,18 +196,18 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation { insert_refugio(objects: { "+"activo: "+newShelter.activo+ 
-                                                                               ",administrador: \""+newShelter.administrador+"\""+
-                                                                               ",capacidad: "+newShelter.capacidad+
-                                                                               ",correo: \""+newShelter.correo+"\""+
-                                                                               ",direccion: \""+newShelter.direccion+"\""+
-                                                                               ",id_refugio: \""+newShelter.id_refugio+"\""+
-                                                                               ",nombre: \""+newShelter.nombre+"\""+
-                                                                               ",telefono: \""+newShelter.telefono+ "\"})"+
+                    Query = "mutation MyMutation { insert_refugio(objects: { " + "activo: " + newShelter.activo +
+                                                                               ",administrador: \"" + newShelter.administrador + "\"" +
+                                                                               ",capacidad: " + newShelter.capacidad +
+                                                                               ",correo: \"" + newShelter.correo + "\"" +
+                                                                               ",direccion: \"" + newShelter.direccion + "\"" +
+                                                                               ",id_refugio: \"" + newShelter.id_refugio + "\"" +
+                                                                               ",nombre: \"" + newShelter.nombre + "\"" +
+                                                                               ",telefono: \"" + newShelter.telefono + "\"})" +
                                                                                "{ returning{ id_refugio }}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
-                
+
                 var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
                 completed = true;
             }
@@ -228,7 +229,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "query MyQuery { refugio(where: {administrador: {_eq: \""+uid+ "\"}}) { id_refugio telefono nombre direccion correo capacidad administrador activo info_legal }}",
+                    Query = "query MyQuery { refugio(where: {administrador: {_eq: \"" + uid + "\"}}) { id_refugio telefono nombre direccion correo capacidad administrador activo info_legal }}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -242,6 +243,89 @@ namespace PetArmy.Services
             }
 
             return shelters;
+        }
+
+
+        public static async Task<List<Imagen_refugio>> getAllImages(){
+            List<Imagen_refugio> images = new List<Imagen_refugio>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery { imagen_refugio {id_imagen id_refugio imagen isDefault}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
+                images = response.Data.imagen_refugio;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return images;
+        }
+
+        public static async Task<int> countAllImages()
+        {
+            List<Imagen_refugio> imagens = await getAllImages();
+            int count = imagens.Count;
+            return count;
+        }
+
+
+        public static async Task addImage(Imagen_refugio img)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {insert_imagen_refugio(objects: { id_imagen: "+img.id_imagen
+                                                                                +", id_refugio: "+img.id_refugio
+                                                                                +", imagen: \""+img.imagen+"\""
+                                                                                +", isDefault: "+img.isDefault
+                                                                                +" }){returning{id_imagen}}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        public static async Task<List<Imagen_refugio>> getImages_ByShelter(Refugio shelter)
+        {
+            List<Imagen_refugio> images = new List<Imagen_refugio>();
+         
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {imagen_refugio(where: {id_refugio: {_eq: "+shelter.id_refugio+" }}) { id_imagen id_refugio imagen isDefault}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
+                images = response.Data.imagen_refugio;
+            }
+            
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return images;
         }
 
         #endregion

@@ -27,6 +27,228 @@ namespace PetArmy.Droid
 		{
 			global::ModernHttpClient.Resource.String.app_name = global::PetArmy.Droid.Resource.String.app_name;
 			global::ModernHttpClient.Resource.String.hello = global::PetArmy.Droid.Resource.String.hello;
+			global::Plugin.Media.Resource.Attribute.alpha = global::PetArmy.Droid.Resource.Attribute.alpha;
+			global::Plugin.Media.Resource.Attribute.coordinatorLayoutStyle = global::PetArmy.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Plugin.Media.Resource.Attribute.font = global::PetArmy.Droid.Resource.Attribute.font;
+			global::Plugin.Media.Resource.Attribute.fontProviderAuthority = global::PetArmy.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.Media.Resource.Attribute.fontProviderCerts = global::PetArmy.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.Media.Resource.Attribute.fontProviderFetchStrategy = global::PetArmy.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.Media.Resource.Attribute.fontProviderFetchTimeout = global::PetArmy.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.Media.Resource.Attribute.fontProviderPackage = global::PetArmy.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.Media.Resource.Attribute.fontProviderQuery = global::PetArmy.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.Media.Resource.Attribute.fontStyle = global::PetArmy.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.Media.Resource.Attribute.fontVariationSettings = global::PetArmy.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.Media.Resource.Attribute.fontWeight = global::PetArmy.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.Media.Resource.Attribute.keylines = global::PetArmy.Droid.Resource.Attribute.keylines;
+			global::Plugin.Media.Resource.Attribute.layout_anchor = global::PetArmy.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.Media.Resource.Attribute.layout_anchorGravity = global::PetArmy.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.Media.Resource.Attribute.layout_behavior = global::PetArmy.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.Media.Resource.Attribute.layout_dodgeInsetEdges = global::PetArmy.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.Media.Resource.Attribute.layout_insetEdge = global::PetArmy.Droid.Resource.Attribute.layout_insetEdge;
+			global::Plugin.Media.Resource.Attribute.layout_keyline = global::PetArmy.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.Media.Resource.Attribute.statusBarBackground = global::PetArmy.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.Media.Resource.Attribute.ttcIndex = global::PetArmy.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.Media.Resource.Color.browser_actions_bg_grey = global::PetArmy.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Plugin.Media.Resource.Color.browser_actions_divider_color = global::PetArmy.Droid.Resource.Color.browser_actions_divider_color;
+			global::Plugin.Media.Resource.Color.browser_actions_text_color = global::PetArmy.Droid.Resource.Color.browser_actions_text_color;
+			global::Plugin.Media.Resource.Color.browser_actions_title_color = global::PetArmy.Droid.Resource.Color.browser_actions_title_color;
+			global::Plugin.Media.Resource.Color.notification_action_color_filter = global::PetArmy.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.Media.Resource.Color.notification_icon_bg_color = global::PetArmy.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.Media.Resource.Color.ripple_material_light = global::PetArmy.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.Media.Resource.Color.secondary_text_default_material_light = global::PetArmy.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.Media.Resource.Dimension.browser_actions_context_menu_max_width = global::PetArmy.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Plugin.Media.Resource.Dimension.browser_actions_context_menu_min_padding = global::PetArmy.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Plugin.Media.Resource.Dimension.compat_button_inset_horizontal_material = global::PetArmy.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.Media.Resource.Dimension.compat_button_inset_vertical_material = global::PetArmy.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.Media.Resource.Dimension.compat_button_padding_horizontal_material = global::PetArmy.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.Media.Resource.Dimension.compat_button_padding_vertical_material = global::PetArmy.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.Media.Resource.Dimension.compat_control_corner_material = global::PetArmy.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.Media.Resource.Dimension.compat_notification_large_icon_max_height = global::PetArmy.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.Media.Resource.Dimension.compat_notification_large_icon_max_width = global::PetArmy.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.Media.Resource.Dimension.notification_action_icon_size = global::PetArmy.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.Media.Resource.Dimension.notification_action_text_size = global::PetArmy.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.Media.Resource.Dimension.notification_big_circle_margin = global::PetArmy.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.Media.Resource.Dimension.notification_content_margin_start = global::PetArmy.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.Media.Resource.Dimension.notification_large_icon_height = global::PetArmy.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Media.Resource.Dimension.notification_large_icon_width = global::PetArmy.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Media.Resource.Dimension.notification_main_column_padding_top = global::PetArmy.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.Media.Resource.Dimension.notification_media_narrow_margin = global::PetArmy.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.Media.Resource.Dimension.notification_right_icon_size = global::PetArmy.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.Media.Resource.Dimension.notification_right_side_padding_top = global::PetArmy.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.Media.Resource.Dimension.notification_small_icon_background_padding = global::PetArmy.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.Media.Resource.Dimension.notification_small_icon_size_as_large = global::PetArmy.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.Media.Resource.Dimension.notification_subtext_size = global::PetArmy.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Media.Resource.Dimension.notification_top_pad = global::PetArmy.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.Media.Resource.Dimension.notification_top_pad_large_text = global::PetArmy.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.Media.Resource.Drawable.notification_action_background = global::PetArmy.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.Media.Resource.Drawable.notification_bg = global::PetArmy.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.Media.Resource.Drawable.notification_bg_low = global::PetArmy.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.Media.Resource.Drawable.notification_bg_low_normal = global::PetArmy.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.Media.Resource.Drawable.notification_bg_low_pressed = global::PetArmy.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.Media.Resource.Drawable.notification_bg_normal = global::PetArmy.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.Media.Resource.Drawable.notification_bg_normal_pressed = global::PetArmy.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.Media.Resource.Drawable.notification_icon_background = global::PetArmy.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.Media.Resource.Drawable.notification_template_icon_bg = global::PetArmy.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Media.Resource.Drawable.notification_template_icon_low_bg = global::PetArmy.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.Media.Resource.Drawable.notification_tile_bg = global::PetArmy.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.Media.Resource.Drawable.notify_panel_notification_icon_bg = global::PetArmy.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.Media.Resource.Id.accessibility_action_clickable_span = global::PetArmy.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_0 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_1 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_10 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_11 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_12 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_13 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_14 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_15 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_16 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_17 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_18 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_19 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_2 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_20 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_21 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_22 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_23 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_24 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_25 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_26 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_27 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_28 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_29 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_3 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_30 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_31 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_4 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_5 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_6 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_7 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_8 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_9 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_9;
+			global::Plugin.Media.Resource.Id.actions = global::PetArmy.Droid.Resource.Id.actions;
+			global::Plugin.Media.Resource.Id.action_container = global::PetArmy.Droid.Resource.Id.action_container;
+			global::Plugin.Media.Resource.Id.action_divider = global::PetArmy.Droid.Resource.Id.action_divider;
+			global::Plugin.Media.Resource.Id.action_image = global::PetArmy.Droid.Resource.Id.action_image;
+			global::Plugin.Media.Resource.Id.action_text = global::PetArmy.Droid.Resource.Id.action_text;
+			global::Plugin.Media.Resource.Id.all = global::PetArmy.Droid.Resource.Id.all;
+			global::Plugin.Media.Resource.Id.async = global::PetArmy.Droid.Resource.Id.async;
+			global::Plugin.Media.Resource.Id.blocking = global::PetArmy.Droid.Resource.Id.blocking;
+			global::Plugin.Media.Resource.Id.bottom = global::PetArmy.Droid.Resource.Id.bottom;
+			global::Plugin.Media.Resource.Id.browser_actions_header_text = global::PetArmy.Droid.Resource.Id.browser_actions_header_text;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_items = global::PetArmy.Droid.Resource.Id.browser_actions_menu_items;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_item_icon = global::PetArmy.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_item_text = global::PetArmy.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_view = global::PetArmy.Droid.Resource.Id.browser_actions_menu_view;
+			global::Plugin.Media.Resource.Id.center = global::PetArmy.Droid.Resource.Id.center;
+			global::Plugin.Media.Resource.Id.center_horizontal = global::PetArmy.Droid.Resource.Id.center_horizontal;
+			global::Plugin.Media.Resource.Id.center_vertical = global::PetArmy.Droid.Resource.Id.center_vertical;
+			global::Plugin.Media.Resource.Id.chronometer = global::PetArmy.Droid.Resource.Id.chronometer;
+			global::Plugin.Media.Resource.Id.clip_horizontal = global::PetArmy.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.Media.Resource.Id.clip_vertical = global::PetArmy.Droid.Resource.Id.clip_vertical;
+			global::Plugin.Media.Resource.Id.dialog_button = global::PetArmy.Droid.Resource.Id.dialog_button;
+			global::Plugin.Media.Resource.Id.end = global::PetArmy.Droid.Resource.Id.end;
+			global::Plugin.Media.Resource.Id.fill = global::PetArmy.Droid.Resource.Id.fill;
+			global::Plugin.Media.Resource.Id.fill_horizontal = global::PetArmy.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.Media.Resource.Id.fill_vertical = global::PetArmy.Droid.Resource.Id.fill_vertical;
+			global::Plugin.Media.Resource.Id.forever = global::PetArmy.Droid.Resource.Id.forever;
+			global::Plugin.Media.Resource.Id.icon = global::PetArmy.Droid.Resource.Id.icon;
+			global::Plugin.Media.Resource.Id.icon_group = global::PetArmy.Droid.Resource.Id.icon_group;
+			global::Plugin.Media.Resource.Id.info = global::PetArmy.Droid.Resource.Id.info;
+			global::Plugin.Media.Resource.Id.italic = global::PetArmy.Droid.Resource.Id.italic;
+			global::Plugin.Media.Resource.Id.left = global::PetArmy.Droid.Resource.Id.left;
+			global::Plugin.Media.Resource.Id.line1 = global::PetArmy.Droid.Resource.Id.line1;
+			global::Plugin.Media.Resource.Id.line3 = global::PetArmy.Droid.Resource.Id.line3;
+			global::Plugin.Media.Resource.Id.none = global::PetArmy.Droid.Resource.Id.none;
+			global::Plugin.Media.Resource.Id.normal = global::PetArmy.Droid.Resource.Id.normal;
+			global::Plugin.Media.Resource.Id.notification_background = global::PetArmy.Droid.Resource.Id.notification_background;
+			global::Plugin.Media.Resource.Id.notification_main_column = global::PetArmy.Droid.Resource.Id.notification_main_column;
+			global::Plugin.Media.Resource.Id.notification_main_column_container = global::PetArmy.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.Media.Resource.Id.right = global::PetArmy.Droid.Resource.Id.right;
+			global::Plugin.Media.Resource.Id.right_icon = global::PetArmy.Droid.Resource.Id.right_icon;
+			global::Plugin.Media.Resource.Id.right_side = global::PetArmy.Droid.Resource.Id.right_side;
+			global::Plugin.Media.Resource.Id.start = global::PetArmy.Droid.Resource.Id.start;
+			global::Plugin.Media.Resource.Id.tag_accessibility_actions = global::PetArmy.Droid.Resource.Id.tag_accessibility_actions;
+			global::Plugin.Media.Resource.Id.tag_accessibility_clickable_spans = global::PetArmy.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Plugin.Media.Resource.Id.tag_accessibility_heading = global::PetArmy.Droid.Resource.Id.tag_accessibility_heading;
+			global::Plugin.Media.Resource.Id.tag_accessibility_pane_title = global::PetArmy.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Plugin.Media.Resource.Id.tag_screen_reader_focusable = global::PetArmy.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::Plugin.Media.Resource.Id.tag_transition_group = global::PetArmy.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.Media.Resource.Id.tag_unhandled_key_event_manager = global::PetArmy.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.Media.Resource.Id.tag_unhandled_key_listeners = global::PetArmy.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.Media.Resource.Id.text = global::PetArmy.Droid.Resource.Id.text;
+			global::Plugin.Media.Resource.Id.text2 = global::PetArmy.Droid.Resource.Id.text2;
+			global::Plugin.Media.Resource.Id.time = global::PetArmy.Droid.Resource.Id.time;
+			global::Plugin.Media.Resource.Id.title = global::PetArmy.Droid.Resource.Id.title;
+			global::Plugin.Media.Resource.Id.top = global::PetArmy.Droid.Resource.Id.top;
+			global::Plugin.Media.Resource.Integer.status_bar_notification_info_maxnum = global::PetArmy.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Media.Resource.Layout.browser_actions_context_menu_page = global::PetArmy.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Plugin.Media.Resource.Layout.browser_actions_context_menu_row = global::PetArmy.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Plugin.Media.Resource.Layout.custom_dialog = global::PetArmy.Droid.Resource.Layout.custom_dialog;
+			global::Plugin.Media.Resource.Layout.notification_action = global::PetArmy.Droid.Resource.Layout.notification_action;
+			global::Plugin.Media.Resource.Layout.notification_action_tombstone = global::PetArmy.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.Media.Resource.Layout.notification_template_custom_big = global::PetArmy.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.Media.Resource.Layout.notification_template_icon_group = global::PetArmy.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.Media.Resource.Layout.notification_template_part_chronometer = global::PetArmy.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Media.Resource.Layout.notification_template_part_time = global::PetArmy.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.Media.Resource.String.status_bar_notification_info_overflow = global::PetArmy.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Info = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Time = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Title = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.Media.Resource.Style.Widget_Compat_NotificationActionContainer = global::PetArmy.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.Media.Resource.Style.Widget_Compat_NotificationActionText = global::PetArmy.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.Media.Resource.Style.Widget_Support_CoordinatorLayout = global::PetArmy.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem = global::PetArmy.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem_alpha = global::PetArmy.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem_android_alpha = global::PetArmy.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem_android_color = global::PetArmy.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_keylines = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.Media.Resource.Styleable.FontFamily = global::PetArmy.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_font = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_fontStyle = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_fontWeight = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_font = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_fontStyle = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_fontWeight = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_ttcIndex = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderAuthority = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderCerts = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderPackage = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderQuery = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.Media.Resource.Styleable.GradientColor = global::PetArmy.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.Media.Resource.Styleable.GradientColorItem = global::PetArmy.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.Media.Resource.Styleable.GradientColorItem_android_color = global::PetArmy.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.Media.Resource.Styleable.GradientColorItem_android_offset = global::PetArmy.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_centerColor = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_centerX = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_centerY = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_endColor = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_endX = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_endY = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_gradientRadius = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_startColor = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_startX = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_startY = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_tileMode = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_type = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.Media.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::PetArmy.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.sfcheckbox_indeterminate_checked_inner = global::PetArmy.Droid.Resource.Animation.sfcheckbox_indeterminate_checked_inner;
 			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.sfcheckbox_indeterminate_checked_null = global::PetArmy.Droid.Resource.Animation.sfcheckbox_indeterminate_checked_null;
 			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.sfcheckbox_unchecked_inner = global::PetArmy.Droid.Resource.Animation.sfcheckbox_unchecked_inner;
@@ -154,6 +376,2659 @@ namespace PetArmy.Droid
 			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorTitlePlacement = global::PetArmy.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorTitlePlacement;
 			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxHeight = global::PetArmy.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxHeight;
 			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxWidth = global::PetArmy.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_fade_in = global::PetArmy.Droid.Resource.Animation.abc_fade_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_fade_out = global::PetArmy.Droid.Resource.Animation.abc_fade_out;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_grow_fade_in_from_bottom = global::PetArmy.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_popup_enter = global::PetArmy.Droid.Resource.Animation.abc_popup_enter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_popup_exit = global::PetArmy.Droid.Resource.Animation.abc_popup_exit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_shrink_fade_out_from_bottom = global::PetArmy.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_slide_in_bottom = global::PetArmy.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_slide_in_top = global::PetArmy.Droid.Resource.Animation.abc_slide_in_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_slide_out_bottom = global::PetArmy.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_slide_out_top = global::PetArmy.Droid.Resource.Animation.abc_slide_out_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_tooltip_enter = global::PetArmy.Droid.Resource.Animation.abc_tooltip_enter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_tooltip_exit = global::PetArmy.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::PetArmy.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::PetArmy.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::PetArmy.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::PetArmy.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::PetArmy.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::PetArmy.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::PetArmy.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::PetArmy.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::PetArmy.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::PetArmy.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::PetArmy.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::PetArmy.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.design_bottom_sheet_slide_in = global::PetArmy.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.design_bottom_sheet_slide_out = global::PetArmy.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.design_snackbar_in = global::PetArmy.Droid.Resource.Animation.design_snackbar_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.design_snackbar_out = global::PetArmy.Droid.Resource.Animation.design_snackbar_out;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.EnterFromLeft = global::PetArmy.Droid.Resource.Animation.EnterFromLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.EnterFromRight = global::PetArmy.Droid.Resource.Animation.EnterFromRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.ExitToLeft = global::PetArmy.Droid.Resource.Animation.ExitToLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.ExitToRight = global::PetArmy.Droid.Resource.Animation.ExitToRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.design_appbar_state_list_animator = global::PetArmy.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.design_fab_hide_motion_spec = global::PetArmy.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.design_fab_show_motion_spec = global::PetArmy.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_btn_state_list_anim = global::PetArmy.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::PetArmy.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_chip_state_list_anim = global::PetArmy.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_fab_hide_motion_spec = global::PetArmy.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_fab_show_motion_spec = global::PetArmy.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::PetArmy.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::PetArmy.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarDivider = global::PetArmy.Droid.Resource.Attribute.actionBarDivider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarItemBackground = global::PetArmy.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarPopupTheme = global::PetArmy.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarSize = global::PetArmy.Droid.Resource.Attribute.actionBarSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarSplitStyle = global::PetArmy.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarStyle = global::PetArmy.Droid.Resource.Attribute.actionBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarTabBarStyle = global::PetArmy.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarTabStyle = global::PetArmy.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarTabTextStyle = global::PetArmy.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarTheme = global::PetArmy.Droid.Resource.Attribute.actionBarTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarWidgetTheme = global::PetArmy.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionButtonStyle = global::PetArmy.Droid.Resource.Attribute.actionButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionDropDownStyle = global::PetArmy.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionLayout = global::PetArmy.Droid.Resource.Attribute.actionLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionMenuTextAppearance = global::PetArmy.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionMenuTextColor = global::PetArmy.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeBackground = global::PetArmy.Droid.Resource.Attribute.actionModeBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeCloseButtonStyle = global::PetArmy.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeCloseDrawable = global::PetArmy.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeCopyDrawable = global::PetArmy.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeCutDrawable = global::PetArmy.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeFindDrawable = global::PetArmy.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModePasteDrawable = global::PetArmy.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModePopupWindowStyle = global::PetArmy.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeSelectAllDrawable = global::PetArmy.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeShareDrawable = global::PetArmy.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeSplitBackground = global::PetArmy.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeStyle = global::PetArmy.Droid.Resource.Attribute.actionModeStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeWebSearchDrawable = global::PetArmy.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionOverflowButtonStyle = global::PetArmy.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionOverflowMenuStyle = global::PetArmy.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionProviderClass = global::PetArmy.Droid.Resource.Attribute.actionProviderClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionViewClass = global::PetArmy.Droid.Resource.Attribute.actionViewClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.activityChooserViewStyle = global::PetArmy.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alertDialogButtonGroupStyle = global::PetArmy.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alertDialogCenterButtons = global::PetArmy.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alertDialogStyle = global::PetArmy.Droid.Resource.Attribute.alertDialogStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alertDialogTheme = global::PetArmy.Droid.Resource.Attribute.alertDialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.allowStacking = global::PetArmy.Droid.Resource.Attribute.allowStacking;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alpha = global::PetArmy.Droid.Resource.Attribute.alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alphabeticModifiers = global::PetArmy.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.arrowHeadLength = global::PetArmy.Droid.Resource.Attribute.arrowHeadLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.arrowShaftLength = global::PetArmy.Droid.Resource.Attribute.arrowShaftLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoCompleteTextViewStyle = global::PetArmy.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizeMaxTextSize = global::PetArmy.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizeMinTextSize = global::PetArmy.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizePresetSizes = global::PetArmy.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizeStepGranularity = global::PetArmy.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizeTextType = global::PetArmy.Droid.Resource.Attribute.autoSizeTextType;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.background = global::PetArmy.Droid.Resource.Attribute.background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.backgroundSplit = global::PetArmy.Droid.Resource.Attribute.backgroundSplit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.backgroundStacked = global::PetArmy.Droid.Resource.Attribute.backgroundStacked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.backgroundTint = global::PetArmy.Droid.Resource.Attribute.backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.backgroundTintMode = global::PetArmy.Droid.Resource.Attribute.backgroundTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.barLength = global::PetArmy.Droid.Resource.Attribute.barLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_autoHide = global::PetArmy.Droid.Resource.Attribute.behavior_autoHide;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_fitToContents = global::PetArmy.Droid.Resource.Attribute.behavior_fitToContents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_hideable = global::PetArmy.Droid.Resource.Attribute.behavior_hideable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_overlapTop = global::PetArmy.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_peekHeight = global::PetArmy.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_skipCollapsed = global::PetArmy.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.borderlessButtonStyle = global::PetArmy.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.borderWidth = global::PetArmy.Droid.Resource.Attribute.borderWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.bottomAppBarStyle = global::PetArmy.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.bottomNavigationStyle = global::PetArmy.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.bottomSheetDialogTheme = global::PetArmy.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.bottomSheetStyle = global::PetArmy.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxBackgroundColor = global::PetArmy.Droid.Resource.Attribute.boxBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxBackgroundMode = global::PetArmy.Droid.Resource.Attribute.boxBackgroundMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCollapsedPaddingTop = global::PetArmy.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCornerRadiusBottomEnd = global::PetArmy.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCornerRadiusBottomStart = global::PetArmy.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCornerRadiusTopEnd = global::PetArmy.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCornerRadiusTopStart = global::PetArmy.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxStrokeColor = global::PetArmy.Droid.Resource.Attribute.boxStrokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxStrokeWidth = global::PetArmy.Droid.Resource.Attribute.boxStrokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarButtonStyle = global::PetArmy.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarNegativeButtonStyle = global::PetArmy.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarNeutralButtonStyle = global::PetArmy.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarPositiveButtonStyle = global::PetArmy.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarStyle = global::PetArmy.Droid.Resource.Attribute.buttonBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonCompat = global::PetArmy.Droid.Resource.Attribute.buttonCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonGravity = global::PetArmy.Droid.Resource.Attribute.buttonGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonIconDimen = global::PetArmy.Droid.Resource.Attribute.buttonIconDimen;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonPanelSideLayout = global::PetArmy.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonStyle = global::PetArmy.Droid.Resource.Attribute.buttonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonStyleSmall = global::PetArmy.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonTint = global::PetArmy.Droid.Resource.Attribute.buttonTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonTintMode = global::PetArmy.Droid.Resource.Attribute.buttonTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardBackgroundColor = global::PetArmy.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardCornerRadius = global::PetArmy.Droid.Resource.Attribute.cardCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardElevation = global::PetArmy.Droid.Resource.Attribute.cardElevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardMaxElevation = global::PetArmy.Droid.Resource.Attribute.cardMaxElevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardPreventCornerOverlap = global::PetArmy.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardUseCompatPadding = global::PetArmy.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardViewStyle = global::PetArmy.Droid.Resource.Attribute.cardViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkboxStyle = global::PetArmy.Droid.Resource.Attribute.checkboxStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedChip = global::PetArmy.Droid.Resource.Attribute.checkedChip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedIcon = global::PetArmy.Droid.Resource.Attribute.checkedIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedIconEnabled = global::PetArmy.Droid.Resource.Attribute.checkedIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedIconVisible = global::PetArmy.Droid.Resource.Attribute.checkedIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedTextViewStyle = global::PetArmy.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipBackgroundColor = global::PetArmy.Droid.Resource.Attribute.chipBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipCornerRadius = global::PetArmy.Droid.Resource.Attribute.chipCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipEndPadding = global::PetArmy.Droid.Resource.Attribute.chipEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipGroupStyle = global::PetArmy.Droid.Resource.Attribute.chipGroupStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIcon = global::PetArmy.Droid.Resource.Attribute.chipIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIconEnabled = global::PetArmy.Droid.Resource.Attribute.chipIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIconSize = global::PetArmy.Droid.Resource.Attribute.chipIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIconTint = global::PetArmy.Droid.Resource.Attribute.chipIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIconVisible = global::PetArmy.Droid.Resource.Attribute.chipIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipMinHeight = global::PetArmy.Droid.Resource.Attribute.chipMinHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipSpacing = global::PetArmy.Droid.Resource.Attribute.chipSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipSpacingHorizontal = global::PetArmy.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipSpacingVertical = global::PetArmy.Droid.Resource.Attribute.chipSpacingVertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStandaloneStyle = global::PetArmy.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStartPadding = global::PetArmy.Droid.Resource.Attribute.chipStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStrokeColor = global::PetArmy.Droid.Resource.Attribute.chipStrokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStrokeWidth = global::PetArmy.Droid.Resource.Attribute.chipStrokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStyle = global::PetArmy.Droid.Resource.Attribute.chipStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIcon = global::PetArmy.Droid.Resource.Attribute.closeIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconEnabled = global::PetArmy.Droid.Resource.Attribute.closeIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconEndPadding = global::PetArmy.Droid.Resource.Attribute.closeIconEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconSize = global::PetArmy.Droid.Resource.Attribute.closeIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconStartPadding = global::PetArmy.Droid.Resource.Attribute.closeIconStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconTint = global::PetArmy.Droid.Resource.Attribute.closeIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconVisible = global::PetArmy.Droid.Resource.Attribute.closeIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeItemLayout = global::PetArmy.Droid.Resource.Attribute.closeItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.collapseContentDescription = global::PetArmy.Droid.Resource.Attribute.collapseContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.collapsedTitleGravity = global::PetArmy.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.collapsedTitleTextAppearance = global::PetArmy.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.collapseIcon = global::PetArmy.Droid.Resource.Attribute.collapseIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.color = global::PetArmy.Droid.Resource.Attribute.color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorAccent = global::PetArmy.Droid.Resource.Attribute.colorAccent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorBackgroundFloating = global::PetArmy.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorButtonNormal = global::PetArmy.Droid.Resource.Attribute.colorButtonNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorControlActivated = global::PetArmy.Droid.Resource.Attribute.colorControlActivated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorControlHighlight = global::PetArmy.Droid.Resource.Attribute.colorControlHighlight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorControlNormal = global::PetArmy.Droid.Resource.Attribute.colorControlNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorError = global::PetArmy.Droid.Resource.Attribute.colorError;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorPrimary = global::PetArmy.Droid.Resource.Attribute.colorPrimary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorPrimaryDark = global::PetArmy.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorSecondary = global::PetArmy.Droid.Resource.Attribute.colorSecondary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorSwitchThumbNormal = global::PetArmy.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.commitIcon = global::PetArmy.Droid.Resource.Attribute.commitIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentDescription = global::PetArmy.Droid.Resource.Attribute.contentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetEnd = global::PetArmy.Droid.Resource.Attribute.contentInsetEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetEndWithActions = global::PetArmy.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetLeft = global::PetArmy.Droid.Resource.Attribute.contentInsetLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetRight = global::PetArmy.Droid.Resource.Attribute.contentInsetRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetStart = global::PetArmy.Droid.Resource.Attribute.contentInsetStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetStartWithNavigation = global::PetArmy.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPadding = global::PetArmy.Droid.Resource.Attribute.contentPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPaddingBottom = global::PetArmy.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPaddingLeft = global::PetArmy.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPaddingRight = global::PetArmy.Droid.Resource.Attribute.contentPaddingRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPaddingTop = global::PetArmy.Droid.Resource.Attribute.contentPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentScrim = global::PetArmy.Droid.Resource.Attribute.contentScrim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.controlBackground = global::PetArmy.Droid.Resource.Attribute.controlBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.coordinatorLayoutStyle = global::PetArmy.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cornerRadius = global::PetArmy.Droid.Resource.Attribute.cornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.counterEnabled = global::PetArmy.Droid.Resource.Attribute.counterEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.counterMaxLength = global::PetArmy.Droid.Resource.Attribute.counterMaxLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.counterOverflowTextAppearance = global::PetArmy.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.counterTextAppearance = global::PetArmy.Droid.Resource.Attribute.counterTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.customNavigationLayout = global::PetArmy.Droid.Resource.Attribute.customNavigationLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.defaultQueryHint = global::PetArmy.Droid.Resource.Attribute.defaultQueryHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dialogCornerRadius = global::PetArmy.Droid.Resource.Attribute.dialogCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dialogPreferredPadding = global::PetArmy.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dialogTheme = global::PetArmy.Droid.Resource.Attribute.dialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.displayOptions = global::PetArmy.Droid.Resource.Attribute.displayOptions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.divider = global::PetArmy.Droid.Resource.Attribute.divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dividerHorizontal = global::PetArmy.Droid.Resource.Attribute.dividerHorizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dividerPadding = global::PetArmy.Droid.Resource.Attribute.dividerPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dividerVertical = global::PetArmy.Droid.Resource.Attribute.dividerVertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableBottomCompat = global::PetArmy.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableEndCompat = global::PetArmy.Droid.Resource.Attribute.drawableEndCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableLeftCompat = global::PetArmy.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableRightCompat = global::PetArmy.Droid.Resource.Attribute.drawableRightCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableSize = global::PetArmy.Droid.Resource.Attribute.drawableSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableStartCompat = global::PetArmy.Droid.Resource.Attribute.drawableStartCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableTint = global::PetArmy.Droid.Resource.Attribute.drawableTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableTintMode = global::PetArmy.Droid.Resource.Attribute.drawableTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableTopCompat = global::PetArmy.Droid.Resource.Attribute.drawableTopCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawerArrowStyle = global::PetArmy.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dropdownListPreferredItemHeight = global::PetArmy.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dropDownListViewStyle = global::PetArmy.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.editTextBackground = global::PetArmy.Droid.Resource.Attribute.editTextBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.editTextColor = global::PetArmy.Droid.Resource.Attribute.editTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.editTextStyle = global::PetArmy.Droid.Resource.Attribute.editTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.elevation = global::PetArmy.Droid.Resource.Attribute.elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.enforceMaterialTheme = global::PetArmy.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.enforceTextAppearance = global::PetArmy.Droid.Resource.Attribute.enforceTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.errorEnabled = global::PetArmy.Droid.Resource.Attribute.errorEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.errorTextAppearance = global::PetArmy.Droid.Resource.Attribute.errorTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandActivityOverflowButtonDrawable = global::PetArmy.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expanded = global::PetArmy.Droid.Resource.Attribute.expanded;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleGravity = global::PetArmy.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMargin = global::PetArmy.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMarginBottom = global::PetArmy.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMarginEnd = global::PetArmy.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMarginStart = global::PetArmy.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMarginTop = global::PetArmy.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleTextAppearance = global::PetArmy.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabAlignmentMode = global::PetArmy.Droid.Resource.Attribute.fabAlignmentMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabCradleMargin = global::PetArmy.Droid.Resource.Attribute.fabCradleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabCradleRoundedCornerRadius = global::PetArmy.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabCradleVerticalOffset = global::PetArmy.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabCustomSize = global::PetArmy.Droid.Resource.Attribute.fabCustomSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabSize = global::PetArmy.Droid.Resource.Attribute.fabSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollEnabled = global::PetArmy.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::PetArmy.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::PetArmy.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollVerticalThumbDrawable = global::PetArmy.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollVerticalTrackDrawable = global::PetArmy.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.firstBaselineToTopHeight = global::PetArmy.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.floatingActionButtonStyle = global::PetArmy.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.font = global::PetArmy.Droid.Resource.Attribute.font;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontFamily = global::PetArmy.Droid.Resource.Attribute.fontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderAuthority = global::PetArmy.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderCerts = global::PetArmy.Droid.Resource.Attribute.fontProviderCerts;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderFetchStrategy = global::PetArmy.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderFetchTimeout = global::PetArmy.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderPackage = global::PetArmy.Droid.Resource.Attribute.fontProviderPackage;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderQuery = global::PetArmy.Droid.Resource.Attribute.fontProviderQuery;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontStyle = global::PetArmy.Droid.Resource.Attribute.fontStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontVariationSettings = global::PetArmy.Droid.Resource.Attribute.fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontWeight = global::PetArmy.Droid.Resource.Attribute.fontWeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.foregroundInsidePadding = global::PetArmy.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.gapBetweenBars = global::PetArmy.Droid.Resource.Attribute.gapBetweenBars;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.goIcon = global::PetArmy.Droid.Resource.Attribute.goIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.headerLayout = global::PetArmy.Droid.Resource.Attribute.headerLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.height = global::PetArmy.Droid.Resource.Attribute.height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.helperText = global::PetArmy.Droid.Resource.Attribute.helperText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.helperTextEnabled = global::PetArmy.Droid.Resource.Attribute.helperTextEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.helperTextTextAppearance = global::PetArmy.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hideMotionSpec = global::PetArmy.Droid.Resource.Attribute.hideMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hideOnContentScroll = global::PetArmy.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hideOnScroll = global::PetArmy.Droid.Resource.Attribute.hideOnScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hintAnimationEnabled = global::PetArmy.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hintEnabled = global::PetArmy.Droid.Resource.Attribute.hintEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hintTextAppearance = global::PetArmy.Droid.Resource.Attribute.hintTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.homeAsUpIndicator = global::PetArmy.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.homeLayout = global::PetArmy.Droid.Resource.Attribute.homeLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hoveredFocusedTranslationZ = global::PetArmy.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.icon = global::PetArmy.Droid.Resource.Attribute.icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconEndPadding = global::PetArmy.Droid.Resource.Attribute.iconEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconGravity = global::PetArmy.Droid.Resource.Attribute.iconGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconifiedByDefault = global::PetArmy.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconPadding = global::PetArmy.Droid.Resource.Attribute.iconPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconSize = global::PetArmy.Droid.Resource.Attribute.iconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconStartPadding = global::PetArmy.Droid.Resource.Attribute.iconStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconTint = global::PetArmy.Droid.Resource.Attribute.iconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconTintMode = global::PetArmy.Droid.Resource.Attribute.iconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.imageButtonStyle = global::PetArmy.Droid.Resource.Attribute.imageButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.indeterminateProgressStyle = global::PetArmy.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.initialActivityCount = global::PetArmy.Droid.Resource.Attribute.initialActivityCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.insetForeground = global::PetArmy.Droid.Resource.Attribute.insetForeground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.isLightTheme = global::PetArmy.Droid.Resource.Attribute.isLightTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemBackground = global::PetArmy.Droid.Resource.Attribute.itemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemHorizontalPadding = global::PetArmy.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemHorizontalTranslationEnabled = global::PetArmy.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemIconPadding = global::PetArmy.Droid.Resource.Attribute.itemIconPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemIconSize = global::PetArmy.Droid.Resource.Attribute.itemIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemIconTint = global::PetArmy.Droid.Resource.Attribute.itemIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemPadding = global::PetArmy.Droid.Resource.Attribute.itemPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemSpacing = global::PetArmy.Droid.Resource.Attribute.itemSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemTextAppearance = global::PetArmy.Droid.Resource.Attribute.itemTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemTextAppearanceActive = global::PetArmy.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemTextAppearanceInactive = global::PetArmy.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemTextColor = global::PetArmy.Droid.Resource.Attribute.itemTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.keylines = global::PetArmy.Droid.Resource.Attribute.keylines;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.labelVisibilityMode = global::PetArmy.Droid.Resource.Attribute.labelVisibilityMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.lastBaselineToBottomHeight = global::PetArmy.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout = global::PetArmy.Droid.Resource.Attribute.layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layoutManager = global::PetArmy.Droid.Resource.Attribute.layoutManager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_anchor = global::PetArmy.Droid.Resource.Attribute.layout_anchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_anchorGravity = global::PetArmy.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_behavior = global::PetArmy.Droid.Resource.Attribute.layout_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_collapseMode = global::PetArmy.Droid.Resource.Attribute.layout_collapseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_collapseParallaxMultiplier = global::PetArmy.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_dodgeInsetEdges = global::PetArmy.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_insetEdge = global::PetArmy.Droid.Resource.Attribute.layout_insetEdge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_keyline = global::PetArmy.Droid.Resource.Attribute.layout_keyline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_scrollFlags = global::PetArmy.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_scrollInterpolator = global::PetArmy.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.liftOnScroll = global::PetArmy.Droid.Resource.Attribute.liftOnScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.lineHeight = global::PetArmy.Droid.Resource.Attribute.lineHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.lineSpacing = global::PetArmy.Droid.Resource.Attribute.lineSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listChoiceBackgroundIndicator = global::PetArmy.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::PetArmy.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::PetArmy.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listDividerAlertDialog = global::PetArmy.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listItemLayout = global::PetArmy.Droid.Resource.Attribute.listItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listLayout = global::PetArmy.Droid.Resource.Attribute.listLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listMenuViewStyle = global::PetArmy.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPopupWindowStyle = global::PetArmy.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemHeight = global::PetArmy.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemHeightLarge = global::PetArmy.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemHeightSmall = global::PetArmy.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemPaddingEnd = global::PetArmy.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemPaddingLeft = global::PetArmy.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemPaddingRight = global::PetArmy.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemPaddingStart = global::PetArmy.Droid.Resource.Attribute.listPreferredItemPaddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.logo = global::PetArmy.Droid.Resource.Attribute.logo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.logoDescription = global::PetArmy.Droid.Resource.Attribute.logoDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.materialButtonStyle = global::PetArmy.Droid.Resource.Attribute.materialButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.materialCardViewStyle = global::PetArmy.Droid.Resource.Attribute.materialCardViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.maxActionInlineWidth = global::PetArmy.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.maxButtonHeight = global::PetArmy.Droid.Resource.Attribute.maxButtonHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.maxImageSize = global::PetArmy.Droid.Resource.Attribute.maxImageSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.measureWithLargestChild = global::PetArmy.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.menu = global::PetArmy.Droid.Resource.Attribute.menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.multiChoiceItemLayout = global::PetArmy.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.navigationContentDescription = global::PetArmy.Droid.Resource.Attribute.navigationContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.navigationIcon = global::PetArmy.Droid.Resource.Attribute.navigationIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.navigationMode = global::PetArmy.Droid.Resource.Attribute.navigationMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.navigationViewStyle = global::PetArmy.Droid.Resource.Attribute.navigationViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.numericModifiers = global::PetArmy.Droid.Resource.Attribute.numericModifiers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.overlapAnchor = global::PetArmy.Droid.Resource.Attribute.overlapAnchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.paddingBottomNoButtons = global::PetArmy.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.paddingEnd = global::PetArmy.Droid.Resource.Attribute.paddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.paddingStart = global::PetArmy.Droid.Resource.Attribute.paddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.paddingTopNoTitle = global::PetArmy.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.panelBackground = global::PetArmy.Droid.Resource.Attribute.panelBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.panelMenuListTheme = global::PetArmy.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.panelMenuListWidth = global::PetArmy.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleContentDescription = global::PetArmy.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleDrawable = global::PetArmy.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleEnabled = global::PetArmy.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleTint = global::PetArmy.Droid.Resource.Attribute.passwordToggleTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleTintMode = global::PetArmy.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.popupMenuStyle = global::PetArmy.Droid.Resource.Attribute.popupMenuStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.popupTheme = global::PetArmy.Droid.Resource.Attribute.popupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.popupWindowStyle = global::PetArmy.Droid.Resource.Attribute.popupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.preserveIconSpacing = global::PetArmy.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.pressedTranslationZ = global::PetArmy.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.progressBarPadding = global::PetArmy.Droid.Resource.Attribute.progressBarPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.progressBarStyle = global::PetArmy.Droid.Resource.Attribute.progressBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.queryBackground = global::PetArmy.Droid.Resource.Attribute.queryBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.queryHint = global::PetArmy.Droid.Resource.Attribute.queryHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.radioButtonStyle = global::PetArmy.Droid.Resource.Attribute.radioButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.ratingBarStyle = global::PetArmy.Droid.Resource.Attribute.ratingBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.ratingBarStyleIndicator = global::PetArmy.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.ratingBarStyleSmall = global::PetArmy.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.recyclerViewStyle = global::PetArmy.Droid.Resource.Attribute.recyclerViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.reverseLayout = global::PetArmy.Droid.Resource.Attribute.reverseLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.rippleColor = global::PetArmy.Droid.Resource.Attribute.rippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.scrimAnimationDuration = global::PetArmy.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.scrimBackground = global::PetArmy.Droid.Resource.Attribute.scrimBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.scrimVisibleHeightTrigger = global::PetArmy.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.searchHintIcon = global::PetArmy.Droid.Resource.Attribute.searchHintIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.searchIcon = global::PetArmy.Droid.Resource.Attribute.searchIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.searchViewStyle = global::PetArmy.Droid.Resource.Attribute.searchViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.seekBarStyle = global::PetArmy.Droid.Resource.Attribute.seekBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.selectableItemBackground = global::PetArmy.Droid.Resource.Attribute.selectableItemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.selectableItemBackgroundBorderless = global::PetArmy.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showAsAction = global::PetArmy.Droid.Resource.Attribute.showAsAction;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showDividers = global::PetArmy.Droid.Resource.Attribute.showDividers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showMotionSpec = global::PetArmy.Droid.Resource.Attribute.showMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showText = global::PetArmy.Droid.Resource.Attribute.showText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showTitle = global::PetArmy.Droid.Resource.Attribute.showTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.singleChoiceItemLayout = global::PetArmy.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.singleLine = global::PetArmy.Droid.Resource.Attribute.singleLine;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.singleSelection = global::PetArmy.Droid.Resource.Attribute.singleSelection;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.snackbarButtonStyle = global::PetArmy.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.snackbarStyle = global::PetArmy.Droid.Resource.Attribute.snackbarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spanCount = global::PetArmy.Droid.Resource.Attribute.spanCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spinBars = global::PetArmy.Droid.Resource.Attribute.spinBars;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spinnerDropDownItemStyle = global::PetArmy.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spinnerStyle = global::PetArmy.Droid.Resource.Attribute.spinnerStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.splitTrack = global::PetArmy.Droid.Resource.Attribute.splitTrack;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.srcCompat = global::PetArmy.Droid.Resource.Attribute.srcCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.stackFromEnd = global::PetArmy.Droid.Resource.Attribute.stackFromEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_above_anchor = global::PetArmy.Droid.Resource.Attribute.state_above_anchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_collapsed = global::PetArmy.Droid.Resource.Attribute.state_collapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_collapsible = global::PetArmy.Droid.Resource.Attribute.state_collapsible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_liftable = global::PetArmy.Droid.Resource.Attribute.state_liftable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_lifted = global::PetArmy.Droid.Resource.Attribute.state_lifted;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.statusBarBackground = global::PetArmy.Droid.Resource.Attribute.statusBarBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.statusBarScrim = global::PetArmy.Droid.Resource.Attribute.statusBarScrim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.strokeColor = global::PetArmy.Droid.Resource.Attribute.strokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.strokeWidth = global::PetArmy.Droid.Resource.Attribute.strokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subMenuArrow = global::PetArmy.Droid.Resource.Attribute.subMenuArrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.submitBackground = global::PetArmy.Droid.Resource.Attribute.submitBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subtitle = global::PetArmy.Droid.Resource.Attribute.subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subtitleTextAppearance = global::PetArmy.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subtitleTextColor = global::PetArmy.Droid.Resource.Attribute.subtitleTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subtitleTextStyle = global::PetArmy.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.suggestionRowLayout = global::PetArmy.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.switchMinWidth = global::PetArmy.Droid.Resource.Attribute.switchMinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.switchPadding = global::PetArmy.Droid.Resource.Attribute.switchPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.switchStyle = global::PetArmy.Droid.Resource.Attribute.switchStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.switchTextAppearance = global::PetArmy.Droid.Resource.Attribute.switchTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabBackground = global::PetArmy.Droid.Resource.Attribute.tabBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabContentStart = global::PetArmy.Droid.Resource.Attribute.tabContentStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabGravity = global::PetArmy.Droid.Resource.Attribute.tabGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIconTint = global::PetArmy.Droid.Resource.Attribute.tabIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIconTintMode = global::PetArmy.Droid.Resource.Attribute.tabIconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicator = global::PetArmy.Droid.Resource.Attribute.tabIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorAnimationDuration = global::PetArmy.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorColor = global::PetArmy.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorFullWidth = global::PetArmy.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorGravity = global::PetArmy.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorHeight = global::PetArmy.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabInlineLabel = global::PetArmy.Droid.Resource.Attribute.tabInlineLabel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabMaxWidth = global::PetArmy.Droid.Resource.Attribute.tabMaxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabMinWidth = global::PetArmy.Droid.Resource.Attribute.tabMinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabMode = global::PetArmy.Droid.Resource.Attribute.tabMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPadding = global::PetArmy.Droid.Resource.Attribute.tabPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPaddingBottom = global::PetArmy.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPaddingEnd = global::PetArmy.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPaddingStart = global::PetArmy.Droid.Resource.Attribute.tabPaddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPaddingTop = global::PetArmy.Droid.Resource.Attribute.tabPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabRippleColor = global::PetArmy.Droid.Resource.Attribute.tabRippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabSelectedTextColor = global::PetArmy.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabStyle = global::PetArmy.Droid.Resource.Attribute.tabStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabTextAppearance = global::PetArmy.Droid.Resource.Attribute.tabTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabTextColor = global::PetArmy.Droid.Resource.Attribute.tabTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabUnboundedRipple = global::PetArmy.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAllCaps = global::PetArmy.Droid.Resource.Attribute.textAllCaps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceBody1 = global::PetArmy.Droid.Resource.Attribute.textAppearanceBody1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceBody2 = global::PetArmy.Droid.Resource.Attribute.textAppearanceBody2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceButton = global::PetArmy.Droid.Resource.Attribute.textAppearanceButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceCaption = global::PetArmy.Droid.Resource.Attribute.textAppearanceCaption;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline1 = global::PetArmy.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline2 = global::PetArmy.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline3 = global::PetArmy.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline4 = global::PetArmy.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline5 = global::PetArmy.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline6 = global::PetArmy.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceLargePopupMenu = global::PetArmy.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceListItem = global::PetArmy.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceListItemSecondary = global::PetArmy.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceListItemSmall = global::PetArmy.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceOverline = global::PetArmy.Droid.Resource.Attribute.textAppearanceOverline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearancePopupMenuHeader = global::PetArmy.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSearchResultSubtitle = global::PetArmy.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSearchResultTitle = global::PetArmy.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSmallPopupMenu = global::PetArmy.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSubtitle1 = global::PetArmy.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSubtitle2 = global::PetArmy.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textColorAlertDialogListItem = global::PetArmy.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textColorSearchUrl = global::PetArmy.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textEndPadding = global::PetArmy.Droid.Resource.Attribute.textEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textInputStyle = global::PetArmy.Droid.Resource.Attribute.textInputStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textLocale = global::PetArmy.Droid.Resource.Attribute.textLocale;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textStartPadding = global::PetArmy.Droid.Resource.Attribute.textStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.theme = global::PetArmy.Droid.Resource.Attribute.theme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.thickness = global::PetArmy.Droid.Resource.Attribute.thickness;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.thumbTextPadding = global::PetArmy.Droid.Resource.Attribute.thumbTextPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.thumbTint = global::PetArmy.Droid.Resource.Attribute.thumbTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.thumbTintMode = global::PetArmy.Droid.Resource.Attribute.thumbTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tickMark = global::PetArmy.Droid.Resource.Attribute.tickMark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tickMarkTint = global::PetArmy.Droid.Resource.Attribute.tickMarkTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tickMarkTintMode = global::PetArmy.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tint = global::PetArmy.Droid.Resource.Attribute.tint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tintMode = global::PetArmy.Droid.Resource.Attribute.tintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.title = global::PetArmy.Droid.Resource.Attribute.title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleEnabled = global::PetArmy.Droid.Resource.Attribute.titleEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMargin = global::PetArmy.Droid.Resource.Attribute.titleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMarginBottom = global::PetArmy.Droid.Resource.Attribute.titleMarginBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMarginEnd = global::PetArmy.Droid.Resource.Attribute.titleMarginEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMargins = global::PetArmy.Droid.Resource.Attribute.titleMargins;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMarginStart = global::PetArmy.Droid.Resource.Attribute.titleMarginStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMarginTop = global::PetArmy.Droid.Resource.Attribute.titleMarginTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleTextAppearance = global::PetArmy.Droid.Resource.Attribute.titleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleTextColor = global::PetArmy.Droid.Resource.Attribute.titleTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleTextStyle = global::PetArmy.Droid.Resource.Attribute.titleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.toolbarId = global::PetArmy.Droid.Resource.Attribute.toolbarId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.toolbarNavigationButtonStyle = global::PetArmy.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.toolbarStyle = global::PetArmy.Droid.Resource.Attribute.toolbarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tooltipForegroundColor = global::PetArmy.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tooltipFrameBackground = global::PetArmy.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tooltipText = global::PetArmy.Droid.Resource.Attribute.tooltipText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.track = global::PetArmy.Droid.Resource.Attribute.track;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.trackTint = global::PetArmy.Droid.Resource.Attribute.trackTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.trackTintMode = global::PetArmy.Droid.Resource.Attribute.trackTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.ttcIndex = global::PetArmy.Droid.Resource.Attribute.ttcIndex;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.useCompatPadding = global::PetArmy.Droid.Resource.Attribute.useCompatPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.viewInflaterClass = global::PetArmy.Droid.Resource.Attribute.viewInflaterClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.voiceIcon = global::PetArmy.Droid.Resource.Attribute.voiceIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowActionBar = global::PetArmy.Droid.Resource.Attribute.windowActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowActionBarOverlay = global::PetArmy.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowActionModeOverlay = global::PetArmy.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowFixedHeightMajor = global::PetArmy.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowFixedHeightMinor = global::PetArmy.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowFixedWidthMajor = global::PetArmy.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowFixedWidthMinor = global::PetArmy.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowMinWidthMajor = global::PetArmy.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowMinWidthMinor = global::PetArmy.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowNoTitle = global::PetArmy.Droid.Resource.Attribute.windowNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Boolean.abc_action_bar_embed_tabs = global::PetArmy.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::PetArmy.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::PetArmy.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_background_cache_hint_selector_material_dark = global::PetArmy.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_background_cache_hint_selector_material_light = global::PetArmy.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_btn_colored_borderless_text_material = global::PetArmy.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_btn_colored_text_material = global::PetArmy.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_color_highlight_material = global::PetArmy.Droid.Resource.Color.abc_color_highlight_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_hint_foreground_material_dark = global::PetArmy.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_hint_foreground_material_light = global::PetArmy.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_primary_text_disable_only_material_dark = global::PetArmy.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_primary_text_disable_only_material_light = global::PetArmy.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_primary_text_material_dark = global::PetArmy.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_primary_text_material_light = global::PetArmy.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_search_url_text = global::PetArmy.Droid.Resource.Color.abc_search_url_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_search_url_text_normal = global::PetArmy.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_search_url_text_pressed = global::PetArmy.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_search_url_text_selected = global::PetArmy.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_secondary_text_material_dark = global::PetArmy.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_secondary_text_material_light = global::PetArmy.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_btn_checkable = global::PetArmy.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_default = global::PetArmy.Droid.Resource.Color.abc_tint_default;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_edittext = global::PetArmy.Droid.Resource.Color.abc_tint_edittext;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_seek_thumb = global::PetArmy.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_spinner = global::PetArmy.Droid.Resource.Color.abc_tint_spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_switch_track = global::PetArmy.Droid.Resource.Color.abc_tint_switch_track;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.accent_material_dark = global::PetArmy.Droid.Resource.Color.accent_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.accent_material_light = global::PetArmy.Droid.Resource.Color.accent_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.background_floating_material_dark = global::PetArmy.Droid.Resource.Color.background_floating_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.background_floating_material_light = global::PetArmy.Droid.Resource.Color.background_floating_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.background_material_dark = global::PetArmy.Droid.Resource.Color.background_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.background_material_light = global::PetArmy.Droid.Resource.Color.background_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_disabled_material_dark = global::PetArmy.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_disabled_material_light = global::PetArmy.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_inverse_material_dark = global::PetArmy.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_inverse_material_light = global::PetArmy.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_material_dark = global::PetArmy.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_material_light = global::PetArmy.Droid.Resource.Color.bright_foreground_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.browser_actions_bg_grey = global::PetArmy.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.browser_actions_divider_color = global::PetArmy.Droid.Resource.Color.browser_actions_divider_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.browser_actions_text_color = global::PetArmy.Droid.Resource.Color.browser_actions_text_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.browser_actions_title_color = global::PetArmy.Droid.Resource.Color.browser_actions_title_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.button_material_dark = global::PetArmy.Droid.Resource.Color.button_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.button_material_light = global::PetArmy.Droid.Resource.Color.button_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.cardview_dark_background = global::PetArmy.Droid.Resource.Color.cardview_dark_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.cardview_light_background = global::PetArmy.Droid.Resource.Color.cardview_light_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.cardview_shadow_end_color = global::PetArmy.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.cardview_shadow_start_color = global::PetArmy.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_bottom_navigation_shadow_color = global::PetArmy.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_default_color_primary = global::PetArmy.Droid.Resource.Color.design_default_color_primary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_default_color_primary_dark = global::PetArmy.Droid.Resource.Color.design_default_color_primary_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_error = global::PetArmy.Droid.Resource.Color.design_error;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_shadow_end_color = global::PetArmy.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_shadow_mid_color = global::PetArmy.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_shadow_start_color = global::PetArmy.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_stroke_end_inner_color = global::PetArmy.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_stroke_end_outer_color = global::PetArmy.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_stroke_top_inner_color = global::PetArmy.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_stroke_top_outer_color = global::PetArmy.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_snackbar_background_color = global::PetArmy.Droid.Resource.Color.design_snackbar_background_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.dim_foreground_disabled_material_dark = global::PetArmy.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.dim_foreground_disabled_material_light = global::PetArmy.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.dim_foreground_material_dark = global::PetArmy.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.dim_foreground_material_light = global::PetArmy.Droid.Resource.Color.dim_foreground_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.error_color_material_dark = global::PetArmy.Droid.Resource.Color.error_color_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.error_color_material_light = global::PetArmy.Droid.Resource.Color.error_color_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.foreground_material_dark = global::PetArmy.Droid.Resource.Color.foreground_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.foreground_material_light = global::PetArmy.Droid.Resource.Color.foreground_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.highlighted_text_material_dark = global::PetArmy.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.highlighted_text_material_light = global::PetArmy.Droid.Resource.Color.highlighted_text_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_blue_grey_800 = global::PetArmy.Droid.Resource.Color.material_blue_grey_800;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_blue_grey_900 = global::PetArmy.Droid.Resource.Color.material_blue_grey_900;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_blue_grey_950 = global::PetArmy.Droid.Resource.Color.material_blue_grey_950;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_deep_teal_200 = global::PetArmy.Droid.Resource.Color.material_deep_teal_200;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_deep_teal_500 = global::PetArmy.Droid.Resource.Color.material_deep_teal_500;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_100 = global::PetArmy.Droid.Resource.Color.material_grey_100;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_300 = global::PetArmy.Droid.Resource.Color.material_grey_300;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_50 = global::PetArmy.Droid.Resource.Color.material_grey_50;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_600 = global::PetArmy.Droid.Resource.Color.material_grey_600;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_800 = global::PetArmy.Droid.Resource.Color.material_grey_800;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_850 = global::PetArmy.Droid.Resource.Color.material_grey_850;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_900 = global::PetArmy.Droid.Resource.Color.material_grey_900;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_bg_color_selector = global::PetArmy.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_ripple_color = global::PetArmy.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_stroke_color_selector = global::PetArmy.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_text_btn_ripple_color = global::PetArmy.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_text_color_disabled = global::PetArmy.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_text_color_selector = global::PetArmy.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_transparent_bg_color = global::PetArmy.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_chip_background_color = global::PetArmy.Droid.Resource.Color.mtrl_chip_background_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_chip_close_icon_tint = global::PetArmy.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_chip_text_color = global::PetArmy.Droid.Resource.Color.mtrl_chip_text_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_fab_ripple_color = global::PetArmy.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_scrim_color = global::PetArmy.Droid.Resource.Color.mtrl_scrim_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_colored_ripple_color = global::PetArmy.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_icon_color_selector = global::PetArmy.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::PetArmy.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::PetArmy.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_ripple_color = global::PetArmy.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_textinput_default_box_stroke_color = global::PetArmy.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_textinput_disabled_color = global::PetArmy.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::PetArmy.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::PetArmy.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_text_btn_text_color_selector = global::PetArmy.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.notification_action_color_filter = global::PetArmy.Droid.Resource.Color.notification_action_color_filter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.notification_icon_bg_color = global::PetArmy.Droid.Resource.Color.notification_icon_bg_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.notification_material_background_media_default_color = global::PetArmy.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_dark_material_dark = global::PetArmy.Droid.Resource.Color.primary_dark_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_dark_material_light = global::PetArmy.Droid.Resource.Color.primary_dark_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_material_dark = global::PetArmy.Droid.Resource.Color.primary_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_material_light = global::PetArmy.Droid.Resource.Color.primary_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_text_default_material_dark = global::PetArmy.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_text_default_material_light = global::PetArmy.Droid.Resource.Color.primary_text_default_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_text_disabled_material_dark = global::PetArmy.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_text_disabled_material_light = global::PetArmy.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.ripple_material_dark = global::PetArmy.Droid.Resource.Color.ripple_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.ripple_material_light = global::PetArmy.Droid.Resource.Color.ripple_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.secondary_text_default_material_dark = global::PetArmy.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.secondary_text_default_material_light = global::PetArmy.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.secondary_text_disabled_material_dark = global::PetArmy.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.secondary_text_disabled_material_light = global::PetArmy.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_disabled_material_dark = global::PetArmy.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_disabled_material_light = global::PetArmy.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_material_dark = global::PetArmy.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_material_light = global::PetArmy.Droid.Resource.Color.switch_thumb_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_normal_material_dark = global::PetArmy.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_normal_material_light = global::PetArmy.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.tooltip_background_dark = global::PetArmy.Droid.Resource.Color.tooltip_background_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.tooltip_background_light = global::PetArmy.Droid.Resource.Color.tooltip_background_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_content_inset_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_default_height_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_default_padding_end_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_default_padding_start_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_elevation_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_stacked_max_height = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::PetArmy.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_button_min_height_material = global::PetArmy.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_button_min_width_material = global::PetArmy.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_button_min_width_overflow_material = global::PetArmy.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_alert_dialog_button_bar_height = global::PetArmy.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_alert_dialog_button_dimen = global::PetArmy.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_button_inset_horizontal_material = global::PetArmy.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_button_inset_vertical_material = global::PetArmy.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_button_padding_horizontal_material = global::PetArmy.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_button_padding_vertical_material = global::PetArmy.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::PetArmy.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_config_prefDialogWidth = global::PetArmy.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_control_corner_material = global::PetArmy.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_control_inset_material = global::PetArmy.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_control_padding_material = global::PetArmy.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_corner_radius_material = global::PetArmy.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_fixed_height_major = global::PetArmy.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_fixed_height_minor = global::PetArmy.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_fixed_width_major = global::PetArmy.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_fixed_width_minor = global::PetArmy.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::PetArmy.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::PetArmy.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_min_width_major = global::PetArmy.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_min_width_minor = global::PetArmy.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_padding_material = global::PetArmy.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_padding_top_material = global::PetArmy.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_title_divider_material = global::PetArmy.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_disabled_alpha_material_dark = global::PetArmy.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_disabled_alpha_material_light = global::PetArmy.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dropdownitem_icon_width = global::PetArmy.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dropdownitem_text_padding_left = global::PetArmy.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dropdownitem_text_padding_right = global::PetArmy.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_edit_text_inset_bottom_material = global::PetArmy.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::PetArmy.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_edit_text_inset_top_material = global::PetArmy.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_floating_window_z = global::PetArmy.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_list_item_height_large_material = global::PetArmy.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_list_item_height_material = global::PetArmy.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_list_item_height_small_material = global::PetArmy.Droid.Resource.Dimension.abc_list_item_height_small_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_list_item_padding_horizontal_material = global::PetArmy.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_panel_menu_list_width = global::PetArmy.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_progress_bar_height_material = global::PetArmy.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_search_view_preferred_height = global::PetArmy.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_search_view_preferred_width = global::PetArmy.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_seekbar_track_background_height_material = global::PetArmy.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_seekbar_track_progress_height_material = global::PetArmy.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_select_dialog_padding_start_material = global::PetArmy.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_switch_padding = global::PetArmy.Droid.Resource.Dimension.abc_switch_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_body_1_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_body_2_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_button_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_caption_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_display_1_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_display_2_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_display_3_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_display_4_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_headline_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_large_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_medium_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_menu_header_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_menu_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_small_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_subhead_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::PetArmy.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_title_material = global::PetArmy.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_title_material_toolbar = global::PetArmy.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.browser_actions_context_menu_max_width = global::PetArmy.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.browser_actions_context_menu_min_padding = global::PetArmy.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.cardview_compat_inset_shadow = global::PetArmy.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.cardview_default_elevation = global::PetArmy.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.cardview_default_radius = global::PetArmy.Droid.Resource.Dimension.cardview_default_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_button_inset_horizontal_material = global::PetArmy.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_button_inset_vertical_material = global::PetArmy.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_button_padding_horizontal_material = global::PetArmy.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_button_padding_vertical_material = global::PetArmy.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_control_corner_material = global::PetArmy.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_notification_large_icon_max_height = global::PetArmy.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_notification_large_icon_max_width = global::PetArmy.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_appbar_elevation = global::PetArmy.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_active_text_size = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_elevation = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_height = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_icon_size = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_item_max_width = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_item_min_width = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_margin = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_shadow_height = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_text_size = global::PetArmy.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_sheet_modal_elevation = global::PetArmy.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_sheet_peek_height_min = global::PetArmy.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_border_width = global::PetArmy.Droid.Resource.Dimension.design_fab_border_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_elevation = global::PetArmy.Droid.Resource.Dimension.design_fab_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_image_size = global::PetArmy.Droid.Resource.Dimension.design_fab_image_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_size_mini = global::PetArmy.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_size_normal = global::PetArmy.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_translation_z_hovered_focused = global::PetArmy.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_translation_z_pressed = global::PetArmy.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_elevation = global::PetArmy.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_icon_padding = global::PetArmy.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_icon_size = global::PetArmy.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_item_horizontal_padding = global::PetArmy.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_item_icon_padding = global::PetArmy.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_max_width = global::PetArmy.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_padding_bottom = global::PetArmy.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_separator_vertical_padding = global::PetArmy.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_action_inline_max_width = global::PetArmy.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_background_corner_radius = global::PetArmy.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_elevation = global::PetArmy.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::PetArmy.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_max_width = global::PetArmy.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_min_width = global::PetArmy.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_padding_horizontal = global::PetArmy.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_padding_vertical = global::PetArmy.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::PetArmy.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_text_size = global::PetArmy.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_tab_max_width = global::PetArmy.Droid.Resource.Dimension.design_tab_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_tab_scrollable_min_width = global::PetArmy.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_tab_text_size = global::PetArmy.Droid.Resource.Dimension.design_tab_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_tab_text_size_2line = global::PetArmy.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_textinput_caption_translate_y = global::PetArmy.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.disabled_alpha_material_dark = global::PetArmy.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.disabled_alpha_material_light = global::PetArmy.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.fastscroll_default_thickness = global::PetArmy.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.fastscroll_margin = global::PetArmy.Droid.Resource.Dimension.fastscroll_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.fastscroll_minimum_range = global::PetArmy.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.highlight_alpha_material_colored = global::PetArmy.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.highlight_alpha_material_dark = global::PetArmy.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.highlight_alpha_material_light = global::PetArmy.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.hint_alpha_material_dark = global::PetArmy.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.hint_alpha_material_light = global::PetArmy.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.hint_pressed_alpha_material_dark = global::PetArmy.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.hint_pressed_alpha_material_light = global::PetArmy.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::PetArmy.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::PetArmy.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::PetArmy.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::PetArmy.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::PetArmy.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::PetArmy.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::PetArmy.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_height = global::PetArmy.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_corner_radius = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_disabled_elevation = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_disabled_z = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_elevation = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_focused_z = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_hovered_z = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_icon_padding = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_inset = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_letter_spacing = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_padding_bottom = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_padding_left = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_padding_right = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_padding_top = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_pressed_z = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_stroke_size = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_text_size = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_z = global::PetArmy.Droid.Resource.Dimension.mtrl_btn_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_card_elevation = global::PetArmy.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_card_spacing = global::PetArmy.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_chip_pressed_translation_z = global::PetArmy.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_chip_text_size = global::PetArmy.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_fab_elevation = global::PetArmy.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::PetArmy.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_fab_translation_z_pressed = global::PetArmy.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_navigation_elevation = global::PetArmy.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::PetArmy.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_navigation_item_icon_padding = global::PetArmy.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::PetArmy.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_snackbar_margin = global::PetArmy.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::PetArmy.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::PetArmy.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::PetArmy.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::PetArmy.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::PetArmy.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::PetArmy.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_toolbar_default_height = global::PetArmy.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_action_icon_size = global::PetArmy.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_action_text_size = global::PetArmy.Droid.Resource.Dimension.notification_action_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_big_circle_margin = global::PetArmy.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_content_margin_start = global::PetArmy.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_large_icon_height = global::PetArmy.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_large_icon_width = global::PetArmy.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_main_column_padding_top = global::PetArmy.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_media_narrow_margin = global::PetArmy.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_right_icon_size = global::PetArmy.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_right_side_padding_top = global::PetArmy.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_small_icon_background_padding = global::PetArmy.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_small_icon_size_as_large = global::PetArmy.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_subtext_size = global::PetArmy.Droid.Resource.Dimension.notification_subtext_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_top_pad = global::PetArmy.Droid.Resource.Dimension.notification_top_pad;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_top_pad_large_text = global::PetArmy.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_corner_radius = global::PetArmy.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_horizontal_padding = global::PetArmy.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_margin = global::PetArmy.Droid.Resource.Dimension.tooltip_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::PetArmy.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_precise_anchor_threshold = global::PetArmy.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_vertical_padding = global::PetArmy.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_y_offset_non_touch = global::PetArmy.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_y_offset_touch = global::PetArmy.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_action_bar_item_background_material = global::PetArmy.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_borderless_material = global::PetArmy.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_check_material = global::PetArmy.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_check_material_anim = global::PetArmy.Droid.Resource.Drawable.abc_btn_check_material_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::PetArmy.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::PetArmy.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_colored_material = global::PetArmy.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_default_mtrl_shape = global::PetArmy.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_radio_material = global::PetArmy.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_radio_material_anim = global::PetArmy.Droid.Resource.Drawable.abc_btn_radio_material_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::PetArmy.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::PetArmy.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::PetArmy.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::PetArmy.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_cab_background_internal_bg = global::PetArmy.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_cab_background_top_material = global::PetArmy.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_control_background_material = global::PetArmy.Droid.Resource.Drawable.abc_control_background_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_dialog_material_background = global::PetArmy.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_edit_text_material = global::PetArmy.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_ab_back_material = global::PetArmy.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::PetArmy.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_clear_material = global::PetArmy.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_go_search_api_material = global::PetArmy.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::PetArmy.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_overflow_material = global::PetArmy.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::PetArmy.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_search_api_material = global::PetArmy.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_voice_search_api_material = global::PetArmy.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_item_background_holo_dark = global::PetArmy.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_item_background_holo_light = global::PetArmy.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_divider_material = global::PetArmy.Droid.Resource.Drawable.abc_list_divider_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_divider_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_focused_holo = global::PetArmy.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_longpressed_holo = global::PetArmy.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_pressed_holo_dark = global::PetArmy.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_pressed_holo_light = global::PetArmy.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::PetArmy.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::PetArmy.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::PetArmy.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_disabled_holo_light = global::PetArmy.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_holo_dark = global::PetArmy.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_holo_light = global::PetArmy.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::PetArmy.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_popup_background_mtrl_mult = global::PetArmy.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ratingbar_indicator_material = global::PetArmy.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ratingbar_material = global::PetArmy.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ratingbar_small_material = global::PetArmy.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::PetArmy.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::PetArmy.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_seekbar_thumb_material = global::PetArmy.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_seekbar_tick_mark_material = global::PetArmy.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_seekbar_track_material = global::PetArmy.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::PetArmy.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_spinner_textfield_background_material = global::PetArmy.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_switch_thumb_material = global::PetArmy.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_switch_track_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_tab_indicator_material = global::PetArmy.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::PetArmy.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_search_material = global::PetArmy.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_text_cursor_material = global::PetArmy.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_vector_test = global::PetArmy.Droid.Resource.Drawable.abc_vector_test;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar1 = global::PetArmy.Droid.Resource.Drawable.Avatar1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar10 = global::PetArmy.Droid.Resource.Drawable.Avatar10;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar11 = global::PetArmy.Droid.Resource.Drawable.Avatar11;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar12 = global::PetArmy.Droid.Resource.Drawable.Avatar12;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar13 = global::PetArmy.Droid.Resource.Drawable.Avatar13;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar14 = global::PetArmy.Droid.Resource.Drawable.Avatar14;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar15 = global::PetArmy.Droid.Resource.Drawable.Avatar15;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar16 = global::PetArmy.Droid.Resource.Drawable.Avatar16;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar17 = global::PetArmy.Droid.Resource.Drawable.Avatar17;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar18 = global::PetArmy.Droid.Resource.Drawable.Avatar18;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar19 = global::PetArmy.Droid.Resource.Drawable.Avatar19;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar2 = global::PetArmy.Droid.Resource.Drawable.Avatar2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar20 = global::PetArmy.Droid.Resource.Drawable.Avatar20;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar21 = global::PetArmy.Droid.Resource.Drawable.Avatar21;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar22 = global::PetArmy.Droid.Resource.Drawable.Avatar22;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar23 = global::PetArmy.Droid.Resource.Drawable.Avatar23;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar24 = global::PetArmy.Droid.Resource.Drawable.Avatar24;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar25 = global::PetArmy.Droid.Resource.Drawable.Avatar25;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar26 = global::PetArmy.Droid.Resource.Drawable.Avatar26;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar27 = global::PetArmy.Droid.Resource.Drawable.Avatar27;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar28 = global::PetArmy.Droid.Resource.Drawable.Avatar28;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar29 = global::PetArmy.Droid.Resource.Drawable.Avatar29;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar3 = global::PetArmy.Droid.Resource.Drawable.Avatar3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar30 = global::PetArmy.Droid.Resource.Drawable.Avatar30;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar4 = global::PetArmy.Droid.Resource.Drawable.Avatar4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar5 = global::PetArmy.Droid.Resource.Drawable.Avatar5;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar6 = global::PetArmy.Droid.Resource.Drawable.Avatar6;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar7 = global::PetArmy.Droid.Resource.Drawable.Avatar7;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar8 = global::PetArmy.Droid.Resource.Drawable.Avatar8;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar9 = global::PetArmy.Droid.Resource.Drawable.Avatar9;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.avd_hide_password = global::PetArmy.Droid.Resource.Drawable.avd_hide_password;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.avd_show_password = global::PetArmy.Droid.Resource.Drawable.avd_show_password;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_checkbox_checked_mtrl = global::PetArmy.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::PetArmy.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::PetArmy.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::PetArmy.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_radio_off_mtrl = global::PetArmy.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::PetArmy.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_radio_on_mtrl = global::PetArmy.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::PetArmy.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.clear_button_icon = global::PetArmy.Droid.Resource.Drawable.clear_button_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_fab_background = global::PetArmy.Droid.Resource.Drawable.design_fab_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_ic_visibility = global::PetArmy.Droid.Resource.Drawable.design_ic_visibility;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_ic_visibility_off = global::PetArmy.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_password_eye = global::PetArmy.Droid.Resource.Drawable.design_password_eye;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_snackbar_background = global::PetArmy.Droid.Resource.Drawable.design_snackbar_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.dropdownbuttonimage = global::PetArmy.Droid.Resource.Drawable.dropdownbuttonimage;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.ic_mtrl_chip_checked_black = global::PetArmy.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.ic_mtrl_chip_checked_circle = global::PetArmy.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.ic_mtrl_chip_close_circle = global::PetArmy.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.inputlayout_togglecollapseicon = global::PetArmy.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.inputlayout_togglevisibleicon = global::PetArmy.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.input_layout_drop_down_icon = global::PetArmy.Droid.Resource.Drawable.input_layout_drop_down_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.mtrl_tabs_default_indicator = global::PetArmy.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.navigation_empty_icon = global::PetArmy.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_action_background = global::PetArmy.Droid.Resource.Drawable.notification_action_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg = global::PetArmy.Droid.Resource.Drawable.notification_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_low = global::PetArmy.Droid.Resource.Drawable.notification_bg_low;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_low_normal = global::PetArmy.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_low_pressed = global::PetArmy.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_normal = global::PetArmy.Droid.Resource.Drawable.notification_bg_normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_normal_pressed = global::PetArmy.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_icon_background = global::PetArmy.Droid.Resource.Drawable.notification_icon_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_template_icon_bg = global::PetArmy.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_template_icon_low_bg = global::PetArmy.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_tile_bg = global::PetArmy.Droid.Resource.Drawable.notification_tile_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notify_panel_notification_icon_bg = global::PetArmy.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.tooltip_frame_dark = global::PetArmy.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.tooltip_frame_light = global::PetArmy.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_action_clickable_span = global::PetArmy.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_0 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_1 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_10 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_11 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_12 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_13 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_14 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_15 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_16 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_17 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_18 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_19 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_2 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_20 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_21 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_22 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_23 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_24 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_25 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_26 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_27 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_28 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_29 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_3 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_30 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_31 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_4 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_5 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_6 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_7 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_8 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_9 = global::PetArmy.Droid.Resource.Id.accessibility_custom_action_9;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action0 = global::PetArmy.Droid.Resource.Id.action0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.actions = global::PetArmy.Droid.Resource.Id.actions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar = global::PetArmy.Droid.Resource.Id.action_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_activity_content = global::PetArmy.Droid.Resource.Id.action_bar_activity_content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_container = global::PetArmy.Droid.Resource.Id.action_bar_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_root = global::PetArmy.Droid.Resource.Id.action_bar_root;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_spinner = global::PetArmy.Droid.Resource.Id.action_bar_spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_subtitle = global::PetArmy.Droid.Resource.Id.action_bar_subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_title = global::PetArmy.Droid.Resource.Id.action_bar_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_container = global::PetArmy.Droid.Resource.Id.action_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_context_bar = global::PetArmy.Droid.Resource.Id.action_context_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_divider = global::PetArmy.Droid.Resource.Id.action_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_image = global::PetArmy.Droid.Resource.Id.action_image;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_menu_divider = global::PetArmy.Droid.Resource.Id.action_menu_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_menu_presenter = global::PetArmy.Droid.Resource.Id.action_menu_presenter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_mode_bar = global::PetArmy.Droid.Resource.Id.action_mode_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_mode_bar_stub = global::PetArmy.Droid.Resource.Id.action_mode_bar_stub;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_mode_close_button = global::PetArmy.Droid.Resource.Id.action_mode_close_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_text = global::PetArmy.Droid.Resource.Id.action_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.activity_chooser_view_content = global::PetArmy.Droid.Resource.Id.activity_chooser_view_content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.add = global::PetArmy.Droid.Resource.Id.add;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.alertTitle = global::PetArmy.Droid.Resource.Id.alertTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.all = global::PetArmy.Droid.Resource.Id.all;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.ALT = global::PetArmy.Droid.Resource.Id.ALT;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.always = global::PetArmy.Droid.Resource.Id.always;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.async = global::PetArmy.Droid.Resource.Id.async;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.auto = global::PetArmy.Droid.Resource.Id.auto;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.beginning = global::PetArmy.Droid.Resource.Id.beginning;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.blocking = global::PetArmy.Droid.Resource.Id.blocking;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.bottom = global::PetArmy.Droid.Resource.Id.bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.bottomtab_navarea = global::PetArmy.Droid.Resource.Id.bottomtab_navarea;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.bottomtab_tabbar = global::PetArmy.Droid.Resource.Id.bottomtab_tabbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_header_text = global::PetArmy.Droid.Resource.Id.browser_actions_header_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_menu_items = global::PetArmy.Droid.Resource.Id.browser_actions_menu_items;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_menu_item_icon = global::PetArmy.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_menu_item_text = global::PetArmy.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_menu_view = global::PetArmy.Droid.Resource.Id.browser_actions_menu_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.buttonPanel = global::PetArmy.Droid.Resource.Id.buttonPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.cancel_action = global::PetArmy.Droid.Resource.Id.cancel_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.center = global::PetArmy.Droid.Resource.Id.center;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.center_horizontal = global::PetArmy.Droid.Resource.Id.center_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.center_vertical = global::PetArmy.Droid.Resource.Id.center_vertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.checkbox = global::PetArmy.Droid.Resource.Id.checkbox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.@checked = global::PetArmy.Droid.Resource.Id.@checked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.chronometer = global::PetArmy.Droid.Resource.Id.chronometer;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.clip_horizontal = global::PetArmy.Droid.Resource.Id.clip_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.clip_vertical = global::PetArmy.Droid.Resource.Id.clip_vertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.collapseActionView = global::PetArmy.Droid.Resource.Id.collapseActionView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.container = global::PetArmy.Droid.Resource.Id.container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.content = global::PetArmy.Droid.Resource.Id.content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.contentPanel = global::PetArmy.Droid.Resource.Id.contentPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.coordinator = global::PetArmy.Droid.Resource.Id.coordinator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.CTRL = global::PetArmy.Droid.Resource.Id.CTRL;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.custom = global::PetArmy.Droid.Resource.Id.custom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.customPanel = global::PetArmy.Droid.Resource.Id.customPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.decor_content_parent = global::PetArmy.Droid.Resource.Id.decor_content_parent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.default_activity_button = global::PetArmy.Droid.Resource.Id.default_activity_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_bottom_sheet = global::PetArmy.Droid.Resource.Id.design_bottom_sheet;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_menu_item_action_area = global::PetArmy.Droid.Resource.Id.design_menu_item_action_area;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_menu_item_action_area_stub = global::PetArmy.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_menu_item_text = global::PetArmy.Droid.Resource.Id.design_menu_item_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_navigation_view = global::PetArmy.Droid.Resource.Id.design_navigation_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.dialog_button = global::PetArmy.Droid.Resource.Id.dialog_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.disableHome = global::PetArmy.Droid.Resource.Id.disableHome;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.edit_query = global::PetArmy.Droid.Resource.Id.edit_query;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.end = global::PetArmy.Droid.Resource.Id.end;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.end_padder = global::PetArmy.Droid.Resource.Id.end_padder;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.enterAlways = global::PetArmy.Droid.Resource.Id.enterAlways;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.enterAlwaysCollapsed = global::PetArmy.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.exitUntilCollapsed = global::PetArmy.Droid.Resource.Id.exitUntilCollapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.expanded_menu = global::PetArmy.Droid.Resource.Id.expanded_menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.expand_activities_button = global::PetArmy.Droid.Resource.Id.expand_activities_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.fill = global::PetArmy.Droid.Resource.Id.fill;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.filled = global::PetArmy.Droid.Resource.Id.filled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.fill_horizontal = global::PetArmy.Droid.Resource.Id.fill_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.fill_vertical = global::PetArmy.Droid.Resource.Id.fill_vertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.@fixed = global::PetArmy.Droid.Resource.Id.@fixed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.flyoutcontent_appbar = global::PetArmy.Droid.Resource.Id.flyoutcontent_appbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.forever = global::PetArmy.Droid.Resource.Id.forever;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.FUNCTION = global::PetArmy.Droid.Resource.Id.FUNCTION;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.ghost_view = global::PetArmy.Droid.Resource.Id.ghost_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.ghost_view_holder = global::PetArmy.Droid.Resource.Id.ghost_view_holder;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.group_divider = global::PetArmy.Droid.Resource.Id.group_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.home = global::PetArmy.Droid.Resource.Id.home;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.homeAsUp = global::PetArmy.Droid.Resource.Id.homeAsUp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.icon = global::PetArmy.Droid.Resource.Id.icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.icon_group = global::PetArmy.Droid.Resource.Id.icon_group;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.ifRoom = global::PetArmy.Droid.Resource.Id.ifRoom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.image = global::PetArmy.Droid.Resource.Id.image;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.info = global::PetArmy.Droid.Resource.Id.info;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.italic = global::PetArmy.Droid.Resource.Id.italic;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.Itemname = global::PetArmy.Droid.Resource.Id.Itemname;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.item_touch_helper_previous_elevation = global::PetArmy.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.labeled = global::PetArmy.Droid.Resource.Id.labeled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.left = global::PetArmy.Droid.Resource.Id.left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.line1 = global::PetArmy.Droid.Resource.Id.line1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.line3 = global::PetArmy.Droid.Resource.Id.line3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.listMode = global::PetArmy.Droid.Resource.Id.listMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.list_item = global::PetArmy.Droid.Resource.Id.list_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.main_appbar = global::PetArmy.Droid.Resource.Id.main_appbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.main_tablayout = global::PetArmy.Droid.Resource.Id.main_tablayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.main_toolbar = global::PetArmy.Droid.Resource.Id.main_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.main_viewpager = global::PetArmy.Droid.Resource.Id.main_viewpager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.masked = global::PetArmy.Droid.Resource.Id.masked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.media_actions = global::PetArmy.Droid.Resource.Id.media_actions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.message = global::PetArmy.Droid.Resource.Id.message;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.META = global::PetArmy.Droid.Resource.Id.META;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.middle = global::PetArmy.Droid.Resource.Id.middle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.mini = global::PetArmy.Droid.Resource.Id.mini;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.mtrl_child_content_container = global::PetArmy.Droid.Resource.Id.mtrl_child_content_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.mtrl_internal_children_alpha_tag = global::PetArmy.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.multiply = global::PetArmy.Droid.Resource.Id.multiply;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.navigation_header_container = global::PetArmy.Droid.Resource.Id.navigation_header_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.never = global::PetArmy.Droid.Resource.Id.never;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.none = global::PetArmy.Droid.Resource.Id.none;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.normal = global::PetArmy.Droid.Resource.Id.normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.notification_background = global::PetArmy.Droid.Resource.Id.notification_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.notification_main_column = global::PetArmy.Droid.Resource.Id.notification_main_column;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.notification_main_column_container = global::PetArmy.Droid.Resource.Id.notification_main_column_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.off = global::PetArmy.Droid.Resource.Id.off;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.on = global::PetArmy.Droid.Resource.Id.on;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.outline = global::PetArmy.Droid.Resource.Id.outline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.parallax = global::PetArmy.Droid.Resource.Id.parallax;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.parentPanel = global::PetArmy.Droid.Resource.Id.parentPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.parent_matrix = global::PetArmy.Droid.Resource.Id.parent_matrix;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.pin = global::PetArmy.Droid.Resource.Id.pin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.progress_circular = global::PetArmy.Droid.Resource.Id.progress_circular;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.progress_horizontal = global::PetArmy.Droid.Resource.Id.progress_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.radio = global::PetArmy.Droid.Resource.Id.radio;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.right = global::PetArmy.Droid.Resource.Id.right;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.right_icon = global::PetArmy.Droid.Resource.Id.right_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.right_side = global::PetArmy.Droid.Resource.Id.right_side;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.save_non_transition_alpha = global::PetArmy.Droid.Resource.Id.save_non_transition_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.save_overlay_view = global::PetArmy.Droid.Resource.Id.save_overlay_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.screen = global::PetArmy.Droid.Resource.Id.screen;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scroll = global::PetArmy.Droid.Resource.Id.scroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scrollable = global::PetArmy.Droid.Resource.Id.scrollable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scrollIndicatorDown = global::PetArmy.Droid.Resource.Id.scrollIndicatorDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scrollIndicatorUp = global::PetArmy.Droid.Resource.Id.scrollIndicatorUp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scrollView = global::PetArmy.Droid.Resource.Id.scrollView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_badge = global::PetArmy.Droid.Resource.Id.search_badge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_bar = global::PetArmy.Droid.Resource.Id.search_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_button = global::PetArmy.Droid.Resource.Id.search_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_close_btn = global::PetArmy.Droid.Resource.Id.search_close_btn;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_edit_frame = global::PetArmy.Droid.Resource.Id.search_edit_frame;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_go_btn = global::PetArmy.Droid.Resource.Id.search_go_btn;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_mag_icon = global::PetArmy.Droid.Resource.Id.search_mag_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_plate = global::PetArmy.Droid.Resource.Id.search_plate;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_src_text = global::PetArmy.Droid.Resource.Id.search_src_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_voice_btn = global::PetArmy.Droid.Resource.Id.search_voice_btn;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.selected = global::PetArmy.Droid.Resource.Id.selected;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.select_dialog_listview = global::PetArmy.Droid.Resource.Id.select_dialog_listview;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.shellcontent_appbar = global::PetArmy.Droid.Resource.Id.shellcontent_appbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.shellcontent_toolbar = global::PetArmy.Droid.Resource.Id.shellcontent_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.SHIFT = global::PetArmy.Droid.Resource.Id.SHIFT;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.shortcut = global::PetArmy.Droid.Resource.Id.shortcut;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.showCustom = global::PetArmy.Droid.Resource.Id.showCustom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.showHome = global::PetArmy.Droid.Resource.Id.showHome;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.showTitle = global::PetArmy.Droid.Resource.Id.showTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.sliding_tabs = global::PetArmy.Droid.Resource.Id.sliding_tabs;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.snackbar_action = global::PetArmy.Droid.Resource.Id.snackbar_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.snackbar_text = global::PetArmy.Droid.Resource.Id.snackbar_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.snap = global::PetArmy.Droid.Resource.Id.snap;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.snapMargins = global::PetArmy.Droid.Resource.Id.snapMargins;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.spacer = global::PetArmy.Droid.Resource.Id.spacer;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.split_action_bar = global::PetArmy.Droid.Resource.Id.split_action_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.src_atop = global::PetArmy.Droid.Resource.Id.src_atop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.src_in = global::PetArmy.Droid.Resource.Id.src_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.src_over = global::PetArmy.Droid.Resource.Id.src_over;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.start = global::PetArmy.Droid.Resource.Id.start;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.status_bar_latest_event_content = global::PetArmy.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.stretch = global::PetArmy.Droid.Resource.Id.stretch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.submenuarrow = global::PetArmy.Droid.Resource.Id.submenuarrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.submit_area = global::PetArmy.Droid.Resource.Id.submit_area;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.SYM = global::PetArmy.Droid.Resource.Id.SYM;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tabMode = global::PetArmy.Droid.Resource.Id.tabMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_accessibility_actions = global::PetArmy.Droid.Resource.Id.tag_accessibility_actions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_accessibility_clickable_spans = global::PetArmy.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_accessibility_heading = global::PetArmy.Droid.Resource.Id.tag_accessibility_heading;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_accessibility_pane_title = global::PetArmy.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_screen_reader_focusable = global::PetArmy.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_transition_group = global::PetArmy.Droid.Resource.Id.tag_transition_group;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_unhandled_key_event_manager = global::PetArmy.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_unhandled_key_listeners = global::PetArmy.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.text = global::PetArmy.Droid.Resource.Id.text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.text2 = global::PetArmy.Droid.Resource.Id.text2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textinput_counter = global::PetArmy.Droid.Resource.Id.textinput_counter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textinput_error = global::PetArmy.Droid.Resource.Id.textinput_error;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textinput_helper_text = global::PetArmy.Droid.Resource.Id.textinput_helper_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textSpacerNoButtons = global::PetArmy.Droid.Resource.Id.textSpacerNoButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textSpacerNoTitle = global::PetArmy.Droid.Resource.Id.textSpacerNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textStart = global::PetArmy.Droid.Resource.Id.textStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.time = global::PetArmy.Droid.Resource.Id.time;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.title = global::PetArmy.Droid.Resource.Id.title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.titleDividerNoCustom = global::PetArmy.Droid.Resource.Id.titleDividerNoCustom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.title_template = global::PetArmy.Droid.Resource.Id.title_template;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.toolbar = global::PetArmy.Droid.Resource.Id.toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.top = global::PetArmy.Droid.Resource.Id.top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.topPanel = global::PetArmy.Droid.Resource.Id.topPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.touch_outside = global::PetArmy.Droid.Resource.Id.touch_outside;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_current_scene = global::PetArmy.Droid.Resource.Id.transition_current_scene;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_layout_save = global::PetArmy.Droid.Resource.Id.transition_layout_save;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_position = global::PetArmy.Droid.Resource.Id.transition_position;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_scene_layoutid_cache = global::PetArmy.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_transform = global::PetArmy.Droid.Resource.Id.transition_transform;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.@unchecked = global::PetArmy.Droid.Resource.Id.@unchecked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.uniform = global::PetArmy.Droid.Resource.Id.uniform;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.unlabeled = global::PetArmy.Droid.Resource.Id.unlabeled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.up = global::PetArmy.Droid.Resource.Id.up;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.useLogo = global::PetArmy.Droid.Resource.Id.useLogo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.view_offset_helper = global::PetArmy.Droid.Resource.Id.view_offset_helper;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.visible = global::PetArmy.Droid.Resource.Id.visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.withText = global::PetArmy.Droid.Resource.Id.withText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.wrap_content = global::PetArmy.Droid.Resource.Id.wrap_content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.abc_config_activityDefaultDur = global::PetArmy.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.abc_config_activityShortDur = global::PetArmy.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.app_bar_elevation_anim_duration = global::PetArmy.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.bottom_sheet_slide_duration = global::PetArmy.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.cancel_button_image_alpha = global::PetArmy.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.config_tooltipAnimTime = global::PetArmy.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.design_snackbar_text_max_lines = global::PetArmy.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.design_tab_indicator_anim_duration_ms = global::PetArmy.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.hide_password_duration = global::PetArmy.Droid.Resource.Integer.hide_password_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.mtrl_btn_anim_delay_ms = global::PetArmy.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.mtrl_btn_anim_duration_ms = global::PetArmy.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.mtrl_chip_anim_duration = global::PetArmy.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::PetArmy.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.show_password_duration = global::PetArmy.Droid.Resource.Integer.show_password_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.status_bar_notification_info_maxnum = global::PetArmy.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::PetArmy.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::PetArmy.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::PetArmy.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::PetArmy.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::PetArmy.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::PetArmy.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.fast_out_slow_in = global::PetArmy.Droid.Resource.Interpolator.fast_out_slow_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.mtrl_fast_out_linear_in = global::PetArmy.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.mtrl_fast_out_slow_in = global::PetArmy.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.mtrl_linear = global::PetArmy.Droid.Resource.Interpolator.mtrl_linear;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.mtrl_linear_out_slow_in = global::PetArmy.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_bar_title_item = global::PetArmy.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_bar_up_container = global::PetArmy.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_menu_item_layout = global::PetArmy.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_menu_layout = global::PetArmy.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_mode_bar = global::PetArmy.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_mode_close_item_material = global::PetArmy.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_activity_chooser_view = global::PetArmy.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_activity_chooser_view_list_item = global::PetArmy.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_alert_dialog_button_bar_material = global::PetArmy.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_alert_dialog_material = global::PetArmy.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_alert_dialog_title_material = global::PetArmy.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_cascading_menu_item_layout = global::PetArmy.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_dialog_title_material = global::PetArmy.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_expanded_menu_layout = global::PetArmy.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_list_menu_item_checkbox = global::PetArmy.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_list_menu_item_icon = global::PetArmy.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_list_menu_item_layout = global::PetArmy.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_list_menu_item_radio = global::PetArmy.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_popup_menu_header_item_layout = global::PetArmy.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_popup_menu_item_layout = global::PetArmy.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_screen_content_include = global::PetArmy.Droid.Resource.Layout.abc_screen_content_include;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_screen_simple = global::PetArmy.Droid.Resource.Layout.abc_screen_simple;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_screen_simple_overlay_action_mode = global::PetArmy.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_screen_toolbar = global::PetArmy.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_search_dropdown_item_icons_2line = global::PetArmy.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_search_view = global::PetArmy.Droid.Resource.Layout.abc_search_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_select_dialog_material = global::PetArmy.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_tooltip = global::PetArmy.Droid.Resource.Layout.abc_tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.BottomTabLayout = global::PetArmy.Droid.Resource.Layout.BottomTabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.browser_actions_context_menu_page = global::PetArmy.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.browser_actions_context_menu_row = global::PetArmy.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.CustomizedImageView = global::PetArmy.Droid.Resource.Layout.CustomizedImageView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.CustomizedView = global::PetArmy.Droid.Resource.Layout.CustomizedView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.custom_dialog = global::PetArmy.Droid.Resource.Layout.custom_dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_bottom_navigation_item = global::PetArmy.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_bottom_sheet_dialog = global::PetArmy.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_layout_snackbar = global::PetArmy.Droid.Resource.Layout.design_layout_snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_layout_snackbar_include = global::PetArmy.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_layout_tab_icon = global::PetArmy.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_layout_tab_text = global::PetArmy.Droid.Resource.Layout.design_layout_tab_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_menu_item_action_area = global::PetArmy.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_item = global::PetArmy.Droid.Resource.Layout.design_navigation_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_item_header = global::PetArmy.Droid.Resource.Layout.design_navigation_item_header;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_item_separator = global::PetArmy.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_item_subheader = global::PetArmy.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_menu = global::PetArmy.Droid.Resource.Layout.design_navigation_menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_menu_item = global::PetArmy.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.FallbackTabbarDoNotUse = global::PetArmy.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.FallbackToolbarDoNotUse = global::PetArmy.Droid.Resource.Layout.FallbackToolbarDoNotUse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.FlyoutContent = global::PetArmy.Droid.Resource.Layout.FlyoutContent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.mtrl_layout_snackbar = global::PetArmy.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.mtrl_layout_snackbar_include = global::PetArmy.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_action = global::PetArmy.Droid.Resource.Layout.notification_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_action_tombstone = global::PetArmy.Droid.Resource.Layout.notification_action_tombstone;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_media_action = global::PetArmy.Droid.Resource.Layout.notification_media_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_media_cancel_action = global::PetArmy.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_big_media = global::PetArmy.Droid.Resource.Layout.notification_template_big_media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_big_media_custom = global::PetArmy.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_big_media_narrow = global::PetArmy.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_big_media_narrow_custom = global::PetArmy.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_custom_big = global::PetArmy.Droid.Resource.Layout.notification_template_custom_big;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_icon_group = global::PetArmy.Droid.Resource.Layout.notification_template_icon_group;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_lines_media = global::PetArmy.Droid.Resource.Layout.notification_template_lines_media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_media = global::PetArmy.Droid.Resource.Layout.notification_template_media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_media_custom = global::PetArmy.Droid.Resource.Layout.notification_template_media_custom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_part_chronometer = global::PetArmy.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_part_time = global::PetArmy.Droid.Resource.Layout.notification_template_part_time;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.RootLayout = global::PetArmy.Droid.Resource.Layout.RootLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.select_dialog_item_material = global::PetArmy.Droid.Resource.Layout.select_dialog_item_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.select_dialog_multichoice_material = global::PetArmy.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.select_dialog_singlechoice_material = global::PetArmy.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.sfcomboBox_layout = global::PetArmy.Droid.Resource.Layout.sfcomboBox_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.ShellContent = global::PetArmy.Droid.Resource.Layout.ShellContent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.support_simple_spinner_dropdown_item = global::PetArmy.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.Tabbar = global::PetArmy.Droid.Resource.Layout.Tabbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.Toolbar = global::PetArmy.Droid.Resource.Layout.Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_action_bar_home_description = global::PetArmy.Droid.Resource.String.abc_action_bar_home_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_action_bar_up_description = global::PetArmy.Droid.Resource.String.abc_action_bar_up_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_action_menu_overflow_description = global::PetArmy.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_action_mode_done = global::PetArmy.Droid.Resource.String.abc_action_mode_done;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_activitychooserview_choose_application = global::PetArmy.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_activity_chooser_view_see_all = global::PetArmy.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_capital_off = global::PetArmy.Droid.Resource.String.abc_capital_off;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_capital_on = global::PetArmy.Droid.Resource.String.abc_capital_on;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_alt_shortcut_label = global::PetArmy.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_ctrl_shortcut_label = global::PetArmy.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_delete_shortcut_label = global::PetArmy.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_enter_shortcut_label = global::PetArmy.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_function_shortcut_label = global::PetArmy.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_meta_shortcut_label = global::PetArmy.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_shift_shortcut_label = global::PetArmy.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_space_shortcut_label = global::PetArmy.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_sym_shortcut_label = global::PetArmy.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_prepend_shortcut_label = global::PetArmy.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_clear = global::PetArmy.Droid.Resource.String.abc_searchview_description_clear;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_query = global::PetArmy.Droid.Resource.String.abc_searchview_description_query;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_search = global::PetArmy.Droid.Resource.String.abc_searchview_description_search;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_submit = global::PetArmy.Droid.Resource.String.abc_searchview_description_submit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_voice = global::PetArmy.Droid.Resource.String.abc_searchview_description_voice;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_search_hint = global::PetArmy.Droid.Resource.String.abc_search_hint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_shareactionprovider_share_with = global::PetArmy.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_shareactionprovider_share_with_application = global::PetArmy.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_toolbar_collapse_description = global::PetArmy.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.appbar_scrolling_view_behavior = global::PetArmy.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.bottom_sheet_behavior = global::PetArmy.Droid.Resource.String.bottom_sheet_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.character_counter_content_description = global::PetArmy.Droid.Resource.String.character_counter_content_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.character_counter_pattern = global::PetArmy.Droid.Resource.String.character_counter_pattern;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.fab_transformation_scrim_behavior = global::PetArmy.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.fab_transformation_sheet_behavior = global::PetArmy.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.hide_bottom_view_on_scroll_behavior = global::PetArmy.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.mtrl_chip_close_icon_content_description = global::PetArmy.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.password_toggle_content_description = global::PetArmy.Droid.Resource.String.password_toggle_content_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.path_password_eye = global::PetArmy.Droid.Resource.String.path_password_eye;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.path_password_eye_mask_strike_through = global::PetArmy.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.path_password_eye_mask_visible = global::PetArmy.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.path_password_strike_through = global::PetArmy.Droid.Resource.String.path_password_strike_through;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.search_menu_title = global::PetArmy.Droid.Resource.String.search_menu_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.status_bar_notification_info_overflow = global::PetArmy.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.AlertDialog_AppCompat = global::PetArmy.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.AlertDialog_AppCompat_Light = global::PetArmy.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Animation_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Animation_AppCompat_DropDownUp = global::PetArmy.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Animation_AppCompat_Tooltip = global::PetArmy.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Animation_Design_BottomSheetDialog = global::PetArmy.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_AlertDialog_AppCompat = global::PetArmy.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_AlertDialog_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Animation_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::PetArmy.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Animation_AppCompat_Tooltip = global::PetArmy.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_CardView = global::PetArmy.Droid.Resource.Style.Base_CardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::PetArmy.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_DialogWindowTitle_AppCompat = global::PetArmy.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Button = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Large = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Small = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Title = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::PetArmy.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat = global::PetArmy.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::PetArmy.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::PetArmy.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::PetArmy.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::PetArmy.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::PetArmy.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::PetArmy.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::PetArmy.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents = global::PetArmy.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::PetArmy.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::PetArmy.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::PetArmy.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::PetArmy.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::PetArmy.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::PetArmy.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_Theme_AppCompat = global::PetArmy.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_Theme_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::PetArmy.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V22_Theme_AppCompat = global::PetArmy.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V22_Theme_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V23_Theme_AppCompat = global::PetArmy.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V23_Theme_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V26_Theme_AppCompat = global::PetArmy.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V26_Theme_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::PetArmy.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V28_Theme_AppCompat = global::PetArmy.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V28_Theme_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Theme_AppCompat = global::PetArmy.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Theme_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::PetArmy.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::PetArmy.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::PetArmy.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::PetArmy.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionButton = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionMode = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_Small = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_EditText = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ImageButton = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListView = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_RatingBar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_SearchView = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_SeekBar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Spinner = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_TextView = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Toolbar = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::PetArmy.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_Design_TabLayout = global::PetArmy.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_MaterialComponents_Chip = global::PetArmy.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::PetArmy.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::PetArmy.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.CardView = global::PetArmy.Droid.Resource.Style.CardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.CardView_Dark = global::PetArmy.Droid.Resource.Style.CardView_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.CardView_Light = global::PetArmy.Droid.Resource.Style.CardView_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_AppCompat = global::PetArmy.Droid.Resource.Style.Platform_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_MaterialComponents = global::PetArmy.Droid.Resource.Style.Platform_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_MaterialComponents_Dialog = global::PetArmy.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_MaterialComponents_Light = global::PetArmy.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::PetArmy.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_ThemeOverlay_AppCompat = global::PetArmy.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::PetArmy.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_V21_AppCompat = global::PetArmy.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_V21_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_V25_AppCompat = global::PetArmy.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_V25_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_Widget_AppCompat_Spinner = global::PetArmy.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::PetArmy.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::PetArmy.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::PetArmy.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::PetArmy.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Body1 = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Body2 = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Button = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Caption = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Display1 = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Display2 = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Display3 = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Display4 = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Headline = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Large = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Medium = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Menu = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Small = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Subhead = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Title = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Tooltip = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::PetArmy.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Info = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Media = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Time = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Title = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::PetArmy.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::PetArmy.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Counter = global::PetArmy.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Counter_Overflow = global::PetArmy.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Error = global::PetArmy.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_HelperText = global::PetArmy.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Hint = global::PetArmy.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Snackbar_Message = global::PetArmy.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Tab = global::PetArmy.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Button = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Caption = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Chip = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Overline = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::PetArmy.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::PetArmy.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::PetArmy.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::PetArmy.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat = global::PetArmy.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::PetArmy.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Dark = global::PetArmy.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::PetArmy.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::PetArmy.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::PetArmy.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::PetArmy.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Light = global::PetArmy.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::PetArmy.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat = global::PetArmy.Droid.Resource.Style.Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_CompactMenu = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Dialog = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_Dialog = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_NoActionBar = global::PetArmy.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design = global::PetArmy.Droid.Resource.Style.Theme_Design;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_BottomSheetDialog = global::PetArmy.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_Light = global::PetArmy.Droid.Resource.Style.Theme_Design_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::PetArmy.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_Light_NoActionBar = global::PetArmy.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_NoActionBar = global::PetArmy.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Bridge = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_CompactMenu = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Dialog = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_NoActionBar = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::PetArmy.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionButton = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionMode = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActivityChooserView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ButtonBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_Borderless = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_Colored = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_Small = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_EditText = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ImageButton = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionButton = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_SearchView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListMenuView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListPopupWindow = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListView_DropDown = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListView_Menu = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_PopupMenu = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_PopupWindow = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ProgressBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_RatingBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_RatingBar_Small = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_SearchView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_SeekBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Spinner = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_TextView = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_TextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Toolbar = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::PetArmy.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Compat_NotificationActionContainer = global::PetArmy.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Compat_NotificationActionText = global::PetArmy.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_AppBarLayout = global::PetArmy.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_BottomNavigationView = global::PetArmy.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_BottomSheet_Modal = global::PetArmy.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_CollapsingToolbar = global::PetArmy.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_FloatingActionButton = global::PetArmy.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_NavigationView = global::PetArmy.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::PetArmy.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_Snackbar = global::PetArmy.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_TabLayout = global::PetArmy.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_TextInputLayout = global::PetArmy.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_Icon = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_CardView = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_ChipGroup = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Chip_Action = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_NavigationView = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Snackbar = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TabLayout = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Toolbar = global::PetArmy.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Support_CoordinatorLayout = global::PetArmy.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar = global::PetArmy.Droid.Resource.Styleable.ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBarLayout = global::PetArmy.Droid.Resource.Styleable.ActionBarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::PetArmy.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_background = global::PetArmy.Droid.Resource.Styleable.ActionBar_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_backgroundSplit = global::PetArmy.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_backgroundStacked = global::PetArmy.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetEnd = global::PetArmy.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::PetArmy.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetLeft = global::PetArmy.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetRight = global::PetArmy.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetStart = global::PetArmy.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::PetArmy.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_customNavigationLayout = global::PetArmy.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_displayOptions = global::PetArmy.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_divider = global::PetArmy.Droid.Resource.Styleable.ActionBar_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_elevation = global::PetArmy.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_height = global::PetArmy.Droid.Resource.Styleable.ActionBar_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_hideOnContentScroll = global::PetArmy.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_homeAsUpIndicator = global::PetArmy.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_homeLayout = global::PetArmy.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_icon = global::PetArmy.Droid.Resource.Styleable.ActionBar_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::PetArmy.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_itemPadding = global::PetArmy.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_logo = global::PetArmy.Droid.Resource.Styleable.ActionBar_logo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_navigationMode = global::PetArmy.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_popupTheme = global::PetArmy.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_progressBarPadding = global::PetArmy.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_progressBarStyle = global::PetArmy.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_subtitle = global::PetArmy.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_subtitleTextStyle = global::PetArmy.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_title = global::PetArmy.Droid.Resource.Styleable.ActionBar_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_titleTextStyle = global::PetArmy.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMenuItemView = global::PetArmy.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMenuItemView_android_minWidth = global::PetArmy.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMenuView = global::PetArmy.Droid.Resource.Styleable.ActionMenuView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode = global::PetArmy.Droid.Resource.Styleable.ActionMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_background = global::PetArmy.Droid.Resource.Styleable.ActionMode_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_backgroundSplit = global::PetArmy.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_closeItemLayout = global::PetArmy.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_height = global::PetArmy.Droid.Resource.Styleable.ActionMode_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_subtitleTextStyle = global::PetArmy.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_titleTextStyle = global::PetArmy.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActivityChooserView = global::PetArmy.Droid.Resource.Styleable.ActivityChooserView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::PetArmy.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActivityChooserView_initialActivityCount = global::PetArmy.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog = global::PetArmy.Droid.Resource.Styleable.AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_android_layout = global::PetArmy.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_buttonIconDimen = global::PetArmy.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::PetArmy.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_listItemLayout = global::PetArmy.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_listLayout = global::PetArmy.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::PetArmy.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_showTitle = global::PetArmy.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::PetArmy.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableItem = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::PetArmy.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout = global::PetArmy.Droid.Resource.Styleable.AppBarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates = global::PetArmy.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::PetArmy.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::PetArmy.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates_state_liftable = global::PetArmy.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates_state_lifted = global::PetArmy.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_android_background = global::PetArmy.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::PetArmy.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::PetArmy.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_elevation = global::PetArmy.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_expanded = global::PetArmy.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_Layout = global::PetArmy.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::PetArmy.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::PetArmy.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_liftOnScroll = global::PetArmy.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView = global::PetArmy.Droid.Resource.Styleable.AppCompatImageView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView_android_src = global::PetArmy.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView_srcCompat = global::PetArmy.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView_tint = global::PetArmy.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView_tintMode = global::PetArmy.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar = global::PetArmy.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar_android_thumb = global::PetArmy.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar_tickMark = global::PetArmy.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::PetArmy.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::PetArmy.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper = global::PetArmy.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::PetArmy.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::PetArmy.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::PetArmy.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::PetArmy.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::PetArmy.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::PetArmy.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::PetArmy.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_android_textAppearance = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableTint = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableTintMode = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_fontFamily = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_lineHeight = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_textAllCaps = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_textLocale = global::PetArmy.Droid.Resource.Styleable.AppCompatTextView_textLocale;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarDivider = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarSize = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarTheme = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeBackground = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_checkboxStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorAccent = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorControlActivated = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorControlNormal = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorError = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorPrimary = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_controlBackground = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dialogTheme = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dividerVertical = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_editTextBackground = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_editTextColor = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_editTextStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_panelBackground = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_searchViewStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_seekBarStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_spinnerStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_switchStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_toolbarStyle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowActionBar = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowNoTitle = global::PetArmy.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar = global::PetArmy.Droid.Resource.Styleable.BottomAppBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_backgroundTint = global::PetArmy.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::PetArmy.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_fabCradleMargin = global::PetArmy.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::PetArmy.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::PetArmy.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_hideOnScroll = global::PetArmy.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView = global::PetArmy.Droid.Resource.Styleable.BottomNavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::PetArmy.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout = global::PetArmy.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::PetArmy.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::PetArmy.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::PetArmy.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::PetArmy.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ButtonBarLayout = global::PetArmy.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ButtonBarLayout_allowStacking = global::PetArmy.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView = global::PetArmy.Droid.Resource.Styleable.CardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_android_minHeight = global::PetArmy.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_android_minWidth = global::PetArmy.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardBackgroundColor = global::PetArmy.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardCornerRadius = global::PetArmy.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardElevation = global::PetArmy.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardMaxElevation = global::PetArmy.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardPreventCornerOverlap = global::PetArmy.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardUseCompatPadding = global::PetArmy.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPadding = global::PetArmy.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPaddingBottom = global::PetArmy.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPaddingLeft = global::PetArmy.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPaddingRight = global::PetArmy.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPaddingTop = global::PetArmy.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip = global::PetArmy.Droid.Resource.Styleable.Chip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup = global::PetArmy.Droid.Resource.Styleable.ChipGroup;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_checkedChip = global::PetArmy.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_chipSpacing = global::PetArmy.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::PetArmy.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_chipSpacingVertical = global::PetArmy.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_singleLine = global::PetArmy.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_singleSelection = global::PetArmy.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_checkable = global::PetArmy.Droid.Resource.Styleable.Chip_android_checkable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_ellipsize = global::PetArmy.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_maxWidth = global::PetArmy.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_text = global::PetArmy.Droid.Resource.Styleable.Chip_android_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_textAppearance = global::PetArmy.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_checkedIcon = global::PetArmy.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_checkedIconEnabled = global::PetArmy.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_checkedIconVisible = global::PetArmy.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipBackgroundColor = global::PetArmy.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipCornerRadius = global::PetArmy.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipEndPadding = global::PetArmy.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIcon = global::PetArmy.Droid.Resource.Styleable.Chip_chipIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIconEnabled = global::PetArmy.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIconSize = global::PetArmy.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIconTint = global::PetArmy.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIconVisible = global::PetArmy.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipMinHeight = global::PetArmy.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipStartPadding = global::PetArmy.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipStrokeColor = global::PetArmy.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipStrokeWidth = global::PetArmy.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIcon = global::PetArmy.Droid.Resource.Styleable.Chip_closeIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconEnabled = global::PetArmy.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconEndPadding = global::PetArmy.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconSize = global::PetArmy.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconStartPadding = global::PetArmy.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconTint = global::PetArmy.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconVisible = global::PetArmy.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_hideMotionSpec = global::PetArmy.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_iconEndPadding = global::PetArmy.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_iconStartPadding = global::PetArmy.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_rippleColor = global::PetArmy.Droid.Resource.Styleable.Chip_rippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_showMotionSpec = global::PetArmy.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_textEndPadding = global::PetArmy.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_textStartPadding = global::PetArmy.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_Layout = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_title = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::PetArmy.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ColorStateListItem = global::PetArmy.Droid.Resource.Styleable.ColorStateListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ColorStateListItem_alpha = global::PetArmy.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ColorStateListItem_android_alpha = global::PetArmy.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ColorStateListItem_android_color = global::PetArmy.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton = global::PetArmy.Droid.Resource.Styleable.CompoundButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton_android_button = global::PetArmy.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton_buttonCompat = global::PetArmy.Droid.Resource.Styleable.CompoundButton_buttonCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton_buttonTint = global::PetArmy.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton_buttonTintMode = global::PetArmy.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_keylines = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::PetArmy.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle = global::PetArmy.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::PetArmy.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::PetArmy.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_barLength = global::PetArmy.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_color = global::PetArmy.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_drawableSize = global::PetArmy.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::PetArmy.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_spinBars = global::PetArmy.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_thickness = global::PetArmy.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_backgroundTint = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_borderWidth = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_elevation = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_fabCustomSize = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_fabSize = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_maxImageSize = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_rippleColor = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_showMotionSpec = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_useCompatPadding = global::PetArmy.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FlowLayout = global::PetArmy.Droid.Resource.Styleable.FlowLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FlowLayout_itemSpacing = global::PetArmy.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FlowLayout_lineSpacing = global::PetArmy.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily = global::PetArmy.Droid.Resource.Styleable.FontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_font = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_fontStyle = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_fontWeight = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_font = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_fontStyle = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_fontWeight = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_ttcIndex = global::PetArmy.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderAuthority = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderCerts = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderPackage = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderQuery = global::PetArmy.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ForegroundLinearLayout = global::PetArmy.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::PetArmy.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::PetArmy.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::PetArmy.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor = global::PetArmy.Droid.Resource.Styleable.GradientColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColorItem = global::PetArmy.Droid.Resource.Styleable.GradientColorItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColorItem_android_color = global::PetArmy.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColorItem_android_offset = global::PetArmy.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_centerColor = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_centerX = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_centerY = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_endColor = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_endX = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_endY = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_gradientRadius = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_startColor = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_startX = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_startY = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_tileMode = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_type = global::PetArmy.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_gravity = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_orientation = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_divider = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_showDividers = global::PetArmy.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ListPopupWindow = global::PetArmy.Droid.Resource.Styleable.ListPopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::PetArmy.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::PetArmy.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton = global::PetArmy.Droid.Resource.Styleable.MaterialButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_android_insetBottom = global::PetArmy.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_android_insetLeft = global::PetArmy.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_android_insetRight = global::PetArmy.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_android_insetTop = global::PetArmy.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_backgroundTint = global::PetArmy.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_backgroundTintMode = global::PetArmy.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_cornerRadius = global::PetArmy.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_icon = global::PetArmy.Droid.Resource.Styleable.MaterialButton_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconGravity = global::PetArmy.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconPadding = global::PetArmy.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconSize = global::PetArmy.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconTint = global::PetArmy.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconTintMode = global::PetArmy.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_rippleColor = global::PetArmy.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_strokeColor = global::PetArmy.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_strokeWidth = global::PetArmy.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialCardView = global::PetArmy.Droid.Resource.Styleable.MaterialCardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialCardView_strokeColor = global::PetArmy.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialCardView_strokeWidth = global::PetArmy.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup = global::PetArmy.Droid.Resource.Styleable.MenuGroup;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_checkableBehavior = global::PetArmy.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_enabled = global::PetArmy.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_id = global::PetArmy.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_menuCategory = global::PetArmy.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_orderInCategory = global::PetArmy.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_visible = global::PetArmy.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem = global::PetArmy.Droid.Resource.Styleable.MenuItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_actionLayout = global::PetArmy.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_actionProviderClass = global::PetArmy.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_actionViewClass = global::PetArmy.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_alphabeticModifiers = global::PetArmy.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_checkable = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_checked = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_enabled = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_icon = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_id = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_menuCategory = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_numericShortcut = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_onClick = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_orderInCategory = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_title = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_titleCondensed = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_visible = global::PetArmy.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_contentDescription = global::PetArmy.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_iconTint = global::PetArmy.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_iconTintMode = global::PetArmy.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_numericModifiers = global::PetArmy.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_showAsAction = global::PetArmy.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_tooltipText = global::PetArmy.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView = global::PetArmy.Droid.Resource.Styleable.MenuView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_headerBackground = global::PetArmy.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_horizontalDivider = global::PetArmy.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_itemBackground = global::PetArmy.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::PetArmy.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_itemTextAppearance = global::PetArmy.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_verticalDivider = global::PetArmy.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_windowAnimationStyle = global::PetArmy.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_preserveIconSpacing = global::PetArmy.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_subMenuArrow = global::PetArmy.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView = global::PetArmy.Droid.Resource.Styleable.NavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_android_background = global::PetArmy.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::PetArmy.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_android_maxWidth = global::PetArmy.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_elevation = global::PetArmy.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_headerLayout = global::PetArmy.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemBackground = global::PetArmy.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemHorizontalPadding = global::PetArmy.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemIconPadding = global::PetArmy.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemIconTint = global::PetArmy.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemTextAppearance = global::PetArmy.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemTextColor = global::PetArmy.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_menu = global::PetArmy.Droid.Resource.Styleable.NavigationView_menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindow = global::PetArmy.Droid.Resource.Styleable.PopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindowBackgroundState = global::PetArmy.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::PetArmy.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::PetArmy.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindow_android_popupBackground = global::PetArmy.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindow_overlapAnchor = global::PetArmy.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecycleListView = global::PetArmy.Droid.Resource.Styleable.RecycleListView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::PetArmy.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::PetArmy.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView = global::PetArmy.Droid.Resource.Styleable.RecyclerView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_android_clipToPadding = global::PetArmy.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_android_descendantFocusability = global::PetArmy.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_android_orientation = global::PetArmy.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollEnabled = global::PetArmy.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::PetArmy.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::PetArmy.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::PetArmy.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::PetArmy.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_layoutManager = global::PetArmy.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_reverseLayout = global::PetArmy.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_spanCount = global::PetArmy.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_stackFromEnd = global::PetArmy.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ScrimInsetsFrameLayout = global::PetArmy.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::PetArmy.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ScrollingViewBehavior_Layout = global::PetArmy.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::PetArmy.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView = global::PetArmy.Droid.Resource.Styleable.SearchView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_android_focusable = global::PetArmy.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_android_imeOptions = global::PetArmy.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_android_inputType = global::PetArmy.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_android_maxWidth = global::PetArmy.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_closeIcon = global::PetArmy.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_commitIcon = global::PetArmy.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_defaultQueryHint = global::PetArmy.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_goIcon = global::PetArmy.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_iconifiedByDefault = global::PetArmy.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_layout = global::PetArmy.Droid.Resource.Styleable.SearchView_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_queryBackground = global::PetArmy.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_queryHint = global::PetArmy.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_searchHintIcon = global::PetArmy.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_searchIcon = global::PetArmy.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_submitBackground = global::PetArmy.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_suggestionRowLayout = global::PetArmy.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_voiceIcon = global::PetArmy.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Snackbar = global::PetArmy.Droid.Resource.Styleable.Snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SnackbarLayout = global::PetArmy.Droid.Resource.Styleable.SnackbarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SnackbarLayout_android_maxWidth = global::PetArmy.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SnackbarLayout_elevation = global::PetArmy.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::PetArmy.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Snackbar_snackbarButtonStyle = global::PetArmy.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Snackbar_snackbarStyle = global::PetArmy.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner = global::PetArmy.Droid.Resource.Styleable.Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_android_dropDownWidth = global::PetArmy.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_android_entries = global::PetArmy.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_android_popupBackground = global::PetArmy.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_android_prompt = global::PetArmy.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_popupTheme = global::PetArmy.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable = global::PetArmy.Droid.Resource.Styleable.StateListDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawableItem = global::PetArmy.Droid.Resource.Styleable.StateListDrawableItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawableItem_android_drawable = global::PetArmy.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_constantSize = global::PetArmy.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_dither = global::PetArmy.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::PetArmy.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::PetArmy.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_variablePadding = global::PetArmy.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_visible = global::PetArmy.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat = global::PetArmy.Droid.Resource.Styleable.SwitchCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_android_textOff = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_android_textOn = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_android_thumb = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_showText = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_splitTrack = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_switchMinWidth = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_switchPadding = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_switchTextAppearance = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_thumbTextPadding = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_thumbTint = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_thumbTintMode = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_track = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_trackTint = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_trackTintMode = global::PetArmy.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabItem = global::PetArmy.Droid.Resource.Styleable.TabItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabItem_android_icon = global::PetArmy.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabItem_android_layout = global::PetArmy.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabItem_android_text = global::PetArmy.Droid.Resource.Styleable.TabItem_android_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout = global::PetArmy.Droid.Resource.Styleable.TabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabBackground = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabContentStart = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabGravity = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIconTint = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIconTintMode = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicator = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorColor = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorGravity = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorHeight = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabInlineLabel = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabMaxWidth = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabMinWidth = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabMode = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPadding = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPaddingBottom = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPaddingEnd = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPaddingStart = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPaddingTop = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabRippleColor = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabSelectedTextColor = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabTextAppearance = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabTextColor = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabUnboundedRipple = global::PetArmy.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance = global::PetArmy.Droid.Resource.Styleable.TextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_fontFamily = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_shadowColor = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_shadowDx = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_shadowDy = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_shadowRadius = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textColor = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textColorHint = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textColorLink = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textFontWeight = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textSize = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textStyle = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_typeface = global::PetArmy.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_fontFamily = global::PetArmy.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_fontVariationSettings = global::PetArmy.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_textAllCaps = global::PetArmy.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_textLocale = global::PetArmy.Droid.Resource.Styleable.TextAppearance_textLocale;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout = global::PetArmy.Droid.Resource.Styleable.TextInputLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_android_hint = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_android_textColorHint = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxStrokeColor = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_counterEnabled = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_counterMaxLength = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_counterTextAppearance = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_errorEnabled = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_errorTextAppearance = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_helperText = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_helperTextEnabled = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_hintEnabled = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_hintTextAppearance = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleTint = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::PetArmy.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ThemeEnforcement = global::PetArmy.Droid.Resource.Styleable.ThemeEnforcement;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::PetArmy.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::PetArmy.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::PetArmy.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar = global::PetArmy.Droid.Resource.Styleable.Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_android_gravity = global::PetArmy.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_android_minHeight = global::PetArmy.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_buttonGravity = global::PetArmy.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_collapseContentDescription = global::PetArmy.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_collapseIcon = global::PetArmy.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetEnd = global::PetArmy.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::PetArmy.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetLeft = global::PetArmy.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetRight = global::PetArmy.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetStart = global::PetArmy.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::PetArmy.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_logo = global::PetArmy.Droid.Resource.Styleable.Toolbar_logo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_logoDescription = global::PetArmy.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_maxButtonHeight = global::PetArmy.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_menu = global::PetArmy.Droid.Resource.Styleable.Toolbar_menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_navigationContentDescription = global::PetArmy.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_navigationIcon = global::PetArmy.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_popupTheme = global::PetArmy.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_subtitle = global::PetArmy.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_subtitleTextAppearance = global::PetArmy.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_subtitleTextColor = global::PetArmy.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_title = global::PetArmy.Droid.Resource.Styleable.Toolbar_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMargin = global::PetArmy.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMarginBottom = global::PetArmy.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMarginEnd = global::PetArmy.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMargins = global::PetArmy.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMarginStart = global::PetArmy.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMarginTop = global::PetArmy.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleTextAppearance = global::PetArmy.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleTextColor = global::PetArmy.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View = global::PetArmy.Droid.Resource.Styleable.View;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewBackgroundHelper = global::PetArmy.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewBackgroundHelper_android_background = global::PetArmy.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::PetArmy.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::PetArmy.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewStubCompat = global::PetArmy.Droid.Resource.Styleable.ViewStubCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewStubCompat_android_id = global::PetArmy.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewStubCompat_android_inflatedId = global::PetArmy.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewStubCompat_android_layout = global::PetArmy.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_android_focusable = global::PetArmy.Droid.Resource.Styleable.View_android_focusable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_android_theme = global::PetArmy.Droid.Resource.Styleable.View_android_theme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_paddingEnd = global::PetArmy.Droid.Resource.Styleable.View_paddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_paddingStart = global::PetArmy.Droid.Resource.Styleable.View_paddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_theme = global::PetArmy.Droid.Resource.Styleable.View_theme;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Layout.ScrollViewer = global::PetArmy.Droid.Resource.Layout.ScrollViewer;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.library_name = global::PetArmy.Droid.Resource.String.library_name;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.load_more_items = global::PetArmy.Droid.Resource.String.load_more_items;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.cancel_drop = global::PetArmy.Droid.Resource.String.cancel_drop;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.drop_above = global::PetArmy.Droid.Resource.String.drop_above;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.drop_below = global::PetArmy.Droid.Resource.String.drop_below;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.ApplicationName = global::PetArmy.Droid.Resource.String.ApplicationName;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.Hello = global::PetArmy.Droid.Resource.String.Hello;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.Load_More = global::PetArmy.Droid.Resource.String.Load_More;
 			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.allowNull = global::PetArmy.Droid.Resource.Attribute.allowNull;
 			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.borderColor = global::PetArmy.Droid.Resource.Attribute.borderColor;
 			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.culture = global::PetArmy.Droid.Resource.Attribute.culture;
@@ -22834,214 +25709,217 @@ namespace PetArmy.Droid
 			public const int design_snackbar_background = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int googleg_disabled_color_18 = 2131165353;
+			public const int dropdownbuttonimage = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int googleg_standard_color_18 = 2131165354;
-			
-			// aapt resource value: 0x7F0700B3
-			public const int icon_about = 2131165363;
-			
-			// aapt resource value: 0x7F0700B4
-			public const int icon_feed = 2131165364;
+			public const int googleg_disabled_color_18 = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int ic_arrow_down_24dp = 2131165355;
+			public const int googleg_standard_color_18 = 2131165355;
 			
-			// aapt resource value: 0x7F0700AC
-			public const int ic_clock_black_24dp = 2131165356;
-			
-			// aapt resource value: 0x7F0700AD
-			public const int ic_keyboard_black_24dp = 2131165357;
-			
-			// aapt resource value: 0x7F0700AE
-			public const int ic_main_app_logo = 2131165358;
-			
-			// aapt resource value: 0x7F0700AF
-			public const int ic_mtrl_checked_circle = 2131165359;
-			
-			// aapt resource value: 0x7F0700B0
-			public const int ic_mtrl_chip_checked_black = 2131165360;
-			
-			// aapt resource value: 0x7F0700B1
-			public const int ic_mtrl_chip_checked_circle = 2131165361;
-			
-			// aapt resource value: 0x7F0700B2
-			public const int ic_mtrl_chip_close_circle = 2131165362;
-			
-			// aapt resource value: 0x7F0700B6
-			public const int inputlayout_togglecollapseicon = 2131165366;
-			
-			// aapt resource value: 0x7F0700B7
-			public const int inputlayout_togglevisibleicon = 2131165367;
+			// aapt resource value: 0x7F0700B4
+			public const int icon_about = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int input_layout_drop_down_icon = 2131165365;
+			public const int icon_feed = 2131165365;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int ic_arrow_down_24dp = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int ic_clock_black_24dp = 2131165357;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int ic_keyboard_black_24dp = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int ic_main_app_logo = 2131165359;
+			
+			// aapt resource value: 0x7F0700B0
+			public const int ic_mtrl_checked_circle = 2131165360;
+			
+			// aapt resource value: 0x7F0700B1
+			public const int ic_mtrl_chip_checked_black = 2131165361;
+			
+			// aapt resource value: 0x7F0700B2
+			public const int ic_mtrl_chip_checked_circle = 2131165362;
+			
+			// aapt resource value: 0x7F0700B3
+			public const int ic_mtrl_chip_close_circle = 2131165363;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int inputlayout_togglecollapseicon = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int material_cursor_drawable = 2131165368;
+			public const int inputlayout_togglevisibleicon = 2131165368;
+			
+			// aapt resource value: 0x7F0700B6
+			public const int input_layout_drop_down_icon = 2131165366;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int material_ic_calendar_black_24dp = 2131165369;
+			public const int material_cursor_drawable = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int material_ic_clear_black_24dp = 2131165370;
+			public const int material_ic_calendar_black_24dp = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int material_ic_edit_black_24dp = 2131165371;
+			public const int material_ic_clear_black_24dp = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165372;
+			public const int material_ic_edit_black_24dp = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165373;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165374;
+			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165375;
+			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165376;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165377;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int mtrl_dialog_background = 2131165378;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int mtrl_dropdown_arrow = 2131165379;
+			public const int mtrl_dialog_background = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int mtrl_ic_arrow_drop_down = 2131165380;
+			public const int mtrl_dropdown_arrow = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int mtrl_ic_arrow_drop_up = 2131165381;
+			public const int mtrl_ic_arrow_drop_down = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int mtrl_ic_cancel = 2131165382;
+			public const int mtrl_ic_arrow_drop_up = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int mtrl_ic_error = 2131165383;
+			public const int mtrl_ic_cancel = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int mtrl_navigation_bar_item_background = 2131165384;
+			public const int mtrl_ic_error = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int mtrl_popupmenu_background = 2131165385;
+			public const int mtrl_navigation_bar_item_background = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int mtrl_popupmenu_background_dark = 2131165386;
+			public const int mtrl_popupmenu_background = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int mtrl_tabs_default_indicator = 2131165387;
+			public const int mtrl_popupmenu_background_dark = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int navigation_empty_icon = 2131165388;
+			public const int mtrl_tabs_default_indicator = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int notification_action_background = 2131165389;
+			public const int navigation_empty_icon = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int notification_bg = 2131165390;
+			public const int notification_action_background = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int notification_bg_low = 2131165391;
+			public const int notification_bg = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int notification_bg_low_normal = 2131165392;
+			public const int notification_bg_low = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int notification_bg_low_pressed = 2131165393;
+			public const int notification_bg_low_normal = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int notification_bg_normal = 2131165394;
+			public const int notification_bg_low_pressed = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int notification_bg_normal_pressed = 2131165395;
+			public const int notification_bg_normal = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int notification_icon_background = 2131165396;
+			public const int notification_bg_normal_pressed = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int notification_template_icon_bg = 2131165397;
+			public const int notification_icon_background = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int notification_template_icon_low_bg = 2131165398;
+			public const int notification_template_icon_bg = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int notification_tile_bg = 2131165399;
+			public const int notification_template_icon_low_bg = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int notify_panel_notification_icon_bg = 2131165400;
+			public const int notification_tile_bg = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int PetsArmy = 2131165401;
+			public const int notify_panel_notification_icon_bg = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int popup_forms_android_close_icon = 2131165402;
+			public const int PetsArmy = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int popup_forms_android_shadow = 2131165403;
+			public const int popup_forms_android_close_icon = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int popup_forms_dark_theme_close_icon = 2131165404;
+			public const int popup_forms_android_shadow = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int popup_forms_light_theme_close_icon = 2131165405;
+			public const int popup_forms_dark_theme_close_icon = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int preference_list_divider_material = 2131165406;
+			public const int popup_forms_light_theme_close_icon = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int sfcheckbox_animation = 2131165407;
+			public const int preference_list_divider_material = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int sfcheckbox_checked = 2131165408;
+			public const int sfcheckbox_animation = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int sfcheckbox_checked_indeterminate = 2131165409;
+			public const int sfcheckbox_checked = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int sfcheckbox_checked_unchecked = 2131165410;
+			public const int sfcheckbox_checked_indeterminate = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int sfcheckbox_indeterminate = 2131165411;
+			public const int sfcheckbox_checked_unchecked = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int sfcheckbox_indeterminate_checked = 2131165412;
+			public const int sfcheckbox_indeterminate = 2131165412;
 			
 			// aapt resource value: 0x7F0700E5
-			public const int sfcheckbox_indeterminate_unchecked = 2131165413;
+			public const int sfcheckbox_indeterminate_checked = 2131165413;
 			
 			// aapt resource value: 0x7F0700E6
-			public const int sfcheckbox_unchecked = 2131165414;
+			public const int sfcheckbox_indeterminate_unchecked = 2131165414;
 			
 			// aapt resource value: 0x7F0700E7
-			public const int sfcheckbox_unchecked_checked = 2131165415;
+			public const int sfcheckbox_unchecked = 2131165415;
 			
 			// aapt resource value: 0x7F0700E8
-			public const int sfcheckbox_unchecked_indeterminate = 2131165416;
+			public const int sfcheckbox_unchecked_checked = 2131165416;
 			
 			// aapt resource value: 0x7F0700E9
-			public const int Shelter = 2131165417;
+			public const int sfcheckbox_unchecked_indeterminate = 2131165417;
 			
 			// aapt resource value: 0x7F0700EA
-			public const int test_custom_background = 2131165418;
+			public const int Shelter = 2131165418;
 			
 			// aapt resource value: 0x7F0700EB
-			public const int tooltip_frame_dark = 2131165419;
+			public const int test_custom_background = 2131165419;
 			
 			// aapt resource value: 0x7F0700EC
-			public const int tooltip_frame_light = 2131165420;
+			public const int tooltip_frame_dark = 2131165420;
 			
 			// aapt resource value: 0x7F0700ED
-			public const int UserPlus = 2131165421;
+			public const int tooltip_frame_light = 2131165421;
 			
 			// aapt resource value: 0x7F0700EE
-			public const int xamarin_logo = 2131165422;
+			public const int UserPlus = 2131165422;
+			
+			// aapt resource value: 0x7F0700EF
+			public const int xamarin_logo = 2131165423;
 			
 			static Drawable()
 			{
@@ -23056,278 +25934,278 @@ namespace PetArmy.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7F08000F
-			public const int accelerate = 2131230735;
-			
 			// aapt resource value: 0x7F080010
-			public const int accessibility_action_clickable_span = 2131230736;
+			public const int accelerate = 2131230736;
 			
 			// aapt resource value: 0x7F080011
-			public const int accessibility_custom_action_0 = 2131230737;
+			public const int accessibility_action_clickable_span = 2131230737;
 			
 			// aapt resource value: 0x7F080012
-			public const int accessibility_custom_action_1 = 2131230738;
+			public const int accessibility_custom_action_0 = 2131230738;
 			
 			// aapt resource value: 0x7F080013
-			public const int accessibility_custom_action_10 = 2131230739;
+			public const int accessibility_custom_action_1 = 2131230739;
 			
 			// aapt resource value: 0x7F080014
-			public const int accessibility_custom_action_11 = 2131230740;
+			public const int accessibility_custom_action_10 = 2131230740;
 			
 			// aapt resource value: 0x7F080015
-			public const int accessibility_custom_action_12 = 2131230741;
+			public const int accessibility_custom_action_11 = 2131230741;
 			
 			// aapt resource value: 0x7F080016
-			public const int accessibility_custom_action_13 = 2131230742;
+			public const int accessibility_custom_action_12 = 2131230742;
 			
 			// aapt resource value: 0x7F080017
-			public const int accessibility_custom_action_14 = 2131230743;
+			public const int accessibility_custom_action_13 = 2131230743;
 			
 			// aapt resource value: 0x7F080018
-			public const int accessibility_custom_action_15 = 2131230744;
+			public const int accessibility_custom_action_14 = 2131230744;
 			
 			// aapt resource value: 0x7F080019
-			public const int accessibility_custom_action_16 = 2131230745;
+			public const int accessibility_custom_action_15 = 2131230745;
 			
 			// aapt resource value: 0x7F08001A
-			public const int accessibility_custom_action_17 = 2131230746;
+			public const int accessibility_custom_action_16 = 2131230746;
 			
 			// aapt resource value: 0x7F08001B
-			public const int accessibility_custom_action_18 = 2131230747;
+			public const int accessibility_custom_action_17 = 2131230747;
 			
 			// aapt resource value: 0x7F08001C
-			public const int accessibility_custom_action_19 = 2131230748;
+			public const int accessibility_custom_action_18 = 2131230748;
 			
 			// aapt resource value: 0x7F08001D
-			public const int accessibility_custom_action_2 = 2131230749;
+			public const int accessibility_custom_action_19 = 2131230749;
 			
 			// aapt resource value: 0x7F08001E
-			public const int accessibility_custom_action_20 = 2131230750;
+			public const int accessibility_custom_action_2 = 2131230750;
 			
 			// aapt resource value: 0x7F08001F
-			public const int accessibility_custom_action_21 = 2131230751;
+			public const int accessibility_custom_action_20 = 2131230751;
 			
 			// aapt resource value: 0x7F080020
-			public const int accessibility_custom_action_22 = 2131230752;
+			public const int accessibility_custom_action_21 = 2131230752;
 			
 			// aapt resource value: 0x7F080021
-			public const int accessibility_custom_action_23 = 2131230753;
+			public const int accessibility_custom_action_22 = 2131230753;
 			
 			// aapt resource value: 0x7F080022
-			public const int accessibility_custom_action_24 = 2131230754;
+			public const int accessibility_custom_action_23 = 2131230754;
 			
 			// aapt resource value: 0x7F080023
-			public const int accessibility_custom_action_25 = 2131230755;
+			public const int accessibility_custom_action_24 = 2131230755;
 			
 			// aapt resource value: 0x7F080024
-			public const int accessibility_custom_action_26 = 2131230756;
+			public const int accessibility_custom_action_25 = 2131230756;
 			
 			// aapt resource value: 0x7F080025
-			public const int accessibility_custom_action_27 = 2131230757;
+			public const int accessibility_custom_action_26 = 2131230757;
 			
 			// aapt resource value: 0x7F080026
-			public const int accessibility_custom_action_28 = 2131230758;
+			public const int accessibility_custom_action_27 = 2131230758;
 			
 			// aapt resource value: 0x7F080027
-			public const int accessibility_custom_action_29 = 2131230759;
+			public const int accessibility_custom_action_28 = 2131230759;
 			
 			// aapt resource value: 0x7F080028
-			public const int accessibility_custom_action_3 = 2131230760;
+			public const int accessibility_custom_action_29 = 2131230760;
 			
 			// aapt resource value: 0x7F080029
-			public const int accessibility_custom_action_30 = 2131230761;
+			public const int accessibility_custom_action_3 = 2131230761;
 			
 			// aapt resource value: 0x7F08002A
-			public const int accessibility_custom_action_31 = 2131230762;
+			public const int accessibility_custom_action_30 = 2131230762;
 			
 			// aapt resource value: 0x7F08002B
-			public const int accessibility_custom_action_4 = 2131230763;
+			public const int accessibility_custom_action_31 = 2131230763;
 			
 			// aapt resource value: 0x7F08002C
-			public const int accessibility_custom_action_5 = 2131230764;
+			public const int accessibility_custom_action_4 = 2131230764;
 			
 			// aapt resource value: 0x7F08002D
-			public const int accessibility_custom_action_6 = 2131230765;
+			public const int accessibility_custom_action_5 = 2131230765;
 			
 			// aapt resource value: 0x7F08002E
-			public const int accessibility_custom_action_7 = 2131230766;
+			public const int accessibility_custom_action_6 = 2131230766;
 			
 			// aapt resource value: 0x7F08002F
-			public const int accessibility_custom_action_8 = 2131230767;
+			public const int accessibility_custom_action_7 = 2131230767;
 			
 			// aapt resource value: 0x7F080030
-			public const int accessibility_custom_action_9 = 2131230768;
+			public const int accessibility_custom_action_8 = 2131230768;
 			
 			// aapt resource value: 0x7F080031
-			public const int action0 = 2131230769;
+			public const int accessibility_custom_action_9 = 2131230769;
 			
 			// aapt resource value: 0x7F080032
-			public const int actionDown = 2131230770;
+			public const int action0 = 2131230770;
 			
 			// aapt resource value: 0x7F080033
-			public const int actionDownUp = 2131230771;
-			
-			// aapt resource value: 0x7F080046
-			public const int actions = 2131230790;
+			public const int actionDown = 2131230771;
 			
 			// aapt resource value: 0x7F080034
-			public const int actionUp = 2131230772;
-			
-			// aapt resource value: 0x7F080035
-			public const int action_bar = 2131230773;
-			
-			// aapt resource value: 0x7F080036
-			public const int action_bar_activity_content = 2131230774;
-			
-			// aapt resource value: 0x7F080037
-			public const int action_bar_container = 2131230775;
-			
-			// aapt resource value: 0x7F080038
-			public const int action_bar_root = 2131230776;
-			
-			// aapt resource value: 0x7F080039
-			public const int action_bar_spinner = 2131230777;
-			
-			// aapt resource value: 0x7F08003A
-			public const int action_bar_subtitle = 2131230778;
-			
-			// aapt resource value: 0x7F08003B
-			public const int action_bar_title = 2131230779;
-			
-			// aapt resource value: 0x7F08003C
-			public const int action_container = 2131230780;
-			
-			// aapt resource value: 0x7F08003D
-			public const int action_context_bar = 2131230781;
-			
-			// aapt resource value: 0x7F08003E
-			public const int action_divider = 2131230782;
-			
-			// aapt resource value: 0x7F08003F
-			public const int action_image = 2131230783;
-			
-			// aapt resource value: 0x7F080040
-			public const int action_menu_divider = 2131230784;
-			
-			// aapt resource value: 0x7F080041
-			public const int action_menu_presenter = 2131230785;
-			
-			// aapt resource value: 0x7F080042
-			public const int action_mode_bar = 2131230786;
-			
-			// aapt resource value: 0x7F080043
-			public const int action_mode_bar_stub = 2131230787;
-			
-			// aapt resource value: 0x7F080044
-			public const int action_mode_close_button = 2131230788;
-			
-			// aapt resource value: 0x7F080045
-			public const int action_text = 2131230789;
+			public const int actionDownUp = 2131230772;
 			
 			// aapt resource value: 0x7F080047
-			public const int activity_chooser_view_content = 2131230791;
+			public const int actions = 2131230791;
+			
+			// aapt resource value: 0x7F080035
+			public const int actionUp = 2131230773;
+			
+			// aapt resource value: 0x7F080036
+			public const int action_bar = 2131230774;
+			
+			// aapt resource value: 0x7F080037
+			public const int action_bar_activity_content = 2131230775;
+			
+			// aapt resource value: 0x7F080038
+			public const int action_bar_container = 2131230776;
+			
+			// aapt resource value: 0x7F080039
+			public const int action_bar_root = 2131230777;
+			
+			// aapt resource value: 0x7F08003A
+			public const int action_bar_spinner = 2131230778;
+			
+			// aapt resource value: 0x7F08003B
+			public const int action_bar_subtitle = 2131230779;
+			
+			// aapt resource value: 0x7F08003C
+			public const int action_bar_title = 2131230780;
+			
+			// aapt resource value: 0x7F08003D
+			public const int action_container = 2131230781;
+			
+			// aapt resource value: 0x7F08003E
+			public const int action_context_bar = 2131230782;
+			
+			// aapt resource value: 0x7F08003F
+			public const int action_divider = 2131230783;
+			
+			// aapt resource value: 0x7F080040
+			public const int action_image = 2131230784;
+			
+			// aapt resource value: 0x7F080041
+			public const int action_menu_divider = 2131230785;
+			
+			// aapt resource value: 0x7F080042
+			public const int action_menu_presenter = 2131230786;
+			
+			// aapt resource value: 0x7F080043
+			public const int action_mode_bar = 2131230787;
+			
+			// aapt resource value: 0x7F080044
+			public const int action_mode_bar_stub = 2131230788;
+			
+			// aapt resource value: 0x7F080045
+			public const int action_mode_close_button = 2131230789;
+			
+			// aapt resource value: 0x7F080046
+			public const int action_text = 2131230790;
 			
 			// aapt resource value: 0x7F080048
-			public const int add = 2131230792;
+			public const int activity_chooser_view_content = 2131230792;
 			
 			// aapt resource value: 0x7F080049
-			public const int adjust_height = 2131230793;
+			public const int add = 2131230793;
 			
 			// aapt resource value: 0x7F08004A
-			public const int adjust_width = 2131230794;
+			public const int adjust_height = 2131230794;
 			
 			// aapt resource value: 0x7F08004B
-			public const int alertTitle = 2131230795;
+			public const int adjust_width = 2131230795;
 			
 			// aapt resource value: 0x7F08004C
-			public const int aligned = 2131230796;
+			public const int alertTitle = 2131230796;
 			
 			// aapt resource value: 0x7F08004D
-			public const int all = 2131230797;
+			public const int aligned = 2131230797;
 			
 			// aapt resource value: 0x7F08004E
-			public const int allStates = 2131230798;
+			public const int all = 2131230798;
+			
+			// aapt resource value: 0x7F08004F
+			public const int allStates = 2131230799;
 			
 			// aapt resource value: 0x7F080000
 			public const int ALT = 2131230720;
 			
-			// aapt resource value: 0x7F08004F
-			public const int always = 2131230799;
-			
 			// aapt resource value: 0x7F080050
-			public const int animateToEnd = 2131230800;
+			public const int always = 2131230800;
 			
 			// aapt resource value: 0x7F080051
-			public const int animateToStart = 2131230801;
-			
-			// aapt resource value: 0x7F080053
-			public const int anticipate = 2131230803;
+			public const int animateToEnd = 2131230801;
 			
 			// aapt resource value: 0x7F080052
-			public const int antiClockwise = 2131230802;
+			public const int animateToStart = 2131230802;
 			
 			// aapt resource value: 0x7F080054
-			public const int arc = 2131230804;
+			public const int anticipate = 2131230804;
+			
+			// aapt resource value: 0x7F080053
+			public const int antiClockwise = 2131230803;
 			
 			// aapt resource value: 0x7F080055
-			public const int asConfigured = 2131230805;
+			public const int arc = 2131230805;
 			
 			// aapt resource value: 0x7F080056
-			public const int async = 2131230806;
+			public const int asConfigured = 2131230806;
 			
 			// aapt resource value: 0x7F080057
-			public const int auto = 2131230807;
+			public const int async = 2131230807;
 			
 			// aapt resource value: 0x7F080058
-			public const int autoComplete = 2131230808;
+			public const int auto = 2131230808;
 			
 			// aapt resource value: 0x7F080059
-			public const int autoCompleteToEnd = 2131230809;
+			public const int autoComplete = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int autoCompleteToStart = 2131230810;
+			public const int autoCompleteToEnd = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
-			public const int automatic = 2131230811;
+			public const int autoCompleteToStart = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int ball = 2131230812;
+			public const int automatic = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
-			public const int barrier = 2131230813;
+			public const int ball = 2131230813;
 			
 			// aapt resource value: 0x7F08005E
-			public const int baseline = 2131230814;
+			public const int barrier = 2131230814;
 			
 			// aapt resource value: 0x7F08005F
-			public const int battery = 2131230815;
-			
-			// aapt resource value: 0x7F080061
-			public const int beginning = 2131230817;
+			public const int baseline = 2131230815;
 			
 			// aapt resource value: 0x7F080060
-			public const int beginOnFirstDraw = 2131230816;
+			public const int battery = 2131230816;
 			
 			// aapt resource value: 0x7F080062
-			public const int bestChoice = 2131230818;
+			public const int beginning = 2131230818;
+			
+			// aapt resource value: 0x7F080061
+			public const int beginOnFirstDraw = 2131230817;
 			
 			// aapt resource value: 0x7F080063
-			public const int blocking = 2131230819;
+			public const int bestChoice = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int border = 2131230820;
+			public const int blocking = 2131230820;
+			
+			// aapt resource value: 0x7F080065
+			public const int border = 2131230821;
 			
 			// aapt resource value: 0x7F080003
 			public const int BorderView = 2131230723;
 			
-			// aapt resource value: 0x7F080065
-			public const int bottom = 2131230821;
-			
 			// aapt resource value: 0x7F080066
-			public const int bottomtab_navarea = 2131230822;
+			public const int bottom = 2131230822;
 			
 			// aapt resource value: 0x7F080067
-			public const int bottomtab_tabbar = 2131230823;
+			public const int bottomtab_navarea = 2131230823;
+			
+			// aapt resource value: 0x7F080068
+			public const int bottomtab_tabbar = 2131230824;
 			
 			// aapt resource value: 0x7F080001
 			public const int BOTTOM_END = 2131230721;
@@ -23335,1397 +26213,1400 @@ namespace PetArmy.Droid
 			// aapt resource value: 0x7F080002
 			public const int BOTTOM_START = 2131230722;
 			
-			// aapt resource value: 0x7F080068
-			public const int bounce = 2131230824;
-			
 			// aapt resource value: 0x7F080069
-			public const int bounceBoth = 2131230825;
+			public const int bounce = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int bounceEnd = 2131230826;
+			public const int bounceBoth = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int bounceStart = 2131230827;
+			public const int bounceEnd = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int box = 2131230828;
+			public const int bounceStart = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int box_count = 2131230829;
+			public const int box = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int browser_actions_header_text = 2131230830;
-			
-			// aapt resource value: 0x7F080071
-			public const int browser_actions_menu_items = 2131230833;
+			public const int box_count = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int browser_actions_menu_item_icon = 2131230831;
-			
-			// aapt resource value: 0x7F080070
-			public const int browser_actions_menu_item_text = 2131230832;
+			public const int browser_actions_header_text = 2131230831;
 			
 			// aapt resource value: 0x7F080072
-			public const int browser_actions_menu_view = 2131230834;
+			public const int browser_actions_menu_items = 2131230834;
+			
+			// aapt resource value: 0x7F080070
+			public const int browser_actions_menu_item_icon = 2131230832;
+			
+			// aapt resource value: 0x7F080071
+			public const int browser_actions_menu_item_text = 2131230833;
 			
 			// aapt resource value: 0x7F080073
-			public const int button = 2131230835;
+			public const int browser_actions_menu_view = 2131230835;
 			
 			// aapt resource value: 0x7F080074
-			public const int buttonPanel = 2131230836;
+			public const int button = 2131230836;
 			
 			// aapt resource value: 0x7F080075
-			public const int cache_measures = 2131230837;
+			public const int buttonPanel = 2131230837;
 			
 			// aapt resource value: 0x7F080076
-			public const int cameratexture = 2131230838;
+			public const int cache_measures = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int cancel_action = 2131230839;
+			public const int cameratexture = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int cancel_button = 2131230840;
+			public const int cancel_action = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int carryVelocity = 2131230841;
+			public const int cancel_button = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int center = 2131230842;
+			public const int carryVelocity = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int center_horizontal = 2131230843;
+			public const int center = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int center_vertical = 2131230844;
+			public const int center_horizontal = 2131230844;
 			
 			// aapt resource value: 0x7F08007D
-			public const int chain = 2131230845;
+			public const int center_vertical = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int chains = 2131230846;
+			public const int chain = 2131230846;
 			
 			// aapt resource value: 0x7F08007F
-			public const int checkbox = 2131230847;
+			public const int chains = 2131230847;
 			
 			// aapt resource value: 0x7F080080
-			public const int @checked = 2131230848;
+			public const int checkbox = 2131230848;
 			
 			// aapt resource value: 0x7F080081
-			public const int chip = 2131230849;
+			public const int @checked = 2131230849;
 			
 			// aapt resource value: 0x7F080082
-			public const int chip1 = 2131230850;
+			public const int chip = 2131230850;
 			
 			// aapt resource value: 0x7F080083
-			public const int chip2 = 2131230851;
+			public const int chip1 = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int chip3 = 2131230852;
+			public const int chip2 = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int chip_group = 2131230853;
+			public const int chip3 = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int chronometer = 2131230854;
+			public const int chip_group = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int circle_center = 2131230855;
+			public const int chronometer = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int clear_text = 2131230856;
+			public const int circle_center = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int clip_horizontal = 2131230857;
+			public const int clear_text = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
-			public const int clip_vertical = 2131230858;
+			public const int clip_horizontal = 2131230858;
 			
 			// aapt resource value: 0x7F08008B
-			public const int clockwise = 2131230859;
+			public const int clip_vertical = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int closest = 2131230860;
+			public const int clockwise = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int collapseActionView = 2131230861;
-			
-			// aapt resource value: 0x7F080098
-			public const int compute = 2131230872;
+			public const int closest = 2131230861;
 			
 			// aapt resource value: 0x7F08008E
-			public const int com_facebook_body_frame = 2131230862;
-			
-			// aapt resource value: 0x7F08008F
-			public const int com_facebook_button_xout = 2131230863;
-			
-			// aapt resource value: 0x7F080090
-			public const int com_facebook_device_auth_instructions = 2131230864;
-			
-			// aapt resource value: 0x7F080091
-			public const int com_facebook_fragment_container = 2131230865;
-			
-			// aapt resource value: 0x7F080092
-			public const int com_facebook_login_fragment_progress_bar = 2131230866;
-			
-			// aapt resource value: 0x7F080093
-			public const int com_facebook_smart_instructions_0 = 2131230867;
-			
-			// aapt resource value: 0x7F080094
-			public const int com_facebook_smart_instructions_or = 2131230868;
-			
-			// aapt resource value: 0x7F080095
-			public const int com_facebook_tooltip_bubble_view_bottom_pointer = 2131230869;
-			
-			// aapt resource value: 0x7F080096
-			public const int com_facebook_tooltip_bubble_view_text_body = 2131230870;
-			
-			// aapt resource value: 0x7F080097
-			public const int com_facebook_tooltip_bubble_view_top_pointer = 2131230871;
-			
-			// aapt resource value: 0x7F08009A
-			public const int confirmation_code = 2131230874;
+			public const int collapseActionView = 2131230862;
 			
 			// aapt resource value: 0x7F080099
-			public const int confirm_button = 2131230873;
+			public const int compute = 2131230873;
+			
+			// aapt resource value: 0x7F08008F
+			public const int com_facebook_body_frame = 2131230863;
+			
+			// aapt resource value: 0x7F080090
+			public const int com_facebook_button_xout = 2131230864;
+			
+			// aapt resource value: 0x7F080091
+			public const int com_facebook_device_auth_instructions = 2131230865;
+			
+			// aapt resource value: 0x7F080092
+			public const int com_facebook_fragment_container = 2131230866;
+			
+			// aapt resource value: 0x7F080093
+			public const int com_facebook_login_fragment_progress_bar = 2131230867;
+			
+			// aapt resource value: 0x7F080094
+			public const int com_facebook_smart_instructions_0 = 2131230868;
+			
+			// aapt resource value: 0x7F080095
+			public const int com_facebook_smart_instructions_or = 2131230869;
+			
+			// aapt resource value: 0x7F080096
+			public const int com_facebook_tooltip_bubble_view_bottom_pointer = 2131230870;
+			
+			// aapt resource value: 0x7F080097
+			public const int com_facebook_tooltip_bubble_view_text_body = 2131230871;
+			
+			// aapt resource value: 0x7F080098
+			public const int com_facebook_tooltip_bubble_view_top_pointer = 2131230872;
 			
 			// aapt resource value: 0x7F08009B
-			public const int constraint = 2131230875;
+			public const int confirmation_code = 2131230875;
+			
+			// aapt resource value: 0x7F08009A
+			public const int confirm_button = 2131230874;
 			
 			// aapt resource value: 0x7F08009C
-			public const int container = 2131230876;
+			public const int constraint = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int content = 2131230877;
+			public const int container = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int contentPanel = 2131230878;
+			public const int content = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int contiguous = 2131230879;
+			public const int contentPanel = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int continuousVelocity = 2131230880;
+			public const int contiguous = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int coordinator = 2131230881;
+			public const int continuousVelocity = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int cos = 2131230882;
+			public const int coordinator = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int counterclockwise = 2131230883;
+			public const int cos = 2131230883;
+			
+			// aapt resource value: 0x7F0800A4
+			public const int counterclockwise = 2131230884;
 			
 			// aapt resource value: 0x7F080004
 			public const int CTRL = 2131230724;
 			
-			// aapt resource value: 0x7F0800A4
-			public const int cupertino = 2131230884;
-			
 			// aapt resource value: 0x7F0800A5
-			public const int currentState = 2131230885;
+			public const int cupertino = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int custom = 2131230886;
+			public const int currentState = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int customPanel = 2131230887;
+			public const int custom = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int cut = 2131230888;
+			public const int customPanel = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int dark = 2131230889;
+			public const int cut = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int date_picker_actions = 2131230890;
+			public const int dark = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int decelerate = 2131230891;
+			public const int date_picker_actions = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int decelerateAndComplete = 2131230892;
+			public const int decelerate = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int decimalMode = 2131230893;
+			public const int decelerateAndComplete = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int decor_content_parent = 2131230894;
+			public const int decimalMode = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int default_activity_button = 2131230895;
+			public const int decor_content_parent = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int deltaRelative = 2131230896;
+			public const int default_activity_button = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int dependency_ordering = 2131230897;
+			public const int deltaRelative = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int design_bottom_sheet = 2131230898;
+			public const int dependency_ordering = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int design_menu_item_action_area = 2131230899;
+			public const int design_bottom_sheet = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int design_menu_item_action_area_stub = 2131230900;
+			public const int design_menu_item_action_area = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int design_menu_item_text = 2131230901;
+			public const int design_menu_item_action_area_stub = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int design_navigation_view = 2131230902;
+			public const int design_menu_item_text = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int dialog_button = 2131230903;
+			public const int design_navigation_view = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int dimensions = 2131230904;
+			public const int dialog_button = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int direct = 2131230905;
+			public const int dimensions = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int disableHome = 2131230906;
+			public const int direct = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int disableIntraAutoTransition = 2131230907;
+			public const int disableHome = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int disablePostScroll = 2131230908;
+			public const int disableIntraAutoTransition = 2131230908;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int disableScroll = 2131230909;
+			public const int disablePostScroll = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int disjoint = 2131230910;
+			public const int disableScroll = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int display_always = 2131230911;
+			public const int disjoint = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int doubleCircle = 2131230912;
+			public const int display_always = 2131230912;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int doubleMode = 2131230913;
+			public const int doubleCircle = 2131230913;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int dragAnticlockwise = 2131230914;
+			public const int doubleMode = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int dragClockwise = 2131230915;
+			public const int dragAnticlockwise = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int dragDown = 2131230916;
+			public const int dragClockwise = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int dragEnd = 2131230917;
+			public const int dragDown = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int dragLeft = 2131230918;
+			public const int dragEnd = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int dragRight = 2131230919;
+			public const int dragLeft = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int dragStart = 2131230920;
+			public const int dragRight = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int dragUp = 2131230921;
+			public const int dragStart = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int dropdown_menu = 2131230922;
+			public const int dragUp = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int easeIn = 2131230923;
+			public const int dropdown_menu = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int easeInOut = 2131230924;
+			public const int easeIn = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int easeOut = 2131230925;
+			public const int easeInOut = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int east = 2131230926;
+			public const int easeOut = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int ecg = 2131230927;
+			public const int east = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int edit_query = 2131230928;
+			public const int ecg = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int elastic = 2131230929;
+			public const int edit_query = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int end = 2131230930;
+			public const int elastic = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int endToStart = 2131230931;
+			public const int end = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int end_padder = 2131230932;
+			public const int endToStart = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int enterAlways = 2131230933;
+			public const int end_padder = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int enterAlwaysCollapsed = 2131230934;
+			public const int enterAlways = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int exitUntilCollapsed = 2131230935;
-			
-			// aapt resource value: 0x7F0800D9
-			public const int expanded_menu = 2131230937;
+			public const int enterAlwaysCollapsed = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int expand_activities_button = 2131230936;
+			public const int exitUntilCollapsed = 2131230936;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int fade = 2131230938;
+			public const int expanded_menu = 2131230938;
+			
+			// aapt resource value: 0x7F0800D9
+			public const int expand_activities_button = 2131230937;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int fill = 2131230939;
-			
-			// aapt resource value: 0x7F0800DE
-			public const int filled = 2131230942;
+			public const int fade = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int fill_horizontal = 2131230940;
-			
-			// aapt resource value: 0x7F0800DD
-			public const int fill_vertical = 2131230941;
+			public const int fill = 2131230940;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int fitToContents = 2131230943;
+			public const int filled = 2131230943;
+			
+			// aapt resource value: 0x7F0800DD
+			public const int fill_horizontal = 2131230941;
+			
+			// aapt resource value: 0x7F0800DE
+			public const int fill_vertical = 2131230942;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int @fixed = 2131230944;
+			public const int fitToContents = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int flip = 2131230945;
+			public const int @fixed = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int floating = 2131230946;
+			public const int flip = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int flyoutcontent_appbar = 2131230947;
+			public const int floating = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int forever = 2131230948;
+			public const int flyoutcontent_appbar = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int fragment_container_view_tag = 2131230949;
+			public const int forever = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int frost = 2131230950;
+			public const int fragment_container_view_tag = 2131230950;
+			
+			// aapt resource value: 0x7F0800E7
+			public const int frost = 2131230951;
 			
 			// aapt resource value: 0x7F080005
 			public const int FUNCTION = 2131230725;
 			
-			// aapt resource value: 0x7F0800E7
-			public const int gearBox = 2131230951;
-			
 			// aapt resource value: 0x7F0800E8
-			public const int ghost_view = 2131230952;
+			public const int gearBox = 2131230952;
 			
 			// aapt resource value: 0x7F0800E9
-			public const int ghost_view_holder = 2131230953;
+			public const int ghost_view = 2131230953;
 			
 			// aapt resource value: 0x7F0800EA
-			public const int globe = 2131230954;
+			public const int ghost_view_holder = 2131230954;
 			
 			// aapt resource value: 0x7F0800EB
-			public const int gone = 2131230955;
+			public const int globe = 2131230955;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int graph = 2131230956;
+			public const int gone = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int graph_wrap = 2131230957;
-			
-			// aapt resource value: 0x7F0800EF
-			public const int grouping = 2131230959;
-			
-			// aapt resource value: 0x7F0800F0
-			public const int groups = 2131230960;
+			public const int graph = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int group_divider = 2131230958;
+			public const int graph_wrap = 2131230958;
+			
+			// aapt resource value: 0x7F0800F0
+			public const int grouping = 2131230960;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int guideline = 2131230961;
+			public const int groups = 2131230961;
+			
+			// aapt resource value: 0x7F0800EF
+			public const int group_divider = 2131230959;
 			
 			// aapt resource value: 0x7F0800F2
-			public const int header_title = 2131230962;
+			public const int guideline = 2131230962;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int hideable = 2131230963;
+			public const int header_title = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int home = 2131230964;
+			public const int hideable = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int homeAsUp = 2131230965;
+			public const int home = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int honorRequest = 2131230966;
+			public const int homeAsUp = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int horizontalPulsingBox = 2131230967;
+			public const int honorRequest = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int horizontal_only = 2131230968;
+			public const int horizontalPulsingBox = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int icon = 2131230969;
+			public const int horizontal_only = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int icon_frame = 2131230970;
+			public const int icon = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int icon_group = 2131230971;
+			public const int icon_frame = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int icon_only = 2131230972;
+			public const int icon_group = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int ifRoom = 2131230973;
+			public const int icon_only = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int ignore = 2131230974;
+			public const int ifRoom = 2131230974;
 			
 			// aapt resource value: 0x7F0800FF
-			public const int ignoreRequest = 2131230975;
+			public const int ignore = 2131230975;
 			
 			// aapt resource value: 0x7F080100
-			public const int image = 2131230976;
+			public const int ignoreRequest = 2131230976;
 			
 			// aapt resource value: 0x7F080101
-			public const int imagewithtext = 2131230977;
+			public const int image = 2131230977;
 			
 			// aapt resource value: 0x7F080102
-			public const int immediateStop = 2131230978;
+			public const int imagewithtext = 2131230978;
 			
 			// aapt resource value: 0x7F080103
-			public const int included = 2131230979;
+			public const int immediateStop = 2131230979;
 			
 			// aapt resource value: 0x7F080104
-			public const int indeterminate = 2131230980;
+			public const int included = 2131230980;
 			
 			// aapt resource value: 0x7F080105
-			public const int info = 2131230981;
+			public const int indeterminate = 2131230981;
 			
 			// aapt resource value: 0x7F080106
-			public const int inline = 2131230982;
+			public const int info = 2131230982;
 			
 			// aapt resource value: 0x7F080107
-			public const int invisible = 2131230983;
+			public const int inline = 2131230983;
 			
 			// aapt resource value: 0x7F080108
-			public const int inward = 2131230984;
+			public const int invisible = 2131230984;
 			
 			// aapt resource value: 0x7F080109
-			public const int italic = 2131230985;
+			public const int inward = 2131230985;
 			
 			// aapt resource value: 0x7F08010A
-			public const int item_touch_helper_previous_elevation = 2131230986;
-			
-			// aapt resource value: 0x7F08010B
-			public const int jumpToEnd = 2131230987;
-			
-			// aapt resource value: 0x7F08010C
-			public const int jumpToStart = 2131230988;
-			
-			// aapt resource value: 0x7F08010D
-			public const int labeled = 2131230989;
-			
-			// aapt resource value: 0x7F08010E
-			public const int large = 2131230990;
-			
-			// aapt resource value: 0x7F08010F
-			public const int layout = 2131230991;
-			
-			// aapt resource value: 0x7F080110
-			public const int left = 2131230992;
-			
-			// aapt resource value: 0x7F080111
-			public const int leftToRight = 2131230993;
-			
-			// aapt resource value: 0x7F080112
-			public const int legacy = 2131230994;
-			
-			// aapt resource value: 0x7F080113
-			public const int light = 2131230995;
-			
-			// aapt resource value: 0x7F080114
-			public const int line1 = 2131230996;
-			
-			// aapt resource value: 0x7F080115
-			public const int line3 = 2131230997;
-			
-			// aapt resource value: 0x7F080116
-			public const int linear = 2131230998;
-			
-			// aapt resource value: 0x7F080117
-			public const int listMode = 2131230999;
-			
-			// aapt resource value: 0x7F080118
-			public const int list_item = 2131231000;
-			
-			// aapt resource value: 0x7F080119
-			public const int loginButton = 2131231001;
-			
-			// aapt resource value: 0x7F08011E
-			public const int mainImage = 2131231006;
-			
-			// aapt resource value: 0x7F08011A
-			public const int main_appbar = 2131231002;
-			
-			// aapt resource value: 0x7F08011B
-			public const int main_tablayout = 2131231003;
-			
-			// aapt resource value: 0x7F08011C
-			public const int main_toolbar = 2131231004;
-			
-			// aapt resource value: 0x7F08011D
-			public const int main_viewpager = 2131231005;
-			
-			// aapt resource value: 0x7F08011F
-			public const int masked = 2131231007;
-			
-			// aapt resource value: 0x7F080120
-			public const int match_constraint = 2131231008;
-			
-			// aapt resource value: 0x7F080121
-			public const int match_parent = 2131231009;
-			
-			// aapt resource value: 0x7F080122
-			public const int material_clock_display = 2131231010;
-			
-			// aapt resource value: 0x7F080123
-			public const int material_clock_face = 2131231011;
-			
-			// aapt resource value: 0x7F080124
-			public const int material_clock_hand = 2131231012;
-			
-			// aapt resource value: 0x7F080125
-			public const int material_clock_period_am_button = 2131231013;
-			
-			// aapt resource value: 0x7F080126
-			public const int material_clock_period_pm_button = 2131231014;
-			
-			// aapt resource value: 0x7F080127
-			public const int material_clock_period_toggle = 2131231015;
-			
-			// aapt resource value: 0x7F080128
-			public const int material_hour_text_input = 2131231016;
-			
-			// aapt resource value: 0x7F080129
-			public const int material_hour_tv = 2131231017;
-			
-			// aapt resource value: 0x7F08012A
-			public const int material_label = 2131231018;
-			
-			// aapt resource value: 0x7F08012B
-			public const int material_minute_text_input = 2131231019;
-			
-			// aapt resource value: 0x7F08012C
-			public const int material_minute_tv = 2131231020;
-			
-			// aapt resource value: 0x7F08012D
-			public const int material_textinput_timepicker = 2131231021;
-			
-			// aapt resource value: 0x7F08012E
-			public const int material_timepicker_cancel_button = 2131231022;
-			
-			// aapt resource value: 0x7F08012F
-			public const int material_timepicker_container = 2131231023;
-			
-			// aapt resource value: 0x7F080130
-			public const int material_timepicker_edit_text = 2131231024;
-			
-			// aapt resource value: 0x7F080131
-			public const int material_timepicker_mode_button = 2131231025;
-			
-			// aapt resource value: 0x7F080132
-			public const int material_timepicker_ok_button = 2131231026;
-			
-			// aapt resource value: 0x7F080133
-			public const int material_timepicker_view = 2131231027;
-			
-			// aapt resource value: 0x7F080134
-			public const int material_value_index = 2131231028;
-			
-			// aapt resource value: 0x7F080135
-			public const int media_actions = 2131231029;
-			
-			// aapt resource value: 0x7F080136
-			public const int media_controller_compat_view_tag = 2131231030;
-			
-			// aapt resource value: 0x7F080137
-			public const int message = 2131231031;
+			public const int italic = 2131230986;
 			
 			// aapt resource value: 0x7F080006
-			public const int META = 2131230726;
+			public const int Itemname = 2131230726;
+			
+			// aapt resource value: 0x7F08010B
+			public const int item_touch_helper_previous_elevation = 2131230987;
+			
+			// aapt resource value: 0x7F08010C
+			public const int jumpToEnd = 2131230988;
+			
+			// aapt resource value: 0x7F08010D
+			public const int jumpToStart = 2131230989;
+			
+			// aapt resource value: 0x7F08010E
+			public const int labeled = 2131230990;
+			
+			// aapt resource value: 0x7F08010F
+			public const int large = 2131230991;
+			
+			// aapt resource value: 0x7F080110
+			public const int layout = 2131230992;
+			
+			// aapt resource value: 0x7F080111
+			public const int left = 2131230993;
+			
+			// aapt resource value: 0x7F080112
+			public const int leftToRight = 2131230994;
+			
+			// aapt resource value: 0x7F080113
+			public const int legacy = 2131230995;
+			
+			// aapt resource value: 0x7F080114
+			public const int light = 2131230996;
+			
+			// aapt resource value: 0x7F080115
+			public const int line1 = 2131230997;
+			
+			// aapt resource value: 0x7F080116
+			public const int line3 = 2131230998;
+			
+			// aapt resource value: 0x7F080117
+			public const int linear = 2131230999;
+			
+			// aapt resource value: 0x7F080118
+			public const int listMode = 2131231000;
+			
+			// aapt resource value: 0x7F080119
+			public const int list_item = 2131231001;
+			
+			// aapt resource value: 0x7F08011A
+			public const int loginButton = 2131231002;
+			
+			// aapt resource value: 0x7F08011F
+			public const int mainImage = 2131231007;
+			
+			// aapt resource value: 0x7F08011B
+			public const int main_appbar = 2131231003;
+			
+			// aapt resource value: 0x7F08011C
+			public const int main_tablayout = 2131231004;
+			
+			// aapt resource value: 0x7F08011D
+			public const int main_toolbar = 2131231005;
+			
+			// aapt resource value: 0x7F08011E
+			public const int main_viewpager = 2131231006;
+			
+			// aapt resource value: 0x7F080120
+			public const int masked = 2131231008;
+			
+			// aapt resource value: 0x7F080121
+			public const int match_constraint = 2131231009;
+			
+			// aapt resource value: 0x7F080122
+			public const int match_parent = 2131231010;
+			
+			// aapt resource value: 0x7F080123
+			public const int material_clock_display = 2131231011;
+			
+			// aapt resource value: 0x7F080124
+			public const int material_clock_face = 2131231012;
+			
+			// aapt resource value: 0x7F080125
+			public const int material_clock_hand = 2131231013;
+			
+			// aapt resource value: 0x7F080126
+			public const int material_clock_period_am_button = 2131231014;
+			
+			// aapt resource value: 0x7F080127
+			public const int material_clock_period_pm_button = 2131231015;
+			
+			// aapt resource value: 0x7F080128
+			public const int material_clock_period_toggle = 2131231016;
+			
+			// aapt resource value: 0x7F080129
+			public const int material_hour_text_input = 2131231017;
+			
+			// aapt resource value: 0x7F08012A
+			public const int material_hour_tv = 2131231018;
+			
+			// aapt resource value: 0x7F08012B
+			public const int material_label = 2131231019;
+			
+			// aapt resource value: 0x7F08012C
+			public const int material_minute_text_input = 2131231020;
+			
+			// aapt resource value: 0x7F08012D
+			public const int material_minute_tv = 2131231021;
+			
+			// aapt resource value: 0x7F08012E
+			public const int material_textinput_timepicker = 2131231022;
+			
+			// aapt resource value: 0x7F08012F
+			public const int material_timepicker_cancel_button = 2131231023;
+			
+			// aapt resource value: 0x7F080130
+			public const int material_timepicker_container = 2131231024;
+			
+			// aapt resource value: 0x7F080131
+			public const int material_timepicker_edit_text = 2131231025;
+			
+			// aapt resource value: 0x7F080132
+			public const int material_timepicker_mode_button = 2131231026;
+			
+			// aapt resource value: 0x7F080133
+			public const int material_timepicker_ok_button = 2131231027;
+			
+			// aapt resource value: 0x7F080134
+			public const int material_timepicker_view = 2131231028;
+			
+			// aapt resource value: 0x7F080135
+			public const int material_value_index = 2131231029;
+			
+			// aapt resource value: 0x7F080136
+			public const int media_actions = 2131231030;
+			
+			// aapt resource value: 0x7F080137
+			public const int media_controller_compat_view_tag = 2131231031;
 			
 			// aapt resource value: 0x7F080138
-			public const int middle = 2131231032;
-			
-			// aapt resource value: 0x7F080139
-			public const int mini = 2131231033;
-			
-			// aapt resource value: 0x7F08013A
-			public const int month_grid = 2131231034;
-			
-			// aapt resource value: 0x7F08013B
-			public const int month_navigation_bar = 2131231035;
-			
-			// aapt resource value: 0x7F08013C
-			public const int month_navigation_fragment_toggle = 2131231036;
-			
-			// aapt resource value: 0x7F08013D
-			public const int month_navigation_next = 2131231037;
-			
-			// aapt resource value: 0x7F08013E
-			public const int month_navigation_previous = 2131231038;
-			
-			// aapt resource value: 0x7F08013F
-			public const int month_title = 2131231039;
-			
-			// aapt resource value: 0x7F080140
-			public const int motion_base = 2131231040;
-			
-			// aapt resource value: 0x7F080141
-			public const int movieTimer = 2131231041;
-			
-			// aapt resource value: 0x7F080142
-			public const int mtrl_anchor_parent = 2131231042;
-			
-			// aapt resource value: 0x7F080144
-			public const int mtrl_calendar_days_of_week = 2131231044;
-			
-			// aapt resource value: 0x7F080143
-			public const int mtrl_calendar_day_selector_frame = 2131231043;
-			
-			// aapt resource value: 0x7F080145
-			public const int mtrl_calendar_frame = 2131231045;
-			
-			// aapt resource value: 0x7F080146
-			public const int mtrl_calendar_main_pane = 2131231046;
-			
-			// aapt resource value: 0x7F080147
-			public const int mtrl_calendar_months = 2131231047;
-			
-			// aapt resource value: 0x7F080148
-			public const int mtrl_calendar_selection_frame = 2131231048;
-			
-			// aapt resource value: 0x7F080149
-			public const int mtrl_calendar_text_input_frame = 2131231049;
-			
-			// aapt resource value: 0x7F08014A
-			public const int mtrl_calendar_year_selector_frame = 2131231050;
-			
-			// aapt resource value: 0x7F08014B
-			public const int mtrl_card_checked_layer_id = 2131231051;
-			
-			// aapt resource value: 0x7F08014C
-			public const int mtrl_child_content_container = 2131231052;
-			
-			// aapt resource value: 0x7F08014D
-			public const int mtrl_internal_children_alpha_tag = 2131231053;
-			
-			// aapt resource value: 0x7F08014E
-			public const int mtrl_motion_snapshot_view = 2131231054;
-			
-			// aapt resource value: 0x7F08014F
-			public const int mtrl_picker_fullscreen = 2131231055;
-			
-			// aapt resource value: 0x7F080150
-			public const int mtrl_picker_header = 2131231056;
-			
-			// aapt resource value: 0x7F080151
-			public const int mtrl_picker_header_selection_text = 2131231057;
-			
-			// aapt resource value: 0x7F080152
-			public const int mtrl_picker_header_title_and_selection = 2131231058;
-			
-			// aapt resource value: 0x7F080153
-			public const int mtrl_picker_header_toggle = 2131231059;
-			
-			// aapt resource value: 0x7F080154
-			public const int mtrl_picker_text_input_date = 2131231060;
-			
-			// aapt resource value: 0x7F080155
-			public const int mtrl_picker_text_input_range_end = 2131231061;
-			
-			// aapt resource value: 0x7F080156
-			public const int mtrl_picker_text_input_range_start = 2131231062;
-			
-			// aapt resource value: 0x7F080157
-			public const int mtrl_picker_title_text = 2131231063;
-			
-			// aapt resource value: 0x7F080158
-			public const int mtrl_view_tag_bottom_padding = 2131231064;
-			
-			// aapt resource value: 0x7F080159
-			public const int multiply = 2131231065;
-			
-			// aapt resource value: 0x7F08015B
-			public const int navigation_bar_item_icon_view = 2131231067;
-			
-			// aapt resource value: 0x7F08015C
-			public const int navigation_bar_item_labels_group = 2131231068;
-			
-			// aapt resource value: 0x7F08015D
-			public const int navigation_bar_item_large_label_view = 2131231069;
-			
-			// aapt resource value: 0x7F08015E
-			public const int navigation_bar_item_small_label_view = 2131231070;
-			
-			// aapt resource value: 0x7F08015F
-			public const int navigation_header_container = 2131231071;
-			
-			// aapt resource value: 0x7F08015A
-			public const int nav_controller_view_tag = 2131231066;
-			
-			// aapt resource value: 0x7F080160
-			public const int never = 2131231072;
-			
-			// aapt resource value: 0x7F080161
-			public const int neverCompleteToEnd = 2131231073;
-			
-			// aapt resource value: 0x7F080162
-			public const int neverCompleteToStart = 2131231074;
-			
-			// aapt resource value: 0x7F080163
-			public const int never_display = 2131231075;
-			
-			// aapt resource value: 0x7F080166
-			public const int none = 2131231078;
-			
-			// aapt resource value: 0x7F080167
-			public const int normal = 2131231079;
-			
-			// aapt resource value: 0x7F080168
-			public const int north = 2131231080;
-			
-			// aapt resource value: 0x7F080164
-			public const int noScroll = 2131231076;
-			
-			// aapt resource value: 0x7F080165
-			public const int noState = 2131231077;
-			
-			// aapt resource value: 0x7F080169
-			public const int notification_background = 2131231081;
-			
-			// aapt resource value: 0x7F08016A
-			public const int notification_main_column = 2131231082;
-			
-			// aapt resource value: 0x7F08016B
-			public const int notification_main_column_container = 2131231083;
+			public const int message = 2131231032;
 			
 			// aapt resource value: 0x7F080007
-			public const int NO_DEBUG = 2131230727;
+			public const int META = 2131230727;
+			
+			// aapt resource value: 0x7F080139
+			public const int middle = 2131231033;
+			
+			// aapt resource value: 0x7F08013A
+			public const int mini = 2131231034;
+			
+			// aapt resource value: 0x7F08013B
+			public const int month_grid = 2131231035;
+			
+			// aapt resource value: 0x7F08013C
+			public const int month_navigation_bar = 2131231036;
+			
+			// aapt resource value: 0x7F08013D
+			public const int month_navigation_fragment_toggle = 2131231037;
+			
+			// aapt resource value: 0x7F08013E
+			public const int month_navigation_next = 2131231038;
+			
+			// aapt resource value: 0x7F08013F
+			public const int month_navigation_previous = 2131231039;
+			
+			// aapt resource value: 0x7F080140
+			public const int month_title = 2131231040;
+			
+			// aapt resource value: 0x7F080141
+			public const int motion_base = 2131231041;
+			
+			// aapt resource value: 0x7F080142
+			public const int movieTimer = 2131231042;
+			
+			// aapt resource value: 0x7F080143
+			public const int mtrl_anchor_parent = 2131231043;
+			
+			// aapt resource value: 0x7F080145
+			public const int mtrl_calendar_days_of_week = 2131231045;
+			
+			// aapt resource value: 0x7F080144
+			public const int mtrl_calendar_day_selector_frame = 2131231044;
+			
+			// aapt resource value: 0x7F080146
+			public const int mtrl_calendar_frame = 2131231046;
+			
+			// aapt resource value: 0x7F080147
+			public const int mtrl_calendar_main_pane = 2131231047;
+			
+			// aapt resource value: 0x7F080148
+			public const int mtrl_calendar_months = 2131231048;
+			
+			// aapt resource value: 0x7F080149
+			public const int mtrl_calendar_selection_frame = 2131231049;
+			
+			// aapt resource value: 0x7F08014A
+			public const int mtrl_calendar_text_input_frame = 2131231050;
+			
+			// aapt resource value: 0x7F08014B
+			public const int mtrl_calendar_year_selector_frame = 2131231051;
+			
+			// aapt resource value: 0x7F08014C
+			public const int mtrl_card_checked_layer_id = 2131231052;
+			
+			// aapt resource value: 0x7F08014D
+			public const int mtrl_child_content_container = 2131231053;
+			
+			// aapt resource value: 0x7F08014E
+			public const int mtrl_internal_children_alpha_tag = 2131231054;
+			
+			// aapt resource value: 0x7F08014F
+			public const int mtrl_motion_snapshot_view = 2131231055;
+			
+			// aapt resource value: 0x7F080150
+			public const int mtrl_picker_fullscreen = 2131231056;
+			
+			// aapt resource value: 0x7F080151
+			public const int mtrl_picker_header = 2131231057;
+			
+			// aapt resource value: 0x7F080152
+			public const int mtrl_picker_header_selection_text = 2131231058;
+			
+			// aapt resource value: 0x7F080153
+			public const int mtrl_picker_header_title_and_selection = 2131231059;
+			
+			// aapt resource value: 0x7F080154
+			public const int mtrl_picker_header_toggle = 2131231060;
+			
+			// aapt resource value: 0x7F080155
+			public const int mtrl_picker_text_input_date = 2131231061;
+			
+			// aapt resource value: 0x7F080156
+			public const int mtrl_picker_text_input_range_end = 2131231062;
+			
+			// aapt resource value: 0x7F080157
+			public const int mtrl_picker_text_input_range_start = 2131231063;
+			
+			// aapt resource value: 0x7F080158
+			public const int mtrl_picker_title_text = 2131231064;
+			
+			// aapt resource value: 0x7F080159
+			public const int mtrl_view_tag_bottom_padding = 2131231065;
+			
+			// aapt resource value: 0x7F08015A
+			public const int multiply = 2131231066;
+			
+			// aapt resource value: 0x7F08015C
+			public const int navigation_bar_item_icon_view = 2131231068;
+			
+			// aapt resource value: 0x7F08015D
+			public const int navigation_bar_item_labels_group = 2131231069;
+			
+			// aapt resource value: 0x7F08015E
+			public const int navigation_bar_item_large_label_view = 2131231070;
+			
+			// aapt resource value: 0x7F08015F
+			public const int navigation_bar_item_small_label_view = 2131231071;
+			
+			// aapt resource value: 0x7F080160
+			public const int navigation_header_container = 2131231072;
+			
+			// aapt resource value: 0x7F08015B
+			public const int nav_controller_view_tag = 2131231067;
+			
+			// aapt resource value: 0x7F080161
+			public const int never = 2131231073;
+			
+			// aapt resource value: 0x7F080162
+			public const int neverCompleteToEnd = 2131231074;
+			
+			// aapt resource value: 0x7F080163
+			public const int neverCompleteToStart = 2131231075;
+			
+			// aapt resource value: 0x7F080164
+			public const int never_display = 2131231076;
+			
+			// aapt resource value: 0x7F080167
+			public const int none = 2131231079;
+			
+			// aapt resource value: 0x7F080168
+			public const int normal = 2131231080;
+			
+			// aapt resource value: 0x7F080169
+			public const int north = 2131231081;
+			
+			// aapt resource value: 0x7F080165
+			public const int noScroll = 2131231077;
+			
+			// aapt resource value: 0x7F080166
+			public const int noState = 2131231078;
+			
+			// aapt resource value: 0x7F08016A
+			public const int notification_background = 2131231082;
+			
+			// aapt resource value: 0x7F08016B
+			public const int notification_main_column = 2131231083;
 			
 			// aapt resource value: 0x7F08016C
-			public const int off = 2131231084;
-			
-			// aapt resource value: 0x7F08016D
-			public const int on = 2131231085;
-			
-			// aapt resource value: 0x7F08016E
-			public const int onKeyFocus = 2131231086;
-			
-			// aapt resource value: 0x7F08016F
-			public const int onLostFocus = 2131231087;
-			
-			// aapt resource value: 0x7F080170
-			public const int open_graph = 2131231088;
-			
-			// aapt resource value: 0x7F080171
-			public const int outline = 2131231089;
-			
-			// aapt resource value: 0x7F080172
-			public const int outward = 2131231090;
-			
-			// aapt resource value: 0x7F080173
-			public const int overshoot = 2131231091;
-			
-			// aapt resource value: 0x7F080174
-			public const int packed = 2131231092;
-			
-			// aapt resource value: 0x7F080175
-			public const int page = 2131231093;
-			
-			// aapt resource value: 0x7F080176
-			public const int parallax = 2131231094;
-			
-			// aapt resource value: 0x7F080177
-			public const int parent = 2131231095;
-			
-			// aapt resource value: 0x7F080178
-			public const int parentPanel = 2131231096;
-			
-			// aapt resource value: 0x7F080179
-			public const int parentRelative = 2131231097;
-			
-			// aapt resource value: 0x7F08017A
-			public const int parent_matrix = 2131231098;
-			
-			// aapt resource value: 0x7F08017B
-			public const int password_toggle = 2131231099;
-			
-			// aapt resource value: 0x7F08017C
-			public const int path = 2131231100;
-			
-			// aapt resource value: 0x7F08017D
-			public const int pathRelative = 2131231101;
-			
-			// aapt resource value: 0x7F08017E
-			public const int peekHeight = 2131231102;
-			
-			// aapt resource value: 0x7F08017F
-			public const int percent = 2131231103;
-			
-			// aapt resource value: 0x7F080180
-			public const int pin = 2131231104;
-			
-			// aapt resource value: 0x7F080181
-			public const int position = 2131231105;
-			
-			// aapt resource value: 0x7F080182
-			public const int postLayout = 2131231106;
-			
-			// aapt resource value: 0x7F080183
-			public const int print = 2131231107;
-			
-			// aapt resource value: 0x7F080184
-			public const int progress_bar = 2131231108;
-			
-			// aapt resource value: 0x7F080185
-			public const int progress_circular = 2131231109;
-			
-			// aapt resource value: 0x7F080186
-			public const int progress_horizontal = 2131231110;
-			
-			// aapt resource value: 0x7F080187
-			public const int radio = 2131231111;
-			
-			// aapt resource value: 0x7F080188
-			public const int ratio = 2131231112;
-			
-			// aapt resource value: 0x7F080189
-			public const int rectangle = 2131231113;
-			
-			// aapt resource value: 0x7F08018A
-			public const int rectangles = 2131231114;
-			
-			// aapt resource value: 0x7F08018B
-			public const int recycler_view = 2131231115;
-			
-			// aapt resource value: 0x7F08018C
-			public const int reverseSawtooth = 2131231116;
-			
-			// aapt resource value: 0x7F08018D
-			public const int right = 2131231117;
-			
-			// aapt resource value: 0x7F08018E
-			public const int rightToLeft = 2131231118;
-			
-			// aapt resource value: 0x7F08018F
-			public const int right_icon = 2131231119;
-			
-			// aapt resource value: 0x7F080190
-			public const int right_side = 2131231120;
-			
-			// aapt resource value: 0x7F080191
-			public const int rollingBall = 2131231121;
-			
-			// aapt resource value: 0x7F080192
-			public const int rounded = 2131231122;
-			
-			// aapt resource value: 0x7F080193
-			public const int row_index_key = 2131231123;
-			
-			// aapt resource value: 0x7F080194
-			public const int save_non_transition_alpha = 2131231124;
-			
-			// aapt resource value: 0x7F080195
-			public const int save_overlay_view = 2131231125;
-			
-			// aapt resource value: 0x7F080196
-			public const int sawtooth = 2131231126;
-			
-			// aapt resource value: 0x7F080197
-			public const int scale = 2131231127;
-			
-			// aapt resource value: 0x7F080198
-			public const int screen = 2131231128;
-			
-			// aapt resource value: 0x7F080199
-			public const int scroll = 2131231129;
-			
-			// aapt resource value: 0x7F08019D
-			public const int scrollable = 2131231133;
-			
-			// aapt resource value: 0x7F08019A
-			public const int scrollIndicatorDown = 2131231130;
-			
-			// aapt resource value: 0x7F08019B
-			public const int scrollIndicatorUp = 2131231131;
-			
-			// aapt resource value: 0x7F08019C
-			public const int scrollView = 2131231132;
-			
-			// aapt resource value: 0x7F08019E
-			public const int search_badge = 2131231134;
-			
-			// aapt resource value: 0x7F08019F
-			public const int search_bar = 2131231135;
-			
-			// aapt resource value: 0x7F0801A0
-			public const int search_button = 2131231136;
-			
-			// aapt resource value: 0x7F0801A1
-			public const int search_close_btn = 2131231137;
-			
-			// aapt resource value: 0x7F0801A2
-			public const int search_edit_frame = 2131231138;
-			
-			// aapt resource value: 0x7F0801A3
-			public const int search_go_btn = 2131231139;
-			
-			// aapt resource value: 0x7F0801A4
-			public const int search_mag_icon = 2131231140;
-			
-			// aapt resource value: 0x7F0801A5
-			public const int search_plate = 2131231141;
-			
-			// aapt resource value: 0x7F0801A6
-			public const int search_src_text = 2131231142;
-			
-			// aapt resource value: 0x7F0801A7
-			public const int search_voice_btn = 2131231143;
-			
-			// aapt resource value: 0x7F0801A8
-			public const int seekbar = 2131231144;
-			
-			// aapt resource value: 0x7F0801A9
-			public const int seekbar_value = 2131231145;
-			
-			// aapt resource value: 0x7F0801AB
-			public const int selected = 2131231147;
-			
-			// aapt resource value: 0x7F0801AC
-			public const int selection_type = 2131231148;
-			
-			// aapt resource value: 0x7F0801AA
-			public const int select_dialog_listview = 2131231146;
-			
-			// aapt resource value: 0x7F0801AD
-			public const int sharedValueSet = 2131231149;
-			
-			// aapt resource value: 0x7F0801AE
-			public const int sharedValueUnset = 2131231150;
-			
-			// aapt resource value: 0x7F0801AF
-			public const int shellcontent_appbar = 2131231151;
-			
-			// aapt resource value: 0x7F0801B0
-			public const int shellcontent_toolbar = 2131231152;
+			public const int notification_main_column_container = 2131231084;
 			
 			// aapt resource value: 0x7F080008
-			public const int SHIFT = 2131230728;
+			public const int NO_DEBUG = 2131230728;
+			
+			// aapt resource value: 0x7F08016D
+			public const int off = 2131231085;
+			
+			// aapt resource value: 0x7F08016E
+			public const int on = 2131231086;
+			
+			// aapt resource value: 0x7F08016F
+			public const int onKeyFocus = 2131231087;
+			
+			// aapt resource value: 0x7F080170
+			public const int onLostFocus = 2131231088;
+			
+			// aapt resource value: 0x7F080171
+			public const int open_graph = 2131231089;
+			
+			// aapt resource value: 0x7F080172
+			public const int outline = 2131231090;
+			
+			// aapt resource value: 0x7F080173
+			public const int outward = 2131231091;
+			
+			// aapt resource value: 0x7F080174
+			public const int overshoot = 2131231092;
+			
+			// aapt resource value: 0x7F080175
+			public const int packed = 2131231093;
+			
+			// aapt resource value: 0x7F080176
+			public const int page = 2131231094;
+			
+			// aapt resource value: 0x7F080177
+			public const int parallax = 2131231095;
+			
+			// aapt resource value: 0x7F080178
+			public const int parent = 2131231096;
+			
+			// aapt resource value: 0x7F080179
+			public const int parentPanel = 2131231097;
+			
+			// aapt resource value: 0x7F08017A
+			public const int parentRelative = 2131231098;
+			
+			// aapt resource value: 0x7F08017B
+			public const int parent_matrix = 2131231099;
+			
+			// aapt resource value: 0x7F08017C
+			public const int password_toggle = 2131231100;
+			
+			// aapt resource value: 0x7F08017D
+			public const int path = 2131231101;
+			
+			// aapt resource value: 0x7F08017E
+			public const int pathRelative = 2131231102;
+			
+			// aapt resource value: 0x7F08017F
+			public const int peekHeight = 2131231103;
+			
+			// aapt resource value: 0x7F080180
+			public const int percent = 2131231104;
+			
+			// aapt resource value: 0x7F080181
+			public const int pin = 2131231105;
+			
+			// aapt resource value: 0x7F080182
+			public const int position = 2131231106;
+			
+			// aapt resource value: 0x7F080183
+			public const int postLayout = 2131231107;
+			
+			// aapt resource value: 0x7F080184
+			public const int print = 2131231108;
+			
+			// aapt resource value: 0x7F080185
+			public const int progress_bar = 2131231109;
+			
+			// aapt resource value: 0x7F080186
+			public const int progress_circular = 2131231110;
+			
+			// aapt resource value: 0x7F080187
+			public const int progress_horizontal = 2131231111;
+			
+			// aapt resource value: 0x7F080188
+			public const int radio = 2131231112;
+			
+			// aapt resource value: 0x7F080189
+			public const int ratio = 2131231113;
+			
+			// aapt resource value: 0x7F08018A
+			public const int rectangle = 2131231114;
+			
+			// aapt resource value: 0x7F08018B
+			public const int rectangles = 2131231115;
+			
+			// aapt resource value: 0x7F08018C
+			public const int recycler_view = 2131231116;
+			
+			// aapt resource value: 0x7F08018D
+			public const int reverseSawtooth = 2131231117;
+			
+			// aapt resource value: 0x7F08018E
+			public const int right = 2131231118;
+			
+			// aapt resource value: 0x7F08018F
+			public const int rightToLeft = 2131231119;
+			
+			// aapt resource value: 0x7F080190
+			public const int right_icon = 2131231120;
+			
+			// aapt resource value: 0x7F080191
+			public const int right_side = 2131231121;
+			
+			// aapt resource value: 0x7F080192
+			public const int rollingBall = 2131231122;
+			
+			// aapt resource value: 0x7F080193
+			public const int rounded = 2131231123;
+			
+			// aapt resource value: 0x7F080194
+			public const int row_index_key = 2131231124;
+			
+			// aapt resource value: 0x7F080195
+			public const int save_non_transition_alpha = 2131231125;
+			
+			// aapt resource value: 0x7F080196
+			public const int save_overlay_view = 2131231126;
+			
+			// aapt resource value: 0x7F080197
+			public const int sawtooth = 2131231127;
+			
+			// aapt resource value: 0x7F080198
+			public const int scale = 2131231128;
+			
+			// aapt resource value: 0x7F080199
+			public const int screen = 2131231129;
+			
+			// aapt resource value: 0x7F08019A
+			public const int scroll = 2131231130;
+			
+			// aapt resource value: 0x7F08019E
+			public const int scrollable = 2131231134;
+			
+			// aapt resource value: 0x7F08019B
+			public const int scrollIndicatorDown = 2131231131;
+			
+			// aapt resource value: 0x7F08019C
+			public const int scrollIndicatorUp = 2131231132;
+			
+			// aapt resource value: 0x7F08019D
+			public const int scrollView = 2131231133;
+			
+			// aapt resource value: 0x7F08019F
+			public const int search_badge = 2131231135;
+			
+			// aapt resource value: 0x7F0801A0
+			public const int search_bar = 2131231136;
+			
+			// aapt resource value: 0x7F0801A1
+			public const int search_button = 2131231137;
+			
+			// aapt resource value: 0x7F0801A2
+			public const int search_close_btn = 2131231138;
+			
+			// aapt resource value: 0x7F0801A3
+			public const int search_edit_frame = 2131231139;
+			
+			// aapt resource value: 0x7F0801A4
+			public const int search_go_btn = 2131231140;
+			
+			// aapt resource value: 0x7F0801A5
+			public const int search_mag_icon = 2131231141;
+			
+			// aapt resource value: 0x7F0801A6
+			public const int search_plate = 2131231142;
+			
+			// aapt resource value: 0x7F0801A7
+			public const int search_src_text = 2131231143;
+			
+			// aapt resource value: 0x7F0801A8
+			public const int search_voice_btn = 2131231144;
+			
+			// aapt resource value: 0x7F0801A9
+			public const int seekbar = 2131231145;
+			
+			// aapt resource value: 0x7F0801AA
+			public const int seekbar_value = 2131231146;
+			
+			// aapt resource value: 0x7F0801AC
+			public const int selected = 2131231148;
+			
+			// aapt resource value: 0x7F0801AD
+			public const int selection_type = 2131231149;
+			
+			// aapt resource value: 0x7F0801AB
+			public const int select_dialog_listview = 2131231147;
+			
+			// aapt resource value: 0x7F0801AE
+			public const int sharedValueSet = 2131231150;
+			
+			// aapt resource value: 0x7F0801AF
+			public const int sharedValueUnset = 2131231151;
+			
+			// aapt resource value: 0x7F0801B0
+			public const int shellcontent_appbar = 2131231152;
 			
 			// aapt resource value: 0x7F0801B1
-			public const int shortcut = 2131231153;
-			
-			// aapt resource value: 0x7F0801B2
-			public const int showCustom = 2131231154;
-			
-			// aapt resource value: 0x7F0801B3
-			public const int showHome = 2131231155;
-			
-			// aapt resource value: 0x7F0801B4
-			public const int showTitle = 2131231156;
+			public const int shellcontent_toolbar = 2131231153;
 			
 			// aapt resource value: 0x7F080009
-			public const int SHOW_ALL = 2131230729;
+			public const int SHIFT = 2131230729;
 			
-			// aapt resource value: 0x7F08000A
-			public const int SHOW_PATH = 2131230730;
+			// aapt resource value: 0x7F0801B2
+			public const int shortcut = 2131231154;
 			
-			// aapt resource value: 0x7F08000B
-			public const int SHOW_PROGRESS = 2131230731;
+			// aapt resource value: 0x7F0801B3
+			public const int showCustom = 2131231155;
+			
+			// aapt resource value: 0x7F0801B4
+			public const int showHome = 2131231156;
 			
 			// aapt resource value: 0x7F0801B5
-			public const int sin = 2131231157;
+			public const int showTitle = 2131231157;
 			
-			// aapt resource value: 0x7F0801B6
-			public const int singleCircle = 2131231158;
+			// aapt resource value: 0x7F08000A
+			public const int SHOW_ALL = 2131230730;
 			
-			// aapt resource value: 0x7F0801B7
-			public const int skipCollapsed = 2131231159;
-			
-			// aapt resource value: 0x7F0801B8
-			public const int skipped = 2131231160;
-			
-			// aapt resource value: 0x7F0801B9
-			public const int slicedCircle = 2131231161;
-			
-			// aapt resource value: 0x7F0801BA
-			public const int slide = 2131231162;
-			
-			// aapt resource value: 0x7F0801BB
-			public const int sliding_tabs = 2131231163;
-			
-			// aapt resource value: 0x7F0801BC
-			public const int small = 2131231164;
-			
-			// aapt resource value: 0x7F0801BD
-			public const int snackbar_action = 2131231165;
-			
-			// aapt resource value: 0x7F0801BE
-			public const int snackbar_text = 2131231166;
-			
-			// aapt resource value: 0x7F0801BF
-			public const int snap = 2131231167;
-			
-			// aapt resource value: 0x7F0801C0
-			public const int snapMargins = 2131231168;
-			
-			// aapt resource value: 0x7F0801C1
-			public const int south = 2131231169;
-			
-			// aapt resource value: 0x7F0801C2
-			public const int spacer = 2131231170;
-			
-			// aapt resource value: 0x7F0801C3
-			public const int special_effects_controller_view_tag = 2131231171;
-			
-			// aapt resource value: 0x7F0801C4
-			public const int spinner = 2131231172;
-			
-			// aapt resource value: 0x7F0801C5
-			public const int spline = 2131231173;
-			
-			// aapt resource value: 0x7F0801C6
-			public const int split_action_bar = 2131231174;
-			
-			// aapt resource value: 0x7F0801C7
-			public const int spread = 2131231175;
-			
-			// aapt resource value: 0x7F0801C8
-			public const int spread_inside = 2131231176;
-			
-			// aapt resource value: 0x7F0801C9
-			public const int spring = 2131231177;
-			
-			// aapt resource value: 0x7F0801CA
-			public const int square = 2131231178;
-			
-			// aapt resource value: 0x7F0801CB
-			public const int src_atop = 2131231179;
-			
-			// aapt resource value: 0x7F0801CC
-			public const int src_in = 2131231180;
-			
-			// aapt resource value: 0x7F0801CD
-			public const int src_over = 2131231181;
-			
-			// aapt resource value: 0x7F0801CE
-			public const int standard = 2131231182;
-			
-			// aapt resource value: 0x7F0801CF
-			public const int start = 2131231183;
-			
-			// aapt resource value: 0x7F0801D0
-			public const int startHorizontal = 2131231184;
-			
-			// aapt resource value: 0x7F0801D1
-			public const int startToEnd = 2131231185;
-			
-			// aapt resource value: 0x7F0801D2
-			public const int startVertical = 2131231186;
-			
-			// aapt resource value: 0x7F0801D3
-			public const int staticLayout = 2131231187;
-			
-			// aapt resource value: 0x7F0801D4
-			public const int staticPostLayout = 2131231188;
-			
-			// aapt resource value: 0x7F0801D5
-			public const int status_bar_latest_event_content = 2131231189;
-			
-			// aapt resource value: 0x7F0801D6
-			public const int stop = 2131231190;
-			
-			// aapt resource value: 0x7F0801D7
-			public const int stretch = 2131231191;
-			
-			// aapt resource value: 0x7F0801D8
-			public const int submenuarrow = 2131231192;
-			
-			// aapt resource value: 0x7F0801D9
-			public const int submit_area = 2131231193;
-			
-			// aapt resource value: 0x7F0801DA
-			public const int supportScrollUp = 2131231194;
-			
-			// aapt resource value: 0x7F0801DB
-			public const int switchWidget = 2131231195;
+			// aapt resource value: 0x7F08000B
+			public const int SHOW_PATH = 2131230731;
 			
 			// aapt resource value: 0x7F08000C
-			public const int SYM = 2131230732;
+			public const int SHOW_PROGRESS = 2131230732;
+			
+			// aapt resource value: 0x7F0801B6
+			public const int sin = 2131231158;
+			
+			// aapt resource value: 0x7F0801B7
+			public const int singleCircle = 2131231159;
+			
+			// aapt resource value: 0x7F0801B8
+			public const int skipCollapsed = 2131231160;
+			
+			// aapt resource value: 0x7F0801B9
+			public const int skipped = 2131231161;
+			
+			// aapt resource value: 0x7F0801BA
+			public const int slicedCircle = 2131231162;
+			
+			// aapt resource value: 0x7F0801BB
+			public const int slide = 2131231163;
+			
+			// aapt resource value: 0x7F0801BC
+			public const int sliding_tabs = 2131231164;
+			
+			// aapt resource value: 0x7F0801BD
+			public const int small = 2131231165;
+			
+			// aapt resource value: 0x7F0801BE
+			public const int snackbar_action = 2131231166;
+			
+			// aapt resource value: 0x7F0801BF
+			public const int snackbar_text = 2131231167;
+			
+			// aapt resource value: 0x7F0801C0
+			public const int snap = 2131231168;
+			
+			// aapt resource value: 0x7F0801C1
+			public const int snapMargins = 2131231169;
+			
+			// aapt resource value: 0x7F0801C2
+			public const int south = 2131231170;
+			
+			// aapt resource value: 0x7F0801C3
+			public const int spacer = 2131231171;
+			
+			// aapt resource value: 0x7F0801C4
+			public const int special_effects_controller_view_tag = 2131231172;
+			
+			// aapt resource value: 0x7F0801C5
+			public const int spinner = 2131231173;
+			
+			// aapt resource value: 0x7F0801C6
+			public const int spline = 2131231174;
+			
+			// aapt resource value: 0x7F0801C7
+			public const int split_action_bar = 2131231175;
+			
+			// aapt resource value: 0x7F0801C8
+			public const int spread = 2131231176;
+			
+			// aapt resource value: 0x7F0801C9
+			public const int spread_inside = 2131231177;
+			
+			// aapt resource value: 0x7F0801CA
+			public const int spring = 2131231178;
+			
+			// aapt resource value: 0x7F0801CB
+			public const int square = 2131231179;
+			
+			// aapt resource value: 0x7F0801CC
+			public const int src_atop = 2131231180;
+			
+			// aapt resource value: 0x7F0801CD
+			public const int src_in = 2131231181;
+			
+			// aapt resource value: 0x7F0801CE
+			public const int src_over = 2131231182;
+			
+			// aapt resource value: 0x7F0801CF
+			public const int standard = 2131231183;
+			
+			// aapt resource value: 0x7F0801D0
+			public const int start = 2131231184;
+			
+			// aapt resource value: 0x7F0801D1
+			public const int startHorizontal = 2131231185;
+			
+			// aapt resource value: 0x7F0801D2
+			public const int startToEnd = 2131231186;
+			
+			// aapt resource value: 0x7F0801D3
+			public const int startVertical = 2131231187;
+			
+			// aapt resource value: 0x7F0801D4
+			public const int staticLayout = 2131231188;
+			
+			// aapt resource value: 0x7F0801D5
+			public const int staticPostLayout = 2131231189;
+			
+			// aapt resource value: 0x7F0801D6
+			public const int status_bar_latest_event_content = 2131231190;
+			
+			// aapt resource value: 0x7F0801D7
+			public const int stop = 2131231191;
+			
+			// aapt resource value: 0x7F0801D8
+			public const int stretch = 2131231192;
+			
+			// aapt resource value: 0x7F0801D9
+			public const int submenuarrow = 2131231193;
+			
+			// aapt resource value: 0x7F0801DA
+			public const int submit_area = 2131231194;
+			
+			// aapt resource value: 0x7F0801DB
+			public const int supportScrollUp = 2131231195;
 			
 			// aapt resource value: 0x7F0801DC
-			public const int tabMode = 2131231196;
-			
-			// aapt resource value: 0x7F0801DD
-			public const int tag_accessibility_actions = 2131231197;
-			
-			// aapt resource value: 0x7F0801DE
-			public const int tag_accessibility_clickable_spans = 2131231198;
-			
-			// aapt resource value: 0x7F0801DF
-			public const int tag_accessibility_heading = 2131231199;
-			
-			// aapt resource value: 0x7F0801E0
-			public const int tag_accessibility_pane_title = 2131231200;
-			
-			// aapt resource value: 0x7F0801E1
-			public const int tag_on_apply_window_listener = 2131231201;
-			
-			// aapt resource value: 0x7F0801E2
-			public const int tag_on_receive_content_listener = 2131231202;
-			
-			// aapt resource value: 0x7F0801E3
-			public const int tag_on_receive_content_mime_types = 2131231203;
-			
-			// aapt resource value: 0x7F0801E4
-			public const int tag_screen_reader_focusable = 2131231204;
-			
-			// aapt resource value: 0x7F0801E5
-			public const int tag_state_description = 2131231205;
-			
-			// aapt resource value: 0x7F0801E6
-			public const int tag_transition_group = 2131231206;
-			
-			// aapt resource value: 0x7F0801E7
-			public const int tag_unhandled_key_event_manager = 2131231207;
-			
-			// aapt resource value: 0x7F0801E8
-			public const int tag_unhandled_key_listeners = 2131231208;
-			
-			// aapt resource value: 0x7F0801E9
-			public const int tag_window_insets_animation_callback = 2131231209;
-			
-			// aapt resource value: 0x7F0801EA
-			public const int test_checkbox_android_button_tint = 2131231210;
-			
-			// aapt resource value: 0x7F0801EB
-			public const int test_checkbox_app_button_tint = 2131231211;
-			
-			// aapt resource value: 0x7F0801EC
-			public const int test_radiobutton_android_button_tint = 2131231212;
-			
-			// aapt resource value: 0x7F0801ED
-			public const int test_radiobutton_app_button_tint = 2131231213;
-			
-			// aapt resource value: 0x7F0801EE
-			public const int text = 2131231214;
-			
-			// aapt resource value: 0x7F0801EF
-			public const int text2 = 2131231215;
-			
-			// aapt resource value: 0x7F0801F0
-			public const int textEnd = 2131231216;
-			
-			// aapt resource value: 0x7F0801F8
-			public const int textinput_counter = 2131231224;
-			
-			// aapt resource value: 0x7F0801F9
-			public const int textinput_error = 2131231225;
-			
-			// aapt resource value: 0x7F0801FA
-			public const int textinput_helper_text = 2131231226;
-			
-			// aapt resource value: 0x7F0801FB
-			public const int textinput_placeholder = 2131231227;
-			
-			// aapt resource value: 0x7F0801FC
-			public const int textinput_prefix_text = 2131231228;
-			
-			// aapt resource value: 0x7F0801FD
-			public const int textinput_suffix_text = 2131231229;
-			
-			// aapt resource value: 0x7F0801F1
-			public const int textSpacerNoButtons = 2131231217;
-			
-			// aapt resource value: 0x7F0801F2
-			public const int textSpacerNoTitle = 2131231218;
-			
-			// aapt resource value: 0x7F0801F3
-			public const int textStart = 2131231219;
-			
-			// aapt resource value: 0x7F0801F4
-			public const int textTop = 2131231220;
-			
-			// aapt resource value: 0x7F0801F5
-			public const int text_input_end_icon = 2131231221;
-			
-			// aapt resource value: 0x7F0801F6
-			public const int text_input_error_icon = 2131231222;
-			
-			// aapt resource value: 0x7F0801F7
-			public const int text_input_start_icon = 2131231223;
-			
-			// aapt resource value: 0x7F0801FE
-			public const int time = 2131231230;
-			
-			// aapt resource value: 0x7F0801FF
-			public const int title = 2131231231;
-			
-			// aapt resource value: 0x7F080200
-			public const int titleDividerNoCustom = 2131231232;
-			
-			// aapt resource value: 0x7F080201
-			public const int title_template = 2131231233;
-			
-			// aapt resource value: 0x7F080202
-			public const int toggle = 2131231234;
-			
-			// aapt resource value: 0x7F080203
-			public const int toolbar = 2131231235;
-			
-			// aapt resource value: 0x7F080204
-			public const int top = 2131231236;
-			
-			// aapt resource value: 0x7F080205
-			public const int topPanel = 2131231237;
+			public const int switchWidget = 2131231196;
 			
 			// aapt resource value: 0x7F08000D
-			public const int TOP_END = 2131230733;
+			public const int SYM = 2131230733;
 			
-			// aapt resource value: 0x7F08000E
-			public const int TOP_START = 2131230734;
+			// aapt resource value: 0x7F0801DD
+			public const int tabMode = 2131231197;
+			
+			// aapt resource value: 0x7F0801DE
+			public const int tag_accessibility_actions = 2131231198;
+			
+			// aapt resource value: 0x7F0801DF
+			public const int tag_accessibility_clickable_spans = 2131231199;
+			
+			// aapt resource value: 0x7F0801E0
+			public const int tag_accessibility_heading = 2131231200;
+			
+			// aapt resource value: 0x7F0801E1
+			public const int tag_accessibility_pane_title = 2131231201;
+			
+			// aapt resource value: 0x7F0801E2
+			public const int tag_on_apply_window_listener = 2131231202;
+			
+			// aapt resource value: 0x7F0801E3
+			public const int tag_on_receive_content_listener = 2131231203;
+			
+			// aapt resource value: 0x7F0801E4
+			public const int tag_on_receive_content_mime_types = 2131231204;
+			
+			// aapt resource value: 0x7F0801E5
+			public const int tag_screen_reader_focusable = 2131231205;
+			
+			// aapt resource value: 0x7F0801E6
+			public const int tag_state_description = 2131231206;
+			
+			// aapt resource value: 0x7F0801E7
+			public const int tag_transition_group = 2131231207;
+			
+			// aapt resource value: 0x7F0801E8
+			public const int tag_unhandled_key_event_manager = 2131231208;
+			
+			// aapt resource value: 0x7F0801E9
+			public const int tag_unhandled_key_listeners = 2131231209;
+			
+			// aapt resource value: 0x7F0801EA
+			public const int tag_window_insets_animation_callback = 2131231210;
+			
+			// aapt resource value: 0x7F0801EB
+			public const int test_checkbox_android_button_tint = 2131231211;
+			
+			// aapt resource value: 0x7F0801EC
+			public const int test_checkbox_app_button_tint = 2131231212;
+			
+			// aapt resource value: 0x7F0801ED
+			public const int test_radiobutton_android_button_tint = 2131231213;
+			
+			// aapt resource value: 0x7F0801EE
+			public const int test_radiobutton_app_button_tint = 2131231214;
+			
+			// aapt resource value: 0x7F0801EF
+			public const int text = 2131231215;
+			
+			// aapt resource value: 0x7F0801F0
+			public const int text2 = 2131231216;
+			
+			// aapt resource value: 0x7F0801F1
+			public const int textEnd = 2131231217;
+			
+			// aapt resource value: 0x7F0801F9
+			public const int textinput_counter = 2131231225;
+			
+			// aapt resource value: 0x7F0801FA
+			public const int textinput_error = 2131231226;
+			
+			// aapt resource value: 0x7F0801FB
+			public const int textinput_helper_text = 2131231227;
+			
+			// aapt resource value: 0x7F0801FC
+			public const int textinput_placeholder = 2131231228;
+			
+			// aapt resource value: 0x7F0801FD
+			public const int textinput_prefix_text = 2131231229;
+			
+			// aapt resource value: 0x7F0801FE
+			public const int textinput_suffix_text = 2131231230;
+			
+			// aapt resource value: 0x7F0801F2
+			public const int textSpacerNoButtons = 2131231218;
+			
+			// aapt resource value: 0x7F0801F3
+			public const int textSpacerNoTitle = 2131231219;
+			
+			// aapt resource value: 0x7F0801F4
+			public const int textStart = 2131231220;
+			
+			// aapt resource value: 0x7F0801F5
+			public const int textTop = 2131231221;
+			
+			// aapt resource value: 0x7F0801F6
+			public const int text_input_end_icon = 2131231222;
+			
+			// aapt resource value: 0x7F0801F7
+			public const int text_input_error_icon = 2131231223;
+			
+			// aapt resource value: 0x7F0801F8
+			public const int text_input_start_icon = 2131231224;
+			
+			// aapt resource value: 0x7F0801FF
+			public const int time = 2131231231;
+			
+			// aapt resource value: 0x7F080200
+			public const int title = 2131231232;
+			
+			// aapt resource value: 0x7F080201
+			public const int titleDividerNoCustom = 2131231233;
+			
+			// aapt resource value: 0x7F080202
+			public const int title_template = 2131231234;
+			
+			// aapt resource value: 0x7F080203
+			public const int toggle = 2131231235;
+			
+			// aapt resource value: 0x7F080204
+			public const int toolbar = 2131231236;
+			
+			// aapt resource value: 0x7F080205
+			public const int top = 2131231237;
 			
 			// aapt resource value: 0x7F080206
-			public const int touch_outside = 2131231238;
+			public const int topPanel = 2131231238;
+			
+			// aapt resource value: 0x7F08000E
+			public const int TOP_END = 2131230734;
+			
+			// aapt resource value: 0x7F08000F
+			public const int TOP_START = 2131230735;
 			
 			// aapt resource value: 0x7F080207
-			public const int transitionToEnd = 2131231239;
+			public const int touch_outside = 2131231239;
 			
 			// aapt resource value: 0x7F080208
-			public const int transitionToStart = 2131231240;
+			public const int transitionToEnd = 2131231240;
 			
 			// aapt resource value: 0x7F080209
-			public const int transition_current_scene = 2131231241;
+			public const int transitionToStart = 2131231241;
 			
 			// aapt resource value: 0x7F08020A
-			public const int transition_layout_save = 2131231242;
+			public const int transition_current_scene = 2131231242;
 			
 			// aapt resource value: 0x7F08020B
-			public const int transition_position = 2131231243;
+			public const int transition_layout_save = 2131231243;
 			
 			// aapt resource value: 0x7F08020C
-			public const int transition_scene_layoutid_cache = 2131231244;
+			public const int transition_position = 2131231244;
 			
 			// aapt resource value: 0x7F08020D
-			public const int transition_transform = 2131231245;
+			public const int transition_scene_layoutid_cache = 2131231245;
 			
 			// aapt resource value: 0x7F08020E
-			public const int triangle = 2131231246;
+			public const int transition_transform = 2131231246;
 			
 			// aapt resource value: 0x7F08020F
-			public const int @unchecked = 2131231247;
+			public const int triangle = 2131231247;
 			
 			// aapt resource value: 0x7F080210
-			public const int uniform = 2131231248;
+			public const int @unchecked = 2131231248;
 			
 			// aapt resource value: 0x7F080211
-			public const int unknown = 2131231249;
+			public const int uniform = 2131231249;
 			
 			// aapt resource value: 0x7F080212
-			public const int unlabeled = 2131231250;
+			public const int unknown = 2131231250;
 			
 			// aapt resource value: 0x7F080213
-			public const int up = 2131231251;
+			public const int unlabeled = 2131231251;
 			
 			// aapt resource value: 0x7F080214
-			public const int useLogo = 2131231252;
+			public const int up = 2131231252;
 			
 			// aapt resource value: 0x7F080215
-			public const int userProfileEmailTextView = 2131231253;
+			public const int useLogo = 2131231253;
 			
 			// aapt resource value: 0x7F080216
-			public const int userProfileImageView = 2131231254;
+			public const int userProfileEmailTextView = 2131231254;
 			
 			// aapt resource value: 0x7F080217
-			public const int userProfileNameTextView = 2131231255;
+			public const int userProfileImageView = 2131231255;
 			
 			// aapt resource value: 0x7F080218
-			public const int userProfileTextView = 2131231256;
+			public const int userProfileNameTextView = 2131231256;
 			
 			// aapt resource value: 0x7F080219
-			public const int value = 2131231257;
+			public const int userProfileTextView = 2131231257;
 			
 			// aapt resource value: 0x7F08021A
-			public const int vertical_only = 2131231258;
+			public const int value = 2131231258;
 			
 			// aapt resource value: 0x7F08021B
-			public const int view_offset_helper = 2131231259;
+			public const int vertical_only = 2131231259;
 			
 			// aapt resource value: 0x7F08021C
-			public const int view_transition = 2131231260;
+			public const int view_offset_helper = 2131231260;
 			
 			// aapt resource value: 0x7F08021D
-			public const int view_tree_lifecycle_owner = 2131231261;
+			public const int view_transition = 2131231261;
 			
 			// aapt resource value: 0x7F08021E
-			public const int view_tree_saved_state_registry_owner = 2131231262;
+			public const int view_tree_lifecycle_owner = 2131231262;
 			
 			// aapt resource value: 0x7F08021F
-			public const int view_tree_view_model_store_owner = 2131231263;
+			public const int view_tree_saved_state_registry_owner = 2131231263;
 			
 			// aapt resource value: 0x7F080220
-			public const int visible = 2131231264;
+			public const int view_tree_view_model_store_owner = 2131231264;
 			
 			// aapt resource value: 0x7F080221
-			public const int visible_removing_fragment_view_tag = 2131231265;
+			public const int visible = 2131231265;
 			
 			// aapt resource value: 0x7F080222
-			public const int west = 2131231266;
+			public const int visible_removing_fragment_view_tag = 2131231266;
 			
 			// aapt resource value: 0x7F080223
-			public const int wide = 2131231267;
-			
-			// aapt resource value: 0x7F080225
-			public const int withinBounds = 2131231269;
+			public const int west = 2131231267;
 			
 			// aapt resource value: 0x7F080224
-			public const int withText = 2131231268;
+			public const int wide = 2131231268;
 			
 			// aapt resource value: 0x7F080226
-			public const int wrap = 2131231270;
+			public const int withinBounds = 2131231270;
+			
+			// aapt resource value: 0x7F080225
+			public const int withText = 2131231269;
 			
 			// aapt resource value: 0x7F080227
-			public const int wrap_content = 2131231271;
+			public const int wrap = 2131231271;
 			
 			// aapt resource value: 0x7F080228
-			public const int wrap_content_constrained = 2131231272;
+			public const int wrap_content = 2131231272;
 			
 			// aapt resource value: 0x7F080229
-			public const int x_left = 2131231273;
+			public const int wrap_content_constrained = 2131231273;
 			
 			// aapt resource value: 0x7F08022A
-			public const int x_right = 2131231274;
+			public const int x_left = 2131231274;
 			
 			// aapt resource value: 0x7F08022B
-			public const int zero_corner_chip = 2131231275;
+			public const int x_right = 2131231275;
 			
 			// aapt resource value: 0x7F08022C
-			public const int zoomingTarget = 2131231276;
+			public const int zero_corner_chip = 2131231276;
+			
+			// aapt resource value: 0x7F08022D
+			public const int zoomingTarget = 2131231277;
 			
 			static Id()
 			{
@@ -25021,359 +27902,371 @@ namespace PetArmy.Droid
 			// aapt resource value: 0x7F0B0026
 			public const int com_facebook_tooltip_bubble = 2131427366;
 			
+			// aapt resource value: 0x7F0B0028
+			public const int CustomizedImageView = 2131427368;
+			
+			// aapt resource value: 0x7F0B0029
+			public const int CustomizedView = 2131427369;
+			
 			// aapt resource value: 0x7F0B0027
 			public const int custom_dialog = 2131427367;
 			
-			// aapt resource value: 0x7F0B0028
-			public const int design_bottom_navigation_item = 2131427368;
-			
-			// aapt resource value: 0x7F0B0029
-			public const int design_bottom_sheet_dialog = 2131427369;
-			
 			// aapt resource value: 0x7F0B002A
-			public const int design_layout_snackbar = 2131427370;
+			public const int design_bottom_navigation_item = 2131427370;
 			
 			// aapt resource value: 0x7F0B002B
-			public const int design_layout_snackbar_include = 2131427371;
+			public const int design_bottom_sheet_dialog = 2131427371;
 			
 			// aapt resource value: 0x7F0B002C
-			public const int design_layout_tab_icon = 2131427372;
+			public const int design_layout_snackbar = 2131427372;
 			
 			// aapt resource value: 0x7F0B002D
-			public const int design_layout_tab_text = 2131427373;
+			public const int design_layout_snackbar_include = 2131427373;
 			
 			// aapt resource value: 0x7F0B002E
-			public const int design_menu_item_action_area = 2131427374;
+			public const int design_layout_tab_icon = 2131427374;
 			
 			// aapt resource value: 0x7F0B002F
-			public const int design_navigation_item = 2131427375;
+			public const int design_layout_tab_text = 2131427375;
 			
 			// aapt resource value: 0x7F0B0030
-			public const int design_navigation_item_header = 2131427376;
+			public const int design_menu_item_action_area = 2131427376;
 			
 			// aapt resource value: 0x7F0B0031
-			public const int design_navigation_item_separator = 2131427377;
+			public const int design_navigation_item = 2131427377;
 			
 			// aapt resource value: 0x7F0B0032
-			public const int design_navigation_item_subheader = 2131427378;
+			public const int design_navigation_item_header = 2131427378;
 			
 			// aapt resource value: 0x7F0B0033
-			public const int design_navigation_menu = 2131427379;
+			public const int design_navigation_item_separator = 2131427379;
 			
 			// aapt resource value: 0x7F0B0034
-			public const int design_navigation_menu_item = 2131427380;
+			public const int design_navigation_item_subheader = 2131427380;
 			
 			// aapt resource value: 0x7F0B0035
-			public const int design_text_input_end_icon = 2131427381;
+			public const int design_navigation_menu = 2131427381;
 			
 			// aapt resource value: 0x7F0B0036
-			public const int design_text_input_start_icon = 2131427382;
+			public const int design_navigation_menu_item = 2131427382;
 			
 			// aapt resource value: 0x7F0B0037
-			public const int expand_button = 2131427383;
+			public const int design_text_input_end_icon = 2131427383;
 			
 			// aapt resource value: 0x7F0B0038
-			public const int FallbackTabbarDoNotUse = 2131427384;
+			public const int design_text_input_start_icon = 2131427384;
 			
 			// aapt resource value: 0x7F0B0039
-			public const int FallbackToolbarDoNotUse = 2131427385;
+			public const int expand_button = 2131427385;
 			
 			// aapt resource value: 0x7F0B003A
-			public const int FlyoutContent = 2131427386;
+			public const int FallbackTabbarDoNotUse = 2131427386;
 			
 			// aapt resource value: 0x7F0B003B
-			public const int image_frame = 2131427387;
+			public const int FallbackToolbarDoNotUse = 2131427387;
 			
 			// aapt resource value: 0x7F0B003C
-			public const int material_chip_input_combo = 2131427388;
-			
-			// aapt resource value: 0x7F0B0041
-			public const int material_clockface_textview = 2131427393;
-			
-			// aapt resource value: 0x7F0B0042
-			public const int material_clockface_view = 2131427394;
+			public const int FlyoutContent = 2131427388;
 			
 			// aapt resource value: 0x7F0B003D
-			public const int material_clock_display = 2131427389;
+			public const int image_frame = 2131427389;
 			
 			// aapt resource value: 0x7F0B003E
-			public const int material_clock_display_divider = 2131427390;
-			
-			// aapt resource value: 0x7F0B003F
-			public const int material_clock_period_toggle = 2131427391;
-			
-			// aapt resource value: 0x7F0B0040
-			public const int material_clock_period_toggle_land = 2131427392;
+			public const int material_chip_input_combo = 2131427390;
 			
 			// aapt resource value: 0x7F0B0043
-			public const int material_radial_view_group = 2131427395;
+			public const int material_clockface_textview = 2131427395;
 			
 			// aapt resource value: 0x7F0B0044
-			public const int material_textinput_timepicker = 2131427396;
+			public const int material_clockface_view = 2131427396;
 			
-			// aapt resource value: 0x7F0B0047
-			public const int material_timepicker = 2131427399;
+			// aapt resource value: 0x7F0B003F
+			public const int material_clock_display = 2131427391;
 			
-			// aapt resource value: 0x7F0B0048
-			public const int material_timepicker_dialog = 2131427400;
+			// aapt resource value: 0x7F0B0040
+			public const int material_clock_display_divider = 2131427392;
 			
-			// aapt resource value: 0x7F0B0049
-			public const int material_timepicker_textinput_display = 2131427401;
+			// aapt resource value: 0x7F0B0041
+			public const int material_clock_period_toggle = 2131427393;
+			
+			// aapt resource value: 0x7F0B0042
+			public const int material_clock_period_toggle_land = 2131427394;
 			
 			// aapt resource value: 0x7F0B0045
-			public const int material_time_chip = 2131427397;
+			public const int material_radial_view_group = 2131427397;
 			
 			// aapt resource value: 0x7F0B0046
-			public const int material_time_input = 2131427398;
+			public const int material_textinput_timepicker = 2131427398;
+			
+			// aapt resource value: 0x7F0B0049
+			public const int material_timepicker = 2131427401;
 			
 			// aapt resource value: 0x7F0B004A
-			public const int mtrl_alert_dialog = 2131427402;
+			public const int material_timepicker_dialog = 2131427402;
 			
 			// aapt resource value: 0x7F0B004B
-			public const int mtrl_alert_dialog_actions = 2131427403;
+			public const int material_timepicker_textinput_display = 2131427403;
+			
+			// aapt resource value: 0x7F0B0047
+			public const int material_time_chip = 2131427399;
+			
+			// aapt resource value: 0x7F0B0048
+			public const int material_time_input = 2131427400;
 			
 			// aapt resource value: 0x7F0B004C
-			public const int mtrl_alert_dialog_title = 2131427404;
+			public const int mtrl_alert_dialog = 2131427404;
 			
 			// aapt resource value: 0x7F0B004D
-			public const int mtrl_alert_select_dialog_item = 2131427405;
+			public const int mtrl_alert_dialog_actions = 2131427405;
 			
 			// aapt resource value: 0x7F0B004E
-			public const int mtrl_alert_select_dialog_multichoice = 2131427406;
+			public const int mtrl_alert_dialog_title = 2131427406;
 			
 			// aapt resource value: 0x7F0B004F
-			public const int mtrl_alert_select_dialog_singlechoice = 2131427407;
+			public const int mtrl_alert_select_dialog_item = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
-			public const int mtrl_calendar_day = 2131427408;
-			
-			// aapt resource value: 0x7F0B0052
-			public const int mtrl_calendar_days_of_week = 2131427410;
+			public const int mtrl_alert_select_dialog_multichoice = 2131427408;
 			
 			// aapt resource value: 0x7F0B0051
-			public const int mtrl_calendar_day_of_week = 2131427409;
+			public const int mtrl_alert_select_dialog_singlechoice = 2131427409;
 			
-			// aapt resource value: 0x7F0B0053
-			public const int mtrl_calendar_horizontal = 2131427411;
+			// aapt resource value: 0x7F0B0052
+			public const int mtrl_calendar_day = 2131427410;
 			
 			// aapt resource value: 0x7F0B0054
-			public const int mtrl_calendar_month = 2131427412;
+			public const int mtrl_calendar_days_of_week = 2131427412;
 			
-			// aapt resource value: 0x7F0B0057
-			public const int mtrl_calendar_months = 2131427415;
+			// aapt resource value: 0x7F0B0053
+			public const int mtrl_calendar_day_of_week = 2131427411;
 			
 			// aapt resource value: 0x7F0B0055
-			public const int mtrl_calendar_month_labeled = 2131427413;
+			public const int mtrl_calendar_horizontal = 2131427413;
 			
 			// aapt resource value: 0x7F0B0056
-			public const int mtrl_calendar_month_navigation = 2131427414;
-			
-			// aapt resource value: 0x7F0B0058
-			public const int mtrl_calendar_vertical = 2131427416;
+			public const int mtrl_calendar_month = 2131427414;
 			
 			// aapt resource value: 0x7F0B0059
-			public const int mtrl_calendar_year = 2131427417;
+			public const int mtrl_calendar_months = 2131427417;
+			
+			// aapt resource value: 0x7F0B0057
+			public const int mtrl_calendar_month_labeled = 2131427415;
+			
+			// aapt resource value: 0x7F0B0058
+			public const int mtrl_calendar_month_navigation = 2131427416;
 			
 			// aapt resource value: 0x7F0B005A
-			public const int mtrl_layout_snackbar = 2131427418;
+			public const int mtrl_calendar_vertical = 2131427418;
 			
 			// aapt resource value: 0x7F0B005B
-			public const int mtrl_layout_snackbar_include = 2131427419;
+			public const int mtrl_calendar_year = 2131427419;
 			
 			// aapt resource value: 0x7F0B005C
-			public const int mtrl_navigation_rail_item = 2131427420;
+			public const int mtrl_layout_snackbar = 2131427420;
 			
 			// aapt resource value: 0x7F0B005D
-			public const int mtrl_picker_actions = 2131427421;
+			public const int mtrl_layout_snackbar_include = 2131427421;
 			
 			// aapt resource value: 0x7F0B005E
-			public const int mtrl_picker_dialog = 2131427422;
+			public const int mtrl_navigation_rail_item = 2131427422;
 			
 			// aapt resource value: 0x7F0B005F
-			public const int mtrl_picker_fullscreen = 2131427423;
+			public const int mtrl_picker_actions = 2131427423;
 			
 			// aapt resource value: 0x7F0B0060
-			public const int mtrl_picker_header_dialog = 2131427424;
+			public const int mtrl_picker_dialog = 2131427424;
 			
 			// aapt resource value: 0x7F0B0061
-			public const int mtrl_picker_header_fullscreen = 2131427425;
+			public const int mtrl_picker_fullscreen = 2131427425;
 			
 			// aapt resource value: 0x7F0B0062
-			public const int mtrl_picker_header_selection_text = 2131427426;
+			public const int mtrl_picker_header_dialog = 2131427426;
 			
 			// aapt resource value: 0x7F0B0063
-			public const int mtrl_picker_header_title_text = 2131427427;
+			public const int mtrl_picker_header_fullscreen = 2131427427;
 			
 			// aapt resource value: 0x7F0B0064
-			public const int mtrl_picker_header_toggle = 2131427428;
+			public const int mtrl_picker_header_selection_text = 2131427428;
 			
 			// aapt resource value: 0x7F0B0065
-			public const int mtrl_picker_text_input_date = 2131427429;
+			public const int mtrl_picker_header_title_text = 2131427429;
 			
 			// aapt resource value: 0x7F0B0066
-			public const int mtrl_picker_text_input_date_range = 2131427430;
+			public const int mtrl_picker_header_toggle = 2131427430;
 			
 			// aapt resource value: 0x7F0B0067
-			public const int notification_action = 2131427431;
+			public const int mtrl_picker_text_input_date = 2131427431;
 			
 			// aapt resource value: 0x7F0B0068
-			public const int notification_action_tombstone = 2131427432;
+			public const int mtrl_picker_text_input_date_range = 2131427432;
 			
 			// aapt resource value: 0x7F0B0069
-			public const int notification_media_action = 2131427433;
+			public const int notification_action = 2131427433;
 			
 			// aapt resource value: 0x7F0B006A
-			public const int notification_media_cancel_action = 2131427434;
+			public const int notification_action_tombstone = 2131427434;
 			
 			// aapt resource value: 0x7F0B006B
-			public const int notification_template_big_media = 2131427435;
+			public const int notification_media_action = 2131427435;
 			
 			// aapt resource value: 0x7F0B006C
-			public const int notification_template_big_media_custom = 2131427436;
+			public const int notification_media_cancel_action = 2131427436;
 			
 			// aapt resource value: 0x7F0B006D
-			public const int notification_template_big_media_narrow = 2131427437;
+			public const int notification_template_big_media = 2131427437;
 			
 			// aapt resource value: 0x7F0B006E
-			public const int notification_template_big_media_narrow_custom = 2131427438;
+			public const int notification_template_big_media_custom = 2131427438;
 			
 			// aapt resource value: 0x7F0B006F
-			public const int notification_template_custom_big = 2131427439;
+			public const int notification_template_big_media_narrow = 2131427439;
 			
 			// aapt resource value: 0x7F0B0070
-			public const int notification_template_icon_group = 2131427440;
+			public const int notification_template_big_media_narrow_custom = 2131427440;
 			
 			// aapt resource value: 0x7F0B0071
-			public const int notification_template_lines_media = 2131427441;
+			public const int notification_template_custom_big = 2131427441;
 			
 			// aapt resource value: 0x7F0B0072
-			public const int notification_template_media = 2131427442;
+			public const int notification_template_icon_group = 2131427442;
 			
 			// aapt resource value: 0x7F0B0073
-			public const int notification_template_media_custom = 2131427443;
+			public const int notification_template_lines_media = 2131427443;
 			
 			// aapt resource value: 0x7F0B0074
-			public const int notification_template_part_chronometer = 2131427444;
+			public const int notification_template_media = 2131427444;
 			
 			// aapt resource value: 0x7F0B0075
-			public const int notification_template_part_time = 2131427445;
+			public const int notification_template_media_custom = 2131427445;
 			
 			// aapt resource value: 0x7F0B0076
-			public const int preference = 2131427446;
+			public const int notification_template_part_chronometer = 2131427446;
 			
 			// aapt resource value: 0x7F0B0077
-			public const int preference_category = 2131427447;
+			public const int notification_template_part_time = 2131427447;
 			
 			// aapt resource value: 0x7F0B0078
-			public const int preference_category_material = 2131427448;
+			public const int preference = 2131427448;
 			
 			// aapt resource value: 0x7F0B0079
-			public const int preference_dialog_edittext = 2131427449;
+			public const int preference_category = 2131427449;
 			
 			// aapt resource value: 0x7F0B007A
-			public const int preference_dropdown = 2131427450;
+			public const int preference_category_material = 2131427450;
 			
 			// aapt resource value: 0x7F0B007B
-			public const int preference_dropdown_material = 2131427451;
+			public const int preference_dialog_edittext = 2131427451;
 			
 			// aapt resource value: 0x7F0B007C
-			public const int preference_information = 2131427452;
+			public const int preference_dropdown = 2131427452;
 			
 			// aapt resource value: 0x7F0B007D
-			public const int preference_information_material = 2131427453;
+			public const int preference_dropdown_material = 2131427453;
 			
 			// aapt resource value: 0x7F0B007E
-			public const int preference_list_fragment = 2131427454;
+			public const int preference_information = 2131427454;
 			
 			// aapt resource value: 0x7F0B007F
-			public const int preference_material = 2131427455;
+			public const int preference_information_material = 2131427455;
 			
 			// aapt resource value: 0x7F0B0080
-			public const int preference_recyclerview = 2131427456;
+			public const int preference_list_fragment = 2131427456;
 			
 			// aapt resource value: 0x7F0B0081
-			public const int preference_widget_checkbox = 2131427457;
+			public const int preference_material = 2131427457;
 			
 			// aapt resource value: 0x7F0B0082
-			public const int preference_widget_seekbar = 2131427458;
+			public const int preference_recyclerview = 2131427458;
 			
 			// aapt resource value: 0x7F0B0083
-			public const int preference_widget_seekbar_material = 2131427459;
+			public const int preference_widget_checkbox = 2131427459;
 			
 			// aapt resource value: 0x7F0B0084
-			public const int preference_widget_switch = 2131427460;
+			public const int preference_widget_seekbar = 2131427460;
 			
 			// aapt resource value: 0x7F0B0085
-			public const int preference_widget_switch_compat = 2131427461;
+			public const int preference_widget_seekbar_material = 2131427461;
 			
 			// aapt resource value: 0x7F0B0086
-			public const int RootLayout = 2131427462;
+			public const int preference_widget_switch = 2131427462;
 			
 			// aapt resource value: 0x7F0B0087
-			public const int select_dialog_item_material = 2131427463;
+			public const int preference_widget_switch_compat = 2131427463;
 			
 			// aapt resource value: 0x7F0B0088
-			public const int select_dialog_multichoice_material = 2131427464;
+			public const int RootLayout = 2131427464;
 			
 			// aapt resource value: 0x7F0B0089
-			public const int select_dialog_singlechoice_material = 2131427465;
+			public const int ScrollViewer = 2131427465;
 			
 			// aapt resource value: 0x7F0B008A
-			public const int ShellContent = 2131427466;
+			public const int select_dialog_item_material = 2131427466;
 			
 			// aapt resource value: 0x7F0B008B
-			public const int support_simple_spinner_dropdown_item = 2131427467;
+			public const int select_dialog_multichoice_material = 2131427467;
 			
 			// aapt resource value: 0x7F0B008C
-			public const int Tabbar = 2131427468;
+			public const int select_dialog_singlechoice_material = 2131427468;
 			
 			// aapt resource value: 0x7F0B008D
-			public const int test_action_chip = 2131427469;
+			public const int sfcomboBox_layout = 2131427469;
 			
 			// aapt resource value: 0x7F0B008E
-			public const int test_chip_zero_corner_radius = 2131427470;
+			public const int ShellContent = 2131427470;
 			
 			// aapt resource value: 0x7F0B008F
-			public const int test_design_checkbox = 2131427471;
+			public const int support_simple_spinner_dropdown_item = 2131427471;
 			
 			// aapt resource value: 0x7F0B0090
-			public const int test_design_radiobutton = 2131427472;
+			public const int Tabbar = 2131427472;
 			
 			// aapt resource value: 0x7F0B0091
-			public const int test_navigation_bar_item_layout = 2131427473;
+			public const int test_action_chip = 2131427473;
 			
 			// aapt resource value: 0x7F0B0092
-			public const int test_reflow_chipgroup = 2131427474;
+			public const int test_chip_zero_corner_radius = 2131427474;
 			
 			// aapt resource value: 0x7F0B0093
-			public const int test_toolbar = 2131427475;
+			public const int test_design_checkbox = 2131427475;
 			
 			// aapt resource value: 0x7F0B0094
-			public const int test_toolbar_custom_background = 2131427476;
+			public const int test_design_radiobutton = 2131427476;
 			
 			// aapt resource value: 0x7F0B0095
-			public const int test_toolbar_elevation = 2131427477;
+			public const int test_navigation_bar_item_layout = 2131427477;
 			
 			// aapt resource value: 0x7F0B0096
-			public const int test_toolbar_surface = 2131427478;
-			
-			// aapt resource value: 0x7F0B009B
-			public const int text_view_without_line_height = 2131427483;
+			public const int test_reflow_chipgroup = 2131427478;
 			
 			// aapt resource value: 0x7F0B0097
-			public const int text_view_with_line_height_from_appearance = 2131427479;
+			public const int test_toolbar = 2131427479;
 			
 			// aapt resource value: 0x7F0B0098
-			public const int text_view_with_line_height_from_layout = 2131427480;
+			public const int test_toolbar_custom_background = 2131427480;
 			
 			// aapt resource value: 0x7F0B0099
-			public const int text_view_with_line_height_from_style = 2131427481;
+			public const int test_toolbar_elevation = 2131427481;
 			
 			// aapt resource value: 0x7F0B009A
-			public const int text_view_with_theme_line_height = 2131427482;
+			public const int test_toolbar_surface = 2131427482;
+			
+			// aapt resource value: 0x7F0B009F
+			public const int text_view_without_line_height = 2131427487;
+			
+			// aapt resource value: 0x7F0B009B
+			public const int text_view_with_line_height_from_appearance = 2131427483;
 			
 			// aapt resource value: 0x7F0B009C
-			public const int Toolbar = 2131427484;
+			public const int text_view_with_line_height_from_layout = 2131427484;
+			
+			// aapt resource value: 0x7F0B009D
+			public const int text_view_with_line_height_from_style = 2131427485;
+			
+			// aapt resource value: 0x7F0B009E
+			public const int text_view_with_theme_line_height = 2131427486;
+			
+			// aapt resource value: 0x7F0B00A0
+			public const int Toolbar = 2131427488;
 			
 			static Layout()
 			{
@@ -25426,536 +28319,557 @@ namespace PetArmy.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7F0E0000
-			public const int abc_action_bar_home_description = 2131623936;
-			
-			// aapt resource value: 0x7F0E0001
-			public const int abc_action_bar_up_description = 2131623937;
-			
-			// aapt resource value: 0x7F0E0002
-			public const int abc_action_menu_overflow_description = 2131623938;
-			
 			// aapt resource value: 0x7F0E0003
-			public const int abc_action_mode_done = 2131623939;
-			
-			// aapt resource value: 0x7F0E0005
-			public const int abc_activitychooserview_choose_application = 2131623941;
+			public const int abc_action_bar_home_description = 2131623939;
 			
 			// aapt resource value: 0x7F0E0004
-			public const int abc_activity_chooser_view_see_all = 2131623940;
+			public const int abc_action_bar_up_description = 2131623940;
+			
+			// aapt resource value: 0x7F0E0005
+			public const int abc_action_menu_overflow_description = 2131623941;
 			
 			// aapt resource value: 0x7F0E0006
-			public const int abc_capital_off = 2131623942;
-			
-			// aapt resource value: 0x7F0E0007
-			public const int abc_capital_on = 2131623943;
+			public const int abc_action_mode_done = 2131623942;
 			
 			// aapt resource value: 0x7F0E0008
-			public const int abc_menu_alt_shortcut_label = 2131623944;
+			public const int abc_activitychooserview_choose_application = 2131623944;
+			
+			// aapt resource value: 0x7F0E0007
+			public const int abc_activity_chooser_view_see_all = 2131623943;
 			
 			// aapt resource value: 0x7F0E0009
-			public const int abc_menu_ctrl_shortcut_label = 2131623945;
+			public const int abc_capital_off = 2131623945;
 			
 			// aapt resource value: 0x7F0E000A
-			public const int abc_menu_delete_shortcut_label = 2131623946;
+			public const int abc_capital_on = 2131623946;
 			
 			// aapt resource value: 0x7F0E000B
-			public const int abc_menu_enter_shortcut_label = 2131623947;
+			public const int abc_menu_alt_shortcut_label = 2131623947;
 			
 			// aapt resource value: 0x7F0E000C
-			public const int abc_menu_function_shortcut_label = 2131623948;
+			public const int abc_menu_ctrl_shortcut_label = 2131623948;
 			
 			// aapt resource value: 0x7F0E000D
-			public const int abc_menu_meta_shortcut_label = 2131623949;
+			public const int abc_menu_delete_shortcut_label = 2131623949;
 			
 			// aapt resource value: 0x7F0E000E
-			public const int abc_menu_shift_shortcut_label = 2131623950;
+			public const int abc_menu_enter_shortcut_label = 2131623950;
 			
 			// aapt resource value: 0x7F0E000F
-			public const int abc_menu_space_shortcut_label = 2131623951;
+			public const int abc_menu_function_shortcut_label = 2131623951;
 			
 			// aapt resource value: 0x7F0E0010
-			public const int abc_menu_sym_shortcut_label = 2131623952;
+			public const int abc_menu_meta_shortcut_label = 2131623952;
 			
 			// aapt resource value: 0x7F0E0011
-			public const int abc_prepend_shortcut_label = 2131623953;
-			
-			// aapt resource value: 0x7F0E0013
-			public const int abc_searchview_description_clear = 2131623955;
-			
-			// aapt resource value: 0x7F0E0014
-			public const int abc_searchview_description_query = 2131623956;
-			
-			// aapt resource value: 0x7F0E0015
-			public const int abc_searchview_description_search = 2131623957;
-			
-			// aapt resource value: 0x7F0E0016
-			public const int abc_searchview_description_submit = 2131623958;
-			
-			// aapt resource value: 0x7F0E0017
-			public const int abc_searchview_description_voice = 2131623959;
+			public const int abc_menu_shift_shortcut_label = 2131623953;
 			
 			// aapt resource value: 0x7F0E0012
-			public const int abc_search_hint = 2131623954;
+			public const int abc_menu_space_shortcut_label = 2131623954;
+			
+			// aapt resource value: 0x7F0E0013
+			public const int abc_menu_sym_shortcut_label = 2131623955;
+			
+			// aapt resource value: 0x7F0E0014
+			public const int abc_prepend_shortcut_label = 2131623956;
+			
+			// aapt resource value: 0x7F0E0016
+			public const int abc_searchview_description_clear = 2131623958;
+			
+			// aapt resource value: 0x7F0E0017
+			public const int abc_searchview_description_query = 2131623959;
 			
 			// aapt resource value: 0x7F0E0018
-			public const int abc_shareactionprovider_share_with = 2131623960;
+			public const int abc_searchview_description_search = 2131623960;
 			
 			// aapt resource value: 0x7F0E0019
-			public const int abc_shareactionprovider_share_with_application = 2131623961;
+			public const int abc_searchview_description_submit = 2131623961;
 			
 			// aapt resource value: 0x7F0E001A
-			public const int abc_toolbar_collapse_description = 2131623962;
+			public const int abc_searchview_description_voice = 2131623962;
+			
+			// aapt resource value: 0x7F0E0015
+			public const int abc_search_hint = 2131623957;
 			
 			// aapt resource value: 0x7F0E001B
-			public const int accept = 2131623963;
-			
-			// aapt resource value: 0x7F0E001D
-			public const int appbar_scrolling_view_behavior = 2131623965;
+			public const int abc_shareactionprovider_share_with = 2131623963;
 			
 			// aapt resource value: 0x7F0E001C
-			public const int app_name = 2131623964;
+			public const int abc_shareactionprovider_share_with_application = 2131623964;
 			
-			// aapt resource value: 0x7F0E001F
-			public const int bottomsheet_action_expand_halfway = 2131623967;
+			// aapt resource value: 0x7F0E001D
+			public const int abc_toolbar_collapse_description = 2131623965;
 			
 			// aapt resource value: 0x7F0E001E
-			public const int bottom_sheet_behavior = 2131623966;
+			public const int accept = 2131623966;
 			
 			// aapt resource value: 0x7F0E0020
-			public const int character_counter_content_description = 2131623968;
+			public const int appbar_scrolling_view_behavior = 2131623968;
 			
-			// aapt resource value: 0x7F0E0021
-			public const int character_counter_overflowed_content_description = 2131623969;
+			// aapt resource value: 0x7F0E0000
+			public const int ApplicationName = 2131623936;
+			
+			// aapt resource value: 0x7F0E001F
+			public const int app_name = 2131623967;
 			
 			// aapt resource value: 0x7F0E0022
-			public const int character_counter_pattern = 2131623970;
+			public const int bottomsheet_action_expand_halfway = 2131623970;
+			
+			// aapt resource value: 0x7F0E0021
+			public const int bottom_sheet_behavior = 2131623969;
 			
 			// aapt resource value: 0x7F0E0023
-			public const int chip_text = 2131623971;
+			public const int cancel_drop = 2131623971;
 			
 			// aapt resource value: 0x7F0E0024
-			public const int clear_text_end_icon_content_description = 2131623972;
-			
-			// aapt resource value: 0x7F0E003C
-			public const int common_google_play_services_enable_button = 2131623996;
-			
-			// aapt resource value: 0x7F0E003D
-			public const int common_google_play_services_enable_text = 2131623997;
-			
-			// aapt resource value: 0x7F0E003E
-			public const int common_google_play_services_enable_title = 2131623998;
-			
-			// aapt resource value: 0x7F0E003F
-			public const int common_google_play_services_install_button = 2131623999;
-			
-			// aapt resource value: 0x7F0E0040
-			public const int common_google_play_services_install_text = 2131624000;
-			
-			// aapt resource value: 0x7F0E0041
-			public const int common_google_play_services_install_title = 2131624001;
-			
-			// aapt resource value: 0x7F0E0042
-			public const int common_google_play_services_notification_channel_name = 2131624002;
-			
-			// aapt resource value: 0x7F0E0043
-			public const int common_google_play_services_notification_ticker = 2131624003;
-			
-			// aapt resource value: 0x7F0E0044
-			public const int common_google_play_services_unknown_issue = 2131624004;
-			
-			// aapt resource value: 0x7F0E0045
-			public const int common_google_play_services_unsupported_text = 2131624005;
-			
-			// aapt resource value: 0x7F0E0046
-			public const int common_google_play_services_update_button = 2131624006;
-			
-			// aapt resource value: 0x7F0E0047
-			public const int common_google_play_services_update_text = 2131624007;
-			
-			// aapt resource value: 0x7F0E0048
-			public const int common_google_play_services_update_title = 2131624008;
-			
-			// aapt resource value: 0x7F0E0049
-			public const int common_google_play_services_updating_text = 2131624009;
-			
-			// aapt resource value: 0x7F0E004A
-			public const int common_google_play_services_wear_update_text = 2131624010;
-			
-			// aapt resource value: 0x7F0E004B
-			public const int common_open_on_phone = 2131624011;
-			
-			// aapt resource value: 0x7F0E004C
-			public const int common_signin_button_text = 2131624012;
-			
-			// aapt resource value: 0x7F0E004D
-			public const int common_signin_button_text_long = 2131624013;
+			public const int character_counter_content_description = 2131623972;
 			
 			// aapt resource value: 0x7F0E0025
-			public const int com_facebook_device_auth_instructions = 2131623973;
+			public const int character_counter_overflowed_content_description = 2131623973;
 			
 			// aapt resource value: 0x7F0E0026
-			public const int com_facebook_image_download_unknown_error = 2131623974;
+			public const int character_counter_pattern = 2131623974;
 			
 			// aapt resource value: 0x7F0E0027
-			public const int com_facebook_internet_permission_error_message = 2131623975;
+			public const int chip_text = 2131623975;
 			
 			// aapt resource value: 0x7F0E0028
-			public const int com_facebook_internet_permission_error_title = 2131623976;
+			public const int clear_text_end_icon_content_description = 2131623976;
 			
-			// aapt resource value: 0x7F0E0029
-			public const int com_facebook_like_button_liked = 2131623977;
+			// aapt resource value: 0x7F0E0040
+			public const int common_google_play_services_enable_button = 2131624000;
 			
-			// aapt resource value: 0x7F0E002A
-			public const int com_facebook_like_button_not_liked = 2131623978;
+			// aapt resource value: 0x7F0E0041
+			public const int common_google_play_services_enable_text = 2131624001;
 			
-			// aapt resource value: 0x7F0E002B
-			public const int com_facebook_loading = 2131623979;
+			// aapt resource value: 0x7F0E0042
+			public const int common_google_play_services_enable_title = 2131624002;
 			
-			// aapt resource value: 0x7F0E002C
-			public const int com_facebook_loginview_cancel_action = 2131623980;
+			// aapt resource value: 0x7F0E0043
+			public const int common_google_play_services_install_button = 2131624003;
 			
-			// aapt resource value: 0x7F0E0032
-			public const int com_facebook_loginview_logged_in_as = 2131623986;
+			// aapt resource value: 0x7F0E0044
+			public const int common_google_play_services_install_text = 2131624004;
 			
-			// aapt resource value: 0x7F0E0033
-			public const int com_facebook_loginview_logged_in_using_facebook = 2131623987;
+			// aapt resource value: 0x7F0E0045
+			public const int common_google_play_services_install_title = 2131624005;
 			
-			// aapt resource value: 0x7F0E002D
-			public const int com_facebook_loginview_log_in_button = 2131623981;
+			// aapt resource value: 0x7F0E0046
+			public const int common_google_play_services_notification_channel_name = 2131624006;
 			
-			// aapt resource value: 0x7F0E002E
-			public const int com_facebook_loginview_log_in_button_continue = 2131623982;
+			// aapt resource value: 0x7F0E0047
+			public const int common_google_play_services_notification_ticker = 2131624007;
 			
-			// aapt resource value: 0x7F0E002F
-			public const int com_facebook_loginview_log_in_button_long = 2131623983;
+			// aapt resource value: 0x7F0E0048
+			public const int common_google_play_services_unknown_issue = 2131624008;
 			
-			// aapt resource value: 0x7F0E0030
-			public const int com_facebook_loginview_log_out_action = 2131623984;
+			// aapt resource value: 0x7F0E0049
+			public const int common_google_play_services_unsupported_text = 2131624009;
 			
-			// aapt resource value: 0x7F0E0031
-			public const int com_facebook_loginview_log_out_button = 2131623985;
+			// aapt resource value: 0x7F0E004A
+			public const int common_google_play_services_update_button = 2131624010;
 			
-			// aapt resource value: 0x7F0E0034
-			public const int com_facebook_send_button_text = 2131623988;
+			// aapt resource value: 0x7F0E004B
+			public const int common_google_play_services_update_text = 2131624011;
 			
-			// aapt resource value: 0x7F0E0035
-			public const int com_facebook_share_button_text = 2131623989;
+			// aapt resource value: 0x7F0E004C
+			public const int common_google_play_services_update_title = 2131624012;
 			
-			// aapt resource value: 0x7F0E0036
-			public const int com_facebook_smart_device_instructions = 2131623990;
-			
-			// aapt resource value: 0x7F0E0037
-			public const int com_facebook_smart_device_instructions_or = 2131623991;
-			
-			// aapt resource value: 0x7F0E0038
-			public const int com_facebook_smart_login_confirmation_cancel = 2131623992;
-			
-			// aapt resource value: 0x7F0E0039
-			public const int com_facebook_smart_login_confirmation_continue_as = 2131623993;
-			
-			// aapt resource value: 0x7F0E003A
-			public const int com_facebook_smart_login_confirmation_title = 2131623994;
-			
-			// aapt resource value: 0x7F0E003B
-			public const int com_facebook_tooltip_default = 2131623995;
+			// aapt resource value: 0x7F0E004D
+			public const int common_google_play_services_updating_text = 2131624013;
 			
 			// aapt resource value: 0x7F0E004E
-			public const int copy = 2131624014;
+			public const int common_google_play_services_wear_update_text = 2131624014;
 			
 			// aapt resource value: 0x7F0E004F
-			public const int copy_toast_msg = 2131624015;
+			public const int common_open_on_phone = 2131624015;
 			
 			// aapt resource value: 0x7F0E0050
-			public const int decline = 2131624016;
+			public const int common_signin_button_text = 2131624016;
 			
 			// aapt resource value: 0x7F0E0051
-			public const int default_web_client_id = 2131624017;
+			public const int common_signin_button_text_long = 2131624017;
+			
+			// aapt resource value: 0x7F0E0029
+			public const int com_facebook_device_auth_instructions = 2131623977;
+			
+			// aapt resource value: 0x7F0E002A
+			public const int com_facebook_image_download_unknown_error = 2131623978;
+			
+			// aapt resource value: 0x7F0E002B
+			public const int com_facebook_internet_permission_error_message = 2131623979;
+			
+			// aapt resource value: 0x7F0E002C
+			public const int com_facebook_internet_permission_error_title = 2131623980;
+			
+			// aapt resource value: 0x7F0E002D
+			public const int com_facebook_like_button_liked = 2131623981;
+			
+			// aapt resource value: 0x7F0E002E
+			public const int com_facebook_like_button_not_liked = 2131623982;
+			
+			// aapt resource value: 0x7F0E002F
+			public const int com_facebook_loading = 2131623983;
+			
+			// aapt resource value: 0x7F0E0030
+			public const int com_facebook_loginview_cancel_action = 2131623984;
+			
+			// aapt resource value: 0x7F0E0036
+			public const int com_facebook_loginview_logged_in_as = 2131623990;
+			
+			// aapt resource value: 0x7F0E0037
+			public const int com_facebook_loginview_logged_in_using_facebook = 2131623991;
+			
+			// aapt resource value: 0x7F0E0031
+			public const int com_facebook_loginview_log_in_button = 2131623985;
+			
+			// aapt resource value: 0x7F0E0032
+			public const int com_facebook_loginview_log_in_button_continue = 2131623986;
+			
+			// aapt resource value: 0x7F0E0033
+			public const int com_facebook_loginview_log_in_button_long = 2131623987;
+			
+			// aapt resource value: 0x7F0E0034
+			public const int com_facebook_loginview_log_out_action = 2131623988;
+			
+			// aapt resource value: 0x7F0E0035
+			public const int com_facebook_loginview_log_out_button = 2131623989;
+			
+			// aapt resource value: 0x7F0E0038
+			public const int com_facebook_send_button_text = 2131623992;
+			
+			// aapt resource value: 0x7F0E0039
+			public const int com_facebook_share_button_text = 2131623993;
+			
+			// aapt resource value: 0x7F0E003A
+			public const int com_facebook_smart_device_instructions = 2131623994;
+			
+			// aapt resource value: 0x7F0E003B
+			public const int com_facebook_smart_device_instructions_or = 2131623995;
+			
+			// aapt resource value: 0x7F0E003C
+			public const int com_facebook_smart_login_confirmation_cancel = 2131623996;
+			
+			// aapt resource value: 0x7F0E003D
+			public const int com_facebook_smart_login_confirmation_continue_as = 2131623997;
+			
+			// aapt resource value: 0x7F0E003E
+			public const int com_facebook_smart_login_confirmation_title = 2131623998;
+			
+			// aapt resource value: 0x7F0E003F
+			public const int com_facebook_tooltip_default = 2131623999;
 			
 			// aapt resource value: 0x7F0E0052
-			public const int error_icon_content_description = 2131624018;
+			public const int copy = 2131624018;
 			
 			// aapt resource value: 0x7F0E0053
-			public const int expand_button_title = 2131624019;
+			public const int copy_toast_msg = 2131624019;
 			
 			// aapt resource value: 0x7F0E0054
-			public const int exposed_dropdown_menu_content_description = 2131624020;
+			public const int decline = 2131624020;
 			
 			// aapt resource value: 0x7F0E0055
-			public const int fab_transformation_scrim_behavior = 2131624021;
+			public const int default_web_client_id = 2131624021;
 			
 			// aapt resource value: 0x7F0E0056
-			public const int fab_transformation_sheet_behavior = 2131624022;
+			public const int drop_above = 2131624022;
 			
 			// aapt resource value: 0x7F0E0057
-			public const int facebook_app_id = 2131624023;
+			public const int drop_below = 2131624023;
 			
 			// aapt resource value: 0x7F0E0058
-			public const int facebook_client_token = 2131624024;
+			public const int error_icon_content_description = 2131624024;
 			
 			// aapt resource value: 0x7F0E0059
-			public const int fallback_menu_item_copy_link = 2131624025;
+			public const int expand_button_title = 2131624025;
 			
 			// aapt resource value: 0x7F0E005A
-			public const int fallback_menu_item_open_in_browser = 2131624026;
+			public const int exposed_dropdown_menu_content_description = 2131624026;
 			
 			// aapt resource value: 0x7F0E005B
-			public const int fallback_menu_item_share_link = 2131624027;
+			public const int fab_transformation_scrim_behavior = 2131624027;
 			
 			// aapt resource value: 0x7F0E005C
-			public const int fb_login_protocol_scheme = 2131624028;
+			public const int fab_transformation_sheet_behavior = 2131624028;
 			
 			// aapt resource value: 0x7F0E005D
-			public const int firebase_database_url = 2131624029;
+			public const int facebook_app_id = 2131624029;
 			
 			// aapt resource value: 0x7F0E005E
-			public const int gcm_defaultSenderId = 2131624030;
+			public const int facebook_client_token = 2131624030;
 			
 			// aapt resource value: 0x7F0E005F
-			public const int google_api_key = 2131624031;
+			public const int fallback_menu_item_copy_link = 2131624031;
 			
 			// aapt resource value: 0x7F0E0060
-			public const int google_app_id = 2131624032;
+			public const int fallback_menu_item_open_in_browser = 2131624032;
 			
 			// aapt resource value: 0x7F0E0061
-			public const int google_crash_reporting_api_key = 2131624033;
+			public const int fallback_menu_item_share_link = 2131624033;
 			
 			// aapt resource value: 0x7F0E0062
-			public const int google_storage_bucket = 2131624034;
+			public const int fb_login_protocol_scheme = 2131624034;
 			
 			// aapt resource value: 0x7F0E0063
-			public const int hello = 2131624035;
+			public const int firebase_database_url = 2131624035;
 			
 			// aapt resource value: 0x7F0E0064
-			public const int hide_bottom_view_on_scroll_behavior = 2131624036;
+			public const int gcm_defaultSenderId = 2131624036;
 			
 			// aapt resource value: 0x7F0E0065
-			public const int icon_content_description = 2131624037;
+			public const int google_api_key = 2131624037;
 			
 			// aapt resource value: 0x7F0E0066
-			public const int item_view_role_description = 2131624038;
+			public const int google_app_id = 2131624038;
 			
 			// aapt resource value: 0x7F0E0067
-			public const int library_name = 2131624039;
+			public const int google_crash_reporting_api_key = 2131624039;
 			
 			// aapt resource value: 0x7F0E0068
-			public const int material_clock_display_divider = 2131624040;
+			public const int google_storage_bucket = 2131624040;
 			
 			// aapt resource value: 0x7F0E0069
-			public const int material_clock_toggle_content_description = 2131624041;
+			public const int hello = 2131624041;
+			
+			// aapt resource value: 0x7F0E0001
+			public const int Hello = 2131623937;
 			
 			// aapt resource value: 0x7F0E006A
-			public const int material_hour_selection = 2131624042;
+			public const int hide_bottom_view_on_scroll_behavior = 2131624042;
 			
 			// aapt resource value: 0x7F0E006B
-			public const int material_hour_suffix = 2131624043;
+			public const int icon_content_description = 2131624043;
 			
 			// aapt resource value: 0x7F0E006C
-			public const int material_minute_selection = 2131624044;
+			public const int item_view_role_description = 2131624044;
 			
 			// aapt resource value: 0x7F0E006D
-			public const int material_minute_suffix = 2131624045;
+			public const int library_name = 2131624045;
+			
+			// aapt resource value: 0x7F0E0002
+			public const int Load_More = 2131623938;
 			
 			// aapt resource value: 0x7F0E006E
-			public const int material_motion_easing_accelerated = 2131624046;
+			public const int load_more_items = 2131624046;
 			
 			// aapt resource value: 0x7F0E006F
-			public const int material_motion_easing_decelerated = 2131624047;
+			public const int material_clock_display_divider = 2131624047;
 			
 			// aapt resource value: 0x7F0E0070
-			public const int material_motion_easing_emphasized = 2131624048;
+			public const int material_clock_toggle_content_description = 2131624048;
 			
 			// aapt resource value: 0x7F0E0071
-			public const int material_motion_easing_linear = 2131624049;
+			public const int material_hour_selection = 2131624049;
 			
 			// aapt resource value: 0x7F0E0072
-			public const int material_motion_easing_standard = 2131624050;
+			public const int material_hour_suffix = 2131624050;
 			
 			// aapt resource value: 0x7F0E0073
-			public const int material_slider_range_end = 2131624051;
+			public const int material_minute_selection = 2131624051;
 			
 			// aapt resource value: 0x7F0E0074
-			public const int material_slider_range_start = 2131624052;
+			public const int material_minute_suffix = 2131624052;
 			
 			// aapt resource value: 0x7F0E0075
-			public const int material_timepicker_am = 2131624053;
+			public const int material_motion_easing_accelerated = 2131624053;
 			
 			// aapt resource value: 0x7F0E0076
-			public const int material_timepicker_clock_mode_description = 2131624054;
+			public const int material_motion_easing_decelerated = 2131624054;
 			
 			// aapt resource value: 0x7F0E0077
-			public const int material_timepicker_hour = 2131624055;
+			public const int material_motion_easing_emphasized = 2131624055;
 			
 			// aapt resource value: 0x7F0E0078
-			public const int material_timepicker_minute = 2131624056;
+			public const int material_motion_easing_linear = 2131624056;
 			
 			// aapt resource value: 0x7F0E0079
-			public const int material_timepicker_pm = 2131624057;
+			public const int material_motion_easing_standard = 2131624057;
 			
 			// aapt resource value: 0x7F0E007A
-			public const int material_timepicker_select_time = 2131624058;
+			public const int material_slider_range_end = 2131624058;
 			
 			// aapt resource value: 0x7F0E007B
-			public const int material_timepicker_text_input_mode_description = 2131624059;
+			public const int material_slider_range_start = 2131624059;
 			
 			// aapt resource value: 0x7F0E007C
-			public const int mtrl_badge_numberless_content_description = 2131624060;
+			public const int material_timepicker_am = 2131624060;
 			
 			// aapt resource value: 0x7F0E007D
-			public const int mtrl_chip_close_icon_content_description = 2131624061;
+			public const int material_timepicker_clock_mode_description = 2131624061;
 			
 			// aapt resource value: 0x7F0E007E
-			public const int mtrl_exceed_max_badge_number_content_description = 2131624062;
+			public const int material_timepicker_hour = 2131624062;
 			
 			// aapt resource value: 0x7F0E007F
-			public const int mtrl_exceed_max_badge_number_suffix = 2131624063;
+			public const int material_timepicker_minute = 2131624063;
 			
 			// aapt resource value: 0x7F0E0080
-			public const int mtrl_picker_a11y_next_month = 2131624064;
+			public const int material_timepicker_pm = 2131624064;
 			
 			// aapt resource value: 0x7F0E0081
-			public const int mtrl_picker_a11y_prev_month = 2131624065;
+			public const int material_timepicker_select_time = 2131624065;
 			
 			// aapt resource value: 0x7F0E0082
-			public const int mtrl_picker_announce_current_selection = 2131624066;
+			public const int material_timepicker_text_input_mode_description = 2131624066;
 			
 			// aapt resource value: 0x7F0E0083
-			public const int mtrl_picker_cancel = 2131624067;
+			public const int mtrl_badge_numberless_content_description = 2131624067;
 			
 			// aapt resource value: 0x7F0E0084
-			public const int mtrl_picker_confirm = 2131624068;
+			public const int mtrl_chip_close_icon_content_description = 2131624068;
 			
 			// aapt resource value: 0x7F0E0085
-			public const int mtrl_picker_date_header_selected = 2131624069;
+			public const int mtrl_exceed_max_badge_number_content_description = 2131624069;
 			
 			// aapt resource value: 0x7F0E0086
-			public const int mtrl_picker_date_header_title = 2131624070;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131624070;
 			
 			// aapt resource value: 0x7F0E0087
-			public const int mtrl_picker_date_header_unselected = 2131624071;
+			public const int mtrl_picker_a11y_next_month = 2131624071;
 			
 			// aapt resource value: 0x7F0E0088
-			public const int mtrl_picker_day_of_week_column_header = 2131624072;
+			public const int mtrl_picker_a11y_prev_month = 2131624072;
 			
 			// aapt resource value: 0x7F0E0089
-			public const int mtrl_picker_invalid_format = 2131624073;
+			public const int mtrl_picker_announce_current_selection = 2131624073;
 			
 			// aapt resource value: 0x7F0E008A
-			public const int mtrl_picker_invalid_format_example = 2131624074;
+			public const int mtrl_picker_cancel = 2131624074;
 			
 			// aapt resource value: 0x7F0E008B
-			public const int mtrl_picker_invalid_format_use = 2131624075;
+			public const int mtrl_picker_confirm = 2131624075;
 			
 			// aapt resource value: 0x7F0E008C
-			public const int mtrl_picker_invalid_range = 2131624076;
+			public const int mtrl_picker_date_header_selected = 2131624076;
 			
 			// aapt resource value: 0x7F0E008D
-			public const int mtrl_picker_navigate_to_year_description = 2131624077;
+			public const int mtrl_picker_date_header_title = 2131624077;
 			
 			// aapt resource value: 0x7F0E008E
-			public const int mtrl_picker_out_of_range = 2131624078;
+			public const int mtrl_picker_date_header_unselected = 2131624078;
 			
 			// aapt resource value: 0x7F0E008F
-			public const int mtrl_picker_range_header_only_end_selected = 2131624079;
+			public const int mtrl_picker_day_of_week_column_header = 2131624079;
 			
 			// aapt resource value: 0x7F0E0090
-			public const int mtrl_picker_range_header_only_start_selected = 2131624080;
+			public const int mtrl_picker_invalid_format = 2131624080;
 			
 			// aapt resource value: 0x7F0E0091
-			public const int mtrl_picker_range_header_selected = 2131624081;
+			public const int mtrl_picker_invalid_format_example = 2131624081;
 			
 			// aapt resource value: 0x7F0E0092
-			public const int mtrl_picker_range_header_title = 2131624082;
+			public const int mtrl_picker_invalid_format_use = 2131624082;
 			
 			// aapt resource value: 0x7F0E0093
-			public const int mtrl_picker_range_header_unselected = 2131624083;
+			public const int mtrl_picker_invalid_range = 2131624083;
 			
 			// aapt resource value: 0x7F0E0094
-			public const int mtrl_picker_save = 2131624084;
+			public const int mtrl_picker_navigate_to_year_description = 2131624084;
 			
 			// aapt resource value: 0x7F0E0095
-			public const int mtrl_picker_text_input_date_hint = 2131624085;
+			public const int mtrl_picker_out_of_range = 2131624085;
 			
 			// aapt resource value: 0x7F0E0096
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131624086;
+			public const int mtrl_picker_range_header_only_end_selected = 2131624086;
 			
 			// aapt resource value: 0x7F0E0097
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131624087;
+			public const int mtrl_picker_range_header_only_start_selected = 2131624087;
 			
 			// aapt resource value: 0x7F0E0098
-			public const int mtrl_picker_text_input_day_abbr = 2131624088;
+			public const int mtrl_picker_range_header_selected = 2131624088;
 			
 			// aapt resource value: 0x7F0E0099
-			public const int mtrl_picker_text_input_month_abbr = 2131624089;
+			public const int mtrl_picker_range_header_title = 2131624089;
 			
 			// aapt resource value: 0x7F0E009A
-			public const int mtrl_picker_text_input_year_abbr = 2131624090;
+			public const int mtrl_picker_range_header_unselected = 2131624090;
 			
 			// aapt resource value: 0x7F0E009B
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624091;
+			public const int mtrl_picker_save = 2131624091;
 			
 			// aapt resource value: 0x7F0E009C
-			public const int mtrl_picker_toggle_to_day_selection = 2131624092;
+			public const int mtrl_picker_text_input_date_hint = 2131624092;
 			
 			// aapt resource value: 0x7F0E009D
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131624093;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131624093;
 			
 			// aapt resource value: 0x7F0E009E
-			public const int mtrl_picker_toggle_to_year_selection = 2131624094;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131624094;
 			
 			// aapt resource value: 0x7F0E009F
-			public const int nav_app_bar_navigate_up_description = 2131624095;
+			public const int mtrl_picker_text_input_day_abbr = 2131624095;
 			
 			// aapt resource value: 0x7F0E00A0
-			public const int nav_app_bar_open_drawer_description = 2131624096;
+			public const int mtrl_picker_text_input_month_abbr = 2131624096;
 			
 			// aapt resource value: 0x7F0E00A1
-			public const int not_set = 2131624097;
+			public const int mtrl_picker_text_input_year_abbr = 2131624097;
 			
 			// aapt resource value: 0x7F0E00A2
-			public const int overflow_tab_title = 2131624098;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624098;
 			
 			// aapt resource value: 0x7F0E00A3
-			public const int password_toggle_content_description = 2131624099;
+			public const int mtrl_picker_toggle_to_day_selection = 2131624099;
 			
 			// aapt resource value: 0x7F0E00A4
-			public const int path_password_eye = 2131624100;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131624100;
 			
 			// aapt resource value: 0x7F0E00A5
-			public const int path_password_eye_mask_strike_through = 2131624101;
+			public const int mtrl_picker_toggle_to_year_selection = 2131624101;
 			
 			// aapt resource value: 0x7F0E00A6
-			public const int path_password_eye_mask_visible = 2131624102;
+			public const int nav_app_bar_navigate_up_description = 2131624102;
 			
 			// aapt resource value: 0x7F0E00A7
-			public const int path_password_strike_through = 2131624103;
+			public const int nav_app_bar_open_drawer_description = 2131624103;
 			
 			// aapt resource value: 0x7F0E00A8
-			public const int popup_message = 2131624104;
+			public const int not_set = 2131624104;
 			
 			// aapt resource value: 0x7F0E00A9
-			public const int preference_copied = 2131624105;
+			public const int overflow_tab_title = 2131624105;
 			
 			// aapt resource value: 0x7F0E00AA
-			public const int project_id = 2131624106;
+			public const int password_toggle_content_description = 2131624106;
 			
 			// aapt resource value: 0x7F0E00AB
-			public const int search_menu_title = 2131624107;
+			public const int path_password_eye = 2131624107;
 			
 			// aapt resource value: 0x7F0E00AC
-			public const int status_bar_notification_info_overflow = 2131624108;
+			public const int path_password_eye_mask_strike_through = 2131624108;
 			
 			// aapt resource value: 0x7F0E00AD
-			public const int summary_collapsed_preference_list = 2131624109;
+			public const int path_password_eye_mask_visible = 2131624109;
 			
 			// aapt resource value: 0x7F0E00AE
-			public const int title = 2131624110;
+			public const int path_password_strike_through = 2131624110;
 			
 			// aapt resource value: 0x7F0E00AF
-			public const int v7_preference_off = 2131624111;
+			public const int popup_message = 2131624111;
 			
 			// aapt resource value: 0x7F0E00B0
-			public const int v7_preference_on = 2131624112;
+			public const int preference_copied = 2131624112;
+			
+			// aapt resource value: 0x7F0E00B1
+			public const int project_id = 2131624113;
+			
+			// aapt resource value: 0x7F0E00B2
+			public const int search_menu_title = 2131624114;
+			
+			// aapt resource value: 0x7F0E00B3
+			public const int status_bar_notification_info_overflow = 2131624115;
+			
+			// aapt resource value: 0x7F0E00B4
+			public const int summary_collapsed_preference_list = 2131624116;
+			
+			// aapt resource value: 0x7F0E00B5
+			public const int title = 2131624117;
+			
+			// aapt resource value: 0x7F0E00B6
+			public const int v7_preference_off = 2131624118;
+			
+			// aapt resource value: 0x7F0E00B7
+			public const int v7_preference_on = 2131624119;
 			
 			static String()
 			{
@@ -36686,25 +39600,28 @@ namespace PetArmy.Droid
 		{
 			
 			// aapt resource value: 0x7F110000
-			public const int image_share_filepaths = 2131820544;
+			public const int file_paths = 2131820544;
 			
 			// aapt resource value: 0x7F110001
-			public const int standalone_badge = 2131820545;
+			public const int image_share_filepaths = 2131820545;
 			
 			// aapt resource value: 0x7F110002
-			public const int standalone_badge_gravity_bottom_end = 2131820546;
+			public const int standalone_badge = 2131820546;
 			
 			// aapt resource value: 0x7F110003
-			public const int standalone_badge_gravity_bottom_start = 2131820547;
+			public const int standalone_badge_gravity_bottom_end = 2131820547;
 			
 			// aapt resource value: 0x7F110004
-			public const int standalone_badge_gravity_top_start = 2131820548;
+			public const int standalone_badge_gravity_bottom_start = 2131820548;
 			
 			// aapt resource value: 0x7F110005
-			public const int standalone_badge_offset = 2131820549;
+			public const int standalone_badge_gravity_top_start = 2131820549;
 			
 			// aapt resource value: 0x7F110006
-			public const int xamarin_essentials_fileprovider_file_paths = 2131820550;
+			public const int standalone_badge_offset = 2131820550;
+			
+			// aapt resource value: 0x7F110007
+			public const int xamarin_essentials_fileprovider_file_paths = 2131820551;
 			
 			static Xml()
 			{
