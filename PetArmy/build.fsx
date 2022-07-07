@@ -7,6 +7,7 @@ nuget Fake.Core.Target //"
 
 open System
 open System.Text
+open System.Text.RegularExpressions
 open Fake.Core
 open Fake.DotNet
 open Fake.DotNet.Xamarin
@@ -19,12 +20,9 @@ Target.initEnvironment ()
 
 let executer (command:string) args =
     Command.RawCommand(command, Arguments.OfArgs args)
-        |> CreateProcess.fromCommand
-        |> Proc.run
-        |> fun result -> 
-            let output = String.Join (Environment.NewLine, result.ToString)
-            Trace.logVerbosefn "Process: \r\n%A", output
-        |> ignore
+    |> CreateProcess.fromCommand
+    |> Proc.run
+
 
 
 type ApkSignerParams = 
@@ -82,13 +80,34 @@ Target.create "Android-Package" (fun _ ->
             ProjectPath = "./PetArmy.Android"
             Configuration = "Debug"
             OutputPath = androidBuildDir })
-    |> exceptions  
-    |> Option.map (fun file -> file.CopyTo(Path.combine androidProdDir file.Name) ) |> ignore 
-    )
+    |> Some  
+    |> Option.map (fun file -> 
+        let apk_unsigned:string = file.FullName
+        let apk_signed = Path.combine androidProdDir (Regex.Replace(file.FullName, ".apk$", "-Signed.apk") )
+        executer "zipalign" ["-f";"-v";"4";apk_unsigned;apk_signed]
+        |> fun output -> 
+            match output.ExitCode with
+            | 0 -> Trace.logVerbosefn "Output:", output.ToString
+            | _ -> Trace.logVerbosefn "Error:", output.Result.ToString
+            |> ignore
+        FileInfo.ofPath(apk_signed)
+        )
+    |> Option.map (fun file ->
+        let keystore = @"/home/freexploit/.local/share/Xamarin/Mono for Android/debug.keystore" |> Path.getFullName
 
-Target.create "debugging" (fun _ -> 
-    executer "/bin/ls" ["-a";"-l"]
-)
+        executer "apksigner" [ "sign";"--ks"; keystore; "--ks-key-alias"; "androiddebugkey"; "--ks-pass";"pass:android"; file.FullName ]
+
+        |> fun output -> 
+            match output.ExitCode with
+            | 0 -> Trace.logVerbosefn "Output:", output.ToString
+            | _ -> Trace.logVerbosefn "Error:", output.Result.ToString
+            |> ignore
+        file
+
+        ) 
+    |> Option.map (fun file -> file.CopyTo(Path.combine androidProdDir file.Name) ) 
+    |>ignore
+    )
 
 
 Target.create "Android" ignore
