@@ -50,16 +50,16 @@ namespace PetArmy.ViewModels
             {   /* Check if user ID is set in general settings*/
                 if (!String.IsNullOrEmpty(Settings.UID))
                 {
-                    /* Get all user's shelters */
-                    List<Refugio> myShelters = await GraphQLService.shelters_ByUser(Settings.UID);
+
+                    myShelters = await GraphQLService.shelters_ByUser(Settings.UID);
 
                     if (myShelters.Count > 0)
                     {
-                        List<Imagen_refugio> imagesCollection = new List<Imagen_refugio>();
+                      
                         /* For each shelter get images collection */
                         foreach (Refugio shelter in myShelters)
                         {
-                           imagesCollection = await GraphQLService.getImages_ByShelter(shelter.id_refugio);
+                            imagesCollection = await GraphQLService.getAllImages();
 
                             /*Search for the default picture, if not set by user use default */
                             bool hasDefault = false;
@@ -75,7 +75,7 @@ namespace PetArmy.ViewModels
                             }
 
                             /*Add custom item to list*/
-                            CstmItemRefugio newItem = new CstmItemRefugio();
+                           
                             if (hasDefault)
                             {
                                 /* sets user default image for shelter*/
@@ -130,6 +130,31 @@ namespace PetArmy.ViewModels
             get { return customList; }
             set { customList = value; OnPropertyChanged(); }
         }
+
+        private List<Imagen_refugio> imagesCollection ;
+
+        public List<Imagen_refugio> ImagesCollection
+        {
+            get { return imagesCollection; }
+            set { imagesCollection = value; OnPropertyChanged(); }
+        }
+
+        private List<Refugio> myShelters;
+
+        public List<Refugio> MyShelters
+        {
+            get { return myShelters; }
+            set { myShelters = value; OnPropertyChanged(); }
+        }
+
+        private CstmItemRefugio newItem;
+
+        public CstmItemRefugio NewItem
+        {
+            get { return newItem; }
+            set { newItem = value; OnPropertyChanged(); }
+        }
+
 
         #endregion
 

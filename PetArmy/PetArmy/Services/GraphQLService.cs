@@ -254,7 +254,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "query MyQuery { imagen_refugio {id_imagen id_refugio imagen isDefault}}",
+                    Query = "query MyQuery {imagen_refugio {id_imagen id_refugio imagen isDefault}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
