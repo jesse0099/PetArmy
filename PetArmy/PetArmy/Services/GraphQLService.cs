@@ -244,10 +244,15 @@ namespace PetArmy.Services
             return shelters;
         }
 
+        private static List<Imagen_refugio> imagesCollection;
 
+        public static List<Imagen_refugio> ImagesCollection
+        {
+            get { return imagesCollection; }
+            set { imagesCollection = value;}
+        }
         public static async Task<List<Imagen_refugio>> getAllImages(){
 
-            List<Imagen_refugio> images = new List<Imagen_refugio>();
 
             try
             {
@@ -259,7 +264,7 @@ namespace PetArmy.Services
                 };
 
                 var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
-                images = response.Data.imagen_refugio;
+                imagesCollection = response.Data.imagen_refugio;
             }
             catch (Exception e)
             {
@@ -267,7 +272,7 @@ namespace PetArmy.Services
                 throw;
             }
 
-            return images;
+            return imagesCollection;
         }
 
         public static async Task<int> countAllImages()

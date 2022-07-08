@@ -12,6 +12,7 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.IO;
 using System.Drawing;
+using System.Threading.Tasks;
 
 namespace PetArmy.ViewModels
 {
@@ -55,43 +56,12 @@ namespace PetArmy.ViewModels
 
                     if (myShelters.Count > 0)
                     {
-                      
+
                         /* For each shelter get images collection */
-                        foreach (Refugio shelter in myShelters)
+                        for (int i=0; i <= myShelters.Count-1;i++)
                         {
-                            imagesCollection = await GraphQLService.getAllImages();
-
-                            /*Search for the default picture, if not set by user use default */
-                            bool hasDefault = false;
-                            byte[] imageData = null;
-
-                            foreach (Imagen_refugio image in imagesCollection)
-                            {
-                                if (image.isDefault)
-                                {
-                                    hasDefault = true;
-                                    imageData = Convert.FromBase64String(image.imagen);
-                                }
-                            }
-
-                            /*Add custom item to list*/
-                           
-                            if (hasDefault)
-                            {
-                                /* sets user default image for shelter*/
-                                newItem.refugio = shelter;
-                                newItem.Image = imageData;
-                                customList.Add(newItem);
-                            }
-                            else
-                            {
-                                /*Sets default image for shelter*/
-                                imageData = Convert.FromBase64String(String64Images.shelterDefault);
-                                newItem.refugio = shelter;
-                                newItem.Image = imageData;
-                                customList.Add(newItem);
-                            }
-
+                            curShelter = myShelters[i];
+                            await buildList(curShelter);
                         }
 
                     }
@@ -114,7 +84,7 @@ namespace PetArmy.ViewModels
         public void initCommands()
         {
             NewShelter = new Command(newShelter);
-        
+
         }
 
         #endregion
@@ -131,7 +101,7 @@ namespace PetArmy.ViewModels
             set { customList = value; OnPropertyChanged(); }
         }
 
-        private List<Imagen_refugio> imagesCollection ;
+        private List<Imagen_refugio> imagesCollection;
 
         public List<Imagen_refugio> ImagesCollection
         {
@@ -154,6 +124,31 @@ namespace PetArmy.ViewModels
             get { return newItem; }
             set { newItem = value; OnPropertyChanged(); }
         }
+
+        private bool hasDefault;
+
+        public bool HasDefault
+        {
+            get { return hasDefault; }
+            set { hasDefault = value; OnPropertyChanged(); }
+        }
+
+        private byte[] imageData;
+
+        public byte[] ImageData
+        {
+            get { return imageData; }
+            set { imageData = value; OnPropertyChanged(); }
+        }
+
+        private Refugio curShelter;
+
+        public Refugio CurShelter
+        {
+            get { return curShelter; }
+            set { curShelter = value; OnPropertyChanged(); }
+        }
+
 
 
         #endregion
@@ -178,6 +173,44 @@ namespace PetArmy.ViewModels
                 await App.Current.MainPage.DisplayAlert("xxxxd", e.ToString(), "Ok");
             }
 
+        }
+
+        public async Task buildList(Refugio shelter)
+        {
+            imagesCollection = await GraphQLService.getAllImages();
+
+            /*Search for the default picture, if not set by user use default */
+          
+
+            for (int i=0; i <= imagesCollection.Count-1;i++ )
+            {
+                if (imagesCollection[i].isDefault)
+                {
+                    hasDefault = true;
+                    imageData = Convert.FromBase64String(imagesCollection[i].imagen);
+                }
+            }
+
+            /*Add custom item to list*/
+            if (hasDefault)
+            {
+                /* sets user default image for shelter*/
+                createAndAdd(shelter,imageData);
+            }
+            else
+            {
+                /*Sets default image for shelter*/
+                imageData = Convert.FromBase64String(String64Images.shelterDefault);
+                createAndAdd(shelter, imageData);
+            }
+        }
+
+
+        public void createAndAdd(Refugio shelter, byte[] imageData)
+        {
+            newItem.refugio = shelter;
+            newItem.Image = imageData;
+            customList.Add(newItem);
         }
 
         #endregion
