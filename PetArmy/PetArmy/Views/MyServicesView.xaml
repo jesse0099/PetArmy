@@ -8,14 +8,10 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <StackLayout>
 
+
         <StackLayout>
-            <syncfusion1:SfListView x:Name="listView" ItemsSource="{Binding MyService.MyShelters}" ItemSize="100" >
-                <syncfusion1:SfListView.ItemTemplate>
-                    <DataTemplate>
-                        <ImageCell TextColor="#9b9b9b"/>
-                    </DataTemplate>
-                </syncfusion1:SfListView.ItemTemplate>
-            </syncfusion1:SfListView>
+
+
         </StackLayout>
 
     </StackLayout>  

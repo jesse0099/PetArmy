@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 using PetArmy.Helpers;
 using GraphQL.Client.Serializer.Newtonsoft;
 using PetArmy.Models;
-using Xamarin.Forms;
-using GraphQL.Query.Builder;
+using System.Text;
 
 namespace PetArmy.Services
 {
@@ -247,6 +246,7 @@ namespace PetArmy.Services
 
 
         public static async Task<List<Imagen_refugio>> getAllImages(){
+
             List<Imagen_refugio> images = new List<Imagen_refugio>();
 
             try
@@ -257,12 +257,13 @@ namespace PetArmy.Services
                     Query = "query MyQuery { imagen_refugio {id_imagen id_refugio imagen isDefault}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
+
                 var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
                 images = response.Data.imagen_refugio;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                Console.WriteLine(e);
                 throw;
             }
 
@@ -284,11 +285,11 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation {insert_imagen_refugio(objects: { id_imagen: "+img.id_imagen
-                                                                                +", id_refugio: "+img.id_refugio
-                                                                                +", imagen: \""+img.imagen+"\""
-                                                                                +", isDefault: "+img.isDefault
-                                                                                +" }){returning{id_imagen}}}",
+                    Query = "mutation MyMutation {insert_imagen_refugio(objects: {id_imagen: "+img.id_imagen
+                                                                                 +", id_refugio: "+img.id_refugio
+                                                                                 +", imagen: \""+ img.imagen
+                                                                                 +"\", isDefault: "+ img.isDefault 
+                                                                                 +"}){returning {id_imagen}}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -302,17 +303,16 @@ namespace PetArmy.Services
         }
 
 
-        public static async Task<List<Imagen_refugio>> getImages_ByShelter(Refugio shelter)
+        public static async Task<List<Imagen_refugio>> getImages_ByShelter(int shelter)
         {
             List<Imagen_refugio> images = new List<Imagen_refugio>();
          
-
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "query MyQuery {imagen_refugio(where: {id_refugio: {_eq: "+shelter.id_refugio+" }}) { id_imagen id_refugio imagen isDefault}}",
+                    Query = "query MyQuery { imagen_refugio(where: {id_refugio: {_eq: "+shelter+" }}) {id_imagen id_refugio imagen isDefault}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
                 var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
@@ -328,8 +328,25 @@ namespace PetArmy.Services
             return images;
         }
 
+
+
         #endregion
 
+        #region Default Images 
+
+        public static async Task uploadDefaultImage(Default_Images defImg)
+        {
+            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+            var request = new GraphQLHttpRequestWithHeaders
+            {
+                Query = "mutation MyMutation {insert_default_Images(objects: {image: \""+defImg.imageName+"\"" + ", imageName: \""+defImg.image+"\"" + "}) {returning {image imageName}}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            };
+            var foundResponse = await client.SendQueryAsync<default_ImagesGraphQLResponse>(request);
+        }
+
+        #endregion
     }
 
 }

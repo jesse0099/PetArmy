@@ -15,7 +15,7 @@ using System.Drawing;
 
 namespace PetArmy.ViewModels
 {
-    public class MyServiceViewModel:BaseViewModel
+    public class MyServiceViewModel : BaseViewModel
     {
 
         #region Singleton
@@ -32,7 +32,7 @@ namespace PetArmy.ViewModels
 
         public void DeleteInstance()
         {
-            if(instance != null)
+            if (instance != null)
             {
                 instance = null;
             }
@@ -47,30 +47,68 @@ namespace PetArmy.ViewModels
         public async void initClass()
         {
             try
-            {
+            {   /* Check if user ID is set in general settings*/
                 if (!String.IsNullOrEmpty(Settings.UID))
                 {
-                    myShelters = await GraphQLService.shelters_ByUser(Settings.UID);
+                    /* Get all user's shelters */
+                    List<Refugio> myShelters = await GraphQLService.shelters_ByUser(Settings.UID);
 
                     if (myShelters.Count > 0)
                     {
-                       
+                        List<Imagen_refugio> imagesCollection = new List<Imagen_refugio>();
+                        /* For each shelter get images collection */
                         foreach (Refugio shelter in myShelters)
                         {
+                           imagesCollection = await GraphQLService.getImages_ByShelter(shelter.id_refugio);
 
-                            int idS = shelter.id_refugio;
+                            /*Search for the default picture, if not set by user use default */
+                            bool hasDefault = false;
+                            byte[] imageData = null;
 
-                          
+                            foreach (Imagen_refugio image in imagesCollection)
+                            {
+                                if (image.isDefault)
+                                {
+                                    hasDefault = true;
+                                    imageData = Convert.FromBase64String(image.imagen);
+                                }
+                            }
+
+                            /*Add custom item to list*/
+                            CstmItemRefugio newItem = new CstmItemRefugio();
+                            if (hasDefault)
+                            {
+                                /* sets user default image for shelter*/
+                                newItem.refugio = shelter;
+                                newItem.Image = imageData;
+                                customList.Add(newItem);
+                            }
+                            else
+                            {
+                                /*Sets default image for shelter*/
+                                imageData = Convert.FromBase64String(String64Images.shelterDefault);
+                                newItem.refugio = shelter;
+                                newItem.Image = imageData;
+                                customList.Add(newItem);
+                            }
+
                         }
+
                     }
+                    else
+                    {
+                        /* No shelters behaviors */
+                    }
+
                 }
+
             }
             catch (Exception)
             {
 
                 throw;
             }
-        
+
         }
 
         public void initCommands()
@@ -85,90 +123,20 @@ namespace PetArmy.ViewModels
 
         IFirebaseAuth _i_auth;
 
-        private string _test = "Añadir lista de servicios";
+        private List<CstmItemRefugio> customList;
 
-        public string Test
+        public List<CstmItemRefugio> CustomList
         {
-            get { return _test; }
-
-            set
-            {
-                _test = value;
-                OnPropertyChanged("Test");
-            }
+            get { return customList; }
+            set { customList = value; OnPropertyChanged(); }
         }
-
-        private List<Refugio> myShelters;
-        public List<Refugio> MyShelters
-        {
-            get { return myShelters; }
-            set { myShelters = value; OnPropertyChanged(); }
-        }
-
-        private Usuario curUser;
-
-        public Usuario CurUser
-        {
-            get { return curUser; }
-            set { curUser = value; OnPropertyChanged(); }
-        }
-
-        private MediaFileModel mediaFile = new MediaFileModel();
-
-        public MediaFileModel MediaFile
-        {
-            get
-            {
-                return mediaFile;
-            }
-            set
-            {
-                mediaFile = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private ImageSource imgPath = "userAlt.png";
-        public ImageSource ImgPath
-        {
-            get
-            {
-                return imgPath;
-            }
-            set
-            {
-                imgPath = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private List<CstmItemRefugio> cstListRefugio;
-
-        public List<CstmItemRefugio> CstListRefugio
-        {
-            get { return cstListRefugio; }
-            set { cstListRefugio = value; OnPropertyChanged(); }
-        }
-
-        private List<Imagen_refugio> myImages;
-
-        public List<Imagen_refugio> MyImages
-        {
-            get { return myImages; }
-            set { myImages = value; OnPropertyChanged(); }
-        }
-
-
 
         #endregion
-
-
 
         #region Commands and Funtions
 
         public ICommand NewShelter { get; set; }
-
+    
         public async void newShelter()
         {
             try
@@ -186,40 +154,6 @@ namespace PetArmy.ViewModels
             }
 
         }
-
-        
-        public async void pickImage()
-        {
-            try
-            {
-
-                await CrossMedia.Current.Initialize();
-                MediaFileModel file = new MediaFileModel();
-
-                if (!CrossMedia.Current.IsPickPhotoSupported)
-                {
-                    await Application.Current.MainPage.DisplayAlert("Error", "No se soporta la funcionalidad", "OK");
-                }
-                else
-                {
-                    var mediaOptions = new PickMediaOptions() { PhotoSize = PhotoSize.Medium };
-                    var selectedImage = await CrossMedia.Current.PickPhotoAsync(mediaOptions);
-                    this.ImgPath = ImageSource.FromStream(() => selectedImage.GetStream());
-                    var bytes = File.ReadAllBytes(selectedImage.Path);
-
-                    Imagen_refugio newImage = new Imagen_refugio(2,await GraphQLService.countAllImages()+1,bytes,false);
-
-                    await GraphQLService.addImage(newImage);
-                }
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-        
 
         #endregion
 

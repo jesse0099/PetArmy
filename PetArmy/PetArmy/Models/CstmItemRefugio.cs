@@ -8,13 +8,16 @@ namespace PetArmy.Models
     public class CstmItemRefugio
     {
         public Refugio refugio { get; set; }
-        public List<Imagen_refugio> imagenes_Refugio { get; set; }
-        public List<MediaFileModel> media_Refugios { get; set; }
-        public MediaFileModel defaultImg { get; set; }
+        public byte[] Image { get; set; }
 
         public CstmItemRefugio()
         {
         }
-   
+
+        public CstmItemRefugio(Refugio refugio, byte[] image)
+        {
+            this.refugio = refugio;
+            Image = image;
+        }
     }
 }
