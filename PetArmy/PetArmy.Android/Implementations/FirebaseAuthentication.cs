@@ -125,7 +125,7 @@ namespace PetArmy.Droid.Implementations
                 claims = token_result.Claims;
                 claims.TryGetValue("https://hasura.io/jwt/claims", out hasura_claims);
                 
-                //Extraccion de rol para super admin (Deberia guardarse en el AppSettings junto al jwt)
+                // Extraccion de rol para super admin (Deberia guardarse en el AppSettings junto al jwt)
                 var is_super_admin = ((SimpleArrayMap)hasura_claims).Get("x-hasura-super_admin");
                 var hasura_default_role = ((SimpleArrayMap)hasura_claims).Get("x-hasura-default-role");
 
@@ -133,8 +133,8 @@ namespace PetArmy.Droid.Implementations
                     role = "sa";
                 else
                     role = ((string)hasura_default_role);
-
-                //Sucess Log In and Sign Up
+                
+                // Sucess Log In and Sign Up
                 ViewModels.LoginViewModel.GetInstance().ProviderLoginChecker(new UserProfile()
                 {
                     Name = FirebaseAuth.Instance.CurrentUser.DisplayName,

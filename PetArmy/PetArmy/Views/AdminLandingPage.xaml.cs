@@ -3,13 +3,13 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using System.Threading.Tasks;
+using Syncfusion.DataSource;
 
 namespace PetArmy.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AdminLandingPage : ContentPage
     {
-        Task initRequest;
         public AdminLandingPage()
         {
             InitializeComponent();
@@ -18,9 +18,8 @@ namespace PetArmy.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            object locator;
-            App.Current.Resources.TryGetValue("Locator", out locator);
-            Task.Run(() => { ((InstanceLocator)locator).Main.Admin.GetAdminAccountRequests(); });
+            App.Current.Resources.TryGetValue("Locator", out object locator);
+            Task.Run(() => { ((InstanceLocator)locator).Main.Admin.GetAdminAccountRequestsExecute(); });
         }
         protected override void OnSizeAllocated(double width, double height)
         {

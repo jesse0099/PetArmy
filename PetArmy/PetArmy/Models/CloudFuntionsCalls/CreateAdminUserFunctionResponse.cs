@@ -28,6 +28,18 @@
         public Email email { get; set; }
     }
 
+    public class Enabled
+    {
+        public bool booleanValue { get; set; }
+        public string valueType { get; set; }
+    }
+
+    public class AccessGrantedBy
+    {
+        public string stringValue { get; set; }
+        public string valueType { get; set; }
+    }
+
     public class FirstName
     {
         public string stringValue { get; set; }
@@ -72,6 +84,8 @@
         public CreatedOn createdOn { get; set; }
         public UserDetails userDetails { get; set; }
         public Status status { get; set; }
+        public Enabled enabled { get; set; }
+        public AccessGrantedBy accessGrantedBy { get; set; }
     }
 
     public class DocId

@@ -180,4 +180,37 @@
   <data name="NonValidPhoneNumber" xml:space="preserve">
     <value>Número de teléfono no válido</value>
   </data>
+  <data name="Treated" xml:space="preserve">
+    <value>Atendido</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pendiente</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>Rechazado</value>
+  </data>
+  <data name="RequestedDate" xml:space="preserve">
+    <value>Solicitado:</value>
+  </data>
+  <data name="Email_Admin" xml:space="preserve">
+    <value>Correo Electrónico</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Número De Teléfono</value>
+  </data>
+  <data name="RejectButton" xml:space="preserve">
+    <value>Rechazar</value>
+  </data>
+  <data name="ApproveButton" xml:space="preserve">
+    <value>Aprobar</value>
+  </data>
+  <data name="DisableAccount" xml:space="preserve">
+    <value>Inhabilitar Cuenta</value>
+  </data>
+  <data name="EnableAccount" xml:space="preserve">
+    <value>Habilitar Cuenta</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refrescar</value>
+  </data>
 </root>

@@ -24,6 +24,7 @@ namespace PetArmy.Droid.Implementations
             var lc_fn = FirebaseFunctions.Instance.GetHttpsCallable(function).Call(json_data);
             lc_fn.AddOnCompleteListener(this);
         }
+        
         public void RequestAdminAccount(string function, CreateAdminUserFunctionRequest data, Action<object, string> _onCallComplete)
         {
             var json_data = JsonConvert.SerializeObject(data);
@@ -31,6 +32,23 @@ namespace PetArmy.Droid.Implementations
             var lc_fn = FirebaseFunctions.Instance.GetHttpsCallable(function).Call(json_data);
             lc_fn.AddOnCompleteListener(this);
         }
+
+        public void RejectAdminAccount(string function, AdminAccountRequest data, Action<object, string> _onCallComplete)
+        {
+            var json_data = JsonConvert.SerializeObject(data);
+            this._onCallComplete = _onCallComplete;
+            var lc_fn = FirebaseFunctions.Instance.GetHttpsCallable(function).Call(json_data);
+            lc_fn.AddOnCompleteListener(this);
+        }
+
+        public void UpdateAdminAccountAccessState(string function, UpdateAdminAccountAccessRequest data, Action<object, string> _onCallComplete)
+        {
+            var json_data = JsonConvert.SerializeObject(data);
+            this._onCallComplete = _onCallComplete;
+            var lc_fn = FirebaseFunctions.Instance.GetHttpsCallable(function).Call(json_data);
+            lc_fn.AddOnCompleteListener(this);
+        }
+
         public void GetAdminAccountRequests(string function, Action<object, string> _onCallComplete)
         {
             var lc_fn = FirebaseFunctions.Instance.GetHttpsCallable(function).Call();
@@ -38,7 +56,7 @@ namespace PetArmy.Droid.Implementations
         }
 
         /// <summary>
-        /// Listener para terminacion de llamado a la funcion GetAdminAccountRequests
+        /// Listener para terminacion de llamado a la funcion GetAdminAccountRequestsExecute
         /// </summary>
         internal class GetAdminAccountRequestsListener : Java.Lang.Object, IOnCompleteListener
         {
@@ -77,6 +95,8 @@ namespace PetArmy.Droid.Implementations
                                 _createdOn = _createdOnDateTime,
                                 _docId = creation_request.docId.stringValue,
                                 _motive = creation_request.motive.stringValue,
+                                _accessGrantedBy = creation_request.accessGrantedBy.stringValue,
+                                _enabled = creation_request.enabled.booleanValue,
                                 _adminAccountDetail = new AdminAccountDetails()
                                 {
                                     Email = creation_request_user_details.mapValue.fields.email.stringValue,
@@ -105,7 +125,7 @@ namespace PetArmy.Droid.Implementations
         }
 
         /// <summary>
-        /// Listener para terminacion de llamado a funcion ApproveAdminAccount
+        /// Listener para terminacion de llamado a funciones: ApproveAdminAccount, RequestAdminAccount, RejectAdminAccount
         /// </summary>
         /// <param name="task"></param>
         /// <exception cref="NotImplementedException"></exception>
@@ -118,7 +138,5 @@ namespace PetArmy.Droid.Implementations
                 _onCallComplete?.Invoke(task.Result, string.Empty);
             }
         }
-
-        
     }
 }

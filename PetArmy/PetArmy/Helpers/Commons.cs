@@ -1,5 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace PetArmy.Helpers
 {
@@ -7,9 +10,18 @@ namespace PetArmy.Helpers
     {
         public const string DefaultPhoneNumber = "+506 0000 0000";
         public const string FirebaseProjectId = "538291567160-era9d1f0o9qutsssrf6fcqmi45n9abfe.apps.googleusercontent.com";
-        public static readonly string AdminCreationRequestFunction = "adminCreationRequest";
-        public static readonly string AdminCreationApprovalFunction = "adminCreationApproval";
-        public static readonly string AdminCreationRequestsFunction = "adminCreationRequests";
+        public const string AdminCreationRequestFunction = "adminCreationRequest";
+        public const string AdminCreationApprovalFunction = "adminCreationApproval";
+        public const string AdminCreationRejectionFunction = "adminCreationRejection";
+        public const string AdminCreationRequestsFunction = "adminCreationRequests";
+        public const string AdminAccessStateUpdateFunction = "adminAccessStateUpdate";
+        public const string AdminApprovalEmailExceptionMessage = "This email is already in use by another account";
+        public const string AdminApprovalTreatedExceptionMessage = "Already Treated Account";
+        public const string AdminRequestTreatedState = "Treated";
+        public const string AdminRequestRejectedState = "Rejected";
+        public const string AdminRequestPendingState = "Pending";
+        public const string AdminRequestProcessingState = "Processing";
+
         const Int16 minimum_password_length = 6;
         const string emailRegex = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
         @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
@@ -28,6 +40,47 @@ namespace PetArmy.Helpers
             if(phone == null || phone == string.Empty || phone == DefaultPhoneNumber)
                 return false;
             return Regex.IsMatch(phone, phoneRegex, RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+        }
+
+        public static byte[] StreamToByteArray(Stream input)
+        {
+            try
+            {
+                byte[] buffer = new byte[16 * 1024];
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    int read;
+                    while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
+                    {
+                        ms.Write(buffer, 0, read);
+                    }
+                    return ms.ToArray();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public static Stream GetImageSourceStream(ImageSource imgSource)
+        {
+            if (imgSource is StreamImageSource)
+            {
+                try
+                {
+                    StreamImageSource strImgSource = (StreamImageSource)imgSource;
+                    System.Threading.CancellationToken cToken = System.Threading.CancellationToken.None;
+                    Task<Stream> returned = strImgSource.Stream(cToken);
+                    return returned.Result;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return null;
         }
     }
 }
