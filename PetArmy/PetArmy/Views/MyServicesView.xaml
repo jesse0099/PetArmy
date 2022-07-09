@@ -1,37 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PetArmy.Views.MyServicesView"
-             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:PetArmy"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" xmlns:syncfusion1="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="PetArmy.Views.MyServicesView"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
 
-        <StackLayout>
+        <StackLayout BindingContext="{Binding MyService}">
 
-            <CollectionView ItemsSource="{Binding MyService.CustomList}" SelectionMode="Single">
+            <CollectionView ItemsSource="{Binding CustomList}"
+                            SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid
-                         Padding="10"
-                         ColumnDefinitions="Auto,*"
-                         RowDefinitions="Auto, *">
-                            <Label
-                             Grid.Column="1"
-                             FontAttributes="Bold"
-                             Text="{Binding CustomList.refugio.nombre}" />
-                            <Label
-                             Grid.Row="1"
-                             Grid.Column="1"
-                             FontAttributes="Bold"
-                             Text="{Binding CustomList.refugio.direccion}" />
+                        <Grid Padding="10"
+                              ColumnDefinitions="Auto,*"
+                              RowDefinitions="Auto, *">
+                            <Label Grid.Column="1"
+                                   FontAttributes="Bold"
+                                   Text="{Binding refugio.nombre}" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   FontAttributes="Bold"
+                                   Text="{Binding refugio.direccion}" />
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <buttons:SfButton          Command="{Binding MyService.NewShelter}"
+            <buttons:SfButton          Command="{Binding NewShelter}"
                                        Text="{xct:Translate AddShelterKey}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
@@ -41,12 +39,12 @@
                                        Style="{StaticResource SyncfusionButtons}">
                 <buttons:SfButton.ImageSource>
                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                             Glyph="{x:Static local:IconClass.Warehouse}" />
+                                     Glyph="{x:Static local:IconClass.Warehouse}" />
                 </buttons:SfButton.ImageSource>
             </buttons:SfButton>
 
 
-        <buttons:SfButton          Command="{Binding MyService.PickImage}"
+            <buttons:SfButton          Command="{Binding PickImage}"
                                        Text="Pick Image"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
@@ -54,11 +52,11 @@
                                        ShowIcon="True"
                                        BackgroundColor="#3b5998"
                                        Style="{StaticResource SyncfusionButtons}">
-            <buttons:SfButton.ImageSource>
-                <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                             Glyph="{x:Static local:IconClass.Bacteria}" />
-            </buttons:SfButton.ImageSource>
-        </buttons:SfButton>
+                <buttons:SfButton.ImageSource>
+                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{x:Static local:IconClass.Bacteria}" />
+                </buttons:SfButton.ImageSource>
+            </buttons:SfButton>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
