@@ -12,8 +12,6 @@ namespace PetArmy.Models
         public string imagen { get; set; }
         public bool isDefault { get; set; }
    
-
-
         public Imagen_refugio(int id_imagen, int id_refugio, string imagen, bool isDefault)
         {
             this.id_imagen = id_imagen;

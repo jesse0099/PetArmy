@@ -234,13 +234,14 @@ namespace PetArmy.Services
 
                 var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
                 shelters = response.Data.refugio;
+                client.Dispose();
             }
             catch (Exception)
             {
 
                 throw;
             }
-
+            
             return shelters;
         }
 
@@ -251,20 +252,23 @@ namespace PetArmy.Services
             get { return imagesCollection; }
             set { imagesCollection = value;}
         }
+
+        
         public static async Task<List<Imagen_refugio>> getAllImages(){
 
-
+            var clientNew = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
             try
             {
-                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
                     Query = "query MyQuery {imagen_refugio {id_imagen id_refugio imagen isDefault}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
-                var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
-                imagesCollection = response.Data.imagen_refugio;
+               var response = await clientNew.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
+               imagesCollection = response.Data.imagen_refugio;
+
+                clientNew.Dispose();
             }
             catch (Exception e)
             {
@@ -292,8 +296,8 @@ namespace PetArmy.Services
                 {
                     Query = "mutation MyMutation {insert_imagen_refugio(objects: {id_imagen: "+img.id_imagen
                                                                                  +", id_refugio: "+img.id_refugio
-                                                                                 +", imagen: \""+ img.imagen
-                                                                                 +"\", isDefault: "+ img.isDefault 
+                                                                                 +",  imagen: \""+ img.imagen
+                                                                                 +"\",isDefault: "+ img.isDefault 
                                                                                  +"}){returning {id_imagen}}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
@@ -326,14 +330,11 @@ namespace PetArmy.Services
             
             catch (Exception)
             {
-
                 throw;
             }
 
             return images;
         }
-
-
 
         #endregion
 
