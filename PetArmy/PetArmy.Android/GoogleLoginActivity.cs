@@ -87,7 +87,7 @@ namespace PetArmy.Droid
             {
                 //Successful Sign In
                 _accountt = result.SignInAccount;
-
+                
                 //Attempting to register Google Account
                 FirebaseAuthentication.GetInstance()
                     .FirebaseAuthRegister(_accountt, MainActivity.REQC_GOOGLE_SIGN_IN)
@@ -104,19 +104,8 @@ namespace PetArmy.Droid
         {
             //Failed Sign Up
             if (task.Exception != null)
-            {
                 _onLoginComplete?.Invoke(null, task.Exception.Message);
-            }
-            else
-            {
-                //Successful Sign Up
-                _onLoginComplete?.Invoke(new UserProfile()
-                {
-                    Name = _accountt.DisplayName,
-                    Email = _accountt.Email,
-                    ProfilePictureUrl = _accountt.PhotoUrl.ToString()
-                }, string.Empty);
-            }
+
         }
 
         #region Singleton

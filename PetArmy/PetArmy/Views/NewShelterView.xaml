@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:PetArmy"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+             Shell.NavBarIsVisible="False"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="PetArmy.Views.NewShelterView">
+    <StackLayout>
+        <PopUps:ErrorPopUp />
+        <ScrollView>
+            <StackLayout>
+                <Image Source="Shelter" HeightRequest="180" Margin="0,0,0,10" HorizontalOptions="Center"/>
+                <Label Text="{xct:Translate CreateNewShelterH1Key}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <StackLayout Padding="40" Spacing="20">
+
+                    <!--Nombre-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterNameInputKey}"
+                                                    x:Name="ShelterContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="shelterName"
+                               Text="{Binding NewShelter.ShelterName, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+
+                    <!--Correo-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterEmailKey}"
+                                                    x:Name="EmailContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="email"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                               Text="{Binding NewShelter.ShelterEmail, Mode=TwoWay}"
+                               Keyboard="Email"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Numero-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterNumberKey}"
+                                                    x:Name="PhoneContainer"
+                                                    InputViewPadding="5"
+                                                    HelperText="{xct:Translate ShelterNumberHintKey}"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="shelterNumber"
+                               Text="{Binding NewShelter.ShelterNumber, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Capacidad-->
+                    <Label x:Name="firstNumeric" Text="{xct:Translate CapKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <syncfusion:SfNumericTextBox  x:Name="capacidadInput" MaximumNumberDecimalDigits="0" AllowNull="False" Value="{Binding NewShelter.QuantSpace}"/>
+
+                    <!--Dirección-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterDirInputKey}"
+                                                    x:Name="ShelterDirContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="shelterDir"
+                               Text="{Binding NewShelter.ShelterDir, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Botton-->
+                    <buttons:SfButton  Command="{Binding NewShelter.CreateShelter}"
+                                       Text="{xct:Translate CreateShelterBtnKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       ShowIcon="True"
+                                       BackgroundColor="LimeGreen"
+                                       WidthRequest="280"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Plus}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

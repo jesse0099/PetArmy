@@ -2,6 +2,7 @@
 using PetArmy.Models;
 using PetArmy.Views;
 using Xamarin.Forms;
+using PetArmy.Helpers;
 
 namespace PetArmy.ViewModels
 {
@@ -10,6 +11,12 @@ namespace PetArmy.ViewModels
         //Bound properties
         public string Email { get; set; }
         public string Password { get; set; }
+        public string Role { get; set; }    
+        const string empty = "";
+        private string _loggedMail;
+        public string LoggedMail { get { return _loggedMail; }
+                                   set { _loggedMail = value; OnPropertyChanged();} 
+        }
 
         //Interfaces para login con proveedores externos
         IFirebaseAuth _i_auth;
@@ -37,10 +44,12 @@ namespace PetArmy.ViewModels
 
             Email = string.Empty;
             Password = string.Empty;
+            IsBusy = false;
         }
 
         private void OnLoginEPassExecute()
         {
+            IsBusy = true;
             if (Email.Equals(string.Empty) || Password.Equals(string.Empty))
             {
                 ProviderLoginChecker(null, "All Fields Are Required");
@@ -54,7 +63,7 @@ namespace PetArmy.ViewModels
         }
 
         private void OnLoginGoogleExecute()
-        {
+        {   //IsBusy = true;
             _g_auth.Login((UserProfile profile, string message) => {
                 ProviderLoginChecker(profile, message);
             });
@@ -62,6 +71,7 @@ namespace PetArmy.ViewModels
 
         private void OnLoginFacebookExecute()
         {
+            IsBusy = true;
             _f_auth.Login((UserProfile profile, string message) =>
             {
                 ProviderLoginChecker(profile, message);
@@ -73,12 +83,46 @@ namespace PetArmy.ViewModels
             await App.Current.MainPage.Navigation.PushModalAsync(new RegisterPage());
         } 
 
-        async private void ProviderLoginChecker(UserProfile profile, string message)
+        async public void ProviderLoginChecker(UserProfile profile, string message, string role = empty)
         {
             if (profile != null)
-                await Shell.Current.GoToAsync("//AboutPage");
+            {
+                var registered_user = _i_auth.GetSignedUserProfile();
+                LoggedMail = registered_user.Email;
+                Settings.Email = registered_user.Email;
+                Settings.UID = registered_user.Uid;
+                Settings.Role = role;
+
+                switch (role) {
+                    case "admin":
+                        {
+                            if (Shell.Current == null)
+                                Application.Current.MainPage = new AppShell();
+                            IsBusy = false;
+                            await Shell.Current.GoToAsync("//AdminLandingPage");
+                            break;
+                        }
+                    case "sa":
+                        {
+                            if (Shell.Current == null)
+                                Application.Current.MainPage = new AppShell();
+                            IsBusy = false;
+                            await Shell.Current.GoToAsync("//AdminLandingPage");
+                            break;
+                        }
+                    default:
+                        {
+                            if (Shell.Current == null)
+                                Application.Current.MainPage = new AppShell();
+                            IsBusy = false;
+                            await Shell.Current.GoToAsync("//AboutPage");
+                            break;
+                        }
+                }
+            }
             else
             {
+                IsBusy = false;
                 ErrorTitle = "Something Went Wrong!!!";
                 ErrorMessage = message;
                 OpenPopUp = true;

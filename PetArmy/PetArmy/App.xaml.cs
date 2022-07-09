@@ -1,4 +1,6 @@
-﻿using PetArmy.Services;
+﻿using PetArmy.Interfaces;
+using PetArmy.Services;
+using PetArmy.ViewModels;
 using PetArmy.Views;
 using Resx;
 using Xamarin.CommunityToolkit.Helpers;
@@ -8,7 +10,6 @@ namespace PetArmy
 {
     public partial class App : Application
     {
-
         public App()
         {
             //Register Syncfusion license (Recordar implementar para iOS)
@@ -23,7 +24,11 @@ namespace PetArmy
 
         protected override void OnStart()
         {
-            //_ = Shell.Current.GoToAsync("//LoginPage");
+           /*_i_auth = DependencyService.Get<IFirebaseAuth>();
+            if (_i_auth.IsSignIn())
+                LoginViewModel.GetInstance().ProviderLoginChecker(_i_auth.GetSignedUserProfile(), 
+                    string.Empty,
+                    "user");*/
         }
 
         protected override void OnSleep()
