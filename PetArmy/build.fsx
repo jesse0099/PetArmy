@@ -61,18 +61,6 @@ Target.create "BuildAndroid" (fun _ ->
     |> MSBuild.runDebug setParams "./build-android/" "Build"
     |> Trace.logItems "Appbuild-output:")
 
-let exceptions fileInfo =
-  try
-    AndroidSignAndAlign (fun defaults ->
-            { defaults with
-                KeystorePath = "/home/freexploit/.local/share/Xamarin/Mono\ for\ Android/debug.keystore"
-                KeystorePassword = "android" // TODO: don't store this in the build script for a real app!
-                KeystoreAlias = "androiddebugkey"
-                SignatureAlgorithm = "SHA256withRSA"
-            }
-        ) fileInfo |> Some
-  with
-    | :? System.Exception as ex -> printfn "Exception! %s " (ex.Message); None
 
 Target.create "Android-Package" (fun _ ->
     AndroidPackage (fun defaults ->
