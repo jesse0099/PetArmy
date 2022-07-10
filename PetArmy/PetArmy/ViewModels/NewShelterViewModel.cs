@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using PetArmy.Helpers;
 using PetArmy.Services;
 using PetArmy.Interfaces;
+using System.Collections.ObjectModel;
 
 namespace PetArmy.ViewModels
 {
@@ -97,6 +98,84 @@ namespace PetArmy.ViewModels
             get { return shelterEmail; }
             set { shelterEmail = value; OnPropertyChanged(); }
         }
+
+
+        #region Map
+
+
+        #region Latitude
+        private double lat = 0.0;
+        public double Latitude
+        {
+            get
+            {
+                return this.lat;
+            }
+            set
+            {
+                this.lat = value;
+                OnPropertyChanged("Identifier");
+            }
+        }
+        #endregion
+
+        #region Longitude
+        private double longt = 0.0;
+        public double Longitude
+        {
+            get
+            {
+                return this.longt;
+            }
+            set
+            {
+                this.longt = value;
+                OnPropertyChanged("Identifier");
+            }
+        }
+
+
+        #endregion
+
+        #region Altitude
+
+        private double alt = 0.0;
+        public double Altitude
+        {
+            get
+            {
+                return this.alt;
+            }
+            set
+            {
+                this.alt = value;
+                OnPropertyChanged("Identifier");
+            }
+        }
+
+        #endregion
+
+        #region Mapa
+        private ObservableCollection<UsersLocation> _lstLocations = new ObservableCollection<UsersLocation>();
+
+        public ObservableCollection<UsersLocation> lstLocations
+        {
+            get { return _lstLocations; }
+
+            set
+            {
+                _lstLocations = value;
+                OnPropertyChanged("lstLocations");
+            }
+        }
+
+        #endregion
+
+
+        public double newLat = 0.0;
+        public double newLong = 0.0;
+
+        #endregion
 
         #endregion
 

@@ -36,6 +36,7 @@ namespace PetArmy.Droid
             Platform.Init(this, savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Xamarin.FormsMaps.Init(this, savedInstanceState);
 
             //Local renderer for PopUps (Recordar implementar para iOS)
             Syncfusion.XForms.Android.PopupLayout.SfPopupLayoutRenderer.Init();
