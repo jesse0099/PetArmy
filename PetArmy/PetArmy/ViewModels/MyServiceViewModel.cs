@@ -177,7 +177,7 @@ namespace PetArmy.ViewModels
     
         public async Task getData()
         {
-           
+            IsBusy = true;
             List<CstmItemRefugio> temp = new List<CstmItemRefugio>();
 
             if (!String.IsNullOrEmpty(Settings.UID))
@@ -238,7 +238,7 @@ namespace PetArmy.ViewModels
             }
 
             CustomList = new BindingList<CstmItemRefugio>(temp);
-
+            IsBusy = false;
         }
 
 
@@ -246,7 +246,7 @@ namespace PetArmy.ViewModels
         {
             try
             {
-
+              
                 await CrossMedia.Current.Initialize();
             
                 if (!CrossMedia.Current.IsPickPhotoSupported)
