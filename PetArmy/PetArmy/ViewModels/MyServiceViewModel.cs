@@ -248,8 +248,7 @@ namespace PetArmy.ViewModels
             {
 
                 await CrossMedia.Current.Initialize();
-                MediaFileModel file = new MediaFileModel();
-
+            
                 if (!CrossMedia.Current.IsPickPhotoSupported)
                 {
                     await Application.Current.MainPage.DisplayAlert("Error", "No se soporta la funcionalidad", "OK");
