@@ -8,6 +8,13 @@ using PetArmy.Helpers;
 using PetArmy.Services;
 using PetArmy.Interfaces;
 using System.Collections.ObjectModel;
+using Plugin.Geolocator;
+using System.Threading.Tasks;
+using Plugin.Geolocator.Abstractions;
+using System.Diagnostics;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using System.IO;
 
 namespace PetArmy.ViewModels
 {
@@ -46,20 +53,30 @@ namespace PetArmy.ViewModels
         public void initCommands()
         {
             CreateShelter = new Command(createShelter);
+            PickImage = new Command(pickImage);
         }
 
         public void initClass()
         {
 
-        }
+            
 
+        }
 
         #endregion
 
-
         #region Varaiables
 
-        private int quantSpace = 0;
+
+        private bool imageSelected;
+
+        public bool ImageSelected
+        {
+            get { return imageSelected; }
+            set { imageSelected = value; OnPropertyChanged(); }
+        }
+
+        private int quantSpace = 1;
 
         public int QuantSpace
         {
@@ -98,7 +115,6 @@ namespace PetArmy.ViewModels
             get { return shelterEmail; }
             set { shelterEmail = value; OnPropertyChanged(); }
         }
-
 
         #region Map
 
@@ -169,11 +185,38 @@ namespace PetArmy.ViewModels
             }
         }
 
+        private Position myPosition;
+
+        public Position MyPosition
+        {
+            get { return myPosition; }
+            set { myPosition = value; OnPropertyChanged();}
+        }
+
+
         #endregion
 
 
         public double newLat = 0.0;
         public double newLong = 0.0;
+
+
+        private ImageSource imgSource;
+
+        public ImageSource ImgSource
+        {
+            get { return imgSource; }
+            set { imgSource = value; OnPropertyChanged(); }
+        }
+
+        private Imagen_refugio selectedImgae;
+
+        public Imagen_refugio SelectedImage
+        {
+            get { return selectedImgae; }
+            set { selectedImgae = value; OnPropertyChanged(); }
+        }
+
 
         #endregion
 
@@ -184,6 +227,9 @@ namespace PetArmy.ViewModels
 
 
         public ICommand CreateShelter { get; set; }
+        public ICommand PickImage { get; set; }
+
+
 
         public async void createShelter()
         {
@@ -205,8 +251,12 @@ namespace PetArmy.ViewModels
                     newShelter.capacidad = quantSpace;
                     newShelter.direccion = shelterDir;
                     newShelter.activo = false;
-
-                    bool chk = await GraphQLService.createShelter(newShelter,curUser).ConfigureAwait(false); 
+                    bool chk = await GraphQLService.createShelter(newShelter,curUser).ConfigureAwait(false);
+                    if (imageSelected)
+                    {
+                        SelectedImage.id_refugio = newShelter.id_refugio;
+                        await GraphQLService.addImage(SelectedImage);
+                    }
                 }
                 else
                 {
@@ -232,6 +282,92 @@ namespace PetArmy.ViewModels
 
             return result;
         }
+
+        public static async Task<Position> GetCurrentPosition()
+        {
+            Position position = null;
+            try
+            {
+                var locator = CrossGeolocator.Current;
+                locator.DesiredAccuracy = 50;
+
+                position = await locator.GetLastKnownLocationAsync();
+
+                if (position != null)
+                {
+                    //got a cahched position, so let's use it.
+                    return position;
+                }
+
+                if (!locator.IsGeolocationAvailable || !locator.IsGeolocationEnabled)
+                {
+                    //not available or enabled
+                    return null;
+                }
+
+                position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20), null, true);
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Unable to get location: " + ex);
+            }
+
+            if (position == null)
+                return null;
+
+            var output = string.Format("Time: {0} \nLat: {1} \nLong: {2} \nAltitude: {3} \nAltitude Accuracy: {4} \nAccuracy: {5} \nHeading: {6} \nSpeed: {7}",
+                    position.Timestamp, position.Latitude, position.Longitude,
+                    position.Altitude, position.AltitudeAccuracy, position.Accuracy, position.Heading, position.Speed);
+
+            Debug.WriteLine(output);
+
+            return position;
+        }
+
+        public async Task setCurrentLocation()
+        {
+            Position position = await GetCurrentPosition();
+            UsersLocation curLocation = new UsersLocation();
+            curLocation.Title = "Current Location";
+            curLocation.Longitude = position.Longitude;
+            curLocation.Latitude = position.Latitude;
+            curLocation.Description = "This is your current location";
+            lstLocations.Add(curLocation);
+              
+        }
+
+
+        public async void pickImage()
+        {
+            Imagen_refugio imagen_Refugio = new Imagen_refugio();
+            try
+            {
+                imageSelected = true;
+                await CrossMedia.Current.Initialize();
+
+                if (!CrossMedia.Current.IsPickPhotoSupported)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "No se soporta la funcionalidad", "OK");
+                }
+                else
+                {
+                    var mediaOptions = new PickMediaOptions() { PhotoSize = PhotoSize.Medium };
+                    var selectedImage = await CrossMedia.Current.PickPhotoAsync(mediaOptions);
+                    imgSource = ImageSource.FromStream(() => selectedImage.GetStream());
+                    Stream stream = Commons.GetImageSourceStream(imgSource);
+                    var bytes = Commons.StreamToByteArray(stream);
+                    imagen_Refugio = new Imagen_refugio(await GraphQLService.countAllImages() + 1, Convert.ToBase64String(bytes, 0, bytes.Length), true);
+                    SelectedImage = imagen_Refugio;
+                    imageSelected = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
         #endregion
 

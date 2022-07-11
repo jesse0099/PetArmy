@@ -6,11 +6,11 @@
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
              xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:behaviors="clr-namespace:PetArmy.Views.Behaviors"
              Shell.NavBarIsVisible="False"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="PetArmy.Views.NewShelterView">
-    <StackLayout>
+    <StackLayout BindingContext="{Binding NewShelter}">
         <PopUps:ErrorPopUp />
         <ScrollView>
             <StackLayout>
@@ -26,7 +26,7 @@
                                                     IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="shelterName"
-                               Text="{Binding NewShelter.ShelterName, Mode=TwoWay}"
+                               Text="{Binding ShelterName, Mode=TwoWay}"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                     </inputLayout:SfTextInputLayout>
 
@@ -40,7 +40,7 @@
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="email"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
-                               Text="{Binding NewShelter.ShelterEmail, Mode=TwoWay}"
+                               Text="{Binding ShelterEmail, Mode=TwoWay}"
                                Keyboard="Email"/>
                     </inputLayout:SfTextInputLayout>
 
@@ -53,27 +53,66 @@
                                                     IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="shelterNumber"
-                               Text="{Binding NewShelter.ShelterNumber, Mode=TwoWay}"
+                               Text="{Binding ShelterNumber, Mode=TwoWay}"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                     </inputLayout:SfTextInputLayout>
 
                     <!--Capacidad-->
                     <Label x:Name="firstNumeric" Text="{xct:Translate CapKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
-                    <syncfusion:SfNumericTextBox  x:Name="capacidadInput" MaximumNumberDecimalDigits="0" AllowNull="False" Value="{Binding NewShelter.QuantSpace}"/>
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate cantKey}"
+                                                    x:Name="ShelterCapContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="shelterCap"
+                               Text="{Binding QuantSpace, Mode=TwoWay}"
+                               Keyboard="Numeric"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Mapa-->
+                    <Label x:Name="maplbl" Text="{xct:Translate UbicacionKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <maps:Map x:Name="MyMap" WidthRequest="150" HeightRequest="150" >
+                        <maps:Map.Behaviors>
+                            <behaviors:MapBehavior 
+                                 ItemsSource="{Binding lstLocations}"/>
+                        </maps:Map.Behaviors>
+                    </maps:Map>
 
                     <!--Dirección-->
+                    <Label x:Name="maplblP" Text="{xct:Translate physicalKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
                     <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterDirInputKey}"
                                                     x:Name="ShelterDirContainer"
                                                     InputViewPadding="5"
                                                     ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="shelterDir"
-                               Text="{Binding NewShelter.ShelterDir, Mode=TwoWay}"
+                               Text="{Binding ShelterDir, Mode=TwoWay}"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                     </inputLayout:SfTextInputLayout>
 
+                    <!--Imagen-->
+                    <Label x:Name="Imagenlbl" Text="{xct:Translate SelectImagesKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <buttons:SfButton  Command="{Binding PickImage}"
+                                       Text="{xct:Translate SearchImageKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       ShowIcon="True"
+                                       BackgroundColor="#6611EB"
+                                       WidthRequest="280"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Camera}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
+
+
                     <!--Botton-->
-                    <buttons:SfButton  Command="{Binding NewShelter.CreateShelter}"
+                    <buttons:SfButton  Command="{Binding CreateShelter}"
                                        Text="{xct:Translate CreateShelterBtnKey}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
@@ -89,7 +128,6 @@
                     </buttons:SfButton>
 
                 </StackLayout>
-
             </StackLayout>
         </ScrollView>
     </StackLayout>

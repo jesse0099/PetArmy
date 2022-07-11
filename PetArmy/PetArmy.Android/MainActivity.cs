@@ -7,6 +7,7 @@ using Android.Runtime;
 using Firebase.Auth;
 using Firebase.Functions;
 using PetArmy.Droid.Implementations;
+using Plugin.CurrentActivity;
 using Xamarin.Essentials;
 using Xamarin.Facebook;
 
@@ -37,6 +38,7 @@ namespace PetArmy.Droid
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.FormsMaps.Init(this, savedInstanceState);
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
 
             //Local renderer for PopUps (Recordar implementar para iOS)
             Syncfusion.XForms.Android.PopupLayout.SfPopupLayoutRenderer.Init();
@@ -81,7 +83,7 @@ namespace PetArmy.Droid
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 

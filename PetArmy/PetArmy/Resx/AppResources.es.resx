@@ -195,4 +195,19 @@
   <data name="CreateShelterBtnKey" xml:space="preserve">
     <value>Crear refugio</value>
   </data>
+  <data name="UbicacionKey" xml:space="preserve">
+    <value>Mi ubicación actual</value>
+  </data>
+  <data name="SelectImagesKey" xml:space="preserve">
+    <value>Seleciona tus imágenes</value>
+  </data>
+  <data name="SearchImageKey" xml:space="preserve">
+    <value>Busca tu imagen</value>
+  </data>
+  <data name="cantKey" xml:space="preserve">
+    <value>Solo números enteros</value>
+  </data>
+  <data name="physicalKey" xml:space="preserve">
+    <value>Dirección exacta</value>
+  </data>
 </root>

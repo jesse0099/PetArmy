@@ -24,6 +24,7 @@ namespace PetArmy.Views
            base.OnAppearing();
            App.Current.Resources.TryGetValue("Locator", out object locator);
            Task.Run(async () => { await ((InstanceLocator)locator).Main.MyService.getData(); });
+           Task.Run(async () => { await ((InstanceLocator)locator).Main.NewShelter.setCurrentLocation(); });
         }
     }
 }

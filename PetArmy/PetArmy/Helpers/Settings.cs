@@ -99,5 +99,21 @@ namespace PetArmy.Helpers
             }
 
         }
+
+
+        public static bool IsAdmin
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("IsAdmin", true);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("IsAdmin", value);
+            }
+
+        }
+
+
     }
 }

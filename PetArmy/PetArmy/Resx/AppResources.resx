@@ -175,4 +175,19 @@
   <data name="CreateShelterBtnKey" xml:space="preserve">
     <value>Create shelter</value>
   </data>
+  <data name="UbicacionKey" xml:space="preserve">
+    <value>Current Location</value>
+  </data>
+  <data name="SelectImagesKey" xml:space="preserve">
+    <value>Select your default image</value>
+  </data>
+  <data name="SearchImageKey" xml:space="preserve">
+    <value>Search your photo</value>
+  </data>
+  <data name="cantKey" xml:space="preserve">
+    <value>Only whole numbers</value>
+  </data>
+  <data name="physicalKey" xml:space="preserve">
+    <value>Typed Adress</value>
+  </data>
 </root>

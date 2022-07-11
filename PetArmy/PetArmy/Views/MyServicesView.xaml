@@ -7,10 +7,10 @@
              x:Class="PetArmy.Views.MyServicesView"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <ScrollView>
-
-            <StackLayout BindingContext="{Binding MyService}">
-                <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
+        <StackLayout BindingContext="{Binding MyService}">
+         <PopUps:ErrorPopUp />
+            <Label Text="{xct:Translate MyServicesKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
                                                AnimationType="SingleCircle"
                                                FontAttributes="Bold"
                                                Title="Loading..."
@@ -18,25 +18,26 @@
                                                IsVisible="{Binding IsBusy}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center" />
-                <PopUps:ErrorPopUp />
-
-                <ListView x:Name="CartItemsView"
+            <StackLayout>
+                <ScrollView>
+                    <ListView x:Name="CartItemsView"
                   BackgroundColor="Transparent"
                   SeparatorVisibility="None"
                   ItemsSource="{Binding CustomList}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ImageCell TextColor="#9b9b9b"
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ImageCell TextColor="#9b9b9b"
                                    Text="{Binding refugio.nombre}"
                                    Detail="{Binding refugio.direccion}"
                                    ImageSource="{Binding Image, Converter={xct:ByteArrayToImageSourceConverter}}"/>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+            </StackLayout>
 
-
-            
-                    <buttons:SfButton  Command="{Binding NewShelter}"
+            <StackLayout  Padding="40" Spacing="20">
+                <buttons:SfButton  Command="{Binding NewShelter}"
                                        Text="{xct:Translate AddShelterKey}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
@@ -44,14 +45,14 @@
                                        ShowIcon="True"
                                        BackgroundColor="#3b5998"
                                        Style="{StaticResource SyncfusionButtons}">
-                        <buttons:SfButton.ImageSource>
-                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                <buttons:SfButton.ImageSource>
+                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                                      Glyph="{x:Static local:IconClass.Warehouse}" />
-                        </buttons:SfButton.ImageSource>
-                    </buttons:SfButton>
+                </buttons:SfButton.ImageSource>
+            </buttons:SfButton>
 
 
-                    <buttons:SfButton      Command="{Binding PickImage}"
+            <buttons:SfButton  Command="{Binding PickImage}"
                                        Text="Pick Image"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
@@ -59,14 +60,14 @@
                                        ShowIcon="True"
                                        BackgroundColor="#3b5998"
                                        Style="{StaticResource SyncfusionButtons}">
-                        <buttons:SfButton.ImageSource>
-                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                <buttons:SfButton.ImageSource>
+                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                                      Glyph="{x:Static local:IconClass.Bacteria}" />
-                        </buttons:SfButton.ImageSource>
-                    </buttons:SfButton>
-         
+                </buttons:SfButton.ImageSource>
+            </buttons:SfButton>
+                
             </StackLayout>
-        </ScrollView>
-        
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

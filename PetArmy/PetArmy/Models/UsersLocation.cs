@@ -17,6 +17,20 @@ namespace PetArmy.Models
         {
         }
 
+        public UsersLocation(string title, double latitude, double longitude)
+        {
+            Title = title;
+            Latitude = latitude;
+            Longitude = longitude;
+        }
+
+        public UsersLocation(double latitude, double longitude, string description)
+        {
+            Latitude = latitude;
+            Longitude = longitude;
+            Description = description;
+        }
+
         public UsersLocation(string uID, string title, double latitude, double longitude, string description)
         {
             UID = uID;

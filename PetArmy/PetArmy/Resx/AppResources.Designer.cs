@@ -79,6 +79,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Only whole numbers.
+        /// </summary>
+        public static string cantKey {
+            get {
+                return ResourceManager.GetString("cantKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Capacity.
         /// </summary>
         public static string CapKey {
@@ -187,6 +196,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Typed Adress.
+        /// </summary>
+        public static string physicalKey {
+            get {
+                return ResourceManager.GetString("physicalKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Personal Email.
         /// </summary>
         public static string RegisterEmailHelperKey {
@@ -201,6 +219,24 @@ namespace Resx {
         public static string RegisterPassHelperKey {
             get {
                 return ResourceManager.GetString("RegisterPassHelperKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search your photo.
+        /// </summary>
+        public static string SearchImageKey {
+            get {
+                return ResourceManager.GetString("SearchImageKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select your default image.
+        /// </summary>
+        public static string SelectImagesKey {
+            get {
+                return ResourceManager.GetString("SelectImagesKey", resourceCulture);
             }
         }
         
@@ -282,6 +318,15 @@ namespace Resx {
         public static string System {
             get {
                 return ResourceManager.GetString("System", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Location.
+        /// </summary>
+        public static string UbicacionKey {
+            get {
+                return ResourceManager.GetString("UbicacionKey", resourceCulture);
             }
         }
         
