@@ -61,6 +61,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add new your service.
+        /// </summary>
+        public static string AddCCServiceKey {
+            get {
+                return ResourceManager.GetString("AddCCServiceKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add foundling home service.
         /// </summary>
         public static string AddHomeKey {
@@ -88,11 +97,56 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select current cantón.
+        /// </summary>
+        public static string cantonLbl {
+            get {
+                return ResourceManager.GetString("cantonLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Capacity.
         /// </summary>
         public static string CapKey {
             get {
                 return ResourceManager.GetString("CapKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foundling home&apos;s email.
+        /// </summary>
+        public static string CCEmailKey {
+            get {
+                return ResourceManager.GetString("CCEmailKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to It can be your personal number.
+        /// </summary>
+        public static string ccNumberHintKey {
+            get {
+                return ResourceManager.GetString("ccNumberHintKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foundling home&apos;s number.
+        /// </summary>
+        public static string ccPhoneNumberKey {
+            get {
+                return ResourceManager.GetString("ccPhoneNumberKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Foundling Home.
+        /// </summary>
+        public static string ccServiceBtn {
+            get {
+                return ResourceManager.GetString("ccServiceBtn", resourceCulture);
             }
         }
         
@@ -151,6 +205,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your full name.
+        /// </summary>
+        public static string fullNameKey {
+            get {
+                return ResourceManager.GetString("fullNameKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log In.
         /// </summary>
         public static string LogIn {
@@ -201,6 +264,15 @@ namespace Resx {
         public static string physicalKey {
             get {
                 return ResourceManager.GetString("physicalKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add foundling home service.
+        /// </summary>
+        public static string registerAsCasaCunakey {
+            get {
+                return ResourceManager.GetString("registerAsCasaCunakey", resourceCulture);
             }
         }
         

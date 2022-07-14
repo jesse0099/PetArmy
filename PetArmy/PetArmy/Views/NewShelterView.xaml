@@ -6,7 +6,7 @@
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
              xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:behaviors="clr-namespace:PetArmy.Views.Behaviors"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:behaviors="clr-namespace:PetArmy.Views.Behaviors" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
              Shell.NavBarIsVisible="False"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="PetArmy.Views.NewShelterView">
@@ -79,6 +79,10 @@
                                  ItemsSource="{Binding lstLocations}"/>
                         </maps:Map.Behaviors>
                     </maps:Map>
+
+                    <!--Cantón-->
+                    <Label x:Name="cantonlbl" Text="{xct:Translate cantonLbl}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <Picker ItemsSource="{Binding Cantones}" SelectedItem="{Binding Canton, Mode=TwoWay}" />
 
                     <!--Dirección-->
                     <Label x:Name="maplblP" Text="{xct:Translate physicalKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>

@@ -15,6 +15,7 @@ using System.Diagnostics;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.IO;
+using PetArmy.Views;
 
 namespace PetArmy.ViewModels
 {
@@ -58,9 +59,7 @@ namespace PetArmy.ViewModels
 
         public void initClass()
         {
-
             
-
         }
 
         #endregion
@@ -76,11 +75,11 @@ namespace PetArmy.ViewModels
             set { imageSelected = value; OnPropertyChanged(); }
         }
 
-        private int quantSpace = 1;
+        private string quantSpace = "1";
 
-        public int QuantSpace
+        public string QuantSpace
         {
-            get { return quantSpace = 1; }
+            get { return quantSpace; }
             set { quantSpace = value; OnPropertyChanged(); }
         }
 
@@ -217,6 +216,21 @@ namespace PetArmy.ViewModels
             set { selectedImgae = value; OnPropertyChanged(); }
         }
 
+        public IList<string> Cantones
+        {
+            
+           get { return new List<string> { "San José", "Cartago", "Heredia", "Alajuela", "Puntarenas", "Limón", "Guanacaste" }; }
+           
+        }
+
+        private string canton;
+
+        public string Canton
+        {
+            get { return canton; }
+            set { canton = value; OnPropertyChanged(); }
+        }
+
 
         #endregion
 
@@ -225,11 +239,8 @@ namespace PetArmy.ViewModels
 
         #region Commands and Functions
 
-
         public ICommand CreateShelter { get; set; }
         public ICommand PickImage { get; set; }
-
-
 
         public async void createShelter()
         {
@@ -248,7 +259,7 @@ namespace PetArmy.ViewModels
                     newShelter.nombre = shelterName;
                     newShelter.correo = shelterEmail;
                     newShelter.telefono = shelterNumber;
-                    newShelter.capacidad = quantSpace;
+                    newShelter.capacidad = Int32.Parse(quantSpace);
                     newShelter.direccion = shelterDir;
                     newShelter.activo = false;
                     bool chk = await GraphQLService.createShelter(newShelter,curUser).ConfigureAwait(false);
@@ -257,6 +268,15 @@ namespace PetArmy.ViewModels
                         SelectedImage.id_refugio = newShelter.id_refugio;
                         await GraphQLService.addImage(SelectedImage);
                     }
+                    ubicaciones_refugios newLocation = new ubicaciones_refugios();
+                    newLocation.id_refugio = newShelter.id_refugio;
+                    newLocation.id_ubicacion = await GraphQLService.countShelterLocations() + 1;
+                    newLocation.longitud = Longitude;
+                    newLocation.lalitud = Latitude;
+                    newLocation.canton = Canton;
+                    await GraphQLService.addShelterLocation(newLocation);
+                    await App.Current.MainPage.DisplayAlert("Success", "Cuenta creada!", "Ok");
+                    Application.Current.MainPage = new NavigationPage(new MyServicesView());
                 }
                 else
                 {
@@ -326,17 +346,22 @@ namespace PetArmy.ViewModels
         }
 
         public async Task setCurrentLocation()
-        {
+        {   
+            /* Gets current location*/
             Position position = await GetCurrentPosition();
+            /*Creates Item for the map*/
             UsersLocation curLocation = new UsersLocation();
+            /*Sets pins values*/
             curLocation.Title = "Current Location";
             curLocation.Longitude = position.Longitude;
             curLocation.Latitude = position.Latitude;
             curLocation.Description = "This is your current location";
+            /*Sets Variables*/
+            Latitude = position.Latitude;
+            Longitude = position.Longitude; 
+            /* Adds pin */
             lstLocations.Add(curLocation);
-              
         }
-
 
         public async void pickImage()
         {

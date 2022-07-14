@@ -210,4 +210,28 @@
   <data name="physicalKey" xml:space="preserve">
     <value>Dirección exacta</value>
   </data>
+  <data name="cantonLbl" xml:space="preserve">
+    <value>Selecciona el cantón</value>
+  </data>
+  <data name="fullNameKey" xml:space="preserve">
+    <value>Tu nombre completo</value>
+  </data>
+  <data name="registerAsCasaCunakey" xml:space="preserve">
+    <value>Agrega servicio de casa cuna</value>
+  </data>
+  <data name="CCEmailKey" xml:space="preserve">
+    <value>Correo de la casa cuna</value>
+  </data>
+  <data name="ccPhoneNumberKey" xml:space="preserve">
+    <value>Numero de la casa cuna</value>
+  </data>
+  <data name="ccNumberHintKey" xml:space="preserve">
+    <value>Puede ser tu número personal</value>
+  </data>
+  <data name="AddCCServiceKey" xml:space="preserve">
+    <value>Agrega tu servicio</value>
+  </data>
+  <data name="ccServiceBtn" xml:space="preserve">
+    <value>Nueva casa cuna</value>
+  </data>
 </root>

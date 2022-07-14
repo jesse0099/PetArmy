@@ -15,6 +15,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using PetArmy.Infraestructure;
 
 namespace PetArmy.ViewModels
 {
@@ -57,7 +58,8 @@ namespace PetArmy.ViewModels
         {
             NewShelter = new Command(newShelter);
             PickImage = new Command(pickImage);
-           
+            NewCCService = new Command(newCCService);
+
         }
 
         #endregion
@@ -138,18 +140,30 @@ namespace PetArmy.ViewModels
         #region Commands and Funtions
 
         public ICommand NewShelter { get; set; }
+
+        public ICommand NewCCService { get; set; }
         public ICommand PickImage { get; set; }
        
-    
         public async void newShelter()
         {
             try
             {
-                /*await GraphQLService.GetMockString().ConfigureAwait(false);
-                /* await GraphQLService.Insert_MockString("insertados").ConfigureAwait(false);*/
-                /* await GraphQLService.Get_MockString_ById("s1").ConfigureAwait(false);*/
-
+              
                 await Application.Current.MainPage.Navigation.PushAsync(new NewShelterView());
+
+            }
+            catch (System.Exception e)
+            {
+                await App.Current.MainPage.DisplayAlert("xxxxd", e.ToString(), "Ok");
+            }
+
+        }
+        public async void newCCService()
+        {
+            try
+            {
+
+                await Application.Current.MainPage.Navigation.PushAsync(new NewCasaCunaView());
 
             }
             catch (System.Exception e)
@@ -224,15 +238,12 @@ namespace PetArmy.ViewModels
                             newItem.Image = imageData;
                             temp.Add(newItem);
                            
-
                         }
-
                     }
-                    
                 }
                 else
                 {
-                    /* No shelters behaviors */
+                  
                 }
 
             }

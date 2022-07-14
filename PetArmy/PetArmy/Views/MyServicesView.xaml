@@ -52,8 +52,8 @@
             </buttons:SfButton>
 
 
-            <buttons:SfButton  Command="{Binding PickImage}"
-                                       Text="Pick Image"
+                <buttons:SfButton  Command="{Binding NewCCService}"
+                                       Text="{xct:Translate ccServiceBtn}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
                                        HorizontalOptions="FillAndExpand"
@@ -62,7 +62,7 @@
                                        Style="{StaticResource SyncfusionButtons}">
                 <buttons:SfButton.ImageSource>
                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{x:Static local:IconClass.Bacteria}" />
+                                     Glyph="{x:Static local:IconClass.HandHoldingHeart}" />
                 </buttons:SfButton.ImageSource>
             </buttons:SfButton>
                 

@@ -126,12 +126,14 @@ namespace PetArmy.Services
                 {
                     validated = false;
                 }
+              
             }
             else
             {
                 validated = true;
             }
 
+            client.Dispose();
             return validated;
         }
 
@@ -156,6 +158,7 @@ namespace PetArmy.Services
 
                 var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
                 shelters = response.Data.refugio;
+                client.Dispose();
             }
             catch (Exception)
             {
@@ -209,6 +212,7 @@ namespace PetArmy.Services
 
                 var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
                 completed = true;
+                client.Dispose();
             }
             catch (Exception)
             {
@@ -303,6 +307,7 @@ namespace PetArmy.Services
                 };
 
                 var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
+                client.Dispose();
             }
             catch (Exception)
             {
@@ -326,6 +331,7 @@ namespace PetArmy.Services
                 };
                 var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
                 images = response.Data.imagen_refugio;
+                client.Dispose();
             }
             
             catch (Exception)
@@ -350,6 +356,244 @@ namespace PetArmy.Services
                 Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
             };
             var foundResponse = await client.SendQueryAsync<default_ImagesGraphQLResponse>(request);
+        }
+
+        #endregion
+
+        #region Ubications
+
+        public static async Task<List<ubicaciones_refugios>> getAllShelterUbications()
+        {
+            List<ubicaciones_refugios> locations = new List<ubicaciones_refugios>();
+
+            try
+            {
+
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"query MyQuery { ubicaciones_refugios { canton id_refugio id_ubicacion latitud longitud }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<ubicaciones_refugiosGraphQLResponse>(request);
+                locations = response.Data.ubicaciones_refugios;
+                client.Dispose();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return locations;
+        }
+
+        public static async Task<int> countShelterLocations()
+        {
+            List < ubicaciones_refugios > locations= await getAllShelterUbications();
+
+            return locations.Count;
+        }
+
+        public static async Task addShelterLocation(ubicaciones_refugios location)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {insert_ubicaciones_refugios(objects: {canton: \""+location.canton+"\""+
+                                                                                        ", id_refugio: "+location.id_refugio+
+                                                                                        ", id_ubicacion: "+location.id_ubicacion+
+                                                                                        ", latitud: "+location.lalitud+
+                                                                                        ", longitud: "+location.longitud+"}) {returning {id_refugio}}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<ubicaciones_refugiosGraphQLResponse>(request);
+                client.Dispose();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        } 
+
+        public static async Task<List<ubicaciones_refugios>> getLocationsByShelter(int shelter)
+        {
+            List<ubicaciones_refugios> locations = new List<ubicaciones_refugios>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {ubicaciones_refugios(where: {id_refugio: {_eq: "+shelter+"}}) { canton id_refugio id_ubicacion latitud longitud}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<ubicaciones_refugiosGraphQLResponse>(request);
+                locations = response.Data.ubicaciones_refugios;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+            return locations;
+        }
+
+        public static async Task<List<ubicaciones_casasCuna>> getAllCasasCuna()
+        {
+            List<ubicaciones_casasCuna> casasCuna = new List<ubicaciones_casasCuna>();
+
+            try
+            {
+
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"query MyQuery {ubicaciones_casasCuna { canton id_ubicacion id_user lalitud longitud }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Ubicaciones_CasasCunaGraphQLResponse>(request);
+                casasCuna = response.Data.ubicaciones_casasCuna;
+                client.Dispose();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+            return casasCuna;
+        }
+
+        public static async Task<int> countCasasCuna()
+        {
+            List<ubicaciones_casasCuna> locations = await getAllCasasCuna();
+
+            return locations.Count;
+        }
+
+        public static async Task addCasaCunaLocation(ubicaciones_casasCuna location)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {insert_ubicaciones_refugios(objects: {canton: \"" + location.canton + "\"" +
+                                                                                        ", id_ubicacion: " + location.id_ubicacion +
+                                                                                        ", id_user: \"" + location.id_user +
+                                                                                        "\", latitud: " + location.lalitud +
+                                                                                        ", longitud: " + location.longitud + "}) {returning {id_refugio}}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<ubicaciones_refugiosGraphQLResponse>(request);
+                client.Dispose();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        #endregion
+
+        #region Adoptanes
+
+
+        public static async Task<List<Perfil_adoptante>> getAllAdoptantes()
+        {
+            List<Perfil_adoptante> adoptantes = new List<Perfil_adoptante>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"query MyQuery {perfil_adoptante { casa_cuna correo direccion nombre telefono uid }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Perfil_AdoptanteGraphQLResponse>(request);
+                adoptantes = response.Data.perfil_adoptante;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return adoptantes;
+        }
+
+        public static async Task addAdoptante(Perfil_adoptante adoptante)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {insert_perfil_adoptante(objects: {casa_cuna: "+adoptante.casa_cuna 
+                                                                                   +", correo: \""+adoptante.correo
+                                                                                   +"\", direccion: \""+adoptante.direccion
+                                                                                   +"\", nombre: \""+adoptante.nombre
+                                                                                   +"\", telefono: \""+adoptante.telefono
+                                                                                   +"\", uid: \""+adoptante.uid
+                                                                                   +"\"}) {returning {uid}}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Perfil_AdoptanteGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public static async Task<Perfil_adoptante> getAdoptanteByID(string uid)
+        {
+            Perfil_adoptante adoptante = new Perfil_adoptante();
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {perfil_adoptante_by_pk(uid: \""+uid+"\"){ casa_cuna correo direccion nombre telefono uid }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Perfil_AdoptanteGraphQLResponse>(request);
+                adoptante = response.Data.perfil_adoptante_by_pk;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return adoptante;
         }
 
         #endregion

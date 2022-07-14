@@ -22,9 +22,11 @@ namespace PetArmy.Views
         protected override void OnAppearing()
         {
            base.OnAppearing();
-           App.Current.Resources.TryGetValue("Locator", out object locator);
-           Task.Run(async () => { await ((InstanceLocator)locator).Main.MyService.getData(); });
-           Task.Run(async () => { await ((InstanceLocator)locator).Main.NewShelter.setCurrentLocation(); });
+            App.Current.Resources.TryGetValue("Locator", out object locator);
+            Task.Run(async () => { await ((InstanceLocator)locator).Main.MyService.getData(); });
+            Task.Run(async () => { await ((InstanceLocator)locator).Main.NewShelter.setCurrentLocation(); });
+            Task.Run(async () => { await ((InstanceLocator)locator).Main.NewCasaCuna.setCurrentLocation(); });
+
         }
     }
 }

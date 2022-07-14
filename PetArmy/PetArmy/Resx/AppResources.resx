@@ -190,4 +190,28 @@
   <data name="physicalKey" xml:space="preserve">
     <value>Typed Adress</value>
   </data>
+  <data name="cantonLbl" xml:space="preserve">
+    <value>Select current cantón</value>
+  </data>
+  <data name="fullNameKey" xml:space="preserve">
+    <value>Your full name</value>
+  </data>
+  <data name="registerAsCasaCunakey" xml:space="preserve">
+    <value>Add foundling home service</value>
+  </data>
+  <data name="CCEmailKey" xml:space="preserve">
+    <value>Foundling home's email</value>
+  </data>
+  <data name="ccPhoneNumberKey" xml:space="preserve">
+    <value>Foundling home's number</value>
+  </data>
+  <data name="ccNumberHintKey" xml:space="preserve">
+    <value>It can be your personal number</value>
+  </data>
+  <data name="AddCCServiceKey" xml:space="preserve">
+    <value>Add new your service</value>
+  </data>
+  <data name="ccServiceBtn" xml:space="preserve">
+    <value>New Foundling Home</value>
+  </data>
 </root>
