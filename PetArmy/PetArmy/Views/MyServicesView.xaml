@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:PetArmy"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             x:Class="PetArmy.Views.MyServicesView"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding MyService}">
+         <PopUps:ErrorPopUp />
+            <Label Text="{xct:Translate MyServicesKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
+                                               AnimationType="SingleCircle"
+                                               FontAttributes="Bold"
+                                               Title="Loading..."
+                                               TextColor="{StaticResource LuckyPoint}"
+                                               IsVisible="{Binding IsBusy}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center" />
+            <StackLayout>
+                <ScrollView>
+                    <ListView x:Name="CartItemsView"
+                  BackgroundColor="Transparent"
+                  SeparatorVisibility="None"
+                  ItemsSource="{Binding CustomList}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ImageCell TextColor="#9b9b9b"
+                                   Text="{Binding refugio.nombre}"
+                                   Detail="{Binding refugio.direccion}"
+                                   ImageSource="{Binding Image, Converter={xct:ByteArrayToImageSourceConverter}}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+            </StackLayout>
+
+            <StackLayout  Padding="40" Spacing="20">
+                <buttons:SfButton  Command="{Binding NewShelter}"
+                                       Text="{xct:Translate AddShelterKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="FillAndExpand"
+                                       ShowIcon="True"
+                                       BackgroundColor="#3b5998"
+                                       Style="{StaticResource SyncfusionButtons}">
+                <buttons:SfButton.ImageSource>
+                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{x:Static local:IconClass.Warehouse}" />
+                </buttons:SfButton.ImageSource>
+            </buttons:SfButton>
+
+
+                <buttons:SfButton  Command="{Binding NewCCService}"
+                                       Text="{xct:Translate ccServiceBtn}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="FillAndExpand"
+                                       ShowIcon="True"
+                                       BackgroundColor="#3b5998"
+                                       Style="{StaticResource SyncfusionButtons}">
+                <buttons:SfButton.ImageSource>
+                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{x:Static local:IconClass.HandHoldingHeart}" />
+                </buttons:SfButton.ImageSource>
+            </buttons:SfButton>
+                
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

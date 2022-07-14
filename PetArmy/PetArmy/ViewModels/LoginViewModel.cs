@@ -5,6 +5,7 @@ using PetArmy.Views;
 using Resx;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using PetArmy.Helpers;
 
 namespace PetArmy.ViewModels
 {
@@ -200,12 +201,17 @@ namespace PetArmy.ViewModels
             {
                 var registered_user = _i_auth.GetSignedUserProfile();
                 LoggedMail = registered_user.Email;
+                Settings.Email = registered_user.Email;
+                Settings.UID = registered_user.Uid;
+                Settings.Role = role;
+
                 switch (role) {
                     case "admin":
                         {
                             if (Shell.Current == null)
                                 Application.Current.MainPage = new AppShell();
 
+                            Settings.IsAdmin = true;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -214,6 +220,7 @@ namespace PetArmy.ViewModels
                             if (Shell.Current == null)
                                 Application.Current.MainPage = new AppShell();
 
+                            Settings.IsAdmin = true;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -222,6 +229,7 @@ namespace PetArmy.ViewModels
                             if (Shell.Current == null)
                                 Application.Current.MainPage = new AppShell();
 
+                            Settings.IsAdmin = false;
                             await Shell.Current.GoToAsync("//AboutPage");
                             break;
                         }

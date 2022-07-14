@@ -112,6 +112,108 @@
   <data name="System" xml:space="preserve">
     <value>System</value>
   </data>
+  <data name="OrKey" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="SignUpKey" xml:space="preserve">
+    <value>Sign up with mail</value>
+  </data>
+  <data name="PasswordKey" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordHelperKey" xml:space="preserve">
+    <value>Your password: *****</value>
+  </data>
+  <data name="EmailKey" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="EmailHintKey" xml:space="preserve">
+    <value>Registered email: user@email.com</value>
+  </data>
+  <data name="CreateAccountKey" xml:space="preserve">
+    <value>Create account</value>
+  </data>
+  <data name="RegisterPassHelperKey" xml:space="preserve">
+    <value>Must be at least 7 characters</value>
+  </data>
+  <data name="RegisterEmailHelperKey" xml:space="preserve">
+    <value>Personal Email</value>
+  </data>
+  <data name="MyServicesKey" xml:space="preserve">
+    <value>My Services</value>
+  </data>
+  <data name="ServicesH1Key" xml:space="preserve">
+    <value>My Services</value>
+  </data>
+  <data name="AddShelterKey" xml:space="preserve">
+    <value>Add animal shelter service </value>
+  </data>
+  <data name="AddHomeKey" xml:space="preserve">
+    <value>Add foundling home service</value>
+  </data>
+  <data name="CreateNewShelterH1Key" xml:space="preserve">
+    <value>Create your shelter</value>
+  </data>
+  <data name="ShelterNameInputKey" xml:space="preserve">
+    <value>Shelter's name</value>
+  </data>
+  <data name="ShelterEmailKey" xml:space="preserve">
+    <value>Shelter's email</value>
+  </data>
+  <data name="ShelterNumberKey" xml:space="preserve">
+    <value>Contact phone number </value>
+  </data>
+  <data name="ShelterNumberHintKey" xml:space="preserve">
+    <value>Include regional code</value>
+  </data>
+  <data name="CapKey" xml:space="preserve">
+    <value>Capacity</value>
+  </data>
+  <data name="ShelterDirInputKey" xml:space="preserve">
+    <value>Shelter's adress</value>
+  </data>
+  <data name="CreateShelterBtnKey" xml:space="preserve">
+    <value>Create shelter</value>
+  </data>
+  <data name="UbicacionKey" xml:space="preserve">
+    <value>Current Location</value>
+  </data>
+  <data name="SelectImagesKey" xml:space="preserve">
+    <value>Select your default image</value>
+  </data>
+  <data name="SearchImageKey" xml:space="preserve">
+    <value>Search your photo</value>
+  </data>
+  <data name="cantKey" xml:space="preserve">
+    <value>Only whole numbers</value>
+  </data>
+  <data name="physicalKey" xml:space="preserve">
+    <value>Typed Adress</value>
+  </data>
+  <data name="cantonLbl" xml:space="preserve">
+    <value>Select current cantón</value>
+  </data>
+  <data name="fullNameKey" xml:space="preserve">
+    <value>Your full name</value>
+  </data>
+  <data name="registerAsCasaCunakey" xml:space="preserve">
+    <value>Add foundling home service</value>
+  </data>
+  <data name="CCEmailKey" xml:space="preserve">
+    <value>Foundling home's email</value>
+  </data>
+  <data name="ccPhoneNumberKey" xml:space="preserve">
+    <value>Foundling home's number</value>
+  </data>
+  <data name="ccNumberHintKey" xml:space="preserve">
+    <value>It can be your personal number</value>
+  </data>
+  <data name="AddCCServiceKey" xml:space="preserve">
+    <value>Add new your service</value>
+  </data>
+  <data name="ccServiceBtn" xml:space="preserve">
+    <value>New Foundling Home</value>
+  </data>
   <data name="Loading" xml:space="preserve">
     <value>Loading...</value>
   </data>

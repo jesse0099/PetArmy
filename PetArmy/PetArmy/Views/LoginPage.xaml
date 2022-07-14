@@ -32,12 +32,13 @@
                 <Image Source="PetsArmy" HeightRequest="250" HorizontalOptions="Center"/>
                 <StackLayout Padding="40" Spacing="20">
                     <!--Email-->
-                    <inputLayout:SfTextInputLayout  Hint="E-mail"
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate EmailKey}"
                                                     x:Name="EmailContainer"
                                                     InputViewPadding="5"
+                                                    HelperText="{xct:Translate EmailHintKey}"
+                                                    IsHintAlwaysFloated="true"
                                                     HasError="{Binding EmailError}"
                                                     ErrorText="{Binding EmailErrorLabel}"
-                                                    HelperText="Email Registrado: user@gmail.com"
                                                     ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="email"
@@ -47,11 +48,11 @@
                         </Entry>
                     </inputLayout:SfTextInputLayout>
                     <!--Contrasenia-->
-                    <inputLayout:SfTextInputLayout  Hint="Password"
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate PasswordKey}"
+                                                    HelperText="{xct:Translate PasswordHelperKey}"
                                                     x:Name="PasswordContainer"
                                                     HasError="{Binding PasswordError}"
                                                     ErrorText="{Binding PasswordErrorLabel}"
-                                                    HelperText="Clave Registrada: *****"
                                                     EnablePasswordVisibilityToggle="True"
                                                     ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
                                                     EnableHintAnimation="True"
@@ -82,7 +83,7 @@
                                  HorizontalOptions="FillAndExpand"
                                  VerticalOptions="Center"
                                  HeightRequest="1" />
-                        <Label Text=" ó "
+                        <Label Text="{xct:Translate OrKey}"
                                TextColor="{AppThemeBinding Light=#555, Dark={StaticResource MiddlePurple}}"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
@@ -93,7 +94,7 @@
                                  HeightRequest="1" />
                     </StackLayout>
 
-                    <Label Text="Registrarme con Email"
+                    <Label Text="{xct:Translate SignUpKey}"
                            HorizontalOptions="Center"
                            Style="{StaticResource normal_labels}">
                         <Label.GestureRecognizers>

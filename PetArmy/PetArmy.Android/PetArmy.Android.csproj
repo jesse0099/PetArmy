@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <MandroidI18n />
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,8 +59,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AsyncAwaitBestPractices.MVVM">
+      <Version>6.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL">
+      <Version>5.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL-Parser">
+      <Version>8.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL.Client">
+      <Version>4.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft">
+      <Version>4.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL.DataLoader">
+      <Version>5.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL.MemoryCache">
+      <Version>5.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL.NewtonsoftJson">
+      <Version>5.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Net.Http">
+      <Version>2.2.29</Version>
+    </PackageReference>
+    <PackageReference Include="modernhttpclient-updated">
+      <Version>3.4.3</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.CurrentActivity">
+      <Version>2.1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Polly">
+      <Version>7.2.3</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Licensing">
       <Version>19.1.0.54</Version>
@@ -76,8 +116,26 @@
     <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit">
       <Version>19.1.0.54</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
+      <Version>19.1.0.54</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox">
+      <Version>19.1.0.54</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
       <Version>19.1.0.54</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Geolocator">
+      <Version>4.5.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Media">
+      <Version>5.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Compat">
       <Version>28.0.0.3</Version>
@@ -87,6 +145,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.v4">
       <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Core">
+      <Version>1.7.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.CommunityToolkit">
       <Version>1.3.2</Version>
@@ -104,9 +165,24 @@
       <Version>119.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <PackageReference Include="Xamarin.Forms.Maps">
+      <Version>5.0.0.2196</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Auth">
       <Version>119.2.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Base">
+      <Version>118.0.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Basement">
+      <Version>118.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Maps">
+      <Version>118.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Tasks">
+      <Version>118.0.1.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +191,7 @@
     <Compile Include="Implementations\FirebaseAuthentication.cs" />
     <Compile Include="Implementations\FirebaseFunction.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MainApplication.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -174,6 +251,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\UserPlus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Shelter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\xml\file_paths.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
