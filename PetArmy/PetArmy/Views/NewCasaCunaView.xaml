@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              x:Class="PetArmy.Views.NewCasaCunaView"
+              xmlns:local="clr-namespace:PetArmy"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:behaviors="clr-namespace:PetArmy.Views.Behaviors" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             BindingContext="{Binding Main, Source={StaticResource Key=Locator}}">>
-    <ContentPage.Content>
-        <ScrollView BindingContext="{Binding NewCasaCuna}">
-            <StackLayout VerticalOptions="Center">
+             BindingContext="{Binding Main, Source={StaticResource Key=Locator}}">
+    <ContentPage.Content >
+        <ScrollView >
+            <StackLayout BindingContext="{Binding NewCasaCuna}"  VerticalOptions="Center">
                 <PopUps:ErrorPopUp />
                 <Image Source="Shelter" HeightRequest="180" Margin="0,0,0,10" HorizontalOptions="Center"/>
                 <Label Text="{xct:Translate registerAsCasaCunakey}" HorizontalOptions="Center" FontSize="Medium"/>
