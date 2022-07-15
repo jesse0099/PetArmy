@@ -221,16 +221,7 @@ namespace Resx {
                 return ResourceManager.GetString("BadFormattedEmail", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Create account.
-        /// </summary>
-        public static string CreateAccountKey {
-            get {
-                return ResourceManager.GetString("CreateAccountKey", resourceCulture);
-            }
-        }
-        
+                
         /// <summary>
         ///   Looks up a localized string similar to Disable Account.
         /// </summary>
