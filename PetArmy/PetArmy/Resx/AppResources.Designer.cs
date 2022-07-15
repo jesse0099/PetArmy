@@ -88,6 +88,33 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Fields Are Required!.
+        /// </summary>
+        public static string AllFieldsRequired {
+            get {
+                return ResourceManager.GetString("AllFieldsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Approve.
+        /// </summary>
+        public static string ApproveButton {
+            get {
+                return ResourceManager.GetString("ApproveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bad Formatted Email. Ej: mymail@mail.com.
+        /// </summary>
+        public static string BadFormattedEmail {
+            get {
+                return ResourceManager.GetString("BadFormattedEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Only whole numbers.
         /// </summary>
         public static string cantKey {
@@ -178,51 +205,6 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Registered email: user@email.com.
-        /// </summary>
-        public static string EmailHintKey {
-            get {
-                return ResourceManager.GetString("EmailHintKey", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to E-Mail.
-        /// </summary>
-        public static string EmailKey {
-            get {
-                return ResourceManager.GetString("EmailKey", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to All Fields Are Required!.
-        /// </summary>
-        public static string AllFieldsRequired {
-            get {
-                return ResourceManager.GetString("AllFieldsRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Approve.
-        /// </summary>
-        public static string ApproveButton {
-            get {
-                return ResourceManager.GetString("ApproveButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Bad Formatted Email. Ej: mymail@mail.com.
-        /// </summary>
-        public static string BadFormattedEmail {
-            get {
-                return ResourceManager.GetString("BadFormattedEmail", resourceCulture);
-            }
-        }
-                
-        /// <summary>
         ///   Looks up a localized string similar to Disable Account.
         /// </summary>
         public static string DisableAccount {
@@ -241,11 +223,29 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Registered email: user@email.com.
+        /// </summary>
+        public static string EmailHintKey {
+            get {
+                return ResourceManager.GetString("EmailHintKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email Is Empty.
         /// </summary>
         public static string EmailIsEmpty {
             get {
                 return ResourceManager.GetString("EmailIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-Mail.
+        /// </summary>
+        public static string EmailKey {
+            get {
+                return ResourceManager.GetString("EmailKey", resourceCulture);
             }
         }
         
@@ -268,15 +268,6 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your full name.
-        /// </summary>
-        public static string fullNameKey {
-            get {
-                return ResourceManager.GetString("fullNameKey", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to First Name.
         /// </summary>
         public static string FirstName {
@@ -291,6 +282,15 @@ namespace Resx {
         public static string FirstNameIsEmpty {
             get {
                 return ResourceManager.GetString("FirstNameIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your full name.
+        /// </summary>
+        public static string fullNameKey {
+            get {
+                return ResourceManager.GetString("fullNameKey", resourceCulture);
             }
         }
         
@@ -340,6 +340,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Non Valid Phone Number.
+        /// </summary>
+        public static string NonValidPhoneNumber {
+            get {
+                return ResourceManager.GetString("NonValidPhoneNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Or.
         /// </summary>
         public static string OrKey {
@@ -358,6 +367,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password Is Empty.
+        /// </summary>
+        public static string PasswordIsEmpty {
+            get {
+                return ResourceManager.GetString("PasswordIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string PasswordKey {
@@ -367,11 +385,56 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The passwords do not match.
+        /// </summary>
+        public static string PasswordNoMatch {
+            get {
+                return ResourceManager.GetString("PasswordNoMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Password Must Be At Least 6 Characters.
+        /// </summary>
+        public static string PasswordNonMinimumSize {
+            get {
+                return ResourceManager.GetString("PasswordNonMinimumSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pending.
+        /// </summary>
+        public static string Pending {
+            get {
+                return ResourceManager.GetString("Pending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone Number.
+        /// </summary>
+        public static string PhoneNumber {
+            get {
+                return ResourceManager.GetString("PhoneNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Typed Adress.
         /// </summary>
         public static string physicalKey {
             get {
                 return ResourceManager.GetString("physicalKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh.
+        /// </summary>
+        public static string Refresh {
+            get {
+                return ResourceManager.GetString("Refresh", resourceCulture);
             }
         }
         
@@ -399,6 +462,60 @@ namespace Resx {
         public static string RegisterPassHelperKey {
             get {
                 return ResourceManager.GetString("RegisterPassHelperKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reject.
+        /// </summary>
+        public static string RejectButton {
+            get {
+                return ResourceManager.GetString("RejectButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rejected.
+        /// </summary>
+        public static string Rejected {
+            get {
+                return ResourceManager.GetString("Rejected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repeat Password.
+        /// </summary>
+        public static string RepeatPassword {
+            get {
+                return ResourceManager.GetString("RepeatPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request Account.
+        /// </summary>
+        public static string RequestAccount {
+            get {
+                return ResourceManager.GetString("RequestAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request Administrator Account.
+        /// </summary>
+        public static string RequestAdmin {
+            get {
+                return ResourceManager.GetString("RequestAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requested:.
+        /// </summary>
+        public static string RequestedDate {
+            get {
+                return ResourceManager.GetString("RequestedDate", resourceCulture);
             }
         }
         
@@ -480,114 +597,6 @@ namespace Resx {
         public static string SignUpKey {
             get {
                 return ResourceManager.GetString("SignUpKey", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Non Valid Phone Number.
-        /// </summary>
-        public static string NonValidPhoneNumber {
-            get {
-                return ResourceManager.GetString("NonValidPhoneNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Password Is Empty.
-        /// </summary>
-        public static string PasswordIsEmpty {
-            get {
-                return ResourceManager.GetString("PasswordIsEmpty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The passwords do not match.
-        /// </summary>
-        public static string PasswordNoMatch {
-            get {
-                return ResourceManager.GetString("PasswordNoMatch", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Password Must Be At Least 6 Characters.
-        /// </summary>
-        public static string PasswordNonMinimumSize {
-            get {
-                return ResourceManager.GetString("PasswordNonMinimumSize", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pending.
-        /// </summary>
-        public static string Pending {
-            get {
-                return ResourceManager.GetString("Pending", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Phone Number.
-        /// </summary>
-        public static string PhoneNumber {
-            get {
-                return ResourceManager.GetString("PhoneNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Refresh.
-        /// </summary>
-        public static string Refresh {
-            get {
-                return ResourceManager.GetString("Refresh", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reject.
-        /// </summary>
-        public static string RejectButton {
-            get {
-                return ResourceManager.GetString("RejectButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Rejected.
-        /// </summary>
-        public static string Rejected {
-            get {
-                return ResourceManager.GetString("Rejected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Request Account.
-        /// </summary>
-        public static string RequestAccount {
-            get {
-                return ResourceManager.GetString("RequestAccount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Request Administrator Account.
-        /// </summary>
-        public static string RequestAdmin {
-            get {
-                return ResourceManager.GetString("RequestAdmin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Requested:.
-        /// </summary>
-        public static string RequestedDate {
-            get {
-                return ResourceManager.GetString("RequestedDate", resourceCulture);
             }
         }
         

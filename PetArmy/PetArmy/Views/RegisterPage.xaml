@@ -28,51 +28,51 @@
                                                VerticalOptions="Center" />
                 <PopUps:ErrorPopUp />
                 <Image Source="UserPlus" HeightRequest="150" Margin="0,0,30,0" VerticalOptions="Center" HorizontalOptions="Center" />
-                <Label Text=" Crea tu nueva cuenta! "
+                <Label Text="{xct:Translate CreateAccountKey}"
                        HorizontalOptions="Center"
                        FontSize="Medium"
                        TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                         <!--Correo-->
-                <inputLayout:SfTextInputLayout  Hint="E-mail"
+                <inputLayout:SfTextInputLayout  Hint="{xct:Translate EmailKey}"
                                                 HasError="{Binding EmailError}"
                                                 ErrorText="{Binding EmailErrorLabel}"
                                                 InputViewPadding="5"
-                                                HelperText=" Correo Personal"
+                                                HelperText="{xct:Translate EmailHintKey}"
                                                 ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
                                                 Style="{StaticResource SyncfusionEntries}">
                     <Entry x:Name="email"
                                    TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
                                    PlaceholderColor="Gray"
-                                   Placeholder="Email"
+                                   Placeholder="{xct:Translate EmailKey}"
                                    Text="{Binding Email, Mode = TwoWay}" />
                         </inputLayout:SfTextInputLayout>
                         <!--Contraseña-->
-                <inputLayout:SfTextInputLayout          Hint="Contraseña"
+                <inputLayout:SfTextInputLayout          Hint="{xct:Translate PasswordKey}"
                                                         HasError="{Binding PasswordError}"
                                                         ErrorText="{Binding PasswordErrorLabel}"
-                                                        HelperText="Debe de ser al menos 7 caracteres"
+                                                        HelperText="{xct:Translate PasswordHelperKey}"
                                                         EnablePasswordVisibilityToggle="True"
                                                         ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
                                                         Style="{StaticResource SyncfusionEntries}">
                     <Entry IsPassword="True"
                                    TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
                                    PlaceholderColor="Gray"
-                                   Placeholder="Password"
+                                   Placeholder="{xct:Translate PasswordKey}"
                                    x:Name="password"
                                    Text="{Binding Password, Mode = TwoWay}" />
                 </inputLayout:SfTextInputLayout>
                         <!--Repetir Contraseña-->
-                <inputLayout:SfTextInputLayout Hint="Repetir Contraseña"
+                <inputLayout:SfTextInputLayout Hint="{xct:Translate RepeatPassword}"
                                                HasError="{Binding RepeatPasswordError}"
                                                ErrorText="{Binding RepeatPasswordErrorLabel}"
-                                               HelperText="Debe de ser al menos 7 caracteres"
+                                               HelperText="{xct:Translate PasswordHelperKey}"
                                                EnablePasswordVisibilityToggle="True"
                                                ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
                                                Style="{StaticResource SyncfusionEntries}">
                     <Entry x:Name="repeat_password"
                            TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
                            PlaceholderColor="Gray"
-                           Placeholder="Email"
+                           Placeholder="{xct:Translate RepeatPassword}"
                            IsPassword="True"
                            Text="{Binding RepeatPassword, Mode = TwoWay}" />
                 </inputLayout:SfTextInputLayout>

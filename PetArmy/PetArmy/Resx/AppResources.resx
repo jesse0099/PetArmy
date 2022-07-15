@@ -226,9 +226,6 @@
   <data name="RequestAdmin" xml:space="preserve">
     <value>Request Administrator Account</value>
   </data>
-  <data name="CreateAccountKey" xml:space="preserve">
-    <value>Create account</value>
-  </data>
   <data name="RequestAccount" xml:space="preserve">
     <value>Request Account</value>
   </data>
@@ -294,5 +291,8 @@
   </data>
   <data name="Refresh" xml:space="preserve">
     <value>Refresh</value>
+  </data>
+  <data name="RepeatPassword" xml:space="preserve">
+    <value>Repeat Password</value>
   </data>
 </root>
