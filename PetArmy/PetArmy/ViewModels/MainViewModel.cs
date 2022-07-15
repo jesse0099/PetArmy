@@ -14,6 +14,8 @@ namespace PetArmy.ViewModels
         public MyServiceViewModel MyService { get; set; }
         public NewShelterViewModel NewShelter { get; set; }
 
+        public MascotaViewModel Mascotas { get; set; }
+
         public MainViewModel(): base()
         {
             this.Login = LoginViewModel.GetInstance();
@@ -21,6 +23,7 @@ namespace PetArmy.ViewModels
             this.Register = RegisterViewModel.GetInstance();
             this.MyService = MyServiceViewModel.GetInstance();
             this.NewShelter = NewShelterViewModel.GetInstance();
+            this.Mascotas = MascotaViewModel.GetInstance();
             this.User = new UserViewModel();
 
         }
