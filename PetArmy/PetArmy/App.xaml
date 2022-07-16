@@ -7,7 +7,7 @@
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              x:Class="PetArmy.App">
     <!--
-        Define global resources and styles here, that apply to all pages in your app.
+        Define global resources and styles        here, that apply to all pages in your app.
     -->
     <Application.Resources>
         <ResourceDictionary>
