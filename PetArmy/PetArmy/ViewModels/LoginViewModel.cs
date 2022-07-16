@@ -5,7 +5,6 @@ using PetArmy.Views;
 using Resx;
 using System.Collections.Generic;
 using Xamarin.Forms;
-using PetArmy.Helpers;
 
 namespace PetArmy.ViewModels
 {
