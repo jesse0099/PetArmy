@@ -259,6 +259,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pending.
+        /// </summary>
+        public static string Pending {
+            get {
+                return ResourceManager.GetString("Pending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Typed Adress.
         /// </summary>
         public static string physicalKey {
@@ -291,6 +300,24 @@ namespace Resx {
         public static string RegisterPassHelperKey {
             get {
                 return ResourceManager.GetString("RegisterPassHelperKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rejected.
+        /// </summary>
+        public static string Rejected {
+            get {
+                return ResourceManager.GetString("Rejected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request Account.
+        /// </summary>
+        public static string RequestAccount {
+            get {
+                return ResourceManager.GetString("RequestAccount", resourceCulture);
             }
         }
         
@@ -390,6 +417,15 @@ namespace Resx {
         public static string System {
             get {
                 return ResourceManager.GetString("System", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Treated.
+        /// </summary>
+        public static string Treated {
+            get {
+                return ResourceManager.GetString("Treated", resourceCulture);
             }
         }
         
