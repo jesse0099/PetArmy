@@ -244,4 +244,10 @@
   <data name="AllFieldsRequired" xml:space="preserve">
     <value>All Fields Are Required</value>
   </data>
+  <data name="PasswordNoMatch" xml:space="preserve">
+    <value>Passwords Do Not Match</value>
+  </data>
+  <data name="NonValidPhoneNumber" xml:space="preserve">
+    <value>Invalid Phone Number</value>
+  </data>
 </root>

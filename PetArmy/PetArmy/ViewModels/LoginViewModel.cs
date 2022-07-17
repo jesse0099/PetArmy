@@ -205,6 +205,7 @@ namespace PetArmy.ViewModels
 
         async public void ProviderLoginChecker(UserProfile profile, string message, string role = empty)
         {
+            IsBusy = false;
             if (profile != null)
             {
                 var registered_user = _i_auth.GetSignedUserProfile();
@@ -218,7 +219,7 @@ namespace PetArmy.ViewModels
                         {
                             if (Shell.Current == null)
                                 Application.Current.MainPage = new AppShell();
-                            IsBusy = false;
+
                             Settings.IsAdmin = true;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
@@ -227,7 +228,7 @@ namespace PetArmy.ViewModels
                         {
                             if (Shell.Current == null)
                                 Application.Current.MainPage = new AppShell();
-                            IsBusy = false;
+
                             Settings.IsAdmin = true;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
@@ -236,7 +237,7 @@ namespace PetArmy.ViewModels
                         {
                             if (Shell.Current == null)
                                 Application.Current.MainPage = new AppShell();
-                            IsBusy = false;
+
                             Settings.IsAdmin = false;
                             await Shell.Current.GoToAsync("//AboutPage");
                             break;
@@ -245,7 +246,6 @@ namespace PetArmy.ViewModels
             }
             else
             {
-                IsBusy = false;
                 ErrorTitle = "Something Went Wrong!!!";
                 ErrorMessage = message;
                 OpenPopUp = true;

@@ -259,6 +259,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid Phone Number.
+        /// </summary>
+        public static string NonValidPhoneNumber {
+            get {
+                return ResourceManager.GetString("NonValidPhoneNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Or.
         /// </summary>
         public static string OrKey {
@@ -291,6 +300,15 @@ namespace Resx {
         public static string PasswordKey {
             get {
                 return ResourceManager.GetString("PasswordKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Passwords Do Not Match.
+        /// </summary>
+        public static string PasswordNoMatch {
+            get {
+                return ResourceManager.GetString("PasswordNoMatch", resourceCulture);
             }
         }
         

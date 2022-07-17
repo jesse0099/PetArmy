@@ -264,4 +264,10 @@
   <data name="AllFieldsRequired" xml:space="preserve">
     <value>Todos los campos son obligatorios</value>
   </data>
+  <data name="PasswordNoMatch" xml:space="preserve">
+    <value>Las Contraseñas No Coinciden</value>
+  </data>
+  <data name="NonValidPhoneNumber" xml:space="preserve">
+    <value>Número De Teléfono No Válido</value>
+  </data>
 </root>
