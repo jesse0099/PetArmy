@@ -12,6 +12,11 @@
     <Application.Resources>
         <ResourceDictionary>
             <Helpers:InverseBoolConverter x:Key="InverseBool" />
+            <Helpers:CreateAccountButtonTextConverter x:Key="BoolToStringCreateAccount" />
+            <Helpers:AdminRequestStatusColorConverter x:Key="StringToColorRequest" />
+            <Helpers:AdminRequestActionVisibilityConverter x:Key="AdminRequestStatusToBool" />
+            <Helpers:AdminRequestAccessVisibilityConverter x:Key="AdminRequestAccessToBool" />
+            <Helpers:AdminRequestStatusTranslator x:Key="AdminRequestStatusTranslator" />
             <!--Localizador de instancias-->
             <infraestructure:InstanceLocator x:Key="Locator" />
 
@@ -19,6 +24,14 @@
             <Color x:Key="Primary">Black</Color>
             <!--Colores Propios-->
             <Color x:Key="LuckyPoint">#2c2c54</Color>
+            <Color x:Key="LightGreen">#25D366</Color>
+            <Color x:Key="TealGreen">#128C7E</Color>
+            <Color x:Key="TealGreenDark">#075E54</Color>
+            <Color x:Key="CustomYellow">#ffd319</Color>
+            <Color x:Key="CustomOrange">#ff901f</Color>
+            <Color x:Key="CustomPink">#ff2975</Color>
+            <Color x:Key="EireBlack">#141414</Color>
+            <Color x:Key="SpaceCadet">#2c2c54</Color>
             <Color x:Key="Liberty">#474787</Color>
             <Color x:Key="JacksonPurple">#40407a</Color>
             <Color x:Key="Ametheist">#8b5cc1</Color>
@@ -48,12 +61,20 @@
                 <Setter Property="OutlineCornerRadius"
                         Value="8" />
                 <Setter Property="HelperLabelStyle"
-                        Value="SyncfusionHelperLabel"/>
+                        Value="SyncfusionHelperLabel" />
+                <Setter Property="ErrorColor"
+                        Value="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}" />
             </Style>
 
 
 
-            
+            <!--Labels-->
+            <Style x:Key="normal_labels"
+                   TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Light=#555, Dark=LightGray}" />
+            </Style>
+
             <!--Buttons con syncfusion-->
             <Style x:Key="SyncfusionButtons"
                    TargetType="buttons:SfButton">
