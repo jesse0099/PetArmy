@@ -158,7 +158,7 @@
     <PackageReference Include="Xamarin.Firebase.Functions">
       <Version>119.0.2</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Xamarin.Forms.Maps">
       <Version>5.0.0.2196</Version>
