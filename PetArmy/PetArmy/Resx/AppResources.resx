@@ -226,4 +226,7 @@
   <data name="Rejected" xml:space="preserve">
     <value>Rejected</value>
   </data>
+  <data name="SomethingWrong" xml:space="preserve">
+    <value>Something Went Wrong!!</value>
+  </data>
 </root>

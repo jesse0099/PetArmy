@@ -403,6 +403,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Something Went Wrong!!.
+        /// </summary>
+        public static string SomethingWrong {
+            get {
+                return ResourceManager.GetString("SomethingWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spanish.
         /// </summary>
         public static string Spanish {
