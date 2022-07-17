@@ -88,6 +88,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Fields Are Required.
+        /// </summary>
+        public static string AllFieldsRequired {
+            get {
+                return ResourceManager.GetString("AllFieldsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bad Formatted Email. Ej: user@email.com.
+        /// </summary>
+        public static string BadFormattedEmail {
+            get {
+                return ResourceManager.GetString("BadFormattedEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Only whole numbers.
         /// </summary>
         public static string cantKey {
@@ -187,6 +205,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email Is Empty.
+        /// </summary>
+        public static string EmailIsEmpty {
+            get {
+                return ResourceManager.GetString("EmailIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-Mail.
         /// </summary>
         public static string EmailKey {
@@ -250,11 +277,29 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password Is Empty.
+        /// </summary>
+        public static string PasswordIsEmpty {
+            get {
+                return ResourceManager.GetString("PasswordIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string PasswordKey {
             get {
                 return ResourceManager.GetString("PasswordKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password Should Be at Least 6 Characters.
+        /// </summary>
+        public static string PasswordNonMinimumSize {
+            get {
+                return ResourceManager.GetString("PasswordNonMinimumSize", resourceCulture);
             }
         }
         

@@ -229,4 +229,19 @@
   <data name="SomethingWrong" xml:space="preserve">
     <value>Something Went Wrong!!</value>
   </data>
+  <data name="EmailIsEmpty" xml:space="preserve">
+    <value>Email Is Empty</value>
+  </data>
+  <data name="BadFormattedEmail" xml:space="preserve">
+    <value>Bad Formatted Email. Ej: user@email.com</value>
+  </data>
+  <data name="PasswordIsEmpty" xml:space="preserve">
+    <value>Password Is Empty</value>
+  </data>
+  <data name="PasswordNonMinimumSize" xml:space="preserve">
+    <value>Password Should Be at Least 6 Characters</value>
+  </data>
+  <data name="AllFieldsRequired" xml:space="preserve">
+    <value>All Fields Are Required</value>
+  </data>
 </root>

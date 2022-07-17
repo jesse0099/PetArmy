@@ -249,4 +249,19 @@
   <data name="SomethingWrong" xml:space="preserve">
     <value>Algo Salió Mal!!</value>
   </data>
+  <data name="EmailIsEmpty" xml:space="preserve">
+    <value>El Email Está Vacío</value>
+  </data>
+  <data name="BadFormattedEmail" xml:space="preserve">
+    <value>Email Mal Formateado. Ej: usuario@email.com</value>
+  </data>
+  <data name="PasswordIsEmpty" xml:space="preserve">
+    <value>La Contraseña Está Vacía</value>
+  </data>
+  <data name="PasswordNonMinimumSize" xml:space="preserve">
+    <value>La Contraseña Debe Tener Al Menos 6 Caracteres</value>
+  </data>
+  <data name="AllFieldsRequired" xml:space="preserve">
+    <value>Todos los campos son obligatorios</value>
+  </data>
 </root>

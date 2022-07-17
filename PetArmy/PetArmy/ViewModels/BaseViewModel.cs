@@ -8,7 +8,6 @@ using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Xamarin.CommunityToolkit.Helpers;
-using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
