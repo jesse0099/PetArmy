@@ -23,8 +23,8 @@
                 <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
                                                AnimationType="SingleCircle"
                                                FontAttributes="Bold"
-                                               Title="Loading..."
-                                               TextColor="{StaticResource LuckyPoint}"
+                                               Title="{xct:Translate Loading}"
+                                               TextColor="{AppThemeBinding Light={StaticResource MiddlePurple}, Dark={StaticResource PurplePlum}}"
                                                IsVisible="{Binding IsBusy}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center" />
@@ -38,7 +38,9 @@
                                                     HelperText="{xct:Translate EmailHintKey}"
                                                     ContainerType="Outlined"
                                                     IsHintAlwaysFloated="true"
-                                                    Style="{StaticResource SyncfusionEntries}">
+                                                    Style="{StaticResource SyncfusionEntries}"
+                                                    ErrorText="{Binding EmailErrorLabel}"
+                                                    HasError="{Binding EmailError}">
                         <Entry x:Name="email"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
                                Keyboard="Email"
@@ -51,7 +53,9 @@
                                                     ContainerType="Outlined"
                                                     EnableHintAnimation="True"
                                                     IsHintAlwaysFloated="true"
-                                                    Style="{StaticResource SyncfusionEntries}">
+                                                    Style="{StaticResource SyncfusionEntries}"
+                                                    HasError="{Binding PasswordError}"
+                                                    ErrorText="{Binding PasswordErrorLabel}">
                         <Entry IsPassword="True"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
                                x:Name="password"

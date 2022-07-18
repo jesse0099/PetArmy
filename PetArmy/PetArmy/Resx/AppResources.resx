@@ -250,4 +250,52 @@
   <data name="NonValidPhoneNumber" xml:space="preserve">
     <value>Invalid Phone Number</value>
   </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="RequestedDate" xml:space="preserve">
+    <value>Requested:</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Email_Admin" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="RejectButton" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="ApproveButton" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="DisableAccount" xml:space="preserve">
+    <value>Disable Account</value>
+  </data>
+  <data name="EnableAccount" xml:space="preserve">
+    <value>Enable Account</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="RepeatPassword" xml:space="preserve">
+    <value>Repeat Password</value>
+  </data>
+  <data name="RequestAdmin" xml:space="preserve">
+    <value>Request Administrator Account</value>
+  </data>
+  <data name="FirstNameIsEmpty" xml:space="preserve">
+    <value>First Name Is Empty</value>
+  </data>
+  <data name="LastNameIsEmpty" xml:space="preserve">
+    <value>Last Name Is Empty</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Create Your New Account!</value>
+  </data>
 </root>
