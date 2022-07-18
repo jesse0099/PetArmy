@@ -152,18 +152,18 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation { insert_refugio(objects: { "+"activo: "+newShelter.activo+ 
-                                                                               ",administrador: \""+newShelter.administrador+"\""+
-                                                                               ",capacidad: "+newShelter.capacidad+
-                                                                               ",correo: \""+newShelter.correo+"\""+
-                                                                               ",direccion: \""+newShelter.direccion+"\""+
-                                                                               ",id_refugio: \""+newShelter.id_refugio+"\""+
-                                                                               ",nombre: \""+newShelter.nombre+"\""+
-                                                                               ",telefono: \""+newShelter.telefono+ "\"})"+
+                    Query = "mutation MyMutation { insert_refugio(objects: { " + "activo: " + newShelter.activo +
+                                                                               ",administrador: \"" + newShelter.administrador + "\"" +
+                                                                               ",capacidad: " + newShelter.capacidad +
+                                                                               ",correo: \"" + newShelter.correo + "\"" +
+                                                                               ",direccion: \"" + newShelter.direccion + "\"" +
+                                                                               ",id_refugio: \"" + newShelter.id_refugio + "\"" +
+                                                                               ",nombre: \"" + newShelter.nombre + "\"" +
+                                                                               ",telefono: \"" + newShelter.telefono + "\"})" +
                                                                                "{ returning{ id_refugio }}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
-                
+
                 var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
                 completed = true;
             }
@@ -178,6 +178,84 @@ namespace PetArmy.Services
 
         #endregion
 
-    }
 
+        #region SearchBar Operations
+
+        public static async Task<IEnumerable<Tag>> getAllTags()
+        {
+            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+            var findRequest = new GraphQLHttpRequestWithHeaders
+            {
+                Query = "query MyQuery {tag {id_tagnombre_tag}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            };
+
+            var foundResponse = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+
+            return foundResponse.Data.tag;
+        }
+
+        public static async Task<List<Mascota>> get30Pets()
+        {
+            
+
+            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+            var findRequest = new GraphQLHttpRequestWithHeaders
+            {
+                Query = "query MyQuery {mascota(limit: 30) {nombre}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            };
+
+            var foundResponse = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+
+            return foundResponse.Data.mascota;
+        }
+
+        public static async Task<List<Mascota>> getPetsByTag(String searchTag)
+        {
+            
+            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+            var findRequest = new GraphQLHttpRequestWithHeaders
+            {
+                Query = "query MyQuery {mascota_tag(where: { id_tag: { _eq: \"" + searchTag + "\"}}) {id_mascota}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            };
+
+            var foundResponse = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+
+            var foundResponsePets = foundResponse;
+
+            if (foundResponse.Data.mascota_tag != null)
+            {
+                findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                Query = "query MyQuery {mascota(where: { id_mascota: { _eq: \"" + foundResponse.Data.mascota_tag + "\" }}) {nombre}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                foundResponsePets = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+            }
+
+            //foreach (int item in foundResponse.Data.mascota_tag)
+            //{
+            //findRequest = new GraphQLHttpRequestWithHeaders
+            //{
+            //Query = "query MyQuery {mascota(where: { id_mascota: { _eq: \"" + item + "\" }}) {nombre}}",
+            //Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            //};
+
+            //var foundResponsePets = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+            //result.Add(foundResponsePets.Data.mascota);
+            //}
+
+            return foundResponsePets.Data.mascota;
+
+        }
+
+        #endregion
+
+    }
 }

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:PetArmy"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"  
+             xmlns:local1="clr-namespace:PetArmy.ViewModels"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             Shell.NavBarIsVisible="False"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="PetArmy.Views.SearchBar">
+    <ContentPage.BindingContext>
+        <local1:SearchBarViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+        <ScrollView>
+
+            <StackLayout BindingContext="{Binding SearchBar}">
+
+                <autocomplete:SfAutoComplete x:Name="autoComplete" 
+                                     HeightRequest="40"
+                                     DisplayMemberPath="Name" 
+                                     DataSource="{Binding Tags}">
+                </autocomplete:SfAutoComplete>
+
+                <buttons:SfButton  Command="{Binding Search}"
+                                       Text="Search"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="FillAndExpand"
+                                       ShowIcon="True"
+                                       BackgroundColor="{StaticResource Flirt}"
+                                       Style="{StaticResource SyncfusionButtons}">
+                </buttons:SfButton>
+
+                <ListView x:Name="CartItemsView"
+                  BackgroundColor="Transparent"
+                  SeparatorVisibility="None"
+                  ItemsSource="{Binding PetsWithTag}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding PetsWithTag.nombre}" FontAttributes="Bold" FontSize="21" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+
+
+
+    </ContentPage.Content>
+
+</ContentPage>

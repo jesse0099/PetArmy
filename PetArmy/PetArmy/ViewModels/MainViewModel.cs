@@ -14,6 +14,8 @@ namespace PetArmy.ViewModels
         public MyServiceViewModel MyService { get; set; }
         public NewShelterViewModel NewShelter { get; set; }
 
+        public SearchBarViewModel SearchBar { get; set; }
+
         public MainViewModel(): base()
         {
             this.Login = LoginViewModel.GetInstance();
