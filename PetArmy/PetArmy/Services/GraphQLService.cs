@@ -597,6 +597,215 @@ namespace PetArmy.Services
         }
 
         #endregion
+
+        #region Mascotas
+        public static async Task<List<Mascota>> getAllMascotas()
+        {
+            List<Mascota> mascotas = new List<Mascota>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"query MyQuery { mascota {  id_refugio,   " +
+                                                         " nombre,       " +
+                                                         " castrado,     " +
+                                                         " alergias,     " +
+                                                         " discapacidad, " +
+                                                         " enfermedad,   " +
+                                                         " especie,      " +
+                                                         " id_mascota,   " +
+                                                         " estado,       " +
+                                                         " peso,         " +
+                                                         " raza,         " +
+                                                         " vacunado,     " +
+                                                         " descripcion  " +
+                                                         " }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<MascotaGraphQLResponse>(request);
+                mascotas = response.Data.mascota;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return mascotas;
+        }
+
+
+        public static async Task<Mascota> getMascotaByPK(string mascotaId)
+        {
+            Mascota mascota = new Mascota();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"query MyQuery { mascota_by_pk (  id_mascota: " + mascotaId + " )} {returning {id_refugio   " +
+                                                                                                            " nombre       " +
+                                                                                                            " castrado     " +
+                                                                                                            " alergias     " +
+                                                                                                            " discapacidad " +
+                                                                                                            " enfermedad   " +
+                                                                                                            " especie      " +
+                                                                                                            " id_mascota   " +
+                                                                                                            " estado       " +
+                                                                                                            " peso         " +
+                                                                                                            " raza         " +
+                                                                                                            " vacunado     " +
+                                                                                                            " descripcion  " +
+                                                                                                            " }}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<MascotaGraphQLResponse>(request);
+                mascota = response.Data.mascota_by_pk;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return mascota;
+
+        }
+
+        public static async Task<List<Mascota>> getMascotaByShelterID(int shelterId)
+        {
+            var mascotas = new List<Mascota>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"query MyQuery  mascota (where: { id_refugio: { _eq: " + shelterId.ToString() + "}) } {returning {id_mascota   " +
+                                                                                                            " nombre       " +
+                                                                                                            " castrado     " +
+                                                                                                            " alergias     " +
+                                                                                                            " discapacidad " +
+                                                                                                            " enfermedad   " +
+                                                                                                            " especie      " +
+                                                                                                            " id_mascota   " +
+                                                                                                            " estado       " +
+                                                                                                            " peso         " +
+                                                                                                            " raza         " +
+                                                                                                            " vacunado     " +
+                                                                                                            " descripcion  " +
+                                                                                                            " id_refugio  " +
+                                                                                                            " }}",
+
+
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<MascotaGraphQLResponse>(request);
+                mascotas = response.Data.mascota;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return mascotas;
+
+        }
+
+
+
+        public static async Task<bool> addMascota(int shelter, Mascota newPet)
+        {
+            bool completed = false;
+            //bool isValidated = await validateCurUser(user);
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation { insert_mascota(objects: {alergias: " + newPet.alergias + ", " +
+                                                                            "castrado:" + newPet.castrado + ", " +
+                                                                            "descripcion:\"" + newPet.descripcion + "\", " +
+                                                                            "discapacidad:" + newPet.discapacidad + ", " +
+                                                                            "enfermedad:" + newPet.enfermedad + ", " +
+                                                                            "especie:\"" + newPet.especie + "\", " +
+                                                                            "estado:" + newPet.estado + ", " +
+                                                                            "id_mascota:" + newPet.id_mascota + ", " +
+                                                                            "nombre: \"" + newPet.nombre + "\", " +
+                                                                            "peso:" + newPet.peso + ", " +
+                                                                            " raza:\"" + newPet.raza + "\", " +
+                                                                            " vacunado:" + newPet.vacunado + ", " +
+                                                                            "id_refugio:" + shelter +
+                                                                            "}) { " + "returning {" +
+                                                                            "id_mascota" +
+                                                                            "}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+                completed = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return completed;
+        }
+
+
+        public static async Task<bool> deleteMascota(int mascotaId)
+        {
+            bool success = false;
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {  delete_mascota(where: {id_mascota: {_eq : " + mascotaId.ToString() + "}}) { returning {" +
+                                                                            "castrado" +
+                                                                            "descripcion" +
+                                                                            "discapacidad" +
+                                                                            "enfermedad" +
+                                                                            "especie" +
+                                                                            "estado" +
+                                                                            "id_mascota" +
+                                                                            "nombre" +
+                                                                            "peso" +
+                                                                            " raza" +
+                                                                            " vacunado" +
+                                                                            "id_refugio" +
+                                                                            "}}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+                success = true;
+
+            }
+            catch (Exception)
+            {
+
+            }
+            return success;
+
+        }
+
+
+
+
+        #endregion
     }
 
 }
