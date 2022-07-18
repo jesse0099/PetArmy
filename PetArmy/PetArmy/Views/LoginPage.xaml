@@ -3,32 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:PetArmy"
-             xmlns:vms="clr-namespace:PetArmy.ViewModels"
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              mc:Ignorable="d"
              x:Class="PetArmy.Views.LoginPage"
              Shell.NavBarIsVisible="False"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              BackgroundColor="{AppThemeBinding Light=White, 
                                                Dark={StaticResource LuckyPoint}}">
-
     <StackLayout VerticalOptions="Center">
 
         <ScrollView>
 
             <StackLayout BindingContext="{Binding Login}">
+                <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
+                                               AnimationType="SingleCircle"
+                                               FontAttributes="Bold"
+                                               Title="Loading..."
+                                               TextColor="{StaticResource LuckyPoint}"
+                                               IsVisible="{Binding IsBusy}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center" />
                 <PopUps:ErrorPopUp />
                 <Image Source="PetsArmy" HeightRequest="250" HorizontalOptions="Center"/>
                 <StackLayout Padding="40" Spacing="20">
                     <!--Email-->
-                    <inputLayout:SfTextInputLayout  Hint="E-mail"
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate EmailKey}"
                                                     x:Name="EmailContainer"
                                                     InputViewPadding="5"
-                                                    HelperText="Email Registrado: user@gmail.com"
+                                                    HelperText="{xct:Translate EmailHintKey}"
                                                     ContainerType="Outlined"
                                                     IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
@@ -38,8 +45,8 @@
                                Text="{Binding Email, Mode = TwoWay}" />
                     </inputLayout:SfTextInputLayout>
                     <!--Contrasenia-->
-                    <inputLayout:SfTextInputLayout  Hint="Password"
-                                                    HelperText="Clave Registrada: *****"
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate PasswordKey}"
+                                                    HelperText="{xct:Translate PasswordHelperKey}"
                                                     EnablePasswordVisibilityToggle="True"
                                                     ContainerType="Outlined"
                                                     EnableHintAnimation="True"
@@ -55,6 +62,7 @@
                                        Text="{xct:Translate LogIn}"
                                        HorizontalOptions="FillAndExpand"
                                        ShowIcon="True"
+                                       IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBool}}"
                                        TextColor="{AppThemeBinding Light=White, Dark=LightGray}"
                                        Style="{StaticResource SyncfusionButtons}">
                         <buttons:SfButton.ImageSource>
@@ -70,7 +78,7 @@
                                  HorizontalOptions="FillAndExpand"
                                  VerticalOptions="Center"
                                  HeightRequest="1" />
-                        <Label Text=" ó "
+                        <Label Text="{xct:Translate OrKey}"
                                TextColor="{AppThemeBinding Light=#555, Dark={StaticResource MiddlePurple}}"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
@@ -81,7 +89,7 @@
                                  HeightRequest="1" />
                     </StackLayout>
 
-                    <Label Text="Registrarme con Email"
+                    <Label Text="{xct:Translate SignUpKey}"
                            HorizontalOptions="Center"
                            TextColor="{AppThemeBinding Light=#555, Dark=LightGray}">
                         <Label.GestureRecognizers>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetArmy.Views.MyServicesView"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:local="clr-namespace:PetArmy"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <StackLayout VerticalOptions="Center" Margin="25">
+        <Label Text="{xct:Translate ServicesH1Key}" VerticalOptions="Start"/>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="40" Spacing="20">
+                    <StackLayout>
+                    <Label Text="{Binding MyService.Test}"></Label>
+                </StackLayout>
+
+                <buttons:SfButton     
+                                       Text="{xct:Translate AddHomeKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="FillAndExpand"
+                                       ShowIcon="True"
+                                       BackgroundColor="#3b5998"
+                                       Style="{StaticResource SyncfusionButtons}">
+                    <buttons:SfButton.ImageSource>
+                        <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.HouseUser}" />
+                    </buttons:SfButton.ImageSource>
+                </buttons:SfButton>
+
+
+                <buttons:SfButton      Command="{Binding MyService.NewShelter}"
+                                       Text="{xct:Translate AddShelterKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="FillAndExpand"
+                                       ShowIcon="True"
+                                       BackgroundColor="#3b5998"
+                                       Style="{StaticResource SyncfusionButtons}">
+                    <buttons:SfButton.ImageSource>
+                        <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Warehouse}" />
+                    </buttons:SfButton.ImageSource>
+                </buttons:SfButton>
+
+                 </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>  
+</ContentPage>

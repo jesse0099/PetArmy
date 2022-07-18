@@ -1,4 +1,5 @@
-﻿using PetArmy.Views;
+﻿using PetArmy.Interfaces;
+using PetArmy.Views;
 using System;
 using Xamarin.Forms;
 
@@ -6,6 +7,8 @@ namespace PetArmy
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {
+        IFirebaseAuth _i_auth;
+         
 
         public AppShell()
         {
@@ -16,7 +19,11 @@ namespace PetArmy
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//LoginPage");
+            _i_auth = DependencyService.Get<IFirebaseAuth>();
+            if (_i_auth.SignOut())
+                await Shell.Current.GoToAsync("//LoginPage");
+            else
+                await DisplayAlert("Error","Error",null);
         }
     }
 }

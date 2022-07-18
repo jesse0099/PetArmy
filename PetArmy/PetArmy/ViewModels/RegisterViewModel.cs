@@ -8,8 +8,25 @@ namespace PetArmy.ViewModels
     {
         IFirebaseAuth _i_auth;
 
-        public string Email { get; set; }
-        public string Password { get; set; }
+        private string _Email;
+
+        public string Email
+        {
+            get { return _Email; }
+            set { _Email = value;
+                   OnPropertyChanged();
+            }
+        }
+        private string _password;
+
+        public string Password
+        {
+            get { return _password; }
+            set { _password = value;
+                OnPropertyChanged();
+            }
+        }
+
         public Command RegisterCommand { get; set; }
 
         public RegisterViewModel()
@@ -26,7 +43,7 @@ namespace PetArmy.ViewModels
 
         private void OnRegisterExecute()
         {
-            if (Email.Equals(string.Empty) || Password.Equals(string.Empty))
+            if (Email == string.Empty || Password == string.Empty)
             {
                 RegisterChecker(null, "All Fields Are Required");
                 return;
@@ -42,9 +59,8 @@ namespace PetArmy.ViewModels
         {
             if (profile != null)
             {
+                _i_auth.SignOut();
                 //Success PopUp ()
-                LoginViewModel.GetInstance().Email = profile.Email;
-                LoginViewModel.GetInstance().Password = string.Empty;
                 await Shell.Current.GoToAsync("//LoginPage");
             }
             else
