@@ -1,5 +1,6 @@
 ﻿using PetArmy.Models;
 using PetArmy.Services;
+using PetArmy.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -156,7 +157,11 @@ namespace PetArmy.ViewModels
                 pet.enfermedad = Enfermedad;
                 pet.alergias = Alergias;
 
+                //Save Pet Image Here!! plenty of work here
+
                 await GraphQLService.addMascota(pet);
+                await App.Current.MainPage.DisplayAlert("Success", "Pet Saved!", "Ok");
+                Application.Current.MainPage = new NavigationPage(new MascotaView());
             }
             catch
             {

@@ -803,6 +803,56 @@ namespace PetArmy.Services
 
         }
 
+        #region Pet_Images
+
+       
+        public static async Task addPetImage(Imagen_Mascota img)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = $"mutation MyMutation {{insert_imagen_mascota(objects: {{id_imagen: { img.id_imagen } , id_refugio: { img.id_mascota },  imagen:  { img.imagen }, isDefault: { img.isDefault } }}) {{returning {{id_imagen}} }} }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Imagen_refugioGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        public static async Task<List<Imagen_Mascota>> getPet_Images(int id_mascota)
+        {
+            List<Imagen_Mascota> images = new List<Imagen_Mascota>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery { imagen_mascotas(where: {id_mascota: {_eq: " + id_mascota + " }}) {id_imagen id_id_mascota imagen isDefault}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Imagen_MascotaGraphQLResponse>(request);
+                images = response.Data.imagen_mascota;
+                client.Dispose();
+            }
+
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return images;
+        }
+        #endregion
 
 
 
