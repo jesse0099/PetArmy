@@ -20,14 +20,21 @@ namespace PetArmy.Models
         public string raza { get; set; }
         public bool vacunado { get; set; }
         public string descripcion { get; set; }
-    }
 
 
         public Mascota(string nombre)
         {
             this.nombre = nombre;
         }
+        public Mascota()
+        {
+            
+        }
 
 
     }
+
+
+
+}
 

@@ -598,7 +598,7 @@ namespace PetArmy.Services
 
         #endregion
 
-#region Mascotas
+        #region Mascotas
         public static async Task<List<Mascota>> getAllMascotas()
         {
             List<Mascota> mascotas = new List<Mascota>();
