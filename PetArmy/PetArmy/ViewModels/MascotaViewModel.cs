@@ -59,13 +59,11 @@ namespace PetArmy.ViewModels
         {
             try
             {
-
                 await Application.Current.MainPage.Navigation.PushAsync(new AddMascotaView());
-
             }
             catch (System.Exception e)
             {
-                await App.Current.MainPage.DisplayAlert("xxxxd", e.ToString(), "Ok");
+                await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Mascota'", e.ToString(), "Ok");
             }
         }
 

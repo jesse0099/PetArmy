@@ -1,20 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="PetArmy.Views.MascotaView"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              >
 
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding Mascotas}">
-            <Label Text="Welcome to Xamarin.Forms!"
+        <StackLayout BindingContext="{Binding Mascota}">
+            <Label Text="Mascotas Page!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <StackLayout Padding="40" Spacing="20">
+                
 
-            <Button
-                BindingContext="{Binding Mascotas}"
-                Command="{Binding AddMascota}">
-            </Button>
+                    <buttons:SfButton  Command="{Binding AddMascota}"
+                                           Text="{xct:Translate AddMascotaKey}"
+                                           FontAttributes="Bold"
+                                           HorizontalTextAlignment="Center"
+                                           HorizontalOptions="FillAndExpand"
+                                           ShowIcon="True"
+                                           BackgroundColor="#3b5998"
+                                           Style="{StaticResource SyncfusionButtons}">
+                    </buttons:SfButton>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

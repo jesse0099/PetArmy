@@ -37,6 +37,7 @@
             </StackLayout>
 
             <StackLayout  Padding="40" Spacing="20">
+                
                 <buttons:SfButton  Command="{Binding NewShelter}"
                                        Text="{xct:Translate AddShelterKey}"
                                        FontAttributes="Bold"
@@ -65,7 +66,23 @@
                                      Glyph="{x:Static local:IconClass.HandHoldingHeart}" />
                 </buttons:SfButton.ImageSource>
             </buttons:SfButton>
+
+                <buttons:SfButton  Command="{Binding Mascotas}"
+                                       Text="{xct:Translate PetKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="FillAndExpand"
+                                       ShowIcon="True"
+                                       BackgroundColor="#3b5998"
+                                       Style="{StaticResource SyncfusionButtons}">
+                    <buttons:SfButton.ImageSource>
+                        <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{x:Static local:IconClass.Dog}" />
+                    </buttons:SfButton.ImageSource>
+                </buttons:SfButton>
                 
+
+
             </StackLayout>
 
         </StackLayout>

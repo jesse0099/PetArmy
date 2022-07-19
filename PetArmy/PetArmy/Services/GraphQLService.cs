@@ -724,7 +724,8 @@ namespace PetArmy.Services
 
 
 
-        public static async Task<bool> addMascota(int shelter, Mascota newPet)
+
+        public static async Task<bool> addMascota(Mascota newPet)
         {
             bool completed = false;
             //bool isValidated = await validateCurUser(user);
@@ -741,15 +742,13 @@ namespace PetArmy.Services
                                                                             "enfermedad:" + newPet.enfermedad + ", " +
                                                                             "especie:\"" + newPet.especie + "\", " +
                                                                             "estado:" + newPet.estado + ", " +
-                                                                            "id_mascota:" + newPet.id_mascota + ", " +
+                                                                            //"id_mascota:" + newPet.id_mascota + ", " +
                                                                             "nombre: \"" + newPet.nombre + "\", " +
                                                                             "peso:" + newPet.peso + ", " +
                                                                             " raza:\"" + newPet.raza + "\", " +
                                                                             " vacunado:" + newPet.vacunado + ", " +
-                                                                            "id_refugio:" + shelter +
-                                                                            "}) { " + "returning {" +
-                                                                            "id_mascota" +
-                                                                            "}}",
+                                                                            "id_refugio:" + newPet.id_refugio +
+                                                                            "}) { returning { id_mascota }}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -763,6 +762,8 @@ namespace PetArmy.Services
             }
             return completed;
         }
+
+
 
 
         public static async Task<bool> deleteMascota(int mascotaId)
