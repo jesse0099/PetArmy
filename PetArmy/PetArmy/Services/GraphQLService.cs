@@ -597,6 +597,74 @@ namespace PetArmy.Services
         }
 
         #endregion
+
+        #region SearchBar Operations
+
+        public static async Task<IEnumerable<Tag>> getAllTags()
+        {
+            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+            var findRequest = new GraphQLHttpRequestWithHeaders
+            {
+                Query = "query MyQuery {tag {id_tag, nombre_tag}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            };
+
+            var foundResponse = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+
+            return foundResponse.Data.tag;
+        }
+
+        public static async Task<List<Mascota>> get30Pets()
+        {
+
+
+            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+            var findRequest = new GraphQLHttpRequestWithHeaders
+            {
+                Query = "query MyQuery {mascota(limit: 30) {nombre}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            };
+
+            var foundResponse = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+
+            return foundResponse.Data.mascota;
+        }
+
+        public static async Task<List<Mascota>> getPetsByTag(String searchTag)
+        {
+            var result = new List<Mascota>();
+            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+            var findRequest = new GraphQLHttpRequestWithHeaders
+            {
+                Query = "query MyQuery {mascota_tag(where: { id_tag: { _eq: \"" + searchTag + "\"}}) {id_mascota}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            };
+
+            var foundResponse = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+
+            var foundResponsePets = foundResponse;
+
+
+            foreach (var item in foundResponse.Data.mascota_tag)
+            {
+                findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {mascota(where: { id_mascota: { _eq: \"" + item.id_mascota + "\" }}) {nombre}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                foundResponsePets = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+                result.Add((foundResponsePets.Data.mascota[0]));
+            }
+
+            return result;
+
+        }
+
+        #endregion
     }
 
 }

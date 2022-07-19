@@ -15,6 +15,8 @@ namespace PetArmy.ViewModels
         public NewShelterViewModel NewShelter { get; set; }
         public NewCasaCunaViewModel NewCasaCuna { get; set; }
 
+        public SearchBarViewModel SearchBar { get; set; }
+
         public MainViewModel(): base()
         {
             this.Login = LoginViewModel.GetInstance();
@@ -24,6 +26,7 @@ namespace PetArmy.ViewModels
             this.NewShelter = NewShelterViewModel.GetInstance();
             this.NewCasaCuna = NewCasaCunaViewModel.GetInstance();
             this.User = new UserViewModel();
+            this.SearchBar = SearchBarViewModel.GetInstance();
 
         }
     }
