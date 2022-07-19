@@ -25,6 +25,7 @@
     <PackageReference Include="Syncfusion.Licensing" Version="19.1.0.54" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.1.0.54" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.1.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="19.1.0.54" />
     <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="19.1.0.54" />
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="19.1.0.54" />
     <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="19.1.0.54" />
@@ -87,6 +88,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\RegisterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SearchBar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TabbedPageTest.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
