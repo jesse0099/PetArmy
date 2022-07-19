@@ -8,14 +8,14 @@ namespace PetArmy.Models.GraphQL_Responses
     {
 
         public IEnumerable<Tag> tag { get; set; }
-        public IEnumerable<int> mascota_tag { get; set; }
+        public IEnumerable<Mascota_Tag> mascota_tag { get; set; }
         public List<Mascota> mascota { get; set; }
 
         public SearchBarGraphQLResponse()
         {
         }
 
-        public SearchBarGraphQLResponse(IEnumerable<Tag> tag, IEnumerable<int> mascota_tag, List<Mascota> mascota)
+        public SearchBarGraphQLResponse(IEnumerable<Tag> tag, IEnumerable<Mascota_Tag> mascota_tag, List<Mascota> mascota)
         {
             this.tag = tag;
             this.mascota_tag = mascota_tag;

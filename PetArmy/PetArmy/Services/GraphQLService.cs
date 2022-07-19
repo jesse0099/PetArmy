@@ -606,7 +606,7 @@ namespace PetArmy.Services
 
             var findRequest = new GraphQLHttpRequestWithHeaders
             {
-                Query = "query MyQuery {tag {id_tagnombre_tag}}",
+                Query = "query MyQuery {tag {id_tag, nombre_tag}}",
                 Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
             };
 
@@ -634,7 +634,7 @@ namespace PetArmy.Services
 
         public static async Task<List<Mascota>> getPetsByTag(String searchTag)
         {
-
+            var result = new List<Mascota>();
             var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
 
             var findRequest = new GraphQLHttpRequestWithHeaders
@@ -647,30 +647,20 @@ namespace PetArmy.Services
 
             var foundResponsePets = foundResponse;
 
-            if (foundResponse.Data.mascota_tag != null)
+
+            foreach (var item in foundResponse.Data.mascota_tag)
             {
                 findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "query MyQuery {mascota(where: { id_mascota: { _eq: \"" + foundResponse.Data.mascota_tag + "\" }}) {nombre}}",
+                    Query = "query MyQuery {mascota(where: { id_mascota: { _eq: \"" + item.id_mascota + "\" }}) {nombre}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
                 foundResponsePets = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
+                result.Add((foundResponsePets.Data.mascota[0]));
             }
 
-            //foreach (int item in foundResponse.Data.mascota_tag)
-            //{
-            //findRequest = new GraphQLHttpRequestWithHeaders
-            //{
-            //Query = "query MyQuery {mascota(where: { id_mascota: { _eq: \"" + item + "\" }}) {nombre}}",
-            //Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
-            //};
-
-            //var foundResponsePets = await client.SendQueryAsync<SearchBarGraphQLResponse>(findRequest);
-            //result.Add(foundResponsePets.Data.mascota);
-            //}
-
-            return foundResponsePets.Data.mascota;
+            return result;
 
         }
 

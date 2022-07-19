@@ -150,7 +150,7 @@
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.QuestionCircle}" Color="{StaticResource Primary}" />
         </FlyoutItem.Icon>
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Route="SearchBar" ContentTemplate="{DataTemplate local:SearchBar}" />
     </FlyoutItem>
 
 

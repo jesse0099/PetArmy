@@ -1,12 +1,10 @@
 ﻿using PetArmy.Models;
+using PetArmy.Services;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
-using PetArmy.Helpers;
-using PetArmy.Services;
-using PetArmy.Interfaces;
 
 namespace PetArmy.ViewModels
 {
@@ -61,8 +59,8 @@ namespace PetArmy.ViewModels
 
         #region Varaiables
 
-        private List<Mascota> petsWithTag;
-        public List<Mascota> PetsWithTag
+        private BindingList<Mascota> petsWithTag;
+        public BindingList<Mascota> PetsWithTag
         {
             get { return petsWithTag; }
             set { petsWithTag = value; OnPropertyChanged(); }
@@ -97,7 +95,7 @@ namespace PetArmy.ViewModels
         {
             try
             {
-                petsWithTag = await GraphQLService.getPetsByTag(SearchedTag.nombre_tag).ConfigureAwait(false);
+                PetsWithTag = new BindingList<Mascota>(await GraphQLService.getPetsByTag(SearchedTag.id_tag.ToString()).ConfigureAwait(false));
 
             }
             catch (Exception)
@@ -112,12 +110,12 @@ namespace PetArmy.ViewModels
         {
             try
             {
-                tags = await GraphQLService.getAllTags().ConfigureAwait(false);
+                Tags = await GraphQLService.getAllTags().ConfigureAwait(false);
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw e;
             }
         }
 
@@ -125,7 +123,7 @@ namespace PetArmy.ViewModels
         {
             try
             {
-                petsWithTag = await GraphQLService.get30Pets().ConfigureAwait(false);
+                PetsWithTag = new BindingList<Mascota>(await GraphQLService.get30Pets().ConfigureAwait(false));
 
             }
             catch (Exception)
