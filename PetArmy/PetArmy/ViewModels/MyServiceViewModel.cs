@@ -59,6 +59,7 @@ namespace PetArmy.ViewModels
             NewShelter = new Command(newShelter);
             PickImage = new Command(pickImage);
             NewCCService = new Command(newCCService);
+            Mascotas = new Command(mascotas);
 
         }
 
@@ -143,6 +144,8 @@ namespace PetArmy.ViewModels
 
         public ICommand NewCCService { get; set; }
         public ICommand PickImage { get; set; }
+
+        public ICommand Mascotas { get; set; }
        
         public async void newShelter()
         {
@@ -173,6 +176,18 @@ namespace PetArmy.ViewModels
 
         }
 
+        public async void mascotas() 
+        {
+            try
+            {
+                await Application.Current.MainPage.Navigation.PushAsync(new MascotaView());
+            }
+            catch (System.Exception e)
+            {
+                await App.Current.MainPage.DisplayAlert("xxxxd", e.ToString(), "Ok");
+            }
+        }
+
         public async Task getMyShelters(string uid)
         {
             try
@@ -187,6 +202,8 @@ namespace PetArmy.ViewModels
             }
     
         }
+
+        
 
     
         public async Task getData()

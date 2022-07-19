@@ -181,7 +181,7 @@
     <value>Correo del refugio</value>
   </data>
   <data name="ShelterNumberKey" xml:space="preserve">
-    <value>Numero de teléfono </value>
+    <value>Numero de Teléfono de Contacto</value>
   </data>
   <data name="ShelterNumberHintKey" xml:space="preserve">
     <value>Incluir el código regional</value>
@@ -233,5 +233,53 @@
   </data>
   <data name="ccServiceBtn" xml:space="preserve">
     <value>Nueva casa cuna</value>
+  </data>
+  <data name="AddMascotaKey" xml:space="preserve">
+    <value>Agregar una mascota</value>
+  </data>
+  <data name="AddMascotaNameKey" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="NameKey" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="BreedKey" xml:space="preserve">
+    <value>Raza</value>
+  </data>
+  <data name="SpeciesKey" xml:space="preserve">
+    <value>Especie</value>
+  </data>
+  <data name="WeightKey" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="DescriptionKey" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="CastratedKey" xml:space="preserve">
+    <value>Castrado</value>
+  </data>
+  <data name="VaxxedKey" xml:space="preserve">
+    <value>Vacunado</value>
+  </data>
+  <data name="StatusKey" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="HandicapedKey" xml:space="preserve">
+    <value>Discapacidad</value>
+  </data>
+  <data name="SickKey" xml:space="preserve">
+    <value>Enfermedad</value>
+  </data>
+  <data name="AlergiesKey" xml:space="preserve">
+    <value>Alergias</value>
+  </data>
+  <data name="SaveKey" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="PetKey" xml:space="preserve">
+    <value>Mascota</value>
+  </data>
+  <data name="ShelterKey" xml:space="preserve">
+    <value>Refugio</value>
   </data>
 </root>
