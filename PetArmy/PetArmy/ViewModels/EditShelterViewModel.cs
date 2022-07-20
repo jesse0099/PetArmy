@@ -56,6 +56,7 @@ namespace PetArmy.ViewModels
         {
             PickImage = new Command(pickImage);
             UpdateShelter = new Command(updateShelter);
+            DeleteShelter = new Command(deleteShelter);
         }
 
         #endregion
@@ -282,6 +283,7 @@ namespace PetArmy.ViewModels
 
         public  ICommand PickImage { get; set; }  
         public ICommand UpdateShelter { get; set; }
+        public ICommand DeleteShelter { get; set; } 
 
         public static async Task<Position> GetCurrentPosition()
         {
@@ -453,9 +455,15 @@ namespace PetArmy.ViewModels
             CurShelter.activo = IsActive;
             CurShelter.capacidad = Int32.Parse(QuantSpace);
             CurShelter.telefono = ShelterNumber;
-
             await GraphQLService.updateShelter(CurShelter);
+            await Shell.Current.GoToAsync("//MyServicesView");
 
+        }
+
+        public async void deleteShelter()
+        {
+            await GraphQLService.deleteShelter(CurShelter.id_refugio);
+            await Shell.Current.GoToAsync("//MyServicesView");
         }
 
         #endregion

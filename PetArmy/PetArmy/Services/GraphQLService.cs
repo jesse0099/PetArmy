@@ -247,6 +247,26 @@ namespace PetArmy.Services
             }
         }
 
+        public static async Task deleteShelter(int idShelter)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {delete_refugio_by_pk(id_refugio: "+idShelter+") { nombre }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
 
         public static async Task<List<Refugio>> shelters_ByUser(string uid)
         {

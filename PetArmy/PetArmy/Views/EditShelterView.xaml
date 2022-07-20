@@ -95,18 +95,15 @@
                     </inputLayout:SfTextInputLayout>
 
                     <!--Imagen-->
-                    <CarouselView ItemsSource="{Binding CustomList}">
+                    <CarouselView ItemsSource="{Binding CustomList}" HeightRequest="260" WidthRequest="510">
                         <CarouselView.ItemTemplate>
                             <DataTemplate>
-
                                 <StackLayout>
                                     <Frame HasShadow="True"
                                            BorderColor="DarkGray"
                                            CornerRadius="5"
                                            WidthRequest="500"
-                                           HeightRequest="250"
-                                           
-                                                    >
+                                           HeightRequest="250">
                                         <StackLayout>
 
                                             <Image Source="{Binding Image,Converter={xct:ByteArrayToImageSourceConverter}}" WidthRequest="100" HeightRequest="100"></Image>
@@ -157,6 +154,20 @@
                         </buttons:SfButton.ImageSource>
                     </buttons:SfButton>
 
+                    <buttons:SfButton  Command="{Binding DeleteShelter}"
+                                       Text="{xct:Translate SearchImageKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       ShowIcon="True"
+                                       BackgroundColor="#EB0B0B"
+                                       WidthRequest="280"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Cross}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
 
                 </StackLayout>
             </StackLayout>
