@@ -57,13 +57,13 @@ namespace PetArmy.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            
-            //await splashImage.ScaleTo(1, 2000);
-            //await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
-            //await splashImage.ScaleTo(1, 2000);
-            //await splashImage.FadeTo(0, 1000);
-            //if(!Application.Current.MainPage.GetType().Equals(typeof(AppShell)))
-               // Application.Current.MainPage = new AppShell();
+
+            await splashImage.ScaleTo(1, 2000);
+            await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
+            await splashImage.ScaleTo(1, 2000);
+            await splashImage.FadeTo(0, 1000);
+            if (!Application.Current.MainPage.GetType().Equals(typeof(AppShell)))
+                Application.Current.MainPage = new AppShell();
         }
 
         

@@ -1,21 +1,19 @@
-﻿using PetArmy.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
-using Xamarin.Forms;
-using PetArmy.Helpers;
-using PetArmy.Services;
+﻿using PetArmy.Helpers;
 using PetArmy.Interfaces;
-using System.Collections.ObjectModel;
+using PetArmy.Models;
+using PetArmy.Services;
 using Plugin.Geolocator;
-using System.Threading.Tasks;
 using Plugin.Geolocator.Abstractions;
-using System.Diagnostics;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
-using PetArmy.Views;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace PetArmy.ViewModels
 {
@@ -275,8 +273,6 @@ namespace PetArmy.ViewModels
                     newLocation.lalitud = Latitude;
                     newLocation.canton = Canton;
                     await GraphQLService.addShelterLocation(newLocation);
-                    await App.Current.MainPage.DisplayAlert("Success", "Cuenta creada!", "Ok");
-                    Application.Current.MainPage = new NavigationPage(new MyServicesView());
                 }
                 else
                 {
@@ -284,11 +280,12 @@ namespace PetArmy.ViewModels
                 }
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                Console.WriteLine("AddShelter - VIEWMODEL" ,e);
             }
+            await Shell.Current.GoToAsync("//MyServicesView");
         }
 
         public bool checkForEmpyValues()
