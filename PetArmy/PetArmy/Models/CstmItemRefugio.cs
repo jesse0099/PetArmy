@@ -9,6 +9,7 @@ namespace PetArmy.Models
     {
         public Refugio refugio { get; set; }
         public byte[] Image { get; set; }
+        public Imagen_refugio imgObjct { get; set; }
 
         public CstmItemRefugio()
         {

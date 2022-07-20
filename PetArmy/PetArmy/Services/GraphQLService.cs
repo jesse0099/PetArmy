@@ -222,6 +222,31 @@ namespace PetArmy.Services
             return completed;
         }
 
+        public static async Task updateShelter(Refugio newShelter)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {update_refugio_by_pk(pk_columns: {id_refugio: "+newShelter.id_refugio+ "}, _set: { " + "activo: " + newShelter.activo +
+                                                                               ",capacidad: " + newShelter.capacidad +
+                                                                               ",correo: \"" + newShelter.correo + "\"" +
+                                                                               ",direccion: \"" + newShelter.direccion + "\"" +
+                                                                               ",nombre: \"" + newShelter.nombre + "\"" +
+                                                                               ",telefono: \"" + newShelter.telefono + "\"}){id_refugio }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
 
         public static async Task<List<Refugio>> shelters_ByUser(string uid)
         {
@@ -341,6 +366,31 @@ namespace PetArmy.Services
 
             return images;
         }
+
+
+        public static async Task<Refugio> getShelterByID(int idShelter)
+        {
+            Refugio refugio = new Refugio();    
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {refugio_by_pk(id_refugio: "+idShelter +") { activo administrador capacidad correo direccion id_refugio nombre telefono }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+                refugio = response.Data.refugio_by_pk;
+                client.Dispose();
+            }
+
+            catch (Exception)
+            {
+                throw;
+            }
+            return refugio;
+        }
+
 
         #endregion
 
@@ -857,7 +907,6 @@ namespace PetArmy.Services
 
 
         #endregion
-        
         
         #region SearchBar Operations
 

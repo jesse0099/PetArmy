@@ -16,6 +16,7 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.IO;
 using PetArmy.Views;
+using PetArmy.Infraestructure;
 
 namespace PetArmy.ViewModels
 {
@@ -66,6 +67,21 @@ namespace PetArmy.ViewModels
 
         #region Varaiables
 
+        private Refugio curShelter;
+
+        public Refugio CurShelter
+        {
+            get { return curShelter; }
+            set { curShelter = value; OnPropertyChanged(); }
+        }
+
+        private bool isEditing = false;
+
+        public bool IsEditing
+        {
+            get { return isEditing; }
+            set { isEditing = value; OnPropertyChanged(); }
+        }
 
         private bool imageSelected;
 
@@ -236,7 +252,6 @@ namespace PetArmy.ViewModels
 
         #endregion
 
-
         #region Commands and Functions
 
         public ICommand CreateShelter { get; set; }
@@ -255,7 +270,7 @@ namespace PetArmy.ViewModels
                 {
                     Refugio newShelter = new Refugio();
                     newShelter.administrador = registered_user.Uid;
-                    newShelter.id_refugio = await GraphQLService.countAllShelters() +1 ;
+                    newShelter.id_refugio = await generateShelterID() ;
                     newShelter.nombre = shelterName;
                     newShelter.correo = shelterEmail;
                     newShelter.telefono = shelterNumber;
@@ -270,13 +285,13 @@ namespace PetArmy.ViewModels
                     }
                     ubicaciones_refugios newLocation = new ubicaciones_refugios();
                     newLocation.id_refugio = newShelter.id_refugio;
-                    newLocation.id_ubicacion = await GraphQLService.countShelterLocations() + 1;
+                    newLocation.id_ubicacion = await generateLocationID();
                     newLocation.longitud = Longitude;
                     newLocation.lalitud = Latitude;
                     newLocation.canton = Canton;
                     await GraphQLService.addShelterLocation(newLocation);
-                    await App.Current.MainPage.DisplayAlert("Success", "Cuenta creada!", "Ok");
-                    Application.Current.MainPage = new NavigationPage(new MyServicesView());
+                    await Shell.Current.GoToAsync("//MyServicesView");
+
                 }
                 else
                 {
@@ -382,7 +397,7 @@ namespace PetArmy.ViewModels
                     imgSource = ImageSource.FromStream(() => selectedImage.GetStream());
                     Stream stream = Commons.GetImageSourceStream(imgSource);
                     var bytes = Commons.StreamToByteArray(stream);
-                    imagen_Refugio = new Imagen_refugio(await GraphQLService.countAllImages() + 1, Convert.ToBase64String(bytes, 0, bytes.Length), true);
+                    imagen_Refugio = new Imagen_refugio(await generatePictureID(), Convert.ToBase64String(bytes, 0, bytes.Length), true);
                     SelectedImage = imagen_Refugio;
                     imageSelected = true;
                 }
@@ -393,6 +408,70 @@ namespace PetArmy.ViewModels
             }
         }
 
+
+        public async Task<int> generateShelterID()
+        {
+            int newShelterID = 0;
+
+            try
+            {
+                List<Refugio> shelters = await GraphQLService.getAllShelters();
+                int lastID = shelters[shelters.Count - 1].id_refugio;
+                newShelterID = lastID + 1;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return newShelterID;
+        }
+
+        public async Task<int> generatePictureID()
+        {
+            int newPictureID = 0;
+
+            try
+            {
+                List<Imagen_refugio> images = await GraphQLService.getAllImages();
+                int lastID = images[images.Count - 1].id_refugio;
+                newPictureID = lastID + 1;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return newPictureID;
+        }
+
+
+        public async Task<int> generateLocationID()
+        {
+            int newLocationID = 0;
+
+            try
+            {
+                List<ubicaciones_refugios> locations = await GraphQLService.getAllShelterUbications();
+                int lastID = locations[locations.Count - 1].id_refugio;
+                newLocationID = lastID + 1;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return newLocationID;
+        }
+
+
+     
 
         #endregion
 

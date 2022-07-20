@@ -60,6 +60,7 @@ namespace PetArmy.ViewModels
             PickImage = new Command(pickImage);
             NewCCService = new Command(newCCService);
             Mascotas = new Command(mascotas);
+            EditShelter = new Command<int>(openEditShelter);
 
         }
 
@@ -68,6 +69,14 @@ namespace PetArmy.ViewModels
         #region Variables
 
         IFirebaseAuth _i_auth;
+
+        private int shelterID;
+
+        public int ShelterID
+        {
+            get { return shelterID; }
+            set { shelterID = value; OnPropertyChanged(); }
+        }
 
         private BindingList<CstmItemRefugio> customList;
 
@@ -147,6 +156,9 @@ namespace PetArmy.ViewModels
 
         public ICommand Mascotas { get; set; }
        
+        public ICommand EditShelter { get; set; }
+
+
         public async void newShelter()
         {
             try
@@ -299,6 +311,29 @@ namespace PetArmy.ViewModels
             }
         }
 
+
+
+        public async void openEditShelter(int inShelterID)
+        {
+            try
+            {
+                IsBusy = true;
+                App.Current.Resources.TryGetValue("Locator", out object locator);
+                await Task.Run(async () => { await ((InstanceLocator)locator).Main.EditShelter.readyEdit(inShelterID); });
+                await Task.Run(async () => { await ((InstanceLocator)locator).Main.EditShelter.setCurrentLocation(); });
+                await Application.Current.MainPage.Navigation.PushAsync(new EditShelterView());
+                IsBusy = false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+    
+        
 
         #endregion
 

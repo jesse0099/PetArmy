@@ -181,7 +181,7 @@
     <value>Correo del refugio</value>
   </data>
   <data name="ShelterNumberKey" xml:space="preserve">
-    <value>Numero de Teléfono de Contacto</value>
+    <value>Numero de Teléfono de Contacto </value>
   </data>
   <data name="ShelterNumberHintKey" xml:space="preserve">
     <value>Incluir el código regional</value>

@@ -5,6 +5,7 @@
              xmlns:local="clr-namespace:PetArmy"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              x:Class="PetArmy.Views.MyServicesView"
+             x:Name="myServicesPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding MyService}">
@@ -29,7 +30,10 @@
                                 <ImageCell TextColor="#9b9b9b"
                                    Text="{Binding refugio.nombre}"
                                    Detail="{Binding refugio.direccion}"
-                                   ImageSource="{Binding Image, Converter={xct:ByteArrayToImageSourceConverter}}"/>
+                                   ImageSource="{Binding Image, Converter={xct:ByteArrayToImageSourceConverter}}"
+                                   Command="{Binding Path= BindingContext.MyService.EditShelter, Source={x:Reference myServicesPage}}"
+                                   CommandParameter="{Binding refugio.id_refugio}"/>
+
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
