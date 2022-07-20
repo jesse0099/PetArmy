@@ -455,6 +455,17 @@ namespace PetArmy.ViewModels
             CurShelter.activo = IsActive;
             CurShelter.capacidad = Int32.Parse(QuantSpace);
             CurShelter.telefono = ShelterNumber;
+
+            List<ubicaciones_refugios> ubi = await GraphQLService.getLocationsByShelter(CurShelter.id_refugio);
+
+            foreach (var item in ubi)
+            {
+                item.canton = Canton;
+                item.lalitud = Latitude;
+                item.longitud = Longitude;
+                await GraphQLService.UpdateShelterLocation(item);
+            }
+
             await GraphQLService.updateShelter(CurShelter);
             await Shell.Current.GoToAsync("//MyServicesView");
 

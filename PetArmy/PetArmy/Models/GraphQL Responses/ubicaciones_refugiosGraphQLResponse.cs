@@ -10,7 +10,7 @@ namespace PetArmy.Models.GraphQL_Responses
 
         public ubicaciones_refugios insert_ubicaciones_refugios { get; set; }
 
-        
+        public ubicaciones_refugios update_ubicaciones_refugios_by_pk {get;set;}
 
     }
 }

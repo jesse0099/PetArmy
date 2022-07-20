@@ -290,7 +290,7 @@ namespace PetArmy.ViewModels
                     newLocation.lalitud = Latitude;
                     newLocation.canton = Canton;
                     await GraphQLService.addShelterLocation(newLocation);
-                    await Shell.Current.GoToAsync("//MyServicesView");
+                   
 
                 }
                 else
@@ -304,6 +304,8 @@ namespace PetArmy.ViewModels
 
                 throw;
             }
+
+            await Shell.Current.GoToAsync("//MyServicesView");
         }
 
         public bool checkForEmpyValues()

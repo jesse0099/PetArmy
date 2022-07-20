@@ -432,6 +432,27 @@ namespace PetArmy.Services
 
         #region Ubications
 
+        public static async Task UpdateShelterLocation(ubicaciones_refugios newLocation)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {update_ubicaciones_refugios_by_pk(pk_columns: {id_ubicacion: "+newLocation.id_ubicacion+"}, _set: {canton: \""+newLocation.canton+"\", longitud: \""+newLocation.longitud+"\", latitud: \""+newLocation.lalitud+"\"}) {id_ubicacion}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<ubicaciones_refugiosGraphQLResponse>(request);
+                client.Dispose();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public static async Task<List<ubicaciones_refugios>> getAllShelterUbications()
         {
             List<ubicaciones_refugios> locations = new List<ubicaciones_refugios>();
