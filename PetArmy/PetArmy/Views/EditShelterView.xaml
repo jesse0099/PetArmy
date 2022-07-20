@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetArmy.Views.EditShelterView"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:PetArmy"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:behaviors="clr-namespace:PetArmy.Views.Behaviors"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <StackLayout BindingContext="{Binding EditShelter}">
+        <PopUps:ErrorPopUp />
+        <ScrollView>
+            <StackLayout>
+                <Image Source="EditShelter" HeightRequest="180" Margin="0,0,0,10" HorizontalOptions="Center"/>
+                <Label Text="{xct:Translate CreateNewShelterH1Key}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <StackLayout Padding="40" Spacing="20">
+
+                    <!--Nombre-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterNameInputKey}"
+                                                    x:Name="ShelterContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="shelterName"
+                               Text="{Binding ShelterName, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+
+                    <!--Correo-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterEmailKey}"
+                                                    x:Name="EmailContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="email"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                               Text="{Binding ShelterEmail, Mode=TwoWay}"
+                               Keyboard="Email"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Numero-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterNumberKey}"
+                                                    x:Name="PhoneContainer"
+                                                    InputViewPadding="5"
+                                                    HelperText="{xct:Translate ShelterNumberHintKey}"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="shelterNumber"
+                               Text="{Binding ShelterNumber, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Capacidad-->
+                    <Label x:Name="firstNumeric" Text="{xct:Translate CapKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate cantKey}"
+                                                    x:Name="ShelterCapContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="shelterCap"
+                               Text="{Binding QuantSpace, Mode=TwoWay}"
+                               Keyboard="Numeric"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Mapa-->
+                    <Label x:Name="maplbl" Text="{xct:Translate UbicacionKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <maps:Map x:Name="MyMap" WidthRequest="150" HeightRequest="150" >
+                        <maps:Map.Behaviors>
+                            <behaviors:MapBehavior 
+                                 ItemsSource="{Binding lstLocations}"/>
+                        </maps:Map.Behaviors>
+                    </maps:Map>
+
+                    <!--Cantón-->
+                    <Label x:Name="cantonlbl" Text="{xct:Translate cantonLbl}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <Picker ItemsSource="{Binding Cantones}" SelectedItem="{Binding Canton, Mode=TwoWay}" />
+
+                    <!--Dirección-->
+                    <Label x:Name="maplblP" Text="{xct:Translate physicalKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterDirInputKey}"
+                                                    x:Name="ShelterDirContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="shelterDir"
+                               Text="{Binding ShelterDir, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Imagen-->
+                    <CarouselView ItemsSource="{Binding CustomList}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+
+                                <StackLayout>
+                                    <Frame HasShadow="True"
+                                           BorderColor="DarkGray"
+                                           CornerRadius="5"
+                                           WidthRequest="500"
+                                           HeightRequest="250"
+                                           
+                                                    >
+                                        <StackLayout>
+
+                                            <Image Source="{Binding Image,Converter={xct:ByteArrayToImageSourceConverter}}" WidthRequest="100" HeightRequest="100"></Image>
+                                            
+                                            <Label Text="Make Default"
+                                                   HorizontalOptions="Center" Margin="0,20,0,0" />
+                                            <Button Text="ayo" Margin="0,20,0,0">
+                                                
+                                            </Button>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+
+                    <!--Add image-->
+
+                    <Label x:Name="Imagenlbl" Text="{xct:Translate SelectImagesKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <buttons:SfButton  Command="{Binding PickImage}"
+                                       Text="{xct:Translate SearchImageKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       ShowIcon="True"
+                                       BackgroundColor="#6611EB"
+                                       WidthRequest="280"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Camera}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
+
+                    <buttons:SfButton  Command="{Binding UpdateShelter}"
+                                       Text="{xct:Translate SearchImageKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       ShowIcon="True"
+                                       BackgroundColor="#EBDE0B"
+                                       WidthRequest="280"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.PencilAlt}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

@@ -214,6 +214,54 @@
   <data name="ccServiceBtn" xml:space="preserve">
     <value>New Foundling Home</value>
   </data>
+  <data name="AddMascotaKey" xml:space="preserve">
+    <value>Add a new Pet</value>
+  </data>
+  <data name="AddMascotaNameKey" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameKey" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="BreedKey" xml:space="preserve">
+    <value>Breed</value>
+  </data>
+  <data name="SpeciesKey" xml:space="preserve">
+    <value>Species</value>
+  </data>
+  <data name="WeightKey" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="DescriptionKey" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="CastratedKey" xml:space="preserve">
+    <value>Castrated</value>
+  </data>
+  <data name="VaxxedKey" xml:space="preserve">
+    <value>Vaxinated</value>
+  </data>
+  <data name="StatusKey" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="HandicapedKey" xml:space="preserve">
+    <value>Handicaped</value>
+  </data>
+  <data name="SickKey" xml:space="preserve">
+    <value>Sickness</value>
+  </data>
+  <data name="AlergiesKey" xml:space="preserve">
+    <value>Is Alergic</value>
+  </data>
+  <data name="SaveKey" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="PetKey" xml:space="preserve">
+    <value>Pet</value>
+  </data>
+  <data name="ShelterKey" xml:space="preserve">
+    <value>Shelter</value>
+  </data>
   <data name="RequestAccount" xml:space="preserve">
     <value>Request Account</value>
   </data>

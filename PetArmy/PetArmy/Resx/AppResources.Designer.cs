@@ -79,6 +79,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add a new Pet.
+        /// </summary>
+        public static string AddMascotaKey {
+            get {
+                return ResourceManager.GetString("AddMascotaKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string AddMascotaNameKey {
+            get {
+                return ResourceManager.GetString("AddMascotaNameKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add animal shelter service .
         /// </summary>
         public static string AddShelterKey {
@@ -115,6 +133,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Alergic.
+        /// </summary>
+        public static string AlergiesKey {
+            get {
+                return ResourceManager.GetString("AlergiesKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breed.
+        /// </summary>
+        public static string BreedKey {
+            get {
+                return ResourceManager.GetString("BreedKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Only whole numbers.
         /// </summary>
         public static string cantKey {
@@ -138,6 +174,15 @@ namespace Resx {
         public static string CapKey {
             get {
                 return ResourceManager.GetString("CapKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Castrated.
+        /// </summary>
+        public static string CastratedKey {
+            get {
+                return ResourceManager.GetString("CastratedKey", resourceCulture);
             }
         }
         
@@ -228,6 +273,15 @@ namespace Resx {
         public static string Email_Admin {
             get {
                 return ResourceManager.GetString("Email_Admin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string DescriptionKey {
+            get {
+                return ResourceManager.GetString("DescriptionKey", resourceCulture);
             }
         }
         
@@ -331,6 +385,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Handicaped.
+        /// </summary>
+        public static string HandicapedKey {
+            get {
+                return ResourceManager.GetString("HandicapedKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log In.
         /// </summary>
         public static string LogIn {
@@ -354,6 +417,15 @@ namespace Resx {
         public static string NonValidPhoneNumber {
             get {
                 return ResourceManager.GetString("NonValidPhoneNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string NameKey {
+            get {
+                return ResourceManager.GetString("NameKey", resourceCulture);
             }
         }
         
@@ -426,6 +498,15 @@ namespace Resx {
         public static string PhoneNumber {
             get {
                 return ResourceManager.GetString("PhoneNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pet.
+        /// </summary>
+        public static string PetKey {
+            get {
+                return ResourceManager.GetString("PetKey", resourceCulture);
             }
         }
         
@@ -529,6 +610,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string SaveKey {
+            get {
+                return ResourceManager.GetString("SaveKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search your photo.
         /// </summary>
         public static string SearchImageKey {
@@ -574,6 +664,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shelter.
+        /// </summary>
+        public static string ShelterKey {
+            get {
+                return ResourceManager.GetString("ShelterKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shelter&apos;s name.
         /// </summary>
         public static string ShelterNameInputKey {
@@ -597,6 +696,15 @@ namespace Resx {
         public static string ShelterNumberKey {
             get {
                 return ResourceManager.GetString("ShelterNumberKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sickness.
+        /// </summary>
+        public static string SickKey {
+            get {
+                return ResourceManager.GetString("SickKey", resourceCulture);
             }
         }
         
@@ -628,6 +736,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Species.
+        /// </summary>
+        public static string SpeciesKey {
+            get {
+                return ResourceManager.GetString("SpeciesKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string StatusKey {
+            get {
+                return ResourceManager.GetString("StatusKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to System.
         /// </summary>
         public static string System {
@@ -655,11 +781,29 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vaxinated.
+        /// </summary>
+        public static string VaxxedKey {
+            get {
+                return ResourceManager.GetString("VaxxedKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Version: {0}.
         /// </summary>
         public static string Version {
             get {
                 return ResourceManager.GetString("Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight.
+        /// </summary>
+        public static string WeightKey {
+            get {
+                return ResourceManager.GetString("WeightKey", resourceCulture);
             }
         }
     }
