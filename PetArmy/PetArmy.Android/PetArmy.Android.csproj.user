@@ -4,7 +4,7 @@
     <SelectedDevice>Samsung SM-A805F</SelectedDevice>
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <ActiveDebugProfile>Samsung SM-A805F</ActiveDebugProfile>
-    <DefaultDevice>phone_xxh-dpi_6_7in_-_api_30</DefaultDevice>
+    <DefaultDevice>Pixel_2_XL_API_27</DefaultDevice>
     <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
