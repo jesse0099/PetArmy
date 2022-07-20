@@ -975,8 +975,24 @@ namespace PetArmy.Services
         }
 
         #endregion
-        
-           }
+
+        #region Camp_Castracion Operations
+        public static async Task<List<Camp_Castracion>> getAllCampCastra()
+        {
+            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+            var findRequest = new GraphQLHttpRequestWithHeaders
+            {
+                Query = "query MyQuery {camp_castracion {id_campana,nombre_camp,tel_contacto,descripcion,direccion,fecha_inicio,fecha_fin,activo}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            };
+
+            var foundResponse = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(findRequest);
+
+            return foundResponse.Data.Camp_Castracion;
+        }
+        #endregion
+    }
 
 }
 
