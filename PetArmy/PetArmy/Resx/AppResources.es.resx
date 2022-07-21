@@ -282,4 +282,22 @@
   <data name="ShelterKey" xml:space="preserve">
     <value>Refugio</value>
   </data>
+  <data name="EditShelterKey" xml:space="preserve">
+    <value>Edita tu refugio</value>
+  </data>
+  <data name="UpdateShelterBtnKey" xml:space="preserve">
+    <value>Actualizar información</value>
+  </data>
+  <data name="DeleteShelterBtnkey" xml:space="preserve">
+    <value>Borrar refugio</value>
+  </data>
+  <data name="collectionlbl" xml:space="preserve">
+    <value>Colección de imágenes</value>
+  </data>
+  <data name="makeDefKey" xml:space="preserve">
+    <value>Hacer imágen default</value>
+  </data>
+  <data name="selectImgKey" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
 </root>

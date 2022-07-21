@@ -196,6 +196,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Image collection.
+        /// </summary>
+        public static string collectionlbl {
+            get {
+                return ResourceManager.GetString("collectionlbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create account.
         /// </summary>
         public static string CreateAccountKey {
@@ -223,11 +232,29 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete shelter.
+        /// </summary>
+        public static string DeleteShelterBtnkey {
+            get {
+                return ResourceManager.GetString("DeleteShelterBtnkey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string DescriptionKey {
             get {
                 return ResourceManager.GetString("DescriptionKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit your Shelter.
+        /// </summary>
+        public static string EditShelterKey {
+            get {
+                return ResourceManager.GetString("EditShelterKey", resourceCulture);
             }
         }
         
@@ -282,6 +309,15 @@ namespace Resx {
         public static string LogIn {
             get {
                 return ResourceManager.GetString("LogIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make default image.
+        /// </summary>
+        public static string makeDefKey {
+            get {
+                return ResourceManager.GetString("makeDefKey", resourceCulture);
             }
         }
         
@@ -399,6 +435,15 @@ namespace Resx {
         public static string SelectImagesKey {
             get {
                 return ResourceManager.GetString("SelectImagesKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        public static string selectImgKey {
+            get {
+                return ResourceManager.GetString("selectImgKey", resourceCulture);
             }
         }
         
@@ -525,6 +570,15 @@ namespace Resx {
         public static string UbicacionKey {
             get {
                 return ResourceManager.GetString("UbicacionKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update information.
+        /// </summary>
+        public static string UpdateShelterBtnKey {
+            get {
+                return ResourceManager.GetString("UpdateShelterBtnKey", resourceCulture);
             }
         }
         

@@ -57,6 +57,7 @@ namespace PetArmy.ViewModels
             PickImage = new Command(pickImage);
             UpdateShelter = new Command(updateShelter);
             DeleteShelter = new Command(deleteShelter);
+            UpdateImage = new Command<int>(SetasDefaultImg);
         }
 
         #endregion
@@ -284,6 +285,7 @@ namespace PetArmy.ViewModels
         public  ICommand PickImage { get; set; }  
         public ICommand UpdateShelter { get; set; }
         public ICommand DeleteShelter { get; set; } 
+        public ICommand UpdateImage { get; set; }
 
         public static async Task<Position> GetCurrentPosition()
         {
@@ -456,14 +458,28 @@ namespace PetArmy.ViewModels
             CurShelter.capacidad = Int32.Parse(QuantSpace);
             CurShelter.telefono = ShelterNumber;
 
-            List<ubicaciones_refugios> ubi = await GraphQLService.getLocationsByShelter(CurShelter.id_refugio);
-
-            foreach (var item in ubi)
+            List<ubicaciones_refugios> locations = await GraphQLService.getLocationByShelter(CurShelter.id_refugio);
+            
+            if (locations != null)
             {
-                item.canton = Canton;
-                item.lalitud = Latitude;
-                item.longitud = Longitude;
-                await GraphQLService.UpdateShelterLocation(item);
+                foreach (var location in locations)
+                {
+                    ubicaciones_refugios temp = location;
+
+                    if (!String.IsNullOrEmpty(Canton))
+                    {
+                        temp.canton = Canton;
+                        temp.lalitud = Latitude;
+                        temp.longitud = Longitude;
+                    }
+                    else
+                    {
+                        temp.lalitud = Latitude;
+                        temp.longitud = Longitude;
+                    }
+
+                    await GraphQLService.UpdateShelterLocation(temp);
+                }
             }
 
             await GraphQLService.updateShelter(CurShelter);
@@ -476,6 +492,34 @@ namespace PetArmy.ViewModels
             await GraphQLService.deleteShelter(CurShelter.id_refugio);
             await Shell.Current.GoToAsync("//MyServicesView");
         }
+
+        public async void SetasDefaultImg(int idImg)
+        {
+          
+            foreach (var item in CustomList)
+            {
+                if (item.imgObjct.isDefault && item.imgObjct.id_imagen != idImg)
+                {
+                    /*Actualiza la imagen pasada*/
+                    item.imgObjct.isDefault = false;
+                    await GraphQLService.updateImage(item.imgObjct);
+
+                }
+                else if (!item.imgObjct.isDefault && item.imgObjct.id_imagen == idImg)
+                {
+                    /*Actualiza la imagen actual*/
+                    item.imgObjct.isDefault = true;
+                    await GraphQLService.updateImage(item.imgObjct);
+
+                }
+                else if(item.imgObjct.isDefault && item.imgObjct.id_imagen == idImg)
+                {
+                    /*Notify it's already default*/
+
+                }
+            }
+        }
+
 
         #endregion
 

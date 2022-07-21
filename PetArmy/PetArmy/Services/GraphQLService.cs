@@ -310,7 +310,7 @@ namespace PetArmy.Services
             {
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "query MyQuery {imagen_refugio {id_imagen id_refugio imagen isDefault}}",
+                    Query = "query MyQuery {imagen_refugio(order_by: {id_imagen: asc}) { id_imagen id_refugio imagen isDefault }}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -343,8 +343,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation {insert_imagen_refugio(objects: {id_imagen: "+img.id_imagen
-                                                                                 +", id_refugio: "+img.id_refugio
+                    Query = "mutation MyMutation {insert_imagen_refugio(objects: { id_refugio: "+img.id_refugio
                                                                                  +",  imagen: \""+ img.imagen
                                                                                  +"\",isDefault: "+ img.isDefault 
                                                                                  +"}){returning {id_imagen}}}",
@@ -411,6 +410,26 @@ namespace PetArmy.Services
             return refugio;
         }
 
+
+        public static async Task updateImage(Imagen_refugio img)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {update_imagen_refugio(where: {id_imagen: {_eq: "+img.id_imagen+"}}, _set: {isDefault: "+img.isDefault+"}) {returning {id_imagen}}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
         #endregion
 
@@ -515,7 +534,7 @@ namespace PetArmy.Services
 
         } 
 
-        public static async Task<List<ubicaciones_refugios>> getLocationsByShelter(int shelter)
+        public static async Task<List<ubicaciones_refugios>> getLocationByShelter(int shelter)
         {
             List<ubicaciones_refugios> locations = new List<ubicaciones_refugios>();
 
@@ -537,7 +556,6 @@ namespace PetArmy.Services
 
                 throw;
             }
-
 
             return locations;
         }
@@ -602,6 +620,17 @@ namespace PetArmy.Services
 
                 throw;
             }
+        }
+
+
+        public static async Task<ubicaciones_refugios> getShelterLocationByID()
+        {
+            ubicaciones_refugios location = new ubicaciones_refugios();
+
+
+
+
+            return location;
         }
 
         #endregion
@@ -1017,7 +1046,7 @@ namespace PetArmy.Services
 
         #endregion
         
-           }
+    }
 
 }
 
