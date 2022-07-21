@@ -991,6 +991,38 @@ namespace PetArmy.Services
 
             return foundResponse.Data.Camp_Castracion;
         }
+
+        public static async Task<bool> addCampCastra(Camp_Castracion newCamp)
+        {
+            bool completed = false;
+            //bool isValidated = await validateCurUser(user);
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation { insert_camp_castracion(objects: {nombre_camp:\"" + newCamp.nombre_camp + "\", " +
+                                                                            "descripcion:\"" + newCamp.descripcion + "\", " +
+                                                                            "direccion:\"" + newCamp.descripcion + "\", " +
+                                                                            "tel_contacto:\"" + newCamp.tel_contacto + "\", " +
+                                                                            "fecha_inicio:" + newCamp.fecha_inicio + ", " +
+                                                                            "fecha_fin:" + newCamp.fecha_fin + ", " +
+                                                                            "activo:" + newCamp.activo + ", " +
+                                                                            "}) { returning { id_campana }}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
+                completed = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return completed;
+        }
         #endregion
     }
 
