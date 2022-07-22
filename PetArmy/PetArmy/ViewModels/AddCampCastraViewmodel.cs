@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace PetArmy.ViewModels
 {
-    internal class AddCampCastraViewModel : BaseViewModel
+    public class AddCampCastraViewModel : BaseViewModel
     {
         #region singleton
         private static AddCampCastraViewModel Instance;

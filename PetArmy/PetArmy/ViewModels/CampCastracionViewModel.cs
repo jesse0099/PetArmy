@@ -34,13 +34,18 @@ namespace PetArmy.ViewModels
         }
 
         public ICommand getAllCampCastra { get; set; }
-
         public ICommand AddCampCastra { get; set; }
+        public ICommand UpdateCampCastra { get; set; }
+        public ICommand DeleteCampCastra { get; set; }
 
+        //I have to uncomment that shit below
         public void initCommands()
         {
             getAllCampCastra = new Command(getCampCastra);
             AddCampCastra = new Command(addCampCastra);
+            //UpdateCampCastra = new Command(updateCampCastra);
+            //DeleteCampCastra = new Command(deleteCampCastra);
+
         }
 
         public async void getCampCastra()
