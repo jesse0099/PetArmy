@@ -304,4 +304,7 @@
   <data name="SaveCampKey" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="AddCampCastraKey" xml:space="preserve">
+    <value>Add Campaing</value>
+  </data>
 </root>

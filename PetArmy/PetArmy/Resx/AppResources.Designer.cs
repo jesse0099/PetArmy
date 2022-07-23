@@ -70,6 +70,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Campaing.
+        /// </summary>
+        public static string AddCampCastraKey {
+            get {
+                return ResourceManager.GetString("AddCampCastraKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add new your service.
         /// </summary>
         public static string AddCCServiceKey {

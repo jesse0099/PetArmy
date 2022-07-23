@@ -7,11 +7,12 @@
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding CampCastracion}">
             <Label Text="Campañas Castración Page!"
+                   TextColor="{StaticResource LuckyPoint}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <StackLayout Padding="40" Spacing="20">
 
-                <buttons:SfButton  Command="{Binding AddCampCastra}"
+                <buttons:SfButton  Command="{Binding Add_CampCastra}"
                                            Text="{xct:Translate AddCampCastraKey}"
                                            FontAttributes="Bold"
                                            HorizontalTextAlignment="Center"

@@ -37,12 +37,12 @@ namespace PetArmy.ViewModels
 
         public ICommand getAllCampCastra { get; set; }
 
-        public ICommand AddCampCastra { get; set; }
+        public ICommand Add_CampCastra { get; set; }
 
         public void initCommands()
         {
             getAllCampCastra = new Command(getCampCastra);
-            AddCampCastra = new Command(addCampCastra);
+            Add_CampCastra = new Command(addCampCastra);
         }
 
         public async void getCampCastra()
