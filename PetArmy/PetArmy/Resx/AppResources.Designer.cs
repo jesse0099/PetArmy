@@ -61,6 +61,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add .
+        /// </summary>
+        public static string AddCampCastraKey {
+            get {
+                return ResourceManager.GetString("AddCampCastraKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add new your service.
         /// </summary>
         public static string AddCCServiceKey {
@@ -225,9 +234,27 @@ namespace Resx {
         /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
+        public static string DescriptionCampKey {
+            get {
+                return ResourceManager.GetString("DescriptionCampKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
         public static string DescriptionKey {
             get {
                 return ResourceManager.GetString("DescriptionKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Direction.
+        /// </summary>
+        public static string DirectionCampKey {
+            get {
+                return ResourceManager.GetString("DirectionCampKey", resourceCulture);
             }
         }
         
@@ -246,6 +273,15 @@ namespace Resx {
         public static string EmailKey {
             get {
                 return ResourceManager.GetString("EmailKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Date.
+        /// </summary>
+        public static string EndDateCampKey {
+            get {
+                return ResourceManager.GetString("EndDateCampKey", resourceCulture);
             }
         }
         
@@ -291,6 +327,15 @@ namespace Resx {
         public static string MyServicesKey {
             get {
                 return ResourceManager.GetString("MyServicesKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Campaign Name.
+        /// </summary>
+        public static string NameCampKey {
+            get {
+                return ResourceManager.GetString("NameCampKey", resourceCulture);
             }
         }
         
@@ -502,6 +547,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start Date.
+        /// </summary>
+        public static string StarDateCampKey {
+            get {
+                return ResourceManager.GetString("StarDateCampKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status.
         /// </summary>
         public static string StatusKey {
@@ -516,6 +570,15 @@ namespace Resx {
         public static string System {
             get {
                 return ResourceManager.GetString("System", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telephone.
+        /// </summary>
+        public static string TelephoneCampKey {
+            get {
+                return ResourceManager.GetString("TelephoneCampKey", resourceCulture);
             }
         }
         

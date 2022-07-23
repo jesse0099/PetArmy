@@ -4,24 +4,29 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="PetArmy.Views.CampCastraView"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
-    <ContentPage.Content>
-        <StackLayout BindingContext="{Binding Camp_Castracion}">
+  
+        <StackLayout BindingContext="{Binding CampCastracion}">
             <Label Text="Campañas Castración Page!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <StackLayout Padding="40" Spacing="20">
 
-                <buttons:SfButton  Command="{Binding AddCampCastra}"
+            <buttons:SfButton  
                                            Text="{xct:Translate AddCampCastraKey}"
                                            FontAttributes="Bold"
                                            HorizontalTextAlignment="Center"
                                            HorizontalOptions="FillAndExpand"
                                            ShowIcon="True"
                                            BackgroundColor="#3b5998"
-                                           Style="{StaticResource SyncfusionButtons}">
-                </buttons:SfButton>
+                                           CornerRadius = "3"
+                                           HeightRequest = "44"
+                                           TextColor = "WhiteSmoke"
+                                           FontSize = "14"
+                                           FontFamily="Times Roman">
 
-            </StackLayout>
+            </buttons:SfButton>
+
         </StackLayout>
-    </ContentPage.Content>
+        </StackLayout>
+  
 </ContentPage>

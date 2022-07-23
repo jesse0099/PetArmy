@@ -282,4 +282,25 @@
   <data name="ShelterKey" xml:space="preserve">
     <value>Refugio</value>
   </data>
+  <data name="NameCampKey" xml:space="preserve">
+    <value>Nombre de Campaña</value>
+  </data>
+  <data name="DescriptionCampKey" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="DirectionCampKey" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="TelephoneCampKey" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="StarDateCampKey" xml:space="preserve">
+    <value>Fecha de Inicio</value>
+  </data>
+  <data name="EndDateCampKey" xml:space="preserve">
+    <value>Fecha Fin</value>
+  </data>
+  <data name="AddCampCastraKey" xml:space="preserve">
+    <value>Add </value>
+  </data>
 </root>

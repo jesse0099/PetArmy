@@ -16,7 +16,7 @@
                     <StackLayout Padding="40" Spacing="20">
 
                         <!--Nombre Campaña (nombre_camp)-->
-                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate NameKey}"
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate NameCampKey}"
                                                     x:Name="CampCastraContainerNombre"
                                                     InputViewPadding="5"
                                                     ContainerType="Outlined"
@@ -28,7 +28,7 @@
                         </inputLayout:SfTextInputLayout>
 
                         <!--Descripción (descripcion)-->
-                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate DescriptionKey}"
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate DescriptionCampKey}"
                                                     x:Name="CampCastraContainerDescripcion"
                                                     InputViewPadding="5"
                                                     ContainerType="Outlined"
@@ -40,7 +40,7 @@
                         </inputLayout:SfTextInputLayout>
 
                         <!--Dirección (direccion)-->
-                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate DirectionKey}"
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate DirectionCampKey}"
                                                     x:Name="CampCastraContainerDirection"
                                                     InputViewPadding="5"
                                                     ContainerType="Outlined"
@@ -52,7 +52,7 @@
                         </inputLayout:SfTextInputLayout>
 
                         <!--Télefono Contacto (tel_contacto)-->
-                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate TelephoneKey}"
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate TelephoneCampKey}"
                                                     x:Name="CampCastraContainerTelephone"
                                                     InputViewPadding="5"
                                                     ContainerType="Outlined"
@@ -64,16 +64,24 @@
                         </inputLayout:SfTextInputLayout>
 
                         <!--Fecha Inicio (fecha_inicio)-->
-                        <!--PEDIR AYUDA MAÑANA A DANIEL O JESE, REVISAR PÁGINAS PINEADAS EN EL BUSCADOR-->
+                        <Label Text="{xct:Translate StarDateCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <DatePicker MinimumDate="01/01/2022"
+                                    MaximumDate="12/31/2099"
+                                    Date="{Binding StarDateKey}"/>
+
 
                         <!--Fecha Fin (fecha_fin)-->
+                        <Label Text="{xct:Translate EndDateCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <DatePicker MinimumDate="01/01/2022"
+                                    MaximumDate="12/31/2099"
+                                    Date="{Binding EndDateKey}" />
+                        
 
                         <!--Activo (activo)-->
-                        <!--PREGUNTAR POR ESTE CAMPO COMO MANEJARLO-->
-                        <Label Text="{xct:Translate ActiveKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="{xct:Translate ActiveCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <syncfusion:SfSwitch x:Name="CampCastraContainerActivo" IsOn="{Binding Activo, Mode=TwoWay}"/>
 
-                        <Button Text="{xct:Translate SaveKey}"
+                        <Button Text="{xct:Translate SaveCampKey}"
                         Command="{Binding AddCampCastra}" >
                         </Button>
                     </StackLayout>

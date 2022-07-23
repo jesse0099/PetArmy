@@ -11,14 +11,18 @@ namespace PetArmy.ViewModels
     public class CampCastracionViewModel : BaseViewModel
     {
 
-        private static CampCastracionViewModel _instance;
+        public static CampCastracionViewModel _instance=null;
+       
         public static CampCastracionViewModel GetInstance()
         {
-            if (_instance == null)
-                return new CampCastracionViewModel();
-            else
+          
+                if (_instance == null) {
+                
+                    _instance = new CampCastracionViewModel();
+                   
+                }
                 return _instance;
-
+          
         }
 
         public CampCastracionViewModel()
@@ -61,14 +65,16 @@ namespace PetArmy.ViewModels
 
         public async void addCampCastra()
         {
+            /*
             try
             {
-                await Application.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
+               /* await Application.Current.MainPage.Navigation.PushAsync(new AddCampCastraView()); 
             }
             catch (System.Exception e)
             {
                 await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Campaña Castración'", e.ToString(), "Ok");
             }
+          */
         }
     }
 }
