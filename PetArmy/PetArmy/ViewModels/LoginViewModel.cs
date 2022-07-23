@@ -3,6 +3,8 @@ using PetArmy.Models;
 using PetArmy.Views;
 using Xamarin.Forms;
 using PetArmy.Helpers;
+using System.Threading.Tasks;
+using PetArmy.Infraestructure;
 
 namespace PetArmy.ViewModels
 {
@@ -92,6 +94,7 @@ namespace PetArmy.ViewModels
                 Settings.Email = registered_user.Email;
                 Settings.UID = registered_user.Uid;
                 Settings.Role = role;
+               
 
                 switch (role) {
                     case "admin":
@@ -100,6 +103,8 @@ namespace PetArmy.ViewModels
                                 Application.Current.MainPage = new AppShell();
                             IsBusy = false;
                             Settings.IsAdmin = true;
+                            App.Current.Resources.TryGetValue("Locator", out object locator);
+                            await Task.Run(async () => { await ((InstanceLocator)locator).Main.UserProfile.setUserInfo(); });
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -109,6 +114,8 @@ namespace PetArmy.ViewModels
                                 Application.Current.MainPage = new AppShell();
                             IsBusy = false;
                             Settings.IsAdmin = true;
+                            App.Current.Resources.TryGetValue("Locator", out object locator);
+                            await Task.Run(async () => { await ((InstanceLocator)locator).Main.UserProfile.setUserInfo(); });
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -118,6 +125,8 @@ namespace PetArmy.ViewModels
                                 Application.Current.MainPage = new AppShell();
                             IsBusy = false;
                             Settings.IsAdmin = false;
+                            App.Current.Resources.TryGetValue("Locator", out object locator);
+                            await Task.Run(async () => { await ((InstanceLocator)locator).Main.UserProfile.setUserInfo(); });
                             await Shell.Current.GoToAsync("//AboutPage");
                             break;
                         }

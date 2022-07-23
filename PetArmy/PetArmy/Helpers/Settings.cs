@@ -114,6 +114,12 @@ namespace PetArmy.Helpers
 
         }
 
+        public static string Password
+        {
+            get { return AppSettings.GetValueOrDefault("Password", ""); }
+            set { AppSettings.AddOrUpdateValue("Password", value); }
+        }
+
 
     }
 }

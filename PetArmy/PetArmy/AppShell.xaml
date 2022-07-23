@@ -119,6 +119,15 @@
                       ContentTemplate="{DataTemplate local:MyServicesView}"/>
     </FlyoutItem>
 
+
+    <FlyoutItem Title="Profile">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                             Glyph="{x:Static fa:IconClass.QuestionCircle}" Color="{StaticResource Primary}" />
+        </FlyoutItem.Icon>
+        <ShellContent Route="UserProfileView" ContentTemplate="{DataTemplate local:UserProfileView}"/>
+    </FlyoutItem>
+
     <FlyoutItem Title="Mascotas">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
@@ -152,6 +161,7 @@
         </FlyoutItem.Icon>
         <ShellContent Route="SearchBar" ContentTemplate="{DataTemplate local:SearchBar}" />
     </FlyoutItem>
+
 
 
 
