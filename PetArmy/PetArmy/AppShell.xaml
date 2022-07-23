@@ -128,14 +128,14 @@
                       ContentTemplate="{DataTemplate local:AdminLandingPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Campañas">
+    <!--<FlyoutItem Title="Campañas">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.Paw}" Color="{StaticResource Primary}" />
         </FlyoutItem.Icon>
         <ShellContent Route="CampCastraView"
                       ContentTemplate="{DataTemplate local:CampCastraView}" />
-    </FlyoutItem>
+    </FlyoutItem>-->
 
     <FlyoutItem Title="Perfil">
         <FlyoutItem.Icon>
