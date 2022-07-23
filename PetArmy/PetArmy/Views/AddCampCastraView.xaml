@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"             
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" 
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="PetArmy.Views.AddCampCastraView"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding AddCampCastra}">
+            <PopUps:ErrorPopUp />
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="{xct:Translate AddCampCastraKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <StackLayout Padding="40" Spacing="20">
+
+                        <!--Nombre Campaña (nombre_camp)-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate NameCampKey}"
+                                                    x:Name="CampCastraContainerNombre"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="CampCastraName"
+                               Text="{Binding Nombre, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                        </inputLayout:SfTextInputLayout>
+
+                        <!--Descripción (descripcion)-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate DescriptionCampKey}"
+                                                    x:Name="CampCastraContainerDescripcion"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="CampCastraDescripcion"
+                               Text="{Binding Descripcion, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                        </inputLayout:SfTextInputLayout>
+
+                        <!--Dirección (direccion)-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate DirectionCampKey}"
+                                                    x:Name="CampCastraContainerDirection"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="CampCastraDirection"
+                               Text="{Binding Direccion, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                        </inputLayout:SfTextInputLayout>
+
+                        <!--Télefono Contacto (tel_contacto)-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate TelephoneCampKey}"
+                                                    x:Name="CampCastraContainerTelephone"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="CampCastraTelephone"
+                               Text="{Binding Tel_Contacto, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                        </inputLayout:SfTextInputLayout>
+
+                        <!--Fecha Inicio (fecha_inicio)-->
+                        <Label Text="{xct:Translate StarDateCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <DatePicker MinimumDate="01/01/2022"
+                                    MaximumDate="12/31/2099"
+                                    Date="{Binding StarDateKey}"/>
+
+                        <!--Fecha Fin (fecha_fin)-->
+                        <Label Text="{xct:Translate EndDateCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <DatePicker MinimumDate="01/01/2022"
+                                    MaximumDate="12/31/2099"
+                                    Date="{Binding EndDateKey}" />
+
+                        <!--Activo (activo)-->
+                        <Label Text="{xct:Translate ActiveCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <syncfusion:SfSwitch x:Name="CampCastraContainerActivo" IsOn="{Binding Activo, Mode=TwoWay}"/>
+
+                        <Button Text="{xct:Translate SaveCampKey}"
+                        Command="{Binding AddCampCastra}" >
+                        </Button>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

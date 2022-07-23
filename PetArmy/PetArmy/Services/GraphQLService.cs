@@ -1045,8 +1045,57 @@ namespace PetArmy.Services
         }
 
         #endregion
-        
+
+        #region Camp_Castracion Operations
+        public static async Task<List<Camp_Castracion>> getAllCampCastra()
+        {
+            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+            var findRequest = new GraphQLHttpRequestWithHeaders
+            {
+                Query = "query MyQuery {camp_castracion {id_campana,nombre_camp,tel_contacto,descripcion,direccion,fecha_inicio,fecha_fin,activo}}",
+                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+            };
+
+            var foundResponse = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(findRequest);
+
+            return foundResponse.Data.Camp_Castracion;
+        }
+
+        public static async Task<bool> addCampCastra(Camp_Castracion newCamp)
+        {
+            bool completed = false;
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation { insert_camp_castracion(objects: {nombre_camp:\"" + newCamp.nombre_camp + "\", " +
+                                                                            "descripcion:\"" + newCamp.descripcion + "\", " +
+                                                                            "direccion:\"" + newCamp.descripcion + "\", " +
+                                                                            "tel_contacto:\"" + newCamp.tel_contacto + "\", " +
+                                                                            "fecha_inicio:" + newCamp.fecha_inicio + ", " +
+                                                                            "fecha_fin:" + newCamp.fecha_fin + ", " +
+                                                                            "activo:" + newCamp.activo + ", " +
+                                                                            "}) { returning { id_campana }}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
+                completed = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return completed;
+        }
+        #endregion
+
     }
+
 
 }
 

@@ -17,7 +17,11 @@ namespace PetArmy.ViewModels
         public MascotaViewModel Mascota { get; set; }
         public AddMascotaViewModel AddMascota { get; set; }
 
-        public EditShelterViewModel EditShelter { get; set; } 
+        public EditShelterViewModel EditShelter { get; set; }
+
+        public CampCastracionViewModel CampCastracion { get; set; }
+
+        public AddCampCastraViewModel AddCampCastra { get; set; }
 
         public SearchBarViewModel SearchBar { get; set; }
 
@@ -35,6 +39,8 @@ namespace PetArmy.ViewModels
             this.AddMascota = AddMascotaViewModel.GetInstance();
             this.SearchBar = SearchBarViewModel.GetInstance();
             this.EditShelter = EditShelterViewModel.GetInstance();
+            this.CampCastracion = CampCastracionViewModel.GetInstance();
+            this.AddCampCastra = AddCampCastraViewModel.GetInstance();
             this.UserProfile = UserProfileViewModel.GetInstance();
             this.User = new UserViewModel();
          

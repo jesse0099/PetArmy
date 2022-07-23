@@ -280,4 +280,28 @@
   <data name="selectImgKey" xml:space="preserve">
     <value>Select</value>
   </data>
+  <data name="NameCampKey" xml:space="preserve">
+    <value>Campaing Name</value>
+  </data>
+  <data name="DescriptionCampKey" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DirectionCampKey" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="TelephoneCampKey" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="StarDateCampKey" xml:space="preserve">
+    <value>Star Date</value>
+  </data>
+  <data name="EndDateCampKey" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="ActiveCampKey" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="SaveCampKey" xml:space="preserve">
+    <value>Add</value>
+  </data>
 </root>

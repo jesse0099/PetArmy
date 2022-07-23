@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="PetArmy.Views.CampCastraView"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding CampCastracion}">
+            <Label Text="Campañas Castración Page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Padding="40" Spacing="20">
+
+                <buttons:SfButton  Command="{Binding AddCampCastra}"
+                                           Text="{xct:Translate AddCampCastraKey}"
+                                           FontAttributes="Bold"
+                                           HorizontalTextAlignment="Center"
+                                           HorizontalOptions="FillAndExpand"
+                                           ShowIcon="True"
+                                           BackgroundColor="#3b5998"
+                                           Style="{StaticResource SyncfusionButtons}">
+                </buttons:SfButton>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

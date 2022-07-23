@@ -300,4 +300,28 @@
   <data name="selectImgKey" xml:space="preserve">
     <value>Seleccionar</value>
   </data>
+  <data name="NameCampKey" xml:space="preserve">
+    <value>Nombre de Campaña</value>
+  </data>
+  <data name="DescriptionCampKey" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="DirectionCampKey" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="TelephoneCampKey" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="StarDateCampKey" xml:space="preserve">
+    <value>Fecha de Inicio</value>
+  </data>
+  <data name="EndDateCampKey" xml:space="preserve">
+    <value>Fecha Fin</value>
+  </data>
+  <data name="ActiveCampKey" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="SaveCampKey" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
 </root>
