@@ -1,9 +1,12 @@
-﻿using PetArmy.Models;
+﻿using PetArmy.Helpers;
+using PetArmy.Interfaces;
+using PetArmy.Models;
 using PetArmy.Services;
 using PetArmy.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -115,27 +118,68 @@ namespace PetArmy.ViewModels
 
         public async void addCampCastra()
         {
-            Camp_Castracion camp = new Camp_Castracion();
+            
             try
             {
-                camp.id_campana = Id_Campana;
-                camp.nombre_camp = Nombre_Camp;
-                camp.descripcion = Descripcion;
-                camp.direccion = Direccion;
-                camp.tel_contacto = Tel_Contacto;
-                camp.fecha_inicio = Fecha_Inicio;
-                camp.fecha_fin = Fecha_Fin;
-                camp.activo = Activo;
+                IFirebaseAuth _i_auth = DependencyService.Get<IFirebaseAuth>(); ;
+                var registered_user = _i_auth.GetSignedUserProfile();
+                Settings.UID = registered_user.Uid;
+                Usuario curUser = new Usuario(Settings.UID, 2);
 
-
-                await GraphQLService.addCampCastra(camp);
+                if (!checkForEmpyValues())
+                {
+                    Camp_Castracion camp = new Camp_Castracion();
+                    camp.id_campana = await generateCampCastraID();
+                    camp.nombre_camp = Nombre_Camp;
+                    camp.descripcion = Descripcion;
+                    camp.direccion = Direccion;
+                    camp.tel_contacto = Tel_Contacto;
+                    camp.fecha_inicio = Fecha_Inicio;
+                    camp.fecha_fin = Fecha_Fin;
+                    camp.activo = true;
+                    bool chk = await GraphQLService.addCampCastra(camp, curUser);
+                }
                 await App.Current.MainPage.DisplayAlert("Success", "Campaing Saved!", "Ok");
                 Application.Current.MainPage = new NavigationPage(new CampCastraView());
             }
-            catch
+            catch (Exception)
             {
+                throw;
             }
         }
+
+        public bool checkForEmpyValues()
+        {
+            bool result = false;
+
+            if (String.IsNullOrEmpty(this.Nombre_Camp) || String.IsNullOrEmpty(this.Descripcion) || String.IsNullOrEmpty(this.Tel_Contacto))
+            {
+                result = true;
+            }
+
+            return result;
+        }
         #endregion
+
+        public async Task<int> generateCampCastraID()
+        {
+            int newCampCastraID = 0;
+
+            try
+            {
+                List<Camp_Castracion> campaings = await GraphQLService.getAllCampCastra();
+                int lastID = campaings[campaings.Count - 1].id_campana;
+                newCampCastraID = lastID + 1;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return newCampCastraID;
+        }
+
     }
 }

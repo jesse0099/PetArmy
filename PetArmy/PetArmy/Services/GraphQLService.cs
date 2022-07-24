@@ -1049,41 +1049,53 @@ namespace PetArmy.Services
         #region Camp_Castracion Operations
         public static async Task<List<Camp_Castracion>> getAllCampCastra()
         {
-            var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+            List<Camp_Castracion> camp_Castracion = null;
 
-            var findRequest = new GraphQLHttpRequestWithHeaders
+            try
             {
-                Query = "query MyQuery {camp_castracion {id_campana,nombre_camp,tel_contacto,descripcion,direccion,fecha_inicio,fecha_fin,activo}}",
-                Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {camp_castracion {id_campana,nombre_camp,tel_contacto,descripcion,direccion,fecha_inicio,fecha_fin,activo}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var foundResponse = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(findRequest);
+                camp_Castracion = foundResponse.Data.Camp_Castracion;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+                throw; 
             };
-
-            var foundResponse = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(findRequest);
-
-            return foundResponse.Data.Camp_Castracion;
+            return camp_Castracion;
         }
 
-        public static async Task<bool> addCampCastra(Camp_Castracion newCamp)
+        public static async Task<bool> addCampCastra(Camp_Castracion newCamp, Usuario user)
         {
             bool completed = false;
+
+            bool isValidated = await validateCurUser(user);
 
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation { insert_camp_castracion(objects: {nombre_camp:\"" + newCamp.nombre_camp + "\", " +
-                                                                            "descripcion:\"" + newCamp.descripcion + "\", " +
-                                                                            "direccion:\"" + newCamp.descripcion + "\", " +
-                                                                            "tel_contacto:\"" + newCamp.tel_contacto + "\", " +
-                                                                            "fecha_inicio:" + newCamp.fecha_inicio + ", " +
-                                                                            "fecha_fin:" + newCamp.fecha_fin + ", " +
-                                                                            "activo:" + newCamp.activo + ", " +
-                                                                            "}) { returning { id_campana }}}",
+                    Query = "mutation MyMutation { insert_camp_castracion(objects: {nombre_camp:\""     + newCamp.nombre_camp + "\", " +
+                                                                                    "descripcion:\""    + newCamp.descripcion + "\", " +
+                                                                                    "direccion:\""      + newCamp.descripcion + "\", " +
+                                                                                    "tel_contacto:\""   + newCamp.tel_contacto + "\", " +
+                                                                                    "fecha_inicio:"     + newCamp.fecha_inicio + ", " +
+                                                                                    "fecha_fin:"        + newCamp.fecha_fin + ", " +
+                                                                                    "activo:"           + newCamp.activo + ", " +
+                                                                                    "}) { returning { id_campana }}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
                 var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
                 completed = true;
+                client.Dispose();
             }
             catch (Exception)
             {
@@ -1091,6 +1103,54 @@ namespace PetArmy.Services
                 throw;
             }
             return completed;
+        }
+
+        public static async Task updateCampCastra(Camp_Castracion editShelter)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    //revisar esta query, no recuerdo si tenia más PKs aparte de id_campana, si tiene más pks guiamer con el update de refugio en esta misma clase, linea 225
+                    //Tambien revisar nombre de la mutation, para coincida con el nombre de la tabla
+                    Query = "mutation MyMutation {update_camp_castracion_by_pk(pk_columns: {id_campana: "       + editShelter.id_campana    + "}" +
+                                                                                           ",nombre_camp: \""   + editShelter.nombre_camp   + "\"" +
+                                                                                           ",descripcion: \""   + editShelter.descripcion   + "\"" +
+                                                                                           ",direccion: \""     + editShelter.direccion     + "\"" +
+                                                                                           ",tel_contacto: \""  + editShelter.tel_contacto  + "\"" +
+                                                                                           ",fecha_inicio: "    + editShelter.fecha_inicio  +
+                                                                                           ",fecha_fin: "       + editShelter.fecha_fin     +
+                                                                                           ",activo: "          + editShelter.activo        + "}){id_campana }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static async Task deleteCampCastra(int idCampCastra)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {delete_camp_castracion_pk(id_campana: " + idCampCastra + ") { nombre }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
         #endregion
 
