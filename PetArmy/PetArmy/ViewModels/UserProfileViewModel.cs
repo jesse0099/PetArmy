@@ -203,6 +203,30 @@ namespace PetArmy.ViewModels
             set { dataIsFound = value; OnPropertyChanged(); }
         }
 
+        private string _number;
+
+        public string Number
+        {
+            get { return _number; }
+            set { _number = value; OnPropertyChanged(); }
+        }
+
+        private bool _adopIsFound;
+
+        public bool AdoptIsFound
+        {
+            get { return _adopIsFound; }
+            set { _adopIsFound = value; OnPropertyChanged(); }
+        }
+
+        private Perfil_adoptante _curAdopt;
+
+        public Perfil_adoptante CurAdopt
+        {
+            get { return _curAdopt; }
+            set { _curAdopt = value; OnPropertyChanged(); }
+        }
+
 
         #endregion
 
@@ -217,6 +241,8 @@ namespace PetArmy.ViewModels
         public async Task setUserInfo()
         {
             List<User_Info> usersInfo = new List<User_Info>();
+           
+
             usersInfo = await GraphQLService.getUserInfo_ByUID(Settings.UID);
 
             if (usersInfo.Count > 0)
@@ -235,6 +261,19 @@ namespace PetArmy.ViewModels
                 SAge = CurUser.age.ToString();
                 Ubication = "Costa Rica, "+CurUser.canton;
                 DataIsFound = true;
+
+                Perfil_adoptante adoptante = await GraphQLService.getAdoptanteByID(Settings.UID);
+
+                if (adoptante != null)
+                {
+                    Number = adoptante.telefono;
+                    AdoptIsFound = true;
+                    CurAdopt = adoptante;
+                }
+                else
+                {
+                    AdoptIsFound = false;
+                }
 
             }
             else
@@ -304,6 +343,14 @@ namespace PetArmy.ViewModels
 
         public async void editInfo()
         {
+
+            /*Verify user */
+            Usuario user = new Usuario();
+            user.uid = Settings.UID;
+            user.tipo = Settings.RoleNo;
+            await GraphQLService.validateCurUser(user);
+
+            /* User info */
             User_Info newInfo = new User_Info();
             newInfo.idUser = Settings.UID;
             newInfo.name = Name;
@@ -311,6 +358,7 @@ namespace PetArmy.ViewModels
             newInfo.canton = Canton;
             newInfo.age = Int32.Parse(SAge); ;
             newInfo.username = Username;
+           
             if (imageIsSelected)
             {
                 newInfo.profilePicture = ImageString;
@@ -327,6 +375,33 @@ namespace PetArmy.ViewModels
             SAge = newInfo.age.ToString();
             Username = newInfo.username;
             DataIsFound = true;
+
+            /* Perfil Adoptante */
+
+            Perfil_adoptante newPerfil = new Perfil_adoptante();
+
+            if (AdoptIsFound)
+            {
+                newPerfil.uid = Settings.UID;
+                newPerfil.nombre = FullName;
+                newPerfil.direccion = Ubication;
+                newPerfil.correo = Settings.Email;
+                newPerfil.telefono = Number;
+                newPerfil.casa_cuna = CurAdopt.casa_cuna;
+            }
+            else
+            {
+                newPerfil.uid = Settings.UID;
+                newPerfil.nombre = FullName;
+                newPerfil.direccion = Ubication;
+                newPerfil.correo = Settings.Email;
+                newPerfil.telefono = Number;
+                newPerfil.casa_cuna = false;
+
+            }
+           
+            await GraphQLService.createOrUpdate_Adoptante(AdoptIsFound,newPerfil);
+            AdoptIsFound = true;
             await Shell.Current.GoToAsync("//UserProfileTabbedView");
         }
 

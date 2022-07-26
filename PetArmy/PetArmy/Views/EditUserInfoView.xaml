@@ -50,6 +50,20 @@
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                     </inputLayout:SfTextInputLayout>
 
+
+                    <!--Number-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate userPhoneKey}"
+                                                    x:Name="phoneContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="userPhone"
+                               Text="{Binding Number, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+
                     <!--Edad-->
                     <Label x:Name="firstNumeric"    Text="{xct:Translate userAgeKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
                     <inputLayout:SfTextInputLayout  Hint="{xct:Translate cantKey}"

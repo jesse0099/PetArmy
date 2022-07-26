@@ -646,6 +646,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your phone number.
+        /// </summary>
+        public static string userPhoneKey {
+            get {
+                return ResourceManager.GetString("userPhoneKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vaxinated.
         /// </summary>
         public static string VaxxedKey {

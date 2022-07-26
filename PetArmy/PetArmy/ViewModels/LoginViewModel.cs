@@ -102,6 +102,7 @@ namespace PetArmy.ViewModels
                                 Application.Current.MainPage = new AppShell();
                             IsBusy = false;
                             Settings.IsAdmin = true;
+                            Settings.RoleNo = 2;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -111,6 +112,7 @@ namespace PetArmy.ViewModels
                                 Application.Current.MainPage = new AppShell();
                             IsBusy = false;
                             Settings.IsAdmin = true;
+                            Settings.RoleNo = 3;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -120,6 +122,7 @@ namespace PetArmy.ViewModels
                                 Application.Current.MainPage = new AppShell();
                             IsBusy = false;
                             Settings.IsAdmin = false;
+                            Settings.RoleNo = 1;
                             await Shell.Current.GoToAsync("//AboutPage");
                             break;
                         }

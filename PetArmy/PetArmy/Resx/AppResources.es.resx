@@ -321,4 +321,7 @@
   <data name="updateKey" xml:space="preserve">
     <value>Actualizar</value>
   </data>
+  <data name="userPhoneKey" xml:space="preserve">
+    <value>Tu número de teléfono</value>
+  </data>
 </root>

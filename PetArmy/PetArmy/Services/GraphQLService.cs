@@ -716,6 +716,43 @@ namespace PetArmy.Services
             return adoptante;
         }
 
+
+        public static async Task createOrUpdate_Adoptante(bool isFound, Perfil_adoptante adopt)
+        {
+            try
+            {
+              
+
+                if (isFound)
+                {
+                    /*Update*/
+                    var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                    var request = new GraphQLHttpRequestWithHeaders
+                    {
+                        Query = "mutation MyMutation { update_perfil_adoptante(where: {uid: {_eq: \""+adopt.uid+"\"}}, _set: {casa_cuna: "+adopt.casa_cuna
+                                                                                                                             +", correo: \""+adopt.correo
+                                                                                                                             +"\", direccion: \""+adopt.direccion
+                                                                                                                             +"\", nombre: \""+adopt.nombre
+                                                                                                                             +"\", telefono: \""+adopt.telefono+"\"}) { returning { uid } } }",
+                        Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    };
+
+                    var response = await client.SendQueryAsync<Perfil_AdoptanteGraphQLResponse>(request);
+                }
+                else
+                {
+                    /*Create*/
+                    await addAdoptante(adopt);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         #endregion
 
         #region Mascotas
