@@ -216,8 +216,6 @@ namespace PetArmy.ViewModels
         }
 
         
-
-    
         public async Task getData()
         {
             IsBusy = true;

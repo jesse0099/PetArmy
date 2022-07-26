@@ -280,4 +280,25 @@
   <data name="selectImgKey" xml:space="preserve">
     <value>Select</value>
   </data>
+  <data name="EditUserKey" xml:space="preserve">
+    <value>Edit your profile</value>
+  </data>
+  <data name="NombreUserKey" xml:space="preserve">
+    <value>Your name</value>
+  </data>
+  <data name="SurnameUserKey" xml:space="preserve">
+    <value>Your surname</value>
+  </data>
+  <data name="UsernameKey" xml:space="preserve">
+    <value>Your username</value>
+  </data>
+  <data name="userAgeKey" xml:space="preserve">
+    <value>Your Age</value>
+  </data>
+  <data name="UpdateUserInfoKey" xml:space="preserve">
+    <value>Update info</value>
+  </data>
+  <data name="updateKey" xml:space="preserve">
+    <value>Update</value>
+  </data>
 </root>

@@ -1045,7 +1045,82 @@ namespace PetArmy.Services
         }
 
         #endregion
-        
+
+        #region User info 
+
+        public static async Task<List<User_Info>> getUserInfo_ByUID(string uid)
+        {
+            List<User_Info> result = new List<User_Info>();
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery { User_Info(where: {idUser: {_eq: \""+uid+"\"}}) { age canton idInfo idUser username surname profilePicture name }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<User_InfoGraphQLResponse>(request);
+                result = response.Data.User_Info;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return result;
+        }
+
+        public static async Task createOrUpdate_UserInfo(bool isFound, User_Info info)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+                if (isFound)
+                {
+                    var request = new GraphQLHttpRequestWithHeaders
+                    {
+                        Query = "mutation MyMutation { update_User_Info(where: {idUser: {_eq: \""+info.idUser+"\"}}, _set: {age: "+info.age
+                                                                                                                           +", canton: \""+info.canton
+                                                                                                                           +"\", name: \""+info.name
+                                                                                                                           +"\", profilePicture: \""+info.profilePicture
+                                                                                                                           +"\", surname: \""+info.surname
+                                                                                                                           +"\", username: \""+info.username+"\"}) { returning { idInfo }}}",
+                        Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    };
+                    var response = await client.SendQueryAsync<User_InfoGraphQLResponse>(request);
+                    client.Dispose();
+                }
+                else
+                {
+                    var request = new GraphQLHttpRequestWithHeaders
+                    {
+                        Query = "mutation MyMutation {insert_User_Info(objects: {age: "+info.age
+                                                                                     +", canton: \""+info.canton
+                                                                                     +"\", idUser: \""+info.idUser
+                                                                                     +"\", name: \""+info.name
+                                                                                     +"\", profilePicture: \""+info.profilePicture
+                                                                                     +"\", surname: \""+info.surname
+                                                                                     +"\", username: \""+info.username+"\"}) {returning { idUser }}}",
+                        Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    };
+
+                    var response = await client.SendQueryAsync<User_InfoGraphQLResponse>(request);
+                    client.Dispose();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        #endregion
+
     }
 
 }

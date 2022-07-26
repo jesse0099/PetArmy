@@ -21,12 +21,12 @@ namespace PetArmy.Helpers
         private const string SettingsKey = "settings_key";
         private static readonly string SettingsDefault = string.Empty;
 
-        private const string GraphQLUrl = "https://pet-army-101.hasura.app/v1/graphql";
-        private static readonly string URLDefault = "https://pet-army-101.hasura.app/v1/graphql";
+        private const string GraphQLUrl = "https://pet-army-85.hasura.app/v1/graphql";
+        private static readonly string URLDefault = "https://pet-army-85.hasura.app/v1/graphql";
 
 
-        private const string GraphQLSecret = "sl0iQE5H49U1EtomqiRf43Wtq3YEXlPA0g2099PWuEiKMwb6qWn4r7od416BIrNn";
-        private static readonly string SecretDefault = "sl0iQE5H49U1EtomqiRf43Wtq3YEXlPA0g2099PWuEiKMwb6qWn4r7od416BIrNn";
+        private const string GraphQLSecret = "0lyOeQuWhvoT1Y3ZkfRKCGrKnJbz9OiTOZY0JEZsG5AkqkK7Q1oAj7SsHJ07fsEA";
+        private static readonly string SecretDefault = "0lyOeQuWhvoT1Y3ZkfRKCGrKnJbz9OiTOZY0JEZsG5AkqkK7Q1oAj7SsHJ07fsEA";
 
         #endregion
 

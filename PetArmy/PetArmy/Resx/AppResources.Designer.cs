@@ -259,6 +259,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit your profile.
+        /// </summary>
+        public static string EditUserKey {
+            get {
+                return ResourceManager.GetString("EditUserKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registered email: user@email.com.
         /// </summary>
         public static string EmailHintKey {
@@ -336,6 +345,15 @@ namespace Resx {
         public static string NameKey {
             get {
                 return ResourceManager.GetString("NameKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your name.
+        /// </summary>
+        public static string NombreUserKey {
+            get {
+                return ResourceManager.GetString("NombreUserKey", resourceCulture);
             }
         }
         
@@ -556,6 +574,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your surname.
+        /// </summary>
+        public static string SurnameUserKey {
+            get {
+                return ResourceManager.GetString("SurnameUserKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to System.
         /// </summary>
         public static string System {
@@ -574,11 +601,47 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string updateKey {
+            get {
+                return ResourceManager.GetString("updateKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update information.
         /// </summary>
         public static string UpdateShelterBtnKey {
             get {
                 return ResourceManager.GetString("UpdateShelterBtnKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update info.
+        /// </summary>
+        public static string UpdateUserInfoKey {
+            get {
+                return ResourceManager.GetString("UpdateUserInfoKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Age.
+        /// </summary>
+        public static string userAgeKey {
+            get {
+                return ResourceManager.GetString("userAgeKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your username.
+        /// </summary>
+        public static string UsernameKey {
+            get {
+                return ResourceManager.GetString("UsernameKey", resourceCulture);
             }
         }
         

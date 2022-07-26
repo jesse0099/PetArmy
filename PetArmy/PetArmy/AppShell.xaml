@@ -110,6 +110,15 @@
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
 
+    <FlyoutItem Title="Profile">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                             Glyph="{x:Static fa:IconClass.User}" Color="{StaticResource Primary}" />
+        </FlyoutItem.Icon>
+        <ShellContent Route="UserProfileTabbedView"
+                      ContentTemplate="{DataTemplate local:UserProfileTabbedView}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="Mis Servicios">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
@@ -119,15 +128,6 @@
                       ContentTemplate="{DataTemplate local:MyServicesView}"/>
     </FlyoutItem>
 
-
-    <FlyoutItem Title="Profile">
-        <FlyoutItem.Icon>
-            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                             Glyph="{x:Static fa:IconClass.QuestionCircle}" Color="{StaticResource Primary}" />
-        </FlyoutItem.Icon>
-        <ShellContent Route="UserProfileView" ContentTemplate="{DataTemplate local:UserProfileView}"/>
-    </FlyoutItem>
-
     <FlyoutItem Title="Mascotas">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
@@ -135,14 +135,6 @@
         </FlyoutItem.Icon>
         <ShellContent Route="AdminLandingPage"
                       ContentTemplate="{DataTemplate local:AdminLandingPage}" />
-    </FlyoutItem>
-
-    <FlyoutItem Title="Perfil">
-        <FlyoutItem.Icon>
-            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                             Glyph="{x:Static fa:IconClass.User}" Color="{StaticResource Primary}" />
-        </FlyoutItem.Icon>
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
 
 
