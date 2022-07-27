@@ -378,4 +378,13 @@
   <data name="MoreAboutMe" xml:space="preserve">
     <value>Más sobre mí</value>
   </data>
+  <data name="Illness" xml:space="preserve">
+    <value>Enfermedad</value>
+  </data>
+  <data name="Disability" xml:space="preserve">
+    <value>Discapacidad</value>
+  </data>
+  <data name="Allergies" xml:space="preserve">
+    <value>Alergias</value>
+  </data>
 </root>

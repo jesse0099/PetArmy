@@ -1,4 +1,6 @@
-﻿namespace PetArmy.Models
+﻿using System.Collections.Generic;
+
+namespace PetArmy.Models
 {
     public class Refugio
     {
@@ -11,14 +13,16 @@
         public string direccion { get; set; }
         public string correo { get; set; }
         public int capacidad { get; set; }
+        public List<ubicaciones_refugios> ubicacion { get; set; }
 
         public Refugio()
         {
         }
 
-        public Refugio(int id_refugio)
+        public Refugio(int id_refugio, List<ubicaciones_refugios> ubicacion)
         {
             this.id_refugio = id_refugio;
+            this.ubicacion = ubicacion;
         }
 
         public Refugio(bool activo, string administrador, string telefono, string nombre, string info_legal, int id_refugio, string direccion, string correo, int capacidad)

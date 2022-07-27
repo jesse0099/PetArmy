@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using PetArmy.ViewModels;
+using System.Collections.Generic;
 
 namespace PetArmy.Models
 {
-    public class Mascota
+    public class Mascota: BaseViewModel
     {
         public string nombre { get; set; }
 
@@ -22,6 +23,16 @@ namespace PetArmy.Models
         public Refugio  refugio { get; set; }
         public List<MascotaTag>  mascota_tags { get; set; }
         public IEnumerable<Imagen_Mascota> imagenes_mascota { get; set; }
+        private List<PetDbBools> _db_Bools;
+        public List<PetDbBools> Db_Bools
+        {
+            get { return _db_Bools; }
+            set { _db_Bools = value;
+                OnPropertyChanged();
+            }
+        }
+
+
 
         public Mascota(string nombre)
         {

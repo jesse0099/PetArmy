@@ -8,8 +8,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Xamarin.Essentials;
 using Xamarin.Forms;
+using static PetArmy.Models.Mascota;
 
 namespace PetArmy.ViewModels
 {
@@ -85,6 +85,25 @@ namespace PetArmy.ViewModels
         async public void GetNearPetsBytags(string[] tags)
         {
             Mascotas = new BindingList<Mascota>(await GraphQLService.GetNearPetsByTags(tags, 9.944470790745799, -84.01073040137106, 1000) as List<Mascota>);
+            
+            //UI Settings  
+            List<Color> gradient = new();
+            for (int i = 0; i < 5; i++){
+                Application.Current.Resources.TryGetValue($"Grad{i + 1}", out object color);
+                gradient.Add((Color)color);
+            }
+
+            foreach (var pet in Mascotas){
+                var bool_values = new List<PetDbBools>()
+                {
+                    new PetDbBools() { Bool_Name = AppResources.Disability, Bool_Value = pet.discapacidad, Bool_Color = gradient[0] },
+                    new PetDbBools() { Bool_Name = AppResources.Illness, Bool_Value = pet.enfermedad, Bool_Color = gradient[1]  },
+                    new PetDbBools() { Bool_Name = AppResources.Allergies, Bool_Value = pet.alergias, Bool_Color = gradient[2]  },
+                    new PetDbBools() { Bool_Name = AppResources.VaxxedKey, Bool_Value = pet.vacunado, Bool_Color = gradient[3]  },
+                    new PetDbBools() { Bool_Name = AppResources.CastratedKey, Bool_Value = pet.castrado, Bool_Color = gradient[4]  },
+                };
+                pet.Db_Bools = bool_values.Where(x => x.Bool_Value).ToList();
+            }
         }
         #region Swipe View Events
         public void SwipedCommand(SwipedCardEventArgs e)
@@ -156,6 +175,9 @@ namespace PetArmy.ViewModels
             }
         }
         #endregion
+
+
+
         private static FeedViewModel _instance;
         public static FeedViewModel GetInstance()
         {

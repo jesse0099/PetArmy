@@ -3,6 +3,7 @@ using PetArmy.Infraestructure;
 using PetArmy.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static PetArmy.Models.Mascota;
 
 namespace PetArmy.Views
 {

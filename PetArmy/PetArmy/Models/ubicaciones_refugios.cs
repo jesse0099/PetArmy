@@ -17,6 +17,12 @@ namespace PetArmy.Models
 
         }
 
+        public ubicaciones_refugios(double latitud, double longitud)
+        {
+            this.lalitud = latitud;
+            this.longitud = longitud;
+        }
+
         public ubicaciones_refugios(string canton, int id_refugio, int id_ubicacion, double lalitud, double longitud)
         {
             this.canton = canton;

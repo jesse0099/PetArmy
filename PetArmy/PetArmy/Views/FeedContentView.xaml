@@ -7,7 +7,6 @@
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              x:Class="PetArmy.Views.FeedContentView"
-             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              x:Name="feed_page"
              BackgroundColor="{AppThemeBinding Light=White, 
                                                Dark={StaticResource LuckyPoint}}">
@@ -87,7 +86,8 @@
                                 <IndicatorView x:Name="images_indicator_view"
                                                BackgroundColor="Transparent"
                                                IndicatorsShape="Circle"
-                                               SelectedIndicatorColor="{StaticResource MatrixGreen}"
+                                               IndicatorColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                               SelectedIndicatorColor="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}"
                                                HorizontalOptions="CenterAndExpand"
                                                Margin="3">
                                 </IndicatorView>
@@ -160,7 +160,34 @@
                                 </inputLayout:SfTextInputLayout>
                                 <!--ScrollView Tags-->
                                 <ScrollView>
-                                    <StackLayout>
+                                    <StackLayout Margin="0">
+                                        <!--booleanos bd-->
+                                        <buttons:SfChipGroup ItemsSource="{Binding Db_Bools}"
+                                                             Type="Input"
+                                                             IsEnabled="False"
+                                                             HorizontalOptions="FillAndExpand"
+                                                             ChipBackgroundColor="Transparent">
+                                            <buttons:SfChipGroup.ChipLayout>
+                                                <FlexLayout HorizontalOptions="FillAndExpand"
+                                                            VerticalOptions="Center"
+                                                            Direction="Row"
+                                                            Wrap="Wrap"
+                                                            JustifyContent="Start"
+                                                            AlignContent="SpaceBetween"
+                                                            AlignItems="Start" />
+                                            </buttons:SfChipGroup.ChipLayout>
+                                            <buttons:SfChipGroup.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackLayout x:Name="bool_chips_item"
+                                                                 HorizontalOptions="FillAndExpand">
+                                                        <buttons:SfChip BindingContext="{Binding Source={x:Reference bool_chips_item}, Path=BindingContext}"
+                                                                        Text="{Binding Bool_Name}"
+                                                                        BackgroundColor="{Binding Bool_Color}"
+                                                                        Margin="0"/>
+                                                    </StackLayout>
+                                                </DataTemplate>
+                                            </buttons:SfChipGroup.ItemTemplate>
+                                        </buttons:SfChipGroup>
                                         <!--Chips Tags-->
                                         <buttons:SfChipGroup ItemsSource="{Binding mascota_tags}"
                                                              Type="Input"
@@ -173,7 +200,7 @@
                                                             VerticalOptions="Center"
                                                             Direction="Row"
                                                             Wrap="Wrap"
-                                                            JustifyContent="Start"
+                                                            JustifyContent="SpaceAround"
                                                             AlignContent="SpaceBetween"
                                                             AlignItems="Start" />
                                             </buttons:SfChipGroup.ChipLayout>
@@ -196,39 +223,6 @@
                                                     </StackLayout>
                                                 </DataTemplate>
                                             </buttons:SfChipGroup.ItemTemplate>
-                                        </buttons:SfChipGroup>
-                                        <!--booleanos bd-->
-                                        <buttons:SfChipGroup BindingContext="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                                             ChipPadding="5"
-                                                             HorizontalOptions="FillAndExpand">
-                                            <buttons:SfChipGroup.ChipLayout>
-                                                <FlexLayout HorizontalOptions="FillAndExpand"
-                                                            VerticalOptions="Center"
-                                                            Direction="Row"
-                                                            Wrap="Wrap"
-                                                            JustifyContent="Start"
-                                                            AlignContent="SpaceBetween"
-                                                            AlignItems="Start" />
-                                            </buttons:SfChipGroup.ChipLayout>
-                                            <buttons:SfChip IsVisible="{Binding castrado}"
-                                                            BackgroundColor="{StaticResource Grad2}"
-                                                            Text="Castrado"
-                                                            Margin="6,5,0,8" />
-                                            <buttons:SfChip IsVisible="{Binding alergias}"
-                                                            BackgroundColor="{StaticResource Grad3}"
-                                                            Text="Alergias"
-                                                            Margin="6,5,0,8" />
-                                            <buttons:SfChip IsVisible="{Binding discapacidad}"
-                                                            BackgroundColor="{StaticResource Grad4}"
-                                                            Text="Discapacidad"
-                                                            Margin="6,5,0,8" />
-                                            <buttons:SfChip IsVisible="{Binding enfermedad}"
-                                                            BackgroundColor="{StaticResource Grad5}"
-                                                            Text="Enfermedad" />
-                                            <buttons:SfChip IsVisible="{Binding vacunado}"
-                                                            BackgroundColor="{StaticResource Grad5}"
-                                                            Text="Vacunado"
-                                                            Margin="6,5,0,8" />
                                         </buttons:SfChipGroup>
                                     </StackLayout>
                                 </ScrollView>

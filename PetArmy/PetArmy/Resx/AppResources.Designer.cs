@@ -124,6 +124,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allergies.
+        /// </summary>
+        public static string Allergies {
+            get {
+                return ResourceManager.GetString("Allergies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All Fields Are Required.
         /// </summary>
         public static string AllFieldsRequired {
@@ -277,6 +286,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disability.
+        /// </summary>
+        public static string Disability {
+            get {
+                return ResourceManager.GetString("Disability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disable Account.
         /// </summary>
         public static string DisableAccount {
@@ -372,6 +390,15 @@ namespace Resx {
         public static string HandicapedKey {
             get {
                 return ResourceManager.GetString("HandicapedKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Illness.
+        /// </summary>
+        public static string Illness {
+            get {
+                return ResourceManager.GetString("Illness", resourceCulture);
             }
         }
         

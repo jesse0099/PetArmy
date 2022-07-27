@@ -358,4 +358,13 @@
   <data name="MoreAboutMe" xml:space="preserve">
     <value>More About Me</value>
   </data>
+  <data name="Illness" xml:space="preserve">
+    <value>Illness</value>
+  </data>
+  <data name="Disability" xml:space="preserve">
+    <value>Disability</value>
+  </data>
+  <data name="Allergies" xml:space="preserve">
+    <value>Allergies</value>
+  </data>
 </root>
