@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:swipe_view="clr-namespace:MLToolkit.Forms.SwipeCardView;assembly=MLToolkit.Forms.SwipeCardView"
+             xmlns:local="clr-namespace:PetArmy"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             x:Class="PetArmy.Views.FeedContentView"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             x:Name="feed_page"
+             BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}">
+    <ContentPage.Content>
+        <swipe_view:SwipeCardView BindingContext="{Binding   Main.Feed, Source={StaticResource Locator}}"
+                                  ItemsSource="{Binding Mascotas}"
+                                  x:Name="swipe_view"
+                                  VerticalOptions="FillAndExpand"
+                                  HorizontalOptions="FillAndExpand"
+                                  Padding="10"
+                                  AnimationLength="250"
+                                  BackCardScale="0.5"
+                                  CardRotation="45"
+                                  SwipedCommand="{Binding Swiped_Command}"
+                                  DraggingCommand="{Binding Dragging_Command}">
+            <!--Card Item Template-->
+            <swipe_view:SwipeCardView.ItemTemplate>
+                <DataTemplate>
+                    <Grid  x:Name="Item"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*" />
+                            <RowDefinition  Height="1" />
+                        </Grid.RowDefinitions>
+                        <Frame Margin="5"
+                               Grid.Row="0"
+                               BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}"
+                               BindingContext="{Binding Main.Feed, Source={StaticResource Locator}}"
+                               BorderColor="{Binding Border_Color}"
+                               Padding="0"
+                               x:Name="main_frame"
+                               HasShadow="True"
+                               CornerRadius="20"
+                               HorizontalOptions="FillAndExpand">
+
+
+                            <StackLayout BindingContext="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                         BackgroundColor="Transparent"
+                                         Padding="10"
+                                         Spacing="0 "
+                                         VerticalOptions="FillAndExpand"
+                                         Margin="0"
+                                         HorizontalOptions="FillAndExpand">
+                                <!--Images Carrousel-->
+                                <CarouselView        ItemsSource="{Binding imagenes_mascota}"
+                                                     Margin="0"
+                                                     BackgroundColor="Transparent"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     HeightRequest="300"
+                                                     IsScrollAnimated="False"
+                                                     Loop="False"
+                                                     IndicatorView="images_indicator_view">
+                                    <CarouselView.EmptyView>
+                                        <StackLayout BackgroundColor="Transparent">
+                                            <Image Source="PetsArmy"
+                                                   Aspect="AspectFill"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HeightRequest="300" />
+                                        </StackLayout>
+
+                                    </CarouselView.EmptyView>
+                                    <CarouselView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Frame Margin="0"
+                                                   Padding="0"
+                                                   CornerRadius="20">
+                                                <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
+                                                       Aspect="AspectFill"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       HeightRequest="300" />
+                                            </Frame>
+                                        </DataTemplate>
+                                    </CarouselView.ItemTemplate>
+                                </CarouselView>
+                                <!--Indicator View Carrousel-->
+                                <IndicatorView x:Name="images_indicator_view"
+                                               BackgroundColor="Transparent"
+                                               IndicatorsShape="Circle"
+                                               SelectedIndicatorColor="{StaticResource MatrixGreen}"
+                                               HorizontalOptions="CenterAndExpand"
+                                               Margin="3">
+                                </IndicatorView>
+                                <!--Name-->
+                                <Label Text="{Binding nombre}"
+                                       FontAttributes="Bold"
+                                       FontSize="26"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                       HorizontalOptions="StartAndExpand" />
+                                <!--Age-->
+                                <inputLayout:SfTextInputLayout ContainerType="None"
+                                                               FocusedStrokeWidth="0"
+                                                               UnfocusedStrokeWidth="0"
+                                                               Margin="4,4,0,0"
+                                                               VerticalOptions="Center"
+                                                               HorizontalOptions="StartAndExpand"
+                                                               BackgroundColor="Transparent">
+                                    <Label Text="{Binding edad, Converter={StaticResource YearToYearAndMonthsString}}"
+                                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                           FontSize="18"
+                                           Margin="0"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="StartAndExpand" />
+                                    <!--Icono-->
+                                    <inputLayout:SfTextInputLayout.LeadingView>
+                                        <Image VerticalOptions="Start">
+                                            <Image.Source>
+                                                <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                                                 Glyph="{x:Static local:IconClass.CalendarTimes}"
+                                                                 Color="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                            </Image.Source>
+                                        </Image>
+                                    </inputLayout:SfTextInputLayout.LeadingView>
+                                </inputLayout:SfTextInputLayout>
+                                <!--Weight-->
+                                <inputLayout:SfTextInputLayout ContainerType="None"
+                                                               FocusedStrokeWidth="0"
+                                                               UnfocusedStrokeWidth="0"
+                                                               Margin="4,0,0,0"
+                                                               VerticalOptions="Center"
+                                                               HorizontalOptions="StartAndExpand"
+                                                               BackgroundColor="Transparent">
+
+                                    <Label Text="{Binding Source={x:Reference Item}, Path=BindingContext.peso, Converter={StaticResource WeightFormatter}}"
+                                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                           FontSize="18" />
+                                    <!--Icono-->
+                                    <inputLayout:SfTextInputLayout.LeadingView>
+                                        <Image VerticalOptions="Start">
+                                            <Image.Source>
+                                                <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                                                 Glyph="{x:Static local:IconClass.Weight}"
+                                                                 Color="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                            </Image.Source>
+                                        </Image>
+                                    </inputLayout:SfTextInputLayout.LeadingView>
+                                </inputLayout:SfTextInputLayout>
+                                <!--Descrcipcion-->
+                                <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                               ContainerType="None"
+                                                               IsHintAlwaysFloated="True"
+                                                               Margin="15,5,15,0"
+                                                               Hint="{xct:Translate MoreAboutMe}"
+                                                               HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding Source={x:Reference Item}, Path=BindingContext.descripcion}"
+                                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                           FontSize="14"
+                                           LineBreakMode="WordWrap"
+                                           Padding="10" />
+                                </inputLayout:SfTextInputLayout>
+                                <!--ScrollView Tags-->
+                                <ScrollView>
+                                    <StackLayout>
+                                        <!--Chips Tags-->
+                                        <buttons:SfChipGroup ItemsSource="{Binding mascota_tags}"
+                                                             Type="Input"
+                                                             IsEnabled="False"
+                                                             HorizontalOptions="FillAndExpand"
+                                                             ChipBackgroundColor="{StaticResource SpaceCadet}"
+                                                             ChipPadding="5">
+                                            <buttons:SfChipGroup.ChipLayout>
+                                                <FlexLayout HorizontalOptions="FillAndExpand"
+                                                            VerticalOptions="Center"
+                                                            Direction="Row"
+                                                            Wrap="Wrap"
+                                                            JustifyContent="Start"
+                                                            AlignContent="SpaceBetween"
+                                                            AlignItems="Start" />
+                                            </buttons:SfChipGroup.ChipLayout>
+                                            <buttons:SfChipGroup.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackLayout x:Name="chip_item"
+                                                                 Orientation="Horizontal">
+                                                        <Image HeightRequest="24"
+                                                               BindingContext="{Binding Main.Feed, Source={StaticResource Locator}}">
+                                                            <Image.Source>
+                                                                <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                                                                 Glyph="{x:Static local:IconClass.Paw}"
+                                                                                 Color="{Binding Border_Color}" />
+                                                            </Image.Source>
+                                                        </Image>
+                                                        <Label BindingContext="{Binding Source={x:Reference chip_item}, Path=BindingContext}"
+                                                               Text="{Binding tag.nombre_tag}"
+                                                               FontAttributes="Bold"
+                                                               TextColor="LightGray" />
+                                                    </StackLayout>
+                                                </DataTemplate>
+                                            </buttons:SfChipGroup.ItemTemplate>
+                                        </buttons:SfChipGroup>
+                                        <!--booleanos bd-->
+                                        <buttons:SfChipGroup BindingContext="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                             ChipPadding="5"
+                                                             HorizontalOptions="FillAndExpand">
+                                            <buttons:SfChipGroup.ChipLayout>
+                                                <FlexLayout HorizontalOptions="FillAndExpand"
+                                                            VerticalOptions="Center"
+                                                            Direction="Row"
+                                                            Wrap="Wrap"
+                                                            JustifyContent="Start"
+                                                            AlignContent="SpaceBetween"
+                                                            AlignItems="Start" />
+                                            </buttons:SfChipGroup.ChipLayout>
+                                            <buttons:SfChip IsVisible="{Binding castrado}"
+                                                            BackgroundColor="{StaticResource Grad2}"
+                                                            Text="Castrado"
+                                                            Margin="6,5,0,8" />
+                                            <buttons:SfChip IsVisible="{Binding alergias}"
+                                                            BackgroundColor="{StaticResource Grad3}"
+                                                            Text="Alergias"
+                                                            Margin="6,5,0,8" />
+                                            <buttons:SfChip IsVisible="{Binding discapacidad}"
+                                                            BackgroundColor="{StaticResource Grad4}"
+                                                            Text="Discapacidad"
+                                                            Margin="6,5,0,8" />
+                                            <buttons:SfChip IsVisible="{Binding enfermedad}"
+                                                            BackgroundColor="{StaticResource Grad5}"
+                                                            Text="Enfermedad" />
+                                            <buttons:SfChip IsVisible="{Binding vacunado}"
+                                                            BackgroundColor="{StaticResource Grad5}"
+                                                            Text="Vacunado"
+                                                            Margin="6,5,0,8" />
+                                        </buttons:SfChipGroup>
+                                    </StackLayout>
+                                </ScrollView>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </swipe_view:SwipeCardView.ItemTemplate>
+        </swipe_view:SwipeCardView>
+    </ContentPage.Content>
+</ContentPage>

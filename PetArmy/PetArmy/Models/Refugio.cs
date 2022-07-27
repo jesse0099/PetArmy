@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PetArmy.Models
+﻿namespace PetArmy.Models
 {
     public class Refugio
     {
@@ -18,6 +14,11 @@ namespace PetArmy.Models
 
         public Refugio()
         {
+        }
+
+        public Refugio(int id_refugio)
+        {
+            this.id_refugio = id_refugio;
         }
 
         public Refugio(bool activo, string administrador, string telefono, string nombre, string info_legal, int id_refugio, string direccion, string correo, int capacidad)

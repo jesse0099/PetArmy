@@ -9,6 +9,7 @@ using PetArmy.Helpers;
 using GraphQL.Client.Serializer.Newtonsoft;
 using PetArmy.Models;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace PetArmy.Services
 {
@@ -975,8 +976,39 @@ namespace PetArmy.Services
         }
 
         #endregion
-        
-           }
+
+        #region Feed Operations 
+        public static async Task<IEnumerable<Mascota>> GetNearPetsByTags(string[] tags, double latitude, double longitude, double distance)
+        {
+            try
+            {
+                var var_dictionary = new Dictionary<string, object>();
+                var_dictionary.Add("distance", distance);
+                var_dictionary.Add("tags", tags);
+                var_dictionary.Add("from", new { coordinates = new List<double>() { longitude, latitude},
+                                                  type = "Point"});
+
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = Commons.GetNearPetsByTagsQuery,
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
+                    Variables = var_dictionary
+                };
+
+
+                var foundResponse = await client.SendQueryAsync<FeedGrapQLResponse>(findRequest);
+
+                return foundResponse.Data.near_pets_by_tags;
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        #endregion
+    }
 
 }
 

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local_views="clr-namespace:PetArmy.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            x:Class="PetArmy.Views.FeedTabeedView">
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Tab 2" />
+    <local_views:FeedContentView IconImageSource="PetsArmy.png" />
+    <ContentPage Title="Tab 3" />
+</TabbedPage>

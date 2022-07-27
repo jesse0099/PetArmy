@@ -11,6 +11,14 @@ namespace PetArmy.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         //Bound properties
+        private bool _is_Admin;
+
+        public bool Is_Admin
+        {
+            get { return _is_Admin; }
+            set { _is_Admin = value; OnPropertyChanged(); }
+        }
+
         private bool _emailError;
         public bool EmailError { get { return _emailError; } set { _emailError = value; OnPropertyChanged(); } }
 
@@ -221,6 +229,7 @@ namespace PetArmy.ViewModels
                                 Application.Current.MainPage = new AppShell();
 
                             Settings.IsAdmin = true;
+                            Is_Admin = true;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -230,6 +239,7 @@ namespace PetArmy.ViewModels
                                 Application.Current.MainPage = new AppShell();
 
                             Settings.IsAdmin = true;
+                            Is_Admin = true;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }
@@ -239,7 +249,8 @@ namespace PetArmy.ViewModels
                                 Application.Current.MainPage = new AppShell();
 
                             Settings.IsAdmin = false;
-                            await Shell.Current.GoToAsync("//AboutPage");
+                            Is_Admin = false;
+                            await Shell.Current.GoToAsync("//Feed");
                             break;
                         }
                 }

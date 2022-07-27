@@ -21,6 +21,8 @@ namespace PetArmy.ViewModels
 
         public SearchBarViewModel SearchBar { get; set; }
 
+        public FeedViewModel Feed { get; set; }
+
         public MainViewModel(): base()
         {
             this.Login = LoginViewModel.GetInstance();
@@ -34,7 +36,7 @@ namespace PetArmy.ViewModels
             this.SearchBar = SearchBarViewModel.GetInstance();
             this.EditShelter = EditShelterViewModel.GetInstance();
             this.User = new UserViewModel();
-         
+            this.Feed = FeedViewModel.GetInstance();
 
         }
     }

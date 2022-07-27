@@ -346,4 +346,16 @@
   <data name="CreateNewAccount" xml:space="preserve">
     <value>Create Your New Account!</value>
   </data>
+  <data name="Years" xml:space="preserve">
+    <value>Years</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>Months</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="MoreAboutMe" xml:space="preserve">
+    <value>More About Me</value>
+  </data>
 </root>

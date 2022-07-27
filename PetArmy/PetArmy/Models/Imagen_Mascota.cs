@@ -15,6 +15,10 @@ namespace PetArmy.Models
         {
 
         }
+        public Imagen_Mascota(string imagen)
+        {
+            this.imagen = imagen;
+        }
         public Imagen_Mascota(int id_imagen, string imagen, bool isDefault)
         {
             this.id_imagen = id_imagen;

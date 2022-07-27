@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PetArmy.Models
+﻿namespace PetArmy.Models
 {
     public class Tag
     {
@@ -11,6 +7,11 @@ namespace PetArmy.Models
 
         public Tag()
         {
+        }
+
+        public Tag(string nombre_tag)
+        {
+            this.nombre_tag = nombre_tag;
         }
 
         public Tag(string nombre_tag, int id_tag)

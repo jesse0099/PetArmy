@@ -17,6 +17,9 @@
             <Helpers:AdminRequestActionVisibilityConverter x:Key="AdminRequestStatusToBool" />
             <Helpers:AdminRequestAccessVisibilityConverter x:Key="AdminRequestAccessToBool" />
             <Helpers:AdminRequestStatusTranslator x:Key="AdminRequestStatusTranslator" />
+            <Helpers:Base64ImageToImageSource x:Key="Base64ToImage" />
+            <Helpers:YearFloatToYearAndMonthString x:Key="YearToYearAndMonthsString" />
+            <Helpers:WeightFormatter x:Key="WeightFormatter" />
             <!--Localizador de instancias-->
             <infraestructure:InstanceLocator x:Key="Locator" />
 
@@ -27,6 +30,7 @@
             <Color x:Key="LightGreen">#25D366</Color>
             <Color x:Key="TealGreen">#128C7E</Color>
             <Color x:Key="TealGreenDark">#075E54</Color>
+            <Color x:Key="MatrixGreen">#64DD17</Color>
             <Color x:Key="CustomYellow">#ffd319</Color>
             <Color x:Key="CustomOrange">#ff901f</Color>
             <Color x:Key="CustomPink">#ff2975</Color>
@@ -40,6 +44,15 @@
             <Color x:Key="PurplePlum">#a657ae</Color>
             <Color x:Key="Flirt">#8c1a6a</Color>
             <Color x:Key="MiddlePurple">#9d75cb</Color>
+            
+            <!--Monochromatic Gradient (Pet bool values)-->
+            <Color x:Key="Grad1">#19192f</Color>
+            <Color x:Key="Grad2">#32325f</Color>
+            <Color x:Key="Grad3">#4b4b8f</Color>
+            <Color x:Key="Grad4">#6f6fb3</Color>
+            <Color x:Key="Grad5">#9f9fcc</Color>
+            <Color x:Key="Grad6">#cfcfe5</Color>
+            
             <x:String x:Key="SfTextInputLayoutTheme">CustomTheme</x:String>
             <Color x:Key="SfTextInputLayoutHelperTextColor">#bcbcbc</Color>
 

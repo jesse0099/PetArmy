@@ -5,7 +5,9 @@
        xmlns:fa="clr-namespace:PetArmy"
        xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
        Title="PetArmy"
-       x:Class="PetArmy.AppShell">
+       x:Class="PetArmy.AppShell"
+       xmlns:Helpers="clr-namespace:PetArmy.Helpers"
+       BindingContext="{Binding Main, Source={StaticResource Locator}}">
 
     <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -15,7 +17,7 @@
 
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <Grid BackgroundColor="{StaticResource Flirt}"
+            <Grid BackgroundColor="{AppThemeBinding  Light={StaticResource LuckyPoint}, Dark={StaticResource SpaceCadet}}"
                   HeightRequest="200">
                 <Image Aspect="AspectFit"
                        Source="PetsArmy.png"
@@ -30,7 +32,8 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Flirt}" />
+                <Setter Property="Shell.BackgroundColor"
+                        Value="{AppThemeBinding  Light={StaticResource LuckyPoint}, Dark={StaticResource SpaceCadet}}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
@@ -63,7 +66,8 @@
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Flirt}" />
+                                    <Setter Property="BackgroundColor"
+                                            Value="{AppThemeBinding  Light={StaticResource LuckyPoint}, Dark={StaticResource SpaceCadet}}" />
                                     <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}"/>
                                 </VisualState.Setters>
                             </VisualState>
@@ -110,7 +114,7 @@
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
 
-    <FlyoutItem Title="Mis Servicios">
+    <FlyoutItem Title="Mis Servicios"  IsVisible="{Binding Login.Is_Admin}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.Warehouse}" Color="{StaticResource Primary}" />
@@ -119,7 +123,7 @@
                       ContentTemplate="{DataTemplate local:MyServicesView}"/>
     </FlyoutItem>
 
-    <FlyoutItem Title="Mascotas">
+    <FlyoutItem Title="Mascotas" IsVisible="{Binding Login.Is_Admin}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.Paw}" Color="{StaticResource Primary}" />
@@ -128,7 +132,7 @@
                       ContentTemplate="{DataTemplate local:AdminLandingPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Perfil">
+    <FlyoutItem Title="Perfil" IsVisible="{Binding Login.Is_Admin, Converter={StaticResource InverseBool}}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.User}" Color="{StaticResource Primary}" />
@@ -143,6 +147,16 @@
                              Glyph="{x:Static fa:IconClass.InfoCircle}" Color="{StaticResource Primary}" />
         </FlyoutItem.Icon>
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:TabbedPageTest}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="My Feed" IsVisible="{Binding Login.Is_Admin, Converter={StaticResource InverseBool}}">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                             Glyph="{x:Static fa:IconClass.InfoCircle}"
+                             Color="{StaticResource Primary}" />
+        </FlyoutItem.Icon>
+        <ShellContent Route="Feed"
+                      ContentTemplate="{DataTemplate local:FeedTabeedView}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Help">

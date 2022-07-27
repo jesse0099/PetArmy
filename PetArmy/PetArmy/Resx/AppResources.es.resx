@@ -366,4 +366,16 @@
   <data name="ShelterKey" xml:space="preserve">
     <value>Refugio</value>
   </data>
+  <data name="Years" xml:space="preserve">
+    <value>Años</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>Meses</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>Edad</value>
+  </data>
+  <data name="MoreAboutMe" xml:space="preserve">
+    <value>Más sobre mí</value>
+  </data>
 </root>

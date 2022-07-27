@@ -106,6 +106,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Age.
+        /// </summary>
+        public static string Age {
+            get {
+                return ResourceManager.GetString("Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is Alergic.
+        /// </summary>
+        public static string AlergiesKey {
+            get {
+                return ResourceManager.GetString("AlergiesKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All Fields Are Required.
         /// </summary>
         public static string AllFieldsRequired {
@@ -129,15 +147,6 @@ namespace Resx {
         public static string BadFormattedEmail {
             get {
                 return ResourceManager.GetString("BadFormattedEmail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Is Alergic.
-        /// </summary>
-        public static string AlergiesKey {
-            get {
-                return ResourceManager.GetString("AlergiesKey", resourceCulture);
             }
         }
         
@@ -259,6 +268,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string DescriptionKey {
+            get {
+                return ResourceManager.GetString("DescriptionKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disable Account.
         /// </summary>
         public static string DisableAccount {
@@ -273,15 +291,6 @@ namespace Resx {
         public static string Email_Admin {
             get {
                 return ResourceManager.GetString("Email_Admin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Description.
-        /// </summary>
-        public static string DescriptionKey {
-            get {
-                return ResourceManager.GetString("DescriptionKey", resourceCulture);
             }
         }
         
@@ -358,6 +367,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Handicaped.
+        /// </summary>
+        public static string HandicapedKey {
+            get {
+                return ResourceManager.GetString("HandicapedKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Last Name.
         /// </summary>
         public static string LastName {
@@ -385,20 +403,29 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Handicaped.
-        /// </summary>
-        public static string HandicapedKey {
-            get {
-                return ResourceManager.GetString("HandicapedKey", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Log In.
         /// </summary>
         public static string LogIn {
             get {
                 return ResourceManager.GetString("LogIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Months.
+        /// </summary>
+        public static string Months {
+            get {
+                return ResourceManager.GetString("Months", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to More About Me.
+        /// </summary>
+        public static string MoreAboutMe {
+            get {
+                return ResourceManager.GetString("MoreAboutMe", resourceCulture);
             }
         }
         
@@ -412,20 +439,20 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid Phone Number.
-        /// </summary>
-        public static string NonValidPhoneNumber {
-            get {
-                return ResourceManager.GetString("NonValidPhoneNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string NameKey {
             get {
                 return ResourceManager.GetString("NameKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Phone Number.
+        /// </summary>
+        public static string NonValidPhoneNumber {
+            get {
+                return ResourceManager.GetString("NonValidPhoneNumber", resourceCulture);
             }
         }
         
@@ -493,20 +520,20 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Phone Number.
-        /// </summary>
-        public static string PhoneNumber {
-            get {
-                return ResourceManager.GetString("PhoneNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Pet.
         /// </summary>
         public static string PetKey {
             get {
                 return ResourceManager.GetString("PetKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone Number.
+        /// </summary>
+        public static string PhoneNumber {
+            get {
+                return ResourceManager.GetString("PhoneNumber", resourceCulture);
             }
         }
         
@@ -804,6 +831,15 @@ namespace Resx {
         public static string WeightKey {
             get {
                 return ResourceManager.GetString("WeightKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Years {
+            get {
+                return ResourceManager.GetString("Years", resourceCulture);
             }
         }
     }

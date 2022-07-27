@@ -22,6 +22,35 @@ namespace PetArmy.Helpers
         public const string AdminRequestRejectedState = "Rejected";
         public const string AdminRequestPendingState = "Pending";
         public const string AdminRequestProcessingState = "Processing";
+        public const string GetNearPetsByTagsQuery = @"query near_pets_by_tags($distance: Float!, $from: geography!, $tags: [String]) {
+                                                          near_pets_by_tags:mascota(where: {_and: [ {mascota_tags: {tag: {nombre_tag: {_in: $tags}}}}
+    						                                                                        {refugio: {ubicaciones_refugios: {g_location: {_st_d_within: {distance: $distance, from: $from}}}}}
+    										                                                        {estado: {_eq: true}}
+                                                                                                   ]}) {
+                                                            id_mascota
+                                                            nombre
+                                                            especie
+                                                            raza
+                                                            peso
+                                                            descripcion
+                                                            discapacidad
+                                                            alergias
+                                                            castrado
+                                                            vacunado
+                                                            edad
+                                                            refugio {
+                                                              id_refugio
+                                                            }
+                                                            mascota_tags {
+                                                              tag {
+                                                                nombre_tag
+                                                              }
+                                                            }
+                                                            imagenes_mascota{
+                                                              imagen:image
+                                                            }
+                                                          }
+                                                        }";
 
         const Int16 minimum_password_length = 6;
         const string emailRegex = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
