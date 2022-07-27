@@ -22,9 +22,9 @@
             <StackLayout>
                 <ScrollView>
                     <ListView x:Name="CartItemsView"
-                  BackgroundColor="Transparent"
-                  SeparatorVisibility="None"
-                  ItemsSource="{Binding CustomList}">
+                              BackgroundColor="Transparent"
+                               SeparatorVisibility="None"
+                               ItemsSource="{Binding CustomList}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ImageCell TextColor="#9b9b9b"

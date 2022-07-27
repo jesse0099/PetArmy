@@ -1158,6 +1158,76 @@ namespace PetArmy.Services
 
         #endregion
 
+        #region User Preferences 
+
+        public static async Task DeletePreference(int idTag)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation { delete_preferencia_adoptante(where: {id_tag: {_eq: "+idTag+"}}) { returning { uid }}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Preferencia_adoptanteGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        public static async Task AddPreference(Preferencia_adoptante preference)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation { insert_preferencia_adoptante(objects: {uid: \""+preference.uid+"\", id_tag: "+preference.id_tag+"}) { returning { uid } } }",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Preferencia_adoptanteGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        public static async Task<List<Preferencia_adoptante>> GetUserPreferences(string uid)
+        {
+            List<Preferencia_adoptante> preferences = new List<Preferencia_adoptante>();
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery { preferencia_adoptante(where: {uid: {_eq: \""+uid+"\" }}) { id_tag uid }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Preferencia_adoptanteGraphQLResponse>(request);
+                preferences = response.Data.preferencia_adoptante;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return preferences;
+        }
+
+        #endregion
+
     }
 
 }

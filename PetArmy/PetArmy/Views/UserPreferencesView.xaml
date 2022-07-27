@@ -1,13 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="PetArmy.Views.UserPreferencesView"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
-    <ContentPage.Content>
-        <StackLayout BindingContext="{Binding UserProfile}">
-            <Label Text="User preferences"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout BindingContext="{Binding UserProfile}">
+        <ListView ItemsSource="{Binding MyPreferences}" BackgroundColor="Transparent" SeparatorColor="Transparent">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0">
+                                <Label Text="{Binding tag.nombre_tag}" HorizontalOptions="Center" />
+                            </StackLayout>
+                            <syncfusion:SfSwitch x:Name="tagIsActive" StateChanged="tagIsActive_StateChanged"  IsOn="{Binding isSelected}" Grid.Column="1"/>
+                           
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+      
+    </StackLayout>
 </ContentPage>

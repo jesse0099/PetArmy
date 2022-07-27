@@ -16,6 +16,8 @@ using PetArmy.Helpers;
 using System.Windows.Input;
 using PetArmy.Interfaces;
 using PetArmy.Views;
+using System.Linq;
+using Syncfusion.XForms.Buttons;
 
 namespace PetArmy.ViewModels
 {
@@ -50,6 +52,7 @@ namespace PetArmy.ViewModels
         public void initClass()
         {
             _i_auth = DependencyService.Get<IFirebaseAuth>();
+            MyPreferences = new BindingList<CstmItemPreference>();
          
         }
 
@@ -59,6 +62,7 @@ namespace PetArmy.ViewModels
             OpenUserInfo = new Command(openUserInfo);
             PickImage = new Command(pickImage);
             EditInfo = new Command(editInfo);
+            
         }
 
         #endregion
@@ -228,6 +232,31 @@ namespace PetArmy.ViewModels
         }
 
 
+        private IEnumerable<Tag> _tagsGeneral;
+
+        public IEnumerable<Tag> TagsGeneral
+        {
+            get { return _tagsGeneral; }
+            set { _tagsGeneral = value; OnPropertyChanged(); }
+        }
+
+        private List<Preferencia_adoptante> _userPreferences;
+
+        public List<Preferencia_adoptante> UserPreferences
+        {
+            get { return _userPreferences; }
+            set { _userPreferences = value; OnPropertyChanged(); }
+        }
+
+        private BindingList<CstmItemPreference> _myPreferences;
+
+        public BindingList<CstmItemPreference> MyPreferences
+        {
+            get { return _myPreferences; }
+            set { _myPreferences = value; OnPropertyChanged(); }
+        }
+
+
         #endregion
 
         #region Commands and Functions
@@ -236,10 +265,12 @@ namespace PetArmy.ViewModels
         public ICommand OpenUserInfo { get; set; }
         public ICommand PickImage { get; set; }
         public ICommand EditInfo { get; set; }
-
+        public ICommand UpdatePreferences { get; set; }
 
         public async Task setUserInfo()
         {
+            #region General Info
+
             List<User_Info> usersInfo = new List<User_Info>();
            
 
@@ -287,7 +318,55 @@ namespace PetArmy.ViewModels
                 DataIsFound = false;
 
             }
+            #endregion
+
+            #region Preferences
+
+            TagsGeneral = await GraphQLService.getAllTags();
+            UserPreferences = await GraphQLService.GetUserPreferences(Settings.UID);
+
+            if (UserPreferences.Count > 0)
+            {
+                List<CstmItemPreference> preferences = new List<CstmItemPreference>();
+
+                foreach (var tag in TagsGeneral)
+                {
+                    var found = UserPreferences.Any(x => x.id_tag == tag.id_tag);
+                    CstmItemPreference cstPreference = new CstmItemPreference();
+
+                    if (found)
+                    {
+                        cstPreference.tag = tag;
+                        cstPreference.isSelected = true;
+                    }
+                    else
+                    {
+                        cstPreference.tag = tag;
+                        cstPreference.isSelected = false;
+                    }
+
+                    preferences.Add(cstPreference); 
+                }
+
+                MyPreferences = new BindingList<CstmItemPreference>(preferences);
+            }
+            else
+            {
+                List<CstmItemPreference> temp = new List<CstmItemPreference>();
+
+                foreach (Tag tag in TagsGeneral)
+                {
+                       CstmItemPreference newItem = new CstmItemPreference();
+
+                        newItem.tag = tag;
+                        newItem.isSelected = false;
+                        temp.Add(newItem);
+                }
+
+                MyPreferences = new BindingList<CstmItemPreference>(temp);
+            }
            
+            #endregion
         }
 
         public async void openUserInfo()
@@ -404,6 +483,58 @@ namespace PetArmy.ViewModels
             AdoptIsFound = true;
             await Shell.Current.GoToAsync("//UserProfileTabbedView");
         }
+
+        public async Task updatePreferences()
+        {
+            if (MyPreferences.Count > 0)
+            {
+                /*Se toman en cuenta las preferencias más actuales*/
+                List<Preferencia_adoptante> curPreferences = await GraphQLService.GetUserPreferences(Settings.UID);
+                
+                /* Por cada preferencia en la lista cst*/
+                foreach (var preference in MyPreferences)
+                {
+                    bool isFound = false;
+
+                    /* Por cada preferencia, preguntamos si existe la preferencia dentro de las preferencias del usuario*/
+                    if (curPreferences.Count > 0) {
+                       Preferencia_adoptante found = curPreferences.Single(x => x.id_tag == preference.tag.id_tag);
+                        if (found != null) { 
+                            isFound = true;
+                        }
+                    }
+                    /* Por cada preferencia, creamos para luego manejarlo según el comportamiento */
+                    Preferencia_adoptante newPreference = new Preferencia_adoptante();
+                    /* Siempre será el mismo UID del usuario*/
+                    newPreference.uid = Settings.UID;
+
+                    /* Si se encontró la preferencia en la lista actualizada*/
+                    if (isFound)
+                    {
+                        /* Si se encuentra la preferencia significa que este usuario la quiere y no hay modificación .
+                         Pero si está desactivada esta se procede a eliminar */
+                        if (!preference.isSelected)
+                        { 
+                            await GraphQLService.DeletePreference(preference.tag.id_tag);
+                        }
+                    }
+                    else
+                    {
+                        /* Caso contrario que no encuentre en la lista actualizada y esta preferencia se procede a agregar. */
+
+                        if (preference.isSelected)
+                        {
+                            newPreference.id_tag = preference.tag.id_tag;
+                            await GraphQLService.AddPreference(newPreference);
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+     
 
 
         #endregion
