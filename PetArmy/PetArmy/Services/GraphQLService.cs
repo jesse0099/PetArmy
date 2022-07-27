@@ -1160,14 +1160,14 @@ namespace PetArmy.Services
 
         #region User Preferences 
 
-        public static async Task DeletePreference(int idTag)
+        public static async Task DeletePreference(Preferencia_adoptante preferencia)
         {
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation { delete_preferencia_adoptante(where: {id_tag: {_eq: "+idTag+"}}) { returning { uid }}}",
+                    Query = "mutation MyMutation {delete_preferencia_adoptante(where: {uid: {_eq: \""+preferencia.uid+"\"}, id_tag: {_eq: "+preferencia.id_tag+"}}) { returning { uid }}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 

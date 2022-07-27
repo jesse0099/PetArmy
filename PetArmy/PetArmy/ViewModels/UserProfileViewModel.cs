@@ -488,49 +488,63 @@ namespace PetArmy.ViewModels
         {
             if (MyPreferences.Count > 0)
             {
-                /*Se toman en cuenta las preferencias más actuales*/
-                List<Preferencia_adoptante> curPreferences = await GraphQLService.GetUserPreferences(Settings.UID);
-                
-                /* Por cada preferencia en la lista cst*/
+
+                List<Preferencia_adoptante> curPreferencias = await GraphQLService.GetUserPreferences(Settings.UID);
+
+                /* Por cada item en la lista */
                 foreach (var preference in MyPreferences)
                 {
                     bool isFound = false;
 
-                    /* Por cada preferencia, preguntamos si existe la preferencia dentro de las preferencias del usuario*/
-                    if (curPreferences.Count > 0) {
-                       Preferencia_adoptante found = curPreferences.Single(x => x.id_tag == preference.tag.id_tag);
-                        if (found != null) { 
-                            isFound = true;
-                        }
-                    }
-                    /* Por cada preferencia, creamos para luego manejarlo según el comportamiento */
-                    Preferencia_adoptante newPreference = new Preferencia_adoptante();
-                    /* Siempre será el mismo UID del usuario*/
-                    newPreference.uid = Settings.UID;
-
-                    /* Si se encontró la preferencia en la lista actualizada*/
-                    if (isFound)
+                    /* Si hay preferencias en BD*/
+                    if (curPreferencias.Count > 0)
                     {
-                        /* Si se encuentra la preferencia significa que este usuario la quiere y no hay modificación .
-                         Pero si está desactivada esta se procede a eliminar */
-                        if (!preference.isSelected)
-                        { 
-                            await GraphQLService.DeletePreference(preference.tag.id_tag);
+                       /* Se bsuca ese item en la lista de BD*/
+                       isFound = curPreferencias.Any(x => x.id_tag == preference.tag.id_tag);
+
+                        /* Si se encuentra*/
+                        if (isFound)
+                        {
+                            if (!preference.isSelected)
+                            {
+                                Preferencia_adoptante treated = new Preferencia_adoptante();
+                                treated.uid = Settings.UID;
+                                treated.id_tag = preference.tag.id_tag;
+                                await GraphQLService.DeletePreference(treated);
+                            }
+
                         }
+                        else
+                        {
+                            /* Si no se encuentra*/
+
+                            if (preference.isSelected)
+                            {
+                                Preferencia_adoptante treated = new Preferencia_adoptante();
+                                treated.uid = Settings.UID;
+                                treated.id_tag = preference.tag.id_tag;
+                                await GraphQLService.AddPreference(treated);
+                            }
+
+                        }
+
                     }
                     else
                     {
-                        /* Caso contrario que no encuentre en la lista actualizada y esta preferencia se procede a agregar. */
-
+                        /* Si no hay preferencias en BD*/
                         if (preference.isSelected)
                         {
-                            newPreference.id_tag = preference.tag.id_tag;
-                            await GraphQLService.AddPreference(newPreference);
+                            Preferencia_adoptante treated = new Preferencia_adoptante();
+                            treated.uid = Settings.UID;
+                            treated.id_tag = preference.tag.id_tag;
+                            await GraphQLService.AddPreference(treated);
                         }
 
                     }
 
+
                 }
+
             }
         }
 
