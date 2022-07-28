@@ -283,13 +283,15 @@
                                                             Margin="5"/>
                                 <!--Icono-->
                                 <inputLayout:SfTextInputLayout.LeadingView>
-                                    <Image VerticalOptions="CenterAndExpand"
+                                    <Image VerticalOptions="Center"
+                                           Aspect="AspectFit"
                                            WidthRequest="60"
                                            HeightRequest="60">
                                         <Image.Source>
                                             <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
                                                              Glyph="{x:Static local:IconClass.Paw}"
-                                                             Color="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                                                             BindingContext="{Binding Main.Feed, Source={StaticResource Locator}}"
+                                                             Color="{Binding Border_Color}"/>
                                         </Image.Source>
                                     </Image>
                                 </inputLayout:SfTextInputLayout.LeadingView>
