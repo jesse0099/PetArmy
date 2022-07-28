@@ -91,12 +91,22 @@
                                                HorizontalOptions="CenterAndExpand"
                                                Margin="3">
                                 </IndicatorView>
-                                <!--Name-->
-                                <Label Text="{Binding nombre}"
-                                       FontAttributes="Bold"
-                                       FontSize="26"
-                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
-                                       HorizontalOptions="StartAndExpand" />
+                                <!--Name and distance-->
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="FillAndExpand">
+                                    <!--Name-->
+                                    <Label Text="{Binding nombre}"
+                                           FontAttributes="Bold"
+                                           FontSize="26"
+                                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                           HorizontalOptions="StartAndExpand" />
+                                    <!--Distance-->
+                                    <Label Text="{Binding Ubicacion, Converter={StaticResource UserToPetDistanceConverter}}"
+                                           FontAttributes="Bold"
+                                           FontSize="26"
+                                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                           HorizontalOptions="EndAndExpand" />
+                                </StackLayout>
                                 <!--Age-->
                                 <inputLayout:SfTextInputLayout ContainerType="None"
                                                                FocusedStrokeWidth="0"
@@ -183,7 +193,7 @@
                                                         <buttons:SfChip BindingContext="{Binding Source={x:Reference bool_chips_item}, Path=BindingContext}"
                                                                         Text="{Binding Bool_Name}"
                                                                         BackgroundColor="{Binding Bool_Color}"
-                                                                        Margin="0"/>
+                                                                        Margin="0" />
                                                     </StackLayout>
                                                 </DataTemplate>
                                             </buttons:SfChipGroup.ItemTemplate>

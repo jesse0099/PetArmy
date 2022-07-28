@@ -20,6 +20,7 @@
             <Helpers:Base64ImageToImageSource x:Key="Base64ToImage" />
             <Helpers:YearFloatToYearAndMonthString x:Key="YearToYearAndMonthsString" />
             <Helpers:WeightFormatter x:Key="WeightFormatter" />
+            <Helpers:UserToPetDistanceConverter x:Key="UserToPetDistanceConverter" />
             <!--Localizador de instancias-->
             <infraestructure:InstanceLocator x:Key="Locator" />
 

@@ -3,7 +3,6 @@ using PetArmy.Infraestructure;
 using PetArmy.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using static PetArmy.Models.Mascota;
 
 namespace PetArmy.Views
 {
@@ -23,7 +22,8 @@ namespace PetArmy.Views
             App.Current.Resources.TryGetValue("Locator", out object locator);
             InstanceLocator local_locator = locator as InstanceLocator;
             var tags = await local_locator.Main.Feed.GetGlobalTags();
-            local_locator.Main.Feed.GetNearPetsBytags(tags);
+            var user_current_location = EditShelterViewModel.GetCurrentPosition().Result;
+            local_locator.Main.Feed.GetNearPetsBytags(tags, user_current_location.Latitude, user_current_location.Longitude);
         }
 
         void OnSwiped(object sender, SwipedCardEventArgs e)

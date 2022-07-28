@@ -23,6 +23,7 @@ namespace PetArmy.Models
         public Refugio  refugio { get; set; }
         public List<MascotaTag>  mascota_tags { get; set; }
         public IEnumerable<Imagen_Mascota> imagenes_mascota { get; set; }
+
         private List<PetDbBools> _db_Bools;
         public List<PetDbBools> Db_Bools
         {
@@ -31,6 +32,16 @@ namespace PetArmy.Models
                 OnPropertyChanged();
             }
         }
+
+        private ubicaciones_refugios _ubicacion;
+        public ubicaciones_refugios Ubicacion
+        {
+            get { return _ubicacion; }
+            set { _ubicacion = value;
+                OnPropertyChanged();
+            }
+        }
+
 
 
 

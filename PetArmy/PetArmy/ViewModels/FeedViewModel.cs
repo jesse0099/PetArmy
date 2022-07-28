@@ -82,9 +82,9 @@ namespace PetArmy.ViewModels
             return tag_names;
         }
 
-        async public void GetNearPetsBytags(string[] tags)
+        async public void GetNearPetsBytags(string[] tags, double latitude, double longitude)
         {
-            Mascotas = new BindingList<Mascota>(await GraphQLService.GetNearPetsByTags(tags, 9.944470790745799, -84.01073040137106, 1000) as List<Mascota>);
+            Mascotas = new BindingList<Mascota>(await GraphQLService.GetNearPetsByTags(tags, latitude, longitude, 1000) as List<Mascota>);
             
             //UI Settings  
             List<Color> gradient = new();
@@ -103,6 +103,7 @@ namespace PetArmy.ViewModels
                     new PetDbBools() { Bool_Name = AppResources.CastratedKey, Bool_Value = pet.castrado, Bool_Color = gradient[4]  },
                 };
                 pet.Db_Bools = bool_values.Where(x => x.Bool_Value).ToList();
+                pet.Ubicacion = pet.refugio.ubicacion[0];
             }
         }
         #region Swipe View Events
