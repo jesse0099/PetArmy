@@ -475,6 +475,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Next Pet Profile.
+        /// </summary>
+        public static string NextPetProfile {
+            get {
+                return ResourceManager.GetString("NextPetProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid Phone Number.
         /// </summary>
         public static string NonValidPhoneNumber {
@@ -651,6 +660,15 @@ namespace Resx {
         public static string RequestAdmin {
             get {
                 return ResourceManager.GetString("RequestAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request Adoption.
+        /// </summary>
+        public static string RequestAdoption {
+            get {
+                return ResourceManager.GetString("RequestAdoption", resourceCulture);
             }
         }
         

@@ -32,7 +32,9 @@
             <Color x:Key="TealGreen">#128C7E</Color>
             <Color x:Key="TealGreenDark">#075E54</Color>
             <Color x:Key="MatrixGreen">#64DD17</Color>
+            <Color x:Key="ArcadeGreen">#70D44B</Color>
             <Color x:Key="CustomYellow">#ffd319</Color>
+            <Color x:Key="ArcadeYellow">#F0AA1D</Color>
             <Color x:Key="CustomOrange">#ff901f</Color>
             <Color x:Key="CustomPink">#ff2975</Color>
             <Color x:Key="EireBlack">#141414</Color>

@@ -39,6 +39,28 @@ namespace PetArmy.ViewModels
             }
         }
 
+        private string _currentActionText;
+
+        public string CurrentActionText
+        {
+            get { return _currentActionText; }
+            set { _currentActionText = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool _currentActionVisibility;
+
+        public bool CurrentActionVisibility
+        {
+            get { return _currentActionVisibility; }
+            set { _currentActionVisibility = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+
         public ICommand Dragging_Command
         {
             get
@@ -64,6 +86,7 @@ namespace PetArmy.ViewModels
         public FeedViewModel()
         {
             _instance = this;
+            CurrentActionVisibility = false;
         }
 
         async public Task<string[]> GetGlobalTags()
@@ -127,15 +150,18 @@ namespace PetArmy.ViewModels
         {
             Color addopt_color = Color.LightGray;
             Color next_color = Color.LightGray;
-            if (Application.Current.RequestedTheme == OSAppTheme.Dark)
-            {
-                Application.Current.Resources.TryGetValue("TealGreen", out object teal_green_dark);
+            Color non_selected_color = Color.LightGray;
+
+            Application.Current.Resources.TryGetValue("ArcadeYellow", out object arcade_yellow);
+            Application.Current.Resources.TryGetValue("ArcadeGreen", out object arcade_green);
+            non_selected_color = (Color)arcade_yellow;
+            addopt_color = (Color)arcade_green;
+
+            if (Application.Current.RequestedTheme == OSAppTheme.Dark){
                 Application.Current.Resources.TryGetValue("SynthPumpkin", out object synth_pupmkin);
-                addopt_color = (Color)teal_green_dark;
                 next_color = (Color)synth_pupmkin;
             }
-            else
-            {
+            else{
                 Application.Current.Resources.TryGetValue("FluoRed", out object fluo_red);
                 addopt_color = Color.YellowGreen;
                 next_color = (Color)fluo_red;
@@ -143,34 +169,51 @@ namespace PetArmy.ViewModels
 
             switch (e.Position)
             {
-                //Podria quitarse en el futuro (Start), para prevenir excesiva facilidad para desplegar la adopcion
                 case DraggingCardPosition.Start:
-                    {
-                        if (e.Direction == SwipeCardDirection.Up)
-                        {
-                            Border_Color = addopt_color;
-                        }
-                        break;
-                    }
+                    break;
                 case DraggingCardPosition.UnderThreshold:
                     {
-                        if (e.Direction == SwipeCardDirection.Up)
-                        {
+                        CurrentActionVisibility = false;
+                        if (e.Direction == SwipeCardDirection.Right || (e.Direction == SwipeCardDirection.Up && e.DistanceDraggedX == 0 ))
                             Border_Color = addopt_color;
-                        }
+                        if (e.Direction == SwipeCardDirection.Left || (e.Direction == SwipeCardDirection.Down))
+                            Border_Color = next_color;
                         break;
                     }
                 case DraggingCardPosition.OverThreshold:
-                    break;
+                    {
+                        //Label with action name
+                        //Request adoption
+                        if (e.Direction == SwipeCardDirection.Right || (e.Direction == SwipeCardDirection.Up && e.DistanceDraggedX ==0 ))
+                        {
+                            CurrentActionVisibility = true;
+                            CurrentActionText = AppResources.RequestAdoption;
+                            Border_Color = addopt_color;
+                        }
+                        //Next Profile
+                        if (e.Direction == SwipeCardDirection.Left || (e.Direction == SwipeCardDirection.Down) 
+                            || (e.Direction == SwipeCardDirection.Up && e.DistanceDraggedX != 0))
+                        {
+                            CurrentActionVisibility = true;
+                            CurrentActionText = AppResources.NextPetProfile;
+                            Border_Color = next_color;
+                        }
+                        break;
+                    }
                 case DraggingCardPosition.FinishedUnderThreshold:
                     {
-
-                        Border_Color = next_color;
+                        //Neutral State
+                        Border_Color = non_selected_color;
+                        CurrentActionVisibility = false;
+                        CurrentActionText = string.Empty;
                         break;
                     }
                 case DraggingCardPosition.FinishedOverThreshold:
                     {
-                        Border_Color = next_color;
+                        //Neutral State (Next Cards)
+                        Border_Color = non_selected_color;
+                        CurrentActionVisibility = false;
+                        CurrentActionText = string.Empty;
                         break;
                     }
             }

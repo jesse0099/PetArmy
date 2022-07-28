@@ -367,4 +367,10 @@
   <data name="Allergies" xml:space="preserve">
     <value>Allergies</value>
   </data>
+  <data name="RequestAdoption" xml:space="preserve">
+    <value>Request Adoption</value>
+  </data>
+  <data name="NextPetProfile" xml:space="preserve">
+    <value>Next Pet Profile</value>
+  </data>
 </root>

@@ -24,10 +24,10 @@ namespace PetArmy.Helpers
         public const string AdminRequestProcessingState = "Processing";
         public const string GetNearPetsByTagsQuery = @"query near_pets_by_tags($distance: Float!, $from: geography!, $tags: [String]) {
         near_pets_by_tags: mascota(where: {_and: [{mascota_tags: {tag: {nombre_tag: {_in: $tags}}}}, 
-                                            {refugio: {ubicaciones_refugios: {g_location: {_st_d_within: {distance: $distance, from: $from}}}}}, 
-                                            {estado: {_eq: true}},
-		                                    {id_mascota: {_eq: 6}}
-                                          ]}) {
+                                                  {refugio: {ubicaciones_refugios: {g_location: {_st_d_within: {distance: $distance, from: $from}}}}}, 
+                                                  {estado: {_eq: true}},
+		                                          {id_mascota: {_in: [6, 4]}}
+                                                  ]}) {
                                             id_mascota
                                             nombre
                                             especie
