@@ -23,7 +23,7 @@
                                                     IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
                             <Entry x:Name="CampCastraName"
-                               Text="{Binding Nombre, Mode=TwoWay}"
+                               Text="{Binding Nombre_Camp, Mode=TwoWay}"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                         </inputLayout:SfTextInputLayout>
 
@@ -76,8 +76,8 @@
                                     Date="{Binding EndDateKey}" />
 
                         <!--Activo (activo)-->
-                        <Label Text="{xct:Translate ActiveCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
-                        <syncfusion:SfSwitch x:Name="CampCastraContainerActivo" IsOn="{Binding Activo, Mode=TwoWay}"/>
+                        <!--<Label Text="{xct:Translate ActiveCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <syncfusion:SfSwitch x:Name="CampCastraContainerActivo" IsOn="{Binding Activo, Mode=TwoWay}"/>-->
 
                         <Button Text="{xct:Translate SaveCampKey}"
                         Command="{Binding AddCampCastra}" >

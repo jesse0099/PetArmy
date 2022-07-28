@@ -58,16 +58,16 @@ namespace PetArmy.ViewModels
 
         public async void addCampCastra()
         {
-            /*
+            
             try
             {
-                await Application.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
+                await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
             }
             catch (System.Exception e)
             {
                 await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Campaña Castración'", e.ToString(), "Ok");
             }
-            */
+            
         }
     }
 }

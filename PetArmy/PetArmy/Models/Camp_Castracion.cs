@@ -13,14 +13,13 @@ namespace PetArmy.Models
         public string tel_contacto { get; set; }
         public DateTime fecha_inicio { get; set; }
         public DateTime fecha_fin { get; set; }
-        public bool activo { get; set; }
 
         public Camp_Castracion()
         {
 
         }
 
-        public Camp_Castracion(int id_campana, string nombre_camp, string descripcion, string direccion, string tel_contacto, DateTime fecha_inicio, DateTime fecha_fin, bool activo)
+        public Camp_Castracion(int id_campana, string nombre_camp, string descripcion, string direccion, string tel_contacto, DateTime fecha_inicio, DateTime fecha_fin)
         {
             this.id_campana = id_campana;
             this.nombre_camp = nombre_camp;
@@ -29,7 +28,6 @@ namespace PetArmy.Models
             this.tel_contacto = tel_contacto;
             this.fecha_inicio = fecha_inicio;
             this.fecha_fin = fecha_fin;
-            this.activo = activo;
         }
     }
 }

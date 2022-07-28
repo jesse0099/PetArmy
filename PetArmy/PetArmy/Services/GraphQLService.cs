@@ -207,8 +207,10 @@ namespace PetArmy.Services
                                                                                ",nombre: \"" + newShelter.nombre + "\"" +
                                                                                ",telefono: \"" + newShelter.telefono + "\"})" +
                                                                                "{ returning{ id_refugio }}}",
-                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }                   
                 };
+
+
 
                 var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
                 completed = true;
@@ -1056,7 +1058,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "query MyQuery {camp_castracion {id_campana,nombre_camp,tel_contacto,descripcion,direccion,fecha_inicio,fecha_fin,activo}}",
+                    Query = "query MyQuery {camp_castracion {id_campana,nombre_camp,tel_contacto,descripcion,direccion,fecha_inicio,fecha_fin}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -1082,15 +1084,17 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation { insert_camp_castracion(objects: {nombre_camp:\""     + newCamp.nombre_camp + "\", " +
-                                                                                    "descripcion:\""    + newCamp.descripcion + "\", " +
-                                                                                    "direccion:\""      + newCamp.descripcion + "\", " +
-                                                                                    "tel_contacto:\""   + newCamp.tel_contacto + "\", " +
-                                                                                    "fecha_inicio:"     + newCamp.fecha_inicio + ", " +
-                                                                                    "fecha_fin:"        + newCamp.fecha_fin + ", " +
-                                                                                    "activo:"           + newCamp.activo + ", " +
+                    Query = "mutation MyMutation { insert_camp_castracion(objects: {nombre_camp:\"" + newCamp.nombre_camp + "\", " +
+                                                                                    "descripcion:\"" + newCamp.descripcion + "\", " +
+                                                                                    "direccion:\"" + newCamp.descripcion + "\", " +
+                                                                                    "tel_contacto:\"" + newCamp.tel_contacto + "\", " +
+                                                                                    "fecha_inicio:\"" + newCamp.fecha_inicio.ToString() + "\", " +
+                                                                                    "fecha_fin:\"" + newCamp.fecha_fin.ToString() + "\", " +
                                                                                     "}) { returning { id_campana }}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+
+                    //Query = "mutation MyMutation { insert_camp_castracion(objects: {nombre_camp: " + " Pablo_Gabriel " + ",descripcion: " + "HGF" + ", direccion:" + "HGF" + ",tel_contacto:" + "123" + ",fecha_inicio:" +  "2001/01/01" + ", fecha_fin:" + "2022/01/01" + ",}) { returning { id_campana } }}",
+                    //Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
                 var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
@@ -1120,8 +1124,7 @@ namespace PetArmy.Services
                                                                                            ",direccion: \""     + editShelter.direccion     + "\"" +
                                                                                            ",tel_contacto: \""  + editShelter.tel_contacto  + "\"" +
                                                                                            ",fecha_inicio: "    + editShelter.fecha_inicio  +
-                                                                                           ",fecha_fin: "       + editShelter.fecha_fin     +
-                                                                                           ",activo: "          + editShelter.activo        + "}){id_campana }}",
+                                                                                           ",fecha_fin: "       + editShelter.fecha_fin     + "}){id_campana }}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 

@@ -64,7 +64,6 @@ namespace PetArmy.ViewModels
         private string tel_contacto;
         private DateTime fecha_inicio;
         private DateTime fecha_fin;
-        private bool activo;
 
         public int Id_Campana
         {
@@ -106,11 +105,6 @@ namespace PetArmy.ViewModels
             set { fecha_fin = value; OnPropertyChanged(); }
         }
 
-        public bool Activo
-        {
-            get { return activo; }
-            set { activo = value; OnPropertyChanged(); }
-        }
         #endregion
 
         #region commands and Functions
@@ -121,7 +115,7 @@ namespace PetArmy.ViewModels
             
             try
             {
-                IFirebaseAuth _i_auth = DependencyService.Get<IFirebaseAuth>(); ;
+                IFirebaseAuth _i_auth = DependencyService.Get<IFirebaseAuth>();
                 var registered_user = _i_auth.GetSignedUserProfile();
                 Settings.UID = registered_user.Uid;
                 Usuario curUser = new Usuario(Settings.UID, 2);
@@ -136,11 +130,18 @@ namespace PetArmy.ViewModels
                     camp.tel_contacto = Tel_Contacto;
                     camp.fecha_inicio = Fecha_Inicio;
                     camp.fecha_fin = Fecha_Fin;
-                    camp.activo = true;
                     bool chk = await GraphQLService.addCampCastra(camp, curUser);
+                    await App.Current.MainPage.DisplayAlert("Success", "Campaing Saved!", "Ok");
+                    await Shell.Current.GoToAsync("//AdminLandingPage");
                 }
-                await App.Current.MainPage.DisplayAlert("Success", "Campaing Saved!", "Ok");
-                Application.Current.MainPage = new NavigationPage(new CampCastraView());
+                else
+                {
+                    ErrorTitle = "Something Went Wrong!!!";
+                    ErrorMessage = "Failed to add a campaing";
+                    OpenPopUp = true;
+                }
+                //Application.Current.MainPage = new NavigationPage(new CampCastraView());
+
             }
             catch (Exception)
             {
