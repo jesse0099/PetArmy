@@ -18,6 +18,8 @@
 
         public FeedViewModel Feed { get; set; }
 
+        public ConfirmAdoptionRequestViewModel ConfirmAdoptionRequest { get; set; }
+
         public MainViewModel(): base()
         {
             this.Login = LoginViewModel.GetInstance();
@@ -30,9 +32,9 @@
             this.AddMascota = AddMascotaViewModel.GetInstance();
             this.SearchBar = SearchBarViewModel.GetInstance();
             this.EditShelter = EditShelterViewModel.GetInstance();
-            this.User = new UserViewModel();
             this.Feed = FeedViewModel.GetInstance();
-
+            this.ConfirmAdoptionRequest = ConfirmAdoptionRequestViewModel.GetInstance();
+            this.User = new UserViewModel();
         }
     }
 }

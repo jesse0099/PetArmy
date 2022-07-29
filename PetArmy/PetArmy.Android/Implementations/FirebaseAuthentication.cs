@@ -191,6 +191,8 @@ namespace PetArmy.Droid.Implementations
                     Uid = FirebaseAuth.Instance.CurrentUser.Uid,
                     ProfilePictureUrl = FirebaseAuth.Instance.CurrentUser.PhotoUrl != null ?
                                         FirebaseAuth.Instance.CurrentUser.PhotoUrl.ToString() : string.Empty,
+                    PhoneNumber = FirebaseAuth.Instance.CurrentUser.PhoneNumber,
+                    
                 };
         }
         #endregion

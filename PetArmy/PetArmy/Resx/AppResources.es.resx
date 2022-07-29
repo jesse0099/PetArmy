@@ -393,4 +393,19 @@
   <data name="NextPetProfile" xml:space="preserve">
     <value>Siguiente perfil de mascota</value>
   </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="RequestAdoptionPopUpTitle" xml:space="preserve">
+    <value>¿Solicitar adopción con los datos a continuación?</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
 </root>

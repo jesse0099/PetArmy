@@ -40,25 +40,37 @@ namespace PetArmy.ViewModels
         }
 
         private string _currentActionText;
-
         public string CurrentActionText
         {
             get { return _currentActionText; }
-            set { _currentActionText = value;
+            set
+            {
+                _currentActionText = value;
                 OnPropertyChanged();
             }
         }
 
         private bool _currentActionVisibility;
-
         public bool CurrentActionVisibility
         {
             get { return _currentActionVisibility; }
-            set { _currentActionVisibility = value;
+            set
+            {
+                _currentActionVisibility = value;
                 OnPropertyChanged();
             }
         }
 
+        private bool _openConfirmationPopUp;
+        public bool OpenConfirmationPopUp
+        {
+            get { return _openConfirmationPopUp; }
+            set
+            {
+                _openConfirmationPopUp = value;
+                OnPropertyChanged();
+            }
+        }
 
 
         public ICommand Dragging_Command
@@ -87,6 +99,7 @@ namespace PetArmy.ViewModels
         {
             _instance = this;
             CurrentActionVisibility = false;
+            OpenConfirmationPopUp = false;
         }
 
         async public Task<string[]> GetGlobalTags()
@@ -108,15 +121,17 @@ namespace PetArmy.ViewModels
         async public void GetNearPetsBytags(string[] tags, double latitude, double longitude)
         {
             Mascotas = new BindingList<Mascota>(await GraphQLService.GetNearPetsByTags(tags, latitude, longitude, 1000) as List<Mascota>);
-            
+
             //UI Settings  
             List<Color> gradient = new();
-            for (int i = 0; i < 5; i++){
+            for (int i = 0; i < 5; i++)
+            {
                 Application.Current.Resources.TryGetValue($"Grad{i + 1}", out object color);
                 gradient.Add((Color)color);
             }
 
-            foreach (var pet in Mascotas){
+            foreach (var pet in Mascotas)
+            {
                 var bool_values = new List<PetDbBools>()
                 {
                     new PetDbBools() { Bool_Name = AppResources.Disability, Bool_Value = pet.discapacidad, Bool_Color = gradient[0] },
@@ -137,11 +152,29 @@ namespace PetArmy.ViewModels
                 case SwipeCardDirection.None:
                     break;
                 case SwipeCardDirection.Right:
-                    break;
+                    {
+                        var local = CurrentActionText;
+                        CurrentActionText = string.Empty;
+                        if (string.IsNullOrEmpty(local))
+                            break;
+                        if(!local.Equals(AppResources.RequestAdoption))
+                            break;
+                        OpenConfirmationPopUp = true;
+                        break;
+                    }
                 case SwipeCardDirection.Left:
                     break;
                 case SwipeCardDirection.Up:
-                    break;
+                    {
+                        var local = CurrentActionText;
+                        CurrentActionText = string.Empty;
+                        if (string.IsNullOrEmpty(local))
+                            break;
+                        if (!local.Equals(AppResources.RequestAdoption))
+                            break;
+                        OpenConfirmationPopUp = true;
+                        break;
+                    }
                 case SwipeCardDirection.Down:
                     break;
             }
@@ -157,11 +190,13 @@ namespace PetArmy.ViewModels
             non_selected_color = (Color)arcade_yellow;
             addopt_color = (Color)arcade_green;
 
-            if (Application.Current.RequestedTheme == OSAppTheme.Dark){
+            if (Application.Current.RequestedTheme == OSAppTheme.Dark)
+            {
                 Application.Current.Resources.TryGetValue("SynthPumpkin", out object synth_pupmkin);
                 next_color = (Color)synth_pupmkin;
             }
-            else{
+            else
+            {
                 Application.Current.Resources.TryGetValue("FluoRed", out object fluo_red);
                 addopt_color = Color.YellowGreen;
                 next_color = (Color)fluo_red;
@@ -174,7 +209,7 @@ namespace PetArmy.ViewModels
                 case DraggingCardPosition.UnderThreshold:
                     {
                         CurrentActionVisibility = false;
-                        if (e.Direction == SwipeCardDirection.Right || (e.Direction == SwipeCardDirection.Up && e.DistanceDraggedX == 0 ))
+                        if (e.Direction == SwipeCardDirection.Right || (e.Direction == SwipeCardDirection.Up && e.DistanceDraggedX == 0))
                             Border_Color = addopt_color;
                         if (e.Direction == SwipeCardDirection.Left || (e.Direction == SwipeCardDirection.Down))
                             Border_Color = next_color;
@@ -184,14 +219,14 @@ namespace PetArmy.ViewModels
                     {
                         //Label with action name
                         //Request adoption
-                        if (e.Direction == SwipeCardDirection.Right || (e.Direction == SwipeCardDirection.Up && e.DistanceDraggedX ==0 ))
+                        if (e.Direction == SwipeCardDirection.Right || (e.Direction == SwipeCardDirection.Up && e.DistanceDraggedX == 0))
                         {
                             CurrentActionVisibility = true;
                             CurrentActionText = AppResources.RequestAdoption;
                             Border_Color = addopt_color;
                         }
                         //Next Profile
-                        if (e.Direction == SwipeCardDirection.Left || (e.Direction == SwipeCardDirection.Down) 
+                        if (e.Direction == SwipeCardDirection.Left || (e.Direction == SwipeCardDirection.Down)
                             || (e.Direction == SwipeCardDirection.Up && e.DistanceDraggedX != 0))
                         {
                             CurrentActionVisibility = true;
@@ -205,7 +240,6 @@ namespace PetArmy.ViewModels
                         //Neutral State
                         Border_Color = non_selected_color;
                         CurrentActionVisibility = false;
-                        CurrentActionText = string.Empty;
                         break;
                     }
                 case DraggingCardPosition.FinishedOverThreshold:
@@ -213,7 +247,6 @@ namespace PetArmy.ViewModels
                         //Neutral State (Next Cards)
                         Border_Color = non_selected_color;
                         CurrentActionVisibility = false;
-                        CurrentActionText = string.Empty;
                         break;
                     }
             }

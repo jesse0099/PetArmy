@@ -169,6 +169,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Only whole numbers.
         /// </summary>
         public static string cantKey {
@@ -241,6 +250,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm.
+        /// </summary>
+        public static string Confirm {
+            get {
+                return ResourceManager.GetString("Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create account.
         /// </summary>
         public static string CreateAccountKey {
@@ -286,6 +304,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disability.
         /// </summary>
         public static string Disability {
@@ -300,6 +327,15 @@ namespace Resx {
         public static string DisableAccount {
             get {
                 return ResourceManager.GetString("DisableAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display Name.
+        /// </summary>
+        public static string DisplayName {
+            get {
+                return ResourceManager.GetString("DisplayName", resourceCulture);
             }
         }
         
@@ -669,6 +705,15 @@ namespace Resx {
         public static string RequestAdoption {
             get {
                 return ResourceManager.GetString("RequestAdoption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request Adoption With Data Below?.
+        /// </summary>
+        public static string RequestAdoptionPopUpTitle {
+            get {
+                return ResourceManager.GetString("RequestAdoptionPopUpTitle", resourceCulture);
             }
         }
         

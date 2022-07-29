@@ -8,6 +8,7 @@
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:customcontrols="clr-namespace:PetArmy.CustomControls"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
              x:Class="PetArmy.Views.FeedContentView"
              x:Name="feed_page"
              BackgroundColor="{AppThemeBinding Light=White, 
@@ -20,7 +21,7 @@
                                   HorizontalOptions="FillAndExpand"
                                   Padding="10"
                                   AnimationLength="250"
-                                  BackCardScale="0.5"
+                                  BackCardScale="0.2"
                                   CardRotation="45"
                                   SwipedCommand="{Binding Swiped_Command}"
                                   DraggingCommand="{Binding Dragging_Command}"
@@ -30,16 +31,14 @@
             <swipe_view:SwipeCardView.ItemTemplate>
                 <DataTemplate>
                     <AbsoluteLayout AbsoluteLayout.LayoutBounds="1,1,1,.50"
-                                    AbsoluteLayout.LayoutFlags="All">
-                        <Grid  x:Name="Item"
-                               HorizontalOptions="FillAndExpand"
-                               VerticalOptions="FillAndExpand"
-                               AbsoluteLayout.LayoutBounds="1,1,1,1"
-                               AbsoluteLayout.LayoutFlags="All">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="4*" />
-                                <RowDefinition  Height="1" />
-                            </Grid.RowDefinitions>
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    VerticalOptions="Center">
+                        <PopUps:ConfirmAdoptionRequestPopUp BindingContext="{Binding Main.Feed, Source={StaticResource Locator}}" />
+                        <StackLayout x:Name="Item"
+                                     HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand"
+                                     AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                     AbsoluteLayout.LayoutFlags="All">
                             <Frame Margin="5"
                                    Grid.Row="0"
                                    BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}"
@@ -59,37 +58,37 @@
                                              VerticalOptions="FillAndExpand"
                                              Margin="0"
                                              HorizontalOptions="FillAndExpand">
-                                    <!--Images Carrousel-->
-                                    <CarouselView        ItemsSource="{Binding imagenes_mascota}"
-                                                         Margin="0"
-                                                         BackgroundColor="Transparent"
-                                                         HorizontalOptions="FillAndExpand"
-                                                         HeightRequest="300"
-                                                         IsScrollAnimated="False"
-                                                         Loop="False"
-                                                         IndicatorView="images_indicator_view">
-                                        <CarouselView.EmptyView>
-                                            <StackLayout BackgroundColor="Transparent">
-                                                <Image Source="PetsArmy"
-                                                       Aspect="AspectFill"
-                                                       HorizontalOptions="FillAndExpand"
-                                                       HeightRequest="300" />
-                                            </StackLayout>
-
-                                        </CarouselView.EmptyView>
-                                        <CarouselView.ItemTemplate>
-                                            <DataTemplate>
-                                                <Frame Margin="0"
-                                                       Padding="0"
-                                                       CornerRadius="20">
-                                                    <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
+                                    <!--Images Carrousel Scroll-->
+                                    <ScrollView>
+                                        <!--Images Carrousel-->
+                                        <CarouselView        ItemsSource="{Binding imagenes_mascota}"
+                                                             Margin="0"
+                                                             BackgroundColor="Transparent"
+                                                             HorizontalOptions="FillAndExpand"
+                                                             IsScrollAnimated="True"
+                                                             Loop="False"
+                                                             IndicatorView="images_indicator_view"
+                                                             HeightRequest="350">
+                                            <CarouselView.EmptyView>
+                                                <StackLayout BackgroundColor="Transparent">
+                                                    <Image Source="PetsArmy"
                                                            Aspect="AspectFill"
-                                                           HorizontalOptions="FillAndExpand"
-                                                           HeightRequest="300" />
-                                                </Frame>
-                                            </DataTemplate>
-                                        </CarouselView.ItemTemplate>
-                                    </CarouselView>
+                                                           HorizontalOptions="FillAndExpand" />
+                                                </StackLayout>
+                                            </CarouselView.EmptyView>
+                                            <CarouselView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Frame Margin="0"
+                                                           Padding="0"
+                                                           CornerRadius="20">
+                                                        <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
+                                                               Aspect="AspectFill"
+                                                               VerticalOptions="FillAndExpand" />
+                                                    </Frame>
+                                                </DataTemplate>
+                                            </CarouselView.ItemTemplate>
+                                        </CarouselView>
+                                    </ScrollView>
                                     <!--Indicator View Carrousel-->
                                     <IndicatorView x:Name="images_indicator_view"
                                                    BackgroundColor="Transparent"
@@ -177,77 +176,85 @@
                                                                     Padding="10"
                                                                     JustifyText="True" />
                                     </inputLayout:SfTextInputLayout>
-                                    <!--ScrollView Tags-->
-                                    <ScrollView>
-                                        <StackLayout Margin="0">
-                                            <!--booleanos bd-->
-                                            <buttons:SfChipGroup ItemsSource="{Binding Db_Bools}"
-                                                                 Type="Input"
-                                                                 IsEnabled="False"
-                                                                 HorizontalOptions="FillAndExpand"
-                                                                 ChipBackgroundColor="Transparent">
-                                                <buttons:SfChipGroup.ChipLayout>
-                                                    <FlexLayout HorizontalOptions="FillAndExpand"
-                                                                VerticalOptions="Center"
-                                                                Direction="Row"
-                                                                Wrap="Wrap"
-                                                                JustifyContent="Start"
-                                                                AlignContent="SpaceBetween"
-                                                                AlignItems="Start" />
-                                                </buttons:SfChipGroup.ChipLayout>
-                                                <buttons:SfChipGroup.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <StackLayout x:Name="bool_chips_item"
-                                                                     HorizontalOptions="FillAndExpand">
-                                                            <buttons:SfChip BindingContext="{Binding Source={x:Reference bool_chips_item}, Path=BindingContext}"
-                                                                            Text="{Binding Bool_Name}"
-                                                                            BackgroundColor="{Binding Bool_Color}"
-                                                                            Margin="0" />
-                                                        </StackLayout>
-                                                    </DataTemplate>
-                                                </buttons:SfChipGroup.ItemTemplate>
-                                            </buttons:SfChipGroup>
-                                            <!--Chips Tags-->
-                                            <buttons:SfChipGroup ItemsSource="{Binding mascota_tags}"
-                                                                 Type="Input"
-                                                                 IsEnabled="False"
-                                                                 HorizontalOptions="FillAndExpand"
-                                                                 ChipBackgroundColor="{StaticResource SpaceCadet}"
-                                                                 ChipPadding="5">
-                                                <buttons:SfChipGroup.ChipLayout>
-                                                    <FlexLayout HorizontalOptions="FillAndExpand"
-                                                                VerticalOptions="Center"
-                                                                Direction="Row"
-                                                                Wrap="Wrap"
-                                                                JustifyContent="SpaceAround"
-                                                                AlignContent="SpaceBetween"
-                                                                AlignItems="Start" />
-                                                </buttons:SfChipGroup.ChipLayout>
-                                                <buttons:SfChipGroup.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <StackLayout x:Name="chip_item"
-                                                                     Orientation="Horizontal">
-                                                            <Image HeightRequest="24"
-                                                                   BindingContext="{Binding Main.Feed, Source={StaticResource Locator}}">
-                                                                <Image.Source>
-                                                                    <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
-                                                                                     Glyph="{x:Static local:IconClass.Paw}"
-                                                                                     Color="{Binding Border_Color}" />
-                                                                </Image.Source>
-                                                            </Image>
-                                                            <Label BindingContext="{Binding Source={x:Reference chip_item}, Path=BindingContext}"
-                                                                   Text="{Binding tag.nombre_tag}"
-                                                                   FontAttributes="Bold"
-                                                                   TextColor="LightGray" />
-                                                        </StackLayout>
-                                                    </DataTemplate>
-                                                </buttons:SfChipGroup.ItemTemplate>
-                                            </buttons:SfChipGroup>
+                                    <xct:Expander>
+                                        <xct:Expander.Header>
+                                            <Label Text="{xct:Translate Details}"
+                                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                   FontAttributes="Bold"
+                                                   FontSize="Medium" />
+                                        </xct:Expander.Header>
+                                        <StackLayout>
+                                            <StackLayout Margin="0">
+                                                <!--booleanos bd-->
+                                                <buttons:SfChipGroup ItemsSource="{Binding Db_Bools}"
+                                                                     Type="Input"
+                                                                     IsEnabled="False"
+                                                                     HorizontalOptions="FillAndExpand"
+                                                                     ChipBackgroundColor="Transparent">
+                                                    <buttons:SfChipGroup.ChipLayout>
+                                                        <FlexLayout HorizontalOptions="FillAndExpand"
+                                                                    VerticalOptions="Center"
+                                                                    Direction="Row"
+                                                                    Wrap="Wrap"
+                                                                    JustifyContent="Start"
+                                                                    AlignContent="SpaceBetween"
+                                                                    AlignItems="Start" />
+                                                    </buttons:SfChipGroup.ChipLayout>
+                                                    <buttons:SfChipGroup.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <StackLayout x:Name="bool_chips_item"
+                                                                         HorizontalOptions="FillAndExpand">
+                                                                <buttons:SfChip BindingContext="{Binding Source={x:Reference bool_chips_item}, Path=BindingContext}"
+                                                                                Text="{Binding Bool_Name}"
+                                                                                BackgroundColor="{Binding Bool_Color}"
+                                                                                Margin="0" />
+                                                            </StackLayout>
+                                                        </DataTemplate>
+                                                    </buttons:SfChipGroup.ItemTemplate>
+                                                </buttons:SfChipGroup>
+                                                <!--Chips Tags-->
+                                                <buttons:SfChipGroup ItemsSource="{Binding mascota_tags}"
+                                                                     Margin="7.1"
+                                                                     Type="Input"
+                                                                     IsEnabled="False"
+                                                                     HorizontalOptions="FillAndExpand"
+                                                                     ChipBackgroundColor="{StaticResource SpaceCadet}"
+                                                                     ChipPadding="5">
+                                                    <buttons:SfChipGroup.ChipLayout>
+                                                        <FlexLayout HorizontalOptions="FillAndExpand"
+                                                                    VerticalOptions="Center"
+                                                                    Direction="Row"
+                                                                    Wrap="Wrap"
+                                                                    JustifyContent="Start"
+                                                                    AlignContent="SpaceBetween"
+                                                                    AlignItems="Start" />
+                                                    </buttons:SfChipGroup.ChipLayout>
+                                                    <buttons:SfChipGroup.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <StackLayout x:Name="chip_item"
+                                                                         Orientation="Horizontal">
+                                                                <Image HeightRequest="24"
+                                                                       BindingContext="{Binding Main.Feed, Source={StaticResource Locator}}">
+                                                                    <Image.Source>
+                                                                        <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                                                                         Glyph="{x:Static local:IconClass.Paw}"
+                                                                                         Color="{Binding Border_Color}" />
+                                                                    </Image.Source>
+                                                                </Image>
+                                                                <Label BindingContext="{Binding Source={x:Reference chip_item}, Path=BindingContext}"
+                                                                       Text="{Binding tag.nombre_tag}"
+                                                                       FontAttributes="Bold"
+                                                                       TextColor="LightGray" />
+                                                            </StackLayout>
+                                                        </DataTemplate>
+                                                    </buttons:SfChipGroup.ItemTemplate>
+                                                </buttons:SfChipGroup>
+                                            </StackLayout>
                                         </StackLayout>
-                                    </ScrollView>
+                                    </xct:Expander>
                                 </StackLayout>
                             </Frame>
-                        </Grid>
+                        </StackLayout>
                         <!--Action Label-->
                         <border:SfBorder CornerRadius="40"
                                          BackgroundColor="Transparent"
@@ -280,7 +287,7 @@
                                                             HorizontalTextAlignment="Start"
                                                             FontSize="38"
                                                             WidthRequest="200"
-                                                            Margin="5"/>
+                                                            Margin="5" />
                                 <!--Icono-->
                                 <inputLayout:SfTextInputLayout.LeadingView>
                                     <Image VerticalOptions="Center"
@@ -291,7 +298,7 @@
                                             <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
                                                              Glyph="{x:Static local:IconClass.Paw}"
                                                              BindingContext="{Binding Main.Feed, Source={StaticResource Locator}}"
-                                                             Color="{Binding Border_Color}"/>
+                                                             Color="{Binding Border_Color}" />
                                         </Image.Source>
                                     </Image>
                                 </inputLayout:SfTextInputLayout.LeadingView>
