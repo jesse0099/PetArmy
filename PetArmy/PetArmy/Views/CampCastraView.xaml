@@ -11,6 +11,24 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <StackLayout Padding="40" Spacing="20">
+                <ScrollView>
+                    <ListView x:Name="CartItemsView"
+                  BackgroundColor="Transparent"
+                  SeparatorVisibility="None"
+                  ItemsSource="{Binding CampCastraList}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ImageCell TextColor="#9b9b9b"
+                                   Text="{Binding refugio.nombre}"
+                                   Detail="{Binding refugio.direccion}"
+                                   ImageSource="{Binding Image, Converter={xct:ByteArrayToImageSourceConverter}}"
+                                   Command="{Binding Path= BindingContext.MyService.EditShelter, Source={x:Reference myServicesPage}}"
+                                   CommandParameter="{Binding refugio.id_refugio}"/>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
 
                 <buttons:SfButton  Command="{Binding Add_CampCastra}"
                                            Text="{xct:Translate AddCampCastraKey}"

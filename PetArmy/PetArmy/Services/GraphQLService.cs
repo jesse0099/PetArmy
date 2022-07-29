@@ -1092,9 +1092,6 @@ namespace PetArmy.Services
                                                                                     "fecha_fin:\"" + newCamp.fecha_fin.ToString() + "\", " +
                                                                                     "}) { returning { id_campana }}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
-
-                    //Query = "mutation MyMutation { insert_camp_castracion(objects: {nombre_camp: " + " Pablo_Gabriel " + ",descripcion: " + "HGF" + ", direccion:" + "HGF" + ",tel_contacto:" + "123" + ",fecha_inicio:" +  "2001/01/01" + ", fecha_fin:" + "2022/01/01" + ",}) { returning { id_campana } }}",
-                    //Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
                 var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
