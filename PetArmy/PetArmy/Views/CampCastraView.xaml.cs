@@ -19,11 +19,11 @@ namespace PetArmy.Views
         }
 
 
-        /*protected override void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
             App.Current.Resources.TryGetValue("Locator", out object locator);
             Task.Run(async () => { await ((InstanceLocator)locator).Main.CampCastracion.getData(); });
-        }*/
+        }
     }
 }

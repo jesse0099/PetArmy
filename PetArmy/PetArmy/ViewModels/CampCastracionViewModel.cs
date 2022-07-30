@@ -36,9 +36,9 @@ namespace PetArmy.ViewModels
             initClass();
         }
 
-        public async void initClass()
+        public void initClass()
         {
-            await getData();
+            
         }
         #endregion
 
