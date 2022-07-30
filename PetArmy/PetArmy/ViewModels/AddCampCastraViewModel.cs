@@ -62,8 +62,6 @@ namespace PetArmy.ViewModels
         private string descripcion;
         private string direccion;
         private string tel_contacto;
-        private DateTime fecha_inicio;
-        private DateTime fecha_fin;
 
         public int Id_Campana
         {
@@ -93,18 +91,6 @@ namespace PetArmy.ViewModels
             set { tel_contacto = value; OnPropertyChanged(); }
         }
 
-        public DateTime Fecha_Inicio
-        {
-            get { return fecha_inicio; }
-            set { fecha_inicio = value; OnPropertyChanged(); }
-        }
-
-        public DateTime Fecha_Fin
-        {
-            get { return fecha_fin; }
-            set { fecha_fin = value; OnPropertyChanged(); }
-        }
-
         #endregion
 
         #region commands and Functions
@@ -128,11 +114,9 @@ namespace PetArmy.ViewModels
                     camp.descripcion = Descripcion;
                     camp.direccion = Direccion;
                     camp.tel_contacto = Tel_Contacto;
-                    camp.fecha_inicio = Fecha_Inicio;
-                    camp.fecha_fin = Fecha_Fin;
                     bool chk = await GraphQLService.addCampCastra(camp, curUser);
                     await App.Current.MainPage.DisplayAlert("Success", "Campaing Saved!", "Ok");
-                    await Shell.Current.GoToAsync("//AdminLandingPage");
+                    await Shell.Current.GoToAsync("//CampCastraView");
                 }
                 else
                 {
@@ -140,7 +124,6 @@ namespace PetArmy.ViewModels
                     ErrorMessage = "Failed to add a campaing";
                     OpenPopUp = true;
                 }
-                //Application.Current.MainPage = new NavigationPage(new CampCastraView());
 
             }
             catch (Exception)

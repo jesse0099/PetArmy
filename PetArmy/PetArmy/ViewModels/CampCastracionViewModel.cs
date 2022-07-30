@@ -1,4 +1,5 @@
-﻿using PetArmy.Interfaces;
+﻿using PetArmy.Helpers;
+using PetArmy.Interfaces;
 using PetArmy.Models;
 using PetArmy.Services;
 using PetArmy.Views;
@@ -6,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -29,14 +31,14 @@ namespace PetArmy.ViewModels
 
         public CampCastracionViewModel()
         {
+            CampCastraList = new BindingList<Camp_Castracion>();
             initCommands();
             initClass();
-
         }
 
-        public void initClass()
+        public async void initClass()
         {
-
+            await getData();
         }
         #endregion
 
@@ -92,6 +94,30 @@ namespace PetArmy.ViewModels
                 await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Campaña Castración'", e.ToString(), "Ok");
             }
             
+        }
+
+        public async Task getData()
+        {
+            IsBusy = true;
+            List<Camp_Castracion> tempCamp = new List<Camp_Castracion>();
+
+            if (!String.IsNullOrEmpty(Settings.UID))
+            {
+                List<Camp_Castracion> myCampaings = await GraphQLService.getAllCampCastra();
+
+                if (myCampaings.Count > 0)
+                {
+                    foreach (Camp_Castracion campaing in myCampaings)
+                    {
+                        /*Add campaing item to list*/
+                        Camp_Castracion newItem = new Camp_Castracion(campaing.id_campana, campaing.nombre_camp, campaing.descripcion, campaing.direccion, campaing.tel_contacto);
+                        tempCamp.Add(newItem);
+                    }
+                }
+
+                CampCastraList = new BindingList<Camp_Castracion>(tempCamp);
+                IsBusy = false;
+            }
         }
     }
 }

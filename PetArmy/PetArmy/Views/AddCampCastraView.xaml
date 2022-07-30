@@ -63,17 +63,17 @@
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                         </inputLayout:SfTextInputLayout>
 
-                        <!--Fecha Inicio (fecha_inicio)-->
+                        <!--Fecha Inicio (fecha_inicio)--><!--
                         <Label Text="{xct:Translate StarDateCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <DatePicker MinimumDate="01/01/2022"
                                     MaximumDate="12/31/2099"
                                     Date="{Binding StarDateKey}"/>
 
-                        <!--Fecha Fin (fecha_fin)-->
+                        --><!--Fecha Fin (fecha_fin)--><!--
                         <Label Text="{xct:Translate EndDateCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <DatePicker MinimumDate="01/01/2022"
                                     MaximumDate="12/31/2099"
-                                    Date="{Binding EndDateKey}" />
+                                    Date="{Binding EndDateKey}" />-->
 
                         <!--Activo (activo)-->
                         <!--<Label Text="{xct:Translate ActiveCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>

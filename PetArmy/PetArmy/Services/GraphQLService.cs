@@ -1051,19 +1051,19 @@ namespace PetArmy.Services
         #region Camp_Castracion Operations
         public static async Task<List<Camp_Castracion>> getAllCampCastra()
         {
-            List<Camp_Castracion> camp_Castracion = null;
+            List<Camp_Castracion> camp_Castracion = new List<Camp_Castracion>();
 
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "query MyQuery {camp_castracion {id_campana,nombre_camp,tel_contacto,descripcion,direccion,fecha_inicio,fecha_fin}}",
+                    Query = "query MyQuery {camp_castracion {id_campana,nombre_camp,tel_contacto,descripcion,direccion}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
                 var foundResponse = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(findRequest);
-                camp_Castracion = foundResponse.Data.Camp_Castracion;
+                camp_Castracion = foundResponse.Data.camp_castracion;
                 client.Dispose();
             }
             catch (Exception)
@@ -1088,8 +1088,6 @@ namespace PetArmy.Services
                                                                                     "descripcion:\"" + newCamp.descripcion + "\", " +
                                                                                     "direccion:\"" + newCamp.descripcion + "\", " +
                                                                                     "tel_contacto:\"" + newCamp.tel_contacto + "\", " +
-                                                                                    "fecha_inicio:\"" + newCamp.fecha_inicio.ToString() + "\", " +
-                                                                                    "fecha_fin:\"" + newCamp.fecha_fin.ToString() + "\", " +
                                                                                     "}) { returning { id_campana }}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
@@ -1119,9 +1117,7 @@ namespace PetArmy.Services
                                                                                            ",nombre_camp: \""   + editShelter.nombre_camp   + "\"" +
                                                                                            ",descripcion: \""   + editShelter.descripcion   + "\"" +
                                                                                            ",direccion: \""     + editShelter.direccion     + "\"" +
-                                                                                           ",tel_contacto: \""  + editShelter.tel_contacto  + "\"" +
-                                                                                           ",fecha_inicio: "    + editShelter.fecha_inicio  +
-                                                                                           ",fecha_fin: "       + editShelter.fecha_fin     + "}){id_campana }}",
+                                                                                           ",tel_contacto: \""  + editShelter.tel_contacto  + "\"" + "}){id_campana }}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
