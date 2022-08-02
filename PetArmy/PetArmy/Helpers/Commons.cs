@@ -57,6 +57,16 @@ namespace PetArmy.Helpers
                                             }
                                           }
                                         }";
+        public const string RequestPetAdoption = @"mutation RequestPetAdoption($uid: String!, $mascota: Int!, $refugio: Int!) {
+          insert_solicitudes_adopcion(objects: {id_mascota: $mascota, id_refugio: $refugio, fecha_solicitud: now, adoptante: $uid, aprobacion: false}) {
+            returning {
+              id_mascota
+              refugio {
+                id_refugio
+              }
+            }
+          }
+        }";
 
         const Int16 minimum_password_length = 6;
         const string emailRegex = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +

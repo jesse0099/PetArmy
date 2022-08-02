@@ -25,6 +25,7 @@
                                   CardRotation="45"
                                   SwipedCommand="{Binding Swiped_Command}"
                                   DraggingCommand="{Binding Dragging_Command}"
+                                  TopItem="{Binding TopItem, Mode=TwoWay}"
                                   SupportedDraggingDirections="Right,Left,Down,Up"
                                   SupportedSwipeDirections="Right,Left,Down,Up">
             <!--Card Item Template-->

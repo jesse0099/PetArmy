@@ -1,6 +1,8 @@
-﻿using PetArmy.Interfaces;
+﻿using PetArmy.Helpers;
+using PetArmy.Interfaces;
+using PetArmy.Models;
+using PetArmy.Services;
 using System;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -70,6 +72,7 @@ namespace PetArmy.ViewModels
             }
         }
 
+        public Mascota CurrentPet { get; set; }
 
         public ConfirmAdoptionRequestViewModel()
         {
@@ -89,11 +92,11 @@ namespace PetArmy.ViewModels
             try
             {
                 //Insert en BD
+                await GraphQLService.RequestPetAdoption(Settings.UID, CurrentPet.id_mascota, CurrentPet.refugio.id_refugio);
             }
             catch (Exception e)
             {
-
-                throw e;
+                Console.Write(e.Message);
             }
             finally
             {

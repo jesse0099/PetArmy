@@ -27,6 +27,17 @@ namespace PetArmy.ViewModels
             }
         }
 
+        private Mascota _topItem;
+
+        public Mascota TopItem
+        {
+            get { return _topItem; }
+            set { _topItem = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         private Color _border_Color;
 
         public Color Border_Color
@@ -144,6 +155,7 @@ namespace PetArmy.ViewModels
                 pet.Ubicacion = pet.refugio.ubicacion[0];
             }
         }
+        
         #region Swipe View Events
         public void SwipedCommand(SwipedCardEventArgs e)
         {
@@ -159,6 +171,7 @@ namespace PetArmy.ViewModels
                             break;
                         if(!local.Equals(AppResources.RequestAdoption))
                             break;
+                        ConfirmAdoptionRequestViewModel.GetInstance().CurrentPet = TopItem;
                         OpenConfirmationPopUp = true;
                         break;
                     }
@@ -172,6 +185,7 @@ namespace PetArmy.ViewModels
                             break;
                         if (!local.Equals(AppResources.RequestAdoption))
                             break;
+                        ConfirmAdoptionRequestViewModel.GetInstance().CurrentPet = TopItem;
                         OpenConfirmationPopUp = true;
                         break;
                     }
