@@ -119,6 +119,9 @@
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
       <Version>19.1.0.54</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh">
+      <Version>19.1.0.54</Version>
+    </PackageReference>
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>
     </PackageReference>
@@ -180,6 +183,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomLabelRenderer.cs" />
     <Compile Include="FacebookLoginActivity.cs" />
     <Compile Include="GoogleLoginActivity.cs" />
     <Compile Include="Implementations\FirebaseAuthentication.cs" />

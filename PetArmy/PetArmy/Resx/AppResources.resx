@@ -307,4 +307,13 @@
   <data name="AddCampCastraKey" xml:space="preserve">
     <value>Add Campaing</value>
   </data>
+  <data name="Campaign" xml:space="preserve">
+    <value>Campaign</value>
+  </data>
+  <data name="CampaignHelper" xml:space="preserve">
+    <value>A good name is just the beginning.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description </value>
+  </data>
 </root>

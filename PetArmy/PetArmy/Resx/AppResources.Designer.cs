@@ -142,6 +142,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Campaign.
+        /// </summary>
+        public static string Campaign {
+            get {
+                return ResourceManager.GetString("Campaign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A good name is just the beginning..
+        /// </summary>
+        public static string CampaignHelper {
+            get {
+                return ResourceManager.GetString("CampaignHelper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Only whole numbers.
         /// </summary>
         public static string cantKey {
@@ -255,6 +273,15 @@ namespace Resx {
         public static string DeleteShelterBtnkey {
             get {
                 return ResourceManager.GetString("DeleteShelterBtnkey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description .
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
             }
         }
         

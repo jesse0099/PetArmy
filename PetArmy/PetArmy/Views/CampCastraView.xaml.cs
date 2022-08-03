@@ -1,10 +1,5 @@
 ﻿using PetArmy.Infraestructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -23,7 +18,7 @@ namespace PetArmy.Views
         {
             base.OnAppearing();
             App.Current.Resources.TryGetValue("Locator", out object locator);
-            Task.Run(async () => { await ((InstanceLocator)locator).Main.CampCastracion.getData(); });
+            Task.Run(async () => {((InstanceLocator)locator).Main.CampCastracion.getCampCastra(); });
         }
     }
 }

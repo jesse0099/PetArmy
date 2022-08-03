@@ -38,7 +38,7 @@ namespace PetArmy.ViewModels
 
         public void initClass()
         {
-            
+
         }
         #endregion
 
@@ -61,30 +61,42 @@ namespace PetArmy.ViewModels
             set { campCastraList = value; OnPropertyChanged(); }
         }
         #endregion
-        public ICommand getAllCampCastra { get; set; }
+        private ICommand _getAllCampCastra;
+
+        public ICommand GetAllCampCastra
+        {
+            get { return _getAllCampCastra; }
+            set { _getAllCampCastra = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ICommand Add_CampCastra { get; set; }
 
         public void initCommands()
         {
-            getAllCampCastra = new Command(getCampCastra);
+            GetAllCampCastra = new Command(getCampCastra);
             Add_CampCastra = new Command(addCampCastra);
         }
 
         public async void getCampCastra()
         {
+            IsBusy = true;
             try
             {
-                await GraphQLService.getAllCampCastra();
+                if (!string.IsNullOrEmpty(Settings.UID))
+                    CampCastraList = new BindingList<Camp_Castracion>(await GraphQLService.getAllCampCastra());
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(nameof(CampCastracionViewModel), e.Message);
             }
+            IsBusy = false;
         }
 
         public async void addCampCastra()
         {
-            
+
             try
             {
                 await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
@@ -93,7 +105,7 @@ namespace PetArmy.ViewModels
             {
                 await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Campaña Castración'", e.ToString(), "Ok");
             }
-            
+
         }
 
         public async Task getData()
