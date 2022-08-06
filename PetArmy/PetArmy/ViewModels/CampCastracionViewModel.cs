@@ -73,10 +73,21 @@ namespace PetArmy.ViewModels
 
         public ICommand Add_CampCastra { get; set; }
 
+        public ICommand _edit_CampCastra { get; set; }
+
+        public ICommand Edit_CampCastra
+        {
+            get { return _getAllCampCastra; }
+            set { _edit_CampCastra = value;
+                OnPropertyChanged();
+            }
+        }
+
         public void initCommands()
         {
             GetAllCampCastra = new Command(getCampCastra);
             Add_CampCastra = new Command(addCampCastra);
+            Edit_CampCastra = new Command(editCampCastra);
         }
 
         public async void getCampCastra()
@@ -106,6 +117,29 @@ namespace PetArmy.ViewModels
                 await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Campaña Castración'", e.ToString(), "Ok");
             }
 
+        }
+        
+        public async void editCampCastra()
+        {
+
+            try
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
+            }
+            catch (System.Exception e)
+            {
+                await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Campaña Castración'", e.ToString(), "Ok");
+            }
+
+            //await Shell.Current.GoToAsync("//AdminLandingPage");
+            /*try
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
+            }
+            catch (System.Exception e)
+            {
+                await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Campaña Castración'", e.ToString(), "Ok");
+            }*/
         }
 
         public async Task getData()

@@ -62,23 +62,7 @@
                                Text="{Binding Tel_Contacto, Mode=TwoWay}"
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                         </inputLayout:SfTextInputLayout>
-
-                        <!--Fecha Inicio (fecha_inicio)--><!--
-                        <Label Text="{xct:Translate StarDateCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
-                        <DatePicker MinimumDate="01/01/2022"
-                                    MaximumDate="12/31/2099"
-                                    Date="{Binding StarDateKey}"/>
-
-                        --><!--Fecha Fin (fecha_fin)--><!--
-                        <Label Text="{xct:Translate EndDateCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
-                        <DatePicker MinimumDate="01/01/2022"
-                                    MaximumDate="12/31/2099"
-                                    Date="{Binding EndDateKey}" />-->
-
-                        <!--Activo (activo)-->
-                        <!--<Label Text="{xct:Translate ActiveCampKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
-                        <syncfusion:SfSwitch x:Name="CampCastraContainerActivo" IsOn="{Binding Activo, Mode=TwoWay}"/>-->
-
+                        
                         <Button Text="{xct:Translate SaveCampKey}"
                         Command="{Binding AddCampCastra}" >
                         </Button>

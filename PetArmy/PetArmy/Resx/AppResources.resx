@@ -316,4 +316,13 @@
   <data name="Description" xml:space="preserve">
     <value>Description </value>
   </data>
+  <data name="EditCampCastraKey" xml:space="preserve">
+    <value>Edit Campaing</value>
+  </data>
+  <data name="DeleteCampCastraKey" xml:space="preserve">
+    <value>Delete Campaing</value>
+  </data>
+  <data name="CampCastraTelephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
 </root>

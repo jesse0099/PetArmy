@@ -5,7 +5,7 @@
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:customcontrols="clr-namespace:PetArmy.CustomControls"
              xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
+             xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="PetArmy.Views.CampCastraView"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
@@ -56,10 +56,57 @@
                                                                     Padding="10"
                                                                     JustifyText="True" />
                                     </inputLayout:SfTextInputLayout>
+                                    <!--Campaign Telephone-->
+                                    <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                   ContainerType="None"
+                                                                   IsHintAlwaysFloated="True"
+                                                                   Margin="15,5,15,0"
+                                                                   Hint="{xct:Translate CampCastraTelephone}"
+                                                                   HorizontalOptions="FillAndExpand">
+                                        <customcontrols:CustomLabel Text="{Binding tel_contacto}"
+                                                                    TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                                    FontSize="14"
+                                                                    LineBreakMode="WordWrap"
+                                                                    Padding="10"
+                                                                    JustifyText="True" />
+                                    </inputLayout:SfTextInputLayout>
+                                    <buttons:SfButton Command="{Binding Edit_CampCastra}"
+                                                      Text="{xct:Translate EditCampCastraKey}"
+                                                      FontAttributes="Bold"
+                                                      HorizontalTextAlignment="Center"
+                                                      ShowIcon="True"
+                                                      BackgroundColor="#3b5998"
+                                                      Style="{StaticResource SyncfusionButtons}">
+                                    </buttons:SfButton>
+                                    <buttons:SfButton Command="{Binding Edit_CampCastra}"
+                                                      Text="{xct:Translate DeleteCampCastraKey}"
+                                                      FontAttributes="Bold"
+                                                      HorizontalTextAlignment="Center"
+                                                      ShowIcon="True"
+                                                      BackgroundColor="#F34C0E"
+                                                      Style="{StaticResource SyncfusionButtons}">
+                                    </buttons:SfButton>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </sflistview:SfListView.ItemTemplate>
+                    
+                    <sflistview:SfListView.FooterTemplate>
+                        <DataTemplate>
+                            <ContentView>
+                                <buttons:SfButton  Command="{Binding Add_CampCastra}"
+                                               Text="{xct:Translate AddCampCastraKey}"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Center"
+                                               HorizontalOptions="FillAndExpand"
+                                               ShowIcon="True"
+                                               BackgroundColor="#3b5998"
+                                               Style="{StaticResource SyncfusionButtons}">
+                                </buttons:SfButton>
+                            </ContentView>
+                        </DataTemplate>
+                    </sflistview:SfListView.FooterTemplate>
+                    
                 </sflistview:SfListView>
             </pulltoRefresh:SfPullToRefresh.PullableContent>
         </pulltoRefresh:SfPullToRefresh>

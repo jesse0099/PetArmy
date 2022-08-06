@@ -160,6 +160,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Telephone.
+        /// </summary>
+        public static string CampCastraTelephone {
+            get {
+                return ResourceManager.GetString("CampCastraTelephone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Only whole numbers.
         /// </summary>
         public static string cantKey {
@@ -268,6 +277,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete Campaing.
+        /// </summary>
+        public static string DeleteCampCastraKey {
+            get {
+                return ResourceManager.GetString("DeleteCampCastraKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete shelter.
         /// </summary>
         public static string DeleteShelterBtnkey {
@@ -309,6 +327,15 @@ namespace Resx {
         public static string DirectionCampKey {
             get {
                 return ResourceManager.GetString("DirectionCampKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Campaing.
+        /// </summary>
+        public static string EditCampCastraKey {
+            get {
+                return ResourceManager.GetString("EditCampCastraKey", resourceCulture);
             }
         }
         

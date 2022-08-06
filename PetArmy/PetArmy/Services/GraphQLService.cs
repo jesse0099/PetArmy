@@ -1073,6 +1073,29 @@ namespace PetArmy.Services
             return camp_Castracion;
         }
 
+        public static async Task<Camp_Castracion> getCampCastraByID(int idCampCastra)
+        {
+            Camp_Castracion campaing = new Camp_Castracion();
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {camp_castracion_by_pk(id_campana: " + idCampCastra + ") { descripcion direccion id_campana nombre_camp tel_contacto }}",                   
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
+                campaing = response.Data.camp_castracion_by_pk;
+                client.Dispose();
+            }
+
+            catch (Exception)
+            {
+                throw;
+            }
+            return campaing;
+        }
+
         public static async Task<bool> addCampCastra(Camp_Castracion newCamp, Usuario user)
         {
             bool completed = false;
@@ -1104,20 +1127,19 @@ namespace PetArmy.Services
             return completed;
         }
 
-        public static async Task updateCampCastra(Camp_Castracion editShelter)
+        public static async Task updateCampCastra(Camp_Castracion editCampCastra)
         {
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    //revisar esta query, no recuerdo si tenia más PKs aparte de id_campana, si tiene más pks guiamer con el update de refugio en esta misma clase, linea 225
-                    //Tambien revisar nombre de la mutation, para coincida con el nombre de la tabla
-                    Query = "mutation MyMutation {update_camp_castracion_by_pk(pk_columns: {id_campana: "       + editShelter.id_campana    + "}" +
-                                                                                           ",nombre_camp: \""   + editShelter.nombre_camp   + "\"" +
-                                                                                           ",descripcion: \""   + editShelter.descripcion   + "\"" +
-                                                                                           ",direccion: \""     + editShelter.direccion     + "\"" +
-                                                                                           ",tel_contacto: \""  + editShelter.tel_contacto  + "\"" + "}){id_campana }}",
+                    Query = "mutation MyMutation {update_camp_castracion_by_pk(pk_columns: {id_campana: "       + editCampCastra.id_campana    + "}" +
+                                                                                           ",nombre_camp: \""   + editCampCastra.nombre_camp   + "\"" +
+                                                                                           ",descripcion: \""   + editCampCastra.descripcion   + "\"" +
+                                                                                           ",direccion: \""     + editCampCastra.direccion     + "\"" +
+                                                                                           ",tel_contacto: \""  + editCampCastra.tel_contacto  + "\"" + "}){id_campana }}",
+
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -1137,7 +1159,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation {delete_camp_castracion_pk(id_campana: " + idCampCastra + ") { nombre }}",
+                    Query = "mutation MyMutation {delete_camp_castracion_pk(id_campana: " + idCampCastra + ")}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
