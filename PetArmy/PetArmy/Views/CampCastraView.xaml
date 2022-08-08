@@ -78,14 +78,6 @@
                                                       BackgroundColor="#3b5998"
                                                       Style="{StaticResource SyncfusionButtons}">
                                     </buttons:SfButton>
-                                    <buttons:SfButton Command="{Binding Edit_CampCastra}"
-                                                      Text="{xct:Translate DeleteCampCastraKey}"
-                                                      FontAttributes="Bold"
-                                                      HorizontalTextAlignment="Center"
-                                                      ShowIcon="True"
-                                                      BackgroundColor="#F34C0E"
-                                                      Style="{StaticResource SyncfusionButtons}">
-                                    </buttons:SfButton>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

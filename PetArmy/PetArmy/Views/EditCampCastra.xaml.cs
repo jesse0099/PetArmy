@@ -1,5 +1,4 @@
-﻿using PetArmy.Infraestructure;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace PetArmy.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EditCampCastraView : ContentPage
+    public partial class EditCampCastra : ContentPage
     {
-        public EditCampCastraView()
+        public EditCampCastra()
         {
             InitializeComponent();
         }
-
     }
 }

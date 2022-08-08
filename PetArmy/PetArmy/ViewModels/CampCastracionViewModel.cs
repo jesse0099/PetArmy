@@ -110,7 +110,7 @@ namespace PetArmy.ViewModels
 
             try
             {
-                await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
+                await App.Current.MainPage.Navigation.PushAsync(new EditCampCastraView());
             }
             catch (System.Exception e)
             {
@@ -124,22 +124,13 @@ namespace PetArmy.ViewModels
 
             try
             {
-                await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
+                await App.Current.MainPage.Navigation.PushAsync(new EditCampCastraView());
             }
             catch (System.Exception e)
             {
-                await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Campaña Castración'", e.ToString(), "Ok");
+                await App.Current.MainPage.DisplayAlert("Couldn't open 'Edit Campaña Castración'", e.ToString(), "Ok");
             }
 
-            //await Shell.Current.GoToAsync("//AdminLandingPage");
-            /*try
-            {
-                await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
-            }
-            catch (System.Exception e)
-            {
-                await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Campaña Castración'", e.ToString(), "Ok");
-            }*/
         }
 
         public async Task getData()

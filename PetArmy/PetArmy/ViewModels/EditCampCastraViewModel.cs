@@ -47,7 +47,7 @@ namespace PetArmy.ViewModels
         public void initCommands()
         {
             UpdateCampCastra = new Command(updateCampCastra);
-            DeleteSCampCastra = new Command(deleteCampCastra);
+            DeleteCampCastra = new Command(deleteCampCastra);
         }
         #endregion
 
@@ -112,7 +112,7 @@ namespace PetArmy.ViewModels
 
         #region Commands
         public ICommand UpdateCampCastra { get; set; }
-        public ICommand DeleteSCampCastra { get; set; }
+        public ICommand DeleteCampCastra { get; set; }
 
         public async Task readyEdit(int campCastraID)
         {
@@ -145,14 +145,14 @@ namespace PetArmy.ViewModels
             CurCampCastra.tel_contacto = CampCastraTelephone;
 
             await GraphQLService.updateCampCastra(CurCampCastra);
-            await Shell.Current.GoToAsync("//MyServicesView");
+            await Shell.Current.GoToAsync("//CampCastraView");
 
         }
 
         public async void deleteCampCastra()
         {
             await GraphQLService.deleteCampCastra(CurCampCastra.id_campana);
-            await Shell.Current.GoToAsync("//MyServicesView");
+            await Shell.Current.GoToAsync("//CampCastraView");
         }
         #endregion
     }

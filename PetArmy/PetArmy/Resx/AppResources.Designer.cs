@@ -160,11 +160,47 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Campaing&apos;s Description.
+        /// </summary>
+        public static string CampCastraDescriptionInputKey {
+            get {
+                return ResourceManager.GetString("CampCastraDescriptionInputKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Campaing&apos;s Direction.
+        /// </summary>
+        public static string CampCastraDirectionInputKey {
+            get {
+                return ResourceManager.GetString("CampCastraDirectionInputKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Campaing&apos;s Name.
+        /// </summary>
+        public static string CampCastraNameInputKey {
+            get {
+                return ResourceManager.GetString("CampCastraNameInputKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Telephone.
         /// </summary>
         public static string CampCastraTelephone {
             get {
                 return ResourceManager.GetString("CampCastraTelephone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Campaing&apos;s Phone.
+        /// </summary>
+        public static string CampCastraTelephoneInputKey {
+            get {
+                return ResourceManager.GetString("CampCastraTelephoneInputKey", resourceCulture);
             }
         }
         
@@ -705,6 +741,15 @@ namespace Resx {
         public static string UbicacionKey {
             get {
                 return ResourceManager.GetString("UbicacionKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Information.
+        /// </summary>
+        public static string UpdateCampCastraBtnKey {
+            get {
+                return ResourceManager.GetString("UpdateCampCastraBtnKey", resourceCulture);
             }
         }
         

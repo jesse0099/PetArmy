@@ -345,4 +345,19 @@
   <data name="CampCastraTelephone" xml:space="preserve">
     <value>Teléfono</value>
   </data>
+  <data name="CampCastraNameInputKey" xml:space="preserve">
+    <value>Nombre de la Campaña</value>
+  </data>
+  <data name="CampCastraDescriptionInputKey" xml:space="preserve">
+    <value>Descripción de la Campaña</value>
+  </data>
+  <data name="CampCastraDirectionInputKey" xml:space="preserve">
+    <value>Dirección de la Campaña</value>
+  </data>
+  <data name="CampCastraTelephoneInputKey" xml:space="preserve">
+    <value>Teléfono de Contacto</value>
+  </data>
+  <data name="UpdateCampCastraBtnKey" xml:space="preserve">
+    <value>Actualizar Información</value>
+  </data>
 </root>
