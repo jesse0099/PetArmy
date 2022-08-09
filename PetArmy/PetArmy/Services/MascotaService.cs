@@ -77,7 +77,8 @@ namespace PetArmy.Services
                                                                                                             descripcion  
                                                                                                             }}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
-                    Variables = new {
+                    Variables = new
+                    {
                         mascotaId = mascotaId
 
                     }
@@ -124,8 +125,9 @@ namespace PetArmy.Services
 
 
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
-                    Variables = new {
-                        shelterId=shelterId.ToString()
+                    Variables = new
+                    {
+                        shelterId = shelterId.ToString()
                     }
                 };
 
@@ -200,7 +202,68 @@ namespace PetArmy.Services
         }
 
 
+        public static async Task<Mascota> updateMascota(Mascota mascota)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"
+                        mutation MyMutation {
+                          update_mascota_by_pk(_set: {
+                            alergias: $alergias,
+                            castrado: $castrado,
+                            descripcion: $descripcion,
+                            discapacidad: $discapacidad,
+                            edad: $edad,
+                            enfermedad: $enfermedad,
+                            especie: $especie,
+                            estado: $estado,
+                            id_refugio: $id_refugio,
+                            nombre: $nombre,
+                            peso: $peso,
+                            raza: $raza,
+                            vacunado: $vacunado
+                            },
+                            pk_columns: {id_mascota: $id_mascota}
+                            ) {
+                                id_mascota
+                              }
+                            }
+                        ",
 
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
+                    Variables = new
+                    {
+                        mascotaId = mascota.id_mascota.ToString(),
+                        alergias= mascota.alergias,
+                        castrado= mascota.castrado,
+                        descripcion= mascota.descripcion,
+                        discapacidad= mascota.discapacidad,
+                        edad= mascota.edad,
+                        enfermedad= mascota.enfermedad,
+                        especie= mascota.especie,
+                        estado= mascota.estado,
+                        id_refugio= mascota.id_refugio,
+                        nombre= mascota.nombre,
+                        peso= mascota.peso,
+                        raza= mascota.raza,
+                        vacunado= mascota.vacunado
+                    }
+                };
+
+                var response = await client.SendQueryAsync<Mascota>(request);
+                var mascota_response = response.Data;
+
+                return mascota_response ;
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
 
         public static async Task<bool> deleteMascota(int mascotaId)
         {

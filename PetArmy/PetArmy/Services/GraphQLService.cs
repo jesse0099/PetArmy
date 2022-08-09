@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using PetArmy.Helpers;
 using GraphQL.Client.Serializer.Newtonsoft;
 using PetArmy.Models;
-using System.Text;
 
 namespace PetArmy.Services
 {
@@ -1170,6 +1169,8 @@ namespace PetArmy.Services
                 throw;
             }
         }
+
+
         #endregion
 
     }
