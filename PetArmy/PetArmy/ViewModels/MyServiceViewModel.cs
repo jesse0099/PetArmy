@@ -142,10 +142,6 @@ namespace PetArmy.ViewModels
             set { imgSource = value; OnPropertyChanged(); }
         }
 
-        //Alguien se sentia realmente mal cuando escribio esto
-        public BindingList<string> dummy = new BindingList<string> { "jueputa", "mierda", "perra" };
-
-
         #endregion
 
         #region Commands and Funtions

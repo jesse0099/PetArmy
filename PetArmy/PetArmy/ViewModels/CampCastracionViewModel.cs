@@ -1,4 +1,5 @@
 ﻿using PetArmy.Helpers;
+using PetArmy.Infraestructure;
 using PetArmy.Interfaces;
 using PetArmy.Models;
 using PetArmy.Services;
@@ -73,13 +74,12 @@ namespace PetArmy.ViewModels
 
         public ICommand Add_CampCastra { get; set; }
 
-        public ICommand _edit_CampCastra { get; set; }
-
         public ICommand Edit_CampCastra
         {
-            get { return _getAllCampCastra; }
-            set { _edit_CampCastra = value;
-                OnPropertyChanged();
+            get {
+                return new Command((e) => {
+                    editCampCastra((Camp_Castracion)e);
+                });
             }
         }
 
@@ -87,7 +87,6 @@ namespace PetArmy.ViewModels
         {
             GetAllCampCastra = new Command(getCampCastra);
             Add_CampCastra = new Command(addCampCastra);
-            Edit_CampCastra = new Command(editCampCastra);
         }
 
         public async void getCampCastra()
@@ -118,17 +117,20 @@ namespace PetArmy.ViewModels
             }
 
         }
-        
-        public async void editCampCastra()
-        {
 
+        public void editCampCastra(Camp_Castracion param)
+        {
             try
             {
-                await App.Current.MainPage.Navigation.PushAsync(new EditCampCastraView());
+                IsBusy = true;
+                App.Current.Resources.TryGetValue("Locator", out object locator);
+                ((InstanceLocator)locator).Main.EditCampCastra.CurCampCastra = param;
+                IsBusy = false;
             }
-            catch (System.Exception e)
+            catch (Exception)
             {
-                await App.Current.MainPage.DisplayAlert("Couldn't open 'Edit Campaña Castración'", e.ToString(), "Ok");
+
+                throw;
             }
 
         }

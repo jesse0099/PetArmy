@@ -43,7 +43,7 @@ namespace PetArmy.ViewModels
             this.EditShelter = EditShelterViewModel.GetInstance();
             this.CampCastracion = CampCastracionViewModel.GetInstance();
             this.AddCampCastra = AddCampCastraViewModel.GetInstance();
-            //this.EditCampCastra = EditCampCastraViewModel.GetInstance();
+            this.EditCampCastra = EditCampCastraViewModel.GetInstance();
             this.UserProfile = UserProfileViewModel.GetInstance();
             this.User = new UserViewModel();
          
