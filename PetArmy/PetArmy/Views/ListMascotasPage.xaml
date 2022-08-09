@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:PetArmy"
+             xmlns:helpers="clr-namespace:PetArmy.Helpers"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
+             x:Class="PetArmy.Views.ListMascotasPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}">
+    <ContentPage.Content>
+        <StackLayout>
+            <PopUps:ErrorPopUp BindingContext="{Binding Mascotas}" />
+            <pulltoRefresh:SfPullToRefresh ProgressBackgroundColor="{StaticResource Liberty}"
+                                           ProgressStrokeColor="{AppThemeBinding Light={StaticResource MiddlePurple}, Dark={StaticResource PurplePlum}}"
+                                           Margin="5,10,5,10"
+                                           IsRefreshing="{Binding Mascotas.IsBusy}"
+                                           RefreshContentHeight="50"
+                                           TransitionMode="SlideOnTop"
+                                           RefreshContentWidth="50"
+                                           VerticalOptions="FillAndExpand"
+                                           HorizontalOptions="FillAndExpand">
+                <pulltoRefresh:SfPullToRefresh.PullableContent>
+                    <sflistview:SfListView  BindingContext="{Binding Mascotas}"
+                                            ItemsSource="{Binding Mascotas}"
+                                            x:Name="lst_requests"
+                                            AutoFitMode="DynamicHeight"
+                                            ItemSize="400"
+                                            SelectionMode="None"
+                                            RowSpacing="15"
+                                            IsStickyHeader="True">
+                        <!--Item Templates-->
+                        <sflistview:SfListView.ItemTemplate>
+                            <!--Cards-->
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame HorizontalOptions="Center"
+                                           BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}"
+                                           VerticalOptions="Center"
+                                           HasShadow="True"
+                                           Margin="10,10,10,10"
+                                           WidthRequest="400"
+                                           CornerRadius="10">
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </sflistview:SfListView.ItemTemplate>
+                        <!--Layout-->
+                    </sflistview:SfListView>
+                </pulltoRefresh:SfPullToRefresh.PullableContent>
+            </pulltoRefresh:SfPullToRefresh>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
