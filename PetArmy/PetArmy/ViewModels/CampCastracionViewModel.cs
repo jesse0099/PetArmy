@@ -7,7 +7,6 @@ using PetArmy.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -109,7 +108,8 @@ namespace PetArmy.ViewModels
 
             try
             {
-                await App.Current.MainPage.Navigation.PushAsync(new EditCampCastraView());
+                await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
+                //await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
             }
             catch (System.Exception e)
             {

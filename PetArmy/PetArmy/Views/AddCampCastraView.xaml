@@ -5,7 +5,7 @@
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" 
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             x:Class="PetArmy.Views.EditCampCastraView"
+             x:Class="PetArmy.Views.AddCampCastraView"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding AddCampCastra}">

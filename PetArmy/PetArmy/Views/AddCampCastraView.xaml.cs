@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace PetArmy.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EditCampCastraView : ContentPage
+    public partial class AddCampCastraView : ContentPage
     {
-        public EditCampCastraView()
+        public AddCampCastraView()
         {
             InitializeComponent();
         }
