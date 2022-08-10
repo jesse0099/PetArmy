@@ -1155,15 +1155,16 @@ namespace PetArmy.Services
             }
         }
 
-        public static async Task deleteCampCastra(int idCampCastra)
+        public static async Task deleteCampCastra(Camp_Castracion deleteCampCastra)
         {
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation {delete_camp_castracion_pk(id_campana: " + idCampCastra + ")}",
-                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    Query = Commons.DeleteCampCastraMutation,
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
+                    Variables = new { deleteCampCastra.id_campana }
                 };
 
                 var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);

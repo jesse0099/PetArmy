@@ -20,6 +20,14 @@ namespace PetArmy.Helpers
             id_campana
           }
         }";
+
+        public static string DeleteCampCastraMutation = @"mutation delete_an_article($id_campana: Int!) {
+            delete_camp_castracion_by_pk(
+              id_campana: $id_campana
+              ){
+                nombre_camp
+               }
+             }";
         public static byte[] StreamToByteArray(Stream input)
         {
             try

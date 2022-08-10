@@ -68,13 +68,16 @@ namespace PetArmy.ViewModels
         public async void updateCampCastra()
         {
             await GraphQLService.updateCampCastra(CurCampCastra);
+            await App.Current.MainPage.DisplayAlert("Success", "Campaing Updated!", "Ok");
             await Shell.Current.GoToAsync("//CampCastraView");
 
         }
 
+        //Probablemente está función se pasé al lado de la View de las Campañas
         public async void deleteCampCastra()
         {
-            await GraphQLService.deleteCampCastra(CurCampCastra.id_campana);
+            await GraphQLService.deleteCampCastra(CurCampCastra);
+            await App.Current.MainPage.DisplayAlert("Success", "Campaing Deleted!", "Ok");
             await Shell.Current.GoToAsync("//CampCastraView");
         }
         #endregion
