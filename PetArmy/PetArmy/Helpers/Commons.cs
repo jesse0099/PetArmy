@@ -9,7 +9,17 @@ namespace PetArmy.Helpers
 {
     public static class Commons
     {
-
+        public static string UpdateCampCastraMutation = @"mutation update_an_article($nombre_camp: String!, $descripcion: String!, $direccion: String!, $tel_contacto: String!, $id_campana: Int!) {
+          update_camp_castracion_by_pk (
+            pk_columns: {id_campana: $id_campana}, 
+            _set: { nombre_camp: $nombre_camp
+    				        descripcion: $descripcion
+    				        direccion: $direccion
+    				        tel_contacto: $tel_contacto}
+          ) {
+            id_campana
+          }
+        }";
         public static byte[] StreamToByteArray(Stream input)
         {
             try

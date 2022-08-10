@@ -2,16 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" 
-             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="PetArmy.Views.EditCampCastra"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <StackLayout BindingContext="{Binding EditCampCastra}">
         <PopUps:ErrorPopUp />
         <ScrollView>
             <StackLayout>
-                <Label Text="{xct:Translate EditCampCastraKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
-                <StackLayout Padding="40" Spacing="20">
+                <Label Text="{xct:Translate EditCampCastraKey}"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+                <StackLayout Padding="40"
+                             Spacing="20">
 
                     <!--Nombre Campaña-->
                     <inputLayout:SfTextInputLayout  Hint="{xct:Translate CampCastraNameInputKey}"
@@ -21,8 +26,8 @@
                                                     IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="campCastraName"
-                               Text="{Binding CampCastraName, Mode=TwoWay}"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                               Text="{Binding CurCampCastra.nombre_camp, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                     </inputLayout:SfTextInputLayout>
 
                     <!--Descripción Campaña-->
@@ -33,8 +38,8 @@
                                                     IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="campCastraDescription"
-                               Text="{Binding CampCastraDescription, Mode=TwoWay}"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                               Text="{Binding CurCampCastra.descripcion, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                     </inputLayout:SfTextInputLayout>
 
                     <!--Dirección Campaña-->
@@ -45,8 +50,8 @@
                                                     IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="campCastraDirection"
-                               Text="{Binding CampCastraDirection, Mode=TwoWay}"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                               Text="{Binding CurCampCastra.direccion, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                     </inputLayout:SfTextInputLayout>
 
                     <!--Teléfono Campaña-->
@@ -57,10 +62,11 @@
                                                     IsHintAlwaysFloated="true"
                                                     Style="{StaticResource SyncfusionEntries}">
                         <Entry x:Name="campCastraTelephone"
-                               Text="{Binding CampCastraTelephone, Mode=TwoWay}"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                               Text="{Binding CurCampCastra.tel_contacto, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                     </inputLayout:SfTextInputLayout>
-
+                    
+                    <!--Update-->
                     <buttons:SfButton  Command="{Binding UpdateCampCastra}"
                                        Text="{xct:Translate UpdateCampCastraBtnKey}"
                                        FontAttributes="Bold"
@@ -72,6 +78,7 @@
                                        Style="{StaticResource SyncfusionButtons}">
                     </buttons:SfButton>
 
+                    <!--Boton de eliminacion pendiente de pasar a pantalla principal-->
                     <buttons:SfButton  Command="{Binding DeleteCampCastra}"
                                        Text="{xct:Translate DeleteCampCastraKey}"
                                        FontAttributes="Bold"
@@ -82,7 +89,6 @@
                                        WidthRequest="280"
                                        Style="{StaticResource SyncfusionButtons}">
                     </buttons:SfButton>
-
                 </StackLayout>
             </StackLayout>
         </ScrollView>

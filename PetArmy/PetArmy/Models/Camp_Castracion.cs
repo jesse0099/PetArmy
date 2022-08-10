@@ -1,16 +1,69 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PetArmy.ViewModels;
 
 namespace PetArmy.Models
 {
-    public class Camp_Castracion
+    public class Camp_Castracion : BaseViewModel
     {
-        public int id_campana { get; set; }
-        public string nombre_camp { get; set; }
-        public string descripcion { get; set; }
-        public string direccion { get; set; }
-        public string tel_contacto { get; set; }
+        private int _id_campana;
+
+        public int id_campana
+        {
+            get { return _id_campana; }
+            set
+            {
+                _id_campana = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _nombre_camp;
+
+        public string nombre_camp
+        {
+            get { return _nombre_camp; }
+            set
+            {
+                _nombre_camp = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _descripcion;
+
+        public string descripcion
+        {
+            get { return _descripcion; }
+            set
+            {
+                _descripcion = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _direccion;
+
+        public string direccion
+        {
+            get { return _direccion; }
+            set
+            {
+                _direccion = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _tel_contacto;
+
+        public string tel_contacto
+        {
+            get { return _tel_contacto; }
+            set
+            {
+                _tel_contacto = value;
+                OnPropertyChanged();
+            }
+        }
+
 
         public Camp_Castracion()
         {

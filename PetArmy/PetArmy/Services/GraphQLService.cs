@@ -1134,13 +1134,16 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation {update_camp_castracion_by_pk(pk_columns: {id_campana: "       + editCampCastra.id_campana    + "}" +
-                                                                                           ",nombre_camp: \""   + editCampCastra.nombre_camp   + "\"" +
-                                                                                           ",descripcion: \""   + editCampCastra.descripcion   + "\"" +
-                                                                                           ",direccion: \""     + editCampCastra.direccion     + "\"" +
-                                                                                           ",tel_contacto: \""  + editCampCastra.tel_contacto  + "\"" + "}){id_campana }}",
-
-                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    Query = Commons.UpdateCampCastraMutation,
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
+                    Variables = new
+                    {
+                        editCampCastra.nombre_camp,
+                        editCampCastra.descripcion,
+                        editCampCastra.direccion,
+                        editCampCastra.tel_contacto,
+                        editCampCastra.id_campana
+                    }
                 };
 
                 var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);

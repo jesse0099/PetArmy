@@ -109,7 +109,6 @@ namespace PetArmy.ViewModels
             try
             {
                 await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
-                //await App.Current.MainPage.Navigation.PushAsync(new AddCampCastraView());
             }
             catch (System.Exception e)
             {
@@ -118,7 +117,7 @@ namespace PetArmy.ViewModels
 
         }
 
-        public void editCampCastra(Camp_Castracion param)
+        public async void editCampCastra(Camp_Castracion param)
         {
             try
             {
@@ -126,6 +125,7 @@ namespace PetArmy.ViewModels
                 App.Current.Resources.TryGetValue("Locator", out object locator);
                 ((InstanceLocator)locator).Main.EditCampCastra.CurCampCastra = param;
                 IsBusy = false;
+                await App.Current.MainPage.Navigation.PushAsync(new EditCampCastra());
             }
             catch (Exception)
             {
