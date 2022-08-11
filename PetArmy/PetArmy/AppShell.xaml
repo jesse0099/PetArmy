@@ -133,8 +133,7 @@
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.Paw}" Color="{StaticResource Primary}" />
         </FlyoutItem.Icon>
-        <ShellContent Route="AdminLandingPage"
-                      ContentTemplate="{DataTemplate local:AdminLandingPage}" />
+        <ShellContent Route="AdminLandingPage" ContentTemplate="{DataTemplate local:ListMascotasPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Campañas">

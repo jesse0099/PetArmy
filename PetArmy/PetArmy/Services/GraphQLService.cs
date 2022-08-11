@@ -719,7 +719,7 @@ namespace PetArmy.Services
 
         #endregion
 
-        #region Mascotas
+        #region Mascotas - Commented out
         public static async Task<List<Mascota>> getAllMascotas()
         {
             List<Mascota> mascotas = new List<Mascota>();
@@ -926,7 +926,7 @@ namespace PetArmy.Services
 
         #region Pet_Images
 
-       
+
         public static async Task addPetImage(Imagen_Mascota img)
         {
             try
@@ -934,7 +934,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = $"mutation MyMutation {{insert_imagen_mascota(objects: {{id_imagen: { img.id_imagen } , id_refugio: { img.id_mascota },  imagen:  { img.imagen }, isDefault: { img.isDefault } }}) {{returning {{id_imagen}} }} }}",
+                    Query = $"mutation MyMutation {{insert_imagen_mascota(objects: {{id_imagen: {img.id_imagen} , id_refugio: {img.id_mascota},  imagen:  {img.imagen}, isDefault: {img.isDefault} }}) {{returning {{id_imagen}} }} }}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -978,7 +978,7 @@ namespace PetArmy.Services
 
 
         #endregion
-        
+
         #region SearchBar Operations
 
         public static async Task<IEnumerable<Tag>> getAllTags()

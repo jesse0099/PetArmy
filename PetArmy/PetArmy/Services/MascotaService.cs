@@ -167,8 +167,8 @@ namespace PetArmy.Services
                                                                             estado:$estado, 
                                                                             nombre: $nombre, 
                                                                             peso:$peso, 
-                                                                             raza:\$raza, 
-                                                                             vacunado:$vacunado, 
+                                                                            raza:$raza, 
+                                                                            vacunado:$vacunado, 
                                                                             id_refugio:$id_refugio, 
                                                                             }) { returning { id_mascota }}}",
 
