@@ -8,6 +8,7 @@ using PetArmy.Helpers;
 using System.Windows.Input;
 using Xamarin.Forms;
 using PetArmy.Views;
+using PetArmy.Infraestructure;
 
 namespace PetArmy.ViewModels
 {
@@ -77,8 +78,7 @@ namespace PetArmy.ViewModels
         public void initCommands()
         {
             NewMascota = new Command(newMascota);
-            
-
+            EditMascota = new Command<int>(openEditMascota);            
         }
 
 
@@ -100,6 +100,19 @@ namespace PetArmy.ViewModels
         }
 
         public ICommand NewMascota { get; set; }
+        public ICommand EditMascota { get; set; }
+        
+
+
+
+        #endregion
+
+
+
+
+
+        #region Functions
+
         public async void newMascota()
         {
             try
@@ -111,16 +124,6 @@ namespace PetArmy.ViewModels
                 await App.Current.MainPage.DisplayAlert("Couldn't open 'Add Mascota'", e.ToString(), "Ok");
             }
         }
-
-
-
-        #endregion
-
-
-
-
-
-        #region Functions
 
         public async Task getData()
         {
@@ -179,6 +182,28 @@ namespace PetArmy.ViewModels
             MascotasList = new BindingList<CstmItemMascota>(temp);
             IsBusy = false;
         }
+
+
+        public async void openEditMascota(int mascotaId)
+        {
+            try 
+            {
+                IsBusy = true;
+                App.Current.Resources.TryGetValue("Locator", out object locator);
+                await Task.Run(async () => { await ((InstanceLocator)locator).Main.EditMascota.readyEdit(mascotaId); });
+                await Application.Current.MainPage.Navigation.PushAsync(new EditMascotaView());
+                IsBusy = false;
+            }
+            catch (Exception) 
+            {
+                throw;
+            }
+            
+        }
+
+        
+
+
 
         #endregion
 
