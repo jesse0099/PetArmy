@@ -1,19 +1,22 @@
-using System.ComponentModel;
-using PetArmy.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System;
-using PetArmy.Services;
 using PetArmy.Helpers;
+using PetArmy.Infraestructure;
+using PetArmy.Models;
+using PetArmy.Services;
+using PetArmy.Views;
+using Resx;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using PetArmy.Views;
-using PetArmy.Infraestructure;
 
 namespace PetArmy.ViewModels
 {
     public class MascotasViewModel : BaseViewModel
     {
+
         #region Singleton
         private static MascotasViewModel _instance;
         public static MascotasViewModel GetInstance()
@@ -38,72 +41,35 @@ namespace PetArmy.ViewModels
         #region Variables and Commands
         private MascotasViewModel()
         {
-
-            //this.Mascotas = new BindingList<Mascota>()
-            //{
-            //    new Mascota()
-            //    {
-            //        nombre = null,
-            //        id_refugio = 0,
-            //        castrado = false,
-            //        alergias = false,
-            //        discapacidad = false,
-            //        enfermedad = false,
-            //        especie = "loool",
-            //        id_mascota = 10,
-            //        estado = false,
-            //        peso = 0,
-            //        edad = 0,
-            //        raza = null,
-            //        vacunado = false,
-            //        descripcion = "amazin",
-            //        refugio = null,
-            //        mascota_tags = null,
-            //        imagenes_mascota = null,
-            //        Db_Bools = null,
-            //        Ubicacion = null
-            //    }
-            //};
-
-            MascotasList = new BindingList<CstmItemMascota>();
             initCommands();
             initClass();
         }
 
         public void initClass()
         {
-
+            DefaultPetImage = String64Images.petDefault;
         }
 
         public void initCommands()
         {
             NewMascota = new Command(newMascota);
-            EditMascota = new Command<int>(openEditMascota);            
-        }
-
-
-
-        private BindingList<CstmItemMascota> mascotasList;
-
-        public BindingList<CstmItemMascota> MascotasList
-        {
-            get { return mascotasList; }
-            set { mascotasList = value; OnPropertyChanged(); }
-        }
-
-        private List<Imagen_Mascota> petsImageCollection;
-
-        public List<Imagen_Mascota> PetsImageCollection
-        {
-            get { return petsImageCollection; }
-            set { petsImageCollection = value; OnPropertyChanged(); }
         }
 
         public ICommand NewMascota { get; set; }
-        public ICommand EditMascota { get; set; }
-        
+
+        public ICommand EditMascota
+        {
+            get
+            {
+                return new Command((e) =>
+                {
+                    openEditMascota(e as Mascota);
+                });
+            }
+        }
 
 
+        public string DefaultPetImage { get; set; }
 
         #endregion
 
@@ -127,91 +93,47 @@ namespace PetArmy.ViewModels
 
         public async Task getData()
         {
-            IsBusy = true;
-            List<CstmItemMascota> temp = new List<CstmItemMascota>();
+            Mascotas = new BindingList<Mascota>(await MascotaService.getAllMascotas(Settings.UID) as List<Mascota>);
 
-            //Get all Pets
-            List<Mascota> allPets = await MascotaService.getAllMascotas();
-
-            if (allPets.Count > 0)
+            //UI Settings  
+            List<Color> gradient = new();
+            for (int i = 0; i < 5; i++)
             {
-                //get pet's images
-                foreach (Mascota pet in allPets)
+                Application.Current.Resources.TryGetValue($"Grad{i + 1}", out object color);
+                gradient.Add((Color)color);
+            }
+
+            foreach (var pet in Mascotas)
+            {
+                var bool_values = new List<PetDbBools>()
                 {
-                    petsImageCollection = await MascotaService.getPet_Images(pet.id_mascota);
-
-                    /*Search for the default picture, if not set by user use default */
-                    bool hasDefault = false;
-                    byte[] imageData = null;
-
-                    foreach (Imagen_Mascota image in petsImageCollection)
-                    {
-                        if (image.isDefault)
-                        {
-                            hasDefault = true;
-                            imageData = Convert.FromBase64String(image.imagen);
-                        }
-                    }
-
-                    /*Add custom item to list*/
-                    CstmItemMascota newItem = new CstmItemMascota();
-                    newItem.mascota = pet;
-
-                    if (hasDefault)
-                    {
-                        //Set the pet's image on the item.
-                        newItem.Image = imageData;
-                    }
-                    else
-                    {
-                        //Sets the default image for the pet
-                        imageData = Convert.FromBase64String(String64Images.petDefault);
-                        newItem.Image = imageData;
-                    }
-
-                    temp.Add(newItem);
-                }
+                    new PetDbBools() { Bool_Name = AppResources.Disability, Bool_Value = pet.discapacidad, Bool_Color = gradient[0] },
+                    new PetDbBools() { Bool_Name = AppResources.Illness, Bool_Value = pet.enfermedad, Bool_Color = gradient[1]  },
+                    new PetDbBools() { Bool_Name = AppResources.Allergies, Bool_Value = pet.alergias, Bool_Color = gradient[2]  },
+                    new PetDbBools() { Bool_Name = AppResources.VaxxedKey, Bool_Value = pet.vacunado, Bool_Color = gradient[3]  },
+                    new PetDbBools() { Bool_Name = AppResources.CastratedKey, Bool_Value = pet.castrado, Bool_Color = gradient[4]  },
+                };
+                pet.Db_Bools = bool_values.Where(x => x.Bool_Value).ToList();
             }
-            else
-            {
-                //print something 'There are no pets in the world :('
-            }
-
-
-
-            MascotasList = new BindingList<CstmItemMascota>(temp);
-            IsBusy = false;
         }
 
 
-        public async void openEditMascota(int mascotaId)
+        public async void openEditMascota(Mascota mascota)
         {
-            try 
+            try
             {
                 IsBusy = true;
                 App.Current.Resources.TryGetValue("Locator", out object locator);
-                await Task.Run(async () => { await ((InstanceLocator)locator).Main.EditMascota.readyEdit(mascotaId); });
-                await Application.Current.MainPage.Navigation.PushAsync(new EditMascotaView());
+                ((InstanceLocator)locator).Main.EditMascota.CurrentPet = mascota;
+                await Application.Current.MainPage.Navigation.PushAsync(new EditPetView());
                 IsBusy = false;
             }
-            catch (Exception) 
+            catch (Exception)
             {
                 throw;
             }
-            
         }
 
-        
-
-
-
         #endregion
-
-
-
-
-
-
-
     }
 }

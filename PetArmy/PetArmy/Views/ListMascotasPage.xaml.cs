@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using PetArmy.Infraestructure;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +11,14 @@ namespace PetArmy.Views
         public ListMascotasPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            App.Current.Resources.TryGetValue("Locator", out object locator);
+            InstanceLocator local_locator = locator as InstanceLocator;
+            Task.Run(() => local_locator.Main.Mascotas.getData());
         }
     }
 }

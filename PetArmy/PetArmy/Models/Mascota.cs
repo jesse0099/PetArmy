@@ -5,7 +5,16 @@ namespace PetArmy.Models
 {
     public class Mascota: BaseViewModel
     {
-        public string nombre { get; set; }
+        private string _nombre;
+
+        public string nombre
+        {
+            get { return _nombre; }
+            set { _nombre = value; 
+                OnPropertyChanged();
+            }
+        }
+
         public int id_refugio { get; set; }
         public bool castrado { get; set; }
         public bool alergias { get; set; }

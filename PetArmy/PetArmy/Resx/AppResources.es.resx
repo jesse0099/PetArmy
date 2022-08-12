@@ -360,4 +360,16 @@
   <data name="UpdateCampCastraBtnKey" xml:space="preserve">
     <value>Actualizar Información</value>
   </data>
+  <data name="Disability" xml:space="preserve">
+    <value>Discapacidad</value>
+  </data>
+  <data name="Illness" xml:space="preserve">
+    <value>Enfermedad</value>
+  </data>
+  <data name="Allergies" xml:space="preserve">
+    <value>Alergias</value>
+  </data>
+  <data name="EditPetKey" xml:space="preserve">
+    <value>Editar Mascota</value>
+  </data>
 </root>

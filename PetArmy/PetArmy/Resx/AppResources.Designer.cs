@@ -133,6 +133,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allergies.
+        /// </summary>
+        public static string Allergies {
+            get {
+                return ResourceManager.GetString("Allergies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Breed.
         /// </summary>
         public static string BreedKey {
@@ -367,11 +376,29 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disability.
+        /// </summary>
+        public static string Disability {
+            get {
+                return ResourceManager.GetString("Disability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Campaing.
         /// </summary>
         public static string EditCampCastraKey {
             get {
                 return ResourceManager.GetString("EditCampCastraKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Pet.
+        /// </summary>
+        public static string EditPetKey {
+            get {
+                return ResourceManager.GetString("EditPetKey", resourceCulture);
             }
         }
         
@@ -435,6 +462,15 @@ namespace Resx {
         public static string HandicapedKey {
             get {
                 return ResourceManager.GetString("HandicapedKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Illness.
+        /// </summary>
+        public static string Illness {
+            get {
+                return ResourceManager.GetString("Illness", resourceCulture);
             }
         }
         

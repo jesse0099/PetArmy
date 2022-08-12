@@ -13,34 +13,22 @@ namespace PetArmy.Services
     public static class MascotaService
     {
 
-        public static async Task<List<Mascota>> getAllMascotas()
+        public static async Task<IEnumerable<Mascota>> getAllMascotas(string adminId)
         {
-            List<Mascota> mascotas = new List<Mascota>();
-
-            try
+           try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = @"query MyQuery { mascota {  id_refugio,    
-                                                          nombre,       
-                                                          castrado,     
-                                                          alergias,     
-                                                          discapacidad, 
-                                                          enfermedad,   
-                                                          especie,      
-                                                          id_mascota,   
-                                                          estado,       
-                                                          peso,         
-                                                          raza,         
-                                                          vacunado,     
-                                                          descripcion  
-                                                          }}",
-                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    Query = Commons.GetPetsByShelter,
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
+                    Variables = new {
+                        adminId
+                    }
                 };
 
-                var response = await client.SendQueryAsync<MascotaGraphQLResponse>(request);
-                mascotas = response.Data.mascota;
+                var response = await client.SendQueryAsync<PetsByShelterResponse>(request);
+                return response.Data.pets_by_shelter;
 
             }
             catch (Exception)
@@ -48,8 +36,6 @@ namespace PetArmy.Services
 
                 throw;
             }
-
-            return mascotas;
         }
 
 

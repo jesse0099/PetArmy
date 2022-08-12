@@ -58,5 +58,34 @@ namespace PetArmy.Helpers
                 hex.AppendFormat("{0:x2}", b);
             return hex.ToString();
         }
+
+        public static string GetPetsByShelter = @"query get_pets_by_shelter($adminId: String!) {
+          pets_by_shelter: mascota(where: {refugio: {administrador: {_eq: $adminId}} }) {
+            id_mascota
+            nombre
+            especie
+            raza
+            peso
+            descripcion
+            discapacidad
+            alergias
+            castrado
+            vacunado
+            enfermedad
+            edad
+            refugio{
+              id_refugio
+            }
+            mascota_tags {
+              tag {
+                nombre_tag
+              }
+            }
+            imagenes_mascota {
+              imagen: image
+            }
+          }
+        }";
+
     }
 }

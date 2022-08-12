@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="PetArmy.Views.EditPetView"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding EditMascota}"
+                     x:Name="Wrapper">
+            <PopUps:ErrorPopUp />
+            <ScrollView>
+                <StackLayout>
+                    <!--<Image Source="addMascota" HeightRequest="180" Margin="0,0,0,10" HorizontalOptions="Center"/>-->
+                    <Label Text="{xct:Translate EditPetKey}"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center" />
+                    <StackLayout Padding="40"
+                                 Spacing="20">
+
+                        <!--Nombre-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate NameKey}"
+                                                        x:Name="PetContainerNombre"
+                                                        InputViewPadding="5"
+                                                        ContainerType="Outlined"
+                                                        IsHintAlwaysFloated="true"
+                                                        Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="PetName"
+                                   Text="{Binding CurrentPet.nombre, Mode=TwoWay}"
+                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                        </inputLayout:SfTextInputLayout>
+
+                        <!--Id_Refugio-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate ShelterKey}"
+                                                        x:Name="PetContainerShelterId"
+                                                        InputViewPadding="5"
+                                                        ContainerType="Outlined"
+                                                        IsHintAlwaysFloated="true"
+                                                        Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="ShelterID"
+                                   Text="{Binding CurrentPet.refugio.id_refugio, Mode=TwoWay}"
+                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                        </inputLayout:SfTextInputLayout>
+
+                        <!--Raza-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate BreedKey}"
+                                                        x:Name="PetContainerRaza"
+                                                        InputViewPadding="5"
+                                                        ContainerType="Outlined"
+                                                        IsHintAlwaysFloated="true"
+                                                        Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="PetRaza"
+                                   Text="{Binding CurrentPet.raza, Mode=TwoWay}"
+                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                        </inputLayout:SfTextInputLayout>
+
+                        <!--Especie-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate SpeciesKey}"
+                                                        x:Name="PetContainerEspecie"
+                                                        InputViewPadding="5"
+                                                        ContainerType="Outlined"
+                                                        IsHintAlwaysFloated="true"
+                                                        Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="PetEspecie"
+                                   Text="{Binding CurrentPet.especie, Mode=TwoWay}"
+                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                        </inputLayout:SfTextInputLayout>
+
+                        <!--Peso-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate WeightKey}"
+                                                        x:Name="PetContainerPeso"
+                                                        InputViewPadding="5"
+                                                        ContainerType="Outlined"
+                                                        IsHintAlwaysFloated="true"
+                                                        Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="PetPeso"
+                                   Text="{Binding CurrentPet.peso, Mode=TwoWay}"
+                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                        </inputLayout:SfTextInputLayout>
+
+
+                        <!--Descripcion-->
+                        <inputLayout:SfTextInputLayout  Hint="{xct:Translate DescriptionKey}"
+                                                        x:Name="PetContainerDescripcion"
+                                                        InputViewPadding="5"
+                                                        ContainerType="Outlined"
+                                                        IsHintAlwaysFloated="true"
+                                                        Style="{StaticResource SyncfusionEntries}">
+                            <Entry x:Name="PetDescripcion"
+                                   Text="{Binding CurrentPet.descripcion, Mode=TwoWay}"
+                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                        </inputLayout:SfTextInputLayout>
+
+
+                        <!--Castrado-->
+                        <Label Text="{xct:Translate CastratedKey}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <syncfusion:SfSwitch x:Name="PetContainerCastrado"
+                                             IsOn="{Binding CurrentPet.castrado, Mode=TwoWay}" />
+
+                        <!--Vacuando-->
+                        <Label Text="{xct:Translate VaxxedKey}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <syncfusion:SfSwitch x:Name="PetContainerVacuando"
+                                             IsOn="{Binding CurrentPet.vacunado, Mode=TwoWay}" />
+
+                        <!--Estado-->
+                        <Label Text="{xct:Translate StatusKey}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <syncfusion:SfSwitch x:Name="PetContainerEstado"
+                                             IsOn="{Binding CurrentPet.estado, Mode=TwoWay}" />
+
+                        <!--Discapacidad-->
+
+                        <Label Text="{xct:Translate HandicapedKey}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <syncfusion:SfSwitch x:Name="PetContainerDiscapacidad"
+                                             IsOn="{Binding CurrentPet.discapacidad, Mode=TwoWay}" />
+                        <!--Enfermedad-->
+
+                        <Label Text="{xct:Translate SickKey}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <syncfusion:SfSwitch x:Name="PetContainerEnfermedad"
+                                             IsOn="{Binding CurrentPet.enfermedad, Mode=TwoWay}" />
+                        <!--Alergias-->
+                        <Label Text="{xct:Translate AlergiesKey}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <syncfusion:SfSwitch x:Name="PetContainerAlergias"
+                                             IsOn="{Binding CurrentPet.alergias, Mode=TwoWay}" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
