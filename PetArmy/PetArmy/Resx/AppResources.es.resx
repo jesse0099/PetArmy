@@ -372,4 +372,7 @@
   <data name="EditPetKey" xml:space="preserve">
     <value>Editar Mascota</value>
   </data>
+  <data name="DeleteKey" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
 </root>

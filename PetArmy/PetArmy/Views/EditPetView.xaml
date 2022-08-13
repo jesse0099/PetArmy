@@ -5,6 +5,7 @@
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="PetArmy.Views.EditPetView"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
@@ -142,9 +143,33 @@
                                HorizontalOptions="Center" />
                         <syncfusion:SfSwitch x:Name="PetContainerAlergias"
                                              IsOn="{Binding CurrentPet.alergias, Mode=TwoWay}" />
+                        
+                        <!--Botones-->
+                        <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
+                                                           Command="{Binding  SaveMascota}"
+                                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                           Text="{xct:Translate SaveKey}"
+                                                           FontAttributes="Bold"
+                                                           HorizontalTextAlignment="Center"
+                                                           HorizontalOptions="FillAndExpand"
+                                                           ShowIcon="True"
+                                                           Style="{StaticResource SyncfusionButtons}">
+                        </buttons:SfButton>
+                        
+                        <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
+                                                           Command="{Binding  DeleteMascota}"
+                                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                           Text="{xct:Translate DeleteKey}"
+                                                           FontAttributes="Bold"
+                                                           HorizontalTextAlignment="Center"
+                                                           HorizontalOptions="FillAndExpand"
+                                                           ShowIcon="True"
+                                                           Style="{StaticResource SyncfusionButtons}">
+                        </buttons:SfButton>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

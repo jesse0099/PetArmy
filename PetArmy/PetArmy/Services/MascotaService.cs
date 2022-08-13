@@ -296,7 +296,9 @@ namespace PetArmy.Services
         #region Pet_Images
 
 
-        public static async Task addPetImage(Imagen_Mascota img)
+        public static async Task addPetImages(Imagen_Mascota img)
+        //this parameter should be a list.
+
         {
             try
             {
@@ -341,6 +343,35 @@ namespace PetArmy.Services
                     {
                         id_mascota = id_mascota
                     }
+                };
+                var response = await client.SendQueryAsync<Imagen_MascotaGraphQLResponse>(request);
+                images = response.Data.imagen_mascota;
+                client.Dispose();
+            }
+
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return images;
+        }
+
+        public static async Task<List<Imagen_Mascota>> getAllPetImages()
+        {
+            List<Imagen_Mascota> images = new List<Imagen_Mascota>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"A query that actually works pls!!!!!PLS PLS PLS PSL",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
+                    //Variables = new
+                    //{
+                    //    id_mascota = id_mascota
+                    //}
                 };
                 var response = await client.SendQueryAsync<Imagen_MascotaGraphQLResponse>(request);
                 images = response.Data.imagen_mascota;
