@@ -44,13 +44,14 @@ namespace PetArmy.Models
             set { _alergias = value; OnPropertyChanged(); }
         }
 
-        private  bool _discapacidad;
+        private bool _discapacidad;
 
         public bool discapacidad
         {
             get { return _discapacidad; }
-            set { bool _discapacidad = value; OnPropertyChanged(); }
+            set { _discapacidad = value; OnPropertyChanged(); }
         }
+
 
         private bool _enfermedad ;
 

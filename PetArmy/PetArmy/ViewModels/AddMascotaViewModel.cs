@@ -180,7 +180,8 @@ namespace PetArmy.ViewModels
                     Stream stream = Commons.GetImageSourceStream(imgSource);
                     var bytes = Commons.StreamToByteArray(stream);
                     petImage = new Imagen_Mascota(await generatePetImageID(), Convert.ToBase64String(bytes, 0, bytes.Length), true);
-                    SelectedImage
+                    //SelectedImage
+                }
             }
             catch (Exception)
             {
@@ -211,7 +212,7 @@ namespace PetArmy.ViewModels
                 //Save Pet Image Here!! plenty of work here
                 //my image = pickImage 
                 //this should be a list
-                await MascotaService.addPetImages();
+                //await MascotaService.addPetImages();
 
                 await MascotaService.addMascota(pet);
                 await App.Current.MainPage.DisplayAlert("Success", "Pet Saved!", "Ok");

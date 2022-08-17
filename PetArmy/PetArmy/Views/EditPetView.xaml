@@ -13,7 +13,7 @@
                      x:Name="Wrapper">
             <PopUps:ErrorPopUp />
             <ScrollView>
-                <StackLayout>
+                <StackLayout x:Name="Item">
                     <!--<Image Source="addMascota" HeightRequest="180" Margin="0,0,0,10" HorizontalOptions="Center"/>-->
                     <Label Text="{xct:Translate EditPetKey}"
                            FontSize="18"
@@ -100,7 +100,8 @@
                         <Label Text="{xct:Translate CastratedKey}"
                                FontSize="18"
                                FontAttributes="Bold"
-                               HorizontalOptions="Center" />
+                               HorizontalOptions="Center"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                         <syncfusion:SfSwitch x:Name="PetContainerCastrado"
                                              IsOn="{Binding CurrentPet.castrado, Mode=TwoWay}" />
 
@@ -108,7 +109,8 @@
                         <Label Text="{xct:Translate VaxxedKey}"
                                FontSize="18"
                                FontAttributes="Bold"
-                               HorizontalOptions="Center" />
+                               HorizontalOptions="Center"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                         <syncfusion:SfSwitch x:Name="PetContainerVacuando"
                                              IsOn="{Binding CurrentPet.vacunado, Mode=TwoWay}" />
 
@@ -116,7 +118,8 @@
                         <Label Text="{xct:Translate StatusKey}"
                                FontSize="18"
                                FontAttributes="Bold"
-                               HorizontalOptions="Center" />
+                               HorizontalOptions="Center"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                         <syncfusion:SfSwitch x:Name="PetContainerEstado"
                                              IsOn="{Binding CurrentPet.estado, Mode=TwoWay}" />
 
@@ -125,7 +128,8 @@
                         <Label Text="{xct:Translate HandicapedKey}"
                                FontSize="18"
                                FontAttributes="Bold"
-                               HorizontalOptions="Center" />
+                               HorizontalOptions="Center"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                         <syncfusion:SfSwitch x:Name="PetContainerDiscapacidad"
                                              IsOn="{Binding CurrentPet.discapacidad, Mode=TwoWay}" />
                         <!--Enfermedad-->
@@ -133,14 +137,16 @@
                         <Label Text="{xct:Translate SickKey}"
                                FontSize="18"
                                FontAttributes="Bold"
-                               HorizontalOptions="Center" />
+                               HorizontalOptions="Center"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                         <syncfusion:SfSwitch x:Name="PetContainerEnfermedad"
                                              IsOn="{Binding CurrentPet.enfermedad, Mode=TwoWay}" />
                         <!--Alergias-->
                         <Label Text="{xct:Translate AlergiesKey}"
                                FontSize="18"
                                FontAttributes="Bold"
-                               HorizontalOptions="Center" />
+                               HorizontalOptions="Center"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                         <syncfusion:SfSwitch x:Name="PetContainerAlergias"
                                              IsOn="{Binding CurrentPet.alergias, Mode=TwoWay}" />
                         
