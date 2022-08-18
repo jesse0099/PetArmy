@@ -145,8 +145,9 @@ namespace PetArmy.ViewModels
             try
             {
                 IsBusy = true;
-                App.Current.Resources.TryGetValue("Locator", out object locator);
+                Application.Current.Resources.TryGetValue("Locator", out object locator);
                 ((InstanceLocator)locator).Main.EditMascota.CurrentPet = mascota;
+                ((InstanceLocator)locator).Main.EditMascota.ImagenesMascota = new BindingList<Imagen_Mascota>(mascota.imagenes_mascota as List<Imagen_Mascota>);
                 await Application.Current.MainPage.Navigation.PushAsync(new EditPetView());
                 IsBusy = false;
             }

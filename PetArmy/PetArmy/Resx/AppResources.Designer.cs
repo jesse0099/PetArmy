@@ -97,6 +97,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Image.
+        /// </summary>
+        public static string AddImageKey {
+            get {
+                return ResourceManager.GetString("AddImageKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add a new Pet.
         /// </summary>
         public static string AddMascotaKey {

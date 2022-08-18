@@ -84,6 +84,7 @@ namespace PetArmy.Helpers
             }
             imagenes_mascota {
               imagen: image
+              id_imagen
             }
           }
         }";

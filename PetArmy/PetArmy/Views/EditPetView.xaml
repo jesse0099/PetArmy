@@ -21,7 +21,69 @@
                            HorizontalOptions="Center" />
                     <StackLayout Padding="40"
                                  Spacing="20">
-
+                        
+                        
+                        <!--Imagenes-->
+                        <ScrollView>
+                            <xct:Expander>
+                                <xct:Expander.Header>
+                                    <Label Text="Imagenes"
+                                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                           FontAttributes="Bold"
+                                           FontSize="Medium" />
+                                </xct:Expander.Header>
+                                <StackLayout>
+                                    <buttons:SfButton  Command="{Binding  AddImage}"
+                                                       Text="{xct:Translate AddImageKey}"
+                                                       FontAttributes="Bold"
+                                                       HorizontalTextAlignment="Center"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       ShowIcon="True"
+                                                       Style="{StaticResource SyncfusionButtons}">
+                                    </buttons:SfButton>
+                                    <!--Images Carrousel-->
+                                    <CarouselView        ItemsSource="{Binding ImagenesMascota}"
+                                                         Margin="0"
+                                                         BackgroundColor="Transparent"
+                                                         HorizontalOptions="FillAndExpand"
+                                                         IsScrollAnimated="True"
+                                                         Loop="False"
+                                                         IndicatorView="images_indicator_view"
+                                                         HeightRequest="350">
+                                        <CarouselView.EmptyView>
+                                            <Frame Margin="0"
+                                                   Padding="0"
+                                                   CornerRadius="20">
+                                                <Image Source="{Binding DefaultPetImage, Converter={StaticResource Base64ToImage}}"
+                                                       Aspect="AspectFill"
+                                                       HorizontalOptions="FillAndExpand" />
+                                            </Frame>
+                                        </CarouselView.EmptyView>
+                                        <CarouselView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Frame Margin="0"
+                                                       Padding="0"
+                                                       CornerRadius="20">
+                                                    <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
+                                                           Aspect="AspectFill"
+                                                           VerticalOptions="FillAndExpand" />
+                                                </Frame>
+                                            </DataTemplate>
+                                        </CarouselView.ItemTemplate>
+                                    </CarouselView>
+                                </StackLayout>
+                            </xct:Expander>
+                        </ScrollView>
+                        
+                        <!--Indicator View Carrousel-->
+                        <IndicatorView x:Name="images_indicator_view"
+                                       BackgroundColor="Transparent"
+                                       IndicatorsShape="Circle"
+                                       IndicatorColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                       SelectedIndicatorColor="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}"
+                                       HorizontalOptions="CenterAndExpand"
+                                       Margin="3">
+                        </IndicatorView>
                         <!--Nombre-->
                         <inputLayout:SfTextInputLayout  Hint="{xct:Translate NameKey}"
                                                         x:Name="PetContainerNombre"

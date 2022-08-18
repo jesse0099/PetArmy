@@ -355,4 +355,7 @@
   <data name="DeleteKey" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="AddImageKey" xml:space="preserve">
+    <value>Add Image</value>
+  </data>
 </root>
