@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.CommunityToolkit.ObjectModel;
-
-namespace PetArmy.ViewModels
+﻿namespace PetArmy.ViewModels
 {
     public  class MainViewModel: BaseViewModel
     {

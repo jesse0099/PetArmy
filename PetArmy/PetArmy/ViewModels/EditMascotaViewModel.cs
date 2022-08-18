@@ -39,7 +39,6 @@ namespace PetArmy.ViewModels
         public void initCommands()
         {
             SaveMascota = new Command(updatePet);
-            DeleteMascota = new Command(deletePet);
             PickImage = new Command(pickImage);
         }
 
@@ -58,7 +57,6 @@ namespace PetArmy.ViewModels
 
 
         public ICommand SaveMascota { get; set; }
-        public ICommand DeleteMascota { get; set; }
         public ICommand PickImage { get; set; }
         #endregion
 
@@ -77,17 +75,6 @@ namespace PetArmy.ViewModels
 
         }
 
-        public async void deletePet() {
-            try 
-            {
-                await MascotaService.deleteMascota(currPet.id_mascota);
-                await Shell.Current.GoToAsync("//ListMascotasPage");
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
 
         public async void pickImage()
         {

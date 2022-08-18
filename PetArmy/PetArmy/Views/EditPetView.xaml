@@ -162,16 +162,6 @@
                                                            Style="{StaticResource SyncfusionButtons}">
                         </buttons:SfButton>
                         
-                        <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
-                                                           Command="{Binding  DeleteMascota}"
-                                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                                           Text="{xct:Translate DeleteKey}"
-                                                           FontAttributes="Bold"
-                                                           HorizontalTextAlignment="Center"
-                                                           HorizontalOptions="FillAndExpand"
-                                                           ShowIcon="True"
-                                                           Style="{StaticResource SyncfusionButtons}">
-                        </buttons:SfButton>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PetArmy.Models
+﻿namespace PetArmy.Models
 {
     public class Imagen_Mascota
     {

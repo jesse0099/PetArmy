@@ -68,6 +68,17 @@ namespace PetArmy.ViewModels
             }
         }
 
+        public ICommand DeletePetCommand
+        {
+            get
+            {
+                return new Command((e) =>
+                {
+                    DeletePet(e as Mascota);
+                });
+            }
+            
+        }
 
         public string DefaultPetImage { get; set; }
 
@@ -117,7 +128,18 @@ namespace PetArmy.ViewModels
             }
         }
 
-
+        public async void DeletePet(Mascota currPet)
+        {
+            try
+            {
+                await MascotaService.deleteMascota(currPet.id_mascota);
+                await getData();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public async void openEditMascota(Mascota mascota)
         {
             try

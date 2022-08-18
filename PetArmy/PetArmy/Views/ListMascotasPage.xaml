@@ -40,37 +40,47 @@
                                     <StackLayout x:Name="Item">
                                         <Label Text="{Binding nombre}" />
                                         <ScrollView>
-                                            <!--Images Carrousel-->
-                                            <CarouselView        ItemsSource="{Binding imagenes_mascota}"
-                                                                 Margin="0"
-                                                                 BackgroundColor="Transparent"
-                                                                 HorizontalOptions="FillAndExpand"
-                                                                 IsScrollAnimated="True"
-                                                                 Loop="False"
-                                                                 IndicatorView="images_indicator_view"
-                                                                 HeightRequest="350">
-                                                <CarouselView.EmptyView>
-                                                    <StackLayout BackgroundColor="Transparent">
-                                                        <Image BindingContext="{Binding Source={x:Reference CartItemsView}, Path=BindingContext}"
-                                                               Source="{Binding DefaultPetImage, Converter={StaticResource Base64ToImage}}"
-                                                               Aspect="AspectFill"
-                                                               HorizontalOptions="FillAndExpand" />
-                                                    </StackLayout>
-                                                </CarouselView.EmptyView>
-                                                <CarouselView.ItemTemplate>
-                                                    <DataTemplate>
+                                            <xct:Expander>
+                                                <xct:Expander.Header>
+                                                    <Label Text="Imagenes"
+                                                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                           FontAttributes="Bold"
+                                                           FontSize="Medium" />
+                                                </xct:Expander.Header>
+                                                <!--Images Carrousel-->
+                                                <CarouselView        ItemsSource="{Binding imagenes_mascota}"
+                                                                     Margin="0"
+                                                                     BackgroundColor="Transparent"
+                                                                     HorizontalOptions="FillAndExpand"
+                                                                     IsScrollAnimated="True"
+                                                                     Loop="False"
+                                                                     IndicatorView="images_indicator_view"
+                                                                     HeightRequest="350">
+                                                    <CarouselView.EmptyView>
                                                         <Frame Margin="0"
                                                                Padding="0"
                                                                CornerRadius="20">
-                                                            <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
+                                                            <Image BindingContext="{Binding Source={x:Reference CartItemsView}, Path=BindingContext}"
+                                                                   Source="{Binding DefaultPetImage, Converter={StaticResource Base64ToImage}}"
                                                                    Aspect="AspectFill"
-                                                                   VerticalOptions="FillAndExpand" />
+                                                                   HorizontalOptions="FillAndExpand" />
                                                         </Frame>
-                                                    </DataTemplate>
-                                                </CarouselView.ItemTemplate>
-                                            </CarouselView>
-                                            <!--Indicator View Carrousel-->
+                                                    </CarouselView.EmptyView>
+                                                    <CarouselView.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <Frame Margin="0"
+                                                                   Padding="0"
+                                                                   CornerRadius="20">
+                                                                <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
+                                                                       Aspect="AspectFill"
+                                                                       VerticalOptions="FillAndExpand" />
+                                                            </Frame>
+                                                        </DataTemplate>
+                                                    </CarouselView.ItemTemplate>
+                                                </CarouselView>
+                                            </xct:Expander>
                                         </ScrollView>
+                                        <!--Indicator View Carrousel-->
                                         <IndicatorView x:Name="images_indicator_view"
                                                        BackgroundColor="Transparent"
                                                        IndicatorsShape="Circle"
@@ -88,7 +98,19 @@
                                                            HorizontalTextAlignment="Center"
                                                            HorizontalOptions="FillAndExpand"
                                                            ShowIcon="True"
-                                                           Style="{StaticResource SyncfusionButtons}">
+                                                           Style="{StaticResource SyncfusionButtons}"
+                                                           Margin="4">
+                                        </buttons:SfButton>
+                                        <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
+                                                           Command="{Binding  DeletePetCommand}"
+                                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                           Text="{xct:Translate DeleteKey}"
+                                                           FontAttributes="Bold"
+                                                           HorizontalTextAlignment="Center"
+                                                           HorizontalOptions="FillAndExpand"
+                                                           ShowIcon="True"
+                                                           Style="{StaticResource SyncfusionButtons}"
+                                                           Margin="4">
                                         </buttons:SfButton>
                                     </StackLayout>
                                 </ViewCell>

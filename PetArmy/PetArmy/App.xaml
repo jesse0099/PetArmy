@@ -53,9 +53,14 @@
                         Value="SyncfusionHelperLabel"/>
             </Style>
 
+            <!--Monochromatic Gradient (Pet bool values)-->
+            <Color x:Key="Grad1">#19192f</Color>
+            <Color x:Key="Grad2">#32325f</Color>
+            <Color x:Key="Grad3">#4b4b8f</Color>
+            <Color x:Key="Grad4">#6f6fb3</Color>
+            <Color x:Key="Grad5">#9f9fcc</Color>
+            <Color x:Key="Grad6">#cfcfe5</Color>
 
-
-            
             <!--Buttons con syncfusion-->
             <Style x:Key="SyncfusionButtons"
                    TargetType="buttons:SfButton">

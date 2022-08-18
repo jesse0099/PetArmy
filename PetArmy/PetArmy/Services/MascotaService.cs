@@ -236,7 +236,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = @"mutation MyMutation {  delete_mascota(where: {id_mascota: {_eq : $mascotaId}}) { returning {
+                    Query = @"mutation MyMutation ($mascotaId: Int!) {  delete_mascota(where: {id_mascota: {_eq : $mascotaId}}) { returning {
                                                                             castrado
                                                                             descripcion
                                                                             discapacidad
@@ -254,17 +254,17 @@ namespace PetArmy.Services
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
                     Variables = new
                     {
-                        mascotaId = mascotaId.ToString()
+                        mascotaId
                     }
                 };
 
-                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+                var response = await client.SendQueryAsync<Mascota>(request);
                 success = true;
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                throw e;
             }
             return success;
 
