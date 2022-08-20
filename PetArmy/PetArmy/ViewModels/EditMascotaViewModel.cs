@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Linq;
 using Xamarin.Forms;
+using PetArmy.Models.GrapQLRequests;
 
 namespace PetArmy.ViewModels
 {
@@ -38,13 +39,15 @@ namespace PetArmy.ViewModels
             }
         }
 
+        public List<Imagen_Mascota> BDImages { get; set; }
+
         //Tupla <Id_mascota, Id_imagen>
         public List<Tuple<Tuple<int, int>, string>> UpdatedImages { get; set; }
 
         //Tupla <Id_mascota, Id_imagen>
         public List<Tuple<int, int>> DeletedImages { get; set; }
 
-        public List<string> AddedImages { get; set; }
+        public List<Tuple<Tuple<int, int>, string>> AddedImages { get; set; }
 
 
 
@@ -63,9 +66,9 @@ namespace PetArmy.ViewModels
 
         public EditMascotaViewModel()
         {
-            UpdatedImages = new List<Tuple<Tuple<int, int>, string>>();
-            AddedImages = new List<string>();
-            DeletedImages = new List<Tuple<int, int>>();
+            UpdatedImages = new();
+            AddedImages = new();
+            DeletedImages = new();
             initCommands();
             initClass();
         }
@@ -107,6 +110,16 @@ namespace PetArmy.ViewModels
                 });
             }
         }
+        public ICommand DeleteImage
+        {
+            get
+            {
+                return new Command((e) =>
+                {
+                    DeleteImagesExecute(e as Imagen_Mascota);
+                });
+            }
+        }
         #endregion
 
         #region Functions
@@ -114,7 +127,39 @@ namespace PetArmy.ViewModels
         {
             try
             {
-                await MascotaService.updateMascota(currPet);
+
+                await MascotaService.updateMascota(currPet, AddedImages.ConvertAll<ImagenMascotaInsertRequest>(x =>
+                {
+                    return new()
+                    {
+                        image = x.Item2,
+                        idDefault = false,
+                        id_mascota = x.Item1.Item1,
+                        id_imagen = x.Item1.Item2
+                    };
+                }), UpdatedImages.ConvertAll<UpdatedImage>((y) => new()
+                {
+                    where = new()
+                    {
+                        _and = new List<And>()
+                        {
+                            new (){
+                                id_imagen = new(){
+                                    _eq =  y.Item1.Item2
+                                },
+                                id_mascota = new()
+                                {
+                                    _eq = y.Item1.Item1
+                                }
+                            }
+                        }
+                    },
+                    _set = new()
+                    {
+                        image = y.Item2
+                    }
+                }));
+                AddedImages.Clear();
                 await Shell.Current.GoToAsync("//ListMascotasPage");
             }
             catch (Exception)
@@ -139,7 +184,8 @@ namespace PetArmy.ViewModels
                 {
                     int tmp_index = 1;
                     Tuple<Imagen_Mascota, byte[]> picked_image = null;
-                    if (ImagenesMascota.Count != 0){
+                    if (ImagenesMascota.Count != 0)
+                    {
                         tmp_index = ImagenesMascota.Max((x) => x.id_imagen) + 1;
                     }
 
@@ -147,7 +193,8 @@ namespace PetArmy.ViewModels
                     ImagenesMascota.Add(picked_image.Item1);
                     var tmp = ImagenesMascota;
                     ImagenesMascota = new BindingList<Imagen_Mascota>(tmp);
-                    AddedImages.Add(Convert.ToBase64String(picked_image.Item2));
+                    AddedImages.Add(new Tuple<Tuple<int, int>, string>(new Tuple<int, int>(picked_image.Item1.id_mascota, picked_image.Item1.id_imagen),
+                        Convert.ToBase64String(picked_image.Item2)));
                 }
             }
             catch (Exception e)
@@ -167,24 +214,37 @@ namespace PetArmy.ViewModels
                      var picked_image = await PickImage(CurrentPet.id_mascota, image.id_imagen);
                      var global_list_index = ImagenesMascota.IndexOf(picked_image.Item1);
 
-                     if (UpdatedImages.FindIndex((x) => x.Item1.Item1 == CurrentPet.id_mascota && x.Item1.Item2 == image.id_imagen) == -1)
+                     //Is BD Image? 
+                     if (IsBDImage(image))
                      {
-                         var updated = new Tuple<Tuple<int, int>, string>(new Tuple<int, int>(image.id_mascota, image.id_imagen), 
-                             Convert.ToBase64String(picked_image.Item2));
-                         UpdatedImages.Add(updated);
-                         
-                         ImagenesMascota[global_list_index] = picked_image.Item1;
+                         if (UpdatedImages.FindIndex((x) => x.Item1.Item1 == CurrentPet.id_mascota && x.Item1.Item2 == image.id_imagen) == -1)
+                         {
+                             //Primera Modificacion
+                             var updated = new Tuple<Tuple<int, int>, string>(new Tuple<int, int>(image.id_mascota, image.id_imagen),
+                                 Convert.ToBase64String(picked_image.Item2));
+                             UpdatedImages.Add(updated);
+
+                             ImagenesMascota[global_list_index] = picked_image.Item1;
+                         }
+                         else
+                         {
+                             //Modificaciones anteriores
+                             var editing_index = UpdatedImages.FindIndex((x) => x.Item1.Item1 == CurrentPet.id_mascota && x.Item1.Item2 == image.id_imagen);
+
+                             UpdatedImages[editing_index] = new Tuple<Tuple<int, int>, string>(new Tuple<int, int>(image.id_mascota, image.id_imagen),
+                                 Convert.ToBase64String(picked_image.Item2));
+
+                             ImagenesMascota[global_list_index] = picked_image.Item1;
+                         }
                      }
                      else
                      {
-                         //Modificaciones anteriores
-                         var editing_index = UpdatedImages.FindIndex((x) => x.Item1.Item1 == CurrentPet.id_mascota && x.Item1.Item2 == image.id_imagen);
-
-                         UpdatedImages[editing_index] = new Tuple<Tuple<int, int>, string>(new Tuple<int, int>(image.id_mascota, image.id_imagen), 
-                             Convert.ToBase64String(picked_image.Item2));
-                         
+                         //Modificacion sobre una imagen local
                          ImagenesMascota[global_list_index] = picked_image.Item1;
+                         AddedImages[AddedImages.FindIndex((x) => x.Item1.Item1 == image.id_mascota && x.Item1.Item2 == image.id_imagen)] =
+                            new Tuple<Tuple<int, int>, string>(new Tuple<int, int>(picked_image.Item1.id_mascota, picked_image.Item1.id_imagen), Convert.ToBase64String(picked_image.Item2));
                      }
+
                      var tmp = ImagenesMascota;
                      ImagenesMascota = new BindingList<Imagen_Mascota>(tmp);
 
@@ -198,6 +258,48 @@ namespace PetArmy.ViewModels
             }
         }
 
+        public void DeleteImagesExecute(Imagen_Mascota imageToDelete)
+        {
+            try
+            {
+
+                //Check if selected image is in database
+                if (IsBDImage(imageToDelete))
+                {
+                    //Agregada a lista de operaciones de eliminacion 
+                    DeletedImages.Add(new Tuple<int, int>(imageToDelete.id_mascota, imageToDelete.id_imagen));
+                }
+                else
+                {
+                    //Eliminar de lista de operaciones de adicion
+                    AddedImages.RemoveAt(AddedImages.FindIndex((x) => x.Item1.Item1 == imageToDelete.id_mascota && x.Item1.Item2 == imageToDelete.id_imagen));
+                }
+
+                //Eliminando Imagen de la lista local
+                ImagenesMascota.Remove(imageToDelete);
+
+                var tmpUiList = ImagenesMascota;
+
+                ImagenesMascota = new BindingList<Imagen_Mascota>(tmpUiList);
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+        }
+
+        private bool IsBDImage(Imagen_Mascota compare)
+        {
+            if (BDImages == null)
+                return false;
+            if (BDImages.Count() == 0)
+                return false;
+
+            return BDImages.FindIndex((x) => x.id_imagen == compare.id_imagen && x.id_mascota == compare.id_mascota) != -1;
+        }
+
         public async Task<Tuple<Imagen_Mascota, byte[]>> PickImage(int idMascota, int idImagen)
         {
             try
@@ -207,9 +309,12 @@ namespace PetArmy.ViewModels
                 var imgSource = ImageSource.FromStream(() => selectedImage.GetStream());
                 Stream stream = Commons.GetImageSourceStream(imgSource);
                 var bytes = Commons.StreamToByteArray(stream);
-                return new Tuple<Imagen_Mascota, byte[]>(new Imagen_Mascota() { imagen = Convert.ToBase64String(bytes, 0, bytes.Length), 
-                    id_mascota = idMascota, 
-                    id_imagen = idImagen }, 
+                return new Tuple<Imagen_Mascota, byte[]>(new Imagen_Mascota()
+                {
+                    imagen = Convert.ToBase64String(bytes, 0, bytes.Length),
+                    id_mascota = idMascota,
+                    id_imagen = idImagen
+                },
                     bytes);
             }
             catch (Exception e)

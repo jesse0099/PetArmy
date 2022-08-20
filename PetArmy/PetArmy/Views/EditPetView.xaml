@@ -22,8 +22,8 @@
                            HorizontalOptions="Center" />
                     <StackLayout Padding="40"
                                  Spacing="20">
-                        
-                        
+
+
                         <!--Imagenes-->
                         <ScrollView>
                             <xct:Expander>
@@ -70,20 +70,37 @@
                                                         <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
                                                                Aspect="AspectFill"
                                                                VerticalOptions="FillAndExpand" />
-                                                        <!--Editar-->
-                                                        <buttons:SfButton  Command="{Binding UpdateImage}"
-                                                                           BindingContext="{Binding Source={x:Reference Item}, Path=BindingContext }"
-                                                                           CommandParameter="{Binding Source={x:Reference Imagen}, Path=BindingContext}"
-                                                                           Text="{xct:Translate UpdateKey}"
-                                                                           HorizontalOptions="FillAndExpand"
-                                                                           ShowIcon="True"
-                                                                           TextColor="{AppThemeBinding Light=White, Dark=LightGray}"
-                                                                           Style="{StaticResource SyncfusionButtons}">
-                                                            <buttons:SfButton.ImageSource>
-                                                                <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
-                                                                                 Glyph="{x:Static local:IconClass.Upload}" />
-                                                            </buttons:SfButton.ImageSource>
-                                                        </buttons:SfButton>
+                                                        <!--Botones-->
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <!--Editar-->
+                                                            <buttons:SfButton  Command="{Binding UpdateImage}"
+                                                                               BindingContext="{Binding Source={x:Reference Item}, Path=BindingContext }"
+                                                                               CommandParameter="{Binding Source={x:Reference Imagen}, Path=BindingContext}"
+                                                                               Text="{xct:Translate UpdateKey}"
+                                                                               HorizontalOptions="FillAndExpand"
+                                                                               ShowIcon="True"
+                                                                               TextColor="{AppThemeBinding Light=White, Dark=LightGray}"
+                                                                               Style="{StaticResource SyncfusionButtons}">
+                                                                <buttons:SfButton.ImageSource>
+                                                                    <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                                                                     Glyph="{x:Static local:IconClass.Upload}" />
+                                                                </buttons:SfButton.ImageSource>
+                                                            </buttons:SfButton>
+                                                            <!--Borrar-->
+                                                            <buttons:SfButton  Command="{Binding DeleteImage}"
+                                                                               BindingContext="{Binding Source={x:Reference Item}, Path=BindingContext }"
+                                                                               CommandParameter="{Binding Source={x:Reference Imagen}, Path=BindingContext}"
+                                                                               Text="{xct:Translate DeleteKey}"
+                                                                               HorizontalOptions="FillAndExpand"
+                                                                               ShowIcon="True"
+                                                                               TextColor="{AppThemeBinding Light=White, Dark=LightGray}"
+                                                                               Style="{StaticResource SyncfusionButtons}">
+                                                                <buttons:SfButton.ImageSource>
+                                                                    <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                                                                     Glyph="{x:Static local:IconClass.Trash}" />
+                                                                </buttons:SfButton.ImageSource>
+                                                            </buttons:SfButton>
+                                                        </StackLayout>
                                                     </StackLayout>
                                                 </Frame>
                                             </DataTemplate>
@@ -92,7 +109,7 @@
                                 </StackLayout>
                             </xct:Expander>
                         </ScrollView>
-                        
+
                         <!--Indicator View Carrousel-->
                         <IndicatorView x:Name="images_indicator_view"
                                        BackgroundColor="Transparent"
@@ -190,7 +207,7 @@
                                FontSize="18"
                                FontAttributes="Bold"
                                HorizontalOptions="Center"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                         <syncfusion:SfSwitch x:Name="PetContainerVacuando"
                                              IsOn="{Binding CurrentPet.vacunado, Mode=TwoWay}" />
 
@@ -199,7 +216,7 @@
                                FontSize="18"
                                FontAttributes="Bold"
                                HorizontalOptions="Center"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                         <syncfusion:SfSwitch x:Name="PetContainerEstado"
                                              IsOn="{Binding CurrentPet.estado, Mode=TwoWay}" />
 
@@ -218,7 +235,7 @@
                                FontSize="18"
                                FontAttributes="Bold"
                                HorizontalOptions="Center"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                         <syncfusion:SfSwitch x:Name="PetContainerEnfermedad"
                                              IsOn="{Binding CurrentPet.enfermedad, Mode=TwoWay}" />
                         <!--Alergias-->
@@ -229,19 +246,19 @@
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                         <syncfusion:SfSwitch x:Name="PetContainerAlergias"
                                              IsOn="{Binding CurrentPet.alergias, Mode=TwoWay}" />
-                        
+
                         <!--Botones-->
                         <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
-                                                           Command="{Binding  SaveMascota}"
-                                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                                           Text="{xct:Translate SaveKey}"
-                                                           FontAttributes="Bold"
-                                                           HorizontalTextAlignment="Center"
-                                                           HorizontalOptions="FillAndExpand"
-                                                           ShowIcon="True"
-                                                           Style="{StaticResource SyncfusionButtons}">
+                                           Command="{Binding  SaveMascota}"
+                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                           Text="{xct:Translate SaveKey}"
+                                           FontAttributes="Bold"
+                                           HorizontalTextAlignment="Center"
+                                           HorizontalOptions="FillAndExpand"
+                                           ShowIcon="True"
+                                           Style="{StaticResource SyncfusionButtons}">
                         </buttons:SfButton>
-                        
+
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

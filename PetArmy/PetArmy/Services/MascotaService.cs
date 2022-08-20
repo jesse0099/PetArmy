@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using PetArmy.Helpers;
 using GraphQL.Client.Serializer.Newtonsoft;
 using PetArmy.Models;
+using PetArmy.Models.GrapQLRequests;
 
 namespace PetArmy.Services
 {
@@ -188,7 +189,8 @@ namespace PetArmy.Services
         }
 
 
-        public static async Task<Mascota> updateMascota(Mascota mascota)
+        public static async Task<Mascota> updateMascota(Mascota mascota, IEnumerable<ImagenMascotaInsertRequest> addedImages, 
+            IEnumerable<UpdatedImage> updatedImages)
         {
             try
             {
@@ -212,7 +214,9 @@ namespace PetArmy.Services
                         mascota.nombre,
                         mascota.peso,
                         mascota.raza,
-                        mascota.vacunado
+                        mascota.vacunado,
+                        addedImages,
+                        updatedImages
                     }
                 };
 
@@ -224,6 +228,7 @@ namespace PetArmy.Services
             }
             catch (Exception e)
             {
+                Console.WriteLine("Update Pet", e.Message);
                 throw e;
             }
         }

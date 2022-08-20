@@ -160,6 +160,7 @@ namespace PetArmy.ViewModels
                 Application.Current.Resources.TryGetValue("Locator", out object locator);
                 ((InstanceLocator)locator).Main.EditMascota.CurrentPet = mascota;
                 ((InstanceLocator)locator).Main.EditMascota.ImagenesMascota = new BindingList<Imagen_Mascota>(mascota.imagenes_mascota as List<Imagen_Mascota>);
+                ((InstanceLocator)locator).Main.EditMascota.BDImages = new (mascota.imagenes_mascota as List<Imagen_Mascota>);
                 await Application.Current.MainPage.Navigation.PushAsync(new EditPetView());
                 IsBusy = false;
             }

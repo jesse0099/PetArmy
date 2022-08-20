@@ -90,19 +90,21 @@ namespace PetArmy.Helpers
           }
         }";
 
-        public static string UpdatePetByPk = @"mutation UpdatePetByPK(   $alergias: Boolean!, $castrado: Boolean!, $discapacidad: Boolean!,
-											                             $enfermedad: Boolean!, $vacunado: Boolean!, $estado: Boolean!,
-											                             $descripcion: String!, $edad: numeric!, $id_refugio: Int!, 
-										                                 $nombre: String!, $especie: String!, $raza: String!, $peso: numeric!,
-											                             $id_mascota: Int!) {
-                                                                            update_mascota_by_pk(_set: { alergias: $alergias, castrado: $castrado, discapacidad: $discapacidad,
-    											                                                         enfermedad: $enfermedad, vacunado: $vacunado,  estado: $estado, 
-    													                                                 descripcion: $descripcion edad: $edad, id_refugio: $id_refugio, 
-     													                                                 nombre: $nombre, especie: $especie, raza: $raza, peso: $peso}, 
-                                                                                                  pk_columns: {id_mascota: $id_mascota}) {
-                                                                                                    id_mascota
-                                                                                                  }
-                                                                        }";
+        public static string UpdatePetByPk = @"mutation UpdatePetByPK($alergias: Boolean!, $castrado: Boolean!, $discapacidad: Boolean!, $enfermedad: Boolean!, $vacunado: Boolean!, $estado: Boolean!, $descripcion: String!, $edad: numeric!, $id_refugio: Int!, $nombre: String!, $especie: String!, $raza: String!, $peso: numeric!, $id_mascota: Int!,
+            $addedImages: [imagen_mascota_insert_input!]!, $updatedImages: [imagen_mascota_updates!]!) {
+  
+              insert_imagen_mascota(objects: $addedImages){
+                affected_rows
+              }
+  
+              update_imagen_mascota_many(updates: $updatedImages){
+                affected_rows
+              }
+  
+              update_mascota_by_pk(_set: {alergias: $alergias, castrado: $castrado, discapacidad: $discapacidad, enfermedad: $enfermedad, vacunado: $vacunado, estado: $estado, descripcion: $descripcion, edad: $edad, id_refugio: $id_refugio, nombre: $nombre, especie: $especie, raza: $raza, peso: $peso}, pk_columns: {id_mascota: $id_mascota}) {
+                id_mascota
+              }
+            }";
 
         public static string DeletePetByPlk = @"mutation DeletePetById($mascotaId: Int!, $refugioId: Int!) {
           delete_imagen_mascota(where: {mascotum: {id_mascota: {_eq: $mascotaId}}}) {
