@@ -808,6 +808,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string UpdateKey {
+            get {
+                return ResourceManager.GetString("UpdateKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update information.
         /// </summary>
         public static string UpdateShelterBtnKey {

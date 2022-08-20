@@ -228,7 +228,7 @@ namespace PetArmy.Services
             }
         }
 
-        public static async Task<bool> deleteMascota(int mascotaId)
+        public static async Task<bool> DeleteMascota(int mascotaId, int refugioId)
         {
             bool success = false;
             try
@@ -236,25 +236,14 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = @"mutation MyMutation ($mascotaId: Int!) {  delete_mascota(where: {id_mascota: {_eq : $mascotaId}}) { returning {
-                                                                            castrado
-                                                                            descripcion
-                                                                            discapacidad
-                                                                            enfermedad
-                                                                            especie
-                                                                            estado
-                                                                            id_mascota
-                                                                            nombre
-                                                                            peso
-                                                                             raza
-                                                                             vacunado
-                                                                            id_refugio
-                                                                            }}}",
+                    Query = Commons.DeletePetByPlk,
 
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
                     Variables = new
                     {
-                        mascotaId
+                        mascotaId,
+                        refugioId
+                        
                     }
                 };
 

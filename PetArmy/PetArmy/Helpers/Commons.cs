@@ -85,6 +85,7 @@ namespace PetArmy.Helpers
             imagenes_mascota {
               imagen: image
               id_imagen
+              id_mascota
             }
           }
         }";
@@ -102,5 +103,40 @@ namespace PetArmy.Helpers
                                                                                                     id_mascota
                                                                                                   }
                                                                         }";
+
+        public static string DeletePetByPlk = @"mutation DeletePetById($mascotaId: Int!, $refugioId: Int!) {
+          delete_imagen_mascota(where: {mascotum: {id_mascota: {_eq: $mascotaId}}}) {
+            affected_rows
+          }
+          delete_solicitudes_adopcion(where: {_and: [{id_mascota: {_eq: $mascotaId}}, {id_refugio: {_eq: $refugioId}}]}) {
+            affected_rows
+          }
+          delete_registro_adopcion(where: {_and: [{id_mascota: {_eq: $mascotaId}}, {id_refugio: {_eq: $refugioId}}]}) {
+            affected_rows
+          }
+          delete_mascota_casa_cuna(where: {_and: [{id_mascota: {_eq: $mascotaId}}, {id_refugio: {_eq: $refugioId}}]}) {
+            affected_rows
+          }
+          delete_mascota_tag(where: {_and: [{id_mascota: {_eq: $mascotaId}}]}) {
+            affected_rows
+          }
+          delete_mascota(where: {id_mascota: {_eq: $mascotaId}}) {
+            returning {
+              castrado
+              descripcion
+              discapacidad
+              enfermedad
+              especie
+              estado
+              id_mascota
+              nombre
+              peso
+              raza
+              vacunado
+              id_refugio
+            }
+          }
+        }";
+
     }
 }

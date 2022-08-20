@@ -210,7 +210,7 @@ namespace PetArmy.ViewModels
                 pet.enfermedad = Enfermedad;
                 pet.alergias = Alergias;
                 //Save Pet Image Here!! plenty of work here
-                //my image = pickImage 
+                //my image = PickImage 
                 //this should be a list
                 //await MascotaService.addPetImages();
 

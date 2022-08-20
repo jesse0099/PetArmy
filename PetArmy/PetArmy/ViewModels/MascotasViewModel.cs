@@ -80,6 +80,18 @@ namespace PetArmy.ViewModels
             
         }
 
+        public ICommand ExpandImageView
+        {
+            get
+            {
+                return new  Command((e) =>
+                {
+                    if(e != null)
+                        (e as Mascota).IsImageViewExpanded = !(e as Mascota).IsImageViewExpanded;
+                });
+            }
+        }
+
         public string DefaultPetImage { get; set; }
 
         #endregion
@@ -132,7 +144,7 @@ namespace PetArmy.ViewModels
         {
             try
             {
-                await MascotaService.deleteMascota(currPet.id_mascota);
+                await MascotaService.DeleteMascota(currPet.id_mascota, currPet.refugio.id_refugio);
                 await getData();
             }
             catch (Exception)

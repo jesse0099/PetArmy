@@ -187,6 +187,16 @@ namespace PetArmy.Models
             }
         }
 
+        private bool _isImageViewExpanded;
+
+        public bool IsImageViewExpanded
+        {
+            get { return _isImageViewExpanded; }
+            set { _isImageViewExpanded = value;
+                OnPropertyChanged();
+            }
+        }
+
 
 
 

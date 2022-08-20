@@ -29,6 +29,7 @@
             <StackLayout>
                 <ScrollView>
                     <ListView x:Name="CartItemsView"
+                              SelectionMode="None"
                               HasUnevenRows="True"
                               BackgroundColor="Transparent"
                               SeparatorVisibility="None"
@@ -40,21 +41,26 @@
                                     <StackLayout x:Name="Item">
                                         <Label Text="{Binding nombre}" />
                                         <ScrollView>
-                                            <xct:Expander>
-                                                <xct:Expander.Header>
-                                                    <Label Text="Imagenes"
-                                                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
-                                                           FontAttributes="Bold"
-                                                           FontSize="Medium" />
-                                                </xct:Expander.Header>
+                                            <StackLayout>
+                                                <Label        x:Name="Expander"
+                                                              Text="Expander">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer  Command="{Binding Source= {x:Reference Wrapper}, Path=BindingContext.ExpandImageView}"
+                                                                               CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                                               NumberOfTapsRequired="1" />
+                                                    </Label.GestureRecognizers>
+                                                </Label>
                                                 <!--Images Carrousel-->
                                                 <CarouselView        ItemsSource="{Binding imagenes_mascota}"
+                                                                     IsVisible="{Binding IsImageViewExpanded}"
                                                                      Margin="0"
                                                                      BackgroundColor="Transparent"
                                                                      HorizontalOptions="FillAndExpand"
                                                                      IsScrollAnimated="True"
                                                                      Loop="False"
                                                                      IndicatorView="images_indicator_view"
+                                                                     HorizontalScrollBarVisibility="Always"
+                                                                     MinimumHeightRequest="350"
                                                                      HeightRequest="350">
                                                     <CarouselView.EmptyView>
                                                         <Frame Margin="0"
@@ -70,7 +76,10 @@
                                                         <DataTemplate>
                                                             <Frame Margin="0"
                                                                    Padding="0"
-                                                                   CornerRadius="20">
+                                                                   CornerRadius="20"
+                                                                   HeightRequest="350"
+                                                                   MinimumHeightRequest="350"
+                                                                   WidthRequest="60">
                                                                 <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
                                                                        Aspect="AspectFill"
                                                                        VerticalOptions="FillAndExpand" />
@@ -78,7 +87,7 @@
                                                         </DataTemplate>
                                                     </CarouselView.ItemTemplate>
                                                 </CarouselView>
-                                            </xct:Expander>
+                                            </StackLayout>
                                         </ScrollView>
                                         <!--Indicator View Carrousel-->
                                         <IndicatorView x:Name="images_indicator_view"

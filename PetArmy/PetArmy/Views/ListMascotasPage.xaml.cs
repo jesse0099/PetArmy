@@ -20,5 +20,10 @@ namespace PetArmy.Views
             InstanceLocator local_locator = locator as InstanceLocator;
             Task.Run(() => local_locator.Main.Mascotas.getData());
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

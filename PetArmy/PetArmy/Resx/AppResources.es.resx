@@ -378,4 +378,7 @@
   <data name="AddImageKey" xml:space="preserve">
     <value>Agregar Imagen</value>
   </data>
+  <data name="UpdateKey" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
 </root>

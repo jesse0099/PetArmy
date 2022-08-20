@@ -6,6 +6,7 @@
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:local="clr-namespace:PetArmy"
              x:Class="PetArmy.Views.EditPetView"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
@@ -49,7 +50,8 @@
                                                          IsScrollAnimated="True"
                                                          Loop="False"
                                                          IndicatorView="images_indicator_view"
-                                                         HeightRequest="350">
+                                                         HeightRequest="350"
+                                                         MinimumHeightRequest="350">
                                         <CarouselView.EmptyView>
                                             <Frame Margin="0"
                                                    Padding="0"
@@ -61,12 +63,28 @@
                                         </CarouselView.EmptyView>
                                         <CarouselView.ItemTemplate>
                                             <DataTemplate>
-                                                <Frame Margin="0"
+                                                <Frame Margin="4"
                                                        Padding="0"
                                                        CornerRadius="20">
-                                                    <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
-                                                           Aspect="AspectFill"
-                                                           VerticalOptions="FillAndExpand" />
+                                                    <StackLayout x:Name="Imagen">
+                                                        <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
+                                                               Aspect="AspectFill"
+                                                               VerticalOptions="FillAndExpand" />
+                                                        <!--Editar-->
+                                                        <buttons:SfButton  Command="{Binding UpdateImage}"
+                                                                           BindingContext="{Binding Source={x:Reference Item}, Path=BindingContext }"
+                                                                           CommandParameter="{Binding Source={x:Reference Imagen}, Path=BindingContext}"
+                                                                           Text="{xct:Translate UpdateKey}"
+                                                                           HorizontalOptions="FillAndExpand"
+                                                                           ShowIcon="True"
+                                                                           TextColor="{AppThemeBinding Light=White, Dark=LightGray}"
+                                                                           Style="{StaticResource SyncfusionButtons}">
+                                                            <buttons:SfButton.ImageSource>
+                                                                <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                                                                 Glyph="{x:Static local:IconClass.Upload}" />
+                                                            </buttons:SfButton.ImageSource>
+                                                        </buttons:SfButton>
+                                                    </StackLayout>
                                                 </Frame>
                                             </DataTemplate>
                                         </CarouselView.ItemTemplate>
