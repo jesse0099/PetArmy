@@ -38,7 +38,6 @@
                                         <!--Campaign Name-->
                                         <inputLayout:SfTextInputLayout Hint="{xct:Translate Campaign}"
                                                                    InputViewPadding="5"
-                                                                   HelperText="{xct:Translate CampaignHelper}"
                                                                    ContainerType="Filled"
                                                                    Style="{StaticResource SyncfusionEntries}">
                                             <Entry x:Name="name_camp"
