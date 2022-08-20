@@ -45,6 +45,7 @@
                                                Text="{Binding nombre_camp, Mode = OneWay}"
                                                TextColor="Black" />
                                         </inputLayout:SfTextInputLayout>
+                                        
                                         <!--Campaign Description-->
                                         <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
                                                                    ContainerType="None"
@@ -59,6 +60,22 @@
                                                                     Padding="10"
                                                                     JustifyText="True" />
                                         </inputLayout:SfTextInputLayout>
+                                        
+                                        <!--Campaign Direction-->
+                                        <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                   ContainerType="None"
+                                                                   IsHintAlwaysFloated="True"
+                                                                   Margin="15,5,15,0"
+                                                                   Hint="{xct:Translate DirectionCampKey}"
+                                                                   HorizontalOptions="FillAndExpand">
+                                            <customcontrols:CustomLabel Text="{Binding direccion}"
+                                                                    TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                                    FontSize="14"
+                                                                    LineBreakMode="WordWrap"
+                                                                    Padding="10"
+                                                                    JustifyText="True" />
+                                        </inputLayout:SfTextInputLayout>
+                                        
                                         <!--Campaign Telephone-->
                                         <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
                                                                    ContainerType="None"
@@ -73,6 +90,7 @@
                                                                     Padding="10"
                                                                     JustifyText="True" />
                                         </inputLayout:SfTextInputLayout>
+                                        
                                         <buttons:SfButton Text="{xct:Translate EditCampCastraKey}"
                                                       FontAttributes="Bold"
                                                       HorizontalTextAlignment="Center"
