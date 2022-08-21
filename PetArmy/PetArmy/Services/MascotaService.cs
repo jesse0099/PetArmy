@@ -33,10 +33,10 @@ namespace PetArmy.Services
                 return response.Data.pets_by_shelter;
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                throw e;
             }
         }
 
@@ -146,35 +146,23 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = @"mutation MyMutation { insert_mascota(objects: {alergias:$alergias ,
-                                                                            castrado:$castrado, 
-                                                                            descripcion: $descripcion, 
-                                                                            discapacidad:$discapacidad, 
-                                                                            enfermedad:$enfermedad, 
-                                                                            especie:$especie, 
-                                                                            estado:$estado, 
-                                                                            nombre: $nombre, 
-                                                                            peso:$peso, 
-                                                                            raza:$raza, 
-                                                                            vacunado:$vacunado, 
-                                                                            id_refugio:$id_refugio, 
-                                                                            }) { returning { id_mascota }}}",
+                    Query = Commons.InsertPet,
 
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
                     Variables = new
                     {
-                        alergias = newPet.alergias,
-                        castrado = newPet.castrado,
-                        descripcion = newPet.descripcion,
-                        discapacidad = newPet.discapacidad,
-                        enfermedad = newPet.enfermedad,
-                        especie = newPet.especie,
-                        estado = newPet.estado,
-                        nombre = newPet.nombre,
-                        peso = newPet.peso,
-                        raza = newPet.raza,
-                        vacunado = newPet.vacunado,
-                        id_refugio = newPet.id_refugio,
+                        newPet.alergias,
+                        newPet.castrado,
+                        newPet.descripcion,
+                        newPet.discapacidad,
+                        newPet.enfermedad,
+                        newPet.especie,
+                        newPet.estado,
+                        newPet.nombre,
+                        newPet.peso,
+                        newPet.raza,
+                        newPet.vacunado,
+                        newPet.id_refugio,
                     }
                 };
 
@@ -231,7 +219,7 @@ namespace PetArmy.Services
             catch (Exception e)
             {
                 Console.WriteLine("Update Pet", e.Message);
-                throw e;
+                return new Mascota();
             }
         }
 

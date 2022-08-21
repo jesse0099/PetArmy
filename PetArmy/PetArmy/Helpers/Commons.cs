@@ -139,5 +139,12 @@ namespace PetArmy.Helpers
           }
         }";
 
+        public static string InsertPet = @"mutation InsertNewPet($alergias: Boolean!, $castrado: Boolean!, $discapacidad: Boolean!, $enfermedad: Boolean!, $vacunado: Boolean!, $estado: Boolean!, $descripcion: String!,$id_refugio: Int!, $nombre: String!, $especie: String!, $raza: String!, $peso: numeric!) {
+          insert_mascota(objects: {alergias: $alergias, castrado: $castrado, descripcion: $descripcion, discapacidad: $discapacidad, enfermedad: $enfermedad, especie: $especie, estado: $estado, nombre: $nombre, peso: $peso, raza: $raza, vacunado: $vacunado, id_refugio: $id_refugio}) {
+            returning {
+              id_mascota
+            }
+          }
+        }";
     }
 }
