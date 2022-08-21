@@ -7,6 +7,7 @@ using PetArmy.Helpers;
 using GraphQL.Client.Serializer.Newtonsoft;
 using PetArmy.Models;
 using PetArmy.Models.GrapQLRequests;
+using PetArmy.Models.GrapQLRequests.UpdatePetRequestModels;
 
 namespace PetArmy.Services
 {
@@ -190,7 +191,7 @@ namespace PetArmy.Services
 
 
         public static async Task<Mascota> updateMascota(Mascota mascota, IEnumerable<ImagenMascotaInsertRequest> addedImages, 
-            IEnumerable<UpdatedImage> updatedImages)
+            IEnumerable<UpdatedImage> updatedImages, IEnumerable<int> deletedImages)
         {
             try
             {
@@ -216,7 +217,8 @@ namespace PetArmy.Services
                         mascota.raza,
                         mascota.vacunado,
                         addedImages,
-                        updatedImages
+                        updatedImages,
+                        deletedImages
                     }
                 };
 

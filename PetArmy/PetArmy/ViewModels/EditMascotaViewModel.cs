@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Linq;
 using Xamarin.Forms;
 using PetArmy.Models.GrapQLRequests;
+using PetArmy.Models.GrapQLRequests.UpdatePetRequestModels;
 
 namespace PetArmy.ViewModels
 {
@@ -127,7 +128,6 @@ namespace PetArmy.ViewModels
         {
             try
             {
-
                 await MascotaService.updateMascota(currPet, AddedImages.ConvertAll<ImagenMascotaInsertRequest>(x =>
                 {
                     return new()
@@ -158,7 +158,7 @@ namespace PetArmy.ViewModels
                     {
                         image = y.Item2
                     }
-                }));
+                }), DeletedImages.ConvertAll((z) => { return z.Item2; }));
                 AddedImages.Clear();
                 await Shell.Current.GoToAsync("//ListMascotasPage");
             }

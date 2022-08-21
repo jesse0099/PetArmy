@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PetArmy.Models.GrapQLRequests
+namespace PetArmy.Models.GrapQLRequests.UpdatePetRequestModels
 {
 
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
