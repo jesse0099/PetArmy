@@ -718,6 +718,43 @@ namespace PetArmy.Services
             return adoptante;
         }
 
+
+        public static async Task createOrUpdate_Adoptante(bool isFound, Perfil_adoptante adopt)
+        {
+            try
+            {
+              
+
+                if (isFound)
+                {
+                    /*Update*/
+                    var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                    var request = new GraphQLHttpRequestWithHeaders
+                    {
+                        Query = "mutation MyMutation { update_perfil_adoptante(where: {uid: {_eq: \""+adopt.uid+"\"}}, _set: {casa_cuna: "+adopt.casa_cuna
+                                                                                                                             +", correo: \""+adopt.correo
+                                                                                                                             +"\", direccion: \""+adopt.direccion
+                                                                                                                             +"\", nombre: \""+adopt.nombre
+                                                                                                                             +"\", telefono: \""+adopt.telefono+"\"}) { returning { uid } } }",
+                        Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    };
+
+                    var response = await client.SendQueryAsync<Perfil_AdoptanteGraphQLResponse>(request);
+                }
+                else
+                {
+                    /*Create*/
+                    await addAdoptante(adopt);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         #endregion
 
         #region Mascotas
@@ -1044,6 +1081,151 @@ namespace PetArmy.Services
 
             return result;
 
+        }
+
+        #endregion
+
+        #region User info 
+
+        public static async Task<List<User_Info>> getUserInfo_ByUID(string uid)
+        {
+            List<User_Info> result = new List<User_Info>();
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery { User_Info(where: {idUser: {_eq: \""+uid+"\"}}) { age canton idInfo idUser username surname profilePicture name }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<User_InfoGraphQLResponse>(request);
+                result = response.Data.User_Info;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return result;
+        }
+
+        public static async Task createOrUpdate_UserInfo(bool isFound, User_Info info)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+                if (isFound)
+                {
+                    var request = new GraphQLHttpRequestWithHeaders
+                    {
+                        Query = "mutation MyMutation { update_User_Info(where: {idUser: {_eq: \""+info.idUser+"\"}}, _set: {age: "+info.age
+                                                                                                                           +", canton: \""+info.canton
+                                                                                                                           +"\", name: \""+info.name
+                                                                                                                           +"\", profilePicture: \""+info.profilePicture
+                                                                                                                           +"\", surname: \""+info.surname
+                                                                                                                           +"\", username: \""+info.username+"\"}) { returning { idInfo }}}",
+                        Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    };
+                    var response = await client.SendQueryAsync<User_InfoGraphQLResponse>(request);
+                    client.Dispose();
+                }
+                else
+                {
+                    var request = new GraphQLHttpRequestWithHeaders
+                    {
+                        Query = "mutation MyMutation {insert_User_Info(objects: {age: "+info.age
+                                                                                     +", canton: \""+info.canton
+                                                                                     +"\", idUser: \""+info.idUser
+                                                                                     +"\", name: \""+info.name
+                                                                                     +"\", profilePicture: \""+info.profilePicture
+                                                                                     +"\", surname: \""+info.surname
+                                                                                     +"\", username: \""+info.username+"\"}) {returning { idUser }}}",
+                        Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    };
+
+                    var response = await client.SendQueryAsync<User_InfoGraphQLResponse>(request);
+                    client.Dispose();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        #endregion
+
+        #region User Preferences 
+
+        public static async Task DeletePreference(Preferencia_adoptante preferencia)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {delete_preferencia_adoptante(where: {uid: {_eq: \""+preferencia.uid+"\"}, id_tag: {_eq: "+preferencia.id_tag+"}}) { returning { uid }}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Preferencia_adoptanteGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        public static async Task AddPreference(Preferencia_adoptante preference)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation { insert_preferencia_adoptante(objects: {uid: \""+preference.uid+"\", id_tag: "+preference.id_tag+"}) { returning { uid } } }",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Preferencia_adoptanteGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        public static async Task<List<Preferencia_adoptante>> GetUserPreferences(string uid)
+        {
+            List<Preferencia_adoptante> preferences = new List<Preferencia_adoptante>();
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery { preferencia_adoptante(where: {uid: {_eq: \""+uid+"\" }}) { id_tag uid }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Preferencia_adoptanteGraphQLResponse>(request);
+                preferences = response.Data.preferencia_adoptante;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return preferences;
         }
 
         #endregion

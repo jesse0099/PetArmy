@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetArmy.Views.UserGeneralInfoView"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:local="clr-namespace:PetArmy"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <StackLayout  BindingContext="{Binding UserProfile}">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*,*">
+            <!-- Add here al the code of the following blocks -->
+            <Image Grid.Row="0" 
+                   Grid.Column="0" 
+                   Grid.ColumnSpan="3" 
+                   Source="{Binding ImageData, Converter={xct:ByteArrayToImageSourceConverter} }" 
+                   Aspect="Fill" 
+                   HeightRequest="400"/>
+            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="40" HasShadow="False" Margin="20,-80,20,10" BackgroundColor="#f9f9f9" HeightRequest="100">
+                <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center" HorizontalOptions="FillAndExpand" RowSpacing="10" Padding="20,5">
+
+                    <!-- Add here the following blocks contained in this block. -->
+                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding FullName}" FontAttributes="Bold" FontSize="21" TextColor="Black"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding Username}" TextColor="#797979" FontSize="17" />
+                    <Image Grid.Row="1" Grid.Column="1" Source="clock" HorizontalOptions="End" Aspect="AspectFit"  WidthRequest="22" HeightRequest="22"/>
+                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding SAge}" TextColor="#797979" FontSize="15" HorizontalTextAlignment="End" />
+                    <Image Grid.Row="2" Grid.Column="0" Source="location" Aspect="AspectFit"  WidthRequest="22" HeightRequest="22" HorizontalOptions="Start" />
+                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" TextColor="#acacac" TranslationX="20" VerticalTextAlignment="Center" Text="{Binding Ubication}" HorizontalOptions="Center" FontSize="15"/>
+                </Grid>
+            </Frame>
+        </Grid>
+        <StackLayout Padding="40" Spacing="20">
+            <buttons:SfButton          Command="{Binding OpenUserInfo}"
+                                       Text="{xct:Translate UpdateShelterBtnKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       ShowIcon="True"
+                                       BackgroundColor="#B7AF22"
+                                       WidthRequest="280"
+                                       VerticalOptions="End"
+                                       Style="{StaticResource SyncfusionButtons}">
+                <buttons:SfButton.ImageSource>
+                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.PencilAlt}" />
+                </buttons:SfButton.ImageSource>
+            </buttons:SfButton>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

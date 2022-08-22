@@ -136,8 +136,6 @@ namespace PetArmy.ViewModels
         #region commands and Functions
         public ICommand AddMascota { get; set; }
 
-
-
         public async void addMascota()
         {
             Mascota pet = new Mascota();

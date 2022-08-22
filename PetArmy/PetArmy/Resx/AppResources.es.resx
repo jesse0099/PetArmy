@@ -360,4 +360,28 @@
   <data name="UpdateCampCastraBtnKey" xml:space="preserve">
     <value>Actualizar Información</value>
   </data>
+  <data name="EditUserKey" xml:space="preserve">
+    <value>Edita tu perfil</value>
+  </data>
+  <data name="NombreUserKey" xml:space="preserve">
+    <value>Tu nombre</value>
+  </data>
+  <data name="SurnameUserKey" xml:space="preserve">
+    <value>Tu apellido</value>
+  </data>
+  <data name="UsernameKey" xml:space="preserve">
+    <value>Tu nombre de usuario</value>
+  </data>
+  <data name="userAgeKey" xml:space="preserve">
+    <value>Tu edad</value>
+  </data>
+  <data name="UpdateUserInfoKey" xml:space="preserve">
+    <value>Actualizar información</value>
+  </data>
+  <data name="updateKey" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="userPhoneKey" xml:space="preserve">
+    <value>Tu número de teléfono</value>
+  </data>
 </root>

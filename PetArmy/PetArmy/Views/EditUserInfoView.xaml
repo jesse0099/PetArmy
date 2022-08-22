@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PetArmy"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="PetArmy.Views.EditUserInfoView"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <StackLayout BindingContext="{Binding UserProfile}">
+     <PopUps:ErrorPopUp />
+        <ScrollView>
+            <StackLayout>
+                <Image Source="Building" HeightRequest="180" Margin="0,0,0,10" HorizontalOptions="Center"/>
+                <Label Text="{xct:Translate EditUserKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <StackLayout Padding="40" Spacing="20">
+
+                    <!--Nombre-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate NombreUserKey}"
+                                                    x:Name="NameContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="userName"
+                               Text="{Binding Name, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+
+                    <!--Surname-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate SurnameUserKey}"
+                                                    x:Name="SurnameContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="userSurname"
+                               Text="{Binding Surname, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Username-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate UsernameKey}"
+                                                    x:Name="UsernameContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="userUsername"
+                               Text="{Binding Username, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+
+                    <!--Number-->
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate userPhoneKey}"
+                                                    x:Name="phoneContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="userPhone"
+                               Text="{Binding Number, Mode=TwoWay}"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+
+                    <!--Edad-->
+                    <Label x:Name="firstNumeric"    Text="{xct:Translate userAgeKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <inputLayout:SfTextInputLayout  Hint="{xct:Translate cantKey}"
+                                                    x:Name="AgeContainer"
+                                                    InputViewPadding="5"
+                                                    ContainerType="Outlined"
+                                                    IsHintAlwaysFloated="true"
+                                                    Style="{StaticResource SyncfusionEntries}">
+                        <Entry x:Name="userAge"
+                               Text="{Binding SAge, Mode=TwoWay}"
+                               Keyboard="Numeric"
+                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <!--Cantón-->
+                    <Label x:Name="cantonlbl" Text="{xct:Translate cantonLbl}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <Picker ItemsSource="{Binding Cantones}" SelectedItem="{Binding Canton, Mode=TwoWay}" />
+
+                    <!--Imagen-->
+                    <Label x:Name="Imagenlbl2" Text="{xct:Translate SelectImagesKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <buttons:SfButton  Command="{Binding PickImage}"
+                                       Text="{xct:Translate SearchImageKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       ShowIcon="True"
+                                       BackgroundColor="#6611EB"
+                                       WidthRequest="280"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Camera}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
+
+                    <!--Update-->
+                    <Label x:Name="Imagenlbl" Text="{xct:Translate UpdateUserInfoKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <buttons:SfButton  Command="{Binding EditInfo}"
+                                       Text="{xct:Translate updateKey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       ShowIcon="True"
+                                       BackgroundColor="#D7A81E"
+                                       WidthRequest="280"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Pen}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

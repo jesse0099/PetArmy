@@ -114,6 +114,20 @@ namespace PetArmy.Helpers
 
         }
 
+        public static int RoleNo
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("RoleNo", 1);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("RoleNo", value);
+            }
+
+        }
+
+
         public static string Password
         {
             get { return AppSettings.GetValueOrDefault("Password", ""); }
