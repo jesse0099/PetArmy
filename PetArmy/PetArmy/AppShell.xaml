@@ -133,6 +133,15 @@
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.Paw}" Color="{StaticResource Primary}" />
         </FlyoutItem.Icon>
+        <ShellContent Route="ListMascotasPage" ContentTemplate="{DataTemplate local:ListMascotasPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Account Request">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                             Glyph="{x:Static fa:IconClass.User}"
+                             Color="{StaticResource Primary}" />
+        </FlyoutItem.Icon>
         <ShellContent Route="AdminLandingPage"
                       ContentTemplate="{DataTemplate local:AdminLandingPage}" />
     </FlyoutItem>

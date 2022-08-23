@@ -360,7 +360,7 @@ namespace PetArmy.ViewModels
                     await Application.Current.MainPage.DisplayAlert("Error", "No se soporta la funcionalidad", "OK");
                 }
                 else
-                {
+                {                   
                     var mediaOptions = new PickMediaOptions() { PhotoSize = PhotoSize.Medium };
                     var selectedImage = await CrossMedia.Current.PickPhotoAsync(mediaOptions);
                     imgSource = ImageSource.FromStream(() => selectedImage.GetStream());

@@ -1,9 +1,14 @@
-﻿using PetArmy.Models;
+﻿using PetArmy.Helpers;
+using PetArmy.Models;
 using PetArmy.Services;
 using PetArmy.Views;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -130,11 +135,61 @@ namespace PetArmy.ViewModels
             set { id_refugio = value; OnPropertyChanged(); }
         }
 
+        private ImageSource imgSource;
+        public ImageSource ImgSource
+        {
+            get { return imgSource; }
+            set { imgSource = value;  OnPropertyChanged(); }
+        }
+
+
+        //these 2 need to be a list
+        private Imagen_Mascota selectedImage;
+
+        public Imagen_Mascota SelectedImage
+        {
+            get { return selectedImage; }
+            set { selectedImage = value;  OnPropertyChanged(); }
+        }
+
+
+
         #endregion
 
 
         #region commands and Functions
         public ICommand AddMascota { get; set; }
+
+        //THIS SHOULD FILL UP A LIST
+        public async void pickImages()
+        {
+            Imagen_Mascota petImage = new Imagen_Mascota();
+            try 
+            {
+                await CrossMedia.Current.Initialize();
+
+                if (!CrossMedia.Current.IsPickPhotoSupported)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "No se soporta la funcionalidad", "OK");
+                }
+                else
+                {
+                    var mediaOptions = new PickMediaOptions() { PhotoSize = PhotoSize.Medium };
+                    var selectedImage = await CrossMedia.Current.PickPhotoAsync(mediaOptions);
+                    imgSource = ImageSource.FromStream(() => selectedImage.GetStream());
+                    Stream stream = Commons.GetImageSourceStream(imgSource);
+                    var bytes = Commons.StreamToByteArray(stream);
+                    petImage = new Imagen_Mascota(await generatePetImageID(), Convert.ToBase64String(bytes, 0, bytes.Length), true);
+                    //SelectedImage
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
 
         public async void addMascota()
         {
@@ -154,16 +209,34 @@ namespace PetArmy.ViewModels
                 pet.discapacidad = Discapacidad;
                 pet.enfermedad = Enfermedad;
                 pet.alergias = Alergias;
-
                 //Save Pet Image Here!! plenty of work here
+                //my image = PickImage 
+                //this should be a list
+                //await MascotaService.addPetImages();
 
-                await GraphQLService.addMascota(pet);
+                await MascotaService.addMascota(pet);
                 await App.Current.MainPage.DisplayAlert("Success", "Pet Saved!", "Ok");
                 Application.Current.MainPage = new NavigationPage(new MascotaView());
             }
             catch
             {
             }
+        }
+
+        private async Task<int> generatePetImageID()
+        {
+            int newPictureId = 0;
+            try
+            {
+                List<Imagen_Mascota> images = await MascotaService.getAllPetImages();
+                int lastID = images[images.Count - 1].id_imagen;
+                newPictureId = lastID + 1;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return newPictureId;
         }
 
         #endregion

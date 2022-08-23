@@ -364,4 +364,22 @@
   <data name="userPhoneKey" xml:space="preserve">
     <value>Your phone number</value>
   </data>
+  <data name="Disability" xml:space="preserve">
+    <value>Disability</value>
+  </data>
+  <data name="Illness" xml:space="preserve">
+    <value>Illness</value>
+  </data>
+  <data name="Allergies" xml:space="preserve">
+    <value>Allergies</value>
+  </data>
+  <data name="EditPetKey" xml:space="preserve">
+    <value>Edit Pet</value>
+  </data>
+  <data name="DeleteKey" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="AddImageKey" xml:space="preserve">
+    <value>Add Image</value>
+  </data>
 </root>

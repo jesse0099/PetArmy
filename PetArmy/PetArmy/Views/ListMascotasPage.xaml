@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             x:Class="PetArmy.Views.ListMascotasPage"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding Mascotas}"
+                     x:Name="Wrapper">
+            <PopUps:ErrorPopUp IsOpen="{Binding OpenPopUp}" />
+            <Label Text="{xct:Translate PetKey}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
+                                           AnimationType="SingleCircle"
+                                           FontAttributes="Bold"
+                                           Title="Loading..."
+                                           TextColor="{StaticResource LuckyPoint}"
+                                           IsVisible="{Binding IsBusy}"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" />
+            <StackLayout>
+                <ScrollView>
+                    <ListView x:Name="CartItemsView"
+                              SelectionMode="None"
+                              HasUnevenRows="True"
+                              BackgroundColor="Transparent"
+                              SeparatorVisibility="None"
+                              ItemsSource="{Binding Mascotas}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <!--Images Carrousel Scroll-->
+                                    <StackLayout x:Name="Item">
+                                        <Label Text="{Binding nombre}" />
+                                        <ScrollView>
+                                            <StackLayout>
+                                                <Label        x:Name="Expander"
+                                                              Text="Expander">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer  Command="{Binding Source= {x:Reference Wrapper}, Path=BindingContext.ExpandImageView}"
+                                                                               CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                                               NumberOfTapsRequired="1" />
+                                                    </Label.GestureRecognizers>
+                                                </Label>
+                                                <!--Images Carrousel-->
+                                                <CarouselView        ItemsSource="{Binding imagenes_mascota}"
+                                                                     IsVisible="{Binding IsImageViewExpanded}"
+                                                                     Margin="0"
+                                                                     BackgroundColor="Transparent"
+                                                                     HorizontalOptions="FillAndExpand"
+                                                                     IsScrollAnimated="True"
+                                                                     Loop="False"
+                                                                     IndicatorView="images_indicator_view"
+                                                                     HorizontalScrollBarVisibility="Always"
+                                                                     MinimumHeightRequest="350"
+                                                                     HeightRequest="350">
+                                                    <CarouselView.EmptyView>
+                                                        <Frame Margin="0"
+                                                               Padding="0"
+                                                               CornerRadius="20">
+                                                            <Image BindingContext="{Binding Source={x:Reference CartItemsView}, Path=BindingContext}"
+                                                                   Source="{Binding DefaultPetImage, Converter={StaticResource Base64ToImage}}"
+                                                                   Aspect="AspectFill"
+                                                                   HorizontalOptions="FillAndExpand" />
+                                                        </Frame>
+                                                    </CarouselView.EmptyView>
+                                                    <CarouselView.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <Frame Margin="0"
+                                                                   Padding="0"
+                                                                   CornerRadius="20"
+                                                                   HeightRequest="350"
+                                                                   MinimumHeightRequest="350"
+                                                                   WidthRequest="60">
+                                                                <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
+                                                                       Aspect="AspectFill"
+                                                                       VerticalOptions="FillAndExpand" />
+                                                            </Frame>
+                                                        </DataTemplate>
+                                                    </CarouselView.ItemTemplate>
+                                                </CarouselView>
+                                            </StackLayout>
+                                        </ScrollView>
+                                        <!--Indicator View Carrousel-->
+                                        <IndicatorView x:Name="images_indicator_view"
+                                                       BackgroundColor="Transparent"
+                                                       IndicatorsShape="Circle"
+                                                       IndicatorColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                       SelectedIndicatorColor="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}"
+                                                       HorizontalOptions="CenterAndExpand"
+                                                       Margin="3">
+                                        </IndicatorView>
+
+                                        <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
+                                                           Command="{Binding  EditMascota}"
+                                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                           Text="{xct:Translate EditPetKey}"
+                                                           FontAttributes="Bold"
+                                                           HorizontalTextAlignment="Center"
+                                                           HorizontalOptions="FillAndExpand"
+                                                           ShowIcon="True"
+                                                           Style="{StaticResource SyncfusionButtons}"
+                                                           Margin="4">
+                                        </buttons:SfButton>
+                                        <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
+                                                           Command="{Binding  DeletePetCommand}"
+                                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                           Text="{xct:Translate DeleteKey}"
+                                                           FontAttributes="Bold"
+                                                           HorizontalTextAlignment="Center"
+                                                           HorizontalOptions="FillAndExpand"
+                                                           ShowIcon="True"
+                                                           Style="{StaticResource SyncfusionButtons}"
+                                                           Margin="4">
+                                        </buttons:SfButton>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
