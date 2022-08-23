@@ -16,3 +16,4 @@ namespace PetArmy.Models.GraphQL_Responses
         }
     }
 }
+

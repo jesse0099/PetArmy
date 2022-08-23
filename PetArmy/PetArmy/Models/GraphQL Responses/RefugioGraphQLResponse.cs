@@ -11,6 +11,8 @@ namespace PetArmy.Models.GraphQL_Responses
         public Refugio refugio_by_pk { get; set; }
         public Refugio insert_refugio { get; set; }
         public Refugio update_refugio_by_pk { get; set; }
+        public Refugio delete_refugio_by_pk { get; set; }
+
 
         public RefugioGraphQLResponse()
         {

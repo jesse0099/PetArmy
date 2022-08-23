@@ -287,6 +287,8 @@ namespace PetArmy.ViewModels
                     newLocation.lalitud = Latitude;
                     newLocation.canton = Canton;
                     await GraphQLService.addShelterLocation(newLocation);
+                   
+
                 }
                 else
                 {
@@ -299,6 +301,7 @@ namespace PetArmy.ViewModels
 
                 Console.WriteLine("AddShelter - VIEWMODEL" ,e);
             }
+
             await Shell.Current.GoToAsync("//MyServicesView");
         }
 

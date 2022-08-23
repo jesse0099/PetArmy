@@ -5,12 +5,14 @@
              xmlns:infraestructure="clr-namespace:PetArmy.Infraestructure"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:defimages="clr-namespace:PetArmy.Helpers"
              x:Class="PetArmy.App">
     <!--
         Define global resources and styles here, that apply to all pages in your app.
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <Helpers:Base64ImageToImageSource x:Key="Base64ToImage" />
             <Helpers:InverseBoolConverter x:Key="InverseBool" />
             <Helpers:CreateAccountButtonTextConverter x:Key="BoolToStringCreateAccount" />
             <Helpers:AdminRequestStatusColorConverter x:Key="StringToColorRequest" />

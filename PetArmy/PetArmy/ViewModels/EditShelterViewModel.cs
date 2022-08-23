@@ -56,6 +56,8 @@ namespace PetArmy.ViewModels
         {
             PickImage = new Command(pickImage);
             UpdateShelter = new Command(updateShelter);
+            DeleteShelter = new Command(deleteShelter);
+            UpdateImage = new Command<int>(SetasDefaultImg);
         }
 
         #endregion
@@ -282,6 +284,8 @@ namespace PetArmy.ViewModels
 
         public  ICommand PickImage { get; set; }  
         public ICommand UpdateShelter { get; set; }
+        public ICommand DeleteShelter { get; set; } 
+        public ICommand UpdateImage { get; set; }
 
         public static async Task<Position> GetCurrentPosition()
         {
@@ -356,7 +360,7 @@ namespace PetArmy.ViewModels
                     await Application.Current.MainPage.DisplayAlert("Error", "No se soporta la funcionalidad", "OK");
                 }
                 else
-                {
+                {                   
                     var mediaOptions = new PickMediaOptions() { PhotoSize = PhotoSize.Medium };
                     var selectedImage = await CrossMedia.Current.PickPhotoAsync(mediaOptions);
                     imgSource = ImageSource.FromStream(() => selectedImage.GetStream());
@@ -454,9 +458,68 @@ namespace PetArmy.ViewModels
             CurShelter.capacidad = Int32.Parse(QuantSpace);
             CurShelter.telefono = ShelterNumber;
 
+            List<ubicaciones_refugios> locations = await GraphQLService.getLocationByShelter(CurShelter.id_refugio);
+            
+            if (locations != null)
+            {
+                foreach (var location in locations)
+                {
+                    ubicaciones_refugios temp = location;
+
+                    if (!String.IsNullOrEmpty(Canton))
+                    {
+                        temp.canton = Canton;
+                        temp.lalitud = Latitude;
+                        temp.longitud = Longitude;
+                    }
+                    else
+                    {
+                        temp.lalitud = Latitude;
+                        temp.longitud = Longitude;
+                    }
+
+                    await GraphQLService.UpdateShelterLocation(temp);
+                }
+            }
+
             await GraphQLService.updateShelter(CurShelter);
+            await Shell.Current.GoToAsync("//MyServicesView");
 
         }
+
+        public async void deleteShelter()
+        {
+            await GraphQLService.deleteShelter(CurShelter.id_refugio);
+            await Shell.Current.GoToAsync("//MyServicesView");
+        }
+
+        public async void SetasDefaultImg(int idImg)
+        {
+          
+            foreach (var item in CustomList)
+            {
+                if (item.imgObjct.isDefault && item.imgObjct.id_imagen != idImg)
+                {
+                    /*Actualiza la imagen pasada*/
+                    item.imgObjct.isDefault = false;
+                    await GraphQLService.updateImage(item.imgObjct);
+
+                }
+                else if (!item.imgObjct.isDefault && item.imgObjct.id_imagen == idImg)
+                {
+                    /*Actualiza la imagen actual*/
+                    item.imgObjct.isDefault = true;
+                    await GraphQLService.updateImage(item.imgObjct);
+
+                }
+                else if(item.imgObjct.isDefault && item.imgObjct.id_imagen == idImg)
+                {
+                    /*Notify it's already default*/
+
+                }
+            }
+        }
+
 
         #endregion
 

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:customcontrols="clr-namespace:PetArmy.CustomControls"
+             xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="PetArmy.Views.CampCastraView"
+             x:Name="campCastraPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content >
+        <StackLayout BindingContext="{Binding CampCastracion}">
+
+            <pulltoRefresh:SfPullToRefresh RefreshContentHeight="50"
+                                       RefreshContentWidth="50"
+                                       HeightRequest="300"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"
+                                       TransitionMode="SlideOnTop"
+                                       ProgressBackgroundColor="{StaticResource Liberty}"
+                                       ProgressStrokeColor="{AppThemeBinding Light={StaticResource MiddlePurple}, Dark={StaticResource PurplePlum}}"
+                                       RefreshCommand="{Binding GetAllCampCastra}"
+                                       IsRefreshing="{Binding IsBusy}">
+                <pulltoRefresh:SfPullToRefresh.PullableContent>
+                    <sflistview:SfListView x:Name="CartItemsView"
+                                       ItemsSource="{Binding CampCastraList}"
+                                       VerticalOptions="FillAndExpand"
+                                       AutoFitMode="DynamicHeight"
+                                       HorizontalOptions="FillAndExpand">
+                        <!--Item Template-->
+                        <sflistview:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Margin="12"
+                                                 VerticalOptions="FillAndExpand"
+                                                 x:Name="Item">
+                                        <!--Campaign Name-->
+                                        <inputLayout:SfTextInputLayout Hint="{xct:Translate Campaign}"
+                                                                   InputViewPadding="5"
+                                                                   ContainerType="Filled"
+                                                                   Style="{StaticResource SyncfusionEntries}">
+                                            <Entry x:Name="name_camp"
+                                               Text="{Binding nombre_camp, Mode = OneWay}"
+                                               TextColor="Black" />
+                                        </inputLayout:SfTextInputLayout>
+                                        
+                                        <!--Campaign Description-->
+                                        <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                   ContainerType="None"
+                                                                   IsHintAlwaysFloated="True"
+                                                                   Margin="15,5,15,0"
+                                                                   Hint="{xct:Translate Description}"
+                                                                   HorizontalOptions="FillAndExpand">
+                                            <customcontrols:CustomLabel Text="{Binding descripcion}"
+                                                                    TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                                    FontSize="14"
+                                                                    LineBreakMode="WordWrap"
+                                                                    Padding="10"
+                                                                    JustifyText="True" />
+                                        </inputLayout:SfTextInputLayout>
+                                        
+                                        <!--Campaign Direction-->
+                                        <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                   ContainerType="None"
+                                                                   IsHintAlwaysFloated="True"
+                                                                   Margin="15,5,15,0"
+                                                                   Hint="{xct:Translate DirectionCampKey}"
+                                                                   HorizontalOptions="FillAndExpand">
+                                            <customcontrols:CustomLabel Text="{Binding direccion}"
+                                                                    TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                                    FontSize="14"
+                                                                    LineBreakMode="WordWrap"
+                                                                    Padding="10"
+                                                                    JustifyText="True" />
+                                        </inputLayout:SfTextInputLayout>
+                                        
+                                        <!--Campaign Telephone-->
+                                        <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                   ContainerType="None"
+                                                                   IsHintAlwaysFloated="True"
+                                                                   Margin="15,5,15,0"
+                                                                   Hint="{xct:Translate CampCastraTelephone}"
+                                                                   HorizontalOptions="FillAndExpand">
+                                            <customcontrols:CustomLabel Text="{Binding tel_contacto}"
+                                                                    TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                                    FontSize="14"
+                                                                    LineBreakMode="WordWrap"
+                                                                    Padding="10"
+                                                                    JustifyText="True" />
+                                        </inputLayout:SfTextInputLayout>
+                                        
+                                        <buttons:SfButton Text="{xct:Translate EditCampCastraKey}"
+                                                      FontAttributes="Bold"
+                                                      HorizontalTextAlignment="Center"
+                                                      ShowIcon="True"
+                                                      BackgroundColor="#3b5998"
+                                                      Style="{StaticResource SyncfusionButtons}"
+                                                      BindingContext="{Binding Source={x:Reference CartItemsView}, Path=BindingContext}"
+                                                      Command="{Binding Edit_CampCastra}"
+                                                      CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </sflistview:SfListView.ItemTemplate>
+
+                        <sflistview:SfListView.FooterTemplate>
+                            <DataTemplate>
+                                <ContentView>
+                                    <buttons:SfButton  Command="{Binding Add_CampCastra}"
+                                               Text="{xct:Translate AddCampCastraKey}"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Center"
+                                               HorizontalOptions="FillAndExpand"
+                                               ShowIcon="True"
+                                               BackgroundColor="#3b5998"
+                                               Style="{StaticResource SyncfusionButtons}">
+                                    </buttons:SfButton>
+                                </ContentView>
+                            </DataTemplate>
+                        </sflistview:SfListView.FooterTemplate>
+
+                    </sflistview:SfListView>
+                </pulltoRefresh:SfPullToRefresh.PullableContent>
+            </pulltoRefresh:SfPullToRefresh>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

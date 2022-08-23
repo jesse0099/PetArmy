@@ -208,8 +208,10 @@ namespace PetArmy.Services
                                                                                ",nombre: \"" + newShelter.nombre + "\"" +
                                                                                ",telefono: \"" + newShelter.telefono + "\"})" +
                                                                                "{ returning{ id_refugio }}}",
-                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }                   
                 };
+
+
 
                 var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
                 completed = true;
@@ -236,6 +238,26 @@ namespace PetArmy.Services
                                                                                ",direccion: \"" + newShelter.direccion + "\"" +
                                                                                ",nombre: \"" + newShelter.nombre + "\"" +
                                                                                ",telefono: \"" + newShelter.telefono + "\"}){id_refugio }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public static async Task deleteShelter(int idShelter)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {delete_refugio_by_pk(id_refugio: "+idShelter+") { nombre }}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -291,7 +313,7 @@ namespace PetArmy.Services
             {
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "query MyQuery {imagen_refugio {id_imagen id_refugio imagen isDefault}}",
+                    Query = "query MyQuery {imagen_refugio(order_by: {id_imagen: asc}) { id_imagen id_refugio imagen isDefault }}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -324,11 +346,10 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var request = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation {insert_imagen_refugio(objects: {id_imagen: " + img.id_imagen
-                                                                                 + ", id_refugio: " + img.id_refugio
-                                                                                 + ",  imagen: \"" + img.imagen
-                                                                                 + "\",isDefault: " + img.isDefault
-                                                                                 + "}){returning {id_imagen}}}",
+                    Query = "mutation MyMutation {insert_imagen_refugio(objects: { id_refugio: "+img.id_refugio
+                                                                                 +",  imagen: \""+ img.imagen
+                                                                                 +"\",isDefault: "+ img.isDefault 
+                                                                                 +"}){returning {id_imagen}}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -393,6 +414,26 @@ namespace PetArmy.Services
         }
 
 
+        public static async Task updateImage(Imagen_refugio img)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {update_imagen_refugio(where: {id_imagen: {_eq: "+img.id_imagen+"}}, _set: {isDefault: "+img.isDefault+"}) {returning {id_imagen}}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<RefugioGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         #endregion
 
         #region Default Images 
@@ -412,6 +453,27 @@ namespace PetArmy.Services
         #endregion
 
         #region Ubications
+
+        public static async Task UpdateShelterLocation(ubicaciones_refugios newLocation)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {update_ubicaciones_refugios_by_pk(pk_columns: {id_ubicacion: "+newLocation.id_ubicacion+"}, _set: {canton: \""+newLocation.canton+"\", longitud: \""+newLocation.longitud+"\", latitud: \""+newLocation.lalitud+"\"}) {id_ubicacion}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<ubicaciones_refugiosGraphQLResponse>(request);
+                client.Dispose();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
         public static async Task<List<ubicaciones_refugios>> getAllShelterUbications()
         {
@@ -475,7 +537,7 @@ namespace PetArmy.Services
 
         }
 
-        public static async Task<List<ubicaciones_refugios>> getLocationsByShelter(int shelter)
+        public static async Task<List<ubicaciones_refugios>> getLocationByShelter(int shelter)
         {
             List<ubicaciones_refugios> locations = new List<ubicaciones_refugios>();
 
@@ -497,7 +559,6 @@ namespace PetArmy.Services
 
                 throw;
             }
-
 
             return locations;
         }
@@ -562,6 +623,17 @@ namespace PetArmy.Services
 
                 throw;
             }
+        }
+
+
+        public static async Task<ubicaciones_refugios> getShelterLocationByID()
+        {
+            ubicaciones_refugios location = new ubicaciones_refugios();
+
+
+
+
+            return location;
         }
 
         #endregion
@@ -647,9 +719,46 @@ namespace PetArmy.Services
             return adoptante;
         }
 
+
+        public static async Task createOrUpdate_Adoptante(bool isFound, Perfil_adoptante adopt)
+        {
+            try
+            {
+              
+
+                if (isFound)
+                {
+                    /*Update*/
+                    var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                    var request = new GraphQLHttpRequestWithHeaders
+                    {
+                        Query = "mutation MyMutation { update_perfil_adoptante(where: {uid: {_eq: \""+adopt.uid+"\"}}, _set: {casa_cuna: "+adopt.casa_cuna
+                                                                                                                             +", correo: \""+adopt.correo
+                                                                                                                             +"\", direccion: \""+adopt.direccion
+                                                                                                                             +"\", nombre: \""+adopt.nombre
+                                                                                                                             +"\", telefono: \""+adopt.telefono+"\"}) { returning { uid } } }",
+                        Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    };
+
+                    var response = await client.SendQueryAsync<Perfil_AdoptanteGraphQLResponse>(request);
+                }
+                else
+                {
+                    /*Create*/
+                    await addAdoptante(adopt);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         #endregion
 
-        #region Mascotas
+        #region Mascotas - Commented out
         public static async Task<List<Mascota>> getAllMascotas()
         {
             List<Mascota> mascotas = new List<Mascota>();
@@ -977,6 +1086,281 @@ namespace PetArmy.Services
 
         #endregion
 
+        #region User info 
+
+        public static async Task<List<User_Info>> getUserInfo_ByUID(string uid)
+        {
+            List<User_Info> result = new List<User_Info>();
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery { User_Info(where: {idUser: {_eq: \""+uid+"\"}}) { age canton idInfo idUser username surname profilePicture name }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<User_InfoGraphQLResponse>(request);
+                result = response.Data.User_Info;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return result;
+        }
+
+        public static async Task createOrUpdate_UserInfo(bool isFound, User_Info info)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+                if (isFound)
+                {
+                    var request = new GraphQLHttpRequestWithHeaders
+                    {
+                        Query = "mutation MyMutation { update_User_Info(where: {idUser: {_eq: \""+info.idUser+"\"}}, _set: {age: "+info.age
+                                                                                                                           +", canton: \""+info.canton
+                                                                                                                           +"\", name: \""+info.name
+                                                                                                                           +"\", profilePicture: \""+info.profilePicture
+                                                                                                                           +"\", surname: \""+info.surname
+                                                                                                                           +"\", username: \""+info.username+"\"}) { returning { idInfo }}}",
+                        Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    };
+                    var response = await client.SendQueryAsync<User_InfoGraphQLResponse>(request);
+                    client.Dispose();
+                }
+                else
+                {
+                    var request = new GraphQLHttpRequestWithHeaders
+                    {
+                        Query = "mutation MyMutation {insert_User_Info(objects: {age: "+info.age
+                                                                                     +", canton: \""+info.canton
+                                                                                     +"\", idUser: \""+info.idUser
+                                                                                     +"\", name: \""+info.name
+                                                                                     +"\", profilePicture: \""+info.profilePicture
+                                                                                     +"\", surname: \""+info.surname
+                                                                                     +"\", username: \""+info.username+"\"}) {returning { idUser }}}",
+                        Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    };
+
+                    var response = await client.SendQueryAsync<User_InfoGraphQLResponse>(request);
+                    client.Dispose();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        #endregion
+
+        #region User Preferences 
+
+        public static async Task DeletePreference(Preferencia_adoptante preferencia)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {delete_preferencia_adoptante(where: {uid: {_eq: \""+preferencia.uid+"\"}, id_tag: {_eq: "+preferencia.id_tag+"}}) { returning { uid }}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Preferencia_adoptanteGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        public static async Task AddPreference(Preferencia_adoptante preference)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation { insert_preferencia_adoptante(objects: {uid: \""+preference.uid+"\", id_tag: "+preference.id_tag+"}) { returning { uid } } }",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Preferencia_adoptanteGraphQLResponse>(request);
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        public static async Task<List<Preferencia_adoptante>> GetUserPreferences(string uid)
+        {
+            List<Preferencia_adoptante> preferences = new List<Preferencia_adoptante>();
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery { preferencia_adoptante(where: {uid: {_eq: \""+uid+"\" }}) { id_tag uid }}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Preferencia_adoptanteGraphQLResponse>(request);
+                preferences = response.Data.preferencia_adoptante;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return preferences;
+        }
+
+        #endregion
+
+        #region Camp_Castracion Operations
+        public static async Task<List<Camp_Castracion>> getAllCampCastra()
+        {
+            List<Camp_Castracion> camp_Castracion = new List<Camp_Castracion>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {camp_castracion {id_campana,nombre_camp,tel_contacto,descripcion,direccion}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var foundResponse = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(findRequest);
+                camp_Castracion = foundResponse.Data.camp_castracion;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+                throw; 
+            };
+            return camp_Castracion;
+        }
+
+        public static async Task<Camp_Castracion> getCampCastraByID(int idCampCastra)
+        {
+            Camp_Castracion campaing = new Camp_Castracion();
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {camp_castracion_by_pk(id_campana: " + idCampCastra + ") { descripcion direccion id_campana nombre_camp tel_contacto }}",                   
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+                var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
+                campaing = response.Data.camp_castracion_by_pk;
+                client.Dispose();
+            }
+
+            catch (Exception)
+            {
+                throw;
+            }
+            return campaing;
+        }
+
+        public static async Task<bool> addCampCastra(Camp_Castracion newCamp, Usuario user)
+        {
+            bool completed = false;
+
+            bool isValidated = await validateCurUser(user);
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation { insert_camp_castracion(objects: {nombre_camp:\"" + newCamp.nombre_camp + "\", " +
+                                                                                    "descripcion:\"" + newCamp.descripcion + "\", " +
+                                                                                    "direccion:\"" + newCamp.descripcion + "\", " +
+                                                                                    "tel_contacto:\"" + newCamp.tel_contacto + "\", " +
+                                                                                    "}) { returning { id_campana }}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
+                completed = true;
+                client.Dispose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return completed;
+        }
+
+        public static async Task updateCampCastra(Camp_Castracion editCampCastra)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = Commons.UpdateCampCastraMutation,
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
+                    Variables = new
+                    {
+                        editCampCastra.nombre_camp,
+                        editCampCastra.descripcion,
+                        editCampCastra.direccion,
+                        editCampCastra.tel_contacto,
+                        editCampCastra.id_campana
+                    }
+                };
+
+                var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static async Task deleteCampCastra(Camp_Castracion deleteCampCastra)
+        {
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var request = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = Commons.DeleteCampCastraMutation,
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
+                    Variables = new { deleteCampCastra.id_campana }
+                };
+
+                var response = await client.SendQueryAsync<Camp_CastracionGraphQLResponse>(request);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        #endregion
+
         #region Feed Operations 
         public static async Task<IEnumerable<Mascota>> GetNearPetsByTags(string[] tags, double latitude, double longitude, double distance)
         {
@@ -1037,6 +1421,7 @@ namespace PetArmy.Services
         }
         #endregion
     }
+
 
 }
 

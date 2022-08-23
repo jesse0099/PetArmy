@@ -408,4 +408,127 @@
   <data name="DisplayName" xml:space="preserve">
     <value>Nombre</value>
   </data>
+  <data name="EditShelterKey" xml:space="preserve">
+    <value>Edita tu refugio</value>
+  </data>
+  <data name="UpdateShelterBtnKey" xml:space="preserve">
+    <value>Actualizar información</value>
+  </data>
+  <data name="DeleteShelterBtnkey" xml:space="preserve">
+    <value>Borrar refugio</value>
+  </data>
+  <data name="collectionlbl" xml:space="preserve">
+    <value>Colección de imágenes</value>
+  </data>
+  <data name="makeDefKey" xml:space="preserve">
+    <value>Hacer imágen default</value>
+  </data>
+  <data name="selectImgKey" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="NameCampKey" xml:space="preserve">
+    <value>Nombre de Campaña</value>
+  </data>
+  <data name="DescriptionCampKey" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="DirectionCampKey" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="TelephoneCampKey" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="StarDateCampKey" xml:space="preserve">
+    <value>Fecha de Inicio</value>
+  </data>
+  <data name="EndDateCampKey" xml:space="preserve">
+    <value>Fecha Fin</value>
+  </data>
+  <data name="ActiveCampKey" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="SaveCampKey" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="AddCampCastraKey" xml:space="preserve">
+    <value>Añadir Campaña</value>
+  </data>
+  <data name="Campaign" xml:space="preserve">
+    <value>Campaña</value>
+  </data>
+  <data name="CampaignHelper" xml:space="preserve">
+    <value>Un buen nombre es solo el principio.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="EditCampCastraKey" xml:space="preserve">
+    <value>Editar Campaña</value>
+  </data>
+  <data name="DeleteCampCastraKey" xml:space="preserve">
+    <value>Borrar Campaña</value>
+  </data>
+  <data name="CampCastraTelephone" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="CampCastraNameInputKey" xml:space="preserve">
+    <value>Nombre de la Campaña</value>
+  </data>
+  <data name="CampCastraDescriptionInputKey" xml:space="preserve">
+    <value>Descripción de la Campaña</value>
+  </data>
+  <data name="CampCastraDirectionInputKey" xml:space="preserve">
+    <value>Dirección de la Campaña</value>
+  </data>
+  <data name="CampCastraTelephoneInputKey" xml:space="preserve">
+    <value>Teléfono de Contacto</value>
+  </data>
+  <data name="UpdateCampCastraBtnKey" xml:space="preserve">
+    <value>Actualizar Información</value>
+  </data>
+  <data name="EditUserKey" xml:space="preserve">
+    <value>Edita tu perfil</value>
+  </data>
+  <data name="NombreUserKey" xml:space="preserve">
+    <value>Tu nombre</value>
+  </data>
+  <data name="SurnameUserKey" xml:space="preserve">
+    <value>Tu apellido</value>
+  </data>
+  <data name="UsernameKey" xml:space="preserve">
+    <value>Tu nombre de usuario</value>
+  </data>
+  <data name="userAgeKey" xml:space="preserve">
+    <value>Tu edad</value>
+  </data>
+  <data name="UpdateUserInfoKey" xml:space="preserve">
+    <value>Actualizar información</value>
+  </data>
+  <data name="updateKey" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="userPhoneKey" xml:space="preserve">
+    <value>Tu número de teléfono</value>
+  </data>
+  <data name="Disability" xml:space="preserve">
+    <value>Discapacidad</value>
+  </data>
+  <data name="Illness" xml:space="preserve">
+    <value>Enfermedad</value>
+  </data>
+  <data name="Allergies" xml:space="preserve">
+    <value>Alergias</value>
+  </data>
+  <data name="EditPetKey" xml:space="preserve">
+    <value>Editar Mascota</value>
+  </data>
+  <data name="DeleteKey" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="UpdateImageKey" xml:space="preserve">
+    <value>Actualizar Imagen</value>
+  </data>
+  <data name="AddImageKey" xml:space="preserve">
+    <value>Agregar Imagen</value>
+  </data>
 </root>

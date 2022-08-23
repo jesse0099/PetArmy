@@ -388,4 +388,127 @@
   <data name="DisplayName" xml:space="preserve">
     <value>Display Name</value>
   </data>
+  <data name="EditShelterKey" xml:space="preserve">
+    <value>Edit your Shelter</value>
+  </data>
+  <data name="UpdateShelterBtnKey" xml:space="preserve">
+    <value>Update information</value>
+  </data>
+  <data name="DeleteShelterBtnkey" xml:space="preserve">
+    <value>Delete shelter</value>
+  </data>
+  <data name="collectionlbl" xml:space="preserve">
+    <value>Image collection</value>
+  </data>
+  <data name="makeDefKey" xml:space="preserve">
+    <value>Make default image</value>
+  </data>
+  <data name="selectImgKey" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="NameCampKey" xml:space="preserve">
+    <value>Campaing Name</value>
+  </data>
+  <data name="DescriptionCampKey" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DirectionCampKey" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="TelephoneCampKey" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="StarDateCampKey" xml:space="preserve">
+    <value>Star Date</value>
+  </data>
+  <data name="EndDateCampKey" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="ActiveCampKey" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="SaveCampKey" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddCampCastraKey" xml:space="preserve">
+    <value>Add Campaing</value>
+  </data>
+  <data name="Campaign" xml:space="preserve">
+    <value>Campaign</value>
+  </data>
+  <data name="CampaignHelper" xml:space="preserve">
+    <value>A good name is just the beginning.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description </value>
+  </data>
+  <data name="EditCampCastraKey" xml:space="preserve">
+    <value>Edit Campaing</value>
+  </data>
+  <data name="DeleteCampCastraKey" xml:space="preserve">
+    <value>Delete Campaing</value>
+  </data>
+  <data name="CampCastraTelephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="CampCastraNameInputKey" xml:space="preserve">
+    <value>Campaing's Name</value>
+  </data>
+  <data name="CampCastraDescriptionInputKey" xml:space="preserve">
+    <value>Campaing's Description</value>
+  </data>
+  <data name="CampCastraDirectionInputKey" xml:space="preserve">
+    <value>Campaing's Direction</value>
+  </data>
+  <data name="CampCastraTelephoneInputKey" xml:space="preserve">
+    <value>Campaing's Phone</value>
+  </data>
+  <data name="UpdateCampCastraBtnKey" xml:space="preserve">
+    <value>Update Information</value>
+  </data>
+  <data name="EditUserKey" xml:space="preserve">
+    <value>Edit your profile</value>
+  </data>
+  <data name="NombreUserKey" xml:space="preserve">
+    <value>Your name</value>
+  </data>
+  <data name="SurnameUserKey" xml:space="preserve">
+    <value>Your surname</value>
+  </data>
+  <data name="UsernameKey" xml:space="preserve">
+    <value>Your username</value>
+  </data>
+  <data name="userAgeKey" xml:space="preserve">
+    <value>Your Age</value>
+  </data>
+  <data name="UpdateUserInfoKey" xml:space="preserve">
+    <value>Update info</value>
+  </data>
+  <data name="updateKey" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="userPhoneKey" xml:space="preserve">
+    <value>Your phone number</value>
+  </data>
+  <data name="Disability" xml:space="preserve">
+    <value>Disability</value>
+  </data>
+  <data name="Illness" xml:space="preserve">
+    <value>Illness</value>
+  </data>
+  <data name="Allergies" xml:space="preserve">
+    <value>Allergies</value>
+  </data>
+  <data name="EditPetKey" xml:space="preserve">
+    <value>Edit Pet</value>
+  </data>
+  <data name="DeleteKey" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="UpdateImageKey" xml:space="preserve">
+    <value>Update Image</value>
+  </data>
+  <data name="AddImageKey" xml:space="preserve">
+    <value>Add Image</value>
+  </data>
 </root>

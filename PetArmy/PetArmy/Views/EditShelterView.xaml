@@ -5,6 +5,7 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:PetArmy"
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             x:Name="editShelterPage"
              xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:behaviors="clr-namespace:PetArmy.Views.Behaviors"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <StackLayout BindingContext="{Binding EditShelter}">
@@ -12,7 +13,7 @@
         <ScrollView>
             <StackLayout>
                 <Image Source="EditShelter" HeightRequest="180" Margin="0,0,0,10" HorizontalOptions="Center"/>
-                <Label Text="{xct:Translate CreateNewShelterH1Key}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="{xct:Translate EditShelterKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
                 <StackLayout Padding="40" Spacing="20">
 
                     <!--Nombre-->
@@ -94,26 +95,26 @@
                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                     </inputLayout:SfTextInputLayout>
 
+                    <Label x:Name="imageCollectionLbl" Text="{xct:Translate collectionlbl}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
                     <!--Imagen-->
-                    <CarouselView ItemsSource="{Binding CustomList}">
+                    <CarouselView ItemsSource="{Binding CustomList}" HeightRequest="260" WidthRequest="510">
                         <CarouselView.ItemTemplate>
                             <DataTemplate>
-
                                 <StackLayout>
                                     <Frame HasShadow="True"
                                            BorderColor="DarkGray"
                                            CornerRadius="5"
                                            WidthRequest="500"
-                                           HeightRequest="250"
-                                           
-                                                    >
+                                           HeightRequest="250">
                                         <StackLayout>
 
                                             <Image Source="{Binding Image,Converter={xct:ByteArrayToImageSourceConverter}}" WidthRequest="100" HeightRequest="100"></Image>
-                                            
-                                            <Label Text="Make Default"
+
+                                            <Label Text="{xct:Translate makeDefKey}"
                                                    HorizontalOptions="Center" Margin="0,20,0,0" />
-                                            <Button Text="ayo" Margin="0,20,0,0">
+                                            <Button Text="{xct:Translate selectImgKey}" Margin="0,20,0,0" 
+                                                    Command="{Binding Path= BindingContext.EditShelter.UpdateImage, Source={x:Reference editShelterPage}}"
+                                                    CommandParameter="{Binding imgObjct.id_imagen}">
                                                 
                                             </Button>
                                         </StackLayout>
@@ -143,7 +144,7 @@
                     </buttons:SfButton>
 
                     <buttons:SfButton  Command="{Binding UpdateShelter}"
-                                       Text="{xct:Translate SearchImageKey}"
+                                       Text="{xct:Translate UpdateShelterBtnKey}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
                                        HorizontalOptions="Center"
@@ -157,6 +158,20 @@
                         </buttons:SfButton.ImageSource>
                     </buttons:SfButton>
 
+                    <buttons:SfButton  Command="{Binding DeleteShelter}"
+                                       Text="{xct:Translate DeleteShelterBtnkey}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       ShowIcon="True"
+                                       BackgroundColor="#EB0B0B"
+                                       WidthRequest="280"
+                                       Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{x:Static local:IconClass.Ban}" />
+                        </buttons:SfButton.ImageSource>
+                    </buttons:SfButton>
 
                 </StackLayout>
             </StackLayout>

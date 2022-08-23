@@ -142,9 +142,6 @@ namespace PetArmy.ViewModels
             set { imgSource = value; OnPropertyChanged(); }
         }
 
-        public BindingList<string> dummy = new BindingList<string> { "jueputa", "mierda", "perra" };
-
-
         #endregion
 
         #region Commands and Funtions
@@ -216,8 +213,6 @@ namespace PetArmy.ViewModels
         }
 
         
-
-    
         public async Task getData()
         {
             IsBusy = true;

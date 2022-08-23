@@ -12,13 +12,24 @@
         public MascotaViewModel Mascota { get; set; }
         public AddMascotaViewModel AddMascota { get; set; }
 
-        public EditShelterViewModel EditShelter { get; set; } 
+        public EditShelterViewModel EditShelter { get; set; }
+        public EditMascotaViewModel EditMascota { get; set; }
+
+        public CampCastracionViewModel CampCastracion { get; set; }
+
+        public AddCampCastraViewModel AddCampCastra { get; set; }
+
+        public EditCampCastraViewModel EditCampCastra { get; set; }
 
         public SearchBarViewModel SearchBar { get; set; }
 
         public FeedViewModel Feed { get; set; }
 
         public ConfirmAdoptionRequestViewModel ConfirmAdoptionRequest { get; set; }
+
+        public UserProfileViewModel UserProfile { get; set; }
+
+        public MascotasViewModel Mascotas { get; set; }
 
         public MainViewModel(): base()
         {
@@ -34,7 +45,15 @@
             this.EditShelter = EditShelterViewModel.GetInstance();
             this.Feed = FeedViewModel.GetInstance();
             this.ConfirmAdoptionRequest = ConfirmAdoptionRequestViewModel.GetInstance();
+            this.EditMascota = EditMascotaViewModel.GetInstance();
+            this.CampCastracion = CampCastracionViewModel.GetInstance();
+            this.AddCampCastra = AddCampCastraViewModel.GetInstance();
+            this.EditCampCastra = EditCampCastraViewModel.GetInstance();
+            this.UserProfile = UserProfileViewModel.GetInstance();
             this.User = new UserViewModel();
+
+            this.Mascotas = MascotasViewModel.GetInstance();
+
         }
     }
 }
