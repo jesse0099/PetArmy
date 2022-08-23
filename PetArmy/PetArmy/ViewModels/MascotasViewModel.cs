@@ -164,9 +164,9 @@ namespace PetArmy.ViewModels
                 await Application.Current.MainPage.Navigation.PushAsync(new EditPetView());
                 IsBusy = false;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                Console.WriteLine("MascotaViewModel", e.Message);
             }
         }
 

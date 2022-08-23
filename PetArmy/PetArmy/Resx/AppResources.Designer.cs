@@ -835,6 +835,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update Image.
+        /// </summary>
+        public static string UpdateImageKey {
+            get {
+                return ResourceManager.GetString("UpdateImageKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update.
         /// </summary>
         public static string updateKey {

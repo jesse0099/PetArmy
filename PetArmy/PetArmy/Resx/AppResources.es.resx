@@ -399,6 +399,9 @@
   <data name="DeleteKey" xml:space="preserve">
     <value>Borrar</value>
   </data>
+  <data name="UpdateImageKey" xml:space="preserve">
+    <value>Actualizar Imagen</value>
+  </data>
   <data name="AddImageKey" xml:space="preserve">
     <value>Agregar Imagen</value>
   </data>

@@ -134,8 +134,7 @@ namespace PetArmy.ViewModels
                     {
                         image = x.Item2,
                         idDefault = false,
-                        id_mascota = x.Item1.Item1,
-                        id_imagen = x.Item1.Item2
+                        id_mascota = x.Item1.Item1
                     };
                 }), UpdatedImages.ConvertAll<UpdatedImage>((y) => new()
                 {
