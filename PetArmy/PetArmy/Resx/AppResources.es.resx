@@ -510,13 +510,10 @@
   <data name="userPhoneKey" xml:space="preserve">
     <value>Tu número de teléfono</value>
   </data>
-  <data name="Disability" xml:space="preserve">
-    <value>Discapacidad</value>
-  </data>
-  <data name="Illness" xml:space="preserve">
+  <data name="Illness_Duplicate[1]" xml:space="preserve">
     <value>Enfermedad</value>
   </data>
-  <data name="Allergies" xml:space="preserve">
+  <data name="Allergies_Duplicate[1]" xml:space="preserve">
     <value>Alergias</value>
   </data>
   <data name="EditPetKey" xml:space="preserve">

@@ -490,13 +490,10 @@
   <data name="userPhoneKey" xml:space="preserve">
     <value>Your phone number</value>
   </data>
-  <data name="Disability" xml:space="preserve">
-    <value>Disability</value>
-  </data>
-  <data name="Illness" xml:space="preserve">
+  <data name="Illness_Duplicate[1]" xml:space="preserve">
     <value>Illness</value>
   </data>
-  <data name="Allergies" xml:space="preserve">
+  <data name="Allergies_Duplicate[1]" xml:space="preserve">
     <value>Allergies</value>
   </data>
   <data name="EditPetKey" xml:space="preserve">

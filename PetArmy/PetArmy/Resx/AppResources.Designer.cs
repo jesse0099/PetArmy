@@ -160,6 +160,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allergies.
+        /// </summary>
+        public static string Allergies_Duplicate_1_ {
+            get {
+                return ResourceManager.GetString("Allergies_Duplicate[1]", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All Fields Are Required.
         /// </summary>
         public static string AllFieldsRequired {
@@ -340,20 +349,20 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Confirm.
-        /// </summary>
-        public static string Confirm {
-            get {
-                return ResourceManager.GetString("Confirm", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Image collection.
         /// </summary>
         public static string collectionlbl {
             get {
                 return ResourceManager.GetString("collectionlbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm.
+        /// </summary>
+        public static string Confirm {
+            get {
+                return ResourceManager.GetString("Confirm", resourceCulture);
             }
         }
         
@@ -448,6 +457,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Direction.
         /// </summary>
         public static string DirectionCampKey {
@@ -462,6 +480,24 @@ namespace Resx {
         public static string Disability {
             get {
                 return ResourceManager.GetString("Disability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disable Account.
+        /// </summary>
+        public static string DisableAccount {
+            get {
+                return ResourceManager.GetString("DisableAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display Name.
+        /// </summary>
+        public static string DisplayName {
+            get {
+                return ResourceManager.GetString("DisplayName", resourceCulture);
             }
         }
         
@@ -502,42 +538,6 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Details.
-        /// </summary>
-        public static string Details {
-            get {
-                return ResourceManager.GetString("Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disability.
-        /// </summary>
-        public static string Disability {
-            get {
-                return ResourceManager.GetString("Disability", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disable Account.
-        /// </summary>
-        public static string DisableAccount {
-            get {
-                return ResourceManager.GetString("DisableAccount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Display Name.
-        /// </summary>
-        public static string DisplayName {
-            get {
-                return ResourceManager.GetString("DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Email.
         /// </summary>
         public static string Email_Admin {
@@ -574,20 +574,20 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to End Date.
-        /// </summary>
-        public static string EndDateCampKey {
-            get {
-                return ResourceManager.GetString("EndDateCampKey", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Enable Account.
         /// </summary>
         public static string EnableAccount {
             get {
                 return ResourceManager.GetString("EnableAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Date.
+        /// </summary>
+        public static string EndDateCampKey {
+            get {
+                return ResourceManager.GetString("EndDateCampKey", resourceCulture);
             }
         }
         
@@ -642,6 +642,15 @@ namespace Resx {
         public static string Illness {
             get {
                 return ResourceManager.GetString("Illness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Illness.
+        /// </summary>
+        public static string Illness_Duplicate_1_ {
+            get {
+                return ResourceManager.GetString("Illness_Duplicate[1]", resourceCulture);
             }
         }
         
@@ -736,20 +745,20 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your name.
-        /// </summary>
-        public static string NombreUserKey {
-            get {
-                return ResourceManager.GetString("NombreUserKey", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Next Pet Profile.
         /// </summary>
         public static string NextPetProfile {
             get {
                 return ResourceManager.GetString("NextPetProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your name.
+        /// </summary>
+        public static string NombreUserKey {
+            get {
+                return ResourceManager.GetString("NombreUserKey", resourceCulture);
             }
         }
         
