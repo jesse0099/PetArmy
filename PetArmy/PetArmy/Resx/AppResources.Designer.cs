@@ -772,20 +772,20 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update.
-        /// </summary>
-        public static string updateKey {
-            get {
-                return ResourceManager.GetString("updateKey", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Update Information.
         /// </summary>
         public static string UpdateCampCastraBtnKey {
             get {
                 return ResourceManager.GetString("UpdateCampCastraBtnKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string updateKey {
+            get {
+                return ResourceManager.GetString("updateKey", resourceCulture);
             }
         }
         
