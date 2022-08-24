@@ -18,6 +18,7 @@
             <Helpers:AdminRequestStatusColorConverter x:Key="StringToColorRequest" />
             <Helpers:AdminRequestActionVisibilityConverter x:Key="AdminRequestStatusToBool" />
             <Helpers:AdminRequestAccessVisibilityConverter x:Key="AdminRequestAccessToBool" />
+            <Helpers:AdminRequestStatusTranslator x:Key="AdminRequestStatusTranslator" />
             <Helpers:YearFloatToYearAndMonthString x:Key="YearToYearAndMonthsString" />
             <Helpers:WeightFormatter x:Key="WeightFormatter" />
             <Helpers:UserToPetDistanceConverter x:Key="UserToPetDistanceConverter" />

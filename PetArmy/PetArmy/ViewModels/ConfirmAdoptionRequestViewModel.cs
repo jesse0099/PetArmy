@@ -106,9 +106,12 @@ namespace PetArmy.ViewModels
 
         public void GetCurrentUserInfo() {
             var current_user_info = _i_auth.GetSignedUserProfile();
-            Email = current_user_info.Email;
-            PhoneNumber = current_user_info.PhoneNumber;
-            FullName = current_user_info.Name;
+            if (current_user_info != null)
+            {
+                Email = current_user_info.Email;
+                PhoneNumber = current_user_info.PhoneNumber;
+                FullName = current_user_info.Name;
+            }
         }
 
         private static ConfirmAdoptionRequestViewModel _instance;
