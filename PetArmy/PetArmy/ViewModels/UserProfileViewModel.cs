@@ -21,7 +21,7 @@ using Syncfusion.XForms.Buttons;
 
 namespace PetArmy.ViewModels
 {
-    public class UserProfileViewModel: BaseViewModel
+    public class UserProfileViewModel : BaseViewModel
     {
         #region Singleton
         public static UserProfileViewModel instance = null;
@@ -53,7 +53,7 @@ namespace PetArmy.ViewModels
         {
             _i_auth = DependencyService.Get<IFirebaseAuth>();
             MyPreferences = new BindingList<CstmItemPreference>();
-         
+
         }
 
         public async void initCommands()
@@ -62,7 +62,7 @@ namespace PetArmy.ViewModels
             OpenUserInfo = new Command(openUserInfo);
             PickImage = new Command(pickImage);
             EditInfo = new Command(editInfo);
-            
+
         }
 
         #endregion
@@ -89,7 +89,7 @@ namespace PetArmy.ViewModels
 
         private string _name;
 
-        public string Name 
+        public string Name
         {
             get { return _name; }
             set { _name = value; OnPropertyChanged(); }
@@ -190,7 +190,7 @@ namespace PetArmy.ViewModels
             set { imageIsSelected = value; OnPropertyChanged(); }
         }
 
-        private string imageString="";
+        private string imageString = "";
 
         public string ImageString
         {
@@ -262,7 +262,17 @@ namespace PetArmy.ViewModels
         #region Commands and Functions
 
         public ICommand GetUserInfo { get; set; }
-        public ICommand OpenUserInfo { get; set; }
+        private ICommand _openUserInfo;
+
+        public ICommand OpenUserInfo
+        {
+            get { return _openUserInfo; }
+            set
+            {
+                _openUserInfo = value;
+                OnPropertyChanged();
+            }
+        }
         public ICommand PickImage { get; set; }
         public ICommand EditInfo { get; set; }
         public ICommand UpdatePreferences { get; set; }
@@ -272,7 +282,7 @@ namespace PetArmy.ViewModels
             #region General Info
 
             List<User_Info> usersInfo = new List<User_Info>();
-           
+
 
             usersInfo = await GraphQLService.getUserInfo_ByUID(Settings.UID);
 
@@ -285,12 +295,12 @@ namespace PetArmy.ViewModels
                 }
 
                 ImageData = Convert.FromBase64String(CurUser.profilePicture);
-                FullName = CurUser.name+" "+CurUser.surname;
+                FullName = CurUser.name + " " + CurUser.surname;
                 Name = CurUser.name;
                 Surname = CurUser.surname;
                 Username = CurUser.username;
                 SAge = CurUser.age.ToString();
-                Ubication = "Costa Rica, "+CurUser.canton;
+                Ubication = "Costa Rica, " + CurUser.canton;
                 DataIsFound = true;
 
                 Perfil_adoptante adoptante = await GraphQLService.getAdoptanteByID(Settings.UID);
@@ -345,7 +355,7 @@ namespace PetArmy.ViewModels
                         cstPreference.isSelected = false;
                     }
 
-                    preferences.Add(cstPreference); 
+                    preferences.Add(cstPreference);
                 }
 
                 MyPreferences = new BindingList<CstmItemPreference>(preferences);
@@ -356,16 +366,16 @@ namespace PetArmy.ViewModels
 
                 foreach (Tag tag in TagsGeneral)
                 {
-                       CstmItemPreference newItem = new CstmItemPreference();
+                    CstmItemPreference newItem = new CstmItemPreference();
 
-                        newItem.tag = tag;
-                        newItem.isSelected = false;
-                        temp.Add(newItem);
+                    newItem.tag = tag;
+                    newItem.isSelected = false;
+                    temp.Add(newItem);
                 }
 
                 MyPreferences = new BindingList<CstmItemPreference>(temp);
             }
-           
+
             #endregion
         }
 
@@ -395,7 +405,7 @@ namespace PetArmy.ViewModels
             Imagen_refugio imagen_Refugio = new Imagen_refugio();
             try
             {
-           
+
                 await CrossMedia.Current.Initialize();
 
                 if (!CrossMedia.Current.IsPickPhotoSupported)
@@ -437,7 +447,7 @@ namespace PetArmy.ViewModels
             newInfo.canton = Canton;
             newInfo.age = Int32.Parse(SAge); ;
             newInfo.username = Username;
-           
+
             if (imageIsSelected)
             {
                 newInfo.profilePicture = ImageString;
@@ -447,7 +457,7 @@ namespace PetArmy.ViewModels
                 newInfo.profilePicture = Convert.ToBase64String(ImageData, 0, ImageData.Length);
             }
 
-            await GraphQLService.createOrUpdate_UserInfo(DataIsFound,newInfo);
+            await GraphQLService.createOrUpdate_UserInfo(DataIsFound, newInfo);
 
             FullName = newInfo.name + " " + newInfo.surname;
             Ubication = "Costa Rica, " + newInfo.canton;
@@ -478,10 +488,10 @@ namespace PetArmy.ViewModels
                 newPerfil.casa_cuna = false;
 
             }
-           
-            await GraphQLService.createOrUpdate_Adoptante(AdoptIsFound,newPerfil);
+
+            await GraphQLService.createOrUpdate_Adoptante(AdoptIsFound, newPerfil);
             AdoptIsFound = true;
-            await Shell.Current.GoToAsync("//UserProfileTabbedView");
+            await Shell.Current.GoToAsync("//Feed");
         }
 
         public async Task updatePreferences()
@@ -499,8 +509,8 @@ namespace PetArmy.ViewModels
                     /* Si hay preferencias en BD*/
                     if (curPreferencias.Count > 0)
                     {
-                       /* Se bsuca ese item en la lista de BD*/
-                       isFound = curPreferencias.Any(x => x.id_tag == preference.tag.id_tag);
+                        /* Se bsuca ese item en la lista de BD*/
+                        isFound = curPreferencias.Any(x => x.id_tag == preference.tag.id_tag);
 
                         /* Si se encuentra*/
                         if (isFound)
@@ -548,7 +558,7 @@ namespace PetArmy.ViewModels
             }
         }
 
-     
+
 
 
         #endregion

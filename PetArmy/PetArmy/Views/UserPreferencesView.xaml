@@ -14,7 +14,8 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <StackLayout Grid.Column="0">
-                                <Label Text="{Binding tag.nombre_tag}" HorizontalOptions="Center" />
+                                <Label Text="{Binding tag.nombre_tag}" HorizontalOptions="Center"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                             </StackLayout>
                             <syncfusion:SfSwitch x:Name="tagIsActive" StateChanged="tagIsActive_StateChanged"  IsOn="{Binding isSelected}" Grid.Column="1"/>
                            

@@ -510,12 +510,6 @@
   <data name="userPhoneKey" xml:space="preserve">
     <value>Tu número de teléfono</value>
   </data>
-  <data name="Illness_Duplicate[1]" xml:space="preserve">
-    <value>Enfermedad</value>
-  </data>
-  <data name="Allergies_Duplicate[1]" xml:space="preserve">
-    <value>Alergias</value>
-  </data>
   <data name="EditPetKey" xml:space="preserve">
     <value>Editar Mascota</value>
   </data>
@@ -530,5 +524,23 @@
   </data>
   <data name="Message" xml:space="preserve">
     <value>Mensaje</value>
+  </data>
+  <data name="MyFeedKey" xml:space="preserve">
+    <value>Página Principal</value>
+  </data>
+  <data name="AccountRequests" xml:space="preserve">
+    <value>Solicitudes De Cuentas</value>
+  </data>
+  <data name="PetsKey" xml:space="preserve">
+    <value>Mascotas</value>
+  </data>
+  <data name="HelpKey" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="Preferences" xml:space="preserve">
+    <value>Preferencias</value>
+  </data>
+  <data name="ProfileKey" xml:space="preserve">
+    <value>Perfil</value>
   </data>
 </root>

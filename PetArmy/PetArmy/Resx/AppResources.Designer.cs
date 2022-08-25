@@ -61,6 +61,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account Requests.
+        /// </summary>
+        public static string AccountRequests {
+            get {
+                return ResourceManager.GetString("AccountRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Active.
         /// </summary>
         public static string ActiveCampKey {
@@ -156,15 +165,6 @@ namespace Resx {
         public static string Allergies {
             get {
                 return ResourceManager.GetString("Allergies", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Allergies.
-        /// </summary>
-        public static string Allergies_Duplicate_1_ {
-            get {
-                return ResourceManager.GetString("Allergies_Duplicate[1]", resourceCulture);
             }
         }
         
@@ -430,7 +430,7 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Description .
+        ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
             get {
@@ -637,20 +637,20 @@ namespace Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Illness.
+        ///   Looks up a localized string similar to Help.
         /// </summary>
-        public static string Illness {
+        public static string HelpKey {
             get {
-                return ResourceManager.GetString("Illness", resourceCulture);
+                return ResourceManager.GetString("HelpKey", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Illness.
         /// </summary>
-        public static string Illness_Duplicate_1_ {
+        public static string Illness {
             get {
-                return ResourceManager.GetString("Illness_Duplicate[1]", resourceCulture);
+                return ResourceManager.GetString("Illness", resourceCulture);
             }
         }
         
@@ -723,6 +723,15 @@ namespace Resx {
         public static string MoreAboutMe {
             get {
                 return ResourceManager.GetString("MoreAboutMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Feed.
+        /// </summary>
+        public static string MyFeedKey {
+            get {
+                return ResourceManager.GetString("MyFeedKey", resourceCulture);
             }
         }
         
@@ -853,6 +862,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pets.
+        /// </summary>
+        public static string PetsKey {
+            get {
+                return ResourceManager.GetString("PetsKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Phone Number.
         /// </summary>
         public static string PhoneNumber {
@@ -867,6 +885,24 @@ namespace Resx {
         public static string physicalKey {
             get {
                 return ResourceManager.GetString("physicalKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preferences.
+        /// </summary>
+        public static string Preferences {
+            get {
+                return ResourceManager.GetString("Preferences", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile.
+        /// </summary>
+        public static string ProfileKey {
+            get {
+                return ResourceManager.GetString("ProfileKey", resourceCulture);
             }
         }
         

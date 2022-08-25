@@ -233,6 +233,7 @@ namespace PetArmy.ViewModels
 
                             Settings.IsAdmin = true;
                             Settings.RoleNo = 2;
+                            Is_Admin = true;
                             await Shell.Current.GoToAsync("//AdminLandingPage");
                             break;
                         }

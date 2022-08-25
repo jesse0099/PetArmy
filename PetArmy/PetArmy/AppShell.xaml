@@ -114,7 +114,9 @@
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
 
-    <FlyoutItem Title="Profile">
+    <!--Perfil-->
+    <FlyoutItem Title="{xct:Translate ProfileKey}"
+                IsVisible="{Binding Login.Is_Admin}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.User}" Color="{StaticResource Primary}" />
@@ -123,7 +125,9 @@
                       ContentTemplate="{DataTemplate local:UserProfileTabbedView}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Mis Servicios">
+    <!--Mis Servicios Refugios - Casa cuna-->
+    <FlyoutItem Title="{xct:Translate MyServicesKey}"
+                IsVisible="{Binding Login.Is_Admin}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.Warehouse}" Color="{StaticResource Primary}" />
@@ -132,7 +136,9 @@
                       ContentTemplate="{DataTemplate local:MyServicesView}"/>
     </FlyoutItem>
 
-    <FlyoutItem Title="Mascotas" IsVisible="{Binding Login.Is_Admin}">
+    <!--Mascotas-->
+    <FlyoutItem Title="{xct:Translate PetsKey}" 
+                IsVisible="{Binding Login.Is_Admin}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.Paw}" Color="{StaticResource Primary}" />
@@ -140,7 +146,9 @@
         <ShellContent Route="ListMascotasPage" ContentTemplate="{DataTemplate local:ListMascotasPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Account Request">
+    <!--AccountRequests-->
+    <FlyoutItem Title="{xct:Translate AccountRequests}"
+                IsVisible="{Binding Login.Is_Admin}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.User}"
@@ -150,7 +158,9 @@
                       ContentTemplate="{DataTemplate local:AdminLandingPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Campañas">
+    <!--Campanias-->
+    <FlyoutItem Title="{xct:Translate Campaign}"
+                IsVisible="{Binding Login.Is_Admin}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.Heart}" Color="{StaticResource Primary}" />
@@ -158,19 +168,10 @@
         <ShellContent Route="CampCastraView"
                       ContentTemplate="{DataTemplate local:CampCastraView}" />
     </FlyoutItem>
-
-   
-
-
-    <FlyoutItem Title="About">
-        <FlyoutItem.Icon>
-            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                             Glyph="{x:Static fa:IconClass.InfoCircle}" Color="{StaticResource Primary}" />
-        </FlyoutItem.Icon>
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:TabbedPageTest}" />
-    </FlyoutItem>
-
-    <FlyoutItem Title="My Feed" IsVisible="{Binding Login.Is_Admin, Converter={StaticResource InverseBool}}">
+    
+    <!--Feed-->
+    <FlyoutItem Title="{xct:Translate MyFeedKey}" 
+                IsVisible="{Binding Login.Is_Admin, Converter={StaticResource InverseBool}}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.InfoCircle}"
@@ -180,7 +181,8 @@
                       ContentTemplate="{DataTemplate local:FeedTabeedView}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Help">
+    <!--Help-->
+    <FlyoutItem Title="{xct:Translate HelpKey}">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.QuestionCircle}" Color="{StaticResource Primary}" />
@@ -202,47 +204,12 @@
     <Shell.FlyoutFooter>
         <StackLayout>
             <Label Text="Pet Army"
-               TextColor="{StaticResource Primary}"
-               FontFamily="{StaticResource MaterialFontFamily}"
-               HorizontalOptions="Center" 
-               VerticalOptions="End"
-               Padding="20"/>
+                   TextColor="{StaticResource Primary}"
+                   FontFamily="{StaticResource MaterialFontFamily}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="End"
+                   Padding="20" />
         </StackLayout>
 
     </Shell.FlyoutFooter>
-
-
-    <!-- Optional Templates 
-    // These may be provided inline as below or as separate classes.
-
-    // This header appears at the top of the Flyout.
-    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyout-header
-    <Shell.FlyoutHeaderTemplate>
-        <DataTemplate>
-            <Grid>ContentHere</Grid>
-        </DataTemplate>
-    </Shell.FlyoutHeaderTemplate>
-
-    // ItemTemplate is for ShellItems as displayed in a Flyout
-    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-flyoutitem-appearance
-    <Shell.ItemTemplate>
-        <DataTemplate>
-            <ContentView>
-                Bindable Properties: Title, Icon
-            </ContentView>
-        </DataTemplate>
-    </Shell.ItemTemplate>
-
-    // MenuItemTemplate is for MenuItems as displayed in a Flyout
-    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-menuitem-appearance
-    <Shell.MenuItemTemplate>
-        <DataTemplate>
-            <ContentView>
-                Bindable Properties: Text, Icon
-            </ContentView>
-        </DataTemplate>
-    </Shell.MenuItemTemplate>
-
-    -->
-
 </Shell>

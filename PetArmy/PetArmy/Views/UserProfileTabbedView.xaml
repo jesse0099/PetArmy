@@ -2,6 +2,7 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="PetArmy.Views.UserProfileTabbedView"
+            xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
             xmlns:local="clr-namespace:PetArmy.Views"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
@@ -9,8 +10,10 @@
             SelectedTabColor="{StaticResource Primary}"
             UnselectedTabColor="White"
             BindingContext="{Binding Main, Source={StaticResource Locator}}">
-   
-            <local:UserGeneralInfoView  Title="General" IconImageSource="PetsArmy.png"/>
-            <local:UserPreferencesView  IconImageSource="PetsArmy.png" Title="Preferences"/>
+
+    <local:UserGeneralInfoView  Title="{xct:Translate ProfileKey}"
+                                IconImageSource="PetsArmy.png" />
+    <local:UserPreferencesView  IconImageSource="PetsArmy.png"
+                                Title="{xct:Translate Preferences}" />
 
 </TabbedPage>
