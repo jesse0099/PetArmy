@@ -9,6 +9,7 @@ using PetArmy.Helpers;
 using GraphQL.Client.Serializer.Newtonsoft;
 using PetArmy.Models;
 using System.Text;
+using System.ComponentModel;
 
 namespace PetArmy.Services
 {
@@ -1148,6 +1149,94 @@ namespace PetArmy.Services
                 throw;
             }
         }
+        #endregion
+
+        #region solicitudes de adopcion
+        public static async Task<BindingList<Solicitud_Adopcion>> getRequests()
+        {
+            BindingList<Solicitud_Adopcion> solicitudes = new BindingList<Solicitud_Adopcion>();
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = @"query MyQuery {solicitudes_adopcion {adoptante, aprobacion, fecha_solicitud, id_mascota, id_refugio}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var foundResponse = await client.SendQueryAsync<Solicitud_AdopcionGraphQLResponse>(findRequest);
+                solicitudes = foundResponse.Data.solicitudes_adopcion;
+                client.Dispose();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            };
+
+            return solicitudes;
+        }
+
+        public static async Task updateAdoptionRequest(Solicitud_Adopcion solicitud_Adopcion)
+        {
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {update_solicitudes_adopcion_by_pk(pk_columns: { adoptante: \"" + solicitud_Adopcion.adoptante + "\", fecha_solicitud: \"" + solicitud_Adopcion.fecha_solicitud + "\", id_mascota: \"" + solicitud_Adopcion.id_mascota + "\", id_refugio: \"" + solicitud_Adopcion.id_refugio + "\"},  _set: {aprobacion: \"" + solicitud_Adopcion.aprobacion + "\"}) {adoptante}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var foundResponse = await client.SendQueryAsync<Solicitud_AdopcionGraphQLResponse>(findRequest);
+            }
+            catch (Exception)
+            {
+                throw;
+            };
+        }
+
+        public static async Task insertAdoptionRecord(Solicitud_Adopcion solicitud_Adopcion)
+        {
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {insert_registro_adopcion_one(object: { adoptante: \"" + solicitud_Adopcion.adoptante + "\", fecha: \"" + solicitud_Adopcion.fecha_solicitud + "\", id_mascota: \"" + solicitud_Adopcion.id_mascota + "\", id_refugio: \"" + solicitud_Adopcion.id_refugio + "\"}) {nro_orden}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var foundResponse = await client.SendQueryAsync<Solicitud_AdopcionGraphQLResponse>(findRequest);
+            }
+            catch (Exception)
+            {
+                throw;
+            };
+        }
+
+        public static async Task updatePetStatus(Solicitud_Adopcion solicitud_Adopcion)
+        {
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {update_mascota_by_pk(pk_columns: { id_mascota: \"" + solicitud_Adopcion.adoptante + "\"}, _set: { estado: \"" + solicitud_Adopcion.aprobacion + "\"}) {nombre}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var foundResponse = await client.SendQueryAsync<Solicitud_AdopcionGraphQLResponse>(findRequest);
+            }
+            catch (Exception)
+            {
+                throw;
+            };
+        }
+
         #endregion
 
     }

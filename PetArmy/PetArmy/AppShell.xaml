@@ -146,6 +146,15 @@
                       ContentTemplate="{DataTemplate local:CampCastraView}" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Solicitudes de Adopción">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                             Glyph="{x:Static fa:IconClass.Heart}" Color="{StaticResource Primary}" />
+        </FlyoutItem.Icon>
+        <ShellContent Route="SolicitudesAdopcion"
+                      ContentTemplate="{DataTemplate local:SolicitudesAdopcion}"/>
+    </FlyoutItem>
+
     <FlyoutItem Title="Perfil">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"

@@ -27,6 +27,8 @@ namespace PetArmy.ViewModels
 
         public UserProfileViewModel UserProfile { get; set; }
 
+        public SolicitudesAprobacionViewModel SolicitudesAprobacion { get; set; }
+
         public MainViewModel(): base()
         {
             this.Login = LoginViewModel.GetInstance();
@@ -43,6 +45,7 @@ namespace PetArmy.ViewModels
             this.AddCampCastra = AddCampCastraViewModel.GetInstance();
             this.UserProfile = UserProfileViewModel.GetInstance();
             this.User = new UserViewModel();
+           this.SolicitudesAprobacion = SolicitudesAprobacionViewModel.GetInstance();
          
 
         }
