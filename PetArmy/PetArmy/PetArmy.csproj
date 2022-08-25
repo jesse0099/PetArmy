@@ -65,6 +65,9 @@
     <Compile Update="Views\FeedTabbedView.xaml.cs">
       <DependentUpon>FeedTabbedView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\PopUps\YesNoPopUp.xaml.cs">
+      <DependentUpon>YesNoPopUp.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

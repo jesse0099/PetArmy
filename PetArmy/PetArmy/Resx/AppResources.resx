@@ -508,4 +508,7 @@
   <data name="AddImageKey" xml:space="preserve">
     <value>Add Image</value>
   </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
 </root>

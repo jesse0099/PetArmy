@@ -528,4 +528,7 @@
   <data name="AddImageKey" xml:space="preserve">
     <value>Agregar Imagen</value>
   </data>
+  <data name="Message" xml:space="preserve">
+    <value>Mensaje</value>
+  </data>
 </root>

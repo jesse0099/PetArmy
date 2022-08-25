@@ -66,7 +66,9 @@ namespace PetArmy.ViewModels
         public ICommand GetAllCampCastra
         {
             get { return _getAllCampCastra; }
-            set { _getAllCampCastra = value;
+            set
+            {
+                _getAllCampCastra = value;
                 OnPropertyChanged();
             }
         }
@@ -75,9 +77,23 @@ namespace PetArmy.ViewModels
 
         public ICommand Edit_CampCastra
         {
-            get {
-                return new Command((e) => {
+            get
+            {
+                return new Command((e) =>
+                {
                     editCampCastra((Camp_Castracion)e);
+                });
+            }
+        }
+
+        public ICommand DeleteCampCastra
+        {
+            get
+            {
+                return new Command((e) =>
+                {
+                    if (e is not null)
+                        deleteCampCastra(e as Camp_Castracion);
                 });
             }
         }
@@ -134,7 +150,29 @@ namespace PetArmy.ViewModels
             }
 
         }
+        public void deleteCampCastra(Camp_Castracion deleting)
+        {
+            App.Current.Resources.TryGetValue("Locator", out object locator);
 
+            Action<Camp_Castracion> delete_action = async (Camp_Castracion e) =>
+            {
+                await GraphQLService.deleteCampCastra(e);
+                await App.Current.MainPage.DisplayAlert("Success", "Campaing Deleted!", "Ok");
+                await getData();
+                //Cerrar confirmacion
+                ((InstanceLocator)locator).Main.YesNoPopUp.IsConfirmOpen = false;
+            };
+
+            ((InstanceLocator)locator).Main.YesNoPopUp.ConfirmCommand = new Command(() =>
+            {
+                delete_action?.Invoke(deleting);
+            });
+
+            //Invocar confirmacion
+            ((InstanceLocator)locator).Main.YesNoPopUp.HeaderTitle = "Delete Confirmation";
+            ((InstanceLocator)locator).Main.YesNoPopUp.BodyText = "Seguro que desea borrar este registro?";
+            ((InstanceLocator)locator).Main.YesNoPopUp.IsConfirmOpen = true;
+        }
         public async Task getData()
         {
             IsBusy = true;

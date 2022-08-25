@@ -77,18 +77,6 @@
                                        WidthRequest="280"
                                        Style="{StaticResource SyncfusionButtons}">
                     </buttons:SfButton>
-
-                    <!--Boton de eliminacion pendiente de pasar a pantalla principal-->
-                    <buttons:SfButton  Command="{Binding DeleteCampCastra}"
-                                       Text="{xct:Translate DeleteCampCastraKey}"
-                                       FontAttributes="Bold"
-                                       HorizontalTextAlignment="Center"
-                                       HorizontalOptions="Center"
-                                       ShowIcon="True"
-                                       BackgroundColor="#EB0B0B"
-                                       WidthRequest="280"
-                                       Style="{StaticResource SyncfusionButtons}">
-                    </buttons:SfButton>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

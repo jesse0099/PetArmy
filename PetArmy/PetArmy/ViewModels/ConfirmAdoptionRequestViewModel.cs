@@ -83,7 +83,7 @@ namespace PetArmy.ViewModels
             });
             ConfirmCommand = new Command(SendAdoptionRequest);
             OpenConfirmationPopUp  = false;
-            GetCurrentUserInfo();
+            //GetCurrentUserInfo();
         }
 
         async public void SendAdoptionRequest()

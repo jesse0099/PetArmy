@@ -35,6 +35,7 @@
             <Color x:Key="MatrixGreen">#64DD17</Color>
             <Color x:Key="ArcadeGreen">#70D44B</Color>
             <Color x:Key="CustomYellow">#ffd319</Color>
+            <Color x:Key="CustomYellow2">#ffe36d</Color>
             <Color x:Key="ArcadeYellow">#F0AA1D</Color>
             <Color x:Key="CustomOrange">#ff901f</Color>
             <Color x:Key="CustomPink">#ff2975</Color>
@@ -48,6 +49,8 @@
             <Color x:Key="PurplePlum">#a657ae</Color>
             <Color x:Key="Flirt">#8c1a6a</Color>
             <Color x:Key="MiddlePurple">#9d75cb</Color>
+            <Color x:Key="Red1">#D60407</Color>
+            <Color x:Key="Red2">#F80004</Color>
             
             <!--Monochromatic Gradient (Pet bool values)-->
             <Color x:Key="Grad1">#19192f</Color>

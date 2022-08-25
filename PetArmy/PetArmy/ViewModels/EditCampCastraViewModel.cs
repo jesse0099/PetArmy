@@ -42,7 +42,6 @@ namespace PetArmy.ViewModels
         public void initCommands()
         {
             UpdateCampCastra = new Command(updateCampCastra);
-            DeleteCampCastra = new Command(deleteCampCastra);
         }
         #endregion
 
@@ -61,9 +60,6 @@ namespace PetArmy.ViewModels
 
         #region Commands
         public ICommand UpdateCampCastra { get; set; }
-        public ICommand DeleteCampCastra { get; set; }
-
-
 
         public async void updateCampCastra()
         {
@@ -71,14 +67,6 @@ namespace PetArmy.ViewModels
             await App.Current.MainPage.DisplayAlert("Success", "Campaing Updated!", "Ok");
             await Shell.Current.GoToAsync("//CampCastraView");
 
-        }
-
-        //Probablemente está función se pasé al lado de la View de las Campañas
-        public async void deleteCampCastra()
-        {
-            await GraphQLService.deleteCampCastra(CurCampCastra);
-            await App.Current.MainPage.DisplayAlert("Success", "Campaing Deleted!", "Ok");
-            await Shell.Current.GoToAsync("//CampCastraView");
         }
         #endregion
     }

@@ -3,6 +3,7 @@
     public  class MainViewModel: BaseViewModel
     {
         public LoginViewModel Login { get; set; }
+        public YesNoPopUpViewModel YesNoPopUp{ get; set; }
         public UserViewModel User { get; set; }
         public RegisterViewModel Register { get; set; }
         public AdminViewModel Admin { get; set; }
@@ -51,7 +52,7 @@
             this.EditCampCastra = EditCampCastraViewModel.GetInstance();
             this.UserProfile = UserProfileViewModel.GetInstance();
             this.User = new UserViewModel();
-
+            this.YesNoPopUp = YesNoPopUpViewModel.GetInstance();
             this.Mascotas = MascotasViewModel.GetInstance();
 
         }

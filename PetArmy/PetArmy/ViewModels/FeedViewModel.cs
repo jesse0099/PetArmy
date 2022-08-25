@@ -172,6 +172,7 @@ namespace PetArmy.ViewModels
                         if(!local.Equals(AppResources.RequestAdoption))
                             break;
                         ConfirmAdoptionRequestViewModel.GetInstance().CurrentPet = TopItem;
+                        ConfirmAdoptionRequestViewModel.GetInstance().GetCurrentUserInfo();
                         OpenConfirmationPopUp = true;
                         break;
                     }

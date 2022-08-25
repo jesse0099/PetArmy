@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sfPopup:SfPopupLayout xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+                       xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+                       xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+                       xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                       xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+                       xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+                       xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                       xmlns:local="clr-namespace:PetArmy"
+                       xmlns:customcontrols="clr-namespace:PetArmy.CustomControls"
+                       x:Class="PetArmy.Views.PopUps.YesNoPopUp"
+                       x:Name="popup"
+                       BindingContext="{Binding  Main.YesNoPopUp, Source={StaticResource Locator}}"
+                       IsOpen="{Binding IsConfirmOpen}"
+                       IsVisible="{Binding IsConfirmOpen}"
+                       VerticalOptions="FillAndExpand"
+                       BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}">
+    <sfPopup:SfPopupLayout.PopupView>
+        <sfPopup:PopupView ShowFooter="False"
+                           HeaderTitle="{Binding HeaderTitle}"
+                           ShowCloseButton="True">
+            <sfPopup:PopupView.PopupStyle>
+                <sfPopup:PopupStyle CornerRadius="55"
+                                    BorderThickness="0"
+                                    HasShadow="True"
+                                    HeaderTextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                    HeaderBackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}"
+                                    FooterBackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}">
+                </sfPopup:PopupStyle>
+            </sfPopup:PopupView.PopupStyle>
+            <!--Header-->
+
+            <sfPopup:PopupView.ContentTemplate>
+                <DataTemplate x:Name="content">
+                    <ViewCell>
+                        <Frame HasShadow="True"
+                               Margin="0"
+                               HeightRequest="380"
+                               BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}">
+                            <AbsoluteLayout  AbsoluteLayout.LayoutBounds="1,1,1,.50"
+                                             AbsoluteLayout.LayoutFlags="All"
+                                             BindingContext="{Binding Main.YesNoPopUp, Source={StaticResource Locator}}">
+                                <PopUps:ErrorPopUp  HorizontalOptions="Center"
+                                                    AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                    AbsoluteLayout.LayoutFlags="All" />
+                                <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
+                                                               AnimationType="SingleCircle"
+                                                               FontAttributes="Bold"
+                                                               Title="{xct:Translate Loading}"
+                                                               TextColor="{AppThemeBinding Light={StaticResource MiddlePurple}, Dark={StaticResource PurplePlum}}"
+                                                               IsVisible="{Binding IsBusy}"
+                                                               VerticalOptions="Start"
+                                                               HorizontalOptions="Center"
+                                                               AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                               AbsoluteLayout.LayoutFlags="All" />
+                                <ScrollView  HorizontalOptions="Center"
+                                             AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                             AbsoluteLayout.LayoutFlags="All"
+                                             VerticalOptions="FillAndExpand">
+                                    <StackLayout VerticalOptions="FillAndExpand">
+                                        <!--Body Text-->
+                                        <inputLayout:SfTextInputLayout  HelperText="Joseph"
+                                                                        HorizontalOptions="FillAndExpand"
+                                                                        InputViewPadding="5"
+                                                                        IsHintAlwaysFloated="True"
+                                                                        Hint="{xct:Translate Message}"
+                                                                        ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
+                                                                        Style="{StaticResource SyncfusionEntries}">
+                                            <customcontrols:CustomLabel x:Name="first_name"
+                                                                        Text="{Binding BodyText}"
+                                                                        TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                        </inputLayout:SfTextInputLayout>
+                                        <!--Buttons-->
+                                        <StackLayout Orientation="Horizontal"
+                                                     VerticalOptions="End"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     x:Name="actionButtonsContainer">
+                                            <!--Cancelar-->
+                                            <buttons:SfButton Style="{StaticResource SyncfusionButtons}"
+                                                              FontAttributes="Bold"
+                                                              FontSize="16"
+                                                              CornerRadius="30"
+                                                              Text="{xct:Translate Cancel}"
+                                                              ShowIcon="True"
+                                                              HorizontalOptions="FillAndExpand"
+                                                              BorderWidth="{AppThemeBinding Light=0, Dark=1}"
+                                                              BorderColor="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}"
+                                                              Command="{Binding CancelCommand}">
+                                                <buttons:SfButton.ImageSource>
+                                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                                     Glyph="{x:Static local:IconClass.Stop}"
+                                                                     Color="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}" />
+                                                </buttons:SfButton.ImageSource>
+                                            </buttons:SfButton>
+                                            <!--Confirmar-->
+                                            <buttons:SfButton Style="{StaticResource SyncfusionButtons}"
+                                                              FontAttributes="Bold"
+                                                              FontSize="16"
+                                                              CornerRadius="30"
+                                                              Text="{xct:Translate Confirm}"
+                                                              ShowIcon="True"
+                                                              HorizontalOptions="FillAndExpand"
+                                                              BorderWidth="{AppThemeBinding Light=0, Dark=1}"
+                                                              BorderColor="{StaticResource ArcadeGreen}"
+                                                              Command="{Binding ConfirmCommand}">
+                                                <buttons:SfButton.ImageSource>
+                                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                                     Glyph="{x:Static local:IconClass.Check}"
+                                                                     Color="{StaticResource ArcadeGreen}" />
+                                                </buttons:SfButton.ImageSource>
+                                            </buttons:SfButton>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ScrollView>
+                            </AbsoluteLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </sfPopup:PopupView.ContentTemplate>
+        </sfPopup:PopupView>
+    </sfPopup:SfPopupLayout.PopupView>
+</sfPopup:SfPopupLayout>
