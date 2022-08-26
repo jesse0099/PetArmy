@@ -1161,7 +1161,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = @"query MyQuery {solicitudes_adopcion {adoptante, aprobacion, fecha_solicitud, id_mascota, id_refugio}}",
+                    Query = @"query MyQuery {solicitudes_adopcion(where: {id_refugio: {_eq: 2}}) {aprobacion, fecha_solicitud, id_mascota, id_refugio, adoptante}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
