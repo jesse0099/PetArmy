@@ -17,6 +17,7 @@ using Plugin.Media.Abstractions;
 using System.IO;
 using PetArmy.Views;
 using PetArmy.Infraestructure;
+using Resx;
 
 namespace PetArmy.ViewModels
 {
@@ -290,12 +291,13 @@ namespace PetArmy.ViewModels
                     newLocation.lalitud = Latitude;
                     newLocation.canton = Canton;
                     await GraphQLService.addShelterLocation(newLocation);
-                   
-
+                    await Shell.Current.GoToAsync("//MyServicesView");
                 }
                 else
                 {
-
+                    ErrorTitle = AppResources.errorEmptyValues;
+                    ErrorMessage = AppResources.errorEmptyValues;
+                    OpenPopUp = true;
                 }
 
             }
@@ -305,7 +307,7 @@ namespace PetArmy.ViewModels
                 throw;
             }
 
-            await Shell.Current.GoToAsync("//MyServicesView");
+           
         }
 
         public bool checkForEmpyValues()

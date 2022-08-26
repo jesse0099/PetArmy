@@ -6,16 +6,18 @@
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              x:Class="PetArmy.Views.MyServicesView"
              x:Name="myServicesPage"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}">
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding MyService}">
          <PopUps:ErrorPopUp />
-            <Label Text="{xct:Translate MyServicesKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="{xct:Translate MyServicesKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"  TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
             <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
                                                AnimationType="SingleCircle"
                                                FontAttributes="Bold"
                                                Title="Loading..."
-                                               TextColor="{StaticResource LuckyPoint}"
+                                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
                                                IsVisible="{Binding IsBusy}"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center" />
@@ -23,11 +25,16 @@
                 <ScrollView>
                     <ListView x:Name="CartItemsView"
                               BackgroundColor="Transparent"
-                               SeparatorVisibility="None"
-                               ItemsSource="{Binding CustomList}">
+                               SeparatorVisibility="Default"
+                               ItemsSource="{Binding CustomList}"
+                               Margin="15"
+                               SeparatorColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                               RowHeight="90" 
+                             >
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ImageCell TextColor="#9b9b9b"
+                                          
                                    Text="{Binding refugio.nombre}"
                                    Detail="{Binding refugio.direccion}"
                                    ImageSource="{Binding Image, Converter={xct:ByteArrayToImageSourceConverter}}"
@@ -48,6 +55,7 @@
                                        HorizontalTextAlignment="Center"
                                        HorizontalOptions="FillAndExpand"
                                        ShowIcon="True"
+                                       CornerRadius="50"
                                        BackgroundColor="#3b5998"
                                        Style="{StaticResource SyncfusionButtons}">
                 <buttons:SfButton.ImageSource>
@@ -63,6 +71,7 @@
                                        HorizontalTextAlignment="Center"
                                        HorizontalOptions="FillAndExpand"
                                        ShowIcon="True"
+                                       CornerRadius="50"
                                        BackgroundColor="#3b5998"
                                        Style="{StaticResource SyncfusionButtons}">
                 <buttons:SfButton.ImageSource>
@@ -77,6 +86,7 @@
                                        HorizontalTextAlignment="Center"
                                        HorizontalOptions="FillAndExpand"
                                        ShowIcon="True"
+                                       CornerRadius="50"
                                        BackgroundColor="#3b5998"
                                        Style="{StaticResource SyncfusionButtons}">
                     <buttons:SfButton.ImageSource>

@@ -27,6 +27,8 @@
 
         public MascotasViewModel Mascotas { get; set; }
 
+        public YesNoPopUpViewModel YesNoPopUp { get; set; }
+
         public MainViewModel(): base()
         {
             this.Login = LoginViewModel.GetInstance();
@@ -45,7 +47,7 @@
             this.EditCampCastra = EditCampCastraViewModel.GetInstance();
             this.UserProfile = UserProfileViewModel.GetInstance();
             this.User = new UserViewModel();
-
+            this.YesNoPopUp = YesNoPopUpViewModel.GetInstance();
             this.Mascotas = MascotasViewModel.GetInstance();
 
         }

@@ -223,6 +223,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Only whole numbers.
         /// </summary>
         public static string cantKey {
@@ -304,6 +313,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm.
+        /// </summary>
+        public static string Confirm {
+            get {
+                return ResourceManager.GetString("Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create account.
         /// </summary>
         public static string CreateAccountKey {
@@ -340,6 +358,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete Confirmation.
+        /// </summary>
+        public static string DeleteHeader {
+            get {
+                return ResourceManager.GetString("DeleteHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string DeleteKey {
@@ -354,6 +381,15 @@ namespace Resx {
         public static string DeleteShelterBtnkey {
             get {
                 return ResourceManager.GetString("DeleteShelterBtnkey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this shelter?.
+        /// </summary>
+        public static string deleteShelterConfirnmation {
+            get {
+                return ResourceManager.GetString("deleteShelterConfirnmation", resourceCulture);
             }
         }
         
@@ -475,6 +511,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not all values are set.
+        /// </summary>
+        public static string errorEmptyValues {
+            get {
+                return ResourceManager.GetString("errorEmptyValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check for empty values.
+        /// </summary>
+        public static string errorEmptyValuesH1 {
+            get {
+                return ResourceManager.GetString("errorEmptyValuesH1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your full name.
         /// </summary>
         public static string fullNameKey {
@@ -502,6 +556,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Loading....
+        /// </summary>
+        public static string Loading {
+            get {
+                return ResourceManager.GetString("Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log In.
         /// </summary>
         public static string LogIn {
@@ -516,6 +579,15 @@ namespace Resx {
         public static string makeDefKey {
             get {
                 return ResourceManager.GetString("makeDefKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string Message {
+            get {
+                return ResourceManager.GetString("Message", resourceCulture);
             }
         }
         

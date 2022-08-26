@@ -14,6 +14,8 @@ using Plugin.Media;
 using System.IO;
 using PetArmy.Helpers;
 using System.Windows.Input;
+using PetArmy.Infraestructure;
+using Resx;
 
 namespace PetArmy.ViewModels
 {
@@ -449,48 +451,85 @@ namespace PetArmy.ViewModels
 
         }
 
-        public async void updateShelter()
+
+        public bool checkForEmpyValues()
         {
-            CurShelter.nombre = ShelterName;
-            CurShelter.direccion = ShelterDir;
-            CurShelter.correo = ShelterEmail;
-            CurShelter.activo = IsActive;
-            CurShelter.capacidad = Int32.Parse(QuantSpace);
-            CurShelter.telefono = ShelterNumber;
+            bool result = false;
 
-            List<ubicaciones_refugios> locations = await GraphQLService.getLocationByShelter(CurShelter.id_refugio);
-            
-            if (locations != null)
+            if (String.IsNullOrEmpty(this.shelterName) || String.IsNullOrEmpty(this.shelterDir) || String.IsNullOrEmpty(this.shelterEmail) || String.IsNullOrEmpty(this.shelterNumber))
             {
-                foreach (var location in locations)
-                {
-                    ubicaciones_refugios temp = location;
-
-                    if (!String.IsNullOrEmpty(Canton))
-                    {
-                        temp.canton = Canton;
-                        temp.lalitud = Latitude;
-                        temp.longitud = Longitude;
-                    }
-                    else
-                    {
-                        temp.lalitud = Latitude;
-                        temp.longitud = Longitude;
-                    }
-
-                    await GraphQLService.UpdateShelterLocation(temp);
-                }
+                result = true;
             }
 
-            await GraphQLService.updateShelter(CurShelter);
-            await Shell.Current.GoToAsync("//MyServicesView");
-
+            return result;
         }
 
-        public async void deleteShelter()
+        public async void updateShelter()
         {
-            await GraphQLService.deleteShelter(CurShelter.id_refugio);
-            await Shell.Current.GoToAsync("//MyServicesView");
+
+            if (!checkForEmpyValues())
+            {
+
+                CurShelter.nombre = ShelterName;
+                CurShelter.direccion = ShelterDir;
+                CurShelter.correo = ShelterEmail;
+                CurShelter.activo = IsActive;
+                CurShelter.capacidad = Int32.Parse(QuantSpace);
+                CurShelter.telefono = ShelterNumber;
+
+                List<ubicaciones_refugios> locations = await GraphQLService.getLocationByShelter(CurShelter.id_refugio);
+
+                if (locations != null)
+                {
+                    foreach (var location in locations)
+                    {
+                        ubicaciones_refugios temp = location;
+
+                        if (!String.IsNullOrEmpty(Canton))
+                        {
+                            temp.canton = Canton;
+                            temp.lalitud = Latitude;
+                            temp.longitud = Longitude;
+                        }
+                        else
+                        {
+                            temp.lalitud = Latitude;
+                            temp.longitud = Longitude;
+                        }
+
+                        await GraphQLService.UpdateShelterLocation(temp);
+                    }
+                }
+
+                await GraphQLService.updateShelter(CurShelter);
+                await Shell.Current.GoToAsync("//MyServicesView");
+            }
+            else
+            {
+                ErrorTitle = AppResources.errorEmptyValues;
+                ErrorMessage = AppResources.errorEmptyValues;
+                OpenPopUp = true;
+            }
+        }
+
+        public void deleteShelter()
+        {
+            App.Current.Resources.TryGetValue("Locator", out object locator);
+            Action<int> delete_action = async (int e) =>
+            {
+                await GraphQLService.deleteShelter(e);
+                await Shell.Current.GoToAsync("//MyServicesView");
+                //Cerrar confirmacion
+                ((InstanceLocator)locator).Main.YesNoPopUp.IsConfirmOpen = false;
+            };
+            ((InstanceLocator)locator).Main.YesNoPopUp.ConfirmCommand = new Command(() =>
+            {
+                delete_action?.Invoke(curShelter.id_refugio);
+            });
+            //Invocar confirmacion
+            ((InstanceLocator)locator).Main.YesNoPopUp.HeaderTitle = AppResources.deleteShelterConfirnmation; 
+            ((InstanceLocator)locator).Main.YesNoPopUp.BodyText = AppResources.deleteShelterConfirnmation ;
+            ((InstanceLocator)locator).Main.YesNoPopUp.IsConfirmOpen = true;
         }
 
         public async void SetasDefaultImg(int idImg)
@@ -519,6 +558,9 @@ namespace PetArmy.ViewModels
                 }
             }
         }
+
+
+
 
 
         #endregion

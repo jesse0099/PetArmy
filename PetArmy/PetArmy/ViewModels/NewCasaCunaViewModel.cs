@@ -15,6 +15,7 @@ using System.Diagnostics;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.IO;
+using Resx;
 
 namespace PetArmy.ViewModels
 {
@@ -205,49 +206,72 @@ namespace PetArmy.ViewModels
 
         public ICommand AddCasaCuna { get; set; }
 
+
+
+        public bool checkEmptyValues()
+        {
+            bool anyEmpty = false;
+            if ( String.IsNullOrEmpty(Nombre) || String.IsNullOrEmpty(Correo) || String.IsNullOrEmpty(Direccion) || String.IsNullOrEmpty(Telefono) )
+            {
+                anyEmpty = true;
+            }
+            return anyEmpty;
+        }
+
+
         public async void addNewCasaCuna()
         {
-            if (!String.IsNullOrEmpty(Settings.UID))
+
+            if (!checkEmptyValues()) {
+
+                if (!String.IsNullOrEmpty(Settings.UID))
+                {
+                    try
+                    {
+                        Perfil_adoptante curAdoptante = null;
+                        curAdoptante = await GraphQLService.getAdoptanteByID(Settings.UID);
+
+                        if (curAdoptante == null)
+                        {
+                            curAdoptante = new Perfil_adoptante();
+                            curAdoptante.uid = Settings.UID;
+                            curAdoptante.nombre = Nombre;
+                            curAdoptante.correo = Correo;
+                            curAdoptante.direccion = Direccion;
+                            curAdoptante.telefono = Telefono;
+                            curAdoptante.casa_cuna = true;
+
+                            await GraphQLService.addAdoptante(curAdoptante);
+
+                            ubicaciones_casasCuna newCasaCuna = new ubicaciones_casasCuna();
+                            newCasaCuna.id_ubicacion = await GraphQLService.countCasasCuna() + 1;
+                            newCasaCuna.id_user = Settings.UID;
+                            newCasaCuna.canton = Canton;
+                            newCasaCuna.lalitud = Latitude;
+                            newCasaCuna.longitud = Longitude;
+
+                            await GraphQLService.addCasaCunaLocation(newCasaCuna);
+
+                        }
+                        else
+                        {
+
+                        }
+
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+
+                }
+            }
+            else
             {
-                try
-                {
-                    Perfil_adoptante curAdoptante = null;
-                    curAdoptante = await GraphQLService.getAdoptanteByID(Settings.UID);
-
-                    if (curAdoptante == null)
-                    {
-                        curAdoptante= new Perfil_adoptante();
-                        curAdoptante.uid = Settings.UID;
-                        curAdoptante.nombre = Nombre;
-                        curAdoptante.correo = Correo;
-                        curAdoptante.direccion = Direccion;
-                        curAdoptante.telefono = Telefono;
-                        curAdoptante.casa_cuna = true;
-
-                        await GraphQLService.addAdoptante(curAdoptante);
-
-                        ubicaciones_casasCuna newCasaCuna = new ubicaciones_casasCuna();
-                        newCasaCuna.id_ubicacion = await GraphQLService.countCasasCuna() + 1;
-                        newCasaCuna.id_user = Settings.UID;
-                        newCasaCuna.canton = Canton;
-                        newCasaCuna.lalitud = Latitude;
-                        newCasaCuna.longitud = Longitude;
-
-                        await GraphQLService.addCasaCunaLocation(newCasaCuna);
-
-                    }
-                    else
-                    {
-
-                    }
-
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
-                
+                ErrorTitle = AppResources.errorEmptyValues;
+                ErrorMessage = AppResources.errorEmptyValues;
+                OpenPopUp = true;
             }
         }
 
