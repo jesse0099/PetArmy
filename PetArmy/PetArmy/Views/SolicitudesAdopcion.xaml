@@ -5,6 +5,7 @@
              xmlns:helpers="clr-namespace:PetArmy.Helpers"
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
              xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
@@ -13,7 +14,21 @@
              BackgroundColor="{AppThemeBinding Light= white,
                                                Dark={StaticResource LuckyPoint}}">
 
-    <sflistview:SfListView x:Name="listView" 
+
+    <!--<pulltoRefresh:SfPullToRefresh         BindingContext="{Binding SolicitudesAprobacion}"
+                                           RefreshCommand="{Binding SolicitudesAprobacion.getPendingRequests}"
+                                           ProgressBackgroundColor="{StaticResource Liberty}"
+                                           ProgressStrokeColor="{AppThemeBinding Light={StaticResource MiddlePurple}, Dark={StaticResource PurplePlum}}"
+                                           Margin="5,10,5,10"
+                                           IsRefreshing="{Binding SolicitudesAprobacion.IsBusy}"
+                                           RefreshContentHeight="50"
+                                           TransitionMode="SlideOnTop"
+                                           RefreshContentWidth="50"
+                                           VerticalOptions="FillAndExpand"
+                                           HorizontalOptions="FillAndExpand">
+        <pulltoRefresh:SfPullToRefresh.PullableContent>-->
+            
+            <sflistview:SfListView x:Name="listView" 
                            ItemsSource="{Binding Solicitudes}" 
                            BindingContext="{Binding SolicitudesAprobacion}"
                            ItemSize="300">
@@ -30,21 +45,19 @@
                                            CornerRadius="10">
                                         <StackLayout x:Name="Item">
                                             <!--Estado-->
-                                            <StackLayout Orientation="Horizontal"
+                            <StackLayout Orientation="Horizontal"
+                                                         Margin="0,0,0,10"
                                                          HorizontalOptions="FillAndExpand">
-                                                <Frame Padding="0"
-                                                       CornerRadius="50"
-                                                       HasShadow="True">
-                                                    <StackLayout BackgroundColor="Teal"
-                                                                 HorizontalOptions="Start"
-                                                                 WidthRequest="245" />
-                                                </Frame>
-                                                <Label Text="{Binding aprobacion}"
-                                                       HorizontalOptions="EndAndExpand"
+                                <Label Text="Estado"
+                                                       FontAttributes="Bold"
+                                                       HorizontalOptions="Start"
+                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <Label Text="Pendiente"
                                                        FontAttributes="Bold"
                                                        Margin="0,0,5,0"
-                                                       TextColor="Purple" />
-                                            </StackLayout>
+                                                       HorizontalOptions="EndAndExpand"
+                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                            </StackLayout>
 
                             <!--Fecha-->
                             <StackLayout Orientation="Horizontal"
@@ -102,7 +115,8 @@
                                                                   ShowIcon="True"
                                                                   HorizontalOptions="FillAndExpand"
                                                                   BorderWidth="{AppThemeBinding Light=0, Dark=1}"
-                                                                  BorderColor="{StaticResource SynthPumpkin}">
+                                                                  BorderColor="{StaticResource SynthPumpkin}"
+                                                                  IsEnabled="{Binding }">
                                     <buttons:SfButton.ImageSource>
                                         <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                                                                          Glyph="{x:Static local:IconClass.SkullCrossbones}"
@@ -135,6 +149,8 @@
             </DataTemplate>
         </sflistview:SfListView.ItemTemplate>
     </sflistview:SfListView>
-
+        <!--</pulltoRefresh:SfPullToRefresh.PullableContent>
+    </pulltoRefresh:SfPullToRefresh>-->
+    <!--HISTORICAL-->
 
 </ContentPage>

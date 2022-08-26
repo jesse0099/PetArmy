@@ -39,12 +39,12 @@ namespace PetArmy.ViewModels
         {
             initCommands();
             initClass();
-            getRequests();
+            getPendingRequests();
         }
 
         public void initCommands()
         {
-            GetRequests = new Command(getRequests);
+            GetPendingRequests = new Command(getPendingRequests);
             UpdateRequest = new Command<Solicitud_Adopcion>(updateRequest);
             ApproveRequest = new Command<Solicitud_Adopcion>(approveRequest);
             RejectRequest = new Command<Solicitud_Adopcion>(rejectRequest);
@@ -63,7 +63,10 @@ namespace PetArmy.ViewModels
         #region Varaiables
 
         private BindingList<Solicitud_Adopcion> solicitudes;
+
+        private bool isBusy = false;
         public BindingList<Solicitud_Adopcion> Solicitudes
+
         {
             get { return solicitudes; }
             set { solicitudes = value; OnPropertyChanged(); }
@@ -81,15 +84,16 @@ namespace PetArmy.ViewModels
         #region Commands and Functions
 
 
-        public ICommand GetRequests { get; set; }
+        public ICommand GetPendingRequests { get; set; }
 
-        public async void getRequests()
+        public async void getPendingRequests()
         {
             try
             {
-                Solicitudes = new BindingList<Solicitud_Adopcion>(await GraphQLService.getRequests() as List<Solicitud_Adopcion>);
+                this.isBusy = true;
+                Solicitudes = new BindingList<Solicitud_Adopcion>(await GraphQLService.getPendingRequests() as List<Solicitud_Adopcion>);
                 SolicitudesRaw = Solicitudes;
-
+                this.isBusy = false;
             }
             catch (Exception)
             {
@@ -103,10 +107,42 @@ namespace PetArmy.ViewModels
         {
             try
             {
+                this.isBusy = true;
+                var dt = DateTime.Now;
                 await GraphQLService.updateAdoptionRequest(solicitud_seleccionada).ConfigureAwait(false);
-                await GraphQLService.insertAdoptionRecord(solicitud_seleccionada).ConfigureAwait(false);
+                await GraphQLService.insertAdoptionRecord(solicitud_seleccionada, dt.ToString("yyyy/MM/dd")).ConfigureAwait(false);
                 await GraphQLService.updatePetStatus(solicitud_seleccionada).ConfigureAwait(false);
-                getRequests();
+                getPendingRequests();
+                this.isBusy = false;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public ICommand GetHistoricalRequests { get; set; }
+        public async void getHistoricalRequests()
+        {
+            try
+            {
+                Solicitudes = new BindingList<Solicitud_Adopcion>(await GraphQLService.getHistoricalRequests() as List<Solicitud_Adopcion>);
+                SolicitudesRaw = Solicitudes;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public ICommand ClaimPetRecord { get; set; }
+        public void claimPetRecord(Solicitud_Adopcion solicitud_seleccionada)
+        {
+            try
+            {
+                claimPetRecord(solicitud_seleccionada);
+
             }
             catch (Exception)
             {

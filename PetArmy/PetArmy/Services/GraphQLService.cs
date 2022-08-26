@@ -1151,7 +1151,32 @@ namespace PetArmy.Services
         #endregion
 
         #region solicitudes de adopcion
-        public static async Task<IEnumerable<Solicitud_Adopcion>> getRequests()
+        public static async Task<IEnumerable<Solicitud_Adopcion>> getPendingRequests()
+        {
+            IEnumerable<Solicitud_Adopcion> solicitudes = null;
+            string initDate = "01/01/0001";
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+                var findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "query MyQuery {solicitudes_adopcion(where: {id_refugio: {_eq: 2}, aprobacion: {_eq: false}, fecha_revision: {_eq: \"" + initDate + "\"}}) {adoptante, aprobacion, fecha_revision, fecha_solicitud, id_mascota, id_refugio}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var foundResponse = await client.SendQueryAsync<Solicitud_AdopcionGraphQLResponse>(findRequest);
+                solicitudes = foundResponse.Data.solicitudes_adopcion;
+                client.Dispose();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            };
+
+            return solicitudes;
+        }
+
+        public static async Task<IEnumerable<Solicitud_Adopcion>> getHistoricalRequests()
         {
             IEnumerable<Solicitud_Adopcion> solicitudes = null;
 
@@ -1160,7 +1185,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = @"query MyQuery {solicitudes_adopcion(where: {id_refugio: {_eq: 2}}) {aprobacion, fecha_solicitud, fecha_revision, id_mascota, id_refugio, adoptante}}",
+                    Query = @"query MyQuery {solicitudes_adopcion(where: {id_refugio: {_eq: 2}}) {adoptante, aprobacion, fecha_revision, fecha_solicitud, id_mascota, id_refugio}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -1178,13 +1203,13 @@ namespace PetArmy.Services
 
         public static async Task updateAdoptionRequest(Solicitud_Adopcion solicitud_Adopcion)
         {
-
+            var dt = DateTime.Now;
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation {update_solicitudes_adopcion_by_pk(pk_columns: { adoptante: \"" + solicitud_Adopcion.adoptante + "\", fecha_solicitud: \"" + solicitud_Adopcion.fecha_solicitud + "\", id_mascota: \"" + solicitud_Adopcion.id_mascota + "\", id_refugio: \"" + solicitud_Adopcion.id_refugio + "\"},  _set: {aprobacion: \"" + solicitud_Adopcion.aprobacion + "\"}) {adoptante}}",
+                    Query = "mutation MyMutation {update_solicitudes_adopcion_by_pk(pk_columns: { adoptante: \"" + solicitud_Adopcion.adoptante + "\", fecha_solicitud: \"" + solicitud_Adopcion.fecha_solicitud + "\", id_mascota: \"" + solicitud_Adopcion.id_mascota + "\", id_refugio: \"" + solicitud_Adopcion.id_refugio + "\"},  _set: {aprobacion: \"" + solicitud_Adopcion.aprobacion + "\", fecha_revision: \"" + dt.ToString("yyyy/MM/dd") + "\"}) {adoptante}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -1196,15 +1221,39 @@ namespace PetArmy.Services
             };
         }
 
-        public static async Task insertAdoptionRecord(Solicitud_Adopcion solicitud_Adopcion)
+        public static async Task insertAdoptionRecord(Solicitud_Adopcion solicitud_Adopcion, string fecha_inicial)
         {
 
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+                
                 var findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation {insert_registro_adopcion_one(object: { adoptante: \"" + solicitud_Adopcion.adoptante + "\", fecha: \"" + solicitud_Adopcion.fecha_solicitud + "\", id_mascota: \"" + solicitud_Adopcion.id_mascota + "\", id_refugio: \"" + solicitud_Adopcion.id_refugio + "\"}) {nro_orden}}",
+                    Query = "mutation MyMutation {insert_registro_adopcion_one(object: { adoptante: \"" + solicitud_Adopcion.adoptante + "\", fecha: \"" + fecha_inicial + "\", id_mascota: \"" + solicitud_Adopcion.id_mascota + "\", id_refugio: \"" + solicitud_Adopcion.id_refugio + "\"}) {nro_orden}}",
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                };
+
+                var foundResponse = await client.SendQueryAsync<Solicitud_AdopcionGraphQLResponse>(findRequest);
+            }
+            catch (Exception)
+            {
+                throw;
+            };
+        }
+
+        public static async Task claimPetRecord(Solicitud_Adopcion solicitud_Adopcion)
+        {
+
+            try
+            {
+                var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
+
+
+                var findRequest = new GraphQLHttpRequestWithHeaders
+                {
+                    Query = "mutation MyMutation {update_mascota_by_pk(pk_columns: { id_mascota: \"" + solicitud_Adopcion.id_mascota + "\"}, _set: { estado: \"" + false + "\"}) {nombre}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
@@ -1224,7 +1273,7 @@ namespace PetArmy.Services
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "mutation MyMutation {update_mascota_by_pk(pk_columns: { id_mascota: \"" + solicitud_Adopcion.adoptante + "\"}, _set: { estado: \"" + solicitud_Adopcion.aprobacion + "\"}) {nombre}}",
+                    Query = "mutation MyMutation {update_mascota_by_pk(pk_columns: { id_mascota: \"" + solicitud_Adopcion.id_mascota + "\"}, _set: { estado: \"" + solicitud_Adopcion.aprobacion + "\"}) {nombre}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 
