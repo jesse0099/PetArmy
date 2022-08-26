@@ -186,6 +186,26 @@ namespace PetArmy.Helpers
           }
         }";
 
+        public static string GetAdoptionRequest = @"query GetAdoptionRequests($uid: String!) {
+          solicitudes_adopcion(where: {_and: [{ aprobacion: {_eq: false}, 
+    																		        fecha_revision: {_eq: ""01/01/0001""},
+  																			        refugio: {administrador: {_eq: $uid}}}]}) {
+            adoptante
+            aprobacion
+            fecha_revision
+            fecha_solicitud
+            id_mascota
+            id_refugio
+            adoptanteInfo {
+              correo
+              nombre
+            }
+            mascota:mascotum {
+              nombre
+            }
+          }
+        }";
+
         public static string UpdatePetByPk = @"mutation UpdatePetByPK($alergias: Boolean!, $castrado: Boolean!, $discapacidad: Boolean!, $enfermedad: Boolean!, $vacunado: Boolean!, $estado: Boolean!, $descripcion: String!, $edad: numeric!, $id_refugio: Int!, $nombre: String!, $especie: String!, $raza: String!, $peso: numeric!, $id_mascota: Int!, $addedImages: [imagen_mascota_insert_input!]!, $updatedImages: [imagen_mascota_updates!]!, $deletedImages: [Int!]!) {
                               delete_imagen_mascota(where: {_and: [{id_mascota: {_eq: $id_mascota}}, {id_imagen: {_in: $deletedImages}}]}) {
                                 deleted_images: affected_rows

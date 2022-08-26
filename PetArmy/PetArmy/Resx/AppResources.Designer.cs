@@ -160,6 +160,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adoption Requests.
+        /// </summary>
+        public static string AdoptionRequests {
+            get {
+                return ResourceManager.GetString("AdoptionRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Age.
         /// </summary>
         public static string Age {
@@ -732,6 +741,15 @@ namespace Resx {
         public static string LogIn {
             get {
                 return ResourceManager.GetString("LogIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LogOut.
+        /// </summary>
+        public static string LogOut {
+            get {
+                return ResourceManager.GetString("LogOut", resourceCulture);
             }
         }
         

@@ -550,4 +550,10 @@
   <data name="SearchByName" xml:space="preserve">
     <value>Search By Name</value>
   </data>
+  <data name="AdoptionRequests" xml:space="preserve">
+    <value>Adoption Requests</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>LogOut</value>
+  </data>
 </root>

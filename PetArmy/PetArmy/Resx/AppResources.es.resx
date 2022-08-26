@@ -570,4 +570,10 @@
   <data name="SearchByName" xml:space="preserve">
     <value>Buscar Por Nombre</value>
   </data>
+  <data name="AdoptionRequests" xml:space="preserve">
+    <value>Solicitudes de Adopción</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Cerrar Sesión</value>
+  </data>
 </root>
