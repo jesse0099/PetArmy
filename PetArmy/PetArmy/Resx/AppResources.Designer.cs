@@ -142,6 +142,24 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Admin Account Requests.
+        /// </summary>
+        public static string AdminAccountRequests {
+            get {
+                return ResourceManager.GetString("AdminAccountRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adopted.
+        /// </summary>
+        public static string Adopted {
+            get {
+                return ResourceManager.GetString("Adopted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Age.
         /// </summary>
         public static string Age {
@@ -187,6 +205,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Available.
+        /// </summary>
+        public static string Available {
+            get {
+                return ResourceManager.GetString("Available", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bad Formatted Email. Ej: user@email.com.
         /// </summary>
         public static string BadFormattedEmail {
@@ -219,6 +246,15 @@ namespace Resx {
         public static string CampaignHelper {
             get {
                 return ResourceManager.GetString("CampaignHelper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Campaigns.
+        /// </summary>
+        public static string Campaigns {
+            get {
+                return ResourceManager.GetString("Campaigns", resourceCulture);
             }
         }
         
@@ -426,6 +462,15 @@ namespace Resx {
         public static string DeleteShelterBtnkey {
             get {
                 return ResourceManager.GetString("DeleteShelterBtnkey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Item?.
+        /// </summary>
+        public static string DeletionConfirm {
+            get {
+                return ResourceManager.GetString("DeletionConfirm", resourceCulture);
             }
         }
         
@@ -853,6 +898,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This action will permanently delete the next pet:.
+        /// </summary>
+        public static string PetDeletionBodyText {
+            get {
+                return ResourceManager.GetString("PetDeletionBodyText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pet.
         /// </summary>
         public static string PetKey {
@@ -867,6 +921,15 @@ namespace Resx {
         public static string PetsKey {
             get {
                 return ResourceManager.GetString("PetsKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pets Management.
+        /// </summary>
+        public static string PetsManagement {
+            get {
+                return ResourceManager.GetString("PetsManagement", resourceCulture);
             }
         }
         
@@ -1029,6 +1092,15 @@ namespace Resx {
         public static string SaveKey {
             get {
                 return ResourceManager.GetString("SaveKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By Name.
+        /// </summary>
+        public static string SearchByName {
+            get {
+                return ResourceManager.GetString("SearchByName", resourceCulture);
             }
         }
         
@@ -1254,6 +1326,15 @@ namespace Resx {
         public static string updateKey {
             get {
                 return ResourceManager.GetString("updateKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Profile.
+        /// </summary>
+        public static string UpdateProfile {
+            get {
+                return ResourceManager.GetString("UpdateProfile", resourceCulture);
             }
         }
         

@@ -68,7 +68,7 @@ namespace PetArmy.Droid
                     }
                 case Xamarin.Forms.OSAppTheme.Light:
                     {
-                        Xamarin.Forms.Application.Current.Resources.TryGetValue("LuckyPoint", out output);
+                        Xamarin.Forms.Application.Current.Resources.TryGetValue("Grad3", out output);
                         Window.SetStatusBarColor(Android.Graphics.Color.ParseColor(((Xamarin.Forms.Color)output).ToHex()));
                         break;
                     }

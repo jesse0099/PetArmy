@@ -77,20 +77,32 @@ namespace PetArmy.ViewModels
                     DeletePet(e as Mascota);
                 });
             }
-            
+
         }
 
         public ICommand ExpandImageView
         {
             get
             {
-                return new  Command((e) =>
+                return new Command((e) =>
                 {
-                    if(e != null)
+                    if (e != null)
                         (e as Mascota).IsImageViewExpanded = !(e as Mascota).IsImageViewExpanded;
                 });
             }
         }
+
+        public ICommand RefreshPetsView
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await getData();
+                });
+            }
+        }
+
 
         public string DefaultPetImage { get; set; }
 
@@ -116,6 +128,7 @@ namespace PetArmy.ViewModels
 
         public async Task getData()
         {
+            IsBusy = true;
             Mascotas = new BindingList<Mascota>(await MascotaService.getAllMascotas(Settings.UID) as List<Mascota>);
 
             //UI Settings  
@@ -138,18 +151,41 @@ namespace PetArmy.ViewModels
                 };
                 pet.Db_Bools = bool_values.Where(x => x.Bool_Value).ToList();
             }
+            IsBusy = false;
         }
 
-        public async void DeletePet(Mascota currPet)
+        public void DeletePet(Mascota currPet)
         {
             try
             {
-                await MascotaService.DeleteMascota(currPet.id_mascota, currPet.refugio.id_refugio);
-                await getData();
+                App.Current.Resources.TryGetValue("Locator", out object locator);
+
+                if (locator == null)
+                    return;
+
+
+                Action<int, int> delete_action = async (int id_mascota, int id_refugio) =>
+                {
+                    ((InstanceLocator)locator).Main.YesNoPopUp.IsBusy = true;
+                    await MascotaService.DeleteMascota(id_mascota, id_refugio);
+                    await getData();
+                    ((InstanceLocator)locator).Main.YesNoPopUp.IsBusy = false;
+                    ((InstanceLocator)locator).Main.YesNoPopUp.IsConfirmOpen = false;
+                };
+
+                ((InstanceLocator)locator).Main.YesNoPopUp.ConfirmCommand = new Command(() =>
+                {
+
+                    delete_action?.Invoke(currPet.id_mascota, currPet.id_refugio);
+                });
+
+                ((InstanceLocator)locator).Main.YesNoPopUp.IsConfirmOpen = true;
+                ((InstanceLocator)locator).Main.YesNoPopUp.HeaderTitle = AppResources.DeletionConfirm;
+                ((InstanceLocator)locator).Main.YesNoPopUp.BodyText = $@"{AppResources.PetDeletionBodyText} {currPet.nombre} - Id: {currPet.id_mascota}";
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw e;
             }
         }
         public async void openEditMascota(Mascota mascota)
@@ -160,7 +196,7 @@ namespace PetArmy.ViewModels
                 Application.Current.Resources.TryGetValue("Locator", out object locator);
                 ((InstanceLocator)locator).Main.EditMascota.CurrentPet = mascota;
                 ((InstanceLocator)locator).Main.EditMascota.ImagenesMascota = new BindingList<Imagen_Mascota>(mascota.imagenes_mascota as List<Imagen_Mascota>);
-                ((InstanceLocator)locator).Main.EditMascota.BDImages = new (mascota.imagenes_mascota as List<Imagen_Mascota>);
+                ((InstanceLocator)locator).Main.EditMascota.BDImages = new(mascota.imagenes_mascota as List<Imagen_Mascota>);
                 await Application.Current.MainPage.Navigation.PushAsync(new EditPetView());
                 IsBusy = false;
             }

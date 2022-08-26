@@ -14,7 +14,8 @@
              x:Name="campCastraPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              BackgroundColor="{AppThemeBinding Light=White, 
-                                               Dark={StaticResource LuckyPoint}}">
+                                               Dark={StaticResource LuckyPoint}}"
+             Title="{xct:Translate Campaigns}">
     <ContentPage.Content>
         <AbsoluteLayout AbsoluteLayout.LayoutBounds="1,1,1,.50"
                         AbsoluteLayout.LayoutFlags="All"
@@ -139,7 +140,7 @@
                                                                       Command="{Binding Edit_CampCastra}"
                                                                       CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
                                                                       CornerRadius="50"
-                                                                      TextColor="{StaticResource Liberty}">
+                                                                      TextColor="{StaticResource LuckyPoint}">
                                                         <buttons:SfButton.BackgroundGradient>
                                                             <gradient:SfLinearGradientBrush StartPoint="0,0"
                                                                                             EndPoint="1,1">

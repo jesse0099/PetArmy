@@ -1,15 +1,13 @@
-﻿using System;
+﻿using GraphQL.Client.Abstractions;
 using GraphQL.Client.Http;
+using GraphQL.Client.Serializer.Newtonsoft;
+using PetArmy.Helpers;
+using PetArmy.Models;
+using PetArmy.Models.GraphQL_Responses;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using GraphQL.Client.Abstractions;
-using PetArmy.Models.GraphQL_Responses;
 using System.Threading.Tasks;
-using PetArmy.Helpers;
-using GraphQL.Client.Serializer.Newtonsoft;
-using PetArmy.Models;
-using System.Text;
-using Newtonsoft.Json;
 
 namespace PetArmy.Services
 {

@@ -127,12 +127,14 @@
 
     <!--Mis Servicios Refugios - Casa cuna-->
     <FlyoutItem Title="{xct:Translate MyServicesKey}"
-                IsVisible="{Binding Login.Is_Admin}">
+                IsVisible="{Binding Login.Is_Admin}"
+                >
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.Warehouse}" Color="{StaticResource Primary}" />
         </FlyoutItem.Icon>
         <ShellContent Route="MyServicesView"
+                      Title="{xct:Translate MyServicesKey}"
                       ContentTemplate="{DataTemplate local:MyServicesView}"/>
     </FlyoutItem>
 

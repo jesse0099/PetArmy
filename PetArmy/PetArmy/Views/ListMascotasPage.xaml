@@ -3,131 +3,395 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:local="clr-namespace:PetArmy"
              xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
-             x:Class="PetArmy.Views.ListMascotasPage"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:sflistview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
+             xmlns:customcontrols="clr-namespace:PetArmy.CustomControls"
+             x:Class="PetArmy.Views.ListMascotasPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              BackgroundColor="{AppThemeBinding Light=White, 
-                                               Dark={StaticResource LuckyPoint}}">
+                                               Dark={StaticResource LuckyPoint}}"
+             Title="{xct:Translate PetsManagement}">
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding Mascotas}"
-                     x:Name="Wrapper">
-            <PopUps:ErrorPopUp IsOpen="{Binding OpenPopUp}" />
-            <Label Text="{xct:Translate PetKey}"
-                   FontSize="18"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center" />
+                     x:Name="Wrapper"
+                     VerticalOptions="FillAndExpand">
+            <AbsoluteLayout VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            AbsoluteLayout.LayoutBounds="1,1,1,0.5"
+                            AbsoluteLayout.LayoutFlags="All">
+                <!--Error View-->
+                <PopUps:ErrorPopUp IsOpen="{Binding OpenPopUp}" />
+                <!--List View-->
+                <pulltoRefresh:SfPullToRefresh VerticalOptions="FillAndExpand"
+                                               HorizontalOptions="FillAndExpand"
+                                               RefreshCommand="{Binding RefreshPetsView}"
+                                               IsRefreshing="{Binding IsBusy}"
+                                               ProgressBackgroundColor="Transparent"
+                                               ProgressStrokeColor="{StaticResource PurplePlum}"
+                                               TransitionMode="SlideOnTop">
 
-            <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
-                                           AnimationType="SingleCircle"
-                                           FontAttributes="Bold"
-                                           Title="Loading..."
-                                           TextColor="{StaticResource LuckyPoint}"
-                                           IsVisible="{Binding IsBusy}"
-                                           HorizontalOptions="Center"
-                                           VerticalOptions="Center" />
-            <StackLayout>
-                <ScrollView>
-                    <ListView x:Name="CartItemsView"
-                              SelectionMode="None"
-                              HasUnevenRows="True"
-                              BackgroundColor="Transparent"
-                              SeparatorVisibility="None"
-                              ItemsSource="{Binding Mascotas}">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <!--Images Carrousel Scroll-->
-                                    <StackLayout x:Name="Item">
-                                        <Label Text="{Binding nombre}" />
-                                        <ScrollView>
-                                            <StackLayout>
-                                                <Label        x:Name="Expander"
-                                                              Text="Expander">
-                                                    <Label.GestureRecognizers>
-                                                        <TapGestureRecognizer  Command="{Binding Source= {x:Reference Wrapper}, Path=BindingContext.ExpandImageView}"
-                                                                               CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                                                               NumberOfTapsRequired="1" />
-                                                    </Label.GestureRecognizers>
-                                                </Label>
-                                                <!--Images Carrousel-->
-                                                <CarouselView        ItemsSource="{Binding imagenes_mascota}"
-                                                                     IsVisible="{Binding IsImageViewExpanded}"
-                                                                     Margin="0"
-                                                                     BackgroundColor="Transparent"
-                                                                     HorizontalOptions="FillAndExpand"
-                                                                     IsScrollAnimated="True"
-                                                                     Loop="False"
-                                                                     IndicatorView="images_indicator_view"
-                                                                     HorizontalScrollBarVisibility="Always"
-                                                                     MinimumHeightRequest="350"
-                                                                     HeightRequest="350">
-                                                    <CarouselView.EmptyView>
-                                                        <Frame Margin="0"
-                                                               Padding="0"
-                                                               CornerRadius="20">
-                                                            <Image BindingContext="{Binding Source={x:Reference CartItemsView}, Path=BindingContext}"
-                                                                   Source="{Binding DefaultPetImage, Converter={StaticResource Base64ToImage}}"
-                                                                   Aspect="AspectFill"
-                                                                   HorizontalOptions="FillAndExpand" />
+                    <pulltoRefresh:SfPullToRefresh.PullableContent>
+                        <sflistview:SfListView x:Name="CartItemsView"
+                                               SelectionMode="None"
+                                               ItemsSource="{Binding Mascotas}"
+                                               IsStickyFooter="True"
+                                               IsStickyHeader="True"
+                                               AutoFitMode="DynamicHeight"
+                                               VerticalOptions="FillAndExpand"
+                                               RowSpacing="40">
+                            <!--Header Template-->
+                            <sflistview:SfListView.HeaderTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame Margin="10,1,10,10"
+                                               Padding="0"
+                                               BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}"
+                                               HasShadow="True"
+                                               CornerRadius="20"
+                                               HorizontalOptions="FillAndExpand"
+                                               HeightRequest="200">
+                                            <AbsoluteLayout VerticalOptions="FillAndExpand"
+                                                            HorizontalOptions="FillAndExpand"
+                                                            AbsoluteLayout.LayoutBounds="1,1,1,0.5">
+                                                <!--Busy indicator-->
+                                                <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
+                                                                               AnimationType="SingleCircle"
+                                                                               FontAttributes="Bold"
+                                                                               Title="{xct:Translate Loading}"
+                                                                               TextColor="{AppThemeBinding Light={StaticResource MiddlePurple}, Dark={StaticResource PurplePlum}}"
+                                                                               IsVisible="{Binding IsBusy}"
+                                                                               HorizontalOptions="Center"
+                                                                               VerticalOptions="Start"
+                                                                               AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                                               AbsoluteLayout.LayoutFlags="All" />
+                                                <!--Filtering-->
+                                                <StackLayout>
+                                                    <StackLayout Orientation="Horizontal"
+                                                                 HorizontalOptions="FillAndExpand"
+                                                                 Padding="10">
+                                                        <!--Filter buttons-->
+                                                        <buttons:SfButton HorizontalOptions="FillAndExpand"
+                                                                          Text="{xct:Translate Adopted}"
+                                                                          TextColor="{AppThemeBinding Light=LightGray, Dark=White}"
+                                                                          Style="{StaticResource SyncfusionButtons}"
+                                                                          BackgroundColor="{StaticResource CustomPink}"
+                                                                          FontAttributes="Bold"
+                                                                          CornerRadius="45"
+                                                                          HasShadow="True" />
+                                                        <buttons:SfButton HorizontalOptions="FillAndExpand"
+                                                                          CornerRadius="45"
+                                                                          HasShadow="True"
+                                                                          FontAttributes="Bold"
+                                                                          FontSize="Subtitle"
+                                                                          BackgroundColor="{StaticResource TealGreen}"
+                                                                          TextColor="{AppThemeBinding Light=LightGray, Dark=White}"
+                                                                          Text="{xct:Translate Available}" />
+
+                                                    </StackLayout>
+
+                                                    <!--Searching-->
+                                                    <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                                   ContainerType="None"
+                                                                                   HelperText="{xct:Translate SearchByName}"
+                                                                                   Margin="8,0,8,0"
+                                                                                   Padding="0"
+                                                                                   HorizontalOptions="FillAndExpand"
+                                                                                   ContainerBackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}">
+                                                        <!--search leading view-->
+                                                        <inputLayout:SfTextInputLayout.LeadingView>
+                                                            <Image Margin="0"
+                                                                   WidthRequest="22"
+                                                                   HeightRequest="30">
+                                                                <Image.Source>
+                                                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                                                     Glyph="{x:Static local:IconClass.Search}"
+                                                                                     Color="{AppThemeBinding Light=#555, Dark={StaticResource Grad6}}" />
+                                                                </Image.Source>
+                                                            </Image>
+                                                        </inputLayout:SfTextInputLayout.LeadingView>
+                                                        <!--search core view-->
+                                                        <Entry  Keyboard="Plain"
+                                                                Margin="10,0,2,0"
+                                                                HorizontalOptions="FillAndExpand"
+                                                                TextColor="{AppThemeBinding Light=#555, Dark=LightGray}">
+                                                        </Entry>
+                                                        <!--search trailing view-->
+                                                        <inputLayout:SfTextInputLayout.TrailingView>
+                                                            <buttons:SfButton BackgroundColor="Transparent"
+                                                                              Style="{StaticResource SyncfusionButtons}"
+                                                                              WidthRequest="22"
+                                                                              HeightRequest="30">
+                                                                <buttons:SfButton.Content>
+                                                                    <Image>
+                                                                        <Image.Source>
+                                                                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                                                             Glyph="{x:Static local:IconClass.Ban}"
+                                                                                             Color="{AppThemeBinding Light=#555, Dark={StaticResource Grad6}}" />
+                                                                        </Image.Source>
+                                                                    </Image>
+                                                                </buttons:SfButton.Content>
+                                                            </buttons:SfButton>
+                                                        </inputLayout:SfTextInputLayout.TrailingView>
+                                                    </inputLayout:SfTextInputLayout>
+                                                </StackLayout>
+                                            </AbsoluteLayout>
+
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </sflistview:SfListView.HeaderTemplate>
+                            <!--Item template-->
+                            <sflistview:SfListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <AbsoluteLayout AbsoluteLayout.LayoutBounds="1,1,1,0.5"
+                                                        AbsoluteLayout.LayoutFlags="All"
+                                                        VerticalOptions="Center">
+                                            <PopUps:YesNoPopUp />
+                                            <Frame Margin="10,1,10,30"
+                                                   Padding="0"
+                                                   BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}"
+                                                   HasShadow="True"
+                                                   CornerRadius="20"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                                   AbsoluteLayout.LayoutFlags="All">
+                                                <!--Images Carrousel Scroll-->
+                                                <StackLayout x:Name="Item"
+                                                             VerticalOptions="FillAndExpand"
+                                                             Padding="10">
+                                                    <!--Estado-->
+                                                    <StackLayout Orientation="Horizontal"
+                                                                 HorizontalOptions="FillAndExpand">
+                                                        <Frame Padding="0"
+                                                               CornerRadius="50"
+                                                               HasShadow="True">
+                                                            <StackLayout BackgroundColor="{Binding estado, Converter={StaticResource PetStatusColorConverter}}"
+                                                                         HorizontalOptions="Start"
+                                                                         WidthRequest="245" />
                                                         </Frame>
-                                                    </CarouselView.EmptyView>
-                                                    <CarouselView.ItemTemplate>
-                                                        <DataTemplate>
-                                                            <Frame Margin="0"
-                                                                   Padding="0"
-                                                                   CornerRadius="20"
-                                                                   HeightRequest="350"
-                                                                   MinimumHeightRequest="350"
-                                                                   WidthRequest="60">
-                                                                <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
-                                                                       Aspect="AspectFill"
-                                                                       VerticalOptions="FillAndExpand" />
-                                                            </Frame>
-                                                        </DataTemplate>
-                                                    </CarouselView.ItemTemplate>
-                                                </CarouselView>
-                                            </StackLayout>
-                                        </ScrollView>
-                                        <!--Indicator View Carrousel-->
-                                        <IndicatorView x:Name="images_indicator_view"
-                                                       BackgroundColor="Transparent"
-                                                       IndicatorsShape="Circle"
-                                                       IndicatorColor="{AppThemeBinding Light=#555, Dark=LightGray}"
-                                                       SelectedIndicatorColor="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}"
-                                                       HorizontalOptions="CenterAndExpand"
-                                                       Margin="3">
-                                        </IndicatorView>
+                                                        <Label Text="{Binding estado, Converter={StaticResource PetStatusStringConverter}}"
+                                                               HorizontalOptions="EndAndExpand"
+                                                               FontAttributes="Bold"
+                                                               FontSize="Medium"
+                                                               Margin="0,0,5,0"
+                                                               TextColor="{Binding estado, Converter={StaticResource PetStatusColorConverter}}" />
+                                                    </StackLayout>
 
+                                                    <!--Name-->
+                                                    <Label Text="{Binding nombre}"
+                                                           FontSize="Medium"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding  Light=#555, Dark=LightGray}" />
+                                                    <!--Age-->
+                                                    <inputLayout:SfTextInputLayout ContainerType="None"
+                                                                                   FocusedStrokeWidth="0"
+                                                                                   UnfocusedStrokeWidth="0"
+                                                                                   Margin="4,4,0,0"
+                                                                                   VerticalOptions="Center"
+                                                                                   HorizontalOptions="StartAndExpand"
+                                                                                   BackgroundColor="Transparent">
+                                                        <Label Text="{Binding edad, Converter={StaticResource YearToYearAndMonthsString}}"
+                                                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                               FontSize="18"
+                                                               Margin="0"
+                                                               VerticalOptions="Center"
+                                                               HorizontalOptions="StartAndExpand" />
+                                                        <!--Icono-->
+                                                        <inputLayout:SfTextInputLayout.LeadingView>
+                                                            <Image VerticalOptions="Start">
+                                                                <Image.Source>
+                                                                    <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                                                                     Glyph="{x:Static local:IconClass.CalendarTimes}"
+                                                                                     Color="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                                                </Image.Source>
+                                                            </Image>
+                                                        </inputLayout:SfTextInputLayout.LeadingView>
+                                                    </inputLayout:SfTextInputLayout>
+
+                                                    <Label        x:Name="Expander"
+                                                                  Text="{xct:Translate Details}"
+                                                                  TextColor="{AppThemeBinding  Light=#555, Dark=LightGray}"
+                                                                  FontSize="Subtitle"
+                                                                  FontAttributes="Bold"
+                                                                  xct:VisualFeedbackEffect.FeedbackColor="{StaticResource MiddlePurple}">
+                                                        <Label.GestureRecognizers>
+                                                            <TapGestureRecognizer  Command="{Binding Source= {x:Reference Wrapper}, Path=BindingContext.ExpandImageView}"
+                                                                                   CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                                                   NumberOfTapsRequired="1" />
+                                                        </Label.GestureRecognizers>
+                                                    </Label>
+                                                    <!--Images Carrousel-->
+                                                    <StackLayout xct:StateLayout.AnimateStateChanges="True"
+                                                                 IsVisible="{Binding IsImageViewExpanded}">
+                                                        <!--Weight-->
+                                                        <inputLayout:SfTextInputLayout ContainerType="None"
+                                                                                       FocusedStrokeWidth="0"
+                                                                                       UnfocusedStrokeWidth="0"
+                                                                                       Margin="4,0,0,0"
+                                                                                       VerticalOptions="Center"
+                                                                                       HorizontalOptions="StartAndExpand"
+                                                                                       BackgroundColor="Transparent">
+
+                                                            <Label Text="{Binding peso, Converter={StaticResource WeightFormatter}}"
+                                                                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                                   FontSize="18" />
+                                                            <!--Icono-->
+                                                            <inputLayout:SfTextInputLayout.LeadingView>
+                                                                <Image VerticalOptions="Start">
+                                                                    <Image.Source>
+                                                                        <FontImageSource FontFamily="{StaticResource  MaterialFontFamily}"
+                                                                                         Glyph="{x:Static local:IconClass.Weight}"
+                                                                                         Color="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                                                    </Image.Source>
+                                                                </Image>
+                                                            </inputLayout:SfTextInputLayout.LeadingView>
+                                                        </inputLayout:SfTextInputLayout>
+                                                        <!--Descrcipcion-->
+                                                        <inputLayout:SfTextInputLayout Style="{StaticResource SyncfusionEntries}"
+                                                                                       ContainerType="None"
+                                                                                       IsHintAlwaysFloated="True"
+                                                                                       Margin="15,5,15,0"
+                                                                                       Hint="{xct:Translate MoreAboutMe}"
+                                                                                       HorizontalOptions="FillAndExpand">
+                                                            <customcontrols:CustomLabel Text="{Binding descripcion}"
+                                                                                        TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                                                        FontSize="14"
+                                                                                        LineBreakMode="WordWrap"
+                                                                                        Padding="10"
+                                                                                        JustifyText="True" />
+                                                        </inputLayout:SfTextInputLayout>
+                                                        <CarouselView        ItemsSource="{Binding imagenes_mascota}"
+                                                                             IsVisible="{Binding IsImageViewExpanded}"
+                                                                             Margin="0"
+                                                                             BackgroundColor="Transparent"
+                                                                             HorizontalOptions="FillAndExpand"
+                                                                             IsScrollAnimated="True"
+                                                                             Loop="False"
+                                                                             IndicatorView="images_indicator_view"
+                                                                             HorizontalScrollBarVisibility="Always"
+                                                                             MinimumHeightRequest="350"
+                                                                             HeightRequest="350">
+                                                            <CarouselView.EmptyView>
+                                                                <Frame Margin="0"
+                                                                       Padding="0"
+                                                                       CornerRadius="20">
+                                                                    <Image BindingContext="{Binding Source={x:Reference CartItemsView}, Path=BindingContext}"
+                                                                           Source="{Binding DefaultPetImage, Converter={StaticResource Base64ToImage}}"
+                                                                           Aspect="AspectFill"
+                                                                           HorizontalOptions="FillAndExpand" />
+                                                                </Frame>
+                                                            </CarouselView.EmptyView>
+                                                            <CarouselView.ItemTemplate>
+                                                                <DataTemplate>
+                                                                    <Frame Margin="0"
+                                                                           Padding="0"
+                                                                           CornerRadius="20"
+                                                                           HeightRequest="350"
+                                                                           MinimumHeightRequest="350"
+                                                                           WidthRequest="60">
+                                                                        <Image Source="{Binding imagen, Converter={StaticResource Base64ToImage}}"
+                                                                               Aspect="AspectFill"
+                                                                               VerticalOptions="FillAndExpand" />
+                                                                    </Frame>
+                                                                </DataTemplate>
+                                                            </CarouselView.ItemTemplate>
+                                                        </CarouselView>
+                                                        <!--Indicator View Carrousel-->
+                                                        <IndicatorView x:Name="images_indicator_view"
+                                                                       BackgroundColor="Transparent"
+                                                                       IndicatorsShape="Circle"
+                                                                       IndicatorColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                                       SelectedIndicatorColor="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}"
+                                                                       HorizontalOptions="CenterAndExpand"
+                                                                       Margin="3">
+                                                        </IndicatorView>
+                                                    </StackLayout>
+                                                    <!--Buttons-->
+                                                    <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
+                                                                       Command="{Binding  EditMascota}"
+                                                                       CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                                       Text="{xct:Translate EditPetKey}"
+                                                                       FontAttributes="Bold"
+                                                                       HorizontalTextAlignment="Center"
+                                                                       HorizontalOptions="FillAndExpand"
+                                                                       ShowIcon="True"
+                                                                       Style="{StaticResource SyncfusionButtons}"
+                                                                       Margin="4"
+                                                                       CornerRadius="50"
+                                                                       BackgroundColor="{StaticResource CustomYellow}"
+                                                                       TextColor="{StaticResource LuckyPoint}">
+                                                        <buttons:SfButton.ImageSource>
+                                                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                                             Glyph="{x:Static local:IconClass.Pen}"
+                                                                             Color="{StaticResource Liberty}" />
+                                                        </buttons:SfButton.ImageSource>
+                                                    </buttons:SfButton>
+                                                    <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
+                                                                       BackgroundColor="{StaticResource CustomPink}"
+                                                                       CornerRadius="50"
+                                                                       Command="{Binding  DeletePetCommand}"
+                                                                       CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                                                       Text="{xct:Translate DeleteKey}"
+                                                                       TextColor="{AppThemeBinding Light=LightGray, Dark=White}"
+                                                                       FontAttributes="Bold"
+                                                                       HorizontalTextAlignment="Center"
+                                                                       HorizontalOptions="FillAndExpand"
+                                                                       ShowIcon="True"
+                                                                       Style="{StaticResource SyncfusionButtons}"
+                                                                       Margin="4">
+                                                        <buttons:SfButton.ImageSource>
+                                                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                                             Glyph="{x:Static local:IconClass.Trash}" />
+                                                        </buttons:SfButton.ImageSource>
+                                                    </buttons:SfButton>
+                                                </StackLayout>
+                                            </Frame>
+                                        </AbsoluteLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </sflistview:SfListView.ItemTemplate>
+                            <!--Footer-->
+                            <sflistview:SfListView.FooterTemplate>
+                                <DataTemplate>
+                                    <ContentView>
                                         <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
-                                                           Command="{Binding  EditMascota}"
-                                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                                           Text="{xct:Translate EditPetKey}"
+                                                           Command="{Binding NewMascota}"
                                                            FontAttributes="Bold"
                                                            HorizontalTextAlignment="Center"
-                                                           HorizontalOptions="FillAndExpand"
+                                                           HorizontalOptions="Center"
                                                            ShowIcon="True"
+                                                           BackgroundColor="{StaticResource TealGreen}"
+                                                           Margin="4"
                                                            Style="{StaticResource SyncfusionButtons}"
-                                                           Margin="4">
+                                                           CornerRadius="40"
+                                                           HeightRequest="70"
+                                                           WidthRequest="70"
+                                                           HasShadow="True">
+                                            <buttons:SfButton.Content>
+                                                <Image HeightRequest="40"
+                                                       WidthRequest="40"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center">
+                                                    <Image.Source>
+                                                        <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                                         Glyph="{x:Static local:IconClass.Plus}"
+                                                                         Color="{AppThemeBinding Light=LightGray, Dark=White}" />
+                                                    </Image.Source>
+                                                </Image>
+                                            </buttons:SfButton.Content>
                                         </buttons:SfButton>
-                                        <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
-                                                           Command="{Binding  DeletePetCommand}"
-                                                           CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                                           Text="{xct:Translate DeleteKey}"
-                                                           FontAttributes="Bold"
-                                                           HorizontalTextAlignment="Center"
-                                                           HorizontalOptions="FillAndExpand"
-                                                           ShowIcon="True"
-                                                           Style="{StaticResource SyncfusionButtons}"
-                                                           Margin="4">
-                                        </buttons:SfButton>
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </ScrollView>
-            </StackLayout>
+                                    </ContentView>
+                                </DataTemplate>
+                            </sflistview:SfListView.FooterTemplate>
+                        </sflistview:SfListView>
+                    </pulltoRefresh:SfPullToRefresh.PullableContent>
+                </pulltoRefresh:SfPullToRefresh>
+            </AbsoluteLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

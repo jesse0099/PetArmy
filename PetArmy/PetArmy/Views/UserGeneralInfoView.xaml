@@ -9,7 +9,6 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              BackgroundColor="{AppThemeBinding Light=White, 
                                                Dark={StaticResource LuckyPoint}}">
-
     <StackLayout  BindingContext="{Binding UserProfile}">
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
               ColumnDefinitions="*,*,*"
@@ -96,7 +95,7 @@
                                        VerticalOptions="End"
                                        Style="{StaticResource SyncfusionButtons}"
                                        CornerRadius="50"
-                                       TextColor="{StaticResource Liberty}">
+                                       TextColor="{StaticResource LuckyPoint}">
                 <buttons:SfButton.BackgroundGradient>
                     <gradient:SfLinearGradientBrush StartPoint="0,0"
                                                     EndPoint="1,1">
@@ -112,7 +111,7 @@
                 </buttons:SfButton.BackgroundGradient>
                 <buttons:SfButton.ImageSource>
                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{x:Static local:IconClass.PencilAlt}"
+                                     Glyph="{x:Static local:IconClass.Pen}"
                                      Color="{StaticResource Liberty}" />
                 </buttons:SfButton.ImageSource>
             </buttons:SfButton>

@@ -14,7 +14,8 @@
              x:Class="PetArmy.Views.AdminLandingPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              BackgroundColor="{AppThemeBinding Light=White, 
-                                               Dark={StaticResource LuckyPoint}}">
+                                               Dark={StaticResource LuckyPoint}}"
+             Title="{xct:Translate AdminAccountRequests}">
     <ContentPage.Content>
         <StackLayout>
             <PopUps:ErrorPopUp BindingContext="{Binding Admin}" />

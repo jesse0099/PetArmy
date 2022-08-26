@@ -5,12 +5,18 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-            x:Class="PetArmy.Views.FeedTabeedView">
+            x:Class="PetArmy.Views.FeedTabeedView"
+            BackgroundColor="{AppThemeBinding Light={StaticResource Grad3}, Dark={StaticResource JacksonPurple}}"
+            SelectedTabColor="{AppThemeBinding Dark={StaticResource Grad6}, Light={StaticResource Grad1}}"
+            UnselectedTabColor="{AppThemeBinding Dark={StaticResource LuckyPoint}, Light={StaticResource Grad6                                                                                       }}"
+            NavigationPage.HasNavigationBar="False"
+            >
     <!--Pages can be added as references or inline-->
     <local_views:UserGeneralInfoView  Title="{xct:Translate ProfileKey}"
                                       IconImageSource="PetsArmy.png" />
     
-    <local_views:FeedContentView IconImageSource="PetsArmy.png" />
+    <local_views:FeedContentView IconImageSource="PetsArmy.png"
+                                 Title="{xct:Translate MyFeedKey}"/>
 
     <local_views:UserPreferencesView  IconImageSource="PetsArmy.png"
                                       Title="{xct:Translate Preferences}" />

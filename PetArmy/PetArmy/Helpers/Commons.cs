@@ -25,7 +25,7 @@ namespace PetArmy.Helpers
         public const string GetNearPetsByTagsQuery = @"query near_pets_by_tags($distance: Float!, $from: geography!, $tags: [String]) {
         near_pets_by_tags: mascota(where: {_and: [{mascota_tags: {tag: {nombre_tag: {_in: $tags}}}}, 
                                                   {refugio: {ubicaciones_refugios: {g_location: {_st_d_within: {distance: $distance, from: $from}}}}}, 
-                                                  {estado: {_eq: true}}]}) {
+                                                  {estado: {_eq: false}}]}) {
                                             id_mascota
                                             nombre
                                             especie

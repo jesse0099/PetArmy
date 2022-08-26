@@ -64,16 +64,21 @@
                                              VerticalOptions="FillAndExpand">
                                     <StackLayout VerticalOptions="FillAndExpand">
                                         <!--Body Text-->
-                                        <inputLayout:SfTextInputLayout  HelperText="Joseph"
-                                                                        HorizontalOptions="FillAndExpand"
+                                        <inputLayout:SfTextInputLayout  HorizontalOptions="FillAndExpand"
+                                                                        VerticalOptions="FillAndExpand"
                                                                         InputViewPadding="5"
                                                                         IsHintAlwaysFloated="True"
                                                                         Hint="{xct:Translate Message}"
-                                                                        ContainerType="{AppThemeBinding Light=Filled, Dark=Outlined}"
-                                                                        Style="{StaticResource SyncfusionEntries}">
-                                            <customcontrols:CustomLabel x:Name="first_name"
-                                                                        Text="{Binding BodyText}"
-                                                                        TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                                                        ContainerType="None"
+                                                                        Style="{StaticResource SyncfusionEntries}"
+                                                                        >
+                                            <customcontrols:CustomLabel Text="{Binding BodyText}"
+                                                                        TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                                                        FontSize="14"
+                                                                        LineBreakMode="WordWrap"
+                                                                        Padding="10"
+                                                                        Margin="10"
+                                                                        JustifyText="True" />
                                         </inputLayout:SfTextInputLayout>
                                         <!--Buttons-->
                                         <StackLayout Orientation="Horizontal"
@@ -93,7 +98,7 @@
                                                               Command="{Binding CancelCommand}">
                                                 <buttons:SfButton.ImageSource>
                                                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                                                     Glyph="{x:Static local:IconClass.Stop}"
+                                                                     Glyph="{x:Static local:IconClass.Ban}"
                                                                      Color="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}" />
                                                 </buttons:SfButton.ImageSource>
                                             </buttons:SfButton>

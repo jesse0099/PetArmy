@@ -543,4 +543,31 @@
   <data name="ProfileKey" xml:space="preserve">
     <value>Perfil</value>
   </data>
+  <data name="UpdateProfile" xml:space="preserve">
+    <value>Actualización Del Perfil</value>
+  </data>
+  <data name="Adopted" xml:space="preserve">
+    <value>Adoptado</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Disponible</value>
+  </data>
+  <data name="PetsManagement" xml:space="preserve">
+    <value>Administración de Mascotas</value>
+  </data>
+  <data name="DeletionConfirm" xml:space="preserve">
+    <value>Eliminar Registro?</value>
+  </data>
+  <data name="PetDeletionBodyText" xml:space="preserve">
+    <value>Esta acción eliminará permanentemente la siguiente mascota:</value>
+  </data>
+  <data name="AdminAccountRequests" xml:space="preserve">
+    <value>Solicitudes de Cuenta de Administrador</value>
+  </data>
+  <data name="Campaigns" xml:space="preserve">
+    <value>Campañas</value>
+  </data>
+  <data name="SearchByName" xml:space="preserve">
+    <value>Buscar Por Nombre</value>
+  </data>
 </root>

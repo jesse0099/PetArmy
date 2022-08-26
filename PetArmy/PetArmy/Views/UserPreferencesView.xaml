@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="PetArmy.Views.UserPreferencesView"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource LuckyPoint}}">
     <StackLayout BindingContext="{Binding UserProfile}">
         <ListView ItemsSource="{Binding MyPreferences}" BackgroundColor="Transparent" SeparatorColor="Transparent">
             <ListView.ItemTemplate>

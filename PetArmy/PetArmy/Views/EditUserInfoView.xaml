@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:PetArmy"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              x:Class="PetArmy.Views.EditUserInfoView"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource LuckyPoint}}"
+             Title="{xct:Translate UpdateProfile}">
     <StackLayout BindingContext="{Binding UserProfile}">
      <PopUps:ErrorPopUp />
         <ScrollView>
@@ -65,7 +71,10 @@
 
 
                     <!--Edad-->
-                    <Label x:Name="firstNumeric"    Text="{xct:Translate userAgeKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <Label x:Name="firstNumeric"
+                           Text="{xct:Translate userAgeKey}"
+                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                           HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
                     <inputLayout:SfTextInputLayout  Hint="{xct:Translate cantKey}"
                                                     x:Name="AgeContainer"
                                                     InputViewPadding="5"
@@ -79,19 +88,25 @@
                     </inputLayout:SfTextInputLayout>
 
                     <!--Cantón-->
-                    <Label x:Name="cantonlbl" Text="{xct:Translate cantonLbl}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <Label x:Name="cantonlbl"
+                           Text="{xct:Translate cantonLbl}"
+                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                           HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
                     <Picker ItemsSource="{Binding Cantones}" SelectedItem="{Binding Canton, Mode=TwoWay}" />
 
                     <!--Imagen-->
-                    <Label x:Name="Imagenlbl2" Text="{xct:Translate SelectImagesKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <Label x:Name="Imagenlbl2"
+                           Text="{xct:Translate SelectImagesKey}"
+                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                           HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
                     <buttons:SfButton  Command="{Binding PickImage}"
                                        Text="{xct:Translate SearchImageKey}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
-                                       HorizontalOptions="Center"
+                                       HorizontalOptions="FillAndExpand"
                                        ShowIcon="True"
                                        BackgroundColor="#6611EB"
-                                       WidthRequest="280"
+                                       CornerRadius="50"
                                        Style="{StaticResource SyncfusionButtons}">
                         <buttons:SfButton.ImageSource>
                             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
@@ -100,23 +115,40 @@
                     </buttons:SfButton>
 
                     <!--Update-->
-                    <Label x:Name="Imagenlbl" Text="{xct:Translate UpdateUserInfoKey}"  HorizontalOptions="Start"  HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <Label x:Name="Imagenlbl" Text="{xct:Translate UpdateUserInfoKey}"  
+                           HorizontalOptions="Start" 
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Start"
+                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"/>
                     <buttons:SfButton  Command="{Binding EditInfo}"
                                        Text="{xct:Translate updateKey}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
-                                       HorizontalOptions="Center"
+                                       HorizontalOptions="FillAndExpand"
                                        ShowIcon="True"
-                                       BackgroundColor="#D7A81E"
-                                       WidthRequest="280"
+                                       BackgroundColor="{AppThemeBinding Light={StaticResource CustomYellow}, Dark={StaticResource CustomYellow}}"
+                                       TextColor="{StaticResource Liberty}"
+                                       CornerRadius="50"
                                        Style="{StaticResource SyncfusionButtons}">
+                        <buttons:SfButton.BackgroundGradient>
+                            <gradient:SfLinearGradientBrush StartPoint="0,0"
+                                                            EndPoint="1,1">
+                                <gradient:SfLinearGradientBrush.GradientStops>
+                                    <gradient:SfGradientStop Color="{StaticResource CustomYellow}"
+                                                             Offset="0.0" />
+                                    <gradient:SfGradientStop Color="{StaticResource CustomYellow2}"
+                                                             Offset="0.5" />
+                                    <gradient:SfGradientStop Color="{StaticResource CustomYellow}"
+                                                             Offset="1.0" />
+                                </gradient:SfLinearGradientBrush.GradientStops>
+                            </gradient:SfLinearGradientBrush>
+                        </buttons:SfButton.BackgroundGradient>
                         <buttons:SfButton.ImageSource>
                             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                             Glyph="{x:Static local:IconClass.Pen}" />
+                                             Glyph="{x:Static local:IconClass.Pen}"
+                                             Color="{StaticResource Liberty}" />
                         </buttons:SfButton.ImageSource>
                     </buttons:SfButton>
-
-
                 </StackLayout>
             </StackLayout>
         </ScrollView>
