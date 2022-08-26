@@ -8,7 +8,10 @@
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:local="clr-namespace:PetArmy"
              x:Class="PetArmy.Views.EditPetView"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}"
+             Title="{xct:Translate EditPetTitle}">
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding EditMascota}"
                      x:Name="Wrapper">
@@ -191,60 +194,72 @@
                                    TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                         </inputLayout:SfTextInputLayout>
 
-
-                        <!--Castrado-->
-                        <Label Text="{xct:Translate CastratedKey}"
-                               FontSize="18"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Center"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
-                        <syncfusion:SfSwitch x:Name="PetContainerCastrado"
-                                             IsOn="{Binding CurrentPet.castrado, Mode=TwoWay}" />
-
-                        <!--Vacuando-->
-                        <Label Text="{xct:Translate VaxxedKey}"
-                               FontSize="18"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Center"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
-                        <syncfusion:SfSwitch x:Name="PetContainerVacuando"
-                                             IsOn="{Binding CurrentPet.vacunado, Mode=TwoWay}" />
-
-                        <!--Estado-->
-                        <Label Text="{xct:Translate StatusKey}"
-                               FontSize="18"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Center"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
-                        <syncfusion:SfSwitch x:Name="PetContainerEstado"
-                                             IsOn="{Binding CurrentPet.estado, Mode=TwoWay}" />
-
-                        <!--Discapacidad-->
-
-                        <Label Text="{xct:Translate HandicapedKey}"
-                               FontSize="18"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Center"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
-                        <syncfusion:SfSwitch x:Name="PetContainerDiscapacidad"
-                                             IsOn="{Binding CurrentPet.discapacidad, Mode=TwoWay}" />
-                        <!--Enfermedad-->
-
-                        <Label Text="{xct:Translate SickKey}"
-                               FontSize="18"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Center"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
-                        <syncfusion:SfSwitch x:Name="PetContainerEnfermedad"
-                                             IsOn="{Binding CurrentPet.enfermedad, Mode=TwoWay}" />
-                        <!--Alergias-->
-                        <Label Text="{xct:Translate AlergiesKey}"
-                               FontSize="18"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Center"
-                               TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
-                        <syncfusion:SfSwitch x:Name="PetContainerAlergias"
-                                             IsOn="{Binding CurrentPet.alergias, Mode=TwoWay}" />
+                        <FlexLayout  Wrap="Wrap"
+                                     Padding="0"
+                                     JustifyContent="SpaceAround"
+                                     HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand">
+                            <StackLayout Orientation="Horizontal">
+                                <!--Castrado-->
+                                <Label Text="{xct:Translate CastratedKey}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <syncfusion:SfSwitch x:Name="PetContainerCastrado"
+                                                     IsOn="{Binding CurrentPet.castrado, Mode=TwoWay}" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <!--Vacuando-->
+                                <Label Text="{xct:Translate VaxxedKey}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <syncfusion:SfSwitch x:Name="PetContainerVacuando"
+                                                     IsOn="{Binding CurrentPet.vacunado, Mode=TwoWay}" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <!--Estado-->
+                                <Label Text="{xct:Translate StatusKey}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <syncfusion:SfSwitch x:Name="PetContainerEstado"
+                                                     IsOn="{Binding CurrentPet.estado, Mode=TwoWay}" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <!--Discapacidad-->
+                                <Label Text="{xct:Translate HandicapedKey}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <syncfusion:SfSwitch x:Name="PetContainerDiscapacidad"
+                                                     IsOn="{Binding CurrentPet.discapacidad, Mode=TwoWay}" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <!--Enfermedad-->
+                                <Label Text="{xct:Translate SickKey}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <syncfusion:SfSwitch x:Name="PetContainerEnfermedad"
+                                                     IsOn="{Binding CurrentPet.enfermedad, Mode=TwoWay}" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <!--Alergias-->
+                                <Label Text="{xct:Translate AlergiesKey}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <syncfusion:SfSwitch x:Name="PetContainerAlergias"
+                                                     IsOn="{Binding CurrentPet.alergias, Mode=TwoWay}" />
+                            </StackLayout>
+                        </FlexLayout>
 
                         <!--Botones-->
                         <buttons:SfButton  BindingContext="{Binding Source={x:Reference Wrapper}, Path=BindingContext}"
@@ -255,7 +270,12 @@
                                            HorizontalTextAlignment="Center"
                                            HorizontalOptions="FillAndExpand"
                                            ShowIcon="True"
+                                           CornerRadius="50"
                                            Style="{StaticResource SyncfusionButtons}">
+                            <buttons:SfButton.ImageSource>
+                                <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                                 Glyph="{x:Static local:IconClass.Save}"/>
+                            </buttons:SfButton.ImageSource>
                         </buttons:SfButton>
 
                     </StackLayout>

@@ -10,6 +10,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.CommunityToolkit.Extensions;
+using Xamarin.CommunityToolkit.UI.Views;
 using Xamarin.Forms;
 
 namespace PetArmy.ViewModels
@@ -118,7 +120,7 @@ namespace PetArmy.ViewModels
         {
             try
             {
-                await Application.Current.MainPage.Navigation.PushAsync(new AddMascotaView());
+                await Shell.Current.GoToAsync("/AddMascotaView");
             }
             catch (System.Exception e)
             {

@@ -209,14 +209,9 @@ namespace PetArmy.ViewModels
                 pet.discapacidad = Discapacidad;
                 pet.enfermedad = Enfermedad;
                 pet.alergias = Alergias;
-                //Save Pet Image Here!! plenty of work here
-                //my image = PickImage 
-                //this should be a list
-                //await MascotaService.addPetImages();
 
                 await MascotaService.addMascota(pet);
-                await App.Current.MainPage.DisplayAlert("Success", "Pet Saved!", "Ok");
-                Application.Current.MainPage = new NavigationPage(new MascotaView());
+                await Shell.Current.GoToAsync("//ListMascotasPage");
             }
             catch
             {

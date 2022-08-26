@@ -3,36 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:PetArmy"
-             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps" xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:PopUps="clr-namespace:PetArmy.Views.PopUps"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              x:Class="PetArmy.Views.MyServicesView"
              x:Name="myServicesPage"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light=White, 
+                                               Dark={StaticResource LuckyPoint}}">
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding MyService}">
-         <PopUps:ErrorPopUp />
-            <Label Text="{xct:Translate MyServicesKey}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <PopUps:ErrorPopUp />
+            <Label Text="{xct:Translate MyServicesKey}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
             <busyindicator:SfBusyIndicator IsBusy="{Binding IsBusy}"
-                                               AnimationType="SingleCircle"
-                                               FontAttributes="Bold"
-                                               Title="Loading..."
-                                               TextColor="{StaticResource LuckyPoint}"
-                                               IsVisible="{Binding IsBusy}"
-                                               HorizontalOptions="Center"
-                                               VerticalOptions="Center" />
+                                           AnimationType="SingleCircle"
+                                           FontAttributes="Bold"
+                                           Title="Loading..."
+                                           TextColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                                           IsVisible="{Binding IsBusy}"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" />
             <StackLayout>
                 <ScrollView>
                     <ListView x:Name="CartItemsView"
                               BackgroundColor="Transparent"
-                               SeparatorVisibility="None"
-                               ItemsSource="{Binding CustomList}">
+                              SeparatorVisibility="Default"
+                              ItemsSource="{Binding CustomList}"
+                              Margin="15"
+                              SeparatorColor="{AppThemeBinding Light=#555, Dark=LightGray}"
+                              RowHeight="90">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ImageCell TextColor="#9b9b9b"
-                                   Text="{Binding refugio.nombre}"
-                                   Detail="{Binding refugio.direccion}"
-                                   ImageSource="{Binding Image, Converter={xct:ByteArrayToImageSourceConverter}}"
-                                   Command="{Binding Path= BindingContext.MyService.EditShelter, Source={x:Reference myServicesPage}}"
-                                   CommandParameter="{Binding refugio.id_refugio}"/>
+                                           Text="{Binding refugio.nombre}"
+                                           Detail="{Binding refugio.direccion}"
+                                           ImageSource="{Binding Image, Converter={xct:ByteArrayToImageSourceConverter}}"
+                                           Command="{Binding Path= BindingContext.MyService.EditShelter, Source={x:Reference myServicesPage}}"
+                                           CommandParameter="{Binding refugio.id_refugio}" />
 
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -40,51 +51,55 @@
                 </ScrollView>
             </StackLayout>
 
-            <StackLayout  Padding="40" Spacing="20">
-                
+            <StackLayout  Padding="40"
+                          Spacing="20">
+
                 <buttons:SfButton  Command="{Binding NewShelter}"
-                                       Text="{xct:Translate AddShelterKey}"
-                                       FontAttributes="Bold"
-                                       HorizontalTextAlignment="Center"
-                                       HorizontalOptions="FillAndExpand"
-                                       ShowIcon="True"
-                                       BackgroundColor="#3b5998"
-                                       Style="{StaticResource SyncfusionButtons}">
-                <buttons:SfButton.ImageSource>
-                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{x:Static local:IconClass.Warehouse}" />
-                </buttons:SfButton.ImageSource>
-            </buttons:SfButton>
+                                   Text="{xct:Translate AddShelterKey}"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   ShowIcon="True"
+                                   CornerRadius="50"
+                                   BackgroundColor="#3b5998"
+                                   Style="{StaticResource SyncfusionButtons}">
+                    <buttons:SfButton.ImageSource>
+                        <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                         Glyph="{x:Static local:IconClass.Warehouse}" />
+                    </buttons:SfButton.ImageSource>
+                </buttons:SfButton>
 
 
                 <buttons:SfButton  Command="{Binding NewCCService}"
-                                       Text="{xct:Translate ccServiceBtn}"
-                                       FontAttributes="Bold"
-                                       HorizontalTextAlignment="Center"
-                                       HorizontalOptions="FillAndExpand"
-                                       ShowIcon="True"
-                                       BackgroundColor="#3b5998"
-                                       Style="{StaticResource SyncfusionButtons}">
-                <buttons:SfButton.ImageSource>
-                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{x:Static local:IconClass.HandHoldingHeart}" />
-                </buttons:SfButton.ImageSource>
-            </buttons:SfButton>
-
-                <buttons:SfButton  Command="{Binding Mascotas}"
-                                       Text="{xct:Translate PetKey}"
-                                       FontAttributes="Bold"
-                                       HorizontalTextAlignment="Center"
-                                       HorizontalOptions="FillAndExpand"
-                                       ShowIcon="True"
-                                       BackgroundColor="#3b5998"
-                                       Style="{StaticResource SyncfusionButtons}">
+                                   Text="{xct:Translate ccServiceBtn}"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   ShowIcon="True"
+                                   CornerRadius="50"
+                                   BackgroundColor="#3b5998"
+                                   Style="{StaticResource SyncfusionButtons}">
                     <buttons:SfButton.ImageSource>
                         <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{x:Static local:IconClass.Dog}" />
+                                         Glyph="{x:Static local:IconClass.HandHoldingHeart}" />
                     </buttons:SfButton.ImageSource>
                 </buttons:SfButton>
-                
+
+                <!--<buttons:SfButton  Command="{Binding Mascotas}"
+                                   Text="{xct:Translate PetKey}"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   ShowIcon="True"
+                                   CornerRadius="50"
+                                   BackgroundColor="#3b5998"
+                                   Style="{StaticResource SyncfusionButtons}">
+                    <buttons:SfButton.ImageSource>
+                        <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                         Glyph="{x:Static local:IconClass.Dog}" />
+                    </buttons:SfButton.ImageSource>
+                </buttons:SfButton>-->
+
 
 
             </StackLayout>

@@ -576,4 +576,16 @@
   <data name="LogOut" xml:space="preserve">
     <value>Cerrar Sesión</value>
   </data>
+  <data name="errorEmptyValues" xml:space="preserve">
+    <value>Todos los campos son requeridos</value>
+  </data>
+  <data name="deleteShelterConfirnmation" xml:space="preserve">
+    <value>¿Eliminar refugio?</value>
+  </data>
+  <data name="AddNewPet" xml:space="preserve">
+    <value>Agregar Mascota</value>
+  </data>
+  <data name="EditPetTitle" xml:space="preserve">
+    <value>Editando Mascota</value>
+  </data>
 </root>

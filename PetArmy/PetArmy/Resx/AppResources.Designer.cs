@@ -133,6 +133,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Pet.
+        /// </summary>
+        public static string AddNewPet {
+            get {
+                return ResourceManager.GetString("AddNewPet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add animal shelter service .
         /// </summary>
         public static string AddShelterKey {
@@ -475,6 +484,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete shelter?.
+        /// </summary>
+        public static string deleteShelterConfirnmation {
+            get {
+                return ResourceManager.GetString("deleteShelterConfirnmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Item?.
         /// </summary>
         public static string DeletionConfirm {
@@ -574,6 +592,15 @@ namespace Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Editing Pet.
+        /// </summary>
+        public static string EditPetTitle {
+            get {
+                return ResourceManager.GetString("EditPetTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit your Shelter.
         /// </summary>
         public static string EditShelterKey {
@@ -651,6 +678,15 @@ namespace Resx {
         public static string English {
             get {
                 return ResourceManager.GetString("English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Fields Are Required.
+        /// </summary>
+        public static string errorEmptyValues {
+            get {
+                return ResourceManager.GetString("errorEmptyValues", resourceCulture);
             }
         }
         

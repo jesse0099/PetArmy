@@ -1,18 +1,21 @@
 ﻿using PetArmy.Helpers;
-using PetArmy.Interfaces;
-using PetArmy.Models;
 using PetArmy.Services;
+using PetArmy.Interfaces;
+using System.Collections.ObjectModel;
 using Plugin.Geolocator;
+using System.Threading.Tasks;
 using Plugin.Geolocator.Abstractions;
+using System.Diagnostics;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.IO;
-using System.Threading.Tasks;
+using PetArmy.Views;
+using PetArmy.Infraestructure;
+using Resx;
+using PetArmy.Models;
+using System.Collections.Generic;
 using System.Windows.Input;
+using System;
 using Xamarin.Forms;
 
 namespace PetArmy.ViewModels
@@ -57,7 +60,7 @@ namespace PetArmy.ViewModels
 
         public void initClass()
         {
-            
+
         }
 
         #endregion
@@ -202,7 +205,7 @@ namespace PetArmy.ViewModels
         public Position MyPosition
         {
             get { return myPosition; }
-            set { myPosition = value; OnPropertyChanged();}
+            set { myPosition = value; OnPropertyChanged(); }
         }
 
 
@@ -231,9 +234,9 @@ namespace PetArmy.ViewModels
 
         public IList<string> Cantones
         {
-            
-           get { return new List<string> { "San José", "Cartago", "Heredia", "Alajuela", "Puntarenas", "Limón", "Guanacaste" }; }
-           
+
+            get { return new List<string> { "San José", "Cartago", "Heredia", "Alajuela", "Puntarenas", "Limón", "Guanacaste" }; }
+
         }
 
         private string canton;
@@ -261,20 +264,20 @@ namespace PetArmy.ViewModels
                 IFirebaseAuth _i_auth = DependencyService.Get<IFirebaseAuth>(); ;
                 var registered_user = _i_auth.GetSignedUserProfile();
                 Settings.UID = registered_user.Uid;
-                Usuario curUser = new Usuario(Settings.UID,2);
+                Usuario curUser = new Usuario(Settings.UID, 2);
 
                 if (!checkForEmpyValues())
                 {
                     Refugio newShelter = new Refugio();
                     newShelter.administrador = registered_user.Uid;
-                    newShelter.id_refugio = await generateShelterID() ;
+                    newShelter.id_refugio = await generateShelterID();
                     newShelter.nombre = shelterName;
                     newShelter.correo = shelterEmail;
                     newShelter.telefono = shelterNumber;
                     newShelter.capacidad = Int32.Parse(quantSpace);
                     newShelter.direccion = shelterDir;
                     newShelter.activo = false;
-                    bool chk = await GraphQLService.createShelter(newShelter,curUser).ConfigureAwait(false);
+                    bool chk = await GraphQLService.createShelter(newShelter, curUser).ConfigureAwait(false);
                     if (imageSelected)
                     {
                         SelectedImage.id_refugio = newShelter.id_refugio;
@@ -287,29 +290,30 @@ namespace PetArmy.ViewModels
                     newLocation.lalitud = Latitude;
                     newLocation.canton = Canton;
                     await GraphQLService.addShelterLocation(newLocation);
-                   
-
+                    await Shell.Current.GoToAsync("//MyServicesView");
                 }
                 else
                 {
-
+                    ErrorTitle = AppResources.errorEmptyValues;
+                    ErrorMessage = AppResources.errorEmptyValues;
+                    OpenPopUp = true;
                 }
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
-                Console.WriteLine("AddShelter - VIEWMODEL" ,e);
+                throw;
             }
 
-            await Shell.Current.GoToAsync("//MyServicesView");
+
         }
 
         public bool checkForEmpyValues()
         {
             bool result = false;
 
-            if ( String.IsNullOrEmpty(this.shelterName) || String.IsNullOrEmpty(this.shelterDir) || String.IsNullOrEmpty(this.shelterEmail) || String.IsNullOrEmpty(this.shelterNumber))
+            if (String.IsNullOrEmpty(this.shelterName) || String.IsNullOrEmpty(this.shelterDir) || String.IsNullOrEmpty(this.shelterEmail) || String.IsNullOrEmpty(this.shelterNumber))
             {
                 result = true;
             }
@@ -360,7 +364,7 @@ namespace PetArmy.ViewModels
         }
 
         public async Task setCurrentLocation()
-        {   
+        {
             /* Gets current location*/
             Position position = await GetCurrentPosition();
             /*Creates Item for the map*/
@@ -372,7 +376,7 @@ namespace PetArmy.ViewModels
             curLocation.Description = "This is your current location";
             /*Sets Variables*/
             Latitude = position.Latitude;
-            Longitude = position.Longitude; 
+            Longitude = position.Longitude;
             /* Adds pin */
             lstLocations.Add(curLocation);
         }
@@ -470,9 +474,10 @@ namespace PetArmy.ViewModels
         }
 
 
-     
+
 
         #endregion
 
     }
 }
+

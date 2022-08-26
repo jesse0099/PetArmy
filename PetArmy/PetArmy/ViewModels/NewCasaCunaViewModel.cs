@@ -15,6 +15,7 @@ using System.Diagnostics;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.IO;
+using Resx;
 
 namespace PetArmy.ViewModels
 {
@@ -48,7 +49,8 @@ namespace PetArmy.ViewModels
         }
 
         public void initClass() { }
-        public void initCommads() {
+        public void initCommads()
+        {
 
             AddCasaCuna = new Command(addNewCasaCuna);
         }
@@ -205,49 +207,73 @@ namespace PetArmy.ViewModels
 
         public ICommand AddCasaCuna { get; set; }
 
+
+
+        public bool checkEmptyValues()
+        {
+            bool anyEmpty = false;
+            if (String.IsNullOrEmpty(Nombre) || String.IsNullOrEmpty(Correo) || String.IsNullOrEmpty(Direccion) || String.IsNullOrEmpty(Telefono))
+            {
+                anyEmpty = true;
+            }
+            return anyEmpty;
+        }
+
+
         public async void addNewCasaCuna()
         {
-            if (!String.IsNullOrEmpty(Settings.UID))
+
+            if (!checkEmptyValues())
             {
-                try
+
+                if (!String.IsNullOrEmpty(Settings.UID))
                 {
-                    Perfil_adoptante curAdoptante = null;
-                    curAdoptante = await GraphQLService.getAdoptanteByID(Settings.UID);
-
-                    if (curAdoptante == null)
+                    try
                     {
-                        curAdoptante= new Perfil_adoptante();
-                        curAdoptante.uid = Settings.UID;
-                        curAdoptante.nombre = Nombre;
-                        curAdoptante.correo = Correo;
-                        curAdoptante.direccion = Direccion;
-                        curAdoptante.telefono = Telefono;
-                        curAdoptante.casa_cuna = true;
+                        Perfil_adoptante curAdoptante = null;
+                        curAdoptante = await GraphQLService.getAdoptanteByID(Settings.UID);
 
-                        await GraphQLService.addAdoptante(curAdoptante);
+                        if (curAdoptante == null)
+                        {
+                            curAdoptante = new Perfil_adoptante();
+                            curAdoptante.uid = Settings.UID;
+                            curAdoptante.nombre = Nombre;
+                            curAdoptante.correo = Correo;
+                            curAdoptante.direccion = Direccion;
+                            curAdoptante.telefono = Telefono;
+                            curAdoptante.casa_cuna = true;
 
-                        ubicaciones_casasCuna newCasaCuna = new ubicaciones_casasCuna();
-                        newCasaCuna.id_ubicacion = await GraphQLService.countCasasCuna() + 1;
-                        newCasaCuna.id_user = Settings.UID;
-                        newCasaCuna.canton = Canton;
-                        newCasaCuna.lalitud = Latitude;
-                        newCasaCuna.longitud = Longitude;
+                            await GraphQLService.addAdoptante(curAdoptante);
 
-                        await GraphQLService.addCasaCunaLocation(newCasaCuna);
+                            ubicaciones_casasCuna newCasaCuna = new ubicaciones_casasCuna();
+                            newCasaCuna.id_ubicacion = await GraphQLService.countCasasCuna() + 1;
+                            newCasaCuna.id_user = Settings.UID;
+                            newCasaCuna.canton = Canton;
+                            newCasaCuna.lalitud = Latitude;
+                            newCasaCuna.longitud = Longitude;
+
+                            await GraphQLService.addCasaCunaLocation(newCasaCuna);
+
+                        }
+                        else
+                        {
+
+                        }
 
                     }
-                    else
+                    catch (Exception)
                     {
 
+                        throw;
                     }
 
                 }
-                catch (Exception)
-                {
-
-                    throw;
-                }
-                
+            }
+            else
+            {
+                ErrorTitle = AppResources.errorEmptyValues;
+                ErrorMessage = AppResources.errorEmptyValues;
+                OpenPopUp = true;
             }
         }
 
@@ -313,6 +339,9 @@ namespace PetArmy.ViewModels
 
     }
 }
+
+
+
 
 
 

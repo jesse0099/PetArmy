@@ -556,4 +556,16 @@
   <data name="LogOut" xml:space="preserve">
     <value>LogOut</value>
   </data>
+  <data name="errorEmptyValues" xml:space="preserve">
+    <value>All Fields Are Required</value>
+  </data>
+  <data name="deleteShelterConfirnmation" xml:space="preserve">
+    <value>Delete shelter?</value>
+  </data>
+  <data name="AddNewPet" xml:space="preserve">
+    <value>Add Pet</value>
+  </data>
+  <data name="EditPetTitle" xml:space="preserve">
+    <value>Editing Pet</value>
+  </data>
 </root>
