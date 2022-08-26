@@ -1,15 +1,14 @@
-﻿using System;
+﻿using GraphQL.Client.Abstractions;
 using GraphQL.Client.Http;
-using System.Collections.Generic;
-using System.Net.Http;
-using GraphQL.Client.Abstractions;
-using PetArmy.Models.GraphQL_Responses;
-using System.Threading.Tasks;
-using PetArmy.Helpers;
 using GraphQL.Client.Serializer.Newtonsoft;
+using PetArmy.Helpers;
 using PetArmy.Models;
-using System.Text;
+using PetArmy.Models.GraphQL_Responses;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace PetArmy.Services
 {
@@ -1152,16 +1151,16 @@ namespace PetArmy.Services
         #endregion
 
         #region solicitudes de adopcion
-        public static async Task<BindingList<Solicitud_Adopcion>> getRequests()
+        public static async Task<IEnumerable<Solicitud_Adopcion>> getRequests()
         {
-            BindingList<Solicitud_Adopcion> solicitudes = new BindingList<Solicitud_Adopcion>();
+            IEnumerable<Solicitud_Adopcion> solicitudes = null;
 
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = @"query MyQuery {solicitudes_adopcion(where: {id_refugio: {_eq: 2}}) {aprobacion, fecha_solicitud, id_mascota, id_refugio, adoptante}}",
+                    Query = @"query MyQuery {solicitudes_adopcion(where: {id_refugio: {_eq: 2}}) {aprobacion, fecha_solicitud, fecha_revision, id_mascota, id_refugio, adoptante}}",
                     Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
                 };
 

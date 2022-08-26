@@ -87,7 +87,7 @@ namespace PetArmy.ViewModels
         {
             try
             {
-                Solicitudes = new BindingList<Solicitud_Adopcion>(await GraphQLService.getRequests().ConfigureAwait(false));
+                Solicitudes = new BindingList<Solicitud_Adopcion>(await GraphQLService.getRequests() as List<Solicitud_Adopcion>);
                 SolicitudesRaw = Solicitudes;
 
             }

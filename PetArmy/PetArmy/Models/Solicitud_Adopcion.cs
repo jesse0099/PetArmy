@@ -11,6 +11,8 @@ namespace PetArmy.Models
 
         public string fecha_solicitud { get; set; }
 
+        public string fecha_revision { get; set; }
+
         public int id_mascota { get; set; }
 
         public int id_refugio { get; set; }

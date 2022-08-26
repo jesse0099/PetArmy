@@ -169,7 +169,7 @@
             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                              Glyph="{x:Static fa:IconClass.InfoCircle}" Color="{StaticResource Primary}" />
         </FlyoutItem.Icon>
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:TabbedPageTest}" />
+        <ShellContent Route="TabbedPage" ContentTemplate="{DataTemplate local:TabbedPageTest}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Help">
