@@ -45,6 +45,7 @@
                                                ItemsSource="{Binding CampCastraList}"
                                                VerticalOptions="FillAndExpand"
                                                AutoFitMode="DynamicHeight"
+                                               ItemSize="400"
                                                HorizontalOptions="FillAndExpand">
                             <!--Item Template-->
                             <sflistview:SfListView.ItemTemplate>
@@ -208,7 +209,10 @@
                                     </ContentView>
                                 </DataTemplate>
                             </sflistview:SfListView.FooterTemplate>
-
+                            <!--Layout-->
+                            <sflistview:SfListView.LayoutManager>
+                                <sflistview:GridLayout x:Name="gridLayout" />
+                            </sflistview:SfListView.LayoutManager>
                         </sflistview:SfListView>
                     </pulltoRefresh:SfPullToRefresh.PullableContent>
                 </pulltoRefresh:SfPullToRefresh>
