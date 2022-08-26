@@ -9,6 +9,25 @@ namespace PetArmy.Helpers
 {
     public static class Commons
     {
+        public static string GetAdoptionRequest = @"query GetAdoptionRequests($uid: String!) {
+          solicitudes_adopcion(where: {_and: [{ aprobacion: {_eq: false}, 
+    																		        fecha_revision: {_eq: ""01/01/0001""},
+  																			        refugio: {administrador: {_eq: $uid}}}]}) {
+            adoptante
+            aprobacion
+            fecha_revision
+            fecha_solicitud
+            id_mascota
+            id_refugio
+            adoptanteInfo {
+              correo
+              nombre
+            }
+            mascota:mascotum {
+              nombre
+            }
+          }
+        }";
 
         public static byte[] StreamToByteArray(Stream input)
         {

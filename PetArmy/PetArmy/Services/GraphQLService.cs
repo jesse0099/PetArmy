@@ -1154,14 +1154,18 @@ namespace PetArmy.Services
         public static async Task<IEnumerable<Solicitud_Adopcion>> getPendingRequests()
         {
             IEnumerable<Solicitud_Adopcion> solicitudes = null;
-            string initDate = "01/01/0001";
             try
             {
                 var client = new GraphQLHttpClient(Settings.GQL_URL, new NewtonsoftJsonSerializer());
                 var findRequest = new GraphQLHttpRequestWithHeaders
                 {
-                    Query = "query MyQuery {solicitudes_adopcion(where: {id_refugio: {_eq: 2}, aprobacion: {_eq: false}, fecha_revision: {_eq: \"" + initDate + "\"}}) {adoptante, aprobacion, fecha_revision, fecha_solicitud, id_mascota, id_refugio}}",
-                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) }
+                    Query = Commons.GetAdoptionRequest,
+                    Headers = new List<(string, string)> { (@"X-Hasura-Admin-Secret", Settings.GQL_Secret) },
+                    Variables = new
+                    {
+                        Settings.UID
+                    }
+                    
                 };
 
                 var foundResponse = await client.SendQueryAsync<Solicitud_AdopcionGraphQLResponse>(findRequest);
@@ -1170,7 +1174,8 @@ namespace PetArmy.Services
             }
             catch (Exception e)
             {
-                throw e;
+                Console.WriteLine("GraphQLService: getPendingRequests" + e.Message);
+                return null;
             };
 
             return solicitudes;

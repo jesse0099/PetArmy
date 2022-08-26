@@ -20,6 +20,11 @@ namespace PetArmy.Models
         {
         }
 
+        public Refugio(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
         public Refugio(bool activo, string administrador, string telefono, string nombre, string info_legal, int id_refugio, string direccion, string correo, int capacidad)
         {
             this.activo = activo;

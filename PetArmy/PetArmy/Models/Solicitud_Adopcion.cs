@@ -17,23 +17,26 @@ namespace PetArmy.Models
 
         public int id_refugio { get; set; }
 
-        //public AdoptanteInfo adoptanteInfo { get; set; }
+        public AdoptanteInfo adoptanteInfo { get; set; }
 
-        //public Mascota mascotum { get; set; }
+        public Mascota mascota { get; set; }
+
+        public Refugio refugio { get; set; }
 
         public Solicitud_Adopcion()
         {
         }
 
-        public Solicitud_Adopcion(string adoptante, bool aprobacion, string fecha_solicitud, int id_mascota, int id_refugio, AdoptanteInfo adoptanteInfo, Mascota mascotum)
+        public Solicitud_Adopcion(string adoptante, bool aprobacion, string fecha_solicitud, int id_mascota, int id_refugio, AdoptanteInfo adoptanteInfo, Mascota mascota, Refugio refugio)
         {
             this.adoptante = adoptante;
             this.aprobacion = aprobacion;
             this.fecha_solicitud = fecha_solicitud;
             this.id_mascota = id_mascota;
             this.id_refugio = id_refugio;
-            //this.adoptanteInfo = adoptanteInfo;
-            //this.mascotum = mascotum;
+            this.adoptanteInfo = adoptanteInfo;
+            this.mascota = mascota;
+            this.refugio = refugio;
         }
     }
 }

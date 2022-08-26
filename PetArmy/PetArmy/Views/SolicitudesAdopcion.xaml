@@ -10,7 +10,7 @@
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
              x:Class="PetArmy.Views.SolicitudesAdopcion"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BindingContext="{Binding Main.SolicitudesAprobacion, Source={StaticResource Locator}}"
              BackgroundColor="{AppThemeBinding Light= white,
                                                Dark={StaticResource LuckyPoint}}">
 
@@ -27,129 +27,160 @@
                                            VerticalOptions="FillAndExpand"
                                            HorizontalOptions="FillAndExpand">
         <pulltoRefresh:SfPullToRefresh.PullableContent>-->
-            
-            <sflistview:SfListView x:Name="listView" 
-                           ItemsSource="{Binding Solicitudes}" 
-                           BindingContext="{Binding SolicitudesAprobacion}"
-                           ItemSize="300">
 
+    <sflistview:SfListView x:Name="listView"
+                           ItemsSource="{Binding Solicitudes}"
+                           ItemSize="300">
+        <!--Sorting-->
+        <sflistview:SfListView.DataSource>
+            <data:DataSource>
+                <data:DataSource.GroupDescriptors>
+                    <data:GroupDescriptor PropertyName="refugio.nombre" />
+                </data:DataSource.GroupDescriptors>
+                <data:DataSource.SortDescriptors>
+                    <data:SortDescriptor PropertyName="fecha_solicitud"
+                                         Direction="Ascending" />
+                </data:DataSource.SortDescriptors>
+            </data:DataSource>
+        </sflistview:SfListView.DataSource>
+        <!--Group Header-->
+        <sflistview:SfListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <Label Text="{Binding refugio.nombre}"
+                       FontAttributes="Bold"
+                       FontSize="20" />
+            </DataTemplate>
+        </sflistview:SfListView.GroupHeaderTemplate>
+        <!--item template-->
         <sflistview:SfListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                                    <Frame HorizontalOptions="Center"
-                                           BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}"
-                                           VerticalOptions="Center"
-                                           HasShadow="True"
-                                           Margin="10,10,10,10"
-                                           WidthRequest="400"
-                                           CornerRadius="10">
-                                        <StackLayout x:Name="Item">
-                                            <!--Estado-->
+                    <Frame HorizontalOptions="Center"
+                           BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource JacksonPurple}}"
+                           VerticalOptions="Center"
+                           HasShadow="True"
+                           Margin="10,10,10,10"
+                           WidthRequest="400"
+                           CornerRadius="10">
+                        <StackLayout x:Name="Item">
+                            <!--Estado-->
                             <StackLayout Orientation="Horizontal"
-                                                         Margin="0,0,0,10"
-                                                         HorizontalOptions="FillAndExpand">
+                                         Margin="0,0,0,10"
+                                         HorizontalOptions="FillAndExpand">
                                 <Label Text="Estado"
-                                                       FontAttributes="Bold"
-                                                       HorizontalOptions="Start"
-                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Start"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                                 <Label Text="Pendiente"
-                                                       FontAttributes="Bold"
-                                                       Margin="0,0,5,0"
-                                                       HorizontalOptions="EndAndExpand"
-                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                       FontAttributes="Bold"
+                                       Margin="0,0,5,0"
+                                       HorizontalOptions="EndAndExpand"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                             </StackLayout>
 
                             <!--Fecha-->
                             <StackLayout Orientation="Horizontal"
-                                                         Margin="0,0,0,10"
-                                                         HorizontalOptions="FillAndExpand">
+                                         Margin="0,0,0,10"
+                                         HorizontalOptions="FillAndExpand">
                                 <Label Text="Fecha de Solicitud"
-                                                       FontAttributes="Bold"
-                                                       HorizontalOptions="Start"
-                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Start"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                                 <Label Text="{Binding fecha_solicitud}"
-                                                       FontAttributes="Bold"
-                                                       Margin="0,0,5,0"
-                                                       HorizontalOptions="EndAndExpand"
-                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                       FontAttributes="Bold"
+                                       Margin="0,0,5,0"
+                                       HorizontalOptions="EndAndExpand"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                             </StackLayout>
                             <!--adoptante-->
                             <StackLayout Orientation="Horizontal"
-                                                         Margin="0,0,0,10"
-                                                         HorizontalOptions="FillAndExpand">
+                                         Margin="0,0,0,10"
+                                         HorizontalOptions="FillAndExpand">
                                 <Label Text="Adoptante"
-                                                       FontAttributes="Bold"
-                                                       HorizontalOptions="Start"
-                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
-                                <Label Text="{Binding adoptante}"
-                                                       FontAttributes="Bold"
-                                                       Margin="0,0,5,0"
-                                                       HorizontalOptions="EndAndExpand"
-                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Start"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <Label Text="{Binding adoptanteInfo.nombre}"
+                                       FontAttributes="Bold"
+                                       Margin="0,0,5,0"
+                                       HorizontalOptions="EndAndExpand"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                            </StackLayout>
+                            <!--Correo Adoptante-->
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Correo Adoptante"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Start"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <Label Text="{Binding adoptanteInfo.correo}"
+                                       FontAttributes="Bold"
+                                       Margin="0,0,5,0"
+                                       HorizontalOptions="EndAndExpand"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                             </StackLayout>
                             <!--Mascota-->
                             <StackLayout Orientation="Horizontal"
-                                                         Margin="0,0,0,10"
-                                                         HorizontalOptions="FillAndExpand">
+                                         Margin="0,0,0,10"
+                                         HorizontalOptions="FillAndExpand">
                                 <Label Text="Mascota"
-                                                       FontAttributes="Bold"
-                                                       HorizontalOptions="Start"
-                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
-                                <Label Text="{Binding id_mascota}"
-                                                       FontAttributes="Bold"
-                                                       Margin="0,0,5,0"
-                                                       HorizontalOptions="EndAndExpand"
-                                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Start"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
+                                <Label Text="{Binding mascota.nombre}"
+                                       FontAttributes="Bold"
+                                       Margin="0,0,5,0"
+                                       HorizontalOptions="EndAndExpand"
+                                       TextColor="{AppThemeBinding Light=#555, Dark=LightGray}" />
                             </StackLayout>
                             <!--Botones-->
                             <StackLayout Orientation="Horizontal"
-                                                         HorizontalOptions="FillAndExpand"
-                                                         x:Name="actionButtonsContainer">
+                                         HorizontalOptions="FillAndExpand"
+                                         x:Name="actionButtonsContainer">
                                 <!--Rechazar-->
                                 <buttons:SfButton Style="{StaticResource SyncfusionButtons}"
-                                                                  BindingContext="{Binding Source={x:Reference listView}, Path=BindingContext}"
-                                                                  Command="{Binding RejectRequest}"
-                                                                  CommandParameter="{Binding Source={x:Reference Item},Path=BindingContext}"
-                                                                  FontAttributes="Bold"
-                                                                  Text="Rechazar"
-                                                                  ShowIcon="True"
-                                                                  HorizontalOptions="FillAndExpand"
-                                                                  BorderWidth="{AppThemeBinding Light=0, Dark=1}"
-                                                                  BorderColor="{StaticResource SynthPumpkin}"
-                                                                  IsEnabled="{Binding }">
+                                                  BindingContext="{Binding Source={x:Reference listView}, Path=BindingContext}"
+                                                  Command="{Binding RejectRequest}"
+                                                  CommandParameter="{Binding Source={x:Reference Item},Path=BindingContext}"
+                                                  FontAttributes="Bold"
+                                                  Text="Rechazar"
+                                                  ShowIcon="True"
+                                                  HorizontalOptions="FillAndExpand"
+                                                  BorderWidth="{AppThemeBinding Light=0, Dark=1}"
+                                                  BorderColor="{StaticResource SynthPumpkin}"
+                                                  IsEnabled="{Binding }">
                                     <buttons:SfButton.ImageSource>
                                         <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                                                         Glyph="{x:Static local:IconClass.SkullCrossbones}"
-                                                                         Color="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}" />
+                                                         Glyph="{x:Static local:IconClass.SkullCrossbones}"
+                                                         Color="{AppThemeBinding Light={StaticResource FluoRed}, Dark={StaticResource SynthPumpkin}}" />
                                     </buttons:SfButton.ImageSource>
                                 </buttons:SfButton>
                                 <!--Aceptar-->
                                 <buttons:SfButton Style="{StaticResource SyncfusionButtons}"
-                                                                  BindingContext="{Binding Source={x:Reference listView}, Path=BindingContext}"
-                                                                  Command="{Binding ApproveRequest}"
-                                                                  CommandParameter="{Binding Source={x:Reference Item},Path=BindingContext}"
-                                                                  FontAttributes="Bold"
-                                                                  Text="Aceptar"
-                                                                  ShowIcon="True"
-                                                                  HorizontalOptions="FillAndExpand"
-                                                                  BorderWidth="{AppThemeBinding Light=0, Dark=1}"
-                                                                  BorderColor="YellowGreen">
+                                                  BindingContext="{Binding Source={x:Reference listView}, Path=BindingContext}"
+                                                  Command="{Binding ApproveRequest}"
+                                                  CommandParameter="{Binding Source={x:Reference Item},Path=BindingContext}"
+                                                  FontAttributes="Bold"
+                                                  Text="Aceptar"
+                                                  ShowIcon="True"
+                                                  HorizontalOptions="FillAndExpand"
+                                                  BorderWidth="{AppThemeBinding Light=0, Dark=1}"
+                                                  BorderColor="YellowGreen">
                                     <buttons:SfButton.ImageSource>
                                         <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                                                         Glyph="{x:Static local:IconClass.Check}"
-                                                                         Color="YellowGreen" />
+                                                         Glyph="{x:Static local:IconClass.Check}"
+                                                         Color="YellowGreen" />
                                     </buttons:SfButton.ImageSource>
                                 </buttons:SfButton>
                             </StackLayout>
 
 
                         </StackLayout>
-                                    </Frame>
-                                </ViewCell>
+                    </Frame>
+                </ViewCell>
             </DataTemplate>
         </sflistview:SfListView.ItemTemplate>
     </sflistview:SfListView>
-        <!--</pulltoRefresh:SfPullToRefresh.PullableContent>
+    <!--</pulltoRefresh:SfPullToRefresh.PullableContent>
     </pulltoRefresh:SfPullToRefresh>-->
     <!--HISTORICAL-->
 
